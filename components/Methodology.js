@@ -21,7 +21,7 @@ export default function Methodology() {
         </div>
         <div className="specStrip">
           <div><strong>97 / 98 / 100 in²</strong><span>Playing racquet head sizes</span></div>
-          <div><strong>From 240 g</strong><span>Playing racquet weights</span></div>
+          <div><strong>245–315 g</strong><span>Playing racquet weights, unstrung</span></div>
           <div><strong>50 in²</strong><span>Sweet Spot Trainer head</span></div>
           <div><strong>270 / 285 / 300 / 400 g</strong><span>Current SST training weights</span></div>
         </div>

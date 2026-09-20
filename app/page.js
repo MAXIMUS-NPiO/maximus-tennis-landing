@@ -6,7 +6,6 @@ import Partnership from "../components/Partnership";
 import Distribution from "../components/Distribution";
 import LongMethodology from "../components/LongMethodology";
 import Gallery from "../components/Gallery";
-import Testimonials from "../components/Testimonials";
 import Office from "../components/Office";
 import Footer from "../components/Footer";
 
@@ -23,7 +22,6 @@ export default function Home() {
         <LongMethodology />
         <Gallery />
         <section aria-hidden="true" className="reservedSection" />
-        <Testimonials />
         <Office />
       </main>
       <Footer />

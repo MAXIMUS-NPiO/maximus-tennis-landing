@@ -11,8 +11,8 @@ export const site = {
 export const methodologyCards = [
   {
     kicker: "Racquets",
-    title: "One-piece fully carbon construction",
-    text: "Playing racquets with fully carbon construction, including the handle, structured around head size, weight, balance and intended playing task.",
+    title: "Carbon construction across the playing range",
+    text: "Playing racquets with carbon construction, structured around head size, weight, balance and intended playing task.",
   },
   {
     kicker: "Technology",

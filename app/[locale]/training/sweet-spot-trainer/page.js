@@ -2,6 +2,7 @@ import { ctx, meta } from "../../../../lib/page";
 import { sweetSpotTrainer as sst } from "../../../../data/products";
 import { PageHero, Section, Cta, Kickers, Note } from "../../../../components/Ui";
 import { GripRow } from "../../../../components/Product";
+import { PhotoPending } from "../../../../components/Media";
 
 export const generateMetadata = meta("sst", (d) => [d.sst.title, d.sst.lead]);
 
@@ -18,7 +19,10 @@ export default async function Page({ params }) {
           <div><b>{sst.grips}</b>{S.columns.grips}</div>
         </div>
       </PageHero>
-      <Section first title={S.systemTitle} lead={S.systemLead}>
+      <Section first>
+        <PhotoPending name="Sweet Spot Trainer" sub={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} note={dict.home.training.photoPending} className="wide" />
+      </Section>
+      <Section title={S.systemTitle} lead={S.systemLead}>
         <span className="status confirmed" style={{ marginBottom: 14 }}>{S.baseline}</span>
         <div className="grid-4">
           {sst.system.map((x) => <div key={x.weight} className="stat"><b>{x.weight} {L.grams}</b><span>{L.balance}: {x.balance} {L.mm}</span></div>)}

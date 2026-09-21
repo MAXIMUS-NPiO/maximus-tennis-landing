@@ -7,12 +7,17 @@ const base = (process.argv[2] || "http://localhost:3100").replace(/\/$/, "");
 const { routes } = await import("../data/site.js");
 const locales = ["en", "ru", "zh"];
 
-const FORBIDDEN = [
-  /zero weight tolerance/i, /shaleni/i, /ghana/i, /borteyman/i, /\bjude\b/i, /\bnii\b/i, /norris/i, /go tennis/i,
-  /1,104,600/, /2,946,618/, /381\.135245/, /0\.162636422/, /5,?000 racquets? per week/i, /20,000 per month/i,
-  /temporary/i, /placeholder/i, /lorem ipsum/i, /TODO/, /NOT_PROVIDED/, /FOUNDER_CONFIRMED/, /gm@maximussports/i,
-  /\+971/, /royalt[a-z]* (rate|percentage) of \d/i, /50%/,
+// Checked against the whole HTML (markup, attributes and inline data).
+const FORBIDDEN_RAW = [
+  /shaleni/i, /ghana/i, /borteyman/i, /norris/i, /go tennis/i, /1,104,600/, /2,946,618/, /381\.135245/, /0\.162636422/,
+  /NOT_PROVIDED/, /FOUNDER_CONFIRMED/, /gm@maximussports/i, /maximussports\.ae/i, /\+971/,
 ];
+// Checked against visible text only (tags, scripts and styles removed): wording that must never be published.
+const FORBIDDEN_TEXT = [
+  /zero weight tolerance/i, /\bjude\b/i, /\bnii\b/i, /5,?000 racquets? per week/i, /20,000 per month/i, /temporary/i, /placeholder/i,
+  /lorem ipsum/i, /TODO/, /royalt[a-z]* (rate|percentage) of \d/i, /50\s?%/, /240\s?[–-]\s?340/, /\bwallet\b/i, /\bpayout/i,
+];
+const visibleText = (html) => html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ");
 
 const seen = new Map();
 const problems = [];
@@ -31,7 +36,9 @@ while (queue.length) {
   const path = queue.shift();
   const { status, html } = await get(path);
   if (status !== 200) { problems.push(`${status} ${path}`); continue; }
-  for (const re of FORBIDDEN) if (re.test(html)) problems.push(`forbidden ${re} in ${path}`);
+  for (const re of FORBIDDEN_RAW) if (re.test(html)) problems.push(`forbidden ${re} in ${path}`);
+  const text = visibleText(html);
+  for (const re of FORBIDDEN_TEXT) if (re.test(text)) problems.push(`forbidden text ${re} in ${path}`);
   if (!/<html lang="(en|ru|zh-CN)"/.test(html)) problems.push(`lang attribute missing in ${path}`);
   if (!/rel="canonical"/.test(html)) problems.push(`canonical missing in ${path}`);
   if (!/hreflang="zh-CN"/i.test(html)) problems.push(`hreflang missing in ${path}`);

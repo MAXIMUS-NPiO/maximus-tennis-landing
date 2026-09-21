@@ -48,14 +48,16 @@ export function PrecisionTable({ dict, compact = false }) {
   );
 }
 
+/** Full weight matrix. A series without balance data gets one explanation above the grid, not per-cell notes. */
 export function WeightMatrix({ series, dict }) {
   const L = dict.common.labels;
+  const hasBalance = series.matrix.some((p) => p.balance !== null);
   return (
-    <div className="matrix" role="list" aria-label={`${series.short} ${dict.seriesPage.matrixTitle}`}>
+    <div className={`matrix ${hasBalance ? "" : "weights-only"}`} role="list" aria-label={`${series.short} ${dict.seriesPage.matrixTitle}`}>
       {series.matrix.map((p) => (
-        <div key={p.weight} role="listitem" className={p.balance === null ? "na" : ""}>
+        <div key={p.weight} role="listitem">
           <b>{p.weight} {L.grams}</b>
-          <span>{p.balance === null ? L.notProvided : `${p.balance} ${L.mm}`}</span>
+          {hasBalance && <span>{p.balance} {L.mm}</span>}
         </div>
       ))}
     </div>

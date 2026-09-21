@@ -2,8 +2,9 @@ import "../globals.css";
 import { notFound } from "next/navigation";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Analytics from "../../components/Analytics";
 import { getDict, isLocale, localeMeta, locales } from "../../lib/i18n";
-import { site, entities } from "../../data/site";
+import { site } from "../../data/site";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return locales.map((locale) => ({ locale })); }
@@ -25,17 +26,16 @@ export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const dict = getDict(locale);
+  // Factual structured data only: brand, site, logo, contact address and the verified profile.
   const org = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "MAXIMUS GPS",
-    alternateName: "MAXIMUS",
+    name: "MAXIMUS",
+    alternateName: "MAXIMUS GPS",
     url: site.website,
     logo: `${site.website}/brand/maximus-lion-emblem.png`,
     email: site.email,
     sameAs: [site.instagram],
-    description: dict.meta.defaultDescription,
-    parentOrganization: { "@type": "Organization", name: entities.stewardship },
   };
   return (
     <html lang={localeMeta[locale].htmlLang}>
@@ -43,6 +43,7 @@ export default async function LocaleLayout({ children, params }) {
         <Header locale={locale} nav={dict.nav} />
         <main id="main">{children}</main>
         <Footer locale={locale} dict={dict} />
+        <Analytics locale={locale} dict={dict.consent} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
       </body>
     </html>

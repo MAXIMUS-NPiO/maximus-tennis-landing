@@ -11,7 +11,6 @@ export const site = {
   website: "https://maximus.tennis",
   instagram: "https://www.instagram.com/maximus_gps/",
   instagramHandle: "@maximus_gps",
-  store: "https://maximussports.ae/tennis/racquets/maximus/",
   locales: ["en", "ru", "zh"],
   defaultLocale: "en",
 };
@@ -56,6 +55,7 @@ export const routes = {
   methodology: "/training/methodology",
   gps: "/gps",
   build: "/build",
+  choose: "/choose",
   experience: "/experience",
   engineering: "/engineering",
   ecosystem: "/ecosystem",
@@ -77,7 +77,7 @@ export const routes = {
 
 /** Grouped header navigation. Keys resolve to translated labels in content/<locale>.js → nav. */
 export const navGroups = [
-  { key: "racquets", items: ["racquets", "great", "power", "spin", "precision", "grip", "custom"] },
+  { key: "racquets", items: ["choose", "racquets", "great", "power", "spin", "precision", "grip", "custom"] },
   { key: "training", items: ["training", "sst", "spot", "methodology"] },
   { key: "gps", href: "gps" },
   { key: "build", href: "build" },
@@ -86,35 +86,41 @@ export const navGroups = [
   { key: "contact", href: "contact" },
 ];
 
-/** Public status vocabulary for ecosystem nodes and services (rendered via content strings). */
+/**
+ * Public status vocabulary (rendered via content strings):
+ *   current      — exists and is offered now
+ *   agreement    — available by written agreement / on request
+ *   development  — in active development (only where confirmed)
+ *   concept      — defined as a concept; no implementation is represented
+ */
 export const STATUS = {
-  AVAILABLE: "available",
-  REQUEST: "request",
-  PLANNED: "planned",
-  DIRECTION: "direction",
+  CURRENT: "current",
   AGREEMENT: "agreement",
+  DEVELOPMENT: "development",
+  CONCEPT: "concept",
 };
 
-/** Ecosystem nodes — every node has a page, a status and a next action. */
+/** Ecosystem nodes — every node has a page, an honest status and a next action. */
 export const ecosystemNodes = [
-  { id: "engineering", status: STATUS.AVAILABLE, href: "engineering" },
-  { id: "precision", status: STATUS.AVAILABLE, href: "precision" },
-  { id: "training", status: STATUS.AVAILABLE, href: "training" },
-  { id: "development", status: STATUS.REQUEST, href: "methodology" },
-  { id: "identity", status: STATUS.REQUEST, href: "brands" },
-  { id: "owners", status: STATUS.PLANNED, href: "owners" },
-  { id: "mipa", status: STATUS.AVAILABLE, href: "legal" },
-  { id: "digital", status: STATUS.DIRECTION, href: "owners" },
+  { id: "engineering", status: STATUS.CURRENT, href: "engineering" },
+  { id: "precision", status: STATUS.CURRENT, href: "precision" },
+  { id: "training", status: STATUS.CURRENT, href: "training" },
+  { id: "development", status: STATUS.AGREEMENT, href: "methodology" },
+  { id: "identity", status: STATUS.AGREEMENT, href: "brands" },
+  { id: "owners", status: STATUS.CONCEPT, href: "owners" },
+  { id: "mipa", status: STATUS.CURRENT, href: "legal" },
+  { id: "digital", status: STATUS.CONCEPT, href: "owners" },
   { id: "licensing", status: STATUS.AGREEMENT, href: "brands" },
-  { id: "families", status: STATUS.REQUEST, href: "families" },
-  { id: "network", status: STATUS.REQUEST, href: "network" },
-  { id: "market", status: STATUS.REQUEST, href: "partnerships" },
-  { id: "institutional", status: STATUS.REQUEST, href: "institutional" },
-  { id: "extensions", status: STATUS.DIRECTION, href: "racquets" },
+  { id: "families", status: STATUS.AGREEMENT, href: "families" },
+  { id: "network", status: STATUS.AGREEMENT, href: "network" },
+  { id: "market", status: STATUS.AGREEMENT, href: "partnerships" },
+  { id: "institutional", status: STATUS.AGREEMENT, href: "institutional" },
+  { id: "extensions", status: STATUS.CONCEPT, href: "racquets" },
 ];
 
 /** Request purposes accepted by the enquiry workflow. */
 export const requestPurposes = [
+  "selection",
   "product",
   "fitting",
   "technical",

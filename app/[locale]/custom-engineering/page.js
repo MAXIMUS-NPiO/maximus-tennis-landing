@@ -1,6 +1,6 @@
-import { ctx, meta } from "../../../lib/page";
+import { ctx, meta, formDict } from "../../../lib/page";
 import { PageHero, Section, Chain, Steps, Note } from "../../../components/Ui";
-import RequestForm from "../../../components/RequestForm";
+import LeadForm from "../../../components/LeadForm";
 
 export const generateMetadata = meta("custom", (d) => [d.custom.title, d.custom.lead]);
 
@@ -15,7 +15,7 @@ export default async function Page({ params }) {
       </Section>
       <Section title={C.processTitle}><Chain items={C.process.map((p) => p[0])} big /><div style={{ height: 24 }} /><Steps items={C.process} /><Note>{C.protected}</Note></Section>
       <Section id="brief" band="band-1" title={C.formTitle} lead={C.formLead}>
-        <RequestForm dict={dict} fixedPurpose="technical" />
+        <div className="panel form-panel"><LeadForm dict={formDict(dict)} locale={locale} purpose="technical" context={{ from: "custom" }} /></div>
       </Section>
     </>
   );

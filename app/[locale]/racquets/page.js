@@ -31,17 +31,17 @@ export default async function Page({ params }) {
                   <td>{R.direction[s.direction]}</td>
                   <td className="num">{s.matrix.length}</td>
                   <td className="num">{s.matrix[0].weight}–{s.matrix[s.matrix.length - 1].weight} {L.grams}</td>
-                  <td>{s.balanceStatus === "MODELLED" ? <span className="status modelled">{S.modelled}</span> : <span className="status notprovided">{S.notprovided}</span>}</td>
+                  <td>{s.balanceStatus === "MODELLED" ? <span className="status modelled">{S.modelled}</span> : <span className="status notprovided">{S.notprovided}</span>}{s.matrixStatus === "REQUESTED_ARCHITECTURE" && <><br /><span className="status requested" style={{ marginTop: 6 }}>{S.requested}</span></>}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <div className="btn-row"><Cta locale={locale} to="build" label={R.ctaConfigure} /><Cta locale={locale} to="precision" label={dict.nav.precision} kind="btn-outline" /><Cta locale={locale} to="grip" label={dict.nav.grip} kind="btn-outline" /></div>
+        <div className="btn-row"><Cta locale={locale} to="choose" label={dict.nav.choose} track="racquets_choose" /><Cta locale={locale} to="build" label={R.ctaConfigure} kind="btn-outline" /><Cta locale={locale} to="precision" label={dict.nav.precision} kind="btn-outline" /><Cta locale={locale} to="grip" label={dict.nav.grip} kind="btn-outline" /></div>
       </Section>
       <Section title={R.otherTitle} lead={R.otherLead}>
         <div className="grid-3">
-          {otherRacquetSports.map((k) => <div key={k} className="card"><h3>{R.other[k]}</h3><span className="status direction">{S.direction}</span></div>)}
+          {otherRacquetSports.map((k) => <div key={k} className="card"><h3>{R.other[k]}</h3><span className="status concept">{S.concept}</span></div>)}
         </div>
       </Section>
     </>

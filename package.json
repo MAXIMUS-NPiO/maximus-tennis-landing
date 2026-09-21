@@ -1,11 +1,15 @@
 {
   "name": "maximus-tennis-landing",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "check:data": "node --no-warnings scripts/check-data.mjs",
+    "check:i18n": "node --no-warnings scripts/check-i18n.mjs",
+    "test": "npm run check:data && npm run check:i18n",
+    "crawl": "node --no-warnings scripts/crawl.mjs"
   },
   "dependencies": {
     "next": "^15.5.24",

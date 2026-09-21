@@ -1,30 +1,37 @@
-# MAXIMUS Tennis Landing
+# MAXIMUS Tennis — website and portal (maximus.tennis)
 
-Production-oriented Next.js landing page for MAXIMUS GPS.
+Production Next.js site for MAXIMUS / MAXIMUS GPS. Version 4.0 (21 September 2026).
 
 ## Stack
-- Next.js App Router
-- React
-- Plain CSS
-- No database
-- No third-party UI library
+- Next.js 15 (App Router), React 19, plain CSS design tokens — no UI library, no CMS, no database, no third-party fonts or widgets.
+- Three locales with language-aware URLs: `/en`, `/ru`, `/zh` (Simplified Chinese). `middleware.js` redirects `/` and un-prefixed paths to the visitor's language (Accept-Language), default English.
+- Static generation for every page (`generateStaticParams`).
 
-## Local run
+## Structure
+- `app/[locale]/…` — all public pages (31 destinations × 3 locales). `app/(root)` — root redirect.
+- `content/en.js` (master), `content/ru.js`, `content/zh.js` — every visitor-facing string. Same key structure, enforced by `scripts/check-i18n.mjs`.
+- `data/products.js` — the single numerical product source for all locales (series matrices, precision classes, grips, training families) with evidence-status fields. Internal engineering formulas are deliberately not stored in this repository.
+- `data/site.js` — routes, navigation groups, legal identities, ecosystem nodes, request purposes.
+- `components/` — layout, product tables, ecosystem map, GPS wizard, configurator, request forms, compose panel.
+- `lib/` — i18n, paths/hreflang, metadata, request workflow boundary, analytics boundary.
+- `public/brand/` — official identity raster (cropped only), lion emblem, Open Graph image.
+- `scripts/` — data integrity, locale parity and crawl checks.
+
+## Commands
 ```bash
 npm install
-npm run dev
+npm run dev          # local development
+npm test             # product-data integrity + locale parity
+npm run build        # production build (must pass before any push to main)
+npm start            # serve the build locally
+npm run crawl -- http://localhost:3000   # every route 200, no forbidden strings, lang/canonical/hreflang present
 ```
 
-## Vercel
-Import this GitHub repository into Vercel. Framework should be detected automatically as Next.js. No environment variables are required for the current version.
+## Request workflow (current mode)
+No server-side delivery provider, database or CRM is configured. Forms validate, generate a request reference and open the visitor's own email application with the request text prepared (or copy it). The interface never claims a request was sent. See `lib/requests.js` for the integration boundary.
 
-## Content architecture
-- `app/` — Next.js routes and global styling
-- `components/` — reusable site sections
-- `data/site.js` — verified contact/product data used by the site
-- `public/images/` — replaceable visual assets
+## Content governance
+See `CONTENT_GOVERNANCE.md`.
 
-## Important
-The two images currently in `public/images/` are temporary visual references supplied for this build and should be replaced with final approved MAXIMUS photography later.
-
-Testimonials are intentionally not fabricated. The current cards remain publication-pending until real quotations and permissions are available.
+## Deployment
+Vercel, framework auto-detected. No environment variables are required. Push to `main` deploys production; a failed build is not promoted. Rollback: redeploy the previous production deployment in Vercel, or `git revert` the commit and push.

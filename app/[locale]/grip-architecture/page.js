@@ -12,7 +12,7 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.home.carbon.eyebrow} title={G.title} statement={G.statement} lead={G.lead} />
       <Section first><GripRow dict={dict} /></Section>
-      <Section band="band-paper">
+      <Section band="band-2">
         <div className="split">
           <div className="stack"><p className="lead">{G.p1}</p><p>{G.p2}</p><p className="muted">{G.p3}</p></div>
           <div className="spec-wrap" tabIndex={0}><table className="spec"><thead><tr><th>{G.columns.size}</th><th className="num">{G.columns.nominal}</th><th>{G.columns.family}</th></tr></thead><tbody>

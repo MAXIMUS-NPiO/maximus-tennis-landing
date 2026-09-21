@@ -30,6 +30,9 @@ npm run crawl -- http://localhost:3000   # every route 200, no forbidden strings
 ## Request workflow (current mode)
 No server-side delivery provider, database or CRM is configured. Forms validate, generate a request reference and open the visitor's own email application with the request text prepared (or copy it). The interface never claims a request was sent. See `lib/requests.js` for the integration boundary.
 
+## Design
+See `DESIGN.md` (Engineering Gallery direction, tokens, components, accessibility rules).
+
 ## Content governance
 See `CONTENT_GOVERNANCE.md`.
 

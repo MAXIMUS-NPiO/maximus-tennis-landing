@@ -16,7 +16,7 @@ export default async function Page({ params }) {
           <div className="card"><p className="eyebrow">{L.grip}</p><p className="statement" style={{ fontSize: 28 }}>L0–L7</p><p>{S.grips}</p><span className="status notprovided">{ST.notprovided}</span><p style={{ marginTop: 8 }}>{S.dims}</p></div>
         </div>
       </Section>
-      <Section band="band-carbon"><Kickers items={S.notes} /><div className="btn-row"><Cta locale={locale} to="contact" label={S.cta} purpose="product" /></div></Section>
+      <Section band="band-1"><Kickers items={S.notes} /><div className="btn-row"><Cta locale={locale} to="contact" label={S.cta} purpose="product" /></div></Section>
     </>
   );
 }

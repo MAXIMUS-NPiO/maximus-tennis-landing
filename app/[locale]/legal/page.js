@@ -19,7 +19,7 @@ export default async function Page({ params }) {
           <div className="card"><p className="eyebrow">{Lg.entities.stewardship.role}</p><h3>{entities.stewardship}</h3><p>{Lg.entities.stewardship.p}</p><hr /><p className="eyebrow">{Lg.entities.control.role}</p><h3>{entities.control}</h3><p>{Lg.entities.control.p}</p></div>
         </div>
       </Section>
-      <Section band="band-paper" title={Lg.boundaryTitle}><Kickers items={Lg.boundary} /></Section>
+      <Section band="band-2" title={Lg.boundaryTitle}><Kickers items={Lg.boundary} /></Section>
     </>
   );
 }

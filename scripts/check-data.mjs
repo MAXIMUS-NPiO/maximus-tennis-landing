@@ -32,10 +32,14 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = path.join(d, f); if (["node_modules", ".next", ".git"].includes(f)) return []; return statSync(p).isDirectory() ? walk(p) : [p]; });
 const banned = [/381\.135245/, /0\.162636422/, /shaleni/i, /borteyman/i, /ghana/i, /zero weight tolerance/i, /go tennis/i, /norris/i];
-for (const f of walk(process.cwd())) {
-  if (!/\.(js|mjs|json|md|css)$/.test(f)) continue;
+// Scope: everything that can reach the public bundle or rendered pages. Internal governance
+// documents (*.md) and the check scripts legitimately NAME the banned terms and are excluded.
+const PUBLIC_DIRS = ["app", "components", "content", "data", "lib", "public"];
+const publicFiles = PUBLIC_DIRS.flatMap((d) => walk(path.join(process.cwd(), d))).concat([path.join(process.cwd(), "middleware.js"), path.join(process.cwd(), "next.config.mjs")]);
+for (const f of publicFiles) {
+  if (!/\.(js|mjs|json|css|svg|txt|html)$/.test(f)) continue;
   const txt = readFileSync(f, "utf8");
-  for (const re of banned) if (re.test(txt) && !f.endsWith("check-data.mjs") && !f.endsWith("crawl.mjs")) fail.push(`banned content ${re} in ${path.relative(process.cwd(), f)}`);
+  for (const re of banned) if (re.test(txt)) fail.push(`banned content ${re} in ${path.relative(process.cwd(), f)}`);
 }
 
 if (fail.length) { console.error(fail.join("\n")); process.exit(1); }

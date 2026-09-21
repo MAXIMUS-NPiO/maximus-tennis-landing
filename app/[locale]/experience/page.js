@@ -11,7 +11,7 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.nav.experience} title={E.title} statement={E.statement} lead={E.lead} />
       <Section first title={E.optionsTitle}><Kickers items={E.options} /></Section>
-      <Section band="band-carbon" title={E.formTitle}><RequestForm dict={dict} fixedPurpose="fitting" prefillKey="mx.gps.handoff" /></Section>
+      <Section band="band-1" title={E.formTitle}><RequestForm dict={dict} fixedPurpose="fitting" prefillKey="mx.gps.handoff" /></Section>
     </>
   );
 }

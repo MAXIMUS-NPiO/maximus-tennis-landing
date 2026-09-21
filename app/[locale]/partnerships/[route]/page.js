@@ -28,7 +28,7 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.nav.groups.partnerships} title={R.title} lead={R.lead} />
       <Section first><Kickers items={R.points} /><Note>{dict.partnerships.boundary}</Note></Section>
-      <Section band="band-carbon" title={R.cta}><RequestForm dict={dict} fixedPurpose={R.purpose} /></Section>
+      <Section band="band-1" title={R.cta}><RequestForm dict={dict} fixedPurpose={R.purpose} /></Section>
     </>
   );
 }

@@ -10,7 +10,7 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.home.brands.eyebrow} title={B.title} statement={B.statement} lead={B.lead} />
       <Section first title={B.progressionTitle}><Steps items={B.progression} /></Section>
-      <Section band="band-paper" title={B.royaltiesTitle}><Kickers items={B.royalties} /><div className="btn-row"><Cta locale={locale} to="contact" label={B.cta} purpose="brand" /><Cta locale={locale} to="contact" label={B.cta2} kind="btn-outline" purpose="coach" /></div></Section>
+      <Section band="band-2" title={B.royaltiesTitle}><Kickers items={B.royalties} /><div className="btn-row"><Cta locale={locale} to="contact" label={B.cta} purpose="brand" /><Cta locale={locale} to="contact" label={B.cta2} kind="btn-outline" purpose="coach" /></div></Section>
     </>
   );
 }

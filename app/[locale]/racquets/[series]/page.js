@@ -45,7 +45,7 @@ export default async function Page({ params }) {
         <Note>{s.balanceStatus === "MODELLED" ? P.balanceNote.modelled : P.balanceNote.notprovided}</Note>
         <div className="btn-row"><Cta locale={locale} to="build" label={P.ctaBuild} /><Cta locale={locale} to="racquets" label={P.ctaCompare} kind="btn-outline" /></div>
       </Section>
-      <Section band="band-carbon" title={P.sharedTitle}>
+      <Section band="band-1" title={P.sharedTitle}>
         <div className="split">
           <Kickers items={P.shared} />
           <div className="stack"><PrecisionTable dict={dict} compact /><GripRow dict={dict} emphasise={false} /></div>

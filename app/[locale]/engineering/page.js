@@ -9,7 +9,7 @@ export default async function Page({ params }) {
   return (
     <>
       <PageHero eyebrow={dict.nav.engineering} title={E.title} statement={E.statement} lead={E.lead} />
-      <Section first band="band-paper">
+      <Section first band="band-2">
         <div className="grid-2">{E.manifesto.map((m) => <p key={m} className="statement" style={{ textTransform: "none", fontSize: "clamp(22px,3vw,34px)" }}>{m}</p>)}</div>
       </Section>
       <Section title={E.capabilityTitle} lead={E.capabilityLead}>

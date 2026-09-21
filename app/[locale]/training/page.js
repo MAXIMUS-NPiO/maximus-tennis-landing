@@ -20,7 +20,7 @@ export default async function Page({ params }) {
         </div>
         <Note>{T.distinct}</Note>
       </Section>
-      <Section band="band-paper" title={T.experience} lead={T.experienceP}>
+      <Section band="band-2" title={T.experience} lead={T.experienceP}>
         <div className="btn-row" style={{ marginTop: 0 }}><Cta locale={locale} to="experience" label={T.cta} /></div>
       </Section>
     </>

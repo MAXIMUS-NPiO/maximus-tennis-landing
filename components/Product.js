@@ -8,7 +8,7 @@ export function SeriesCards({ locale, dict }) {
     <div className="grid-3">
       {seriesList.map((s) => (
         <Link key={s.id} href={href(locale, s.id)} className="card card-link">
-          <p className="eyebrow">{r.directionLabel}: {r.direction[s.direction]}</p>
+          <p className="eyebrow accent">{r.direction[s.direction]}</p>
           <h3>{s.name}</h3>
           <div className="stat" style={{ marginTop: 12 }}><b>{s.headSizeSqIn} {L.sqin}</b><span>{L.headSize} · {s.matrix.length} {L.points}</span></div>
           <span className="arrow">{r.ctaSeries} →</span>

@@ -11,8 +11,8 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.nav.groups.ecosystem} title={E.title} lead={E.lead}><div style={{ marginTop: 22 }}><Chain items={E.words} /></div></PageHero>
       <Section first><EcosystemMap locale={locale} dict={dict} /></Section>
-      <Section band="band-paper" title={E.boundaryTitle}><Kickers items={E.boundary} /></Section>
-      <Section band="band-carbon" title={E.techTitle}><p className="lead">{E.techP}</p></Section>
+      <Section band="band-2" title={E.boundaryTitle}><Kickers items={E.boundary} /></Section>
+      <Section band="band-1" title={E.techTitle}><p className="lead">{E.techP}</p></Section>
     </>
   );
 }

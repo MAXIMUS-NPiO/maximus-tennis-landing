@@ -4,6 +4,7 @@ import { href } from "../../../lib/paths";
 import { seriesList, otherRacquetSports } from "../../../data/products";
 import { PageHero, Section, Cta } from "../../../components/Ui";
 import { SeriesCards } from "../../../components/Product";
+import SeriesIndex from "../../../components/SeriesIndex";
 
 export const generateMetadata = meta("racquets", (d) => [d.racquets.title, d.racquets.lead]);
 
@@ -14,10 +15,11 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.nav.groups.racquets} title={R.title} lead={R.lead} />
       <Section first>
+        <div style={{ marginBottom: 36 }}><SeriesIndex locale={locale} dict={dict} /></div>
         <SeriesCards locale={locale} dict={dict} />
         <p className="note" style={{ marginTop: 22 }}>{R.construction}</p>
       </Section>
-      <Section band="band-carbon" title={R.compareTitle} lead={R.compareLead}>
+      <Section band="band-1" title={R.compareTitle} lead={R.compareLead}>
         <div className="spec-wrap" tabIndex={0}>
           <table className="spec">
             <thead><tr><th>{R.columns.series}</th><th className="num">{R.columns.head}</th><th>{R.columns.direction}</th><th className="num">{R.columns.weights}</th><th className="num">{R.columns.range}</th><th>{R.columns.balance}</th></tr></thead>

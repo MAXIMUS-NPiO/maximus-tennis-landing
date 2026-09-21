@@ -15,8 +15,8 @@ export default async function Page({ params }) {
           <div className="card"><span className="status planned">{S.planned}</span><h3 style={{ marginTop: 12 }}>{F.plannedTitle}</h3><Kickers items={F.planned} /></div>
         </div>
       </Section>
-      <Section band="band-paper" title={F.categoriesTitle} lead={F.categoriesP}><div className="chain">{F.categories.map((c) => <span key={c}>{c}</span>)}</div></Section>
-      <Section band="band-carbon" title={F.statusTitle}><p className="lead">{F.statusP}</p><div className="btn-row"><Cta locale={locale} to="contact" label={F.cta} purpose="family" /></div></Section>
+      <Section band="band-2" title={F.categoriesTitle} lead={F.categoriesP}><div className="chain">{F.categories.map((c) => <span key={c}>{c}</span>)}</div></Section>
+      <Section band="band-1" title={F.statusTitle}><p className="lead">{F.statusP}</p><div className="btn-row"><Cta locale={locale} to="contact" label={F.cta} purpose="family" /></div></Section>
     </>
   );
 }

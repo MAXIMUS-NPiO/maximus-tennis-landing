@@ -14,7 +14,7 @@ export default async function Page({ params }) {
         <div className="chain">{C.scope.map((s) => <span key={s}>{s}</span>)}</div>
       </Section>
       <Section title={C.processTitle}><Chain items={C.process.map((p) => p[0])} big /><div style={{ height: 24 }} /><Steps items={C.process} /><Note>{C.protected}</Note></Section>
-      <Section id="brief" band="band-carbon" title={C.formTitle} lead={C.formLead}>
+      <Section id="brief" band="band-1" title={C.formTitle} lead={C.formLead}>
         <RequestForm dict={dict} fixedPurpose="technical" />
       </Section>
     </>

@@ -15,8 +15,8 @@ export default async function Page({ params }) {
           <div className="card"><span className="status planned">{S.planned}</span><h3 style={{ marginTop: 12 }}>{O.archTitle}</h3><Kickers items={O.arch} /></div>
         </div>
       </Section>
-      <Section band="band-paper" title={O.separationTitle}><Kickers items={O.separation} /></Section>
-      <Section band="band-carbon" title={O.techTitle}><p className="lead">{O.techP}</p><span className="status direction">{S.direction}</span><div className="btn-row"><Cta locale={locale} to="contact" label={O.cta} purpose="owner" /></div></Section>
+      <Section band="band-2" title={O.separationTitle}><Kickers items={O.separation} /></Section>
+      <Section band="band-1" title={O.techTitle}><p className="lead">{O.techP}</p><span className="status direction">{S.direction}</span><div className="btn-row"><Cta locale={locale} to="contact" label={O.cta} purpose="owner" /></div></Section>
     </>
   );
 }

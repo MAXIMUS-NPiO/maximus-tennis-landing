@@ -25,8 +25,8 @@ export default async function Page({ params }) {
         </div>
         <Note red>{S.heavy}</Note>
       </Section>
-      <Section band="band-paper" title={S.purposeTitle}><Kickers items={S.purpose} /></Section>
-      <Section band="band-carbon">
+      <Section band="band-2" title={S.purposeTitle}><Kickers items={S.purpose} /></Section>
+      <Section band="band-1">
         <GripRow dict={dict} emphasise={false} />
         <div className="stack" style={{ marginTop: 24 }}><Note>{S.precisionNote}</Note><Note>{S.health}</Note></div>
         <div className="btn-row"><Cta locale={locale} to="experience" label={S.cta} /></div>

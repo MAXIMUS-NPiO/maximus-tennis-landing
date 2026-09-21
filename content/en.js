@@ -117,7 +117,7 @@ const en = {
     home: "Home",
   },
   footer: {
-    line: "A MAXIMUS racquet is your key to the MAXIMUS world.",
+    line: "MAXIMUS racquet is your key to the MAXIMUS world.",
     product: "Product",
     ecosystem: "Ecosystem",
     company: "Organisation",
@@ -130,7 +130,7 @@ const en = {
   },
   home: {
     heroEyebrow: "MAXIMUS · RACQUET ECOSYSTEM",
-    heroTitle: "A MAXIMUS racquet is your key to the MAXIMUS world.",
+    heroTitle: "MAXIMUS racquet is your key to the MAXIMUS world.",
     heroLine: "One key. One ecosystem. Unlimited opportunities.",
     heroLead:
       "MAXIMUS is a racquet-engineering, personal-development, commercial and institutional ecosystem. The racquet is the physical entry point: equipment engineered to specification, structured training, personal configuration, identity, records, rights and partnership routes connected in one system.",
@@ -142,6 +142,7 @@ const en = {
       ["8 grip sizes", "factory architecture L0–L7"],
       ["3 series", "GREAT · POWER · SPIN"],
     ],
+    index: { title: "Three series. Real parameters.", note: "Head size and primary playing direction as confirmed for each series." },
     keyNote:
       "“Key” describes the entry proposition. Specific entitlements follow published programme terms or a written agreement. “Unlimited opportunities” is a brand expression, not a promise of unlimited technical feasibility, income or access.",
     gps: {
@@ -167,6 +168,7 @@ const en = {
     },
     stiffness: {
       eyebrow: "Stiffness",
+      cols: [["Response", "How the frame returns energy at contact — held to a declared RA target."], ["Feel", "What the player senses: repeatable, not a value that guarantees a result for everyone."], ["Consistency", "Two racquets built to the same declared specification respond alike within their class."]],
       title: "Repeatable frame response against a declared specification.",
       p: "Frame stiffness shapes response, feel and consistency between racquets. MAXIMUS treats it as the fourth controlled parameter, with target, measured result, permitted tolerance and instrument capability kept as separate records. One stiffness value does not guarantee a particular result for every player; the benefit is repeatability.",
     },
@@ -303,6 +305,7 @@ const en = {
   },
   precision: {
     title: "Precision and stiffness",
+    switch: { label: "Select a precision class", panelLabel: "Four controlled parameters —", qcLabel: "QC architecture", protocolNote: "under the defined factory QC measurement protocol", fullTable: "Full comparison table" },
     lead: "Four parameters controlled as one engineering system. Each class defines how tightly a finished racquet is held to its declared specification and which quality records are produced.",
     statement: "Weight. Balance. Swingweight. Stiffness. Controlled as one engineering system.",
     classes: {

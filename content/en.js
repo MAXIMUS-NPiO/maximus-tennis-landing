@@ -902,6 +902,7 @@ const en = {
     fallback: "If the problem persists, write to {email}. A request counts as submitted only when a request ID is shown.",
     privacyLink: "Privacy notice",
     hpLabel: "Leave this field empty",
+    consentShort: "Consent",
     after: "After submission a request ID is shown on this page. Requests are reviewed and answered in writing; a request is not an order.",
     basis: { unstrung: "Unstrung", strung: "Strung", unknown: "Not sure — to be agreed in the specification" },
     hints: {

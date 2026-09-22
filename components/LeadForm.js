@@ -182,7 +182,7 @@ export default function LeadForm({
   }
 
   const describedBy = (k, hint) => [hint ? `${id(k)}-hint` : null, errors[k] ? `${id(k)}-err` : null].filter(Boolean).join(" ") || undefined;
-  const labelFor = (k) => F.fields[k] || k;
+  const labelFor = (k) => (k === "consent" ? LD.consentShort : F.fields[k] || k);
   const err = (k) => (errors[k] ? <span className="err" id={`${id(k)}-err`}>{errorText(dict, errors[k])}</span> : null);
 
   const renderField = (k, spec) => {

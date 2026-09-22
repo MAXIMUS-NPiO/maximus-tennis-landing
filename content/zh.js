@@ -901,6 +901,7 @@ const zh = {
     keepNote: "您的输入仍保留在本页，您可以重试。",
     fallback: "如问题仍然存在，请发送邮件至{email}。只有在显示申请编号后，申请才算已提交。",
     privacyLink: "隐私声明",
+    consentShort: "同意",
     hpLabel: "请将此字段留空",
     after: "提交后，本页将显示申请编号。申请经审核后以书面形式答复；申请并非订单。",
     basis: { unstrung: "未穿线", strung: "已穿线", unknown: "不确定——在规格中约定" },

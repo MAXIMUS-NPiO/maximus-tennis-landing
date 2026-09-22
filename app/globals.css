@@ -444,3 +444,9 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 .choice label > span { min-width: 0; overflow-wrap: anywhere; }
 .form-grid > fieldset.field { grid-column: 1 / -1; }
 .lead-form .choice.three { grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); }
+
+/* Checkboxes and radios inside form fields keep their natural size (the text column takes the rest) */
+.field input[type="checkbox"], .field input[type="radio"] { width: auto; flex: 0 0 auto; padding: 0; margin: 0; }
+.field .choice label { justify-content: flex-start; text-align: left; }
+.field .choice label > span { flex: 1 1 auto; }
+.field { align-content: start; }

@@ -11,7 +11,7 @@ Version 2026-09-21. Only real gaps. Each entry states what it blocks today and w
 | A3 | **Finished hero decision**: 02 (POWER, unstrung) is marked "not a finished hero" in the owner's manifest | Production release of the home hero and the POWER hero with 02 (the preview uses it as the real-product image) | Owner approves 02 for the hero role — or supplies a finished hero photograph |
 | A4 | **Sweet Spot Trainer photograph** (real trainer) | SST / training ad route: SST shows a typographic tile | Owner supplies an approved trainer photograph |
 | A5 | **QC measurement material** (instrument photographs, sample measurement records, factory footage) | Any advertising of measured precision; the manufacturing section states "not yet published" | Owner supplies real, publishable QC material (no certificate, reading or serial number is shown until then) |
-| A6 | **GREAT inspection video (08)** full-clip review | Publication of the video component (prepared, `videoReleased = false`) | Owner reviews the full 27 s clip and approves a cut |
+| A6 | **GREAT inspection video (08)** full-clip review | Publication of the video (component prepared; `inspectionVideo.released = false`) | Owner reviews the full 27 s clip and approves a cut |
 | A7 | L0–L7 photographic sequence | Not blocking (schematic in place); needed for grip-led creative | Photographs of the eight factory handle sizes |
 | A8 | Engraving template and placement zones per model | Visual personalisation preview (text is collected for artwork confirmation) | Approved template and zones per model |
 

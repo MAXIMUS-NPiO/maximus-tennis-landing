@@ -30,5 +30,8 @@ export const seriesMedia = {
   spin: { card: null, full: null, details: [] },
 };
 
-/** Inspection video 08 is prepared but NOT released: the owner must review the full clip first. */
-export const videoReleased = false;
+/**
+ * Inspection video 08 is prepared but NOT released: the owner must review the full clip first.
+ * To release: place the approved cut and its poster in public/media/, set src/poster, released: true.
+ */
+export const inspectionVideo = { released: false, model: "great", source: "08_Great_Source_Video.mp4 (3781)", src: null, poster: null };

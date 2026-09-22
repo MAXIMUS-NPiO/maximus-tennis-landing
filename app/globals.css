@@ -450,3 +450,6 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 .field .choice label { justify-content: flex-start; text-align: left; }
 .field .choice label > span { flex: 1 1 auto; }
 .field { align-content: start; }
+.video { margin: 24px 0 0; }
+.video video { display: block; width: 100%; max-height: 70vh; background: #000; border-radius: var(--radius); }
+.video figcaption { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); }

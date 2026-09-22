@@ -422,6 +422,9 @@ await scenario("S11", "Store outage: 503 shown as not submitted, input kept; ret
   await page.waitForSelector('.lead-result[data-state="failed"]');
   const code = await page.locator('.lead-result[data-state="failed"]').getAttribute("data-code");
   const text = await page.locator('.lead-result[data-state="failed"]').innerText();
+  const mail = await page.locator('.lead-result[data-state="failed"] a[data-mail-fallback]').getAttribute("href");
+  const mailBody = decodeURIComponent((mail || "").split("body=")[1] || "");
+  assert(mail && mail.startsWith("mailto:gps@maximus.tennis?subject=") && mailBody.includes("Store outage test.") && !/consent/i.test(mailBody), `mail fallback missing or wrong: ${mail && mail.slice(0, 80)}`);
   const shotFail = await shot(page, "form-store-unavailable");
   restart("bridge");
   await sleep(1200);
@@ -431,7 +434,7 @@ await scenario("S11", "Store outage: 503 shown as not submitted, input kept; ret
   const after = await total();
   assert(code === "unavailable" && after - before === 1, `unexpected outcome code=${code} delta=${after - before}`);
   await context.close();
-  return { failedCode: code, message: text.slice(0, 200), requestId: id, newRecords: after - before, screenshot: shotFail };
+  return { failedCode: code, message: text.slice(0, 200), mailFallback: mail.slice(0, 60) + "…", requestId: id, newRecords: after - before, screenshot: shotFail };
 });
 
 await scenario("S12", "Notification outage: request stays saved, retry scheduled; manual retry delivers", async () => {

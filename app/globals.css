@@ -453,3 +453,6 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 .video { margin: 24px 0 0; }
 .video video { display: block; width: 100%; max-height: 70vh; background: #000; border-radius: var(--radius); }
 .video figcaption { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); }
+
+/* Prepared e-mail fallback inside the failed-request alert */
+.lead-result.fail .btn-row { margin: 14px 0 8px; }

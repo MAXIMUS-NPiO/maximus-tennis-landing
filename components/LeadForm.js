@@ -247,15 +247,56 @@ export default function LeadForm({
     );
   };
 
+  // Prepared e-mail with the visitor's own input, offered only when the server could not accept the request
+  // (store not configured or unavailable, network failure). It is labelled as an e-mail, never as an accepted request.
+  const NO_MAIL_FALLBACK = ["rate_limited", "too_fast", "spam_suspected", "busy", "invalid"];
+  const flatList = (obj, pre = "") =>
+    Object.entries(obj || {}).flatMap(([k, x]) => {
+      if (x === null || x === undefined || x === "") return [];
+      if (Array.isArray(x)) return x.length ? [`${pre}${k}=${x.join("/")}`] : [];
+      if (typeof x === "object") return pre ? [] : flatList(x, `${k}.`);
+      return [`${pre}${k}=${x}`];
+    });
+  const mailHref = () => {
+    const purposeText = (F.purposes && F.purposes[purpose]) || purpose;
+    const all = { ...common, ...Object.fromEntries(extraEntries) };
+    const lines = [`${F.purposeLabel}: ${purposeText}`];
+    for (const k of order) {
+      if (k === "consent") continue;
+      const val = v[k];
+      if (val === undefined || val === null || val === "" || (Array.isArray(val) && !val.length)) continue;
+      const spec = all[k];
+      let text;
+      if (spec && (spec.type === "enum" || spec.type === "multi")) {
+        const names = Object.fromEntries(optionsFor(k, dict));
+        text = (Array.isArray(val) ? val : [val]).map((x) => names[x] || x).join(", ");
+      } else text = String(val).slice(0, 1000);
+      lines.push(`${labelFor(k)}: ${text}`);
+    }
+    const cfg = flatList(config);
+    if (cfg.length) lines.push(`${LD.mailConfig}: ${cfg.join("; ")}`);
+    const prof = flatList(profile);
+    if (prof.length) lines.push(`GPS: ${prof.join("; ")}`);
+    if (typeof window !== "undefined") lines.push(`${LD.mailPage}: ${window.location.pathname}`);
+    return `mailto:${site.email}?subject=${encodeURIComponent(`[MAXIMUS] ${purposeText}`)}&body=${encodeURIComponent(lines.join("\n").slice(0, 1800))}`;
+  };
+
   const errorKeys = order.filter((k) => errors[k]);
   const failed = state === "failed" && result;
   const failMsg = failed ? LD.fail[result.code] || (String(result.code).startsWith("store_") ? LD.fail.unavailable : LD.fail.default) : "";
+  const showMail = failed && !NO_MAIL_FALLBACK.includes(String(result.code));
 
   return (
     <form ref={formRef} className="form lead-form" onSubmit={onSubmit} noValidate data-state={state} data-purpose={purpose} aria-busy={state === "submitting" ? "true" : undefined}>
       {failed && (
         <div className="lead-result fail" role="alert" tabIndex={-1} ref={alertRef} data-state="failed" data-code={result.code}>
           <p><strong>{LD.failTitle}</strong> {failMsg}</p>
+          {showMail && (
+            <div className="btn-row">
+              <a className="btn-outline" data-mail-fallback="" href={mailHref()}>{LD.sendByEmail} <span aria-hidden="true">→</span></a>
+            </div>
+          )}
+          {showMail && <p className="small">{LD.sendByEmailNote}</p>}
           <p className="small">{LD.keepNote} {LD.fallback.split("{email}")[0]}<a href={`mailto:${site.email}`}>{site.email}</a>{LD.fallback.split("{email}")[1]}</p>
         </div>
       )}

@@ -35,7 +35,7 @@ Version 2026-09-21. Only real gaps. Each entry states what it blocks today and w
 
 | # | Missing | What it blocks | Closed by |
 | --- | --- | --- | --- |
-| D1 | Durable store on Vercel (Upstash for Redis via Vercel Marketplace → `KV_REST_API_URL/TOKEN`) | **Every form** (intake answers 503 "not submitted") | Owner connects the integration to the Vercel project |
+| D1 | Durable store on Vercel (Upstash for Redis via Vercel Marketplace → `KV_REST_API_URL/TOKEN`) | **Automatic intake on every form**: without the store the page says "not submitted" and offers the request as a prepared e-mail to gps@maximus.tennis (no request ID, no stored record) | Owner connects the integration to the Vercel project |
 | D2 | Notification channel: Google Workspace app password for the sending mailbox (`SMTP_*`, `LEAD_NOTIFY_*`) or a webhook | Notification of new requests (requests are saved and visible in the register, but no e-mail is sent) | Owner creates the app password and sets the variables in Vercel |
 | D3 | `CRON_SECRET`, `LEADS_ADMIN_PASSWORD` | Scheduled retries; access to the private request register | Owner sets both in Vercel |
 | D4 | GA4 measurement ID (optional) | Conversion measurement (`generate_lead`) for campaigns | Owner creates a GA4 property/stream and sets `NEXT_PUBLIC_GA_MEASUREMENT_ID` |

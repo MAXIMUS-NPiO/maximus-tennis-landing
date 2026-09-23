@@ -1,19 +1,20 @@
-# CONTENT GAPS — maximus.tennis v4.2
+# CONTENT GAPS — maximus.tennis v4.3
 
-Version 2026-09-21. Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
+Version 2026-09-23. Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
 
-## A. Photographs and video
+## A. Visuals
+
+Owner instruction 22 Sep 2026: the white-background photographs of unstrung frames are withdrawn; the site shows visualisations (owner's SPIN set + renders for GREAT / POWER / SST). What is still missing:
 
 | # | Missing material | What it blocks | Closed by |
 | --- | --- | --- | --- |
-| A1 | **GREAT full-view photograph** (whole racquet incl. handle) plus a construction / handle detail | GREAT ad route: the GREAT page hero shows a typographic tile; the only GREAT photo (06) is a head-geometry view that the owner's manifest marks "not a hero" | Owner supplies an approved full view; register it in `data/media.js → seriesMedia.great.full` |
-| A2 | **SPIN photographs** (full view, construction, handle detail) | SPIN ad route: SPIN card and hero are typographic tiles | Owner supplies approved SPIN photographs |
-| A3 | **Finished hero decision**: 02 (POWER, unstrung) is marked "not a finished hero" in the owner's manifest | Production release of the home hero and the POWER hero with 02 (the preview uses it as the real-product image) | Owner approves 02 for the hero role — or supplies a finished hero photograph |
-| A4 | **Sweet Spot Trainer photograph** (real trainer) | SST / training ad route: SST shows a typographic tile | Owner supplies an approved trainer photograph |
-| A5 | **QC measurement material** (instrument photographs, sample measurement records, factory footage) | Any advertising of measured precision; the manufacturing section states "not yet published" | Owner supplies real, publishable QC material (no certificate, reading or serial number is shown until then) |
+| A1 | **Owner visual sets for GREAT and POWER** in the quality of the SPIN set | Nothing is blocked — the pages use renders built here; owner sets would replace them | Owner supplies the sets (same style as 1_1.zip) |
+| A2 | **Sweet Spot Trainer visual set** from the owner | Nothing is blocked — SST uses a render | Owner supplies an approved trainer visual |
+| A3 | **Confirmed SPIN balance, string pattern and tension range** (shown on the owner's images, cropped off here) | Publishing those values anywhere, including on an image | Founder confirmation with source and revision (see B1) |
+| A5 | **QC measurement material** (instrument photographs, sample measurement records, factory footage) | Any advertising of measured precision; the manufacturing section states "not yet published" | Owner supplies real, publishable QC material |
 | A6 | **GREAT inspection video (08)** full-clip review | Publication of the video (component prepared; `inspectionVideo.released = false`) | Owner reviews the full 27 s clip and approves a cut |
-| A7 | L0–L7 photographic sequence | Not blocking (schematic in place); needed for grip-led creative | Photographs of the eight factory handle sizes |
-| A8 | Engraving template and placement zones per model | Visual personalisation preview (text is collected for artwork confirmation) | Approved template and zones per model |
+| A7 | L0–L7 visual sequence | Not blocking (schematic in place); needed for grip-led creative | Visualisation or photographs of the eight factory handle sizes |
+| A8 | Engraving template and placement zones per model | Interactive personalisation preview (the silver engraving is shown on the owner's visual; the configurator collects the text for artwork confirmation) | Approved template and zones per model |
 
 ## B. Product data (shown as "not provided" or collected as requests)
 

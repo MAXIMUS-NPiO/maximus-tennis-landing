@@ -70,7 +70,17 @@ export default async function Page({ params }) {
         </div>
       </section>
 
-      <Section first title={P.optionsTitle}>
+      {id === "spin" && (
+        <Section first title={P.weightVisualTitle} lead={P.weightVisualLead}>
+          <div className="detail-grid">
+            {["spin270", "spin320", "spin347"].map((k) => (
+              <Photo key={k} id={k} alt={M[k]} caption={M[k]} sizes="(min-width: 760px) 30vw, 92vw" />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      <Section title={P.optionsTitle}>
         {m.details.filter((d) => d !== hero).length > 0 ? (
           <div className="detail-grid" style={{ marginBottom: 26 }}>
             {m.details.filter((d) => d !== hero).map((d) => <Photo key={d} id={d} alt={M[d]} caption={M[d]} sizes="(min-width: 760px) 30vw, 92vw" />)}

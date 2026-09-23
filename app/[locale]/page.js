@@ -43,7 +43,7 @@ export default async function Home({ params }) {
               <Cta locale={locale} to="racquets" label={H.heroCta2} kind="btn-outline" track="hero_series" />
             </div>
           </div>
-          <Photo id="powerFull" alt={M.powerFull} caption={H.heroCaption} priority sizes="(min-width: 900px) 360px, 270px" className="hero-photo" />
+          <Photo id="spinVisual" alt={M.spinVisual} caption={H.heroCaption} priority sizes="(min-width: 900px) 520px, 94vw" className="hero-photo" />
           <div className="hero-meta">
             {H.heroMeta.map(([b, s]) => <div key={b}><b>{b}</b>{s}</div>)}
           </div>
@@ -141,7 +141,7 @@ export default async function Home({ params }) {
         <p className="lead" style={{ marginBottom: 26 }}>{H.training.p}</p>
         <div className="grid-3">
           <Link href={href(locale, "sst")} className="card card-link">
-            <PhotoPending name="SST" sub={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} note={H.training.photoPending} className="mini" />
+            <Photo id="sstFull" alt={M.sstFull} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} sizes="(min-width: 760px) 30vw, 92vw" className="mini" />
             <h3 style={{ marginTop: 14 }}>{dict.training.sst.h}</h3>
             <p>{sst.system.map((x) => `${x.weight}/${x.balance}`).join(" · ")} ({L.grams}/{L.mm})</p>
             <span className="arrow">{L.learn} →</span>
@@ -157,9 +157,9 @@ export default async function Home({ params }) {
         <p className="lead" style={{ marginBottom: 26 }}>{H.manufacturing.p}</p>
         <div className="detail-grid">
           <Photo id="lettering" alt={M.lettering} caption={H.manufacturing.captions.lettering} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="buttcap" alt={M.buttcap} caption={H.manufacturing.captions.buttcap} sizes="(min-width: 760px) 24vw, 46vw" />
+          <Photo id="handleLion" alt={M.handleLion} caption={H.manufacturing.captions.buttcap} sizes="(min-width: 760px) 24vw, 46vw" />
           <Photo id="powerHandle" alt={M.powerHandle} caption={H.manufacturing.captions.handle} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="finish" alt={M.finish} caption={H.manufacturing.captions.finish} sizes="(min-width: 760px) 24vw, 46vw" />
+          <Photo id="spinHead" alt={M.spinHead} caption={H.manufacturing.captions.finish} sizes="(min-width: 760px) 24vw, 46vw" />
         </div>
         <div className="grid-2" style={{ marginTop: 26 }}>
           <div className="card"><span className="status confirmed">{S.confirmed}</span><h3 style={{ marginTop: 12 }}>{H.manufacturing.confirmedTitle}</h3><Kickers items={H.manufacturing.confirmed} /></div>

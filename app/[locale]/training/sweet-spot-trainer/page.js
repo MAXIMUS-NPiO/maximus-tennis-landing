@@ -2,7 +2,7 @@ import { ctx, meta } from "../../../../lib/page";
 import { sweetSpotTrainer as sst } from "../../../../data/products";
 import { PageHero, Section, Cta, Kickers, Note } from "../../../../components/Ui";
 import { GripRow } from "../../../../components/Product";
-import { PhotoPending } from "../../../../components/Media";
+import { Photo } from "../../../../components/Media";
 
 export const generateMetadata = meta("sst", (d) => [d.sst.title, d.sst.lead]);
 
@@ -20,7 +20,7 @@ export default async function Page({ params }) {
         </div>
       </PageHero>
       <Section first>
-        <PhotoPending name="Sweet Spot Trainer" sub={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} note={dict.home.training.photoPending} className="wide" />
+        <Photo id="sstFull" alt={dict.media.sstFull} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} priority sizes="(min-width: 900px) 420px, 92vw" className="hero-photo" />
       </Section>
       <Section title={S.systemTitle} lead={S.systemLead}>
         <span className="status confirmed" style={{ marginBottom: 14 }}>{S.baseline}</span>

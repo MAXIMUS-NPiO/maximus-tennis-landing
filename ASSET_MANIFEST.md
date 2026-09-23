@@ -1,35 +1,55 @@
-# ASSET MANIFEST — maximus.tennis v4.2
+# ASSET MANIFEST — maximus.tennis v4.3
 
-Version 2026-09-21 · Source set: owner's visual package "MAXIMUS_Claude_Visuals_FINAL" with `00_READ_FIRST_CLAUDE.md` (the owner's manifest of intended uses and restrictions).
-Code counterpart: `data/media.js`. Every image is delivered through `next/image` (AVIF/WebP, responsive `srcset`; `priority` only for the page hero, lazy loading elsewhere).
+Version 2026-09-23. **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations from several angles** instead. Every visual on the page is labelled as a visualisation; product data always comes from `data/products.js`, never from an image.
 
-Status vocabulary: **APPROVED** — approved for production in an earlier release · **PREVIEW — APPROVAL PENDING** — used in the preview strictly within the purpose stated in the owner's manifest; production use requires the owner's release approval · **PREPARED — NOT RELEASED** · **EXCLUDED**.
+Code counterpart: `data/media.js`. Images are delivered through `next/image` (AVIF/WebP, responsive `srcset`; `priority` only for a page hero).
 
-## 1. Photographs and video
+Status vocabulary: **OWNER SET** — supplied by the owner (1_1.zip, 22 Sep 2026), used as delivered apart from the crop noted · **RENDER** — built in this repository from the geometry of the photographed frames · **EXCLUDED** — not used.
 
-| Published file | Source (owner set) | Model | Status | Allowed purpose (owner's manifest) | Where used | Derivative | Localized alt (EN / RU / ZH) |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| `public/media/power-full-frame.jpg` | 02_Power_Full_Frame.jpeg (IMG_9629), 1152×1536 | POWER | PREVIEW — APPROVAL PENDING | Full unstrung POWER frame. Restriction: "not a finished hero"; no invented strings, handle or SKU | Home hero; POWER series hero; home POWER card | crop x 190–962, full height → 772×1536, JPEG q82; geometry unchanged | MAXIMUS POWER racquet, unstrung frame, matte black / Ракетка MAXIMUS POWER, рама без струн, матовый чёрный цвет / MAXIMUS POWER球拍，未穿线拍框，哑光黑色 |
-| `public/media/power-throat-handle.jpg` | 03_Power_Handle.jpeg (IMG_9634(1)), 1152×1536 | POWER | PREVIEW — APPROVAL PENDING | Throat-to-handle transition. Not a carbon cutaway; not proof of eight grip sizes | POWER series detail; manufacturing section (home, engineering) | crop → 555×900 | MAXIMUS POWER throat-to-handle transition / Переход от шейки к ручке ракетки MAXIMUS POWER / MAXIMUS POWER拍喉至拍柄的过渡段 |
-| `public/media/lion-buttcap.jpg` | 04_Lion_Buttcap.jpeg (IMG_9633(2)), 1152×1536 | not identified | PREVIEW — APPROVAL PENDING | Butt cap with lion. Not a replacement logo | Manufacturing section (home, engineering) | crop → 691×691 | Lion emblem on the MAXIMUS butt cap / Эмблема льва на нижней крышке ручки MAXIMUS / MAXIMUS拍柄底盖上的狮子徽标 |
-| `public/media/maximus-lettering.jpg` | 05_MAXIMUS_Lettering.jpeg (IMG_9630(2)), 1152×1536 | not identified | PREVIEW — APPROVAL PENDING | Gloss / matte lettering. No synthetic chrome | Manufacturing section (home, engineering) | crop → 675×900 | Gloss black MAXIMUS lettering on a matte black frame / Глянцевая чёрная надпись MAXIMUS на матовой чёрной раме / 哑光黑色拍框上的亮面黑色MAXIMUS字样 |
-| `public/media/great-head-geometry.jpg` | 06_Great_Actual_Geometry.jpeg (3780(2)), 1280×1707 | GREAT | PREVIEW — APPROVAL PENDING | GREAT head, beam, V-throat. Handle cropped; **not a hero**; no extension, no strings | Home GREAT card (labelled "head and V-throat geometry"); GREAT series detail. Never used as a hero | resize → 960×1280 | MAXIMUS GREAT head and V-throat geometry / Геометрия головы и V-образной шейки MAXIMUS GREAT / MAXIMUS GREAT拍头与V形拍喉几何结构 |
-| `public/media/frames-finish-reference.jpg` | 07_Frames_Finish_Reference.jpeg (IMG_2971(1)), 1536×1152 | not identified | PREVIEW — APPROVAL PENDING | Finish reference. Not labelled GREAT/POWER/SPIN, not a certified matched set, not current products | Manufacturing section, captioned "frames not identified by series" | resize → 1200×900 | MAXIMUS frames, finish reference / Рамы MAXIMUS, образец отделки / MAXIMUS拍框，表面处理参考 |
-| — (not in repository) | 08_Great_Source_Video.mp4 (3781(3)), 512×910, 27 s, 16.5 MB | GREAT | PREPARED — NOT RELEASED | GREAT inspection footage. The owner must review the full clip before publication | Nowhere. Component `components/Video.js` (poster, native controls, `preload="none"`, no autoplay) is wired on the engineering page behind `data/media.js → inspectionVideo.released = false`. Every sampled frame crops the handle | — | — |
+## 1. Owner visual set (SPIN series)
 
-## 2. Brand assets (unchanged from v4.1)
+Source: `1_1.zip`, 16 square compositions, one per listed SPIN weight (270, 273, 277, 280, 283, 287, 290, 294, 297, 315, 320, 325, 330, 333, 339, 347 g). Every weight shown is in the confirmed SPIN matrix (`data/products.js`).
+
+**Crop applied to all of them:** the lower specification strip (balance, string tension, string pattern) and the line "MIPA REGISTRATION · INTERNAL RECORD" are cut off. Reason: SPIN balance, tension range and string pattern are **not** confirmed data (CONTENT_GAPS B1–B2), and an internal MIPA record is not public information. Nothing else is retouched.
+
+| Published file | Source | Crop | Where used | Localized alt (EN / RU / ZH) |
+| --- | --- | --- | --- | --- |
+| `public/media/spin-visual.jpg` (1254×845) | 290.png | top 845 px | Home hero; SPIN card; SPIN series hero | MAXIMUS SPIN visualisation… / Визуализация MAXIMUS SPIN… / MAXIMUS SPIN效果图… |
+| `public/media/spin-head.jpg` (640×460) | 290.png | head and string bed | Manufacturing section (home, engineering); SPIN details | Head and string bed / Голова и струнная поверхность / 拍头与线床 |
+| `public/media/handle-lion.jpg` (418×705) | 290.png | throat, grip, butt cap | Manufacturing section; SPIN details | Throat, grip and butt cap with the lion mark / Шейка, ручка и нижняя крышка со львом / 拍喉、握柄与狮子底盖 |
+| `public/media/lettering.jpg` (890×415) | 290.png | gloss lettering | Manufacturing section | Gloss MAXIMUS lettering / Глянцевая надпись MAXIMUS / 亮面MAXIMUS字样 |
+| `public/media/engraving.jpg` (360×205) | 290.png | silver engraving | Custom engineering (personalisation) | Silver personalisation engraving / Серебристая гравировка персонализации / 银色个性化刻字 |
+| `public/media/spin-270.jpg`, `spin-320.jpg`, `spin-347.jpg` (900×606) | 270 / 320 / 347.png | top 845 px | SPIN page: "the weight architecture, seen" | MAXIMUS SPIN, 270 / 320 / 347 g |
+
+## 2. Renders (GREAT, POWER, Sweet Spot Trainer)
+
+Built with Blender (Cycles) in `scratchpad/render/` from geometry derived from the owner's own photographs: head outline and throat taken from the POWER frame photograph, head area set per series (GREAT 97 in², POWER 98 in², SPIN 100 in², SST 50 in²), 686 mm length, factory octagonal handle, official wordmark and lion mark used as supplied. Matte black frame, gloss black lettering, silver-grey strings, dark studio lighting.
+
+| Published file | Series | View | Where used |
+| --- | --- | --- | --- |
+| `public/media/power-hero.jpg` (900×1200) | POWER | three-quarter | POWER series hero |
+| `public/media/power-front.jpg` (800×1067) | POWER | front | POWER card on the home page |
+| `public/media/power-throat.jpg` (925×661) | POWER | throat and shaft | POWER details; manufacturing section |
+| `public/media/great-hero.jpg` (900×1200) | GREAT | three-quarter | GREAT series hero |
+| `public/media/great-front.jpg` (800×1067) | GREAT | front | GREAT card on the home page |
+| `public/media/spin-front.jpg` (800×1067) | SPIN | front | reserve (SPIN uses the owner's set) |
+| `public/media/sst-front.jpg` (800×1067) | Sweet Spot Trainer | front | SST page and home training block |
+
+A render is not a photograph and not evidence: it shows the declared geometry of the series, not a measured or available unit. The pages label these images as visualisations.
+
+## 3. Brand assets (unchanged)
 
 | File | Source | Status | Use |
 | --- | --- | --- | --- |
-| `public/brand/maximus-gps-lockup.png` (1034×248) | 01_MAXIMUS_GPS_Identity.jpeg — crop only, background floored to black | APPROVED | Header, footer, Open Graph composition |
-| `public/brand/maximus-lion-emblem.png` (512×512), `app/icon.png` (256), `app/apple-icon.png` (180) | Crop of the official lockup (01) | APPROVED | Favicon, Organization logo |
-| `public/brand/og-maximus.png` (1200×630) | Lockup + typography on black; no product geometry | APPROVED | Share previews |
+| `public/brand/maximus-gps-lockup.png` (1034×248) | 01_MAXIMUS_GPS_Identity.jpeg — crop only | APPROVED | Header, footer, Open Graph |
+| `public/brand/maximus-lion-emblem.png`, `app/icon.png`, `app/apple-icon.png` | crop of the official lockup | APPROVED | Favicon, Organization logo |
+| `public/brand/og-maximus.png` (1200×630) | lockup + typography on black | APPROVED | Share previews |
 
-## 3. Schematics (not photographs)
-Generated in code and labelled on the page as **"Schematic — not a measurement"**: stiffness tolerance bands per precision class (no RA value implied) and the nominal grip scale L0–L7 (4″–4⅞″, not measured handle dimensions). Files: `components/Schematics.js`.
-
-## 4. Typographic tiles instead of photographs
-Where no approved photograph exists the page shows a typographic tile with the text "Photograph not yet published" (localized): SPIN (series card and hero), GREAT hero (the geometry photo is not a hero), Sweet Spot Trainer. Listed in `CONTENT_GAPS.md`.
+## 4. Schematics (not images of the product)
+Generated in code and labelled "Schematic — not a measurement": stiffness tolerance bands per precision class and the nominal grip scale L0–L7. Files: `components/Schematics.js`.
 
 ## 5. Excluded
-Rejected GREAT covers, SPIN STORIES graphics, the SST composite, quotation extracts, unapproved renders, foam-handle imagery, substitute racquets, invented logos, the v1 temporary references and the artificial circular "M" mark. None of them or their crops is in the repository. Generated images are never used as evidence that a model exists or is available.
+- The September source photographs of unstrung frames on a white background (02–07) — withdrawn by the owner on 22 Sep 2026 and removed from the repository.
+- The specification strip and MIPA record line of the owner's SPIN set (cropped off, see §1).
+- Rejected covers, STORIES graphics, composites, quotation extracts, foam-handle imagery, substitute racquets and invented logos — never in the repository.
+- Video 08: prepared, not released (`data/media.js → inspectionVideo.released = false`).

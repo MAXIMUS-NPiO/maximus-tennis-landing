@@ -1,6 +1,6 @@
-# ASSET MANIFEST — maximus.tennis v4.3
+# ASSET MANIFEST — maximus.tennis v4.4
 
-Version 2026-09-23. **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations from several angles** instead. Every visual on the page is labelled as a visualisation; product data always comes from `data/products.js`, never from an image.
+Version 2026-09-23, published to production (commit `9cd6d81`). **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations from several angles** instead. Every visual on the page is labelled as a visualisation; product data always comes from `data/products.js`, never from an image.
 
 Code counterpart: `data/media.js`. Images are delivered through `next/image` (AVIF/WebP, responsive `srcset`; `priority` only for a page hero).
 

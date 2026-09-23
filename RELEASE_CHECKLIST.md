@@ -32,3 +32,18 @@ Run date 2026-09-22 — final content of this branch: full run after the owner-w
 | 26 | Performance (lab) | Lighthouse 13.5 mobile, simulated throttling (RTT 150 ms, 1.6 Mbps, CPU ×4, Moto G Power 412×823), median of 3 runs per page: Performance 92–98; A11y / BP / SEO 100; CLS 0; TBT 97–208 ms; LCP /en/choose 1.7 s, /en/build 1.9 s, /ru 2.0 s — **/en 3.0 s, /zh 2.8 s, /en/racquets/power 2.7 s exceed the 2.5 s target in this lab profile** (LCP element = hero product image) | PARTIAL | `lighthouse-median.json` | Field data: none exists yet (no CrUX, no RUM). INP cannot be measured in the lab |
 | 27 | Mainland China | Not tested (no mainland network, no WeChat in-app test) | NOT RUN | — | D5 |
 | 28 | Physical devices | Not tested (emulation only) | NOT RUN | — | Owner's device check on the preview |
+
+## Production release — 23 September 2026
+
+Released on the owner's instruction of 23 September 2026. `release/ads-readiness-v4.2` (head `70b49fc`, visuals from the owner's sets) squashed into `main` as commit `9cd6d81`, author MAXIMUS <info@maximus.ltd>, no force push, branch protection untouched. Vercel production deployment from `main`.
+
+| # | Check on the live site | Result |
+| --- | --- | --- |
+| P1 | 96 localized paths on https://maximus.tennis | all 200, no forbidden strings, `lang` / canonical / hreflang present (`scripts/crawl.mjs https://maximus.tennis`) |
+| P2 | Optimized images (`/_next/image`) for the owner's visual sets | 200, `image/jpeg`, correct sizes at w=640 and w=1080 |
+| P3 | Images rendered in a browser (home, SPIN, Sweet Spot Trainer, GREAT, ZH home) | every `<img>` loads; lazy images below the fold load on scroll |
+| P4 | `/api/leads` deployed | `GET` → 405 `method_not_allowed`; `POST` with an empty body → 400 `too_fast`; wrong content type → 415 `unsupported_media_type`; **no test request created** |
+| P5 | Store (D1) not connected | a real request would be answered 503 and the form offers the prepared e-mail to gps@maximus.tennis — automatic intake stays blocked until the owner connects the store |
+| P6 | Unit / data / i18n on the released tree | 24/24 unit tests, `check:data` OK, `check:i18n` OK |
+
+Not re-run against production (unchanged since the branch run of 22 Sep): acceptance S01–S16 with fault injection, axe-core, Lighthouse. Still not tested: mainland China (D5) and physical devices.

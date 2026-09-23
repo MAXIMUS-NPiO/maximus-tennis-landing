@@ -1,9 +1,9 @@
-import { ctx, meta } from "../../../lib/page";
+import { ctx, meta, formDict } from "../../../lib/page";
 import { productDataVersion } from "../../../data/products";
 import { PageHero, Section, Note } from "../../../components/Ui";
 import GpsWizard, { GPS_RULES_VERSION } from "../../../components/GpsWizard";
 
-export const generateMetadata = meta("gps", (d) => [d.gps.title, d.gps.lead]);
+export const generateMetadata = meta("gps", (d) => [d.gps.metaTitle, d.gps.lead]);
 
 export default async function Page({ params }) {
   const { locale, dict } = await ctx(params);
@@ -16,7 +16,7 @@ export default async function Page({ params }) {
       <Section first>
         <Note>{G.honesty}</Note>
         <div style={{ height: 20 }} />
-        <GpsWizard locale={locale} dict={{ gps: dict.gps, common: dict.common, racquets: dict.racquets }} />
+        <GpsWizard locale={locale} dict={formDict(dict, ["racquets"])} />
       </Section>
     </>
   );

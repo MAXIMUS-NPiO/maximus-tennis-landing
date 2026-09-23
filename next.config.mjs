@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  serverExternalPackages: ["nodemailer"],
   images: { formats: ["image/avif", "image/webp"] },
   async headers() {
     return [

@@ -3,6 +3,7 @@ import { extendedParameters } from "../../../data/products";
 import { PageHero, Section, Cta, Note, Chain } from "../../../components/Ui";
 import { PrecisionTable } from "../../../components/Product";
 import PrecisionSwitch from "../../../components/PrecisionSwitch";
+import { StiffnessSchematic } from "../../../components/Schematics";
 
 export const generateMetadata = meta("precision", (d) => [d.precision.title, d.precision.lead]);
 
@@ -13,10 +14,10 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.home.precision.eyebrow} title={P.title} statement={P.statement} lead={P.lead} />
       <Section first>
-        <PrecisionSwitch dict={dict} />
+        <PrecisionSwitch dict={{ precision: dict.precision, common: dict.common }} />
         <h2 className="h-3" style={{ margin: "40px 0 14px" }}>{P.switch.fullTable}</h2>
         <PrecisionTable dict={dict} />
-        <p className="muted" style={{ marginTop: 14, fontSize: 14 }}>{P.stiffExample}</p>
+        <p className="muted small" style={{ marginTop: 14 }}>{P.programmeNote}</p>
         <Note>{P.targetsNote}</Note>
         <Note red>{P.noZero}</Note>
       </Section>
@@ -25,7 +26,8 @@ export default async function Page({ params }) {
         <div className="grid-3" style={{ marginBottom: 30 }}>
           {dict.home.stiffness.cols.map(([h, t]) => <div key={h} className="stat"><b style={{ fontSize: "clamp(26px,3vw,38px)" }}>{h}</b><span style={{ fontSize: 16.5 }}>{t}</span></div>)}
         </div>
-        <div className="split">
+        <StiffnessSchematic labels={dict.home.stiffness.bands} caption={dict.home.stiffness.schematicCaption} schematicLabel={dict.common.labels.schematic} />
+        <div className="split" style={{ marginTop: 30 }}>
           <p>{P.stiffnessP2}</p>
           <div className="stack"><Chain items={P.fields} /><p className="muted" style={{ fontSize: 15 }}>{P.fieldsNote}</p></div>
         </div>

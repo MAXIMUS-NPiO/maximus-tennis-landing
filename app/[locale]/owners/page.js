@@ -11,12 +11,12 @@ export default async function Page({ params }) {
       <PageHero eyebrow={dict.nav.owners} title={O.title} lead={O.lead} />
       <Section first>
         <div className="grid-2">
-          <div className="card"><span className="status available">{S.available}</span><h3 style={{ marginTop: 12 }}>{O.nowTitle}</h3><Kickers items={O.now} /></div>
-          <div className="card"><span className="status planned">{S.planned}</span><h3 style={{ marginTop: 12 }}>{O.archTitle}</h3><Kickers items={O.arch} /></div>
+          <div className="card"><span className="status current">{S.current}</span><h3 style={{ marginTop: 12 }}>{O.nowTitle}</h3><Kickers items={O.now} /></div>
+          <div className="card"><span className="status concept">{S.concept}</span><h3 style={{ marginTop: 12 }}>{O.archTitle}</h3><Kickers items={O.arch} /></div>
         </div>
       </Section>
       <Section band="band-2" title={O.separationTitle}><Kickers items={O.separation} /></Section>
-      <Section band="band-1" title={O.techTitle}><p className="lead">{O.techP}</p><span className="status direction">{S.direction}</span><div className="btn-row"><Cta locale={locale} to="contact" label={O.cta} purpose="owner" /></div></Section>
+      <Section band="band-1" title={O.techTitle}><p className="lead">{O.techP}</p><span className="status concept">{S.concept}</span><div className="btn-row"><Cta locale={locale} to="contact" label={O.cta} purpose="owner" /></div></Section>
     </>
   );
 }

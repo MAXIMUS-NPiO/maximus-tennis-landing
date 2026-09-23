@@ -2,6 +2,7 @@ import { ctx, meta } from "../../../lib/page";
 import { grips } from "../../../data/products";
 import { PageHero, Section, Cta } from "../../../components/Ui";
 import { GripRow } from "../../../components/Product";
+import { GripScale } from "../../../components/Schematics";
 
 export const generateMetadata = meta("grip", (d) => [d.grip.title, d.grip.lead]);
 
@@ -11,7 +12,7 @@ export default async function Page({ params }) {
   return (
     <>
       <PageHero eyebrow={dict.home.carbon.eyebrow} title={G.title} statement={G.statement} lead={G.lead} />
-      <Section first><GripRow dict={dict} /></Section>
+      <Section first><GripScale caption={dict.home.carbon.scaleCaption} schematicLabel={dict.common.labels.schematic} /><div style={{ height: 24 }} /><GripRow dict={dict} /></Section>
       <Section band="band-2">
         <div className="split">
           <div className="stack"><p className="lead">{G.p1}</p><p>{G.p2}</p><p className="muted">{G.p3}</p></div>
@@ -19,7 +20,7 @@ export default async function Page({ params }) {
             {grips.map((g) => <tr key={g.id}><td><strong>{g.id}</strong></td><td className="num">{g.inches}{g.fraction}″</td><td><small>{G.families}</small></td></tr>)}
           </tbody></table></div>
         </div>
-        <div className="btn-row"><Cta locale={locale} to="build" label={G.cta} /></div>
+        <div className="btn-row"><Cta locale={locale} to="build" query="from=grip" label={G.cta} /></div>
       </Section>
     </>
   );

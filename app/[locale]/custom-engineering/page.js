@@ -1,6 +1,7 @@
-import { ctx, meta } from "../../../lib/page";
+import { ctx, meta, formDict } from "../../../lib/page";
 import { PageHero, Section, Chain, Steps, Note } from "../../../components/Ui";
-import RequestForm from "../../../components/RequestForm";
+import LeadForm from "../../../components/LeadForm";
+import { Photo } from "../../../components/Media";
 
 export const generateMetadata = meta("custom", (d) => [d.custom.title, d.custom.lead]);
 
@@ -11,11 +12,14 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.home.custom.eyebrow} title={C.title} statement={`${C.statement} ${C.sub}`} lead={C.lead} />
       <Section first title={C.scopeTitle}>
-        <div className="chain">{C.scope.map((s) => <span key={s}>{s}</span>)}</div>
+        <div className="split">
+          <div className="chain">{C.scope.map((s) => <span key={s}>{s}</span>)}</div>
+          <Photo id="engraving" alt={dict.media.engraving} caption={dict.media.engraving} sizes="(min-width: 760px) 40vw, 92vw" />
+        </div>
       </Section>
       <Section title={C.processTitle}><Chain items={C.process.map((p) => p[0])} big /><div style={{ height: 24 }} /><Steps items={C.process} /><Note>{C.protected}</Note></Section>
       <Section id="brief" band="band-1" title={C.formTitle} lead={C.formLead}>
-        <RequestForm dict={dict} fixedPurpose="technical" />
+        <div className="panel form-panel"><LeadForm dict={formDict(dict)} locale={locale} purpose="technical" context={{ from: "custom" }} /></div>
       </Section>
     </>
   );

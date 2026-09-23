@@ -26,12 +26,23 @@ expect(byId["P0.5"].weightG === 0.5 && byId["P0.5"].stiffness.kind === "exact-de
 expect(sweetSpotTrainer.headSizeSqIn === 50 && sweetSpotTrainer.lengthIn === 27 && sweetSpotTrainer.stringPattern === "12 × 14", "SST baseline");
 expect(JSON.stringify(sweetSpotTrainer.system.map((x) => [x.weight, x.balance])) === JSON.stringify([[270, 330], [285, 325], [300, 325], [400, 320]]), "SST system");
 expect(spotTrainer.targetDimensions === "NOT_PROVIDED" && spotTrainer.balances === "NOT_PROVIDED", "Spot Trainer: no invented dimensions or balances");
+// Evidence statuses (founder instruction 21.09.2026)
+expect(series.spin.matrixStatus === "REQUESTED_ARCHITECTURE" && series.spin.balanceStatus === "NOT_PROVIDED", "spin: must keep the status 'requested weight architecture' with balance NOT PROVIDED");
+expect(series.great.balanceStatus === "MODELLED" && series.power.balanceStatus === "MODELLED", "great/power: balances must be labelled as calculated");
+for (const id of ["great", "power", "spin"]) {
+  const ps = series[id].paramStatus || {};
+  expect(ps.swingweight === "not_provided" && ps.stiffness === "not_provided", `${id}: swingweight and stiffness must stay NOT PROVIDED until confirmed`);
+}
+expect(sweetSpotTrainer.precisionClassesApply === false, "SST: precision classes must not apply");
 
 // The internal balance formula must never be present in the repository.
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = path.join(d, f); if (["node_modules", ".next", ".git"].includes(f)) return []; return statSync(p).isDirectory() ? walk(p) : [p]; });
-const banned = [/381\.135245/, /0\.162636422/, /shaleni/i, /borteyman/i, /ghana/i, /zero weight tolerance/i, /go tennis/i, /norris/i];
+const banned = [
+  /381\.135245/, /0\.162636422/, /shaleni/i, /borteyman/i, /ghana/i, /zero weight tolerance/i, /go tennis/i, /norris/i,
+  /maximussports\.ae/i, /1[ ,.]?104[ ,.]?600/, /2[ ,.]?946[ ,.]?618/, /\b(102|136|204|139)\s?(EUR|€)/, /\bJude\b/, /\bNii\b/, /240\s?[–-]\s?340/,
+];
 // Scope: everything that can reach the public bundle or rendered pages. Internal governance
 // documents (*.md) and the check scripts legitimately NAME the banned terms and are excluded.
 const PUBLIC_DIRS = ["app", "components", "content", "data", "lib", "public"];

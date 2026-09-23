@@ -18,6 +18,7 @@ export default function Header({ locale, nav }) {
   const [openGroup, setOpenGroup] = useState(null);
   const pathname = usePathname() || "";
   const navRef = useRef(null);
+  const toggleRef = useRef(null);
 
   const isActive = (key) => pathname === href(locale, key) || (key !== "home" && pathname.startsWith(href(locale, key) + "/"));
   const groupActive = (g) => g.items && g.items.some(isActive);
@@ -33,6 +34,14 @@ export default function Header({ locale, nav }) {
     return () => { document.removeEventListener("pointerdown", onDoc); document.removeEventListener("keydown", onKey); };
   }, [openGroup]);
 
+  // Mobile menu: Escape closes it and returns focus to the toggle.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => { if (e.key === "Escape") { setOpen(false); if (toggleRef.current) toggleRef.current.focus(); } };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
+
   const onBlurGroup = (e) => {
     const li = e.currentTarget;
     if (!li.contains(e.relatedTarget)) setOpenGroup((g) => (g === li.dataset.group ? null : g));
@@ -40,10 +49,10 @@ export default function Header({ locale, nav }) {
 
   return (
     <header className="site-header">
-      <a className="skip" href="#main">{nav.home}</a>
+      <a className="skip" href="#main">{nav.skip || nav.home}</a>
       <div className="shell header-inner">
         <Link className="logo-link" href={href(locale, "home")} aria-label="MAXIMUS GPS">
-          <Logo height={40} priority />
+          <Logo height={40} />
         </Link>
         <ul className="nav-desktop" ref={navRef} aria-label={nav.menu}>
           {navGroups.map((g) =>
@@ -73,7 +82,7 @@ export default function Header({ locale, nav }) {
         </ul>
         <div className="header-tools">
           <LocaleSwitcher locale={locale} />
-          <button type="button" className="menu-toggle" aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen((v) => !v)} aria-label={open ? nav.close : nav.menu}>
+          <button type="button" ref={toggleRef} className="menu-toggle" aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen((v) => !v)} aria-label={open ? nav.close : nav.menu}>
             <span aria-hidden="true">{open ? "✕" : "☰"}</span>
           </button>
         </div>

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { href } from "../lib/paths";
+import CtaLink from "./CtaLink";
 
 export function PageHero({ eyebrow, title, lead, statement, children }) {
   return (
@@ -54,12 +54,30 @@ export function Chain({ items, big = false }) {
   );
 }
 
-export function Cta({ locale, to, label, kind = "btn", purpose }) {
+/** Call to action. `query` is appended verbatim (validated values only); `track` names the CTA for analytics. */
+export function Cta({ locale, to, label, kind = "btn", purpose, query, track, series }) {
   const base = href(locale, to);
-  const url = purpose ? `${base}?purpose=${purpose}` : base;
-  return <Link className={kind} href={url}>{label} <span aria-hidden="true">→</span></Link>;
+  const q = query || (purpose ? `purpose=${purpose}` : "");
+  const url = q ? `${base}?${q}` : base;
+  return (
+    <CtaLink className={kind} href={url} cta={track} locale={locale} series={series}>
+      {label} <span aria-hidden="true">→</span>
+    </CtaLink>
+  );
 }
 
 export function Note({ children, red = false }) {
   return <p className={`note ${red ? "red" : ""}`}>{children}</p>;
+}
+
+/** The four questions every audience page answers. */
+export function Brief({ labels, brief }) {
+  if (!brief) return null;
+  return (
+    <dl className="brief">
+      {["who", "value", "now", "next"].map((k) => (
+        <div key={k}><dt>{labels[k]}</dt><dd>{brief[k]}</dd></div>
+      ))}
+    </dl>
+  );
 }

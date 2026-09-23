@@ -7,7 +7,7 @@ Direction: **Engineering Gallery**. Reference for the direction (not a template,
 2. Real parameters are the visual material: series index (97 / 98 / 100 in²), precision classes, L0–L7, weight matrices.
 3. Light space and thin rules instead of decoration. No gradients, textures, visual noise, endless identical cards or SaaS styling.
 4. Premium perception comes from proportion, typography, alignment and restraint.
-5. Every status is honest in ordinary language: Available now · Request route open · Planned · Development direction · By written agreement.
+5. Every status is honest in ordinary language. Ecosystem: Current · Available by agreement · In development · Concept. Product values: Confirmed · Calculated · Requested architecture · Not provided.
 
 ## Colour tokens (`app/globals.css` → `:root`)
 | Token | Value | Use |
@@ -23,7 +23,7 @@ Direction: **Engineering Gallery**. Reference for the direction (not a template,
 | `--line-strong` | `#b9c0b4` | input borders, chips |
 | black `#000` / white `#fff` | — | header and footer are black to carry the official white MAXIMUS GPS lockup unchanged |
 
-Status dots: available/confirmed = accent; request = ink; planned/target = `#b8862b`; agreement/modelled = `#3f6e9e`; not published = `#a33a3a`; direction = `#9aa197`.
+Status dots: current/confirmed = accent; development/requested/target = `#b8862b`; agreement/modelled = `#3f6e9e`; not provided = `#a33a3a`; concept = `#9aa197`.
 
 ## Typography
 - Family: system sans stack (no third-party fonts, so the core experience never depends on an external host). CJK falls back to PingFang SC / Microsoft YaHei / Noto Sans.
@@ -45,17 +45,20 @@ Status dots: available/confirmed = accent; request = ink; planned/target = `#b88
 - **Stiffness section**: dedicated statement + three columns (response, feel, consistency) + the four separate record fields. No invented laboratory charts or measurement results.
 - **Grip sequence** (`.grip-row`): all eight sizes L0–L7 with inch equivalents; L6 and L7 emphasised; factory carbon handle geometry, not overgrip build-up; no worldwide-exclusivity claim.
 - **Cards, steps, chains, kicker lists, stat tiles, spec tables, weight matrices, status pills, expanders** as defined in `globals.css`.
-- **Forms**: light inputs, accessible errors (`aria-invalid`, `role="alert"`), consent checkbox; the result is a prepared e-mail or copied text — never "sent".
+- **Product hero (home)**: thesis without article, one product line, the real POWER frame photograph (priority image), CTA "Find your racquet" + "View the series" (RU «Подобрать ракетку» + «Посмотреть серии» — the owner's labels; the short route /choose is named "Help me choose" / «Помогите подобрать» / 帮我挑选). On phones the text and actions come first and the racquet head is visible in the first screen at 390×844.
+- **Series pages**: photo → direction → specification with statuses → precision/grip → CTA → full matrix (SPIN: one explanation, no per-cell notes) → what happens after a request + FAQ. A detail photograph is never promoted to a hero; missing photographs are typographic tiles labelled "Photograph not yet published".
+- **Schematics**: stiffness tolerance bands and the L0–L7 nominal grip scale, always labelled "Schematic — not a measurement".
+- **Forms** (`LeadForm`): one component for every purpose; labels, `autocomplete`, `inputmode`, `type=email`, `aria-required`, `aria-describedby` (hint + error), localized errors, an error summary with links, focus moves to the first invalid field after the summary renders. States: editing → submitting → accepted (request ID, focused) | failed (not submitted, input kept, retry). A sticky element never covers a field (`scroll-margin`).
 
 ## Responsiveness and accessibility
-- Verified widths: 320, 390, 768, 1440 px — no horizontal overflow; readable at 200 % text zoom.
+- Verified widths: 320, 390, 768, 1024, 1440 px in EN/RU/ZH — no horizontal overflow; 200 % zoom (640 px CSS viewport); choice grids use `minmax(0, 1fr)` so long localized labels wrap.
 - `prefers-reduced-motion`: the only animation (a 0.6 s reveal) and all transitions are disabled.
 - Colour contrast AA on all text; automated WCAG 2.1 AA scan (axe) on key pages before release.
 
 ## Images and assets
 - Only the official MAXIMUS marks: the MAXIMUS GPS lockup, the lion emblem and the GPS mark, raster sources cropped only, never redrawn, recoloured or approximated.
-- Product photography appears only when the exact asset version is approved for production within its approved scope. A source photograph is not approval of any derived image. No deformed frames, altered string beds, invented logos, generative reconstruction or third-party racquets; previously rejected visuals and their derivatives are excluded.
-- Where approved imagery is missing, the section is completed with typography and exact data; the gap is recorded (visual placement proposal MX-WEB-VPP-20260921), never filled with a substitute.
+- Product photography is used only within the purpose stated in the owner's manifest and registered in `ASSET_MANIFEST.md`; production use requires release approval. No deformed frames, altered string beds, invented logos, generative reconstruction or third-party racquets; previously rejected visuals and their derivatives are excluded.
+- Where approved imagery is missing, the section shows a typographic tile and exact data; the gap is recorded in `CONTENT_GAPS.md`, never filled with a substitute. The GREAT inspection video is prepared but not released until the owner reviews the full clip.
 - Discontinued foam-handle products and SHALENI content never appear on this site.
 
 ## Control

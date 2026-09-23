@@ -34,6 +34,7 @@ export const series = {
     order: 1,
     balanceStatus: "MODELLED",
     matrixStatus: "FOUNDER_CONFIRMED",
+    paramStatus: { weights: "confirmed", balance: "calculated", swingweight: "not_provided", stiffness: "not_provided" },
     measurementBasis: MEASUREMENT_BASIS,
     /** 32 listed weight points. Balances are calculated/modelled values (mm from the butt). */
     matrix: pts([
@@ -52,6 +53,7 @@ export const series = {
     order: 2,
     balanceStatus: "MODELLED",
     matrixStatus: "FOUNDER_CONFIRMED",
+    paramStatus: { weights: "confirmed", balance: "calculated", swingweight: "not_provided", stiffness: "not_provided" },
     measurementBasis: MEASUREMENT_BASIS,
     /** 33 listed weight points. Balances are calculated/modelled values (mm from the butt). */
     matrix: pts([
@@ -70,9 +72,11 @@ export const series = {
     direction: "spin",
     order: 3,
     balanceStatus: "NOT_PROVIDED",
-    matrixStatus: "FOUNDER_CONFIRMED",
+    /** Founder instruction 21.09.2026: SPIN keeps the status "requested weight architecture". */
+    matrixStatus: "REQUESTED_ARCHITECTURE",
+    paramStatus: { weights: "requested", balance: "not_provided", swingweight: "not_provided", stiffness: "not_provided" },
     measurementBasis: MEASUREMENT_BASIS,
-    /** 29 listed weights. Balance values: NOT PROVIDED in the controlling brief. */
+    /** 29 weights of the requested weight architecture. Balance values: NOT PROVIDED. */
     matrix: pts([
       [239, null], [243, null], [247, null], [250, null], [253, null], [257, null], [260, null], [263, null],
       [267, null], [270, null], [273, null], [277, null], [280, null], [283, null], [287, null], [290, null],
@@ -194,7 +198,20 @@ export const extendedParameters = [
   "vibration",
 ];
 
-export const productDataVersion = "2026-09-21.A";
+/**
+ * Parameter registry for performance series. A confirmed value is added here per series with
+ * { value, unit, status: "confirmed", source, revision }. Until then every entry stays
+ * NOT_PROVIDED and nothing is rendered or inferred. No public tolerance is introduced here.
+ */
+export const PARAMETER_KEYS = [
+  "geometry", "length", "beam", "stringPattern", "twistweight", "torsionalBehaviour", "layup",
+  "durability", "vibration", "gripGeometry", "cosmetics", "engraving", "serialisation",
+];
+export const seriesParameters = Object.fromEntries(
+  ["great", "power", "spin"].map((id) => [id, Object.fromEntries(PARAMETER_KEYS.map((k) => [k, { value: null, status: "NOT_PROVIDED" }]))])
+);
+
+export const productDataVersion = "2026-09-21.B";
 
 export function getSeries(id) {
   return series[id] || null;

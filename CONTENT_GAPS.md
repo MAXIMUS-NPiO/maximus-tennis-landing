@@ -1,6 +1,6 @@
-# CONTENT GAPS — maximus.tennis v4.3
+# CONTENT GAPS — maximus.tennis v4.4
 
-Version 2026-09-23. Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
+Version 2026-09-23, published to production (commit `9cd6d81`). Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
 
 ## A. Visuals
 
@@ -11,7 +11,7 @@ Owner instructions 22–23 Sep 2026: the white-background photographs are withdr
 | A1 | **Owner visual set for GREAT** | GREAT card and series hero — typographic tile until it arrives | Owner supplies the set (same style as the SPIN and trainer sets) |
 | A2 | **Owner visual set for POWER** | POWER card and series hero — typographic tile until it arrives | Owner supplies the set |
 | A3 | **Confirmed SPIN balance, string pattern and tension range** (printed on the owner's images, cropped off here) | Publishing those values anywhere, including on an image | Founder confirmation with source and revision (see B1) |
-| A4 | **Decision on seven images labelled "Spin series" with weights outside the SPIN matrix**: 222, 229, 233, 236, 360, 366, 377 g (236, 360, 366, 377 exist in the POWER matrix) | Those seven files stay unpublished | Owner states whether the label or the matrix is wrong |
+| A4 | **Decision on seven images labelled "Spin series" with weights outside the SPIN matrix**: 236 g exists in GREAT only; 360 and 377 g exist in POWER only; 222, 229, 233 and 366 g exist in **no** confirmed matrix | Those seven files stay unpublished | Owner states whether the label or the matrix is wrong |
 | A5 | **QC measurement material** (instrument photographs, sample measurement records, factory footage) | Any advertising of measured precision; the manufacturing section states "not yet published" | Owner supplies real, publishable QC material |
 | A6 | **GREAT inspection video (08)** full-clip review | Publication of the video (component prepared; `inspectionVideo.released = false`) | Owner reviews the full 27 s clip and approves a cut |
 | A7 | L0–L7 visual sequence | Not blocking (schematic in place); needed for grip-led creative | Visualisation or photographs of the eight factory handle sizes |
@@ -42,4 +42,4 @@ Owner instructions 22–23 Sep 2026: the white-background photographs are withdr
 | D3 | `CRON_SECRET`, `LEADS_ADMIN_PASSWORD` | Scheduled retries; access to the private request register | Owner sets both in Vercel |
 | D4 | GA4 measurement ID (optional) | Conversion measurement (`generate_lead`) for campaigns | Owner creates a GA4 property/stream and sets `NEXT_PUBLIC_GA_MEASUREMENT_ID` |
 | D5 | Verified WeChat contact; testing from mainland China and inside WeChat | China-targeted campaigns (ZH content exists; mainland access is untested) | Verified contact + a test session from mainland China |
-| D6 | Release permission (merge `release/ads-readiness-v4.2` → `main`) | Production publication of all of the above | Owner's written release approval |
+| D6 | ~~Release permission~~ — **closed 23 Sep 2026**: released on the owner's instruction; `release/ads-readiness-v4.2` squashed into `main` as `9cd6d81` and live on https://maximus.tennis | — | — |

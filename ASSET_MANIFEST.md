@@ -1,6 +1,6 @@
-# ASSET MANIFEST — maximus.tennis v4.5
+# ASSET MANIFEST — maximus.tennis v4.6
 
-Version 2026-09-23. **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations** instead. **Owner instruction of 23 September 2026 (Spin series):** every Spin composition is published **whole** — the specification strip, the personalisation engraving zone and the MIPA marking stay visible and readable. No crop, no retouch, no substitution, no `object-fit: cover`, no height cap.
+Version 2026-09-23. **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations** instead. **Owner instruction of 23 September 2026 (Spin and Power series):** every composition is published **whole** — the specification strip, the personalisation engraving zone and the MIPA marking stay visible and readable. No crop, no retouch, no substitution, no `object-fit: cover`, no height cap.
 
 Code counterpart: `data/media.js`. Images are delivered through `next/image` (AVIF/WebP, responsive `srcset`; `priority` only for a page hero). Product data always comes from `data/products.js`, never from an image.
 
@@ -23,7 +23,20 @@ Status vocabulary: **OWNER SET** — supplied by the owner, used as delivered ·
 
 The four detail files are deliberate close-ups of named parts, each captioned as such; they never stand in for the complete composition. Every container that shows a complete Spin composition uses `object-fit: contain` with no height cap, so nothing is cut.
 
-## 2. Sweet Spot Trainer — owner visual set (2_1, 2_2)
+## 2. Owner visual set — Power series (MAXIMUS_Power_33_Models)
+
+33 square compositions, 2048 × 2048 px sources, one per listed weight, supplied 23 September 2026. **All 33 are published, uncropped**, in `public/media/power/power-<weight>.jpg` (resized to 1400 × 1400, JPEG q86, 4:4:4, ≈ 306 KB each, 9.9 MB in total). The composition shows the frame from three angles, the string bed, the gloss MAXIMUS lettering, the personalisation engraving zone ("Your Name Here"), the grip, the lion butt cap, the specification strip and the MIPA marking.
+
+**Weight and balance verified file by file, 33 of 33**: the supplied file names carry the pair (`MAXIMUS_Power_290g_334mm.jpg`) and the values printed inside each image (`98 SQ IN · 290 G · 33.4 CM / 334 MM · 50–60 LB · 16×19`) match `data/products.js` (`290 → 334 mm`) for every weight, with no missing and no extra weight. The QR code on the frame was decoded before publication: it resolves to `https://maximus.tennis` and carries nothing else.
+
+| Published file | Source | Where used |
+| --- | --- | --- |
+| `public/media/power/power-210.jpg` … `power-377.jpg` (33 files) | MAXIMUS_Power_<w>g_<b>mm.jpg | Power series page: selected-variant panel, weight switcher, catalogue of 33 cards, zoom view |
+| `public/media/power-visual.jpg` (1400 × 1400) | MAXIMUS_Power_290g_334mm.jpg, complete | Power card on the home page; Power series hero |
+
+Power balances stay labelled **calculated** (`balanceStatus: MODELLED`): the supplied values are identical to the calculated matrix already published, and the owner has not stated that they are individual factory measurements.
+
+## 3. Sweet Spot Trainer — owner visual set (2_1, 2_2)
 
 Source: the owner's trainer set, 20 compositions. The internal "MIPA RECORD" line is cropped off; the specification text on the images (50 in², 27 inch, 12×14, 270/330 · 285/325 · 300/325 · 400/320) matches `data/products.js`.
 
@@ -35,7 +48,7 @@ Source: the owner's trainer set, 20 compositions. The internal "MIPA RECORD" lin
 
 **Generated renders are banned** (owner instruction, 23 Sep 2026). None is in the repository and none is to be produced.
 
-## 3. Brand assets (unchanged)
+## 4. Brand assets (unchanged)
 
 | File | Source | Status | Use |
 | --- | --- | --- | --- |
@@ -43,10 +56,10 @@ Source: the owner's trainer set, 20 compositions. The internal "MIPA RECORD" lin
 | `public/brand/maximus-lion-emblem.png`, `app/icon.png`, `app/apple-icon.png` | crop of the official lockup | APPROVED | Favicon, Organization logo |
 | `public/brand/og-maximus.png` (1200×630) | lockup + typography on black | APPROVED | Share previews |
 
-## 4. Schematics (not images of the product)
+## 5. Schematics (not images of the product)
 Generated in code and labelled "Schematic — not a measurement": stiffness tolerance bands per precision class and the nominal grip scale L0–L7. Files: `components/Schematics.js`.
 
-## 5. Excluded
+## 6. Excluded
 - The September source photographs of unstrung frames on a white background (02–07) — withdrawn by the owner on 22 Sep 2026 and removed from the repository.
 - Renders generated in this repository — created 22 Sep 2026, banned and deleted by the owner on 23 Sep 2026.
 - Rejected covers, composites, quotation extracts, foam-handle imagery, substitute racquets and invented logos — never in the repository.

@@ -23,7 +23,7 @@ export default async function Page({ params }) {
       </Section>
       <Section id="qc" band="band-1" eyebrow={dict.home.manufacturing.eyebrow} title={dict.home.manufacturing.title}>
         <p className="lead" style={{ marginBottom: 24 }}>{dict.home.manufacturing.p}</p>
-        <div className="detail-grid">
+        <div className="detail-grid whole">
           <Photo id="lettering" alt={dict.media.lettering} caption={dict.home.manufacturing.captions.lettering} sizes="(min-width: 760px) 24vw, 46vw" />
           <Photo id="handleLion" alt={dict.media.handleLion} caption={dict.home.manufacturing.captions.buttcap} sizes="(min-width: 760px) 24vw, 46vw" />
           <Photo id="engraving" alt={dict.media.engraving} caption={dict.home.manufacturing.captions.handle} sizes="(min-width: 760px) 24vw, 46vw" />

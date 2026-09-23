@@ -155,7 +155,7 @@ export default async function Home({ params }) {
       {/* 09 — manufacturing and QC */}
       <Section id="manufacturing" eyebrow={H.manufacturing.eyebrow} title={H.manufacturing.title}>
         <p className="lead" style={{ marginBottom: 26 }}>{H.manufacturing.p}</p>
-        <div className="detail-grid">
+        <div className="detail-grid whole">
           <Photo id="lettering" alt={M.lettering} caption={H.manufacturing.captions.lettering} sizes="(min-width: 760px) 24vw, 46vw" />
           <Photo id="handleLion" alt={M.handleLion} caption={H.manufacturing.captions.buttcap} sizes="(min-width: 760px) 24vw, 46vw" />
           <Photo id="engraving" alt={M.engraving} caption={H.manufacturing.captions.handle} sizes="(min-width: 760px) 24vw, 46vw" />

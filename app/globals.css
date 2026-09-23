@@ -311,14 +311,13 @@ html { scroll-padding-top: 84px; }
 .photo img { display: block; width: 100%; height: auto; border-radius: var(--radius); background: var(--surface); }
 .photo figcaption { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); }
 .hero-photo { justify-self: center; text-align: center; }
-.hero-photo img { width: 100%; height: auto; max-height: min(58vh, 520px); object-fit: contain; margin: 0 auto; background: #0e0f0f; }
+.hero-photo img { width: 100%; height: auto; object-fit: contain; margin: 0 auto; background: #0e0f0f; }
 @media (min-width: 900px) {
   .hero-product { padding: 60px 0 56px; }
   .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); grid-template-areas: "copy photo" "meta photo"; column-gap: 48px; row-gap: 28px; }
   .hero-copy { grid-area: copy; }
   .hero-photo { grid-area: photo; align-self: center; }
   .hero-product .hero-meta { grid-area: meta; }
-  .hero-photo img { max-height: min(72vh, 640px); }
 }
 
 .photo-pending { display: grid; align-content: end; gap: 6px; min-height: 240px; padding: 22px; border: 1px dashed var(--line-strong); border-radius: var(--radius); background: repeating-linear-gradient(135deg, var(--surface) 0 12px, var(--surface-2) 12px 24px); }
@@ -332,10 +331,10 @@ html { scroll-padding-top: 84px; }
 .series-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
 @media (min-width: 760px) { .series-grid { grid-template-columns: repeat(3, 1fr); } }
 .series-card { display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); overflow: hidden; min-width: 0; }
-.series-photo img { aspect-ratio: 1 / 1; object-fit: cover; border-radius: 0; background: #0e0f0f; }
+.series-photo img { aspect-ratio: 1 / 1; object-fit: contain; border-radius: 0; background: #0e0f0f; }
 .series-photo figcaption { padding: 8px 16px 0; }
 .series-photo.photo-pending { aspect-ratio: 1 / 1; min-height: 0; border: 0; border-bottom: 1px dashed var(--line-strong); border-radius: 0; }
-@media (min-width: 760px) { .series-photo img, .series-photo.photo-pending { aspect-ratio: 4 / 5; } }
+@media (min-width: 760px) { .series-photo.photo-pending { aspect-ratio: 1 / 1; } }
 .series-body { padding: 16px 20px 22px; min-width: 0; }
 .series-body h3 { font-size: 22px; margin-bottom: 8px; }
 .series-body .btn-row { margin-top: 18px; }
@@ -345,9 +344,9 @@ html { scroll-padding-top: 84px; }
 .series-hero-grid > * { min-width: 0; }
 .series-hero-copy .lead { margin-top: 14px; }
 .series-hero-photo { text-align: center; }
-.series-hero-photo img { width: 100%; max-width: 100%; height: auto; max-height: min(62vh, 580px); object-fit: contain; margin: 0 auto; background: #0e0f0f; border-radius: var(--radius); }
+.series-hero-photo img { width: 100%; max-width: 100%; height: auto; object-fit: contain; margin: 0 auto; background: #0e0f0f; border-radius: var(--radius); }
 .series-hero-photo.photo-pending { min-height: 280px; text-align: left; }
-@media (min-width: 900px) { .series-hero { padding: 60px 0; } .series-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; } .series-hero-photo img { max-height: min(72vh, 660px); } }
+@media (min-width: 900px) { .series-hero { padding: 60px 0; } .series-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; } }
 .spec-list { display: grid; margin: 0; border-top: 1px solid var(--ink); }
 .spec-list > div { display: grid; grid-template-columns: minmax(110px, 0.8fr) 1.2fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .spec-list dt { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); font-weight: 650; padding-top: 3px; }
@@ -458,3 +457,96 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 
 /* Prepared e-mail fallback inside the failed-request alert */
 .lead-result.fail .btn-row { margin: 14px 0 8px; }
+
+/* ---------------------------------------------------------------------------
+   Spin series catalogue (33 weight variants).
+   Every composition is shown whole: no cover-crop, no height cap, no mask.
+   The dark band carries the images' own studio tone, and each photograph sits
+   on a blurred halo of itself, so the rectangular edge dissolves into the page
+   while the racquet, lettering, engraving zone and MIPA line stay fully opaque.
+   --------------------------------------------------------------------------- */
+.spin-catalogue {
+  background: linear-gradient(180deg, #1a1918 0%, #242221 42%, #171615 100%);
+  color: #f2f0ee;
+  padding: 64px 0 72px;
+  /* the decorative halo may reach past the shell; it must never widen the page */
+  overflow-x: clip;
+}
+.spin-catalogue .eyebrow { color: #a9a49e; }
+.spin-catalogue .h-2, .spin-catalogue .h-3 { color: #fbfaf8; }
+.spin-catalogue .lead { color: #c3bfb9; margin-bottom: 34px; }
+
+.spin-frame { position: relative; display: block; width: 100%; padding: 0; border: 0; background: transparent; }
+.spin-frame img { position: relative; z-index: 1; display: block; width: 100%; height: auto; border-radius: 4px; }
+.spin-ambient {
+  position: absolute; inset: -11%; z-index: 0; border-radius: 40px; pointer-events: none;
+  background-size: 100% 100%; background-position: center; background-repeat: no-repeat;
+  filter: blur(58px) saturate(1.06); opacity: 1;
+}
+.spin-frame-zoom { cursor: zoom-in; }
+.spin-zoom-hint {
+  position: absolute; z-index: 2; right: 12px; bottom: 12px; padding: 7px 12px; border-radius: 999px;
+  background: rgba(10, 10, 10, 0.62); color: #f4f2f0; font-size: 12.5px; letter-spacing: 0.07em;
+  text-transform: uppercase; font-weight: 650; opacity: 0; transition: opacity 0.18s ease;
+}
+.spin-frame-zoom:hover .spin-zoom-hint, .spin-frame-zoom:focus-visible .spin-zoom-hint { opacity: 1; }
+.spin-frame-zoom:focus-visible { outline: 2px solid #d8d4cf; outline-offset: 6px; }
+
+.spin-selected { display: grid; gap: 28px; align-items: center; }
+@media (min-width: 860px) { .spin-selected { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 52px; } }
+.spin-variant-name { margin: 0; font-size: 16px; letter-spacing: 0.02em; font-weight: 650; color: #c9c4be; }
+.spin-weight { margin: 4px 0 18px; display: flex; align-items: baseline; gap: 10px; color: #fff; }
+.spin-weight-value { font-size: clamp(56px, 13vw, 108px); line-height: 0.92; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.spin-weight-unit { font-size: clamp(20px, 3.4vw, 30px); color: #a9a49e; font-weight: 650; }
+.spin-specs { margin: 0; display: grid; gap: 0; border-top: 1px solid rgba(255, 255, 255, 0.16); }
+.spin-specs > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+.spin-specs dt { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 650; color: #a9a49e; }
+.spin-specs dd { margin: 0; font-size: 17px; color: #f4f2f0; font-variant-numeric: tabular-nums; }
+.spin-balance-note { margin: 16px 0 0; font-size: 14.5px; line-height: 1.5; color: #a9a49e; max-width: 46ch; }
+
+.spin-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 38px; }
+.spin-chip {
+  font: inherit; font-variant-numeric: tabular-nums; cursor: pointer; min-height: 44px; padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24); border-radius: 999px; background: rgba(255, 255, 255, 0.05);
+  color: #e6e3df; display: inline-flex; align-items: baseline; gap: 4px; font-weight: 650;
+}
+.spin-chip i { font-style: normal; font-size: 12px; color: #a9a49e; }
+.spin-chip:hover { border-color: rgba(255, 255, 255, 0.5); }
+.spin-chip.on { background: #f4f2f0; border-color: #f4f2f0; color: #17181a; }
+.spin-chip.on i { color: #5d5a56; }
+.spin-chip:focus-visible { outline: 2px solid #d8d4cf; outline-offset: 3px; }
+
+.spin-grid-title { margin: 46px 0 0; font-size: clamp(20px, 2.2vw, 26px); }
+.spin-grid { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 30px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .spin-grid { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 44px 34px; } }
+.spin-card { display: grid; gap: 4px; }
+.spin-card-name { margin: 14px 0 0; font-size: 14px; letter-spacing: 0.01em; color: #b4afa9; }
+.spin-card-weight { margin: 2px 0 0; display: flex; align-items: baseline; gap: 6px; color: #fff; }
+.spin-card-weight span { font-size: 42px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.spin-card-weight i { font-style: normal; font-size: 16px; color: #a9a49e; font-weight: 650; }
+.spin-card-balance { margin: 6px 0 0; font-size: 15px; color: #c3bfb9; font-variant-numeric: tabular-nums; }
+.spin-card-balance b { color: #f4f2f0; font-weight: 650; }
+.spin-card-select {
+  justify-self: start; margin-top: 10px; min-height: 40px; padding: 8px 14px; font: inherit; font-size: 13.5px;
+  font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.26); background: transparent; color: #e6e3df;
+}
+.spin-card-select:hover { border-color: rgba(255, 255, 255, 0.55); }
+.spin-card.on .spin-card-select { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.5); color: #fff; }
+.spin-card-select:focus-visible { outline: 2px solid #d8d4cf; outline-offset: 3px; }
+
+.spin-lightbox { position: fixed; inset: 0; z-index: 200; background: rgba(9, 9, 9, 0.94); display: grid; place-items: center; padding: 16px; }
+.spin-lightbox-inner { position: relative; max-width: min(1100px, 96vw); width: 100%; text-align: center; }
+.spin-lightbox-inner img { display: block; width: auto; height: auto; max-width: 100%; max-height: 82vh; margin: 0 auto; border-radius: 4px; }
+.spin-lightbox-cap { margin: 12px 0 0; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #c3bfb9; }
+.spin-lightbox-close {
+  margin-top: 14px; min-height: 44px; padding: 10px 22px; font: inherit; font-size: 13.5px; font-weight: 650;
+  letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4); background: transparent; color: #f4f2f0;
+}
+.spin-lightbox-close:focus-visible { outline: 2px solid #d8d4cf; outline-offset: 3px; }
+
+/* Spin detail tiles: keep the whole crop visible instead of a cover-crop. */
+.detail-grid.whole .photo img { aspect-ratio: 4 / 5; object-fit: contain; background: #0e0f0f; }
+
+@media (prefers-reduced-motion: reduce) { .spin-zoom-hint { transition: none; } }

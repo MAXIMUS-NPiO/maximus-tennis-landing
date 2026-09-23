@@ -1,25 +1,27 @@
-# ASSET MANIFEST — maximus.tennis v4.4
+# ASSET MANIFEST — maximus.tennis v4.5
 
-Version 2026-09-23, published to production (commit `9cd6d81`). **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations from several angles** instead. Every visual on the page is labelled as a visualisation; product data always comes from `data/products.js`, never from an image.
+Version 2026-09-23. **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations** instead. **Owner instruction of 23 September 2026 (Spin series):** every Spin composition is published **whole** — the specification strip, the personalisation engraving zone and the MIPA marking stay visible and readable. No crop, no retouch, no substitution, no `object-fit: cover`, no height cap.
 
-Code counterpart: `data/media.js`. Images are delivered through `next/image` (AVIF/WebP, responsive `srcset`; `priority` only for a page hero).
+Code counterpart: `data/media.js`. Images are delivered through `next/image` (AVIF/WebP, responsive `srcset`; `priority` only for a page hero). Product data always comes from `data/products.js`, never from an image.
 
-Status vocabulary: **OWNER SET** — supplied by the owner (1_1.zip, 22 Sep 2026), used as delivered apart from the crop noted · **RENDER** — built in this repository from the geometry of the photographed frames · **EXCLUDED** — not used.
+Status vocabulary: **OWNER SET** — supplied by the owner, used as delivered · **EXCLUDED** — not used.
 
-## 1. Owner visual set (SPIN series)
+## 1. Owner visual set — Spin series (1_1.zip + 1_2.zip)
 
-Source: `1_1.zip` and `1_2.zip`, 33 square compositions labelled "Spin series", one per weight. **Only the weights that are in the confirmed SPIN matrix are published.** Seven files are labelled SPIN with weights that are **not** in the SPIN matrix — 222, 229, 233, 236, 360, 366, 377 g — and are held back (236, 360, 366 and 377 g exist in the POWER matrix, so the label or the matrix needs the owner's decision; CONTENT_GAPS A4).
+33 square compositions, 1254 × 1254 px, one per listed weight. **All 33 are published, uncropped**, in `public/media/spin/spin-<weight>.jpg` (JPEG q88, 4:4:4, ≈ 221 KB each, 7.1 MB in total). The composition shows the frame from several angles, the string bed, the gloss MAXIMUS lettering, the grip, the lion butt cap, the silver personalisation engraving zone, the specification strip and the MIPA marking.
 
-**Crop applied to all of them:** the lower specification strip (balance, string tension, string pattern) and the line "MIPA REGISTRATION · INTERNAL RECORD" are cut off. Reason: SPIN balance, tension range and string pattern are **not** confirmed data (CONTENT_GAPS B1–B2), and an internal MIPA record is not public information. Nothing else is retouched.
+**Weight and balance verified file by file, 33 of 33**: the values printed inside each image (for example `290 G · 33.5 CM`) match `data/products.js` (`290 → 335 mm`). Nothing is published for a weight that is not in the matrix, and no image shows a weight other than its own.
 
-| Published file | Source | Crop | Where used | Localized alt (EN / RU / ZH) |
-| --- | --- | --- | --- | --- |
-| `public/media/spin-visual.jpg` (1254×845) | 290.png | top 845 px | Home hero; SPIN card; SPIN series hero | MAXIMUS SPIN visualisation… / Визуализация MAXIMUS SPIN… / MAXIMUS SPIN效果图… |
-| `public/media/spin-head.jpg` (640×460) | 290.png | head and string bed | Manufacturing section (home, engineering); SPIN details | Head and string bed / Голова и струнная поверхность / 拍头与线床 |
-| `public/media/handle-lion.jpg` (418×705) | 290.png | throat, grip, butt cap | Manufacturing section; SPIN details | Throat, grip and butt cap with the lion mark / Шейка, ручка и нижняя крышка со львом / 拍喉、握柄与狮子底盖 |
-| `public/media/lettering.jpg` (890×415) | 290.png | gloss lettering | Manufacturing section | Gloss MAXIMUS lettering / Глянцевая надпись MAXIMUS / 亮面MAXIMUS字样 |
-| `public/media/engraving.jpg` (360×205) | 290.png | silver engraving | Custom engineering (personalisation) | Silver personalisation engraving / Серебристая гравировка персонализации / 银色个性化刻字 |
-| `public/media/spin-239…spin-355.jpg` (10 files, 900×606) | 239 / 250 / 260 / 270 / 283 / 294 / 315 / 325 / 339 / 355.png | top 845 px | SPIN page: "the weight architecture, seen" | MAXIMUS SPIN, <weight> g |
+| Published file | Source | Where used |
+| --- | --- | --- |
+| `public/media/spin/spin-222.jpg` … `spin-377.jpg` (33 files) | 222 / 229 / 233 / 236 / 239 / 243 / 247 / 250 / 253 / 257 / 260 / 263 / 267 / 270 / 273 / 277 / 280 / 283 / 287 / 290 / 294 / 297 / 315 / 320 / 325 / 330 / 333 / 339 / 347 / 355 / 360 / 366 / 377.png | Spin series page: selected-variant panel, weight switcher, catalogue of 33 cards, zoom view |
+| `public/media/spin-visual.jpg` (1254 × 1254) | 290.png, complete | Home hero; Spin card on the home page; Spin series hero |
+| `public/media/spin-head.jpg` (345 × 248) | detail crop of 290.png | Manufacturing section (home, engineering); Spin construction details — labelled as a detail view |
+| `public/media/handle-lion.jpg` (345 × 583) | detail crop | Manufacturing section; Spin construction details — labelled as a detail view |
+| `public/media/lettering.jpg` (345 × 161) | detail crop | Manufacturing section — labelled as a detail view |
+| `public/media/engraving.jpg` (324 × 184) | detail crop | Custom engineering (personalisation) — labelled as a detail view |
+
+The four detail files are deliberate close-ups of named parts, each captioned as such; they never stand in for the complete composition. Every container that shows a complete Spin composition uses `object-fit: contain` with no height cap, so nothing is cut.
 
 ## 2. Sweet Spot Trainer — owner visual set (2_1, 2_2)
 
@@ -46,7 +48,6 @@ Generated in code and labelled "Schematic — not a measurement": stiffness tole
 
 ## 5. Excluded
 - The September source photographs of unstrung frames on a white background (02–07) — withdrawn by the owner on 22 Sep 2026 and removed from the repository.
-- The specification strip and MIPA record line of the owner's SPIN set (cropped off, see §1).
 - Renders generated in this repository — created 22 Sep 2026, banned and deleted by the owner on 23 Sep 2026.
 - Rejected covers, composites, quotation extracts, foam-handle imagery, substitute racquets and invented logos — never in the repository.
 - Video 08: prepared, not released (`data/media.js → inspectionVideo.released = false`).

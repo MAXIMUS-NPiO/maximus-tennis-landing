@@ -1,30 +1,22 @@
 /**
  * Media registry — the code-side counterpart of ASSET_MANIFEST.md.
  *
- * Owner instruction 22–23 September 2026: the site shows the owner's own product visual sets.
+ * Owner instructions 22–23 September 2026: the site shows the owner's own product visual sets.
  * The white-background source photographs were withdrawn; renders generated in this repository
- * are banned and removed. Every file below comes from the owner's sets, cropped only to remove
- * the internal MIPA record line and, on the SPIN set, the specification strip whose values
- * (balance, tension, string pattern) are not confirmed data. Weight and series labels are kept
- * and match data/products.js.
+ * are banned and removed.
  *
- * Sets received: SPIN (1_1, 1_2), Sweet Spot Trainer (2_1, 2_2). GREAT and POWER: awaited.
+ * Spin series (instruction of 23 September 2026): every composition is published WHOLE — the
+ * specification strip, the personalisation engraving zone and the MIPA marking stay visible and
+ * readable. No crop, no retouch, no substitution. The published weight and balance of each file
+ * were checked against data/products.js file by file, 33 of 33.
+ *
+ * Sets received: SPIN (1_1, 1_2 — 33 compositions), Sweet Spot Trainer (2_1, 2_2). GREAT and POWER: awaited.
  */
 import spinVisual from "../public/media/spin-visual.jpg";
 import spinHead from "../public/media/spin-head.jpg";
 import handleLion from "../public/media/handle-lion.jpg";
 import engraving from "../public/media/engraving.jpg";
 import lettering from "../public/media/lettering.jpg";
-import spin239 from "../public/media/spin-239.jpg";
-import spin250 from "../public/media/spin-250.jpg";
-import spin260 from "../public/media/spin-260.jpg";
-import spin270 from "../public/media/spin-270.jpg";
-import spin283 from "../public/media/spin-283.jpg";
-import spin294 from "../public/media/spin-294.jpg";
-import spin315 from "../public/media/spin-315.jpg";
-import spin325 from "../public/media/spin-325.jpg";
-import spin339 from "../public/media/spin-339.jpg";
-import spin355 from "../public/media/spin-355.jpg";
 import sstSystem from "../public/media/sst-system.jpg";
 import sst270 from "../public/media/sst-270.jpg";
 import sst285 from "../public/media/sst-285.jpg";
@@ -34,24 +26,60 @@ import sstShafts from "../public/media/sst-shafts.jpg";
 import sstGrips from "../public/media/sst-grips.jpg";
 import sstButtcaps from "../public/media/sst-buttcaps.jpg";
 
+import s222 from "../public/media/spin/spin-222.jpg";
+import s229 from "../public/media/spin/spin-229.jpg";
+import s233 from "../public/media/spin/spin-233.jpg";
+import s236 from "../public/media/spin/spin-236.jpg";
+import s239 from "../public/media/spin/spin-239.jpg";
+import s243 from "../public/media/spin/spin-243.jpg";
+import s247 from "../public/media/spin/spin-247.jpg";
+import s250 from "../public/media/spin/spin-250.jpg";
+import s253 from "../public/media/spin/spin-253.jpg";
+import s257 from "../public/media/spin/spin-257.jpg";
+import s260 from "../public/media/spin/spin-260.jpg";
+import s263 from "../public/media/spin/spin-263.jpg";
+import s267 from "../public/media/spin/spin-267.jpg";
+import s270 from "../public/media/spin/spin-270.jpg";
+import s273 from "../public/media/spin/spin-273.jpg";
+import s277 from "../public/media/spin/spin-277.jpg";
+import s280 from "../public/media/spin/spin-280.jpg";
+import s283 from "../public/media/spin/spin-283.jpg";
+import s287 from "../public/media/spin/spin-287.jpg";
+import s290 from "../public/media/spin/spin-290.jpg";
+import s294 from "../public/media/spin/spin-294.jpg";
+import s297 from "../public/media/spin/spin-297.jpg";
+import s315 from "../public/media/spin/spin-315.jpg";
+import s320 from "../public/media/spin/spin-320.jpg";
+import s325 from "../public/media/spin/spin-325.jpg";
+import s330 from "../public/media/spin/spin-330.jpg";
+import s333 from "../public/media/spin/spin-333.jpg";
+import s339 from "../public/media/spin/spin-339.jpg";
+import s347 from "../public/media/spin/spin-347.jpg";
+import s355 from "../public/media/spin/spin-355.jpg";
+import s360 from "../public/media/spin/spin-360.jpg";
+import s366 from "../public/media/spin/spin-366.jpg";
+import s377 from "../public/media/spin/spin-377.jpg";
+
 const owner = (src, model, purpose) => ({ src, model, kind: "owner", purpose });
 
+/**
+ * Spin compositions by listed weight. Each entry is the complete, uncropped file for that weight;
+ * the weight and balance printed inside the image match data/products.js.
+ */
+export const spinByWeight = {
+  222: s222, 229: s229, 233: s233, 236: s236, 239: s239, 243: s243, 247: s247, 250: s250,
+  253: s253, 257: s257, 260: s260, 263: s263, 267: s267, 270: s270, 273: s273, 277: s277,
+  280: s280, 283: s283, 287: s287, 290: s290, 294: s294, 297: s297, 315: s315, 320: s320,
+  325: s325, 330: s330, 333: s333, 339: s339, 347: s347, 355: s355, 360: s360, 366: s366,
+  377: s377,
+};
+
 export const media = {
-  spinVisual: owner(spinVisual, "spin", "SPIN: head, lettering, grip and lion butt cap"),
-  spinHead: owner(spinHead, "spin", "SPIN head and string bed"),
-  handleLion: owner(handleLion, "spin", "Throat, grip and butt cap with the lion mark"),
-  engraving: owner(engraving, "spin", "Silver personalisation engraving on the shaft"),
-  lettering: owner(lettering, "spin", "Gloss MAXIMUS lettering on the matte frame"),
-  spin239: owner(spin239, "spin", "SPIN 239 g"),
-  spin250: owner(spin250, "spin", "SPIN 250 g"),
-  spin260: owner(spin260, "spin", "SPIN 260 g"),
-  spin270: owner(spin270, "spin", "SPIN 270 g"),
-  spin283: owner(spin283, "spin", "SPIN 283 g"),
-  spin294: owner(spin294, "spin", "SPIN 294 g"),
-  spin315: owner(spin315, "spin", "SPIN 315 g"),
-  spin325: owner(spin325, "spin", "SPIN 325 g"),
-  spin339: owner(spin339, "spin", "SPIN 339 g"),
-  spin355: owner(spin355, "spin", "SPIN 355 g"),
+  spinVisual: owner(spinVisual, "spin", "SPIN: complete composition, 290 g"),
+  spinHead: owner(spinHead, "spin", "SPIN head and string bed — detail view"),
+  handleLion: owner(handleLion, "spin", "Throat, grip and butt cap with the lion mark — detail view"),
+  engraving: owner(engraving, "spin", "Silver personalisation engraving on the shaft — detail view"),
+  lettering: owner(lettering, "spin", "Gloss MAXIMUS lettering on the matte frame — detail view"),
   sstSystem: owner(sstSystem, "sst", "Sweet Spot Trainer four-racquet system"),
   sst270: owner(sst270, "sst", "Sweet Spot Trainer 270 g / 330 mm"),
   sst285: owner(sst285, "sst", "Sweet Spot Trainer 285 g / 325 mm"),
@@ -61,9 +89,6 @@ export const media = {
   sstGrips: owner(sstGrips, "sst", "Sweet Spot Trainer grips and butt caps"),
   sstButtcaps: owner(sstButtcaps, "sst", "Sweet Spot Trainer four-racquet system, butt caps"),
 };
-
-/** SPIN weight gallery: every weight shown is in the confirmed SPIN matrix. */
-export const spinWeights = ["spin239", "spin250", "spin260", "spin270", "spin283", "spin294", "spin315", "spin325", "spin339", "spin355"];
 
 /** Sweet Spot Trainer gallery. */
 export const sstGallery = ["sst270", "sst285", "sst300", "sst400"];

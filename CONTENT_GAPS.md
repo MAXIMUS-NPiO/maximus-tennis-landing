@@ -4,13 +4,14 @@ Version 2026-09-23. Only real gaps. Each entry states what it blocks today and w
 
 ## A. Visuals
 
-Owner instruction 22 Sep 2026: the white-background photographs of unstrung frames are withdrawn; the site shows visualisations (owner's SPIN set + renders for GREAT / POWER / SST). What is still missing:
+Owner instructions 22–23 Sep 2026: the white-background photographs are withdrawn and generated renders are banned. The site shows the owner's own visual sets — SPIN (1_1, 1_2) and Sweet Spot Trainer (2_1, 2_2). What is still missing:
 
 | # | Missing material | What it blocks | Closed by |
 | --- | --- | --- | --- |
-| A1 | **Owner visual sets for GREAT and POWER** in the quality of the SPIN set | Nothing is blocked — the pages use renders built here; owner sets would replace them | Owner supplies the sets (same style as 1_1.zip) |
-| A2 | **Sweet Spot Trainer visual set** from the owner | Nothing is blocked — SST uses a render | Owner supplies an approved trainer visual |
-| A3 | **Confirmed SPIN balance, string pattern and tension range** (shown on the owner's images, cropped off here) | Publishing those values anywhere, including on an image | Founder confirmation with source and revision (see B1) |
+| A1 | **Owner visual set for GREAT** | GREAT card and series hero — typographic tile until it arrives | Owner supplies the set (same style as the SPIN and trainer sets) |
+| A2 | **Owner visual set for POWER** | POWER card and series hero — typographic tile until it arrives | Owner supplies the set |
+| A3 | **Confirmed SPIN balance, string pattern and tension range** (printed on the owner's images, cropped off here) | Publishing those values anywhere, including on an image | Founder confirmation with source and revision (see B1) |
+| A4 | **Decision on seven images labelled "Spin series" with weights outside the SPIN matrix**: 222, 229, 233, 236, 360, 366, 377 g (236, 360, 366, 377 exist in the POWER matrix) | Those seven files stay unpublished | Owner states whether the label or the matrix is wrong |
 | A5 | **QC measurement material** (instrument photographs, sample measurement records, factory footage) | Any advertising of measured precision; the manufacturing section states "not yet published" | Owner supplies real, publishable QC material |
 | A6 | **GREAT inspection video (08)** full-clip review | Publication of the video (component prepared; `inspectionVideo.released = false`) | Owner reviews the full 27 s clip and approves a cut |
 | A7 | L0–L7 visual sequence | Not blocking (schematic in place); needed for grip-led creative | Visualisation or photographs of the eight factory handle sizes |

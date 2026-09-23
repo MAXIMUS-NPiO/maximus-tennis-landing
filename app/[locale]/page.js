@@ -141,7 +141,7 @@ export default async function Home({ params }) {
         <p className="lead" style={{ marginBottom: 26 }}>{H.training.p}</p>
         <div className="grid-3">
           <Link href={href(locale, "sst")} className="card card-link">
-            <Photo id="sstFull" alt={M.sstFull} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} sizes="(min-width: 760px) 30vw, 92vw" className="mini" />
+            <Photo id="sstSystem" alt={M.sstSystem} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} sizes="(min-width: 760px) 30vw, 92vw" className="mini" />
             <h3 style={{ marginTop: 14 }}>{dict.training.sst.h}</h3>
             <p>{sst.system.map((x) => `${x.weight}/${x.balance}`).join(" · ")} ({L.grams}/{L.mm})</p>
             <span className="arrow">{L.learn} →</span>
@@ -158,7 +158,7 @@ export default async function Home({ params }) {
         <div className="detail-grid">
           <Photo id="lettering" alt={M.lettering} caption={H.manufacturing.captions.lettering} sizes="(min-width: 760px) 24vw, 46vw" />
           <Photo id="handleLion" alt={M.handleLion} caption={H.manufacturing.captions.buttcap} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="powerHandle" alt={M.powerHandle} caption={H.manufacturing.captions.handle} sizes="(min-width: 760px) 24vw, 46vw" />
+          <Photo id="engraving" alt={M.engraving} caption={H.manufacturing.captions.handle} sizes="(min-width: 760px) 24vw, 46vw" />
           <Photo id="spinHead" alt={M.spinHead} caption={H.manufacturing.captions.finish} sizes="(min-width: 760px) 24vw, 46vw" />
         </div>
         <div className="grid-2" style={{ marginTop: 26 }}>

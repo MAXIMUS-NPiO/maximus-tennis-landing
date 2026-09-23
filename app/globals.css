@@ -357,6 +357,7 @@ html { scroll-padding-top: 84px; }
 .detail-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
 @media (min-width: 760px) { .detail-grid { grid-template-columns: repeat(4, 1fr); } }
 .detail-grid > * { min-width: 0; }
+@media (min-width: 760px) { .detail-grid.three { grid-template-columns: repeat(3, 1fr); } }
 .detail-grid .photo img { aspect-ratio: 4 / 5; object-fit: cover; background: #0e0f0f; }
 .photo.mini img { aspect-ratio: 4 / 3; object-fit: cover; background: #0e0f0f; }
 

@@ -8,7 +8,7 @@ Status vocabulary: **OWNER SET** — supplied by the owner (1_1.zip, 22 Sep 2026
 
 ## 1. Owner visual set (SPIN series)
 
-Source: `1_1.zip`, 16 square compositions, one per listed SPIN weight (270, 273, 277, 280, 283, 287, 290, 294, 297, 315, 320, 325, 330, 333, 339, 347 g). Every weight shown is in the confirmed SPIN matrix (`data/products.js`).
+Source: `1_1.zip` and `1_2.zip`, 33 square compositions labelled "Spin series", one per weight. **Only the weights that are in the confirmed SPIN matrix are published.** Seven files are labelled SPIN with weights that are **not** in the SPIN matrix — 222, 229, 233, 236, 360, 366, 377 g — and are held back (236, 360, 366 and 377 g exist in the POWER matrix, so the label or the matrix needs the owner's decision; CONTENT_GAPS A4).
 
 **Crop applied to all of them:** the lower specification strip (balance, string tension, string pattern) and the line "MIPA REGISTRATION · INTERNAL RECORD" are cut off. Reason: SPIN balance, tension range and string pattern are **not** confirmed data (CONTENT_GAPS B1–B2), and an internal MIPA record is not public information. Nothing else is retouched.
 
@@ -19,23 +19,19 @@ Source: `1_1.zip`, 16 square compositions, one per listed SPIN weight (270, 273,
 | `public/media/handle-lion.jpg` (418×705) | 290.png | throat, grip, butt cap | Manufacturing section; SPIN details | Throat, grip and butt cap with the lion mark / Шейка, ручка и нижняя крышка со львом / 拍喉、握柄与狮子底盖 |
 | `public/media/lettering.jpg` (890×415) | 290.png | gloss lettering | Manufacturing section | Gloss MAXIMUS lettering / Глянцевая надпись MAXIMUS / 亮面MAXIMUS字样 |
 | `public/media/engraving.jpg` (360×205) | 290.png | silver engraving | Custom engineering (personalisation) | Silver personalisation engraving / Серебристая гравировка персонализации / 银色个性化刻字 |
-| `public/media/spin-270.jpg`, `spin-320.jpg`, `spin-347.jpg` (900×606) | 270 / 320 / 347.png | top 845 px | SPIN page: "the weight architecture, seen" | MAXIMUS SPIN, 270 / 320 / 347 g |
+| `public/media/spin-239…spin-355.jpg` (10 files, 900×606) | 239 / 250 / 260 / 270 / 283 / 294 / 315 / 325 / 339 / 355.png | top 845 px | SPIN page: "the weight architecture, seen" | MAXIMUS SPIN, <weight> g |
 
-## 2. Renders (GREAT, POWER, Sweet Spot Trainer)
+## 2. Sweet Spot Trainer — owner visual set (2_1, 2_2)
 
-Built with Blender (Cycles) in `scratchpad/render/` from geometry derived from the owner's own photographs: head outline and throat taken from the POWER frame photograph, head area set per series (GREAT 97 in², POWER 98 in², SPIN 100 in², SST 50 in²), 686 mm length, factory octagonal handle, official wordmark and lion mark used as supplied. Matte black frame, gloss black lettering, silver-grey strings, dark studio lighting.
+Source: the owner's trainer set, 20 compositions. The internal "MIPA RECORD" line is cropped off; the specification text on the images (50 in², 27 inch, 12×14, 270/330 · 285/325 · 300/325 · 400/320) matches `data/products.js`.
 
-| Published file | Series | View | Where used |
-| --- | --- | --- | --- |
-| `public/media/power-hero.jpg` (900×1200) | POWER | three-quarter | POWER series hero |
-| `public/media/power-front.jpg` (800×1067) | POWER | front | POWER card on the home page |
-| `public/media/power-throat.jpg` (925×661) | POWER | throat and shaft | POWER details; manufacturing section |
-| `public/media/great-hero.jpg` (900×1200) | GREAT | three-quarter | GREAT series hero |
-| `public/media/great-front.jpg` (800×1067) | GREAT | front | GREAT card on the home page |
-| `public/media/spin-front.jpg` (800×1067) | SPIN | front | reserve (SPIN uses the owner's set) |
-| `public/media/sst-front.jpg` (800×1067) | Sweet Spot Trainer | front | SST page and home training block |
+| Published file | Source | Where used |
+| --- | --- | --- |
+| `public/media/sst-system.jpg` | SS4 | SST page hero; home training block |
+| `public/media/sst-270.jpg`, `sst-285.jpg`, `sst-300.jpg`, `sst-400.jpg` | SS270S / SS285S / SS300S / SS400S | SST page: the four configurations |
+| `public/media/sst-shafts.jpg`, `sst-grips.jpg`, `sst-buttcaps.jpg` | SS4_3 / SS4_4 / SS4_5 | SST page: construction details |
 
-A render is not a photograph and not evidence: it shows the declared geometry of the series, not a measured or available unit. The pages label these images as visualisations.
+**Generated renders are banned** (owner instruction, 23 Sep 2026). None is in the repository and none is to be produced.
 
 ## 3. Brand assets (unchanged)
 
@@ -51,5 +47,6 @@ Generated in code and labelled "Schematic — not a measurement": stiffness tole
 ## 5. Excluded
 - The September source photographs of unstrung frames on a white background (02–07) — withdrawn by the owner on 22 Sep 2026 and removed from the repository.
 - The specification strip and MIPA record line of the owner's SPIN set (cropped off, see §1).
-- Rejected covers, STORIES graphics, composites, quotation extracts, foam-handle imagery, substitute racquets and invented logos — never in the repository.
+- Renders generated in this repository — created 22 Sep 2026, banned and deleted by the owner on 23 Sep 2026.
+- Rejected covers, composites, quotation extracts, foam-handle imagery, substitute racquets and invented logos — never in the repository.
 - Video 08: prepared, not released (`data/media.js → inspectionVideo.released = false`).

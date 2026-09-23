@@ -3,7 +3,7 @@ import { ctx } from "../../../../lib/page";
 import { pageMeta } from "../../../../lib/metadata";
 import { routes } from "../../../../data/site";
 import { seriesList, getSeries, precisionClasses } from "../../../../data/products";
-import { seriesMedia } from "../../../../data/media";
+import { seriesMedia, spinWeights } from "../../../../data/media";
 import { locales } from "../../../../lib/i18n";
 import { Section, Cta, Note, Steps } from "../../../../components/Ui";
 import { WeightMatrix, PrecisionTable, GripRow } from "../../../../components/Product";
@@ -73,7 +73,7 @@ export default async function Page({ params }) {
       {id === "spin" && (
         <Section first title={P.weightVisualTitle} lead={P.weightVisualLead}>
           <div className="detail-grid">
-            {["spin270", "spin320", "spin347"].map((k) => (
+            {spinWeights.map((k) => (
               <Photo key={k} id={k} alt={M[k]} caption={M[k]} sizes="(min-width: 760px) 30vw, 92vw" />
             ))}
           </div>

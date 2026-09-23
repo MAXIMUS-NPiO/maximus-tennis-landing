@@ -10,9 +10,11 @@
  * readable. No crop, no retouch, no substitution. The published weight and balance of each file
  * were checked against data/products.js file by file, 33 of 33.
  *
- * Sets received: SPIN (1_1, 1_2 — 33 compositions), Sweet Spot Trainer (2_1, 2_2). GREAT and POWER: awaited.
+ * Sets received: Spin (1_1, 1_2 — 33 compositions), Power (33 compositions, 2048 px sources), Sweet Spot
+ * Trainer (2_1, 2_2). GREAT: awaited.
  */
 import spinVisual from "../public/media/spin-visual.jpg";
+import powerVisual from "../public/media/power-visual.jpg";
 import spinHead from "../public/media/spin-head.jpg";
 import handleLion from "../public/media/handle-lion.jpg";
 import engraving from "../public/media/engraving.jpg";
@@ -60,6 +62,40 @@ import s360 from "../public/media/spin/spin-360.jpg";
 import s366 from "../public/media/spin/spin-366.jpg";
 import s377 from "../public/media/spin/spin-377.jpg";
 
+import p210 from "../public/media/power/power-210.jpg";
+import p215 from "../public/media/power/power-215.jpg";
+import p220 from "../public/media/power/power-220.jpg";
+import p225 from "../public/media/power/power-225.jpg";
+import p230 from "../public/media/power/power-230.jpg";
+import p235 from "../public/media/power/power-235.jpg";
+import p240 from "../public/media/power/power-240.jpg";
+import p245 from "../public/media/power/power-245.jpg";
+import p250 from "../public/media/power/power-250.jpg";
+import p260 from "../public/media/power/power-260.jpg";
+import p265 from "../public/media/power/power-265.jpg";
+import p270 from "../public/media/power/power-270.jpg";
+import p275 from "../public/media/power/power-275.jpg";
+import p280 from "../public/media/power/power-280.jpg";
+import p285 from "../public/media/power/power-285.jpg";
+import p290 from "../public/media/power/power-290.jpg";
+import p295 from "../public/media/power/power-295.jpg";
+import p300 from "../public/media/power/power-300.jpg";
+import p305 from "../public/media/power/power-305.jpg";
+import p310 from "../public/media/power/power-310.jpg";
+import p315 from "../public/media/power/power-315.jpg";
+import p320 from "../public/media/power/power-320.jpg";
+import p325 from "../public/media/power/power-325.jpg";
+import p330 from "../public/media/power/power-330.jpg";
+import p335 from "../public/media/power/power-335.jpg";
+import p340 from "../public/media/power/power-340.jpg";
+import p345 from "../public/media/power/power-345.jpg";
+import p350 from "../public/media/power/power-350.jpg";
+import p355 from "../public/media/power/power-355.jpg";
+import p360 from "../public/media/power/power-360.jpg";
+import p365 from "../public/media/power/power-365.jpg";
+import p370 from "../public/media/power/power-370.jpg";
+import p377 from "../public/media/power/power-377.jpg";
+
 const owner = (src, model, purpose) => ({ src, model, kind: "owner", purpose });
 
 /**
@@ -74,8 +110,24 @@ export const spinByWeight = {
   377: s377,
 };
 
+/**
+ * Power compositions by listed weight. Complete, uncropped files; the weight and the balance
+ * printed inside each image match data/products.js.
+ */
+export const powerByWeight = {
+  210: p210, 215: p215, 220: p220, 225: p225, 230: p230, 235: p235, 240: p240, 245: p245,
+  250: p250, 260: p260, 265: p265, 270: p270, 275: p275, 280: p280, 285: p285, 290: p290,
+  295: p295, 300: p300, 305: p305, 310: p310, 315: p315, 320: p320, 325: p325, 330: p330,
+  335: p335, 340: p340, 345: p345, 350: p350, 355: p355, 360: p360, 365: p365, 370: p370,
+  377: p377,
+};
+
+/** Variant images by series id — used by the weight catalogue. */
+export const variantsByWeight = { spin: spinByWeight, power: powerByWeight };
+
 export const media = {
   spinVisual: owner(spinVisual, "spin", "SPIN: complete composition, 290 g"),
+  powerVisual: owner(powerVisual, "power", "POWER: complete composition, 290 g"),
   spinHead: owner(spinHead, "spin", "SPIN head and string bed — detail view"),
   handleLion: owner(handleLion, "spin", "Throat, grip and butt cap with the lion mark — detail view"),
   engraving: owner(engraving, "spin", "Silver personalisation engraving on the shaft — detail view"),
@@ -101,7 +153,7 @@ export const sstDetails = ["sstShafts", "sstGrips", "sstButtcaps"];
  */
 export const seriesMedia = {
   great: { card: null, full: null, details: [] },
-  power: { card: null, full: null, details: [] },
+  power: { card: "powerVisual", full: "powerVisual", details: [] },
   spin: { card: "spinVisual", full: "spinVisual", details: ["spinHead", "handleLion"] },
 };
 

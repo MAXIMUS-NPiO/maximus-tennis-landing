@@ -3,13 +3,13 @@ import { ctx } from "../../../../lib/page";
 import { pageMeta } from "../../../../lib/metadata";
 import { routes } from "../../../../data/site";
 import { seriesList, getSeries, precisionClasses } from "../../../../data/products";
-import { seriesMedia } from "../../../../data/media";
+import { seriesMedia, variantsByWeight } from "../../../../data/media";
 import { locales } from "../../../../lib/i18n";
 import { Section, Cta, Note, Steps } from "../../../../components/Ui";
 import { WeightMatrix, PrecisionTable, GripRow } from "../../../../components/Product";
 import { Photo, PhotoPending } from "../../../../components/Media";
 import TrackView from "../../../../components/TrackView";
-import SpinVariants from "../../../../components/SpinVariants";
+import VariantCatalogue from "../../../../components/VariantCatalogue";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -43,6 +43,9 @@ export default async function Page({ params }) {
   const balances = s.matrix.map((p) => p.balance).filter((b) => b !== null);
   const balanceRange = balances.length ? `${Math.min(...balances)}\u2013${Math.max(...balances)} ${L.mm}` : null;
   const hero = m.full; // a detail photo is never promoted to the series hero
+  // A weight catalogue is shown only where a complete composition exists for every listed weight.
+  const hasVariantImages = Object.prototype.hasOwnProperty.call(variantsByWeight, id)
+    && s.matrix.every((p) => variantsByWeight[id][p.weight] && p.balance !== null);
   const faq = balanceConfirmed ? [P.faqSpinBalance, ...P.faq.slice(1)] : P.faq;
   const configure = <Cta locale={locale} to="build" query={`series=${id}&from=series`} label={P.ctaBuild} track={`series_configure_${id}`} series={id} />;
   const ask = <Cta locale={locale} to="contact" query={`purpose=product&series=${id}`} label={P.ctaAsk} kind="btn-outline" track={`series_ask_${id}`} series={id} />;
@@ -76,14 +79,17 @@ export default async function Page({ params }) {
         </div>
       </section>
 
-      {id === "spin" && (
-        <SpinVariants
-          strings={{ catalogue: P.spinCatalogue, units: { grams: L.grams, mm: L.mm, sqin: L.sqin }, alt: M.spinVariantAlt }}
+      {hasVariantImages && (
+        <VariantCatalogue
+          seriesId={id}
+          seriesName={R.seriesName[id]}
+          strings={{ catalogue: P.catalogue, units: { grams: L.grams, mm: L.mm, sqin: L.sqin }, alt: M.variantAlt }}
           variants={s.matrix.map((p) => ({ weight: p.weight, balance: p.balance }))}
           headSizeSqIn={s.headSizeSqIn}
           construction={P.construction}
           grips="L0–L7"
           precision={precisionClasses.map((c) => c.id).join(" \u00b7 ")}
+          balanceNote={balanceConfirmed ? P.catalogue.balanceConfirmed : P.catalogue.balanceModelled}
         />
       )}
 

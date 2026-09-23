@@ -71,17 +71,22 @@ export const series = {
     headSizeSqIn: 100,
     direction: "spin",
     order: 3,
-    balanceStatus: "NOT_PROVIDED",
-    /** Founder instruction 21.09.2026: SPIN keeps the status "requested weight architecture". */
-    matrixStatus: "REQUESTED_ARCHITECTURE",
-    paramStatus: { weights: "requested", balance: "not_provided", swingweight: "not_provided", stiffness: "not_provided" },
-    measurementBasis: MEASUREMENT_BASIS,
-    /** 29 weights of the requested weight architecture. Balance values: NOT PROVIDED. */
+    balanceStatus: "FOUNDER_CONFIRMED",
+    matrixStatus: "FOUNDER_CONFIRMED",
+    paramStatus: { weights: "confirmed", balance: "confirmed", swingweight: "not_provided", stiffness: "not_provided" },
+    measurementBasis: { ...MEASUREMENT_BASIS, revision: "2026-09-23" },
+    /**
+     * 33 listed weight points, Founder instruction 23.09.2026. Weight in grams, balance in millimetres
+     * from the butt. Transferred literally from the Founder's table; balances are NOT calculated here
+     * and are not smoothed between neighbouring weights. Each pair also matches the value printed on the
+     * approved Spin visualisation of that weight (checked file by file, 33 of 33).
+     */
     matrix: pts([
-      [239, null], [243, null], [247, null], [250, null], [253, null], [257, null], [260, null], [263, null],
-      [267, null], [270, null], [273, null], [277, null], [280, null], [283, null], [287, null], [290, null],
-      [294, null], [297, null], [300, null], [305, null], [310, null], [315, null], [320, null], [325, null],
-      [330, null], [333, null], [339, null], [347, null], [355, null],
+      [222, 339], [229, 338], [233, 337], [236, 336], [239, 335], [243, 335], [247, 335], [250, 335],
+      [253, 335], [257, 330], [260, 330], [263, 330], [267, 325], [270, 325], [273, 325], [277, 325],
+      [280, 328], [283, 331], [287, 335], [290, 335], [294, 334], [297, 330], [315, 330], [320, 330],
+      [325, 330], [330, 330], [333, 330], [339, 330], [347, 330], [355, 330], [360, 325], [366, 320],
+      [377, 315],
     ]),
   },
 };

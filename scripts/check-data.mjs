@@ -3,7 +3,7 @@ const { series, grips, precisionClasses, sweetSpotTrainer, spotTrainer } = await
 const fail = [];
 const expect = (cond, msg) => { if (!cond) fail.push(msg); };
 
-const counts = { great: 32, power: 33, spin: 29 };
+const counts = { great: 32, power: 33, spin: 33 };
 for (const [id, n] of Object.entries(counts)) {
   const s = series[id];
   expect(s && s.matrix.length === n, `${id}: expected ${n} listed weights, got ${s ? s.matrix.length : "none"}`);
@@ -12,7 +12,10 @@ for (const [id, n] of Object.entries(counts)) {
   expect(new Set(w).size === w.length, `${id}: duplicate weights`);
   for (const p of s.matrix) expect(p.balance === null || Number.isInteger(p.balance), `${id}: balance must be integer mm or null (${p.weight})`);
 }
-expect(series.spin.matrix.every((p) => p.balance === null), "spin: balances must be NOT PROVIDED (null)");
+expect(series.spin.matrix.every((p) => p.balance !== null), "spin: every listed weight must carry the confirmed balance");
+// Founder table of 23.09.2026, transferred literally. Guards against recalculation or smoothing.
+const SPIN_TABLE = [[222,339],[229,338],[233,337],[236,336],[239,335],[243,335],[247,335],[250,335],[253,335],[257,330],[260,330],[263,330],[267,325],[270,325],[273,325],[277,325],[280,328],[283,331],[287,335],[290,335],[294,334],[297,330],[315,330],[320,330],[325,330],[330,330],[333,330],[339,330],[347,330],[355,330],[360,325],[366,320],[377,315]];
+expect(JSON.stringify(series.spin.matrix.map((p) => [p.weight, p.balance])) === JSON.stringify(SPIN_TABLE), "spin: matrix must match the Founder table of 23.09.2026 exactly");
 expect(series.power.matrix.every((p) => p.balance !== null) && series.great.matrix.every((p) => p.balance !== null), "power/great: balances must be present");
 expect(series.power.matrix[0].weight === 210 && series.power.matrix[0].balance === 347 && series.power.matrix.at(-1).weight === 377 && series.power.matrix.at(-1).balance === 320, "power: endpoints mismatch");
 expect(series.great.matrix[0].weight === 236 && series.great.matrix[0].balance === 343 && series.great.matrix.at(-1).weight === 369 && series.great.matrix.at(-1).balance === 321, "great: endpoints mismatch");
@@ -27,7 +30,7 @@ expect(sweetSpotTrainer.headSizeSqIn === 50 && sweetSpotTrainer.lengthIn === 27 
 expect(JSON.stringify(sweetSpotTrainer.system.map((x) => [x.weight, x.balance])) === JSON.stringify([[270, 330], [285, 325], [300, 325], [400, 320]]), "SST system");
 expect(spotTrainer.targetDimensions === "NOT_PROVIDED" && spotTrainer.balances === "NOT_PROVIDED", "Spot Trainer: no invented dimensions or balances");
 // Evidence statuses (founder instruction 21.09.2026)
-expect(series.spin.matrixStatus === "REQUESTED_ARCHITECTURE" && series.spin.balanceStatus === "NOT_PROVIDED", "spin: must keep the status 'requested weight architecture' with balance NOT PROVIDED");
+expect(series.spin.matrixStatus === "FOUNDER_CONFIRMED" && series.spin.balanceStatus === "FOUNDER_CONFIRMED", "spin: matrix and balances are Founder-confirmed since 23.09.2026");
 expect(series.great.balanceStatus === "MODELLED" && series.power.balanceStatus === "MODELLED", "great/power: balances must be labelled as calculated");
 for (const id of ["great", "power", "spin"]) {
   const ps = series[id].paramStatus || {};
@@ -54,4 +57,4 @@ for (const f of publicFiles) {
 }
 
 if (fail.length) { console.error(fail.join("\n")); process.exit(1); }
-console.log("product data OK: GREAT 32 · POWER 33 · SPIN 29 · L0–L7 · P2.5/P1.5/P0.5 · SST · Spot Trainer · no banned content");
+console.log("product data OK: GREAT 32 · POWER 33 · SPIN 33 (222–377 g, balances confirmed) · L0–L7 · P2.5/P1.5/P0.5 · SST · Spot Trainer · no banned content");

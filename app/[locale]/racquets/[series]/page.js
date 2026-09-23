@@ -3,12 +3,13 @@ import { ctx } from "../../../../lib/page";
 import { pageMeta } from "../../../../lib/metadata";
 import { routes } from "../../../../data/site";
 import { seriesList, getSeries, precisionClasses } from "../../../../data/products";
-import { seriesMedia, spinWeights } from "../../../../data/media";
+import { seriesMedia } from "../../../../data/media";
 import { locales } from "../../../../lib/i18n";
 import { Section, Cta, Note, Steps } from "../../../../components/Ui";
 import { WeightMatrix, PrecisionTable, GripRow } from "../../../../components/Product";
 import { Photo, PhotoPending } from "../../../../components/Media";
 import TrackView from "../../../../components/TrackView";
+import SpinVariants from "../../../../components/SpinVariants";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -36,8 +37,13 @@ export default async function Page({ params }) {
   const m = seriesMedia[id];
   const requested = s.matrixStatus === "REQUESTED_ARCHITECTURE";
   const modelled = s.balanceStatus === "MODELLED";
+  // Balance evidence: confirmed (Founder table), calculated (modelled) or not published yet.
+  const balanceKind = s.balanceStatus === "FOUNDER_CONFIRMED" ? "confirmed" : modelled ? "modelled" : "notprovided";
+  const balanceConfirmed = balanceKind === "confirmed";
+  const balances = s.matrix.map((p) => p.balance).filter((b) => b !== null);
+  const balanceRange = balances.length ? `${Math.min(...balances)}\u2013${Math.max(...balances)} ${L.mm}` : null;
   const hero = m.full; // a detail photo is never promoted to the series hero
-  const faq = requested ? [P.faqSpinBalance, ...P.faq.slice(1)] : P.faq;
+  const faq = balanceConfirmed ? [P.faqSpinBalance, ...P.faq.slice(1)] : P.faq;
   const configure = <Cta locale={locale} to="build" query={`series=${id}&from=series`} label={P.ctaBuild} track={`series_configure_${id}`} series={id} />;
   const ask = <Cta locale={locale} to="contact" query={`purpose=product&series=${id}`} label={P.ctaAsk} kind="btn-outline" track={`series_ask_${id}`} series={id} />;
 
@@ -60,7 +66,7 @@ export default async function Page({ params }) {
               <div><dt>{P.specs.head}</dt><dd>{s.headSizeSqIn} {L.sqin}</dd></div>
               <div><dt>{P.specs.direction}</dt><dd>{R.direction[s.direction]}</dd></div>
               <div><dt>{P.specs.weights}</dt><dd>{s.matrix.length} · {s.matrix[0].weight}–{s.matrix[s.matrix.length - 1].weight} {L.grams} <span className={`status ${requested ? "requested" : "confirmed"}`}>{requested ? S.requested : S.confirmed}</span></dd></div>
-              <div><dt>{P.specs.balance}</dt><dd><span className={`status ${modelled ? "modelled" : "notprovided"}`}>{modelled ? S.modelled : S.notprovided}</span></dd></div>
+              <div><dt>{P.specs.balance}</dt><dd>{balanceRange ? <>{balanceRange} </> : null}<span className={`status ${balanceKind}`}>{S[balanceKind]}</span></dd></div>
               <div><dt>{P.specs.construction}</dt><dd>{P.construction}</dd></div>
               <div><dt>{P.specs.grips}</dt><dd>L0–L7</dd></div>
               <div><dt>{P.specs.precision}</dt><dd>{precisionClasses.map((c) => c.id).join(" · ")}</dd></div>
@@ -71,18 +77,19 @@ export default async function Page({ params }) {
       </section>
 
       {id === "spin" && (
-        <Section first title={P.weightVisualTitle} lead={P.weightVisualLead}>
-          <div className="detail-grid">
-            {spinWeights.map((k) => (
-              <Photo key={k} id={k} alt={M[k]} caption={M[k]} sizes="(min-width: 760px) 30vw, 92vw" />
-            ))}
-          </div>
-        </Section>
+        <SpinVariants
+          strings={{ catalogue: P.spinCatalogue, units: { grams: L.grams, mm: L.mm, sqin: L.sqin }, alt: M.spinVariantAlt }}
+          variants={s.matrix.map((p) => ({ weight: p.weight, balance: p.balance }))}
+          headSizeSqIn={s.headSizeSqIn}
+          construction={P.construction}
+          grips="L0–L7"
+          precision={precisionClasses.map((c) => c.id).join(" \u00b7 ")}
+        />
       )}
 
       <Section title={P.optionsTitle}>
         {m.details.filter((d) => d !== hero).length > 0 ? (
-          <div className="detail-grid" style={{ marginBottom: 26 }}>
+          <div className={`detail-grid ${id === "spin" ? "whole" : ""}`} style={{ marginBottom: 26 }}>
             {m.details.filter((d) => d !== hero).map((d) => <Photo key={d} id={d} alt={M[d]} caption={M[d]} sizes="(min-width: 760px) 30vw, 92vw" />)}
           </div>
         ) : null}
@@ -98,11 +105,11 @@ export default async function Page({ params }) {
       <Section band="band-1" title={P.matrixTitle} lead={P.matrixLead}>
         <div className="badges" style={{ marginBottom: 16 }}>
           <span className={`status ${requested ? "requested" : "confirmed"}`}>{L.weight}: {requested ? S.requested : S.confirmed}</span>
-          <span className={`status ${modelled ? "modelled" : "notprovided"}`}>{L.balance}: {modelled ? S.modelled : S.notprovided}</span>
+          <span className={`status ${balanceKind}`}>{L.balance}: {S[balanceKind]}</span>
         </div>
-        {requested && <p className="note red" style={{ marginBottom: 16 }}>{P.spinExplanation}</p>}
         <WeightMatrix series={s} dict={dict} />
         {modelled && <Note>{P.balanceNote.modelled}</Note>}
+        {balanceConfirmed && <Note>{P.balanceNote.confirmed}</Note>}
         <div className="btn-row">{configure}<Cta locale={locale} to="racquets" label={P.ctaCompare} kind="btn-outline" /></div>
       </Section>
 

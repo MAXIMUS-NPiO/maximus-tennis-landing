@@ -1,17 +1,18 @@
-# CONTENT GAPS — maximus.tennis v4.4
+# CONTENT GAPS — maximus.tennis v4.5
 
-Version 2026-09-23, published to production (commit `9cd6d81`). Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
+Version 2026-09-23. Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
 
 ## A. Visuals
 
-Owner instructions 22–23 Sep 2026: the white-background photographs are withdrawn and generated renders are banned. The site shows the owner's own visual sets — SPIN (1_1, 1_2) and Sweet Spot Trainer (2_1, 2_2). What is still missing:
+Owner instructions 22–23 Sep 2026: the white-background photographs are withdrawn and generated renders are banned. The site shows the owner's own visual sets — Spin (1_1, 1_2; all 33 compositions published whole) and Sweet Spot Trainer (2_1, 2_2). What is still missing:
 
 | # | Missing material | What it blocks | Closed by |
 | --- | --- | --- | --- |
 | A1 | **Owner visual set for GREAT** | GREAT card and series hero — typographic tile until it arrives | Owner supplies the set (same style as the SPIN and trainer sets) |
 | A2 | **Owner visual set for POWER** | POWER card and series hero — typographic tile until it arrives | Owner supplies the set |
-| A3 | **Confirmed SPIN balance, string pattern and tension range** (printed on the owner's images, cropped off here) | Publishing those values anywhere, including on an image | Founder confirmation with source and revision (see B1) |
-| A4 | **Decision on seven images labelled "Spin series" with weights outside the SPIN matrix**: 236 g exists in GREAT only; 360 and 377 g exist in POWER only; 222, 229, 233 and 366 g exist in **no** confirmed matrix | Those seven files stay unpublished | Owner states whether the label or the matrix is wrong |
+| A3 | **Confirmed Spin string pattern and tension range** (16 × 19 and 50–59 / 50–60 lb are printed on the owner's images, which are published whole, but they are not in `data/products.js` and are therefore not stated as site text) | Stating pattern and tension as site text, in the configurator and in feeds | Founder confirmation with source and revision (see B2) |
+| ~~A4~~ | ~~Seven "Spin series" images outside the matrix~~ — **closed 23 Sep 2026**: the Founder supplied the complete Spin table of 33 weight/balance pairs, which includes 222, 229, 233, 236, 360, 366 and 377 g. All 33 images are published. | — | — |
+| A9 | **Confirmation that 300, 305 and 310 g are withdrawn from Spin.** They were in the earlier 29-weight Spin architecture but are **not** in the Founder table of 23 Sep 2026, so they are no longer offered on the site and no visualisation exists for them | Offering those three weights as listed Spin variants | Owner confirms the removal, or supplies the pairs and images |
 | A5 | **QC measurement material** (instrument photographs, sample measurement records, factory footage) | Any advertising of measured precision; the manufacturing section states "not yet published" | Owner supplies real, publishable QC material |
 | A6 | **GREAT inspection video (08)** full-clip review | Publication of the video (component prepared; `inspectionVideo.released = false`) | Owner reviews the full 27 s clip and approves a cut |
 | A7 | L0–L7 visual sequence | Not blocking (schematic in place); needed for grip-led creative | Visualisation or photographs of the eight factory handle sizes |
@@ -21,7 +22,7 @@ Owner instructions 22–23 Sep 2026: the white-background photographs are withdr
 
 | # | Missing data | What it blocks | Closed by |
 | --- | --- | --- | --- |
-| B1 | SPIN balance, swingweight, stiffness (SPIN keeps "requested weight architecture") | Publishing SPIN beyond weights; SPIN specification completeness | Founder-confirmed values with source and revision |
+| B1 | Spin swingweight and stiffness (weights and balances are confirmed since 23 Sep 2026) | Publishing Spin swingweight and stiffness | Founder-confirmed values with source and revision |
 | B2 | GREAT / POWER nominal swingweight and stiffness; length, beam, string pattern, tension range for all series | Publishing these parameters (configurator collects them as requested targets) | Confirmed values in `seriesParameters` |
 | B3 | Measurement basis of listed weights / balances (strung or unstrung, grip state) | Stating the basis on series pages (currently "confirmed in the written specification") | Written basis per series |
 | B4 | Prices, availability, lead times, warranty (deliberately not published) | Price- or stock-based advertising (shopping feeds, "in stock" copy) | Not planned for the site; commercial terms stay in written offers |

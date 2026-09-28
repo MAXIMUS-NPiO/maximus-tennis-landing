@@ -1,6 +1,6 @@
-# ASSET MANIFEST — maximus.tennis v4.6
+# ASSET MANIFEST — maximus.tennis v4.7
 
-Version 2026-09-23. **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations** instead. **Owner instruction of 23 September 2026 (Spin and Power series):** every composition is published **whole** — the specification strip, the personalisation engraving zone and the MIPA marking stay visible and readable. No crop, no retouch, no substitution, no `object-fit: cover`, no height cap.
+Version 2026-09-28. **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations** instead. **Owner instruction of 23 and 28 September 2026 (Spin, Power and Great series):** every composition is published **whole** — the specification strip, the personalisation engraving zone and the MIPA marking stay visible and readable. No crop, no retouch, no substitution, no `object-fit: cover`, no height cap.
 
 Code counterpart: `data/media.js`. Images are delivered through `next/image` (AVIF/WebP, responsive `srcset`; `priority` only for a page hero). Product data always comes from `data/products.js`, never from an image.
 
@@ -36,7 +36,22 @@ The four detail files are deliberate close-ups of named parts, each captioned as
 
 Power balances stay labelled **calculated** (`balanceStatus: MODELLED`): the supplied values are identical to the calculated matrix already published, and the owner has not stated that they are individual factory measurements.
 
-## 3. Sweet Spot Trainer — owner visual set (2_1, 2_2)
+## 3. Owner visual set — Great series (MAXIMUS_Great_32_Weights_Site_Update)
+
+32 square compositions, 1254 × 1254 px lossless WebP, one per listed weight, supplied 28 September 2026 as a checksum-verified package. **All 32 are published exactly as delivered**, byte for byte, under the package's own versioned file names in `public/media/great/` (≈ 691 KB each, 21.6 MB in total). Nothing was re-encoded, rescaled, recoloured or re-generated.
+
+The composition shows the frame from three angles, the string bed with the coloured head band, the gloss MAXIMUS lettering, the personalisation signature engraving, the grip, the lion butt cap, the G series mark on the throat, the weight and the MIPA registration line. Unlike Spin and Power, the Great compositions carry **no specification strip** — weight is the only figure printed on them.
+
+**Weight verified file by file, 32 of 32**: the weight printed inside each image matches the file name and `data/products.js` (32 listed GREAT weights, 236–369 g). The package's own checksum check (`verify_package.py`) was run before installation and reported all 32 images and all checksums matching.
+
+| Published file | Source | Where used |
+| --- | --- | --- |
+| `public/media/great/maximus-great-236g-…webp` … `-369g-…webp` (32 files) | assets/great/ of the supplied package, unchanged | Great series page: selected-variant panel, weight switcher, catalogue of 32 cards, zoom view |
+| `public/media/great-visual.webp` | copy of the 288 g composition | Great card on the home page; Great series hero |
+
+Great balances stay labelled **calculated** (`balanceStatus: MODELLED`): they are not printed on these images and the owner has not stated that they are individual factory measurements.
+
+## 4. Sweet Spot Trainer — owner visual set (2_1, 2_2)
 
 Source: the owner's trainer set, 20 compositions. The internal "MIPA RECORD" line is cropped off; the specification text on the images (50 in², 27 inch, 12×14, 270/330 · 285/325 · 300/325 · 400/320) matches `data/products.js`.
 
@@ -48,7 +63,7 @@ Source: the owner's trainer set, 20 compositions. The internal "MIPA RECORD" lin
 
 **Generated renders are banned** (owner instruction, 23 Sep 2026). None is in the repository and none is to be produced.
 
-## 4. Brand assets (unchanged)
+## 5. Brand assets (unchanged)
 
 | File | Source | Status | Use |
 | --- | --- | --- | --- |
@@ -56,10 +71,10 @@ Source: the owner's trainer set, 20 compositions. The internal "MIPA RECORD" lin
 | `public/brand/maximus-lion-emblem.png`, `app/icon.png`, `app/apple-icon.png` | crop of the official lockup | APPROVED | Favicon, Organization logo |
 | `public/brand/og-maximus.png` (1200×630) | lockup + typography on black | APPROVED | Share previews |
 
-## 5. Schematics (not images of the product)
+## 6. Schematics (not images of the product)
 Generated in code and labelled "Schematic — not a measurement": stiffness tolerance bands per precision class and the nominal grip scale L0–L7. Files: `components/Schematics.js`.
 
-## 6. Excluded
+## 7. Excluded
 - The September source photographs of unstrung frames on a white background (02–07) — withdrawn by the owner on 22 Sep 2026 and removed from the repository.
 - Renders generated in this repository — created 22 Sep 2026, banned and deleted by the owner on 23 Sep 2026.
 - Rejected covers, composites, quotation extracts, foam-handle imagery, substitute racquets and invented logos — never in the repository.

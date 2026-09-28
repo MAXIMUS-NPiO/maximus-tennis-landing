@@ -1,14 +1,14 @@
-# CONTENT GAPS — maximus.tennis v4.6
+# CONTENT GAPS — maximus.tennis v4.7
 
-Version 2026-09-23. Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
+Version 2026-09-28. Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
 
 ## A. Visuals
 
-Owner instructions 22–23 Sep 2026: the white-background photographs are withdrawn and generated renders are banned. The site shows the owner's own visual sets — Spin (33 compositions), Power (33 compositions) and Sweet Spot Trainer (2_1, 2_2), all published whole. What is still missing:
+Owner instructions 22–23 Sep 2026: the white-background photographs are withdrawn and generated renders are banned. The site shows the owner's own visual sets — Spin (33), Power (33), Great (32) and Sweet Spot Trainer, all published whole. **Every playing series now has a complete visual set and a weight catalogue.** What is still missing:
 
 | # | Missing material | What it blocks | Closed by |
 | --- | --- | --- | --- |
-| A1 | **Owner visual set for GREAT** (the only series still without one) | GREAT card and series hero — typographic tile until it arrives; no GREAT weight catalogue | Owner supplies 32 compositions, one per listed GREAT weight, in the style of the Power set |
+| ~~A1~~ | ~~Owner visual set for GREAT~~ — **closed 28 Sep 2026**: 32 compositions supplied and published unchanged; the Great page carries a 32-variant catalogue | — | — |
 | ~~A2~~ | ~~Owner visual set for POWER~~ — **closed 23 Sep 2026**: 33 compositions supplied, all published whole; the Power page carries the same 33-variant catalogue as Spin | — | — |
 | A3 | **Confirmed Spin string pattern and tension range** (16 × 19 and 50–59 / 50–60 lb are printed on the owner's images, which are published whole, but they are not in `data/products.js` and are therefore not stated as site text) | Stating pattern and tension as site text, in the configurator and in feeds | Founder confirmation with source and revision (see B2) |
 | ~~A4~~ | ~~Seven "Spin series" images outside the matrix~~ — **closed 23 Sep 2026**: the Founder supplied the complete Spin table of 33 weight/balance pairs, which includes 222, 229, 233, 236, 360, 366 and 377 g. All 33 images are published. | — | — |
@@ -23,7 +23,7 @@ Owner instructions 22–23 Sep 2026: the white-background photographs are withdr
 | # | Missing data | What it blocks | Closed by |
 | --- | --- | --- | --- |
 | B1 | Spin swingweight and stiffness (weights and balances are confirmed since 23 Sep 2026) | Publishing Spin swingweight and stiffness | Founder-confirmed values with source and revision |
-| B2 | GREAT / POWER nominal swingweight and stiffness; length, beam, string pattern, tension range for all series (16 × 19 and 50–60 lb are printed on the Power and Spin visualisations but are not confirmed data) | Publishing these parameters (configurator collects them as requested targets) | Confirmed values in `seriesParameters` |
+| B2 | GREAT / POWER nominal swingweight and stiffness; length, beam, string pattern, tension range for all series (16 × 19 and 50–60 lb are printed on the Power and Spin visualisations but are not confirmed data; the Great visualisations print no specification strip at all) | Publishing these parameters (configurator collects them as requested targets) | Confirmed values in `seriesParameters` |
 | B3 | Measurement basis of listed weights / balances (strung or unstrung, grip state) | Stating the basis on series pages (currently "confirmed in the written specification") | Written basis per series |
 | B4 | Prices, availability, lead times, warranty (deliberately not published) | Price- or stock-based advertising (shopping feeds, "in stock" copy) | Not planned for the site; commercial terms stay in written offers |
 

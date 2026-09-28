@@ -269,7 +269,7 @@ const zh = {
     catalogue: {
       eyebrow: "{series}系列目录",
       title: "{n}种重量配置",
-      lead: "{series}系列的全部配置，按重量升序排列。重量以克计，平衡点以自握柄底端起的毫米计。每张效果图均完整呈现——包含参数栏、个性化刻字区域与MIPA标记。",
+      lead: "{series}系列的全部配置，按重量升序排列。重量以克计，平衡点以自握柄底端起的毫米计。每张效果图均完整呈现：不裁剪、不遮挡、不拉伸。",
       selectLabel: "选择重量配置",
       select: "显示此配置",
       selected: "已显示在上方",
@@ -962,6 +962,7 @@ const zh = {
   media: {
     spinVisual: "MAXIMUS SPIN：穿线拍头、亮面MAXIMUS字样、握柄与狮子底盖",
     powerVisual: "MAXIMUS POWER：穿线拍头、亮面MAXIMUS字样、个性化刻字、握柄与狮子底盖",
+    greatVisual: "MAXIMUS GREAT：穿线拍头、亮面MAXIMUS字样、个性化刻字、握柄、狮子底盖与拍喉上的G系列标记",
     spinHead: "MAXIMUS SPIN拍头与线床",
     handleLion: "MAXIMUS拍喉、握柄与带狮子标记的底盖",
     engraving: "拍喉上的银色个性化刻字",

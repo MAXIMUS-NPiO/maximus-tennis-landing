@@ -269,7 +269,7 @@ const en = {
     catalogue: {
       eyebrow: "{series} series catalogue",
       title: "{n} weight variants",
-      lead: "Every variant of the {series} series, sorted by weight. Weight in grams, balance in millimetres from the butt. Each visualisation is shown whole — specification strip, personalisation engraving zone and MIPA marking included.",
+      lead: "Every variant of the {series} series, sorted by weight. Weight in grams, balance in millimetres from the butt. Each visualisation is shown whole: nothing cropped, masked or stretched.",
       selectLabel: "Choose a weight variant",
       select: "Show this variant",
       selected: "Shown above",
@@ -962,6 +962,7 @@ const en = {
   media: {
     spinVisual: "MAXIMUS SPIN: head with strings, gloss MAXIMUS lettering, grip and lion butt cap",
     powerVisual: "MAXIMUS POWER: head with strings, gloss MAXIMUS lettering, personalisation engraving, grip and lion butt cap",
+    greatVisual: "MAXIMUS GREAT: head with strings, gloss MAXIMUS lettering, personalisation engraving, grip, lion butt cap and the G series mark on the throat",
     spinHead: "MAXIMUS SPIN head and string bed",
     handleLion: "MAXIMUS throat, grip and butt cap with the lion mark",
     engraving: "Silver personalisation engraving on the shaft",

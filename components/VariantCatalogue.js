@@ -9,8 +9,10 @@ import { variantsByWeight } from "../data/media";
  */
 export const variantName = (seriesName, weight) => `MAXIMUS ${seriesName} series — ${weight} g`;
 
-/** The composition shown first; falls back to the lightest listed weight when it is not listed. */
+/** The composition shown first; where 290 g is not listed, the middle of the range is used. */
 const PREFERRED_WEIGHT = 290;
+const firstWeight = (variants) =>
+  (variants.some((v) => v.weight === PREFERRED_WEIGHT) ? PREFERRED_WEIGHT : variants[Math.floor(variants.length / 2)].weight);
 
 /** Ambient backdrop: the image's own blur placeholder, enlarged and blurred behind the photograph.
  *  It only ever appears OUTSIDE the photograph, so nothing in the composition is masked or dimmed. */
@@ -36,7 +38,7 @@ function Stage({ images, weight, alt, priority = false, sizes, onZoom, zoomLabel
 export default function VariantCatalogue({ seriesId, seriesName, strings, variants, headSizeSqIn, construction, grips, precision, balanceNote }) {
   const { catalogue: C, units: L, alt: altTemplate } = strings;
   const images = variantsByWeight[seriesId] || {};
-  const [weight, setWeight] = useState(() => (variants.some((v) => v.weight === PREFERRED_WEIGHT) ? PREFERRED_WEIGHT : variants[0].weight));
+  const [weight, setWeight] = useState(() => firstWeight(variants));
   const [zoom, setZoom] = useState(false);
   const stageRef = useRef(null);
   const closeRef = useRef(null);

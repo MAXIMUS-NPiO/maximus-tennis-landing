@@ -13,7 +13,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 
 import { validateConfig, validateRequest, gpsDirections, sanitizeAttribution, parseStrictInt, totalRacquets } from "../lib/intake/schema.js";
-import { createMemoryStore, createUpstashStore } from "../lib/intake/store.js";
+import { createMemoryStore, createUpstashStore, resolveStore, readRestCredentials } from "../lib/intake/store.js";
 import { acceptRequest, afterAccept, makeRequestId, safeEqual } from "../lib/intake/service.js";
 import { deliver, processDue, nextAttemptAt, RETRY_SCHEDULE_MS, MAX_ATTEMPTS, createWebhookNotifier, createSmtpNotifier, buildMessage } from "../lib/intake/notify.js";
 import { readConfig, resolveNotifier } from "../lib/intake/config.js";
@@ -247,6 +247,19 @@ test("configuration: memory store refused in production; secrets required; chann
   assert.equal(resolveNotifier({ NODE_ENV: "production", SMTP_HOST: "smtp.gmail.com", SMTP_USER: "u@maximus.tennis", SMTP_PASS: "x", LEAD_NOTIFY_TO: "gps@maximus.tennis" }).channel, "smtp");
   assert.equal(resolveNotifier({ NODE_ENV: "production", LEAD_WEBHOOK_URL: "http://example.org/x", LEAD_WEBHOOK_SECRET: "0123456789abcdef" }), null);
   assert.equal(resolveNotifier({ NODE_ENV: "production", LEAD_WEBHOOK_URL: "https://example.org/x", LEAD_WEBHOOK_SECRET: "0123456789abcdef" }).channel, "webhook");
+});
+
+test("configuration: REST credentials are accepted under any Vercel variable prefix", () => {
+  const url = "https://example.upstash.io";
+  assert.deepEqual(readRestCredentials({ KV_REST_API_URL: url, KV_REST_API_TOKEN: "t1" }), { url, token: "t1" });
+  assert.deepEqual(readRestCredentials({ UPSTASH_REDIS_REST_URL: url, UPSTASH_REDIS_REST_TOKEN: "t2" }), { url, token: "t2" });
+  assert.deepEqual(readRestCredentials({ STORAGE_KV_REST_API_URL: url, STORAGE_KV_REST_API_TOKEN: "t3" }), { url, token: "t3" });
+  assert.deepEqual(readRestCredentials({ LEADS_UPSTASH_REDIS_REST_URL: url, LEADS_UPSTASH_REDIS_REST_TOKEN: "t4" }), { url, token: "t4" });
+  // A URL and a token from different databases are never combined.
+  assert.deepEqual(readRestCredentials({ STORAGE_KV_REST_API_URL: url, OTHER_KV_REST_API_TOKEN: "t5" }), { url: undefined, token: undefined });
+  // A prefixed pair configures the store exactly like the standard names.
+  assert.notEqual(resolveStore({ STORAGE_KV_REST_API_URL: url, STORAGE_KV_REST_API_TOKEN: "t6" }), null);
+  assert.equal(resolveStore({ NODE_ENV: "production" }), null);
 });
 
 /* ------------------------------------------------------------------ real redis through REST bridge */

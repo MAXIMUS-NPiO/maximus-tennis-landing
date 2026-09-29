@@ -16,11 +16,14 @@
 import spinVisual from "../public/media/spin-visual.jpg";
 import powerVisual from "../public/media/power-visual.jpg";
 import greatVisual from "../public/media/great-visual.webp";
+import greatHero from "../public/media/great/maximus-great-363g-v1.webp";
 import spinHead from "../public/media/spin-head.jpg";
 import handleLion from "../public/media/handle-lion.jpg";
 import engraving from "../public/media/engraving.jpg";
 import lettering from "../public/media/lettering.jpg";
 import sstSystem from "../public/media/sst-system.jpg";
+import spotPair from "../public/media/spot/spot-trainers-pair.jpg";
+import spotRow from "../public/media/spot/spot-trainers-row.jpg";
 import sst270 from "../public/media/sst-270.jpg";
 import sst285 from "../public/media/sst-285.jpg";
 import sst300 from "../public/media/sst-300.jpg";
@@ -128,6 +131,7 @@ import g333 from "../public/media/great/maximus-great-333g-v3.webp";
 import g339 from "../public/media/great/maximus-great-339g-v3.webp";
 import g344 from "../public/media/great/maximus-great-344g-v3.webp";
 import g355 from "../public/media/great/maximus-great-355g-v3.webp";
+import g363 from "../public/media/great/maximus-great-363g-v1.webp";
 import g369 from "../public/media/great/maximus-great-369g-v3.webp";
 
 const owner = (src, model, purpose) => ({ src, model, kind: "owner", purpose });
@@ -165,7 +169,8 @@ export const greatByWeight = {
   236: g236, 239: g239, 242: g242, 245: g245, 248: g248, 251: g251, 254: g254, 257: g257,
   260: g260, 263: g263, 266: g266, 269: g269, 272: g272, 277: g277, 280: g280, 284: g284,
   288: g288, 292: g292, 295: g295, 299: g299, 303: g303, 306: g306, 309: g309, 313: g313,
-  319: g319, 323: g323, 329: g329, 333: g333, 339: g339, 344: g344, 355: g355, 369: g369,
+  319: g319, 323: g323, 329: g329, 333: g333, 339: g339, 344: g344, 355: g355, 363: g363,
+  369: g369,
 };
 
 /** Variant images by series id — used by the weight catalogue. */
@@ -175,6 +180,7 @@ export const media = {
   spinVisual: owner(spinVisual, "spin", "SPIN: complete composition, 290 g"),
   powerVisual: owner(powerVisual, "power", "POWER: complete composition, 290 g"),
   greatVisual: owner(greatVisual, "great", "GREAT: complete composition, 288 g (lion butt cap, G series mark on the throat)"),
+  greatHero: owner(greatHero, "great", "GREAT: complete composition, 363 g \u2014 red and yellow head detailing, gloss MAXIMUS lettering and the Maximus autograph on the shaft"),
   spinHead: owner(spinHead, "spin", "SPIN head and string bed — detail view"),
   handleLion: owner(handleLion, "spin", "Throat, grip and butt cap with the lion mark — detail view"),
   engraving: owner(engraving, "spin", "Silver personalisation engraving on the shaft — detail view"),
@@ -187,6 +193,8 @@ export const media = {
   sstShafts: owner(sstShafts, "sst", "Sweet Spot Trainer shafts with the MAXIMUS lettering"),
   sstGrips: owner(sstGrips, "sst", "Sweet Spot Trainer grips and butt caps"),
   sstButtcaps: owner(sstButtcaps, "sst", "Sweet Spot Trainer four-racquet system, butt caps"),
+  spotPair: owner(spotPair, "spot", "Spot Trainer: two trainers upright with balls on the round contact heads"),
+  spotRow: owner(spotRow, "spot", "Spot Trainer: five trainers laid out with balls on the round contact heads"),
 };
 
 /** Sweet Spot Trainer gallery. */
@@ -204,7 +212,10 @@ export const seriesMedia = {
   spin: { card: "spinVisual", full: "spinVisual", details: ["spinHead", "handleLion"] },
 };
 
-export const trainingMedia = { sst: "sstSystem" };
+export const trainingMedia = { sst: "sstSystem", spot: "spotRow" };
+
+/** Spot Trainer photographs (owner set, 29 Sep 2026). */
+export const spotGallery = ["spotRow", "spotPair"];
 
 /**
  * Inspection video 08 is prepared but NOT released: the owner must review the full clip first.

@@ -177,9 +177,17 @@ details.expander > div { padding: 0 18px 18px; }
 
 /* Header / navigation */
 .site-header { position: sticky; top: 0; z-index: 60; background: var(--black); color: var(--white); border-bottom: 1px solid #222; }
-.header-inner { height: 68px; display: flex; align-items: center; gap: 20px; }
-.logo-link { display: inline-flex; align-items: center; text-decoration: none; }
-.logo-link img { height: 40px; width: auto; }
+.header-inner { height: 68px; display: flex; align-items: center; gap: 18px; }
+/* The lockup asset is cropped to its artwork, so this height IS the visible lion height.
+   Target: 80–88% of the header height at every width (76/64 = 84%, 68/56 = 82%, 64/52 = 81%). */
+
+.logo-link { display: inline-flex; align-items: center; text-decoration: none; min-width: 0; }
+.logo-link img.header-logo { height: 56px; width: auto; max-width: none; display: block; }
+@media (min-width: 1440px) { .header-inner { height: 76px; } .logo-link img.header-logo { height: 64px; } }
+@media (max-width: 420px) { .header-inner { height: 64px; gap: 10px; } .logo-link img.header-logo { height: 52px; } }
+.nav-mobile-locale { padding: 16px 0 20px; }
+@media (max-width: 900px) { .header-locale { display: none; } }
+@media (min-width: 901px) { .nav-mobile-locale { display: none; } }
 .nav-desktop { display: none; margin-left: auto; align-items: center; gap: 2px; margin-block: 0; padding: 0; }
 .nav-desktop > li { position: relative; list-style: none; }
 .nav-desktop > li > a, .nav-desktop > li > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 9px; white-space: nowrap; font: inherit; font-size: 13px; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: none; border: 0; text-decoration: none; cursor: pointer; border-radius: var(--radius); }
@@ -196,7 +204,7 @@ details.expander > div { padding: 0 18px 18px; }
 .lang a { padding: 7px 9px; font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-decoration: none; color: #cfd3cc; white-space: nowrap; }
 .lang a.on { background: var(--white); color: var(--ink); }
 .menu-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444; border-radius: var(--radius); background: none; color: var(--white); cursor: pointer; font: inherit; font-size: 18px; }
-.nav-mobile { display: none; border-top: 1px solid #222; background: var(--black); color: var(--white); max-height: calc(100vh - 68px); overflow-y: auto; }
+.nav-mobile { display: none; border-top: 1px solid #222; background: var(--black); color: var(--white); max-height: calc(100vh - 76px); overflow-y: auto; }
 .nav-mobile.open { display: block; }
 .nav-mobile details { border-bottom: 1px solid #222; }
 .nav-mobile summary { list-style: none; cursor: pointer; padding: 15px 0; font-size: 13.5px; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase; display: flex; justify-content: space-between; }
@@ -205,7 +213,7 @@ details.expander > div { padding: 0 18px 18px; }
 .nav-mobile details[open] summary::after { content: "–"; }
 .nav-mobile a { display: block; padding: 11px 0 11px 14px; color: #cfd3cc; text-decoration: none; font-size: 16.5px; }
 .nav-mobile a.top { padding-left: 0; color: var(--white); font-size: 13.5px; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase; padding-block: 15px; border-bottom: 1px solid #222; }
-@media (min-width: 1180px) { .nav-desktop { display: flex; } .menu-toggle, .nav-mobile { display: none !important; } }
+@media (min-width: 1360px) { .nav-desktop { display: flex; } .menu-toggle, .nav-mobile { display: none !important; } }
 
 /* Hero */
 .hero { padding: 56px 0 48px; background: var(--bg); }
@@ -550,3 +558,31 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 .detail-grid.whole .photo img { aspect-ratio: 4 / 5; object-fit: contain; background: #0e0f0f; }
 
 @media (prefers-reduced-motion: reduce) { .vc-zoom-hint { transition: none; } }
+
+/* Home training section (Founder brief, 29 Sep 2026): the Sweet Spot Trainer leads the page.
+   Every composition is shown whole — contain, no height cap, no cover. */
+.training-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: center;
+}
+.training-lead .training-photo img,
+.training-lead .training-photo picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.spot-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 520px;
+  object-position: center;
+}
+@media (max-width: 860px) {
+  .training-lead { grid-template-columns: 1fr; gap: 22px; }
+  .spot-photo img { max-height: 420px; }
+}

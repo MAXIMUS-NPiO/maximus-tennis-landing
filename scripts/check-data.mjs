@@ -3,7 +3,7 @@ const { series, grips, precisionClasses, sweetSpotTrainer, spotTrainer } = await
 const fail = [];
 const expect = (cond, msg) => { if (!cond) fail.push(msg); };
 
-const counts = { great: 32, power: 33, spin: 33 };
+const counts = { great: 33, power: 33, spin: 33 };
 for (const [id, n] of Object.entries(counts)) {
   const s = series[id];
   expect(s && s.matrix.length === n, `${id}: expected ${n} listed weights, got ${s ? s.matrix.length : "none"}`);
@@ -57,4 +57,4 @@ for (const f of publicFiles) {
 }
 
 if (fail.length) { console.error(fail.join("\n")); process.exit(1); }
-console.log("product data OK: GREAT 32 · POWER 33 · SPIN 33 (222–377 g, balances confirmed) · L0–L7 · P2.5/P1.5/P0.5 · SST · Spot Trainer · no banned content");
+console.log(`product data OK: GREAT ${series.great.matrix.length} · POWER ${series.power.matrix.length} · SPIN ${series.spin.matrix.length} (222–377 g, balances confirmed) · L0–L7 · P2.5/P1.5/P0.5 · SST · Spot Trainer · no banned content`);

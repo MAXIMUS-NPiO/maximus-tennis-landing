@@ -31,7 +31,7 @@ export default async function Home({ params }) {
 
   return (
     <>
-      {/* 01 — racquet, positioning, action */}
+      {/* 01 — training proposition and the GREAT composition (Founder brief, 29 Sep 2026) */}
       <section id="top" className="hero hero-product">
         <div className="shell hero-grid">
           <div className="hero-copy">
@@ -39,19 +39,46 @@ export default async function Home({ params }) {
             <h1 className="h-display">{H.heroTitle}</h1>
             <p className="hero-line">{H.heroProduct}</p>
             <div className="btn-row">
-              <Cta locale={locale} to="choose" label={H.heroCta1} track="hero_choose" />
-              <Cta locale={locale} to="racquets" label={H.heroCta2} kind="btn-outline" track="hero_series" />
+              <Cta locale={locale} to="training" label={H.heroCta1} track="hero_training" />
+              <Cta locale={locale} to="great" label={H.heroCta2} kind="btn-outline" track="hero_great" />
             </div>
           </div>
-          <Photo id="spinVisual" alt={M.spinVisual} caption={H.heroCaption} priority sizes="(min-width: 900px) 520px, 94vw" className="hero-photo" />
+          <Photo id="greatHero" alt={M.greatHero} caption={H.heroCaption} priority sizes="(min-width: 900px) 560px, 94vw" className="hero-photo" />
           <div className="hero-meta">
             {H.heroMeta.map(([b, s]) => <div key={b}><b>{b}</b>{s}</div>)}
           </div>
         </div>
       </section>
 
-      {/* 02 — choose your path */}
-      <Section id="paths" band="band-1" eyebrow={H.paths.eyebrow} title={H.paths.title}>
+      {/* 02 — the training system, ahead of audience routes and the performance series */}
+      <Section id="training" band="band-1" eyebrow={H.training.eyebrow} title={H.training.title} lead={H.training.p}>
+        <div className="training-lead">
+          <Photo id="sst300" alt={M.sst300} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern} · ${H.training.sstCaption}`} sizes="(min-width: 900px) 520px, 94vw" className="training-photo" />
+          <div>
+            <h3 className="h-3">{dict.training.sst.h}</h3>
+            <p className="lead">{H.training.sstP}</p>
+            <p className="muted small">{sst.system.map((x) => `${x.weight}/${x.balance}`).join(" · ")} ({L.grams}/{L.mm}) · L0–L7</p>
+            <div className="btn-row"><Cta locale={locale} to="sst" label={H.training.sstCta} track="home_sst" /></div>
+          </div>
+        </div>
+        <div className="split" style={{ marginTop: 30 }}>
+          <div className="stack">
+            <h3 className="h-3">{dict.training.method.h}</h3>
+            <p>{H.training.methodP}</p>
+            <div className="btn-row"><Cta locale={locale} to="methodology" label={H.training.methodCta} kind="btn-outline" track="home_methodology" /></div>
+          </div>
+          <div className="stack">
+            <Photo id="spotRow" alt={M.spotRow} caption={dict.training.spot.h} sizes="(min-width: 900px) 420px, 92vw" className="spot-photo" />
+            <h3 className="h-3">{dict.training.spot.h}</h3>
+            <p>{H.training.spotP}</p>
+            <div className="btn-row"><Cta locale={locale} to="spot" label={H.training.spotCta} kind="btn-outline" track="home_spot" /></div>
+          </div>
+        </div>
+        <div className="btn-row" style={{ marginTop: 26 }}><Cta locale={locale} to="training" label={H.training.cta} /><Cta locale={locale} to="experience" label={H.training.cta2} kind="btn-outline" /></div>
+      </Section>
+
+      {/* 03 — choose your path */}
+      <Section id="paths" band="band-2" eyebrow={H.paths.eyebrow} title={H.paths.title}>
         <div className="grid-4">
           {[["player", "choose"], ["parent", "families"], ["coach", "coaches"], ["partner", "partnerships"]].map(([k, to]) => (
             <Link key={k} href={href(locale, to)} className="card card-link path-card">
@@ -134,22 +161,6 @@ export default async function Home({ params }) {
           <Cta locale={locale} to="custom" label={H.custom.cta} track="home_technical_brief" />
           <Cta locale={locale} to="contact" purpose="technical" label={H.custom.cta2} kind="btn-outline" />
         </div>
-      </Section>
-
-      {/* 08 — training systems */}
-      <Section id="training" band="band-1" eyebrow={H.training.eyebrow} title={H.training.title}>
-        <p className="lead" style={{ marginBottom: 26 }}>{H.training.p}</p>
-        <div className="grid-3">
-          <Link href={href(locale, "sst")} className="card card-link">
-            <Photo id="sstSystem" alt={M.sstSystem} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} sizes="(min-width: 760px) 30vw, 92vw" className="mini" />
-            <h3 style={{ marginTop: 14 }}>{dict.training.sst.h}</h3>
-            <p>{sst.system.map((x) => `${x.weight}/${x.balance}`).join(" · ")} ({L.grams}/{L.mm})</p>
-            <span className="arrow">{L.learn} →</span>
-          </Link>
-          <Link href={href(locale, "spot")} className="card card-link"><h3>{dict.training.spot.h}</h3><p>{dict.training.spot.p}</p><span className="arrow">{L.learn} →</span></Link>
-          <Link href={href(locale, "methodology")} className="card card-link"><h3>{dict.training.method.h}</h3><p>{dict.training.method.p}</p><span className="arrow">{L.learn} →</span></Link>
-        </div>
-        <div className="btn-row"><Cta locale={locale} to="training" label={H.training.cta} /><Cta locale={locale} to="experience" label={H.training.cta2} kind="btn-outline" /></div>
       </Section>
 
       {/* 09 — manufacturing and QC */}

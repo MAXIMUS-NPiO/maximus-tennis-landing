@@ -43,7 +43,7 @@ Released on the owner's instruction of 23 September 2026. `release/ads-readiness
 | P2 | Optimized images (`/_next/image`) for the owner's visual sets | 200, `image/jpeg`, correct sizes at w=640 and w=1080 |
 | P3 | Images rendered in a browser (home, SPIN, Sweet Spot Trainer, GREAT, ZH home) | every `<img>` loads; lazy images below the fold load on scroll |
 | P4 | `/api/leads` deployed | `GET` → 405 `method_not_allowed`; `POST` with an empty body → 400 `too_fast`; wrong content type → 415 `unsupported_media_type`; **no test request created** |
-| P5 | Store (D1) not connected | a real request would be answered 503 and the form offers the prepared e-mail to gps@maximus.tennis — automatic intake stays blocked until the owner connects the store |
+| P5 | Store (D1) **connected** — verified 29 Sep 2026 | Upstash for Redis connected through the Vercel Marketplace to `maximus-tennis-landing` (Production + Preview). `GET /api/leads/status` → `{"store":true,"notification":false}`. One control request through `POST /api/leads` → **201 accepted**, `request_id` issued; the same request repeated with the same idempotency key → **200 accepted, duplicate:true**, which proves the record is stored and creation is idempotent. Notification (D2) is still not configured, so the request is stored and visible in the register but no e-mail is sent. |
 | P6 | Unit / data / i18n on the released tree | 24/24 unit tests, `check:data` OK, `check:i18n` OK |
 
 Not re-run against production (unchanged since the branch run of 22 Sep): acceptance S01–S16 with fault injection, axe-core, Lighthouse. Still not tested: mainland China (D5) and physical devices.

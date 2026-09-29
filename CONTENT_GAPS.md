@@ -1,6 +1,6 @@
 # CONTENT GAPS — maximus.tennis v4.8
 
-Version 2026-09-29. Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
+Version 2026-09-29 (v4.9). Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
 
 ## A. Visuals
 
@@ -39,8 +39,9 @@ Owner instructions 22–23 Sep 2026: the white-background photographs are withdr
 | # | Missing | What it blocks | Closed by |
 | --- | --- | --- | --- |
 | ~~D1~~ | ~~Durable store on Vercel~~ — **closed 29 Sep 2026**: Upstash for Redis connected through the Vercel Marketplace to `maximus-tennis-landing` (Production + Preview). Verified on the live site: one control request returned **201** with a request ID, and the repeat with the same idempotency key returned **200 duplicate** — the record is stored. The store now accepts the injected variables under any Marketplace prefix. | — | — |
-| D2 | Notification channel: Google Workspace app password for the sending mailbox (`SMTP_*`, `LEAD_NOTIFY_*`) or a webhook | Notification of new requests (requests are saved and visible in the register, but no e-mail is sent) | Owner creates the app password and sets the variables in Vercel |
-| D3 | `CRON_SECRET`, `LEADS_ADMIN_PASSWORD` | Scheduled retries; access to the private request register | Owner sets both in Vercel |
+| ~~D2~~ | ~~Notification channel~~ — **closed 29 Sep 2026**: notification of new requests is delivered to the owner's own device through Telegram (`TELEGRAM_BOT_TOKEN`; the destination chat is resolved by the server). Verified on the live site: a control request returned 201 and the message arrived, together with the earlier request that had been queued while no channel existed — which also proves the retry queue. | — | — |
+| D2b | **Outbound e-mail from gps@maximus.tennis** (`SMTP_*`, `LEAD_NOTIFY_*`): answering requesters from the institutional mailbox, and a second notification channel | Written replies sent from the MAXIMUS mailbox rather than from a personal client; e-mail notification as a fallback to Telegram | Owner enables 2-Step Verification and creates a Google app password, then sets the variables in Vercel. Note: an administrator of the Workspace domain can block app passwords — unverified |
+| D3 | `CRON_SECRET`, `LEADS_ADMIN_PASSWORD` | Scheduled retries; access to the private request register. Less urgent since 29 Sep 2026: with Telegram live the owner sees every request as it arrives, so the register is now for history and manual retries rather than the only way to read a request | Owner sets both in Vercel (both are values he invents; no third party involved) |
 | D4 | GA4 measurement ID (optional) | Conversion measurement (`generate_lead`) for campaigns | Owner creates a GA4 property/stream and sets `NEXT_PUBLIC_GA_MEASUREMENT_ID` |
 | D5 | Verified WeChat contact; testing from mainland China and inside WeChat | China-targeted campaigns (ZH content exists; mainland access is untested) | Verified contact + a test session from mainland China |
 | D6 | ~~Release permission~~ — **closed 23 Sep 2026**: released on the owner's instruction; `release/ads-readiness-v4.2` squashed into `main` as `9cd6d81` and live on https://maximus.tennis | — | — |

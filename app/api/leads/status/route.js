@@ -27,6 +27,7 @@ export async function GET() {
       const cfg = readConfig();
       const chat = cfg.notifier && cfg.notifier.resolveChat ? await cfg.notifier.resolveChat() : null;
       body.telegramChatResolved = !!chat;
+      if (!chat && cfg.notifier && cfg.notifier.diagnose) body.telegram = await cfg.notifier.diagnose();
     } catch {
       body.telegramChatResolved = false;
     }

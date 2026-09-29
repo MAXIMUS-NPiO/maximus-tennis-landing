@@ -15,8 +15,8 @@ import { join } from "node:path";
 import { validateConfig, validateRequest, gpsDirections, sanitizeAttribution, parseStrictInt, totalRacquets } from "../lib/intake/schema.js";
 import { createMemoryStore, createUpstashStore, resolveStore, readRestCredentials } from "../lib/intake/store.js";
 import { acceptRequest, afterAccept, makeRequestId, safeEqual } from "../lib/intake/service.js";
-import { deliver, processDue, nextAttemptAt, RETRY_SCHEDULE_MS, MAX_ATTEMPTS, createWebhookNotifier, createSmtpNotifier, buildMessage } from "../lib/intake/notify.js";
-import { readConfig, resolveNotifier } from "../lib/intake/config.js";
+import { deliver, processDue, nextAttemptAt, RETRY_SCHEDULE_MS, MAX_ATTEMPTS, createWebhookNotifier, createSmtpNotifier, createTelegramNotifier, buildMessage } from "../lib/intake/notify.js";
+import { readConfig, resolveNotifier, telegramSettings } from "../lib/intake/config.js";
 import { startBridge } from "./redis-rest-bridge.mjs";
 
 const uuid = () => crypto.randomUUID();
@@ -247,6 +247,50 @@ test("configuration: memory store refused in production; secrets required; chann
   assert.equal(resolveNotifier({ NODE_ENV: "production", SMTP_HOST: "smtp.gmail.com", SMTP_USER: "u@maximus.tennis", SMTP_PASS: "x", LEAD_NOTIFY_TO: "gps@maximus.tennis" }).channel, "smtp");
   assert.equal(resolveNotifier({ NODE_ENV: "production", LEAD_WEBHOOK_URL: "http://example.org/x", LEAD_WEBHOOK_SECRET: "0123456789abcdef" }), null);
   assert.equal(resolveNotifier({ NODE_ENV: "production", LEAD_WEBHOOK_URL: "https://example.org/x", LEAD_WEBHOOK_SECRET: "0123456789abcdef" }).channel, "webhook");
+});
+
+test("telegram: chat resolved from the bot's own updates, stored, and reused", async () => {
+  const store = createMemoryStore();
+  const calls = [];
+  const fetchImpl = async (url, init) => {
+    const method = String(url).split("/").pop();
+    calls.push(method);
+    const payload = JSON.parse(init.body);
+    if (method === "getUpdates") {
+      return { ok: true, json: async () => ({ ok: true, result: [{ message: { chat: { id: 777123 } } }] }) };
+    }
+    assert.equal(payload.chat_id, "777123");
+    assert.match(payload.text, /MAXIMUS — new request/);
+    return { ok: true, json: async () => ({ ok: true, result: { message_id: 42 } }) };
+  };
+  const n = createTelegramNotifier({ token: "123456:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", chatId: null }, { fetchImpl, store });
+  const record = { request_id: "MX-GEN-20260929-AAAAAA", created_at: new Date().toISOString(), purpose: "general", locale: "ru", contact };
+  const first = await n.send(record);
+  assert.equal(first.ok, true);
+  assert.equal(first.messageId, "tg-42");
+  assert.equal(await store.setting("telegram_chat"), "777123");
+  // A fresh notifier takes the chat from the store: no second getUpdates.
+  const n2 = createTelegramNotifier({ token: "123456:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", chatId: null }, { fetchImpl, store });
+  assert.equal((await n2.send(record)).ok, true);
+  assert.equal(calls.filter((c) => c === "getUpdates").length, 1);
+  // Nobody has written to the bot yet: the request stays queued instead of being lost.
+  const empty = createTelegramNotifier({ token: "123456:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", chatId: null }, {
+    fetchImpl: async () => ({ ok: true, json: async () => ({ ok: true, result: [] }) }),
+    store: createMemoryStore(),
+  });
+  assert.deepEqual(await empty.send(record), { ok: false, errorCode: "telegram_no_chat" });
+});
+
+test("configuration: telegram is accepted on the bot token alone and chosen first", () => {
+  const token = "8123456789:AAHqWmVeryLongLookingTokenValue_x";
+  assert.equal(telegramSettings({ TELEGRAM_BOT_TOKEN: "not-a-token" }), null);
+  assert.deepEqual(telegramSettings({ TELEGRAM_BOT_TOKEN: token }), { token, chatId: null });
+  assert.equal(resolveNotifier({ NODE_ENV: "production", TELEGRAM_BOT_TOKEN: token }).channel, "telegram");
+  assert.equal(resolveNotifier({
+    NODE_ENV: "production", TELEGRAM_BOT_TOKEN: token,
+    SMTP_HOST: "smtp.gmail.com", SMTP_USER: "u@maximus.tennis", SMTP_PASS: "x", LEAD_NOTIFY_TO: "gps@maximus.tennis",
+    LEAD_NOTIFY_CHANNEL: "smtp",
+  }).channel, "smtp");
 });
 
 test("configuration: REST credentials are accepted under any Vercel variable prefix", () => {

@@ -42,9 +42,10 @@ Nothing from a request is written to logs. IP addresses are never stored with a 
 | Variable | Required | Purpose |
 | --- | --- | --- |
 | `KV_REST_API_URL`, `KV_REST_API_TOKEN` | **yes** | Durable store. Created automatically by Vercel Marketplace → Upstash for Redis (or set `UPSTASH_REDIS_REST_URL/TOKEN`). A prefix chosen in the Marketplace dialog is accepted as well (`STORAGE_KV_REST_API_URL/TOKEN` and any other prefix), provided both members of the pair carry the same prefix. HTTPS only in production. Without them intake answers 503. |
+| `TELEGRAM_BOT_TOKEN` | one channel **yes** | Push notification of a new request to the responsible person. Create a bot with @BotFather and set the token; the destination chat is resolved by the server from the bot's own updates the first time (the responsible person writes to the bot once) and kept as a durable setting. `TELEGRAM_CHAT_ID` may be set explicitly and then takes precedence. |
 | `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` | one channel **yes** | Notification e-mail. Google Workspace: `smtp.gmail.com`, `465`, the sending mailbox, a Google **app password** (requires 2-step verification). Port 465 = implicit TLS; 587 = STARTTLS required. |
 | `LEAD_NOTIFY_TO`, `LEAD_NOTIFY_FROM` | with SMTP | Recipient (e.g. `gps@maximus.tennis`) and sender (must be the SMTP user or its verified alias). |
-| `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET` | alternative channel | HTTPS endpoint; body signed `X-Maximus-Signature: sha256=HMAC(secret, "<timestamp>.<body>")`. `LEAD_NOTIFY_CHANNEL=smtp|webhook` chooses when both exist. |
+| `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET` | alternative channel | HTTPS endpoint; body signed `X-Maximus-Signature: sha256=HMAC(secret, "<timestamp>.<body>")`. `LEAD_NOTIFY_CHANNEL=telegram|smtp|webhook` chooses when several exist; without it the order is telegram → smtp → webhook. |
 | `CRON_SECRET` | **yes** (≥ 16 chars) | Authorises the scheduled retry `GET /api/leads/retry` (Vercel Cron sends it automatically). |
 | `LEADS_ADMIN_PASSWORD` | **yes** (≥ 12 chars) | Enables the private register `/api/leads/admin` (HTTP Basic; any user name). Without it the register answers 404. |
 | `RATE_LIMIT_SALT` | recommended | Salt for IP hashing (default: derived from the store token). |

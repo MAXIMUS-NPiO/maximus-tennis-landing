@@ -41,7 +41,7 @@ Nothing from a request is written to logs. IP addresses are never stored with a 
 ### Environment variables (Vercel → Project → Settings → Environment Variables; never in the repository)
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `KV_REST_API_URL`, `KV_REST_API_TOKEN` | **yes** | Durable store. Created automatically by Vercel Marketplace → Upstash for Redis (or set `UPSTASH_REDIS_REST_URL/TOKEN`). HTTPS only in production. Without them intake answers 503. |
+| `KV_REST_API_URL`, `KV_REST_API_TOKEN` | **yes** | Durable store. Created automatically by Vercel Marketplace → Upstash for Redis (or set `UPSTASH_REDIS_REST_URL/TOKEN`). A prefix chosen in the Marketplace dialog is accepted as well (`STORAGE_KV_REST_API_URL/TOKEN` and any other prefix), provided both members of the pair carry the same prefix. HTTPS only in production. Without them intake answers 503. |
 | `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` | one channel **yes** | Notification e-mail. Google Workspace: `smtp.gmail.com`, `465`, the sending mailbox, a Google **app password** (requires 2-step verification). Port 465 = implicit TLS; 587 = STARTTLS required. |
 | `LEAD_NOTIFY_TO`, `LEAD_NOTIFY_FROM` | with SMTP | Recipient (e.g. `gps@maximus.tennis`) and sender (must be the SMTP user or its verified alias). |
 | `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET` | alternative channel | HTTPS endpoint; body signed `X-Maximus-Signature: sha256=HMAC(secret, "<timestamp>.<body>")`. `LEAD_NOTIFY_CHANNEL=smtp|webhook` chooses when both exist. |

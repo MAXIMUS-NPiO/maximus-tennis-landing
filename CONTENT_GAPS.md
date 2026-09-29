@@ -1,8 +1,10 @@
-# CONTENT GAPS — maximus.tennis v4.8
+# CONTENT GAPS — maximus.tennis v5.0
 
 Version 2026-09-29 (v4.9). Only real gaps. Each entry states what it blocks today and what closes it. Nothing below is filled with invented material on the site.
 
 ## A. Visuals
+
+Owner brief of 29 Sep 2026: the homepage now opens on the training system, GREAT leads the performance series, and GREAT carries 33 listed weights (363 g added). Spot Trainer photographs supplied and published.
 
 Owner instructions 22–23 Sep 2026: the white-background photographs are withdrawn and generated renders are banned. The site shows the owner's own visual sets — Spin (33), Power (33), Great (32) and Sweet Spot Trainer, all published whole. **Every playing series now has a complete visual set and a weight catalogue.** What is still missing:
 
@@ -14,6 +16,7 @@ Owner instructions 22–23 Sep 2026: the white-background photographs are withdr
 | ~~A4~~ | ~~Seven "Spin series" images outside the matrix~~ — **closed 23 Sep 2026**: the Founder supplied the complete Spin table of 33 weight/balance pairs, which includes 222, 229, 233, 236, 360, 366 and 377 g. All 33 images are published. | — | — |
 | A9 | **Confirmation that 300, 305 and 310 g are withdrawn from Spin.** They were in the earlier 29-weight Spin architecture but are **not** in the Founder table of 23 Sep 2026, so they are no longer offered on the site and no visualisation exists for them | Offering those three weights as listed Spin variants | Owner confirms the removal, or supplies the pairs and images |
 | A5 | **QC measurement material** (instrument photographs, sample measurement records, factory footage) | Any advertising of measured precision; the manufacturing section states "not yet published" | Owner supplies real, publishable QC material |
+| A10 | **Methodology demonstration footage.** The clip supplied 29 Sep 2026 shows the Spot Trainer, not the methodology, and is 480 px wide with blurred filler bars — not published. The seven methodology steps are explained in text | Showing the methodology rather than describing it | Owner supplies footage of the method being practised, at a usable resolution |
 | A6 | **GREAT inspection video (08)** full-clip review | Publication of the video (component prepared; `inspectionVideo.released = false`) | Owner reviews the full 27 s clip and approves a cut |
 | A7 | L0–L7 visual sequence | Not blocking (schematic in place); needed for grip-led creative | Visualisation or photographs of the eight factory handle sizes |
 | A8 | Engraving template and placement zones per model | Interactive personalisation preview (the silver engraving is shown on the owner's visual; the configurator collects the text for artwork confirmation) | Approved template and zones per model |

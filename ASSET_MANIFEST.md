@@ -1,4 +1,4 @@
-# ASSET MANIFEST — maximus.tennis v4.7
+# ASSET MANIFEST — maximus.tennis v5.0
 
 Version 2026-09-28. **Owner instruction of 22 September 2026:** the source photographs of unstrung frames on a white background are withdrawn from the site — they do not show the product. The site shows product **visualisations** instead. **Owner instruction of 23 and 28 September 2026 (Spin, Power and Great series):** every composition is published **whole** — the specification strip, the personalisation engraving zone and the MIPA marking stay visible and readable. No crop, no retouch, no substitution, no `object-fit: cover`, no height cap.
 
@@ -46,10 +46,24 @@ The composition shows the frame from three angles, the string bed with the colou
 
 | Published file | Source | Where used |
 | --- | --- | --- |
-| `public/media/great/maximus-great-236g-…webp` … `-369g-…webp` (32 files) | assets/great/ of the supplied package, unchanged | Great series page: selected-variant panel, weight switcher, catalogue of 32 cards, zoom view |
+| `public/media/great/maximus-great-236g-…webp` … `-369g-…webp` (33 files) | assets/great/ of the supplied package (32) + the 363 g composition supplied 29 Sep 2026 | Great series page: selected-variant panel, weight switcher, catalogue of 33 cards, zoom view; home page hero |
+| `public/media/great/maximus-great-363g-v1.webp` | owner PNG of 29 Sep 2026, 1254 × 1254, converted to lossless WebP, nothing else changed | Great catalogue at 363 g; **home page hero** (the newest approved GREAT composition) |
 | `public/media/great-visual.webp` | copy of the 288 g composition | Great card on the home page; Great series hero |
 
 Great balances stay labelled **calculated** (`balanceStatus: MODELLED`): they are not printed on these images and the owner has not stated that they are individual factory measurements.
+
+## 3a. Owner visual set — Spot Trainer (supplied 29 Sep 2026)
+
+Two photographs of the Spot Trainer supplied by the owner. Published whole, long side capped at 1600 px, JPEG q88 4:4:4. They show the round contact head, the shaft, the grip and the balls resting on the heads.
+
+| Published file | Source | Where used |
+| --- | --- | --- |
+| `public/media/spot/spot-trainers-row.jpg` | owner photograph, five trainers in a row | Home page training section; Spot Trainer page |
+| `public/media/spot/spot-trainers-pair.jpg` | owner photograph, two trainers upright | Spot Trainer page |
+
+The balls in both photographs carry a printed store address. The address is not written as site text and is not linked anywhere; it is legible only at full size. Flagged to the owner on 29 Sep 2026 — replace the frames on his instruction.
+
+A 30-second clip of the same product was supplied and **not published**: 480 px wide, blurred filler bars, no methodology content. It is not a substitute for methodology footage (A6-adjacent; no gap opened because the methodology is explained in text).
 
 ## 4. Sweet Spot Trainer — owner visual set (2_1, 2_2)
 

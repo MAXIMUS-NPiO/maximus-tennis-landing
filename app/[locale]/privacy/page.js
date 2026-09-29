@@ -14,7 +14,12 @@ export default async function Page({ params }) {
   const T = dict.privacy;
   const X = T.sections;
   const p = processingSummary();
-  const sections = [X.collect, X.purpose, p.store ? X.storageOn : X.storageOff, X.browser, p.analytics ? X.analyticsOn : X.analyticsOff, X.retention, X.children, X.rights, X.controlled];
+  // The notification section names the channel actually configured on the server, never a planned one.
+  const notify = p.notification === null ? X.notifyNone
+    : p.notification === "telegram" ? X.notifyTelegram
+    : p.notification === "webhook" ? X.notifyWebhook
+    : X.notifyEmail;
+  const sections = [X.collect, X.purpose, p.store ? X.storageOn : X.storageOff, ...(p.store ? [notify] : []), X.browser, p.analytics ? X.analyticsOn : X.analyticsOff, X.retention, X.children, X.rights, X.controlled];
   return (
     <>
       <PageHero title={T.title} lead={T.updated} />

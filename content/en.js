@@ -971,6 +971,7 @@ const en = {
     decline: "Decline",
   },
   media: {
+    spotHeadsUp: "Five MAXIMUS Spot Trainers side by side, round contact heads up and handles down, with balls resting on the heads",
     greatHero: "MAXIMUS GREAT series, 363 g: the complete composition with red and yellow head detailing, gloss MAXIMUS lettering, the Maximus autograph on the shaft and the lion butt cap",
     spotRow: "Five MAXIMUS Spot Trainers laid out in a row, balls resting on their round contact heads",
     spotPair: "Two MAXIMUS Spot Trainers standing upright in front of the MAXIMUS lion emblem, balls on their round contact heads",

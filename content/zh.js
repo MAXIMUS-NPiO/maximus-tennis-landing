@@ -971,6 +971,7 @@ const zh = {
     decline: "拒绝",
   },
   media: {
+    spotHeadsUp: "五支 MAXIMUS Spot Trainer 并排放置，圆形击球面朝上、拍柄朝下，网球放在击球面上",
     greatHero: "MAXIMUS GREAT 系列 363 克：完整构图，含红黄拍头装饰、亮面 MAXIMUS 字样、拍杆上的 Maximus 亲笔签名以及拍柄底盖的狮子标识",
     spotRow: "五支 MAXIMUS Spot Trainer 排成一行，网球放在圆形击球面上",
     spotPair: "两支 MAXIMUS Spot Trainer 立于 MAXIMUS 狮子标识前，网球放在圆形击球面上",

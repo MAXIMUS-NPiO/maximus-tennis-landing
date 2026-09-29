@@ -24,6 +24,7 @@ import lettering from "../public/media/lettering.jpg";
 import sstSystem from "../public/media/sst-system.jpg";
 import spotPair from "../public/media/spot/spot-trainers-pair.jpg";
 import spotRow from "../public/media/spot/spot-trainers-row.jpg";
+import spotHeadsUp from "../public/media/spot/spot-trainers-heads-up.jpg";
 import sst270 from "../public/media/sst-270.jpg";
 import sst285 from "../public/media/sst-285.jpg";
 import sst300 from "../public/media/sst-300.jpg";
@@ -195,6 +196,7 @@ export const media = {
   sstButtcaps: owner(sstButtcaps, "sst", "Sweet Spot Trainer four-racquet system, butt caps"),
   spotPair: owner(spotPair, "spot", "Spot Trainer: two trainers upright with balls on the round contact heads"),
   spotRow: owner(spotRow, "spot", "Spot Trainer: five trainers laid out with balls on the round contact heads"),
+  spotHeadsUp: owner(spotHeadsUp, "spot", "Spot Trainer: five trainers side by side, round contact heads up and handles down"),
 };
 
 /** Sweet Spot Trainer gallery. */
@@ -212,10 +214,10 @@ export const seriesMedia = {
   spin: { card: "spinVisual", full: "spinVisual", details: ["spinHead", "handleLion"] },
 };
 
-export const trainingMedia = { sst: "sstSystem", spot: "spotRow" };
+export const trainingMedia = { sst: "sstSystem", spot: "spotHeadsUp" };
 
 /** Spot Trainer photographs (owner set, 29 Sep 2026). */
-export const spotGallery = ["spotRow", "spotPair"];
+export const spotGallery = ["spotHeadsUp", "spotPair"];
 
 /**
  * Inspection video 08 is prepared but NOT released: the owner must review the full clip first.

@@ -574,15 +574,41 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
   display: block;
   object-fit: contain;
 }
-.spot-photo img {
+/* Methodology + Spot Trainer: one grid, content-driven height.
+   The photograph keeps its own aspect ratio — no max-height on a full-width image,
+   which is what letterboxed the portrait frame and left the large blank areas. */
+.training-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+  /* Three content rows plus a slack row, so the taller photograph cannot stretch the
+     spacing between the Methodology and Spot Trainer blocks. */
+  grid-template-rows: auto auto auto 1fr;
+  column-gap: 34px;
+  align-items: start;
+  margin-top: 30px;
+}
+.training-pair > .tp-method { grid-column: 1; grid-row: 1; }
+.training-pair > .tp-spot-text { grid-column: 1; grid-row: 2; margin-top: 28px; }
+.training-pair > .tp-spot-cta { grid-column: 1; grid-row: 3; margin-top: 14px; }
+.training-pair > .tp-section-cta { grid-column: 1; grid-row: 4; align-self: end; padding-top: 26px; }
+.training-pair > .tp-photo { grid-column: 2; grid-row: 1 / span 4; margin: 0; align-self: start; }
+.training-pair > .tp-photo img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
-  max-height: 520px;
-  object-position: center;
 }
+.training-pair .btn-row { margin-top: 14px; }
 @media (max-width: 860px) {
   .training-lead { grid-template-columns: 1fr; gap: 22px; }
-  .spot-photo img { max-height: 420px; }
+  .training-pair { grid-template-columns: 1fr; row-gap: 0; }
+  .training-pair > .tp-method,
+  .training-pair > .tp-spot-text,
+  .training-pair > .tp-photo,
+  .training-pair > .tp-spot-cta,
+  .training-pair > .tp-section-cta { grid-column: 1; grid-row: auto; align-self: start; }
+  .training-pair > .tp-spot-text { margin-top: 26px; }
+  .training-pair > .tp-photo { margin-top: 16px; }
+  .training-pair > .tp-spot-cta { margin-top: 12px; }
+  .training-pair > .tp-section-cta { margin-top: 22px; padding-top: 0; }
 }

@@ -61,20 +61,24 @@ export default async function Home({ params }) {
             <div className="btn-row"><Cta locale={locale} to="sst" label={H.training.sstCta} track="home_sst" /></div>
           </div>
         </div>
-        <div className="split" style={{ marginTop: 30 }}>
-          <div className="stack">
+        <div className="training-pair">
+          <div className="tp-method">
             <h3 className="h-3">{dict.training.method.h}</h3>
             <p>{H.training.methodP}</p>
             <div className="btn-row"><Cta locale={locale} to="methodology" label={H.training.methodCta} kind="btn-outline" track="home_methodology" /></div>
           </div>
-          <div className="stack">
-            <Photo id="spotRow" alt={M.spotRow} caption={dict.training.spot.h} sizes="(min-width: 900px) 420px, 92vw" className="spot-photo" />
+          <div className="tp-spot-text">
             <h3 className="h-3">{dict.training.spot.h}</h3>
             <p>{H.training.spotP}</p>
+          </div>
+          <Photo id="spotHeadsUp" alt={M.spotHeadsUp} sizes="(min-width: 900px) 58vw, 92vw" className="tp-photo" />
+          <div className="tp-spot-cta">
             <div className="btn-row"><Cta locale={locale} to="spot" label={H.training.spotCta} kind="btn-outline" track="home_spot" /></div>
           </div>
+          <div className="tp-section-cta">
+            <div className="btn-row"><Cta locale={locale} to="training" label={H.training.cta} /><Cta locale={locale} to="experience" label={H.training.cta2} kind="btn-outline" /></div>
+          </div>
         </div>
-        <div className="btn-row" style={{ marginTop: 26 }}><Cta locale={locale} to="training" label={H.training.cta} /><Cta locale={locale} to="experience" label={H.training.cta2} kind="btn-outline" /></div>
       </Section>
 
       {/* 03 — choose your path */}

@@ -93,7 +93,7 @@ const de = {
     spot: "Spot Trainer",
     methodology: "Methodik",
     gps: "MAXIMUS GPS",
-    build: "Ihren Schläger konfigurieren",
+    build: "Konfigurator",
     choose: "Auswahlhilfe",
     ecosystem: "Ökosystem-Karte",
     engineering: "Entwicklung und Fertigung",

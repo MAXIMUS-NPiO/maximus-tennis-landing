@@ -25,6 +25,7 @@ npm test               # product data + locale parity + intake unit/integration 
 npm run build          # production build
 npm start              # serve the build
 npm run crawl -- http://localhost:3000   # every route 200, forbidden strings, lang/canonical/hreflang
+npm run check:header -- http://localhost:3000   # navigation must not collide with the lockup in any language (needs playwright)
 WORK=/tmp/mx tests/local-stack.sh start  # production-mode stack: redis + REST bridge + TLS SMTP sink + next start on :3100
 BASE_URL=http://127.0.0.1:3100 ADMIN_PASSWORD=local-admin-password-123 WORK=/tmp/mx NODE_PATH=$(npm root -g) node tests/e2e/acceptance.mjs
 ```

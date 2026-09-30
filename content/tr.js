@@ -93,7 +93,7 @@ const tr = {
     spot: "Spot Trainer",
     methodology: "Metodoloji",
     gps: "MAXIMUS GPS",
-    build: "Kendi raketinizi yapılandırın",
+    build: "Yapılandırıcı",
     choose: "Seçmeme yardım edin",
     ecosystem: "Ekosistem haritası",
     engineering: "Mühendislik ve üretim",

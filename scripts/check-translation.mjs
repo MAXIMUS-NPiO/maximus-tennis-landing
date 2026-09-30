@@ -44,6 +44,7 @@ const ALLOWED_BY_LOCALE = {
     "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
     "Menu", "Organisation", "Construction", "Production", "Promotion", "Participation",
     "Distribution", "Institution", "Licence", "Version 2026-09-21",
+    "Contact",                                                  // French for the navigation label, kept short so it fits the bar
     "Swingweight", "Twistweight", "Fitting",                    // what French stringers say
     "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
     "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",

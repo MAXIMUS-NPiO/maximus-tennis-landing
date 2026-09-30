@@ -242,7 +242,10 @@ details.expander > div { padding: 0 18px 18px; }
 }
 .nav-desktop { display: none; margin-inline-start: auto; align-items: center; gap: 2px; margin-block: 0; padding: 0; }
 .nav-desktop > li { position: relative; list-style: none; }
-.nav-desktop > li > a, .nav-desktop > li > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 9px; white-space: nowrap; font: inherit; font-size: 13px; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: none; border: 0; text-decoration: none; cursor: pointer; border-radius: var(--radius); }
+/* Letter-spacing and padding are deliberately tight: the bar has to hold seven labels in
+   thirteen languages inside a 1320 px shell, and German, French, Spanish and Turkish words are
+   half as long again as the English ones. */
+.nav-desktop > li > a, .nav-desktop > li > button { display: inline-flex; align-items: center; gap: 5px; padding: 10px 7px; white-space: nowrap; font: inherit; font-size: 13px; font-weight: 650; letter-spacing: 0.07em; text-transform: uppercase; color: var(--white); background: none; border: 0; text-decoration: none; cursor: pointer; border-radius: var(--radius); }
 .nav-desktop > li > a.active, .nav-desktop > li > button.active, .nav-desktop > li > button[aria-expanded="true"] { color: #cfe08a; }
 .site-header :focus-visible { outline-color: #cfe08a; }
 .nav-desktop .menu { position: absolute; top: calc(100% + 6px); inset-inline-start: 0; min-width: 280px; background: var(--white); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px; display: none; box-shadow: 0 8px 24px rgba(23, 27, 24, 0.12); }

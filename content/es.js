@@ -80,7 +80,7 @@ const es = {
   },
   nav: {
     language: "Idioma",
-    groups: { racquets: "Raquetas", training: "Entrenamiento", ecosystem: "Ecosistema", partnerships: "Colaboraciones" },
+    groups: { racquets: "Raquetas", training: "Entrenamiento", ecosystem: "Ecosistema", partnerships: "Alianzas" },
     racquets: "Series de raquetas y comparación",
     great: "GREAT — 97 in² · Control",
     power: "POWER — 98 in² · Potencia",
@@ -93,7 +93,7 @@ const es = {
     spot: "Spot Trainer",
     methodology: "Metodología",
     gps: "MAXIMUS GPS",
-    build: "Configure la suya",
+    build: "Configurador",
     choose: "Ayúdenme a elegir",
     ecosystem: "Mapa del ecosistema",
     engineering: "Ingeniería y fabricación",

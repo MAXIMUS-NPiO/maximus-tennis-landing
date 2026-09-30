@@ -11,7 +11,8 @@
     "test": "npm run check:data && npm run check:i18n && npm run check:translation && npm run test:unit",
     "crawl": "node --no-warnings scripts/crawl.mjs",
     "test:unit": "node --no-warnings --import ./tests/register.mjs --test tests/*.test.mjs",
-    "check:translation": "node --no-warnings scripts/check-translation.mjs"
+    "check:translation": "node --no-warnings scripts/check-translation.mjs",
+    "check:header": "node --no-warnings scripts/check-header.mjs"
   },
   "dependencies": {
     "next": "^15.5.24",

@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo, { LogoMark } from "./Logo";
+import Logo from "./Logo";
 import LocaleMenu from "./LocaleMenu";
 import { navGroups } from "../data/site";
 import { href } from "../lib/paths";
@@ -53,7 +53,6 @@ export default function Header({ locale, nav }) {
       <div className="shell header-inner">
         <Link className="logo-link" href={href(locale, "home")} aria-label="MAXIMUS GPS">
           <Logo height={64} priority className="header-logo" />
-          <LogoMark height={52} priority className="header-mark" />
         </Link>
         <ul className="nav-desktop" ref={navRef} aria-label={nav.menu}>
           {navGroups.map((g) =>

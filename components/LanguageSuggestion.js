@@ -45,7 +45,10 @@ export default function LanguageSuggestion({ locale }) {
   };
 
   return (
-    <div className="lang-suggest" role="region" aria-label={meta.name}>
+    // Everything inside the bar is written in the offered language, so the bar carries that
+    // language's own writing direction: an English line inside an Arabic page would otherwise be
+    // laid out right to left and its full stop would appear at the start of the line.
+    <div className="lang-suggest" role="region" aria-label={meta.name} lang={meta.hrefLang} dir={meta.dir || "ltr"}>
       <div className="shell lang-suggest-inner">
         <p lang={meta.hrefLang}>{meta.suggest.text}</p>
         <div className="lang-suggest-actions">

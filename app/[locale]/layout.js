@@ -39,7 +39,7 @@ export default async function LocaleLayout({ children, params }) {
     sameAs: [site.instagram],
   };
   return (
-    <html lang={localeMeta[locale].htmlLang}>
+    <html lang={localeMeta[locale].htmlLang} dir={localeMeta[locale].dir}>
       <body>
         <LanguageSuggestion locale={locale} />
         <Header locale={locale} nav={dict.nav} />

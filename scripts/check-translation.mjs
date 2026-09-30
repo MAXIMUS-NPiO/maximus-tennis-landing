@@ -64,6 +64,22 @@ const ALLOWED_BY_LOCALE = {
     "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
     "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
   ]),
+  tr: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
+    "Swingweight", "Twistweight", "Fitting", "Nominal",          // what the Turkish trade writes in Latin
+    "SPIN — 100 in² · Spin",
+    "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
+    "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
+  ]),
+  uk: new Set([
+    "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
+    "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
+  ]),
+  ar: new Set([
+    "Swingweight",                                               // the Gulf trade writes it in Latin
+    "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
+    "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
+  ]),
   ko: new Set([
     "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
     "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",

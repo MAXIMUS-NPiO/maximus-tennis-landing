@@ -22,16 +22,25 @@ export const site = {
    *   hrefLang — the BCP 47 tag used in <html lang>, in hreflang links and in the sitemap
    *   ogLocale — the Open Graph locale
    *   match    — language tags of a visitor's device that select this language
+   *   dir      — writing direction; omit for left to right
    */
-  locales: ["en", "de", "fr", "es", "it", "pt", "ko", "ru", "zh"],
+  locales: ["en", "de", "fr", "es", "it", "pt", "tr", "uk", "ru", "ar", "ja", "ko", "zh"],
   defaultLocale: "en",
   localeMeta: {
     en: { name: "English", short: "EN", hrefLang: "en", ogLocale: "en_GB", match: ["en"],
       suggest: { text: "This site is available in English.", go: "Switch to English", stay: "Stay on this version" } },
     pt: { name: "Português", short: "PT", hrefLang: "pt-BR", ogLocale: "pt_BR", match: ["pt"],
       suggest: { text: "Este site está disponível em português.", go: "Mudar para português", stay: "Continuar nesta versão" } },
+    ar: { name: "العربية", short: "AR", hrefLang: "ar", ogLocale: "ar_AE", match: ["ar"], dir: "rtl",
+      suggest: { text: "هذا الموقع متاح باللغة العربية.", go: "التحويل إلى العربية", stay: "البقاء على هذه النسخة" } },
+    ja: { name: "日本語", short: "日本語", hrefLang: "ja", ogLocale: "ja_JP", match: ["ja"],
+      suggest: { text: "このサイトは日本語でもご覧いただけます。", go: "日本語に切り替える", stay: "このまま表示する" } },
     ko: { name: "한국어", short: "KO", hrefLang: "ko", ogLocale: "ko_KR", match: ["ko"],
       suggest: { text: "이 사이트는 한국어로도 제공됩니다.", go: "한국어로 보기", stay: "현재 버전 유지" } },
+    tr: { name: "Türkçe", short: "TR", hrefLang: "tr", ogLocale: "tr_TR", match: ["tr"],
+      suggest: { text: "Bu site Türkçe olarak da mevcut.", go: "Türkçeye geç", stay: "Bu sürümde kal" } },
+    uk: { name: "Українська", short: "UA", hrefLang: "uk", ogLocale: "uk_UA", match: ["uk"],
+      suggest: { text: "Сайт доступний українською.", go: "Перейти на українську", stay: "Залишитися на цій версії" } },
     ru: { name: "Русский", short: "RU", hrefLang: "ru", ogLocale: "ru_RU", match: ["ru", "be", "kk", "uk-ru"],
       suggest: { text: "Сайт доступен на русском языке.", go: "Перейти на русский", stay: "Остаться на этой версии" } },
     de: { name: "Deutsch", short: "DE", hrefLang: "de", ogLocale: "de_DE", match: ["de"],

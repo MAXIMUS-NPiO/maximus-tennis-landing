@@ -8,9 +8,13 @@ import fr from "./fr";
 import es from "./es";
 import it from "./it";
 import pt from "./pt";
-import ko from "./ko";
+import tr from "./tr";
+import uk from "./uk";
 import ru from "./ru";
+import ar from "./ar";
+import ja from "./ja";
+import ko from "./ko";
 import zh from "./zh";
 
-export const bundles = { en, de, fr, es, it, pt, ko, ru, zh };
+export const bundles = { en, de, fr, es, it, pt, tr, uk, ru, ar, ja, ko, zh };
 export default bundles;

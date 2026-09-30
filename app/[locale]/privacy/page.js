@@ -2,6 +2,7 @@ import { ctx, meta } from "../../../lib/page";
 import { site } from "../../../data/site";
 import { processingSummary } from "../../../lib/intake/config";
 import { PageHero, Section } from "../../../components/Ui";
+import GoverningVersion from "../../../components/GoverningVersion";
 
 export const generateMetadata = meta("privacy", (d) => [d.privacy.title, d.privacy.sections.collect[1]]);
 
@@ -10,7 +11,7 @@ export const generateMetadata = meta("privacy", (d) => [d.privacy.title, d.priva
  * (read from server environment variables at build time): storage, notification and analytics.
  */
 export default async function Page({ params }) {
-  const { dict } = await ctx(params);
+  const { locale, dict } = await ctx(params);
   const T = dict.privacy;
   const X = T.sections;
   const p = processingSummary();
@@ -24,6 +25,7 @@ export default async function Page({ params }) {
     <>
       <PageHero title={T.title} lead={T.updated} />
       <Section first narrow>
+        <GoverningVersion locale={locale} text={dict.common.truth.governing} />
         <div className="stack-lg">
           {sections.map(([h, text]) => (
             <div key={h}><h2 className="h-3" style={{ marginBottom: 8 }}>{h}</h2><p className="muted">{text}</p></div>

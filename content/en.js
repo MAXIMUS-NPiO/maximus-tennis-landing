@@ -75,6 +75,7 @@ const en = {
       noPrices: "Prices, minimum quantities, lead times, warranties and delivery commitments are confirmed in writing per market and per programme.",
       requestNotOrder: "A request is a review request. It is not an accepted order, a manufacturing commitment or a confirmed appointment.",
       noGuarantee: "No outcome for a specific player is guaranteed by any equipment, method or programme described here.",
+      governing: "This page is published in several languages. The English version is the governing version; a translation is provided for convenience.",
     },
   },
   nav: {

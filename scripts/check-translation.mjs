@@ -33,9 +33,10 @@ const ALLOWED = new Set([
  */
 const ALLOWED_BY_LOCALE = {
   de: new Set([
-    "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",   // sports, same in German
+    "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
     "Status", "Training", "Organisation", "Name", "Innovation", "Institution", "Distributor",
-    "Twistweight",                                                          // the term used in German racquet engineering
+    "Swingweight", "Twistweight", "Balance", "Fitting",        // the words the German racquet trade uses
+    "POWER — 98 in² · Power", "SPIN — 100 in² · Spin",          // series name plus its retail characteristic
     "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
     "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
   ]),
@@ -43,17 +44,29 @@ const ALLOWED_BY_LOCALE = {
     "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
     "Menu", "Organisation", "Construction", "Production", "Promotion", "Participation",
     "Distribution", "Institution", "Licence", "Version 2026-09-21",
+    "Swingweight", "Twistweight", "Fitting",                    // what French stringers say
     "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
     "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
   ]),
   es: new Set([
-    "Squash", "Pickleball", "Racquetball",
-    "No",                                                                   // the Spanish negative is the same word
+    "Squash", "Pickleball", "Racquetball", "No",
+    "Balance", "Swingweight", "Twistweight", "Control",         // the Spanish spec sheet's own words
+    "GREAT — 97 in² · Control", "MAXIMUS GREAT · 97 in² · Control",
   ]),
   it: new Set([
     "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
-    "Swingweight", "Twistweight", "Comfort",
-    "No",
+    "Swingweight", "Twistweight", "Comfort", "No",
+  ]),
+  pt: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Beach tennis",
+    "Swingweight", "Twistweight", "Fitting", "All-court",       // loanwords the Brazilian trade uses
+    "Analytics", "Performance", "Status", "Menu", "Nominal",    // words Portuguese shares with English
+    "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
+    "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
+  ]),
+  ko: new Set([
+    "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
+    "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
   ]),
 };
 

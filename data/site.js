@@ -23,11 +23,15 @@ export const site = {
    *   ogLocale — the Open Graph locale
    *   match    — language tags of a visitor's device that select this language
    */
-  locales: ["en", "de", "fr", "es", "it", "ru", "zh"],
+  locales: ["en", "de", "fr", "es", "it", "pt", "ko", "ru", "zh"],
   defaultLocale: "en",
   localeMeta: {
     en: { name: "English", short: "EN", hrefLang: "en", ogLocale: "en_GB", match: ["en"],
       suggest: { text: "This site is available in English.", go: "Switch to English", stay: "Stay on this version" } },
+    pt: { name: "Português", short: "PT", hrefLang: "pt-BR", ogLocale: "pt_BR", match: ["pt"],
+      suggest: { text: "Este site está disponível em português.", go: "Mudar para português", stay: "Continuar nesta versão" } },
+    ko: { name: "한국어", short: "KO", hrefLang: "ko", ogLocale: "ko_KR", match: ["ko"],
+      suggest: { text: "이 사이트는 한국어로도 제공됩니다.", go: "한국어로 보기", stay: "현재 버전 유지" } },
     ru: { name: "Русский", short: "RU", hrefLang: "ru", ogLocale: "ru_RU", match: ["ru", "be", "kk", "uk-ru"],
       suggest: { text: "Сайт доступен на русском языке.", go: "Перейти на русский", stay: "Остаться на этой версии" } },
     de: { name: "Deutsch", short: "DE", hrefLang: "de", ogLocale: "de_DE", match: ["de"],

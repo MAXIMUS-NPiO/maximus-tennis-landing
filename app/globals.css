@@ -662,3 +662,17 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
   .training-pair > .tp-spot-cta { margin-top: 12px; }
   .training-pair > .tp-section-cta { margin-top: 22px; padding-top: 0; }
 }
+
+/* Governing-version notice on the legal pages. */
+.governing-note {
+  margin: 0 0 22px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--accent, #506529);
+  background: var(--accent-light, #e7ecd9);
+  color: var(--ink-2);
+  font-size: 14.5px;
+}
+
+/* Korean wraps at word boundaries, not inside a word: without this a headline breaks in the
+   middle of 임팩트. Chinese and Japanese wrap by character, which is correct for them. */
+:lang(ko) { word-break: keep-all; overflow-wrap: break-word; }

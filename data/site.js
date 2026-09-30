@@ -11,16 +11,28 @@ export const site = {
   website: "https://maximus.tennis",
   instagram: "https://www.instagram.com/maximus_gps/",
   instagramHandle: "@maximus_gps",
+  /**
+   * Languages, in the order they appear in the language menu. Adding one means: a line here,
+   * a line in content/index.js, and the translated content file. Nothing else in the site
+   * needs to change — the menu, the routes, the sitemap, hreflang, the sign-in of the browser
+   * language and the checks all read this list.
+   *
+   *   name     — written in that language itself, as it appears in the menu
+   *   short    — the compact code on the menu trigger
+   *   hrefLang — the BCP 47 tag used in <html lang>, in hreflang links and in the sitemap
+   *   ogLocale — the Open Graph locale
+   *   match    — language tags of a visitor's device that select this language
+   */
   locales: ["en", "ru", "zh"],
-  /** One entry per language. Adding a language here is all the header menu needs:
-      `name` is written in that language itself, `short` is the compact code on the trigger,
-      `hrefLang` is the tag used in links and in the lang attribute. */
-  localeMeta: {
-    en: { name: "English", short: "EN", hrefLang: "en" },
-    ru: { name: "Русский", short: "RU", hrefLang: "ru" },
-    zh: { name: "中文", short: "中文", hrefLang: "zh-CN" },
-  },
   defaultLocale: "en",
+  localeMeta: {
+    en: { name: "English", short: "EN", hrefLang: "en", ogLocale: "en_GB", match: ["en"],
+      suggest: { text: "This site is available in English.", go: "Switch to English", stay: "Stay on this version" } },
+    ru: { name: "Русский", short: "RU", hrefLang: "ru", ogLocale: "ru_RU", match: ["ru", "be", "kk", "uk-ru"],
+      suggest: { text: "Сайт доступен на русском языке.", go: "Перейти на русский", stay: "Остаться на этой версии" } },
+    zh: { name: "简体中文", short: "中文", hrefLang: "zh-CN", ogLocale: "zh_CN", match: ["zh"],
+      suggest: { text: "本网站提供简体中文版本。", go: "切换到简体中文", stay: "保持当前版本" } },
+  },
 };
 
 /** Legal and organisational identities. Public brand = MAXIMUS / MAXIMUS GPS. */

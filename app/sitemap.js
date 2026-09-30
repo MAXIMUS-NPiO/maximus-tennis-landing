@@ -6,7 +6,7 @@ export default function sitemap() {
   for (const key of Object.keys(routes)) {
     for (const l of locales) {
       out.push({ url: `${site.website}/${l}${routes[key]}`, lastModified: new Date("2026-09-21"), changeFrequency: "monthly", priority: key === "home" ? 1 : 0.7,
-        alternates: { languages: Object.fromEntries(locales.map((x) => [x === "zh" ? "zh-CN" : x, `${site.website}/${x}${routes[key]}`])) } });
+        alternates: { languages: { ...Object.fromEntries(locales.map((x) => [site.localeMeta[x].hrefLang, `${site.website}/${x}${routes[key]}`])), "x-default": `${site.website}/${site.defaultLocale}${routes[key]}` } } });
     }
   }
   return out;

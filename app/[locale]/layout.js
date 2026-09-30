@@ -1,6 +1,7 @@
 import "../globals.css";
 import { notFound } from "next/navigation";
 import Header from "../../components/Header";
+import LanguageSuggestion from "../../components/LanguageSuggestion";
 import Footer from "../../components/Footer";
 import Analytics from "../../components/Analytics";
 import { getDict, isLocale, localeMeta, locales } from "../../lib/i18n";
@@ -40,6 +41,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={localeMeta[locale].htmlLang}>
       <body>
+        <LanguageSuggestion locale={locale} />
         <Header locale={locale} nav={dict.nav} />
         <main id="main">{children}</main>
         <Footer locale={locale} dict={dict} />

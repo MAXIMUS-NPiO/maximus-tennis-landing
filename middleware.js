@@ -1,27 +1,22 @@
 import { NextResponse } from "next/server";
-
-const LOCALES = ["en", "ru", "zh"];
-const DEFAULT = "en";
-
-function pick(acceptLanguage) {
-  if (!acceptLanguage) return DEFAULT;
-  const tags = acceptLanguage.split(",").map((t) => t.split(";")[0].trim().toLowerCase());
-  for (const tag of tags) {
-    if (tag.startsWith("ru")) return "ru";
-    if (tag.startsWith("zh")) return "zh";
-    if (tag.startsWith("en")) return "en";
-  }
-  return DEFAULT;
-}
+import { site } from "./data/site";
+import { pick } from "./lib/language";
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;
   const first = pathname.split("/")[1];
-  if (LOCALES.includes(first)) return NextResponse.next();
+  // A path that already names a language is served in that language and is never redirected:
+  // a link sent in one language must open in that language, and a search engine must be able
+  // to reach every language version of every page.
+  if (site.locales.includes(first)) return NextResponse.next();
   const locale = pick(request.headers.get("accept-language"));
   const url = request.nextUrl.clone();
   url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.redirect(url, 308);
+  // Temporary, and varying by Accept-Language: the same address must be able to lead to a
+  // different language for a different visitor, so it must not be cached as permanent.
+  const res = NextResponse.redirect(url, 307);
+  res.headers.set("Vary", "Accept-Language");
+  return res;
 }
 
 export const config = {

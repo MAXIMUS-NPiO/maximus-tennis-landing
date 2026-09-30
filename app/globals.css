@@ -185,6 +185,17 @@ details.expander > div { padding: 0 18px 18px; }
 .logo-link img.header-logo { height: 56px; width: auto; max-width: none; display: block; }
 @media (min-width: 1440px) { .header-inner { height: 76px; } .logo-link img.header-logo { height: 64px; } }
 @media (max-width: 519px) { .header-inner { height: 64px; gap: 8px; } }
+/* Offer of the visitor's own language. A single line above the header, never a redirect. */
+.lang-suggest { background: #1d2320; color: var(--white); border-bottom: 1px solid #2c332e; }
+.lang-suggest-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding: 11px 0; }
+.lang-suggest p { margin: 0; font-size: 15px; color: #dfe4dc; }
+.lang-suggest-actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.lang-suggest .btn-small { display: inline-flex; align-items: center; min-height: 38px; padding: 0 15px; font-size: 12.5px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--white); border-radius: var(--radius); background: var(--white); color: var(--ink); }
+.lang-suggest .btn-small:hover { background: #e7ecd9; border-color: #e7ecd9; }
+.lang-suggest-stay { background: none; border: 0; color: #a9b3a6; font: inherit; font-size: 13.5px; text-decoration: underline; cursor: pointer; padding: 6px 2px; }
+.lang-suggest-stay:hover { color: var(--white); }
+@media (max-width: 600px) { .lang-suggest-actions { margin-left: 0; } }
+
 /* Language menu: one control, in the header at every width. The panel lists every language by
    its own name and scrolls, so adding languages changes nothing in the header layout. */
 .lang-menu { position: relative; }

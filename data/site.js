@@ -23,13 +23,21 @@ export const site = {
    *   ogLocale — the Open Graph locale
    *   match    — language tags of a visitor's device that select this language
    */
-  locales: ["en", "ru", "zh"],
+  locales: ["en", "de", "fr", "es", "it", "ru", "zh"],
   defaultLocale: "en",
   localeMeta: {
     en: { name: "English", short: "EN", hrefLang: "en", ogLocale: "en_GB", match: ["en"],
       suggest: { text: "This site is available in English.", go: "Switch to English", stay: "Stay on this version" } },
     ru: { name: "Русский", short: "RU", hrefLang: "ru", ogLocale: "ru_RU", match: ["ru", "be", "kk", "uk-ru"],
       suggest: { text: "Сайт доступен на русском языке.", go: "Перейти на русский", stay: "Остаться на этой версии" } },
+    de: { name: "Deutsch", short: "DE", hrefLang: "de", ogLocale: "de_DE", match: ["de"],
+      suggest: { text: "Diese Website ist auch auf Deutsch verfügbar.", go: "Auf Deutsch wechseln", stay: "Bei dieser Version bleiben" } },
+    fr: { name: "Français", short: "FR", hrefLang: "fr", ogLocale: "fr_FR", match: ["fr"],
+      suggest: { text: "Ce site est disponible en français.", go: "Passer en français", stay: "Rester sur cette version" } },
+    es: { name: "Español", short: "ES", hrefLang: "es", ogLocale: "es_ES", match: ["es"],
+      suggest: { text: "Este sitio está disponible en español.", go: "Cambiar a español", stay: "Permanecer en esta versión" } },
+    it: { name: "Italiano", short: "IT", hrefLang: "it", ogLocale: "it_IT", match: ["it"],
+      suggest: { text: "Questo sito è disponibile in italiano.", go: "Passa all'italiano", stay: "Resta su questa versione" } },
     zh: { name: "简体中文", short: "中文", hrefLang: "zh-CN", ogLocale: "zh_CN", match: ["zh"],
       suggest: { text: "本网站提供简体中文版本。", go: "切换到简体中文", stay: "保持当前版本" } },
   },

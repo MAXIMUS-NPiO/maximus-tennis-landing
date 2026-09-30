@@ -4,8 +4,11 @@
  * Usage: node scripts/crawl.mjs http://localhost:3100
  */
 const base = (process.argv[2] || "http://localhost:3100").replace(/\/$/, "");
-const { routes } = await import("../data/site.js");
-const locales = ["en", "ru", "zh"];
+const { routes, site } = await import("../data/site.js");
+// Every registered language, so a language added to data/site.js is crawled without editing this.
+const locales = site.locales;
+const HREFLANGS = locales.map((l) => site.localeMeta[l].hrefLang);
+const LANG_RE = new RegExp(`<html lang="(${HREFLANGS.map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})"`);
 
 // Checked against the whole HTML (markup, attributes and inline data).
 const FORBIDDEN_RAW = [
@@ -39,9 +42,10 @@ while (queue.length) {
   for (const re of FORBIDDEN_RAW) if (re.test(html)) problems.push(`forbidden ${re} in ${path}`);
   const text = visibleText(html);
   for (const re of FORBIDDEN_TEXT) if (re.test(text)) problems.push(`forbidden text ${re} in ${path}`);
-  if (!/<html lang="(en|ru|zh-CN)"/.test(html)) problems.push(`lang attribute missing in ${path}`);
+  if (!LANG_RE.test(html)) problems.push(`lang attribute missing in ${path}`);
   if (!/rel="canonical"/.test(html)) problems.push(`canonical missing in ${path}`);
-  if (!/hreflang="zh-CN"/i.test(html)) problems.push(`hreflang missing in ${path}`);
+  for (const h of HREFLANGS) if (!new RegExp(`hreflang="${h}"`, "i").test(html)) problems.push(`hreflang ${h} missing in ${path}`);
+  if (!/hreflang="x-default"/i.test(html)) problems.push(`hreflang x-default missing in ${path}`);
   for (const m of html.matchAll(/href="(\/[^"#?]*)(?:[#?][^"]*)?"/g)) {
     const p = m[1];
     if (p.startsWith("/_next") || p.startsWith("/brand") || /\.(png|xml|txt|ico)$/.test(p)) continue;

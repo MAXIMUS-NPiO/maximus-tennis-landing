@@ -36,7 +36,10 @@ function walk(a, b, trail, locale) {
   if (ta === "string" && b === "") problems.push(`${locale}: empty string at ${trail}`);
 }
 
-const locales = process.argv.slice(2).length ? process.argv.slice(2) : ["ru", "zh"];
+const site = (await import(pathToFileURL(path.join(root, "data", "site.js")).href)).site;
+// Default: every registered language except the master. Adding a language to data/site.js
+// puts it under this check automatically.
+const locales = process.argv.slice(2).length ? process.argv.slice(2) : site.locales.filter((l) => l !== site.defaultLocale);
 const en = await load("en");
 for (const l of locales) {
   try {

@@ -26,6 +26,37 @@ const ALLOWED = new Set([
   "10–13", "14–17",     // age bands: figures
 ]);
 
+/**
+ * Words a particular language legitimately shares with English. These are per language on
+ * purpose: allowing "Construction" everywhere would stop this check noticing a Russian or
+ * Chinese value that was never translated. Each entry is a real word of that language.
+ */
+const ALLOWED_BY_LOCALE = {
+  de: new Set([
+    "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",   // sports, same in German
+    "Status", "Training", "Organisation", "Name", "Innovation", "Institution", "Distributor",
+    "Twistweight",                                                          // the term used in German racquet engineering
+    "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
+    "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
+  ]),
+  fr: new Set([
+    "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
+    "Menu", "Organisation", "Construction", "Production", "Promotion", "Participation",
+    "Distribution", "Institution", "Licence", "Version 2026-09-21",
+    "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
+    "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
+  ]),
+  es: new Set([
+    "Squash", "Pickleball", "Racquetball",
+    "No",                                                                   // the Spanish negative is the same word
+  ]),
+  it: new Set([
+    "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
+    "Swingweight", "Twistweight", "Comfort",
+    "No",
+  ]),
+};
+
 function walk(obj, trail, out) {
   if (typeof obj === "string") { out.set(trail, obj); return; }
   if (Array.isArray(obj)) { obj.forEach((v, i) => walk(v, `${trail}[${i}]`, out)); return; }
@@ -43,7 +74,9 @@ for (const locale of targets) {
   for (const [key, value] of map) {
     if (!en.has(key)) continue;
     if (value !== en.get(key)) continue;
-    if (ALLOWED.has(value.trim()) || value.trim() === "") continue;
+    const trimmed = value.trim();
+    if (ALLOWED.has(trimmed) || trimmed === "") continue;
+    if ((ALLOWED_BY_LOCALE[locale] || new Set()).has(trimmed)) continue;
     problems.push(`${locale}: untranslated at ${key} :: ${value.slice(0, 70)}`);
   }
 }

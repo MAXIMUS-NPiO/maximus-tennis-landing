@@ -78,6 +78,7 @@ const en = {
     },
   },
   nav: {
+    language: "Language",
     groups: { racquets: "Racquets", training: "Training", ecosystem: "Ecosystem", partnerships: "Partnerships" },
     racquets: "Racquet series and comparison",
     great: "GREAT — 97 in² · Control",

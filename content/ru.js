@@ -78,6 +78,7 @@ const ru = {
     },
   },
   nav: {
+    language: "Язык",
     groups: { racquets: "Ракетки", training: "Тренировка", ecosystem: "Экосистема", partnerships: "Партнёрство" },
     racquets: "Серии ракеток и сравнение",
     great: "GREAT — 97 in² · Контроль",

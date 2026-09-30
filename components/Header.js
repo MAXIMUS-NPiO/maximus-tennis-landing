@@ -2,8 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "./Logo";
-import LocaleSwitcher from "./LocaleSwitcher";
+import Logo, { LogoMark } from "./Logo";
+import LocaleMenu from "./LocaleMenu";
 import { navGroups } from "../data/site";
 import { href } from "../lib/paths";
 
@@ -53,6 +53,7 @@ export default function Header({ locale, nav }) {
       <div className="shell header-inner">
         <Link className="logo-link" href={href(locale, "home")} aria-label="MAXIMUS GPS">
           <Logo height={64} priority className="header-logo" />
+          <LogoMark height={52} priority className="header-mark" />
         </Link>
         <ul className="nav-desktop" ref={navRef} aria-label={nav.menu}>
           {navGroups.map((g) =>
@@ -81,9 +82,8 @@ export default function Header({ locale, nav }) {
           )}
         </ul>
         <div className="header-tools">
-          {/* Below the compact breakpoint the switcher moves into the menu, so the larger
-              lockup never collides with it. It stays reachable in both places. */}
-          <div className="header-locale"><LocaleSwitcher locale={locale} /></div>
+          {/* One language control, visible at every width including a phone. */}
+          <LocaleMenu locale={locale} label={nav.language || "Language"} />
           <button type="button" ref={toggleRef} className="menu-toggle" aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen((v) => !v)} aria-label={open ? nav.close : nav.menu}>
             <span aria-hidden="true">{open ? "✕" : "☰"}</span>
           </button>
@@ -101,7 +101,6 @@ export default function Header({ locale, nav }) {
               <Link key={g.key} className="top" href={href(locale, g.href)} onClick={() => setOpen(false)}>{nav[g.key]}</Link>
             )
           )}
-          <div className="nav-mobile-locale"><LocaleSwitcher locale={locale} /></div>
         </nav>
       </div>
     </header>

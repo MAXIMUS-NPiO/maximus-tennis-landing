@@ -78,6 +78,7 @@ const zh = {
     },
   },
   nav: {
+    language: "语言",
     groups: { racquets: "球拍", training: "训练", ecosystem: "生态系统", partnerships: "合作" },
     racquets: "球拍系列与对比",
     great: "GREAT — 97 in² · 控制",

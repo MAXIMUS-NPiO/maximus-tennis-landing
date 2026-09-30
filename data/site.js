@@ -12,6 +12,14 @@ export const site = {
   instagram: "https://www.instagram.com/maximus_gps/",
   instagramHandle: "@maximus_gps",
   locales: ["en", "ru", "zh"],
+  /** One entry per language. Adding a language here is all the header menu needs:
+      `name` is written in that language itself, `short` is the compact code on the trigger,
+      `hrefLang` is the tag used in links and in the lang attribute. */
+  localeMeta: {
+    en: { name: "English", short: "EN", hrefLang: "en" },
+    ru: { name: "Русский", short: "RU", hrefLang: "ru" },
+    zh: { name: "中文", short: "中文", hrefLang: "zh-CN" },
+  },
   defaultLocale: "en",
 };
 

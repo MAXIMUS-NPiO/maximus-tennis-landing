@@ -184,10 +184,44 @@ details.expander > div { padding: 0 18px 18px; }
 .logo-link { display: inline-flex; align-items: center; text-decoration: none; min-width: 0; }
 .logo-link img.header-logo { height: 56px; width: auto; max-width: none; display: block; }
 @media (min-width: 1440px) { .header-inner { height: 76px; } .logo-link img.header-logo { height: 64px; } }
-@media (max-width: 420px) { .header-inner { height: 64px; gap: 10px; } .logo-link img.header-logo { height: 52px; } }
-.nav-mobile-locale { padding: 16px 0 20px; }
-@media (max-width: 900px) { .header-locale { display: none; } }
-@media (min-width: 901px) { .nav-mobile-locale { display: none; } }
+@media (max-width: 519px) { .header-inner { height: 64px; gap: 8px; } .logo-link img.header-mark { height: 52px; } }
+/* Language menu: one control, in the header at every width. The panel lists every language by
+   its own name and scrolls, so adding languages changes nothing in the header layout. */
+.lang-menu { position: relative; }
+.lang-trigger {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 44px; padding: 0 10px;
+  border: 1px solid #444; border-radius: var(--radius);
+  background: none; color: var(--white); cursor: pointer; font: inherit;
+  font-size: 13px; font-weight: 650; letter-spacing: 0.06em; white-space: nowrap;
+}
+.lang-trigger:hover, .lang-trigger[aria-expanded="true"] { border-color: #6c7a52; color: #cfe08a; }
+.lang-caret { font-size: 10px; line-height: 1; }
+.lang-panel {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 70;
+  min-width: 190px; max-width: calc(100vw - 24px); max-height: min(60vh, 420px); overflow-y: auto;
+  margin: 0; padding: 6px; list-style: none;
+  background: var(--white); color: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(23, 27, 24, 0.22);
+}
+.lang-panel:not(.open) { display: none; }
+.lang-panel li { list-style: none; }
+.lang-panel a {
+  display: block; padding: 11px 12px; border-radius: var(--radius);
+  font-size: 15.5px; text-decoration: none; color: var(--ink-2); white-space: nowrap;
+}
+.lang-panel a:hover, .lang-panel a:focus-visible { background: var(--accent-light); color: var(--ink); }
+.lang-panel a.on { color: var(--ink); font-weight: 650; }
+.lang-panel a.on::after { content: " ✓"; color: #506529; }
+
+/* The compact lion replaces the full lockup where the lockup plus the language menu would
+   force the lion below its intended share of the header height. */
+.logo-link img.header-mark { display: none; height: 52px; width: auto; }
+@media (max-width: 519px) {
+  .logo-link img.header-logo { display: none; }
+  .logo-link img.header-mark { display: block; }
+}
 .nav-desktop { display: none; margin-left: auto; align-items: center; gap: 2px; margin-block: 0; padding: 0; }
 .nav-desktop > li { position: relative; list-style: none; }
 .nav-desktop > li > a, .nav-desktop > li > button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 9px; white-space: nowrap; font: inherit; font-size: 13px; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: none; border: 0; text-decoration: none; cursor: pointer; border-radius: var(--radius); }
@@ -200,6 +234,8 @@ details.expander > div { padding: 0 18px 18px; }
 .nav-desktop .menu a.head { color: var(--ink); font-weight: 650; }
 .header-tools { margin-left: auto; display: flex; align-items: center; gap: 8px; }
 .nav-desktop + .header-tools { margin-left: 0; }
+/* With the desktop navigation hidden there is nothing to sit beside, so the tools go to the edge. */
+@media (max-width: 1359px) { .nav-desktop + .header-tools { margin-left: auto; } }
 .lang { display: inline-flex; border: 1px solid #444; border-radius: var(--radius); overflow: hidden; }
 .lang a { padding: 7px 9px; font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-decoration: none; color: #cfd3cc; white-space: nowrap; }
 .lang a.on { background: var(--white); color: var(--ink); }

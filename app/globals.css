@@ -817,3 +817,28 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 /* The authorship statement on the terms page: set apart from the numbered sections, because it is
    a statement by the author rather than one of the terms. */
 .copyright-note { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 15px; }
+
+/* Justified prose (Founder, 1 October 2026).
+   Justification on its own opens rivers of white space in a narrow column, so it is published
+   together with automatic hyphenation, which uses the language already declared on <html> and so
+   works per locale. The selectors are deliberately element-level: anything that already sets its
+   alignment through a class — centred schematics, table cells, buttons, labels — keeps it, because
+   a class beats an element in the cascade. Headings, display lines and the eyebrow stay as they
+   are: stretching a two-word line only makes it crooked. */
+p, li, dd, figcaption {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
+}
+.statement, .eyebrow, .spec-list dd, .schematic-legend dd, .pp-note, .vc-lightbox-cap { text-align: start; hyphens: manual; }
+/* The one place justification is left off: the short tiles. Their measure is about thirty
+   characters by design, and at that width justifying a line of three words opens the gaps between
+   them instead of closing the right edge — the untidiness it is meant to remove. */
+.card p, .card li, .stat p, .stat span, .eco-node p { text-align: start; }
+/* Scripts that do not hyphenate, and where a stretched line is the normal typographic result. */
+:lang(ar) p, :lang(ar) li, :lang(ar) dd, :lang(ar) figcaption,
+:lang(ja) p, :lang(ja) li, :lang(ja) dd, :lang(ja) figcaption,
+:lang(ko) p, :lang(ko) li, :lang(ko) dd, :lang(ko) figcaption,
+:lang(zh) p, :lang(zh) li, :lang(zh) dd, :lang(zh) figcaption { hyphens: manual; }

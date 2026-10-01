@@ -16,7 +16,28 @@ const FORBIDDEN_RAW = [
   /NOT_PROVIDED/, /FOUNDER_CONFIRMED/, /gm@maximussports/i, /maximussports\.ae/i, /\+971/,
 ];
 // Checked against visible text only (tags, scripts and styles removed): wording that must never be published.
+/**
+ * MAXIMUS talks about itself and compares itself with no one (Founder, 1 October 2026). Two things
+ * are blocked: the names of other racquet brands, and the comparative constructions that make a
+ * claim about "other brands" without naming one. "Head" is deliberately absent from the list —
+ * head size, racquet head and string bed vocabulary make it unusable as a brand pattern.
+ */
+const COMPETITORS = [
+  /\bbabolat\b/i, /\byonex\b/i, /\btecnifibre\b/i, /\bsolinco\b/i, /\bdunlop\b/i,
+  /\bv(ö|o)lkl\b/i, /\bprince\b/i, /\bwilson\b/i,
+];
+// Two names were tried and withdrawn: "gamma" is the Italian word for a product range and
+// "pacific" is a geography this site writes about. Across twenty-nine languages a brand pattern
+// has to be one that no language uses as an ordinary word.
+// The English master is the source every translation is written from, so catching a comparison
+// here catches it before it can reach twenty-eight other languages.
+const COMPARISONS = [
+  /other brands?/i, /no one else/i, /nobody else/i, /unlike (other|any)/i, /than any other/i,
+  /only brand/i, /\bcompetitors?\b/i,
+];
+
 const FORBIDDEN_TEXT = [
+  ...COMPETITORS, ...COMPARISONS,
   /\bjude\b/i, /\bnii\b/i, /5,?000 racquets? per week/i, /20,000 per month/i, /temporary/i, /placeholder/i,
   /lorem ipsum/i, /TODO/, /royalt[a-z]* (rate|percentage) of \d/i, /50\s?%/, /240\s?[–-]\s?340/, /\bwallet\b/i, /\bpayout/i,
 ];

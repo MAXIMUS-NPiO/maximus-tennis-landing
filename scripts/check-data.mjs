@@ -42,7 +42,12 @@ expect(sweetSpotTrainer.precisionClassesApply === false, "SST: precision classes
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = path.join(d, f); if (["node_modules", ".next", ".git"].includes(f)) return []; return statSync(p).isDirectory() ? walk(p) : [p]; });
+// MAXIMUS compares itself with no one (Founder, 1 October 2026): no other racquet brand is named
+// anywhere in shipped content, and no comparative claim about "other brands" is written. "Head" is
+// left out on purpose — the word is ordinary racquet vocabulary on this site.
 const banned = [
+  /\bbabolat\b/i, /\byonex\b/i, /\btecnifibre\b/i, /\bsolinco\b/i, /\bdunlop\b/i, /\bv(ö|o)lkl\b/i,
+  /\bwilson\b/i, /other brands?/i, /no one else/i, /nobody else/i, /unlike (other|any)/i, /only brand/i,
   /381\.135245/, /0\.162636422/, /shaleni/i, /borteyman/i, /ghana/i, /go tennis/i, /norris/i,
   /maximussports\.ae/i, /1[ ,.]?104[ ,.]?600/, /2[ ,.]?946[ ,.]?618/, /\b(102|136|204|139)\s?(EUR|€)/, /\bJude\b/, /\bNii\b/, /240\s?[–-]\s?340/,
 ];

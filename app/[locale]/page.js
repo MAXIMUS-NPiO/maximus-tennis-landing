@@ -50,9 +50,9 @@ export default async function Home({ params }) {
         </div>
       </section>
 
-      {/* 01b — ZERO. The flagship claim stands on the first page, directly under the hero, because
-          it is the difference nobody else offers. Same strings as the precision page, including the
-          measurement qualification, which travels with the claim wherever it is published. */}
+      {/* 01b — ZERO. The flagship stands on the first page, directly under the hero, where the
+          Founder placed it. Same strings as the precision page, including the measurement
+          qualification, which travels with the claim wherever the claim is published. */}
       <Section id="zero" band="band-ink" eyebrow={dict.precision.zero.eyebrow} title={dict.precision.zero.title}>
         <p className="statement zero-sub">{dict.precision.zero.sub}</p>
         <p className="lead zero-lead">{dict.precision.zero.p}</p>

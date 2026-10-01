@@ -50,6 +50,24 @@ export default async function Home({ params }) {
         </div>
       </section>
 
+      {/* 01b — ZERO. The flagship claim stands on the first page, directly under the hero, because
+          it is the difference nobody else offers. Same strings as the precision page, including the
+          measurement qualification, which travels with the claim wherever it is published. */}
+      <Section id="zero" band="band-ink" eyebrow={dict.precision.zero.eyebrow} title={dict.precision.zero.title}>
+        <p className="statement zero-sub">{dict.precision.zero.sub}</p>
+        <p className="lead zero-lead">{dict.precision.zero.p}</p>
+        <div className="grid-4 zero-points">
+          {dict.precision.zero.points.map(([h, t]) => (
+            <div key={h} className="card"><h3>{h}</h3><p style={{ marginTop: 8 }}>{t}</p></div>
+          ))}
+        </div>
+        <p className="zero-note">{dict.precision.zero.note}</p>
+        <div className="btn-row">
+          <Cta locale={locale} to="custom" label={dict.precision.zero.cta} />
+          <Cta locale={locale} to="precision" label={dict.precision.cta} kind="btn-outline" />
+        </div>
+      </Section>
+
       {/* 02 — the training system, ahead of audience routes and the performance series */}
       <Section id="training" band="band-1" eyebrow={H.training.eyebrow} title={H.training.title} lead={H.training.p}>
         <div className="training-lead">

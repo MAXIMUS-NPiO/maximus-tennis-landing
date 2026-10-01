@@ -5,8 +5,14 @@ import { media } from "../data/media";
 export function Photo({ id, alt, caption, priority = false, sizes = "(min-width: 1024px) 33vw, 100vw", className = "" }) {
   const m = media[id];
   if (!m) return null;
+  // The photograph's own aspect ratio, taken from the file itself, is published to CSS as --ar.
+  // Layouts size the frame from it instead of imposing a ratio, which is what produced the black
+  // letterbox bands: a 2.15:1 crop forced into a 4:5 box can only be padded or cut.
+  const w = m.src?.width;
+  const h = m.src?.height;
+  const ar = w && h ? Math.round((w / h) * 1000) / 1000 : null;
   return (
-    <figure className={`photo ${className}`}>
+    <figure className={`photo ${className}`} style={ar ? { "--ar": ar } : undefined}>
       <Image src={m.src} alt={alt} sizes={sizes} priority={priority} placeholder="blur" quality={80} />
       {caption && <figcaption>{caption}</figcaption>}
     </figure>

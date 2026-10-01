@@ -49,13 +49,16 @@ code { font-family: var(--mono); font-size: 0.92em; }
 
 .eyebrow { margin: 0 0 14px; font-size: 13px; font-weight: 650; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); }
 .eyebrow.accent { color: var(--accent); }
-.h-display { font-size: clamp(38px, 6.6vw, 88px); line-height: 0.98; letter-spacing: -0.035em; text-transform: uppercase; }
-.h-1 { font-size: clamp(34px, 5vw, 64px); }
-.h-2 { font-size: clamp(28px, 3.6vw, 46px); }
-.h-3 { font-size: clamp(21px, 2.2vw, 27px); }
-.statement { font-size: clamp(24px, 3.2vw, 44px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.06; text-transform: uppercase; }
+/* Display scale. The lower bound of each clamp is the phone size: set so a heading settles in one
+   or two lines inside a 360px shell instead of running wide and forcing the page sideways. The
+   desktop end of every clamp is unchanged. */
+.h-display { font-size: clamp(29px, 7.4vw, 88px); line-height: 1; letter-spacing: -0.032em; text-transform: uppercase; }
+.h-1 { font-size: clamp(26px, 5.8vw, 64px); }
+.h-2 { font-size: clamp(22px, 4.4vw, 46px); }
+.h-3 { font-size: clamp(18px, 2.4vw, 27px); }
+.statement { font-size: clamp(20px, 3.8vw, 44px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; text-transform: uppercase; }
 .statement .accent { color: var(--accent); }
-.lead { font-size: clamp(18px, 1.5vw, 21px); color: var(--ink-2); max-width: 780px; line-height: 1.5; }
+.lead { font-size: clamp(16.5px, 1.5vw, 21px); color: var(--ink-2); max-width: 780px; line-height: 1.5; }
 .muted { color: var(--ink-2); }
 .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
@@ -124,6 +127,14 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
 .spec tr:last-child td { border-bottom: 0; }
 .spec-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
 .spec-wrap .spec { min-width: 460px; }
+/* On a phone the table fits the screen and wraps inside its cells. A 460px floor in a scrolling
+   box is what made the specification tables drag sideways under the finger. */
+@media (max-width: 559px) {
+  .spec { font-size: 14px; }
+  .spec th, .spec td { padding: 9px 8px; }
+  .spec-wrap .spec { min-width: 0; }
+  .spec td.num, .spec th.num { white-space: normal; }
+}
 .matrix { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; }
 .matrix div { border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 8px; text-align: center; background: var(--white); }
 .matrix b { display: block; font-family: var(--mono); font-size: 18px; font-weight: 650; font-variant-numeric: tabular-nums; }
@@ -149,7 +160,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
 .index li { border-bottom: 1px solid var(--line); }
 .index a { display: grid; grid-template-columns: 1fr; gap: 4px 16px; padding: 16px 0; text-decoration: none; align-items: baseline; }
 .index a:hover .index-name, .index a:focus-visible .index-name { color: var(--accent); }
-.index-name { font-size: clamp(28px, 4.6vw, 56px); font-weight: 650; letter-spacing: -0.03em; line-height: 1; text-transform: uppercase; }
+.index-name { font-size: clamp(23px, 5vw, 56px); font-weight: 650; letter-spacing: -0.03em; line-height: 1; text-transform: uppercase; }
 .index-head { font-family: var(--mono); font-size: clamp(18px, 2.2vw, 26px); font-variant-numeric: tabular-nums; }
 .index-dir { font-size: 13.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 650; color: var(--ink-2); }
 @media (min-width: 760px) { .index a { grid-template-columns: 1.3fr 0.7fr 0.6fr auto; padding: 22px 0; } .index-dir { text-align: end; } }
@@ -346,14 +357,44 @@ details.expander > div { padding: 0 18px 18px; }
 .panel { border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; background: var(--white); }
 
 /* Footer */
-.site-footer { background: var(--black); color: #cfd3cc; border-top: 1px solid #222; padding: 48px 0 28px; font-size: 15px; }
-.footer-grid { display: grid; gap: 28px; grid-template-columns: 1fr; }
-@media (min-width: 760px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
-.footer-grid .footer-h { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); margin-bottom: 12px; }
-.footer-grid a { display: block; color: #cfd3cc; text-decoration: none; padding: 4px 0; }
-.footer-grid a:hover { color: var(--white); }
-.footer-logo img { height: 44px; width: auto; }
-.footer-bottom { margin-top: 32px; padding-top: 18px; border-top: 1px solid #222; font-size: 13.5px; color: #9aa197; display: grid; gap: 8px; }
+.site-footer { background: var(--black); color: #cfd3cc; border-top: 1px solid #222; padding: 34px 0 22px; font-size: 15px; }
+.footer-top { display: grid; gap: 12px; }
+.footer-line { margin: 0; max-width: 46ch; }
+.footer-contacts { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.footer-contacts a { color: #cfd3cc; text-decoration: none; }
+.footer-contacts a:hover { color: var(--white); }
+.footer-acc-row { margin-top: 20px; display: grid; border-top: 1px solid #222; }
+.footer-acc-row > * { min-width: 0; }
+.footer-acc { border-bottom: 1px solid #222; }
+.footer-acc:last-child { border-bottom: 0; }
+.footer-acc > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 12px 0; min-height: 44px; font-size: 13px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--white); font-weight: 650;
+}
+.footer-acc > summary::-webkit-details-marker { display: none; }
+.footer-acc > summary::after { content: "+"; font-size: 17px; line-height: 1; color: #8d948a; font-weight: 400; }
+.footer-acc[open] > summary::after { content: "\2013"; }
+.footer-acc > summary:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.footer-acc-links { display: grid; gap: 1px; padding: 0 0 12px; }
+.footer-acc-links a { display: block; color: #cfd3cc; text-decoration: none; padding: 7px 0; }
+.footer-acc-links a:hover { color: var(--white); }
+@media (min-width: 760px) {
+  .footer-acc-row { grid-template-columns: repeat(3, 1fr); column-gap: 36px; border-top: 0; }
+  .footer-acc { border-bottom: 0; border-top: 1px solid #222; }
+}
+.footer-logo img { height: 38px; width: auto; }
+.footer-bottom { margin-top: 16px; padding-top: 12px; border-top: 1px solid #222; font-size: 13.5px; color: #9aa197; display: grid; gap: 6px; justify-items: start; }
+.footer-legal > summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;
+  min-height: 44px; color: #9aa197;
+}
+.footer-legal > summary::-webkit-details-marker { display: none; }
+.footer-legal > summary::after { content: "+"; color: #6f766c; font-size: 16px; line-height: 1; }
+.footer-legal[open] > summary::after { content: "\2013"; }
+.footer-legal > summary:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.footer-legal-body { display: grid; gap: 8px; padding: 2px 0 10px; max-width: 76ch; }
+.footer-legal-body p { margin: 0; }
 .legal-block { display: grid; gap: 4px; font-size: 15px; }
 .legal-block b { color: var(--ink); }
 
@@ -363,7 +404,7 @@ details.expander > div { padding: 0 18px 18px; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Narrow-width robustness: long localized words and pills must wrap inside grid cells */
-.grid-2 > *, .grid-3 > *, .grid-4 > *, .split > *, .pparams > *, .eco-map > *, .hero-meta > *, .footer-grid > * { min-width: 0; }
+.grid-2 > *, .grid-3 > *, .grid-4 > *, .split > *, .pparams > *, .eco-map > *, .hero-meta > *, .footer-acc-row > * { min-width: 0; }
 .card, .stat, .pparams div, .eco-node, .index-name, .h-display, .h-1, .h-2, .statement { overflow-wrap: anywhere; }
 .status { white-space: normal; text-align: start; }
 .pswitch-tabs { grid-template-columns: 1fr; }
@@ -389,11 +430,14 @@ html { scroll-padding-top: 84px; }
 .hero-line { margin: 18px 0 0; font-size: clamp(19px, 1.9vw, 24px); line-height: 1.4; color: var(--ink); max-width: 38ch; font-weight: 500; }
 .hero-copy .btn-row { margin-top: 22px; }
 .hero-product .hero-meta { margin-top: 4px; }
+/* Photographs are published at their own aspect ratio (--ar, read from the file by components/Media.js).
+   No imposed ratio, no contain, no dark plate behind the image: a frame that matches the photograph
+   cannot letterbox it, so the black bands above and below the wide crops are gone by construction. */
 .photo { margin: 0; }
-.photo img { display: block; width: 100%; height: auto; border-radius: var(--radius); background: var(--surface); }
+.photo img { display: block; width: 100%; height: auto; border-radius: var(--radius); background: transparent; }
 .photo figcaption { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); }
 .hero-photo { justify-self: center; text-align: center; }
-.hero-photo img { width: 100%; height: auto; object-fit: contain; margin: 0 auto; background: #0e0f0f; }
+.hero-photo img { width: 100%; height: auto; margin: 0 auto; background: transparent; }
 @media (min-width: 900px) {
   .hero-product { padding: 60px 0 56px; }
   .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); grid-template-areas: "copy photo" "meta photo"; column-gap: 48px; row-gap: 28px; }
@@ -403,7 +447,7 @@ html { scroll-padding-top: 84px; }
 }
 
 .photo-pending { display: grid; align-content: end; gap: 6px; min-height: 240px; padding: 22px; border: 1px dashed var(--line-strong); border-radius: var(--radius); background: repeating-linear-gradient(135deg, var(--surface) 0 12px, var(--surface-2) 12px 24px); }
-.pp-name { font-size: clamp(34px, 5vw, 56px); font-weight: 650; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1; overflow-wrap: anywhere; }
+.pp-name { font-size: clamp(26px, 5vw, 56px); font-weight: 650; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1; overflow-wrap: anywhere; }
 .pp-sub { font-family: var(--mono); font-size: 15px; color: var(--ink); }
 .pp-note { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #a33a3a; font-weight: 650; }
 .photo-pending.mini { min-height: 130px; padding: 16px; }
@@ -413,7 +457,7 @@ html { scroll-padding-top: 84px; }
 .series-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
 @media (min-width: 760px) { .series-grid { grid-template-columns: repeat(3, 1fr); } }
 .series-card { display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); overflow: hidden; min-width: 0; }
-.series-photo img { aspect-ratio: 1 / 1; object-fit: contain; border-radius: 0; background: #0e0f0f; }
+.series-photo img { aspect-ratio: 1 / 1; object-fit: cover; border-radius: 0; background: transparent; }
 .series-photo figcaption { padding: 8px 16px 0; }
 .series-photo.photo-pending { aspect-ratio: 1 / 1; min-height: 0; border: 0; border-bottom: 1px dashed var(--line-strong); border-radius: 0; }
 @media (min-width: 760px) { .series-photo.photo-pending { aspect-ratio: 1 / 1; } }
@@ -426,7 +470,7 @@ html { scroll-padding-top: 84px; }
 .series-hero-grid > * { min-width: 0; }
 .series-hero-copy .lead { margin-top: 14px; }
 .series-hero-photo { text-align: center; }
-.series-hero-photo img { width: 100%; max-width: 100%; height: auto; object-fit: contain; margin: 0 auto; background: #0e0f0f; border-radius: var(--radius); }
+.series-hero-photo img { width: 100%; max-width: 100%; height: auto; margin: 0 auto; background: transparent; border-radius: var(--radius); }
 .series-hero-photo.photo-pending { min-height: 280px; text-align: start; }
 @media (min-width: 900px) { .series-hero { padding: 60px 0; } .series-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; } }
 .spec-list { display: grid; margin: 0; border-top: 1px solid var(--ink); }
@@ -435,12 +479,22 @@ html { scroll-padding-top: 84px; }
 .spec-list dd { margin: 0; overflow-wrap: anywhere; }
 .spec-list .status { margin-inline-start: 6px; vertical-align: middle; }
 
-.detail-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
-@media (min-width: 760px) { .detail-grid { grid-template-columns: repeat(4, 1fr); } }
-.detail-grid > * { min-width: 0; }
-@media (min-width: 760px) { .detail-grid.three { grid-template-columns: repeat(3, 1fr); } }
-.detail-grid .photo img { aspect-ratio: 4 / 5; object-fit: cover; background: #0e0f0f; }
-.photo.mini img { aspect-ratio: 4 / 3; object-fit: cover; background: #0e0f0f; }
+/* Detail photographs. Two columns on a phone, each tile at the photograph's own ratio (--ar);
+   from 760px a justified row — the width of each tile is proportional to its ratio, so every
+   photograph in the row ends at exactly the same height with nothing cropped and nothing padded. */
+.detail-grid { columns: 2; column-gap: 12px; }
+.detail-grid > * { break-inside: avoid; margin: 0 0 12px; min-width: 0; }
+.detail-grid .photo img { width: 100%; aspect-ratio: var(--ar, 4 / 5); object-fit: cover; background: transparent; }
+/* On a phone a very tall frame would own the whole column and leave the other one empty, so the
+   portrait tiles are held at 0.72 and trimmed towards their subject rather than padded. */
+@media (max-width: 759px) {
+  .detail-grid .photo img { aspect-ratio: max(0.92, var(--ar, 0.92)); object-position: 50% 72%; }
+}
+@media (min-width: 760px) {
+  .detail-grid { columns: auto; display: flex; flex-wrap: nowrap; gap: 14px; align-items: flex-start; }
+  .detail-grid > * { flex-grow: var(--ar, 1); flex-shrink: 1; flex-basis: 0; margin: 0; }
+}
+.photo.mini img { aspect-ratio: var(--ar, 4 / 3); object-fit: cover; background: transparent; }
 
 .schematic { margin: 0; padding: 18px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
 .schematic svg { width: 100%; height: auto; display: block; }
@@ -450,14 +504,18 @@ html { scroll-padding-top: 84px; }
 .schematic-legend > div { display: grid; grid-template-columns: 56px 1fr; gap: 10px; font-size: 15px; }
 .schematic-legend dt { font-family: var(--mono); font-weight: 650; }
 .schematic-legend dd { margin: 0; color: var(--ink-2); }
-.grip-dots { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 8px; }
-@media (min-width: 760px) { .grip-dots { grid-template-columns: repeat(8, 1fr); } }
-.grip-dots li { display: grid; justify-items: center; gap: 6px; text-align: center; }
-.grip-dots li { min-width: 0; }
-.grip-dots .dot { width: calc(min(56px, 76%) * var(--k)); aspect-ratio: 1 / 1; border-radius: 50%; border: 2px solid var(--ink); background: var(--white); }
-.grip-dots li.ext .dot { border-color: var(--accent); background: var(--accent-light); }
-.grip-dots b { font-size: 18px; }
-.grip-dots .mono { font-size: 14px; color: var(--ink-2); }
+/* Grip scale: the handle's own eight-bevel cross-section, drawn in true proportion (L7 is 1.219x L0)
+   and standing on one baseline, so the row reads as handles getting thicker. --gb is the L0 size. */
+.grip-dots { --gb: clamp(21px, 6.2vw, 34px); list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px 2px; }
+@media (min-width: 760px) { .grip-dots { --gb: clamp(40px, 4.4vw, 56px); gap: 10px 6px; } }
+.grip-dots li { display: grid; justify-items: center; gap: 4px; text-align: center; min-width: 0; }
+.grip-slot { display: flex; align-items: flex-end; justify-content: center; height: calc(var(--gb) * 1.219); }
+.grip-oct { display: block; width: calc(var(--gb) * var(--k)); max-width: 100%; aspect-ratio: 1 / 1; }
+.grip-oct svg { display: block; width: 100%; height: 100%; }
+.grip-oct .go-face { fill: var(--surface-2); stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
+.grip-dots li.ext .go-face { fill: var(--accent-light); stroke: var(--accent); }
+.grip-dots b { font-size: clamp(12px, 3.3vw, 17px); }
+.grip-dots .mono { font-size: clamp(10.5px, 2.9vw, 13.5px); color: var(--ink-2); white-space: nowrap; }
 
 .stat .stat-word { font-size: clamp(22px, 2.6vw, 30px); }
 .compact-stats { gap: 12px; }
@@ -581,7 +639,7 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 @media (min-width: 860px) { .vc-selected { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 52px; } }
 .vc-variant-name { margin: 0; font-size: 16px; letter-spacing: 0.02em; font-weight: 650; color: #c9c4be; }
 .vc-weight { margin: 4px 0 18px; display: flex; align-items: baseline; gap: 10px; color: #fff; }
-.vc-weight-value { font-size: clamp(56px, 13vw, 108px); line-height: 0.92; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.vc-weight-value { font-size: clamp(44px, 13vw, 108px); line-height: 0.92; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 .vc-weight-unit { font-size: clamp(20px, 3.4vw, 30px); color: #a9a49e; font-weight: 650; }
 .vc-specs { margin: 0; display: grid; gap: 0; border-top: 1px solid rgba(255, 255, 255, 0.16); }
 .vc-specs > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
@@ -631,8 +689,9 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 }
 .vc-lightbox-close:focus-visible { outline: 2px solid #d8d4cf; outline-offset: 3px; }
 
-/* Spin detail tiles: keep the whole crop visible instead of a cover-crop. */
-.detail-grid.whole .photo img { aspect-ratio: 4 / 5; object-fit: contain; background: #0e0f0f; }
+/* `.whole` is now the default behaviour of .detail-grid: every tile carries the photograph's own
+   ratio, so the whole crop is visible without a letterbox. The class is kept for the markup that
+   still uses it and adds nothing of its own. */
 
 @media (prefers-reduced-motion: reduce) { .vc-zoom-hint { transition: none; } }
 

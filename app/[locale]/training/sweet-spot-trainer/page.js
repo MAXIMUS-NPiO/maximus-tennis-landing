@@ -29,7 +29,7 @@ export default async function Page({ params }) {
           {sst.system.map((x) => <div key={x.weight} className="stat"><b>{x.weight} {L.grams}</b><span>{L.balance}: {x.balance} {L.mm}</span></div>)}
         </div>
         <div className="detail-grid" style={{ marginTop: 20 }}>
-          {sstGallery.map((k) => <Photo key={k} id={k} alt={dict.media[k]} caption={dict.media[k]} sizes="(min-width: 760px) 24vw, 46vw" />)}
+          {sstGallery.map((k) => <Photo key={k} id={k} alt={dict.media[k]} caption={dict.media[k]} sizes="(min-width: 760px) 38vw, 48vw" />)}
         </div>
         <Note red>{S.heavy}</Note>
       </Section>

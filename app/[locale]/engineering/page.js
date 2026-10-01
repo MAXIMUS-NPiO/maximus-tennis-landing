@@ -24,10 +24,10 @@ export default async function Page({ params }) {
       <Section id="qc" band="band-1" eyebrow={dict.home.manufacturing.eyebrow} title={dict.home.manufacturing.title}>
         <p className="lead" style={{ marginBottom: 24 }}>{dict.home.manufacturing.p}</p>
         <div className="detail-grid whole">
-          <Photo id="lettering" alt={dict.media.lettering} caption={dict.home.manufacturing.captions.lettering} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="handleLion" alt={dict.media.handleLion} caption={dict.home.manufacturing.captions.buttcap} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="engraving" alt={dict.media.engraving} caption={dict.home.manufacturing.captions.handle} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="spinHead" alt={dict.media.spinHead} caption={dict.home.manufacturing.captions.finish} sizes="(min-width: 760px) 24vw, 46vw" />
+          <Photo id="lettering" alt={dict.media.lettering} caption={dict.home.manufacturing.captions.lettering} sizes="(min-width: 760px) 38vw, 48vw" />
+          <Photo id="handleLion" alt={dict.media.handleLion} caption={dict.home.manufacturing.captions.buttcap} sizes="(min-width: 760px) 38vw, 48vw" />
+          <Photo id="engraving" alt={dict.media.engraving} caption={dict.home.manufacturing.captions.handle} sizes="(min-width: 760px) 38vw, 48vw" />
+          <Photo id="spinHead" alt={dict.media.spinHead} caption={dict.home.manufacturing.captions.finish} sizes="(min-width: 760px) 38vw, 48vw" />
         </div>
         {inspectionVideo.released && <InspectionVideo src={inspectionVideo.src} poster={inspectionVideo.poster} label={dict.media.spinVisual} caption={dict.media.greatHead} />}
         <div className="grid-2" style={{ marginTop: 24 }}>

@@ -171,10 +171,10 @@ export default async function Home({ params }) {
       <Section id="manufacturing" eyebrow={H.manufacturing.eyebrow} title={H.manufacturing.title}>
         <p className="lead" style={{ marginBottom: 26 }}>{H.manufacturing.p}</p>
         <div className="detail-grid whole">
-          <Photo id="lettering" alt={M.lettering} caption={H.manufacturing.captions.lettering} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="handleLion" alt={M.handleLion} caption={H.manufacturing.captions.buttcap} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="engraving" alt={M.engraving} caption={H.manufacturing.captions.handle} sizes="(min-width: 760px) 24vw, 46vw" />
-          <Photo id="spinHead" alt={M.spinHead} caption={H.manufacturing.captions.finish} sizes="(min-width: 760px) 24vw, 46vw" />
+          <Photo id="lettering" alt={M.lettering} caption={H.manufacturing.captions.lettering} sizes="(min-width: 760px) 38vw, 48vw" />
+          <Photo id="handleLion" alt={M.handleLion} caption={H.manufacturing.captions.buttcap} sizes="(min-width: 760px) 38vw, 48vw" />
+          <Photo id="engraving" alt={M.engraving} caption={H.manufacturing.captions.handle} sizes="(min-width: 760px) 38vw, 48vw" />
+          <Photo id="spinHead" alt={M.spinHead} caption={H.manufacturing.captions.finish} sizes="(min-width: 760px) 38vw, 48vw" />
         </div>
         <div className="grid-2" style={{ marginTop: 26 }}>
           <div className="card"><span className="status confirmed">{S.confirmed}</span><h3 style={{ marginTop: 12 }}>{H.manufacturing.confirmedTitle}</h3><Kickers items={H.manufacturing.confirmed} /></div>

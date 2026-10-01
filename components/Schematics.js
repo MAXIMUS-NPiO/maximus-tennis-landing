@@ -46,12 +46,21 @@ export function StiffnessSchematic({ labels, caption, schematicLabel }) {
 
 export function GripScale({ caption, schematicLabel }) {
   // Nominal designations are handle perimeters: 4″ … 4⅞″ in ⅛″ steps (+3.125 % per step).
+  // Drawn as the handle's own cross-section — the eight-bevel octagon of a racquet grip — on a
+  // common baseline, so the step from L0 to L7 is read as a handle growing thicker rather than as
+  // abstract discs. The proportion between the sizes is the true one; the absolute size is not.
   return (
     <figure className="schematic grip-scale">
       <ol className="grip-dots" aria-label={schematicLabel}>
         {grips.map((g, i) => (
           <li key={g.id} className={i >= 6 ? "ext" : ""}>
-            <span className="dot" style={{ "--k": 1 + i * 0.03125 }} aria-hidden="true" />
+            <span className="grip-slot" aria-hidden="true">
+              <span className="grip-oct" style={{ "--k": 1 + i * 0.03125 }}>
+                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" focusable="false">
+                  <polygon className="go-face" points="31,3 69,3 97,31 97,69 69,97 31,97 3,69 3,31" />
+                </svg>
+              </span>
+            </span>
             <b>{g.id}</b>
             <span className="mono">{g.inches}{g.fraction}″</span>
           </li>

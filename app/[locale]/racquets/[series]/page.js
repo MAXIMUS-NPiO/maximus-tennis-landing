@@ -56,7 +56,7 @@ export default async function Page({ params }) {
       <section className="series-hero">
         <div className="shell series-hero-grid">
           {hero ? (
-            <Photo id={hero} alt={M[hero]} caption={dict.home.series.photoLabel[id] || M[hero]} priority sizes="(min-width: 900px) 360px, 290px" className="series-hero-photo" />
+            <Photo id={hero} alt={M[hero]} caption={dict.home.series.photoLabel[id] || M[hero]} priority sizes="(min-width: 900px) 360px, 92vw" className="series-hero-photo" />
           ) : (
             <PhotoPending name={s.short} sub={`${s.headSizeSqIn} ${L.sqin} · ${R.direction[s.direction]}`} note={P.photoPending} className="series-hero-photo" />
           )}

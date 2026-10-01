@@ -21,6 +21,19 @@ export default async function Page({ params }) {
         <Note>{P.targetsNote}</Note>
         <Note red>{P.noZero}</Note>
       </Section>
+      {/* The exclusive option. Set apart from the three listed classes on purpose: it is not a
+          fourth class, it is agreed one racquet at a time outside the range. */}
+      <Section id="zero" band="band-ink" eyebrow={P.zero.eyebrow} title={P.zero.title}>
+        <p className="statement zero-sub">{P.zero.sub}</p>
+        <p className="lead zero-lead">{P.zero.p}</p>
+        <div className="grid-4 zero-points">
+          {P.zero.points.map(([h, t]) => (
+            <div key={h} className="card"><h3>{h}</h3><p style={{ marginTop: 8 }}>{t}</p></div>
+          ))}
+        </div>
+        <p className="zero-note">{P.zero.note}</p>
+        <div className="btn-row"><Cta locale={locale} to="custom" label={P.zero.cta} /></div>
+      </Section>
       <Section id="stiffness" band="band-2" title={P.stiffnessTitle}>
         <p className="lead" style={{ marginBottom: 30 }}>{P.stiffnessP1}</p>
         <div className="grid-3" style={{ marginBottom: 30 }}>

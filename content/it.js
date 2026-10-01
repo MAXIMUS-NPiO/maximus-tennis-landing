@@ -363,7 +363,21 @@ const it = {
     extendedTitle: "Modello tecnico esteso",
     extendedP: "Il modello dati supporta parametri aggiuntivi. Per essi non esistono ancora valori né classi di tolleranza; possono essere indicati come obiettivi richiesti in un brief tecnico.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Comportamento torsionale", length: "Lunghezza", beamProfile: "Profilo del telaio", headGeometry: "Geometria della testa", stringPattern: "Schema corde", durability: "Durabilità", vibration: "Caratteristiche di vibrazione" },
-    noZero: "MAXIMUS non descrive la sua gamma come priva di tolleranza. La precisione è indicata come classe, con una tolleranza dichiarata e un'architettura di controllo qualità definita.",
+    noZero: "MAXIMUS non descrive la sua gamma elencata come priva di tolleranza. Nella gamma la precisione è indicata come classe, con una tolleranza dichiarata e un'architettura di controllo qualità definita. ZERO non fa parte della gamma.",
+    zero: {
+      eyebrow: "Opzione esclusiva",
+      title: "ZERO",
+      sub: "Tolleranza zero al grammo.",
+      p: "Le tre classi tengono una racchetta finita all'interno di una banda dichiarata. ZERO elimina la banda. La racchetta è costruita e misurata fino a quando la lettura è uguale al valore dichiarato alla risoluzione dello strumento di misura di fabbrica, e quella lettura è consegnata con essa. Non fa parte della gamma elencata e non è una quarta classe: è concordata individualmente, per una racchetta o un set abbinato, come un'esclusiva su misura. Previo accordo, lo stesso approccio è applicato al bilanciamento e allo swingweight.",
+      points: [
+        ["Nessuna banda", "Il valore dichiarato è il risultato, non il centro di una tolleranza."],
+        ["Una alla volta", "Costruita, misurata e registrata come unità singola."],
+        ["Consegnata con la racchetta", "La lettura misurata è consegnata e conservata nella registrazione di produzione."],
+        ["Conferma per iscritto", "Parametri, ambito e tempi di consegna sono concordati prima della produzione."],
+      ],
+      note: "La corrispondenza è stabilita alla risoluzione dello strumento di misura di fabbrica. Un valore visualizzato identico non è un'affermazione di variazione fisica nulla. Disponibilità e condizioni sono concordate individualmente per ogni ordine.",
+      cta: "Richiedi ZERO",
+    },
     cta: "Configura con una classe di precisione",
   },
   grip: {

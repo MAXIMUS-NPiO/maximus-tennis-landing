@@ -363,7 +363,21 @@ const sv = {
     extendedTitle: "Utvidgad teknisk modell",
     extendedP: "Datamodellen rymmer fler parametrar. Det finns ännu inga värden eller toleransklasser för dem; de kan anges som önskade målvärden i ett tekniskt underlag.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Vridningsbeteende", length: "Längd", beamProfile: "Ramprofil", headGeometry: "Huvudgeometri", stringPattern: "Strängmönster", durability: "Hållbarhet", vibration: "Vibrationsegenskaper" },
-    noZero: "MAXIMUS beskriver inte sitt sortiment som att det har noll tolerans. Precision anges som en klass med en deklarerad tolerans och en definierad kvalitetsarkitektur.",
+    noZero: "MAXIMUS beskriver inte sitt listade sortiment som att det har noll tolerans. Precisionen i sortimentet anges som en klass med en deklarerad tolerans och en definierad kvalitetsarkitektur. ZERO är inte en del av sortimentet.",
+    zero: {
+      eyebrow: "Exklusivt alternativ",
+      title: "ZERO",
+      sub: "Noll grams tolerans.",
+      p: "De tre klasserna håller en färdig racket inom ett deklarerat toleransband. ZERO tar bort bandet. Racketen byggs och mäts till dess att mätvärdet är lika med den deklarerade siffran vid upplösningen hos fabrikens mätinstrument, och det mätvärdet lämnas ut med racketen. ZERO ingår inte i det listade sortimentet och är inte en fjärde klass: det avtalas individuellt, för en enskild racket eller en matchad uppsättning, som en exklusiv specialtillverkning. Enligt överenskommelse tillämpas samma tillvägagångssätt på balans och swingweight.",
+      points: [
+        ["Inget toleransband", "Den deklarerade siffran är resultatet, inte mitten i en tolerans."],
+        ["En i taget", "Byggs, mäts och dokumenteras som en enskild enhet."],
+        ["Lämnas ut med racketen", "Det uppmätta värdet överlämnas och bevaras i tillverkningsdokumentationen."],
+        ["Bekräftas skriftligt", "Parametrar, omfattning och leveranstid avtalas före tillverkning."],
+      ],
+      note: "Matchad vid upplösningen hos fabrikens mätinstrument. Ett identiskt visat värde är inget påstående om noll fysisk variation. Tillgänglighet och villkor avtalas individuellt för varje order.",
+      cta: "Begär ZERO",
+    },
     cta: "Konfigurera med en precisionsklass",
   },
   grip: {

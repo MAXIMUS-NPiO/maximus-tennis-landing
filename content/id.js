@@ -363,7 +363,21 @@ const id = {
     extendedTitle: "Model teknis yang diperluas",
     extendedP: "Model data ini mendukung parameter tambahan. Belum ada nilai atau kelas toleransi untuknya; parameter tersebut dapat disampaikan sebagai target yang diminta di dalam ringkasan teknis.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Perilaku torsional", length: "Panjang", beamProfile: "Profil rangka", headGeometry: "Geometri kepala", stringPattern: "Pola senar", durability: "Daya tahan", vibration: "Karakteristik getaran" },
-    noZero: "MAXIMUS tidak menggambarkan rangkaian produknya sebagai nol toleransi. Presisi dinyatakan sebagai kelas dengan toleransi yang dideklarasikan dan arsitektur kendali mutu yang ditetapkan.",
+    noZero: "MAXIMUS tidak menggambarkan rangkaian produknya yang terdaftar sebagai nol toleransi. Presisi di dalam rangkaian ini dinyatakan sebagai kelas dengan toleransi yang dideklarasikan dan arsitektur kendali mutu yang ditetapkan. ZERO bukan bagian dari rangkaian ini.",
+    zero: {
+      eyebrow: "Opsi eksklusif",
+      title: "ZERO",
+      sub: "Toleransi nol gram.",
+      p: "Ketiga kelas mempertahankan raket jadi di dalam rentang toleransi yang dinyatakan. ZERO menghapus rentang tersebut. Raket dibuat dan diukur sampai hasil pengukuran sama dengan nilai yang dinyatakan pada resolusi alat ukur pabrik, dan hasil pengukuran itu diserahkan bersama raket tersebut. Ini bukan bagian dari rangkaian yang terdaftar dan bukan kelas keempat: hal ini disepakati secara individual, untuk satu raket atau satu set serasi, sebagai produk eksklusif yang dibuat khusus. Atas kesepakatan, pendekatan yang sama diterapkan pada keseimbangan dan Swingweight.",
+      points: [
+        ["Tanpa rentang toleransi", "Nilai yang dinyatakan adalah hasilnya, bukan titik tengah sebuah toleransi."],
+        ["Satu per satu", "Dibuat, diukur dan dicatat sebagai satu unit tunggal."],
+        ["Diserahkan bersama raket", "Hasil pengukuran diserahkan dan disimpan di dalam catatan produksi."],
+        ["Dikonfirmasi secara tertulis", "Parameter, lingkup dan waktu tunggu disepakati sebelum produksi."],
+      ],
+      note: "Pencocokan dilakukan pada resolusi alat ukur pabrik. Angka yang tampil sama bukan merupakan klaim nol variasi fisik. Ketersediaan dan syaratnya disepakati secara individual untuk setiap pesanan.",
+      cta: "Ajukan permintaan ZERO",
+    },
     cta: "Konfigurasikan dengan kelas presisi",
   },
   grip: {

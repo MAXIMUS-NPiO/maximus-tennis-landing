@@ -363,7 +363,21 @@ const en = {
     extendedTitle: "Extended technical model",
     extendedP: "The data model supports additional parameters. No values or tolerance classes exist for them yet; they can be stated as requested targets in a technical brief.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Torsional behaviour", length: "Length", beamProfile: "Beam profile", headGeometry: "Head geometry", stringPattern: "String pattern", durability: "Durability", vibration: "Vibration characteristics" },
-    noZero: "MAXIMUS does not describe its range as having zero tolerance. Precision is stated as a class with a declared tolerance and a defined QC architecture.",
+    noZero: "MAXIMUS does not describe its listed range as having zero tolerance. Precision in the range is stated as a class with a declared tolerance and a defined QC architecture. ZERO is not part of the range.",
+    zero: {
+      eyebrow: "Exclusive option",
+      title: "ZERO",
+      sub: "Zero Gram Tolerance.",
+      p: "The three classes hold a finished racquet inside a declared band. ZERO removes the band. The racquet is built and measured until the reading equals the declared figure at the resolution of the factory instrument, and that reading is issued with it. It is not part of the listed range and not a fourth class: it is agreed individually, for one racquet or one matched set, as a custom-made exclusive. By agreement the same approach is applied to balance and swingweight.",
+      points: [
+        ["No band", "The declared figure is the result, not the centre of a tolerance."],
+        ["One at a time", "Built, measured and recorded as a single unit."],
+        ["Issued with the racquet", "The measured reading is handed over and kept in the production record."],
+        ["Confirmed in writing", "Parameters, scope and lead time are agreed before production."],
+      ],
+      note: "Matched at the resolution of the factory measurement instrument. An identical displayed figure is not a claim of zero physical variation. Availability and conditions are agreed individually for each order.",
+      cta: "Request ZERO",
+    },
     cta: "Configure with a precision class",
   },
   grip: {

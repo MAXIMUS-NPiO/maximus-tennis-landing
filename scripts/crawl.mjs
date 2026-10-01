@@ -17,10 +17,21 @@ const FORBIDDEN_RAW = [
 ];
 // Checked against visible text only (tags, scripts and styles removed): wording that must never be published.
 const FORBIDDEN_TEXT = [
-  /zero weight tolerance/i, /\bjude\b/i, /\bnii\b/i, /5,?000 racquets? per week/i, /20,000 per month/i, /temporary/i, /placeholder/i,
+  /\bjude\b/i, /\bnii\b/i, /5,?000 racquets? per week/i, /20,000 per month/i, /temporary/i, /placeholder/i,
   /lorem ipsum/i, /TODO/, /royalt[a-z]* (rate|percentage) of \d/i, /50\s?%/, /240\s?[–-]\s?340/, /\bwallet\b/i, /\bpayout/i,
 ];
 const visibleText = (html) => html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ");
+
+/**
+ * A zero-tolerance claim is published only where the measurement qualification is published with
+ * it. The blanket ban on the wording was lifted when the Founder introduced the ZERO exclusive
+ * option on 1 October 2026; the qualification is what keeps the claim defensible, so it is the
+ * qualification that is now enforced instead of the words.
+ */
+const ZERO_CLAIM = /zero[\s\u00a0-]*(gram|weight|g)?[\s\u00a0-]*toleran/i;
+const ZERO_QUALIFIERS = [
+  /resolution of the factory/i, /factory measurement instrument/i,
+];
 
 const seen = new Map();
 const problems = [];
@@ -42,6 +53,11 @@ while (queue.length) {
   for (const re of FORBIDDEN_RAW) if (re.test(html)) problems.push(`forbidden ${re} in ${path}`);
   const text = visibleText(html);
   for (const re of FORBIDDEN_TEXT) if (re.test(text)) problems.push(`forbidden text ${re} in ${path}`);
+  // English pages only: the qualifier phrases are English. Every other language is covered by the
+  // length check on precision.zero.p and precision.zero.note in scripts/check-i18n.mjs.
+  if (path.startsWith("/en") && ZERO_CLAIM.test(text) && !ZERO_QUALIFIERS.some((re) => re.test(text))) {
+    problems.push(`zero-tolerance claim without its measurement qualification in ${path}`);
+  }
   if (!LANG_RE.test(html)) problems.push(`lang attribute missing in ${path}`);
   if (!/rel="canonical"/.test(html)) problems.push(`canonical missing in ${path}`);
   for (const h of HREFLANGS) if (!new RegExp(`hreflang="${h}"`, "i").test(html)) problems.push(`hreflang ${h} missing in ${path}`);

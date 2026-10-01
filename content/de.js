@@ -363,7 +363,21 @@ const de = {
     extendedTitle: "Erweitertes technisches Modell",
     extendedP: "Das Datenmodell unterstützt zusätzliche Parameter. Für sie existieren noch keine Werte und keine Toleranzklassen; sie können in einem technischen Briefing als angeforderte Zielwerte angegeben werden.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Torsionsverhalten", length: "Länge", beamProfile: "Rahmenprofil", headGeometry: "Kopfgeometrie", stringPattern: "Saitenbild", durability: "Haltbarkeit", vibration: "Vibrationsverhalten" },
-    noZero: "MAXIMUS beschreibt sein Sortiment nicht als toleranzfrei. Präzision wird als Klasse mit deklarierter Toleranz und definierter QS-Architektur angegeben.",
+    noZero: "MAXIMUS beschreibt sein gelistetes Sortiment nicht als toleranzfrei. Die Präzision im Sortiment wird als Klasse mit deklarierter Toleranz und definierter QS-Architektur angegeben. ZERO ist nicht Teil des Sortiments.",
+    zero: {
+      eyebrow: "Exklusive Option",
+      title: "ZERO",
+      sub: "Null Gramm Toleranz.",
+      p: "Die drei Klassen halten einen fertigen Schläger innerhalb eines deklarierten Toleranzbands. ZERO lässt das Band entfallen. Der Schläger wird gebaut und gemessen, bis der Messwert der deklarierten Zahl in der Auflösung des werkseitigen Messmittels entspricht, und dieser Messwert wird mit ihm ausgehändigt. ZERO ist nicht Teil des gelisteten Sortiments und keine vierte Klasse: Es wird individuell vereinbart — für einen einzelnen Schläger oder ein abgestimmtes Set — als exklusive Sonderanfertigung. Nach Vereinbarung wird dasselbe Vorgehen auf Balance und Swingweight angewandt.",
+      points: [
+        ["Kein Toleranzband", "Die deklarierte Zahl ist das Ergebnis, nicht die Mitte einer Toleranz."],
+        ["Eines nach dem anderen", "Als einzelne Einheit gebaut, gemessen und dokumentiert."],
+        ["Mit dem Schläger ausgehändigt", "Der gemessene Wert wird übergeben und in der Produktionsaufzeichnung aufbewahrt."],
+        ["Schriftlich bestätigt", "Parameter, Umfang und Lieferzeit werden vor der Produktion vereinbart."],
+      ],
+      note: "Abgestimmt in der Auflösung des werkseitigen Messmittels. Eine identisch angezeigte Zahl ist keine Aussage über null physikalische Streuung. Verfügbarkeit und Bedingungen werden für jeden Auftrag individuell vereinbart.",
+      cta: "ZERO anfragen",
+    },
     cta: "Mit einer Präzisionsklasse konfigurieren",
   },
   grip: {

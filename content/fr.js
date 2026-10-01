@@ -363,7 +363,21 @@ const fr = {
     extendedTitle: "Modèle technique étendu",
     extendedP: "Le modèle de données prend en charge des paramètres supplémentaires. Aucune valeur ni classe de tolérance n'existe encore pour eux ; ils peuvent être indiqués comme cibles demandées dans un cahier des charges technique.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Comportement en torsion", length: "Longueur", beamProfile: "Profil de cadre", headGeometry: "Géométrie de tamis", stringPattern: "Plan de cordage", durability: "Durabilité", vibration: "Caractéristiques vibratoires" },
-    noZero: "MAXIMUS ne décrit pas sa gamme comme ayant une tolérance nulle. La précision est énoncée comme une classe, avec une tolérance déclarée et une architecture qualité définie.",
+    noZero: "MAXIMUS ne décrit pas sa gamme répertoriée comme ayant une tolérance nulle. Dans la gamme, la précision est énoncée comme une classe, avec une tolérance déclarée et une architecture qualité définie. ZERO ne fait pas partie de la gamme.",
+    zero: {
+      eyebrow: "Option exclusive",
+      title: "ZERO",
+      sub: "Tolérance nulle au gramme.",
+      p: "Les trois classes tiennent une raquette finie à l'intérieur d'une plage déclarée. ZERO supprime la plage. La raquette est fabriquée et mesurée jusqu'à ce que la lecture soit égale à la valeur déclarée à la résolution de l'instrument de mesure en usine, et cette lecture est délivrée avec elle. Elle ne fait pas partie de la gamme répertoriée et ne constitue pas une quatrième classe : elle est convenue individuellement, pour une raquette ou un lot apparié, comme une exclusivité sur mesure. Sur accord, la même approche est appliquée à l'équilibre et au swingweight.",
+      points: [
+        ["Aucune plage", "La valeur déclarée est le résultat, et non le centre d'une tolérance."],
+        ["Une à la fois", "Fabriquée, mesurée et enregistrée comme une unité unique."],
+        ["Délivrée avec la raquette", "La lecture mesurée est remise et conservée dans l'enregistrement de production."],
+        ["Confirmation par écrit", "Les paramètres, le périmètre et le délai sont convenus avant la production."],
+      ],
+      note: "La concordance est établie à la résolution de l'instrument de mesure en usine. Une valeur affichée identique n'est pas une affirmation de variation physique nulle. La disponibilité et les conditions sont convenues individuellement pour chaque commande.",
+      cta: "Demander ZERO",
+    },
     cta: "Configurer avec une classe de précision",
   },
   grip: {

@@ -363,7 +363,21 @@ const sk = {
     extendedTitle: "Rozšírený technický model",
     extendedP: "Model údajov podporuje ďalšie parametre. Zatiaľ pre ne neexistujú hodnoty ani tolerančné triedy; možno ich uviesť ako požadované cieľové hodnoty v technickom zadaní.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Torzné správanie", length: "Dĺžka", beamProfile: "Profil rámu", headGeometry: "Geometria hlavy", stringPattern: "Vzor výpletu", durability: "Trvanlivosť", vibration: "Vibračné charakteristiky" },
-    noZero: "MAXIMUS neopisuje svoju ponuku ako ponuku s nulovou toleranciou. Presnosť sa uvádza ako trieda s deklarovanou toleranciou a definovanou architektúrou kontroly kvality.",
+    noZero: "MAXIMUS neopisuje svoju uvedenú ponuku ako ponuku s nulovou toleranciou. Presnosť v tejto ponuke sa uvádza ako trieda s deklarovanou toleranciou a definovanou architektúrou kontroly kvality. ZERO nie je súčasťou tejto ponuky.",
+    zero: {
+      eyebrow: "Exkluzívna možnosť",
+      title: "ZERO",
+      sub: "Nulová tolerancia na gram.",
+      p: "Tri triedy držia hotovú raketu v deklarovanom tolerančnom pásme. ZERO toto pásmo ruší. Raketa sa vyrába a meria, kým sa nameraný údaj nezhoduje s deklarovanou hodnotou v rozlíšení výrobného meracieho prístroja, a tento údaj sa vydáva spolu s raketou. Nie je súčasťou uvedenej ponuky ani štvrtou triedou: dojednáva sa individuálne, pre jednu raketu alebo jednu zladenú súpravu, ako exkluzívny individuálne vyrobený kus. Po dohode sa rovnaký postup uplatňuje na vyváženie a swingweight.",
+      points: [
+        ["Bez pásma", "Deklarovaná hodnota je výsledok, nie stred tolerancie."],
+        ["Po jednej", "Vyrobená, odmeraná a zaznamenaná ako jediný kus."],
+        ["Vydáva sa s raketou", "Nameraný údaj sa odovzdáva a uchováva vo výrobnom zázname."],
+        ["Potvrdené písomne", "Parametre, rozsah a dodacia lehota sa dojednávajú pred výrobou."],
+      ],
+      note: "Zhoda sa dosahuje v rozlíšení výrobného meracieho prístroja. Rovnaká zobrazená hodnota nie je tvrdením o nulovej fyzickej odchýlke. Dostupnosť a podmienky sa dojednávajú individuálne pre každú objednávku.",
+      cta: "Vyžiadať ZERO",
+    },
     cta: "Konfigurovať s triedou presnosti",
   },
   grip: {

@@ -363,7 +363,21 @@ const no = {
     extendedTitle: "Utvidet teknisk modell",
     extendedP: "Datamodellen støtter flere parametere. Det finnes ennå ingen verdier eller toleranseklasser for dem; de kan oppgis som forespurte målverdier i et teknisk underlag.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Torsjonsegenskaper", length: "Lengde", beamProfile: "Rammeprofil", headGeometry: "Hodegeometri", stringPattern: "Strengemønster", durability: "Holdbarhet", vibration: "Vibrasjonsegenskaper" },
-    noZero: "MAXIMUS beskriver ikke utvalget sitt som toleransefritt. Presisjon oppgis som en klasse med deklarert toleranse og en definert arkitektur for kvalitetskontroll.",
+    noZero: "MAXIMUS beskriver ikke sitt oppførte utvalg som toleransefritt. Presisjonen i utvalget oppgis som en klasse med deklarert toleranse og en definert arkitektur for kvalitetskontroll. ZERO er ikke en del av utvalget.",
+    zero: {
+      eyebrow: "Eksklusivt alternativ",
+      title: "ZERO",
+      sub: "Null gram toleranse.",
+      p: "De tre klassene holder en ferdig racket innenfor et deklarert toleransebånd. ZERO fjerner båndet. Racketen bygges og måles til måleverdien er lik den deklarerte verdien ved oppløsningen til fabrikkens måleinstrument, og denne måleverdien følger med racketen. ZERO er ikke en del av det oppførte utvalget og ikke en fjerde klasse: det avtales individuelt, for én racket eller ett matchet sett, som en eksklusiv spesialproduksjon. Etter avtale brukes samme tilnærming på balanse og swingweight.",
+      points: [
+        ["Uten toleransebånd", "Den deklarerte verdien er resultatet, ikke midten av en toleranse."],
+        ["Én om gangen", "Bygget, målt og dokumentert som én enhet."],
+        ["Følger med racketen", "Den målte verdien overleveres og bevares i produksjonsdokumentasjonen."],
+        ["Bekreftet skriftlig", "Parametere, omfang og leveringstid avtales før produksjon."],
+      ],
+      note: "Matchet ved oppløsningen til fabrikkens måleinstrument. En identisk vist verdi er ingen påstand om null fysisk variasjon. Tilgjengelighet og vilkår avtales individuelt for hver ordre.",
+      cta: "Be om ZERO",
+    },
     cta: "Konfigurer med en presisjonsklasse",
   },
   grip: {

@@ -40,10 +40,34 @@ const site = (await import(pathToFileURL(path.join(root, "data", "site.js")).hre
 // Default: every registered language except the master. Adding a language to data/site.js
 // puts it under this check automatically.
 const locales = process.argv.slice(2).length ? process.argv.slice(2) : site.locales.filter((l) => l !== site.defaultLocale);
+/**
+ * The ZERO claim is publishable only together with its measurement qualification. The crawler can
+ * only read that qualification in English, so the binding check lives here, where every language is
+ * loaded: the two sentences that carry it must exist and must still be sentences. This catches the
+ * realistic failure — a locale where someone shortens or empties them — in all twenty-nine.
+ */
+const MIN_ZERO = { p: 70, note: 30 };
+function checkZero(dict, locale) {
+  const z = dict && dict.precision && dict.precision.zero;
+  if (!z) {
+    problems.push(`${locale}: precision.zero missing — the exclusive option must be published in every language`);
+    return;
+  }
+  for (const [k, min] of Object.entries(MIN_ZERO)) {
+    const v = typeof z[k] === "string" ? z[k].trim() : "";
+    if (v.length < min) {
+      problems.push(`${locale}: precision.zero.${k} is ${v.length} characters — the measurement qualification must be published with the claim`);
+    }
+  }
+}
+
 const en = await load("en");
+checkZero(en, "en");
 for (const l of locales) {
   try {
-    walk(en, await load(l), "root", l);
+    const d = await load(l);
+    walk(en, d, "root", l);
+    checkZero(d, l);
   } catch (e) {
     problems.push(`${l}: cannot load — ${e.message}`);
   }

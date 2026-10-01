@@ -363,7 +363,21 @@ const hu = {
     extendedTitle: "Kibővített műszaki modell",
     extendedP: "Az adatmodell további paramétereket is támogat. Ezekhez még nincsenek értékek vagy tűrésosztályok; műszaki kérésben igényelt célértékként megadhatók.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Csavarási viselkedés", length: "Hossz", beamProfile: "Vázprofil", headGeometry: "Fejgeometria", stringPattern: "Húrozási kép", durability: "Tartósság", vibration: "Vibrációs jellemzők" },
-    noZero: "A MAXIMUS nem állítja, hogy a kínálata nulla tűréssel készül. A precizitást osztályként adjuk meg, deklarált tűréssel és meghatározott minőségellenőrzési architektúrával.",
+    noZero: "A MAXIMUS nem állítja, hogy a listás kínálata nulla tűréssel készül. A kínálatban a precizitást osztályként adjuk meg, deklarált tűréssel és meghatározott minőségellenőrzési architektúrával. A ZERO nem része a kínálatnak.",
+    zero: {
+      eyebrow: "Exkluzív opció",
+      title: "ZERO",
+      sub: "Nulla gramm tűrés.",
+      p: "A három osztály egy elkészült ütőt deklarált tűréssávon belül tart. A ZERO megszünteti a tűréssávot. Az ütőt addig gyártjuk és mérjük, amíg a mért érték a gyári mérőműszer felbontása szerint meg nem egyezik a deklarált értékkel, és ezt a mért értéket az ütővel együtt adjuk ki. Nem része a listás kínálatnak, és nem is negyedik osztály: egyedileg egyeztetjük, egyetlen ütőre vagy egyetlen összemért készletre, rendelésre készülő exkluzív kivitelként. Megállapodás szerint ugyanezt a megközelítést alkalmazzuk a balanszra és a swingweightre is.",
+      points: [
+        ["Tűréssáv nélkül", "A deklarált érték az eredmény, nem egy tűrés közepe."],
+        ["Egyszerre egy", "Egyetlen darabként gyártjuk, mérjük és dokumentáljuk."],
+        ["Az ütővel együtt adjuk ki", "A mért értéket átadjuk, és megőrizzük a gyártási nyilvántartásban."],
+        ["Írásban igazoljuk", "A paramétereket, a terjedelmet és az átfutási időt a gyártás előtt egyeztetjük."],
+      ],
+      note: "Az egyezés a gyári mérőműszer felbontása szerint értendő. Az azonos megjelenített érték nem jelent nulla fizikai szórásra vonatkozó állítást. Az elérhetőséget és a feltételeket minden megrendelésnél egyedileg egyeztetjük.",
+      cta: "ZERO kérése",
+    },
     cta: "Összeállítás precíziós osztállyal",
   },
   grip: {

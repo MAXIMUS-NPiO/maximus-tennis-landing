@@ -363,7 +363,21 @@ const es = {
     extendedTitle: "Modelo técnico ampliado",
     extendedP: "El modelo de datos admite parámetros adicionales. Todavía no existen valores ni clases de tolerancia para ellos; pueden indicarse como objetivos solicitados en un pliego técnico.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Comportamiento torsional", length: "Longitud", beamProfile: "Perfil del marco", headGeometry: "Geometría de la cabeza", stringPattern: "Patrón de cordaje", durability: "Durabilidad", vibration: "Características de vibración" },
-    noZero: "MAXIMUS no describe su gama como de tolerancia cero. La precisión se indica como una clase con una tolerancia declarada y una arquitectura de control de calidad definida.",
+    noZero: "MAXIMUS no describe su gama listada como de tolerancia cero. La precisión dentro de la gama se indica como una clase con una tolerancia declarada y una arquitectura de control de calidad definida. ZERO no forma parte de la gama.",
+    zero: {
+      eyebrow: "Opción exclusiva",
+      title: "ZERO",
+      sub: "Cero gramos de tolerancia.",
+      p: "Las tres clases mantienen una raqueta terminada dentro de una banda declarada. ZERO elimina la banda. La raqueta se fabrica y se mide hasta que la lectura coincide con el valor declarado a la resolución del instrumento de medición de fábrica, y esa lectura se entrega con ella. No forma parte de la gama listada ni es una cuarta clase: se acuerda de forma individual, para una raqueta o un conjunto emparejado, como una exclusividad personalizada. Por acuerdo, el mismo enfoque se aplica al balance y al swingweight.",
+      points: [
+        ["Sin banda", "El valor declarado es el resultado, no el centro de una tolerancia."],
+        ["Una a la vez", "Fabricada, medida y registrada como una unidad única."],
+        ["Se entrega con la raqueta", "La lectura medida se entrega y se conserva en el registro de producción."],
+        ["Confirmación por escrito", "Los parámetros, el alcance y el plazo de entrega se acuerdan antes de la producción."],
+      ],
+      note: "La coincidencia se establece a la resolución del instrumento de medición de fábrica. Un valor idéntico en pantalla no es una afirmación de variación física cero. La disponibilidad y las condiciones se acuerdan de forma individual para cada pedido.",
+      cta: "Solicitar ZERO",
+    },
     cta: "Configurar con una clase de precisión",
   },
   grip: {

@@ -142,6 +142,30 @@ export const precisionClasses = [
   },
 ];
 
+/**
+ * Exclusive option, introduced by the Founder on 1 October 2026.
+ *
+ * Deliberately NOT a fourth entry in precisionClasses. The listed range keeps its three classes and
+ * their declared tolerance bands; this is agreed individually, for a single racquet or one matched
+ * set, outside the range. It removes the band rather than narrowing it: the unit is built and
+ * measured until the reading equals the declared figure at the resolution of the factory
+ * instrument, and that reading is issued with the racquet.
+ */
+export const exclusiveTier = {
+  id: "ZERO",
+  kind: "matched-declared-figure",
+  parameter: "weight",
+  byAgreement: ["balance", "swingweight"],
+  qc: [
+    "single-unit-build",
+    "individual-measurement",
+    "reading-issued-with-the-racquet",
+    "retained-production-record",
+    "written-agreement-before-production",
+  ],
+  status: { scope: "FOUNDER_CONFIRMED", conditions: "INDIVIDUAL" },
+};
+
 export const precisionParameters = ["weight", "balance", "swingweight", "stiffness"];
 
 /** Eight factory grip sizes. Nominal designations; raw handle dimensions and measurement protocol are separate. */

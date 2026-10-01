@@ -363,7 +363,21 @@ const uz = {
     extendedTitle: "Kengaytirilgan texnik model",
     extendedP: "Maʼlumotlar modeli qoʻshimcha parametrlarni qoʻllab-quvvatlaydi. Ular uchun hali qiymatlar yoki chetlanish sinflari mavjud emas; ularni texnik topshiriqda soʻralgan maqsadlar sifatida koʻrsatish mumkin.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Burilishga xulq-atvor", length: "Uzunlik", beamProfile: "Rama profili", headGeometry: "Bosh geometriyasi", stringPattern: "Tor sxemasi", durability: "Chidamlilik", vibration: "Tebranish xususiyatlari" },
-    noZero: "MAXIMUS oʻz qatorini nol chetlanishli deb taʼriflamaydi. Aniqlik eʼlon qilingan chetlanish va belgilangan sifat nazorati arxitekturasiga ega sinf sifatida koʻrsatiladi.",
+    noZero: "MAXIMUS roʻyxatdagi qatorini nol chetlanishli deb taʼriflamaydi. Qatordagi aniqlik eʼlon qilingan chetlanish va belgilangan sifat nazorati arxitekturasiga ega sinf sifatida koʻrsatiladi. ZERO qator tarkibiga kirmaydi.",
+    zero: {
+      eyebrow: "Eksklyuziv variant",
+      title: "ZERO",
+      sub: "Nol gramm chetlanish.",
+      p: "Uch sinf tayyor raketkani eʼlon qilingan chetlanish oraligʻi ichida ushlab turadi. ZERO bu oraliqni olib tashlaydi. Raketka oʻlchov qiymati zavod asbobining aniqlik darajasida eʼlon qilingan qiymatga teng boʻlguncha tayyorlanadi va oʻlchanadi; shu oʻlchov qiymati raketka bilan birga beriladi. U roʻyxatdagi qator tarkibiga kirmaydi va toʻrtinchi sinf emas: bitta raketka yoki bitta moslashtirilgan toʻplam uchun maxsus tayyorlanadigan eksklyuziv sifatida individual kelishiladi. Kelishuvga koʻra xuddi shu yondashuv balans va swingweight uchun ham qoʻllanadi.",
+      points: [
+        ["Oraliq yoʻq", "Eʼlon qilingan qiymat — natijaning oʻzi, chetlanishning markazi emas."],
+        ["Har galda bitta raketka", "Yagona birlik sifatida tayyorlanadi, oʻlchanadi va qayd etiladi."],
+        ["Raketka bilan birga beriladi", "Oʻlchangan qiymat topshiriladi va ishlab chiqarish yozuvida saqlanadi."],
+        ["Yozma ravishda tasdiqlanadi", "Parametrlar, qamrov va yetkazib berish muddati ishlab chiqarishdan oldin kelishiladi."],
+      ],
+      note: "Tenglik zavod oʻlchov asbobining aniqlik darajasida amal qiladi. Ekranda bir xil qiymat koʻrinishi fizik oʻzgarish nolga teng degan daʼvo emas. Mavjudlik va shartlar har bir buyurtma uchun individual kelishiladi.",
+      cta: "ZERO soʻrash",
+    },
     cta: "Aniqlik sinfi bilan konfiguratsiya qilish",
   },
   grip: {

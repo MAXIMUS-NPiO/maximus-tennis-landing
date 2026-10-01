@@ -363,7 +363,21 @@ const ro = {
     extendedTitle: "Model tehnic extins",
     extendedP: "Modelul de date acceptă parametri suplimentari. Pentru aceștia nu există încă valori sau clase de toleranță; ei pot fi indicați drept ținte solicitate într-o temă tehnică.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Comportament torsional", length: "Lungime", beamProfile: "Profilul cadrului", headGeometry: "Geometria capului", stringPattern: "Schema de cordaj", durability: "Durabilitate", vibration: "Caracteristici de vibrație" },
-    noZero: "MAXIMUS nu descrie gama sa drept una cu toleranță zero. Precizia este exprimată ca o clasă, cu o toleranță declarată și o arhitectură definită de control al calității.",
+    noZero: "MAXIMUS nu descrie gama sa listată drept una cu toleranță zero. În cadrul gamei, precizia este exprimată ca o clasă, cu o toleranță declarată și o arhitectură definită de control al calității. ZERO nu face parte din gamă.",
+    zero: {
+      eyebrow: "Opțiune exclusivă",
+      title: "ZERO",
+      sub: "Zero grame de toleranță.",
+      p: "Cele trei clase mențin o rachetă finită în interiorul unei benzi declarate. ZERO elimină banda. Racheta este construită și măsurată până când citirea este egală cu valoarea declarată la rezoluția instrumentului de măsurare din fabrică, iar acea citire este predată împreună cu ea. Nu face parte din gama listată și nu este o a patra clasă: se convine individual, pentru o rachetă sau un set asortat, ca exclusivitate la comandă. Prin acord, aceeași abordare se aplică balansului și swingweight-ului.",
+      points: [
+        ["Fără bandă", "Valoarea declarată este rezultatul, nu centrul unei toleranțe."],
+        ["Una câte una", "Construită, măsurată și înregistrată ca unitate unică."],
+        ["Predată împreună cu racheta", "Citirea măsurată este predată și păstrată în înregistrarea de producție."],
+        ["Confirmare în scris", "Parametrii, obiectul și termenul de livrare se convin înainte de producție."],
+      ],
+      note: "Concordanța se stabilește la rezoluția instrumentului de măsurare din fabrică. O valoare afișată identică nu reprezintă o afirmație privind variația fizică zero. Disponibilitatea și condițiile se convin individual pentru fiecare comandă.",
+      cta: "Solicitați ZERO",
+    },
     cta: "Configurați cu o clasă de precizie",
   },
   grip: {

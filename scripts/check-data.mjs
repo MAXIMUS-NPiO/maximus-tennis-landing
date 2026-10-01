@@ -43,7 +43,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = path.join(d, f); if (["node_modules", ".next", ".git"].includes(f)) return []; return statSync(p).isDirectory() ? walk(p) : [p]; });
 const banned = [
-  /381\.135245/, /0\.162636422/, /shaleni/i, /borteyman/i, /ghana/i, /zero weight tolerance/i, /go tennis/i, /norris/i,
+  /381\.135245/, /0\.162636422/, /shaleni/i, /borteyman/i, /ghana/i, /go tennis/i, /norris/i,
   /maximussports\.ae/i, /1[ ,.]?104[ ,.]?600/, /2[ ,.]?946[ ,.]?618/, /\b(102|136|204|139)\s?(EUR|€)/, /\bJude\b/, /\bNii\b/, /240\s?[–-]\s?340/,
 ];
 // Scope: everything that can reach the public bundle or rendered pages. Internal governance
@@ -57,4 +57,4 @@ for (const f of publicFiles) {
 }
 
 if (fail.length) { console.error(fail.join("\n")); process.exit(1); }
-console.log(`product data OK: GREAT ${series.great.matrix.length} · POWER ${series.power.matrix.length} · SPIN ${series.spin.matrix.length} (222–377 g, balances confirmed) · L0–L7 · P2.5/P1.5/P0.5 · SST · Spot Trainer · no banned content`);
+console.log(`product data OK: GREAT ${series.great.matrix.length} · POWER ${series.power.matrix.length} · SPIN ${series.spin.matrix.length} (222–377 g, balances confirmed) · L0–L7 · P2.5/P1.5/P0.5 + ZERO · SST · Spot Trainer · no banned content`);

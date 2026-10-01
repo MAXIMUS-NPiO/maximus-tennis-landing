@@ -363,7 +363,21 @@ const pt = {
     extendedTitle: "Modelo técnico estendido",
     extendedP: "O modelo de dados admite parâmetros adicionais. Ainda não existem valores nem classes de tolerância para eles; podem ser indicados como alvos solicitados em um briefing técnico.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Comportamento torcional", length: "Comprimento", beamProfile: "Perfil do aro", headGeometry: "Geometria da cabeça", stringPattern: "Padrão de encordoamento", durability: "Durabilidade", vibration: "Características de vibração" },
-    noZero: "A MAXIMUS não descreve a sua linha como tendo tolerância zero. A precisão é declarada como uma classe, com uma tolerância declarada e uma arquitetura de CQ definida.",
+    noZero: "A MAXIMUS não descreve a sua linha de catálogo como tendo tolerância zero. A precisão na linha é declarada como uma classe, com uma tolerância declarada e uma arquitetura de CQ definida. O ZERO não faz parte da linha.",
+    zero: {
+      eyebrow: "Opção exclusiva",
+      title: "ZERO",
+      sub: "Tolerância zero ao grama.",
+      p: "As três classes mantêm uma raquete pronta dentro de uma faixa declarada. O ZERO elimina a faixa. A raquete é construída e medida até que a leitura seja igual ao valor declarado na resolução do instrumento de medição de fábrica, e essa leitura é entregue com ela. Não faz parte da linha de catálogo e não é uma quarta classe: é acordada individualmente, para uma raquete ou um conjunto casado, como uma exclusividade personalizada. Mediante acordo, a mesma abordagem é aplicada ao balanço e ao swingweight.",
+      points: [
+        ["Sem faixa", "O valor declarado é o resultado, não o centro de uma tolerância."],
+        ["Uma por vez", "Construída, medida e registrada como uma unidade única."],
+        ["Entregue com a raquete", "A leitura medida é entregue e mantida no registro de produção."],
+        ["Confirmação por escrito", "Parâmetros, escopo e prazo de entrega são acordados antes da produção."],
+      ],
+      note: "A coincidência é estabelecida na resolução do instrumento de medição de fábrica. Um valor exibido idêntico não é uma afirmação de variação física zero. Disponibilidade e condições são acordadas individualmente para cada pedido.",
+      cta: "Solicitar ZERO",
+    },
     cta: "Configurar com uma classe de precisão",
   },
   grip: {

@@ -363,7 +363,21 @@ const tr = {
     extendedTitle: "Genişletilmiş teknik model",
     extendedP: "Veri modeli ek parametreleri destekler. Bunlar için henüz değer veya tolerans sınıfı bulunmuyor; bir teknik brief içinde talep edilen hedefler olarak belirtilebilirler.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Burulma davranışı", length: "Uzunluk", beamProfile: "Kasa profili", headGeometry: "Kafa geometrisi", stringPattern: "Kordaj deseni", durability: "Dayanıklılık", vibration: "Titreşim özellikleri" },
-    noZero: "MAXIMUS, ürün serisini sıfır toleranslı olarak tanımlamaz. Hassasiyet; beyan edilmiş bir toleransı ve tanımlı bir kalite kontrol mimarisi olan bir sınıf olarak belirtilir.",
+    noZero: "MAXIMUS, listelenmiş ürün serisini sıfır toleranslı olarak tanımlamaz. Serideki hassasiyet; beyan edilmiş bir toleransı ve tanımlı bir kalite kontrol mimarisi olan bir sınıf olarak belirtilir. ZERO, bu serinin bir parçası değildir.",
+    zero: {
+      eyebrow: "Ayrıcalıklı seçenek",
+      title: "ZERO",
+      sub: "Sıfır gram tolerans.",
+      p: "Üç sınıf, tamamlanmış bir raketi beyan edilmiş bir tolerans bandının içinde tutar. ZERO bu bandı kaldırır. Raket, ölçüm değeri fabrika cihazının çözünürlüğünde beyan edilen değere eşit olana kadar üretilir ve ölçülür; o ölçüm değeri raketle birlikte verilir. Listelenmiş serinin bir parçası değildir ve dördüncü bir sınıf değildir: tek bir raket veya tek bir eşleştirilmiş set için, özel üretim bir ayrıcalık olarak bireysel olarak kararlaştırılır. Anlaşmaya bağlı olarak aynı yaklaşım dengeye ve swingweight'e de uygulanır.",
+      points: [
+        ["Bant yok", "Beyan edilen değer sonucun kendisidir, bir toleransın merkezi değil."],
+        ["Her seferinde bir raket", "Tek bir birim olarak üretilir, ölçülür ve kaydedilir."],
+        ["Raketle birlikte verilir", "Ölçülen değer teslim edilir ve üretim kaydında saklanır."],
+        ["Yazılı olarak teyit edilir", "Parametreler, kapsam ve teslim süresi üretimden önce kararlaştırılır."],
+      ],
+      note: "Eşitlik, fabrika ölçüm cihazının çözünürlüğü düzeyinde geçerlidir. Ekranda görünen değerin aynı olması, sıfır fiziksel değişkenlik iddiası değildir. Temin durumu ve koşullar her sipariş için bireysel olarak kararlaştırılır.",
+      cta: "ZERO talep edin",
+    },
     cta: "Hassasiyet sınıfıyla yapılandırın",
   },
   grip: {

@@ -363,7 +363,21 @@ const pl = {
     extendedTitle: "Rozszerzony model techniczny",
     extendedP: "Model danych obsługuje dodatkowe parametry. Nie istnieją dla nich jeszcze wartości ani klasy tolerancji; można je podać jako zgłoszone wartości docelowe w briefie technicznym.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Zachowanie skrętne", length: "Długość", beamProfile: "Profil ramy", headGeometry: "Geometria główki", stringPattern: "Układ naciągu", durability: "Trwałość", vibration: "Charakterystyka wibracji" },
-    noZero: "MAXIMUS nie opisuje swojej oferty jako mającej zerową tolerancję. Precyzja jest podawana jako klasa z zadeklarowaną tolerancją i zdefiniowaną architekturą kontroli jakości.",
+    noZero: "MAXIMUS nie opisuje swojej oferty katalogowej jako mającej zerową tolerancję. Precyzja w tej ofercie jest podawana jako klasa z zadeklarowaną tolerancją i zdefiniowaną architekturą kontroli jakości. ZERO nie jest częścią tej oferty.",
+    zero: {
+      eyebrow: "Opcja ekskluzywna",
+      title: "ZERO",
+      sub: "Zerowa tolerancja co do grama.",
+      p: "Trzy klasy utrzymują gotową rakietę w zadeklarowanym przedziale tolerancji. ZERO znosi ten przedział. Rakieta jest budowana i mierzona do chwili, gdy wskazanie jest równe zadeklarowanej wartości w rozdzielczości fabrycznego przyrządu pomiarowego, a to wskazanie jest wydawane razem z nią. Nie należy do oferty katalogowej i nie jest czwartą klasą: jest uzgadniane indywidualnie, dla jednej rakiety lub jednego zestawu dobranego, jako ekskluzywna konstrukcja na zamówienie. Po uzgodnieniu to samo podejście stosuje się do balansu i swingweight.",
+      points: [
+        ["Brak przedziału", "Zadeklarowana wartość jest wynikiem, a nie środkiem tolerancji."],
+        ["Pojedynczo", "Budowana, mierzona i zapisywana jako jedna sztuka."],
+        ["Wydawane razem z rakietą", "Zmierzone wskazanie jest przekazywane i zachowywane w zapisie produkcyjnym."],
+        ["Potwierdzane na piśmie", "Parametry, zakres i termin realizacji są uzgadniane przed produkcją."],
+      ],
+      note: "Zgodność jest osiągana w rozdzielczości fabrycznego przyrządu pomiarowego. Identyczna wyświetlana wartość nie jest twierdzeniem o zerowej zmienności fizycznej. Dostępność i warunki są uzgadniane indywidualnie dla każdego zamówienia.",
+      cta: "Poproś o ZERO",
+    },
     cta: "Skonfiguruj z klasą precyzji",
   },
   grip: {

@@ -363,7 +363,21 @@ const nl = {
     extendedTitle: "Uitgebreid technisch model",
     extendedP: "Het datamodel ondersteunt aanvullende parameters. Daarvoor bestaan nog geen waarden of tolerantieklassen; ze kunnen als aangevraagde doelwaarden in een technische briefing worden opgegeven.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Torsiegedrag", length: "Lengte", beamProfile: "Balkprofiel", headGeometry: "Kopgeometrie", stringPattern: "Snaarpatroon", durability: "Duurzaamheid", vibration: "Vibratiekenmerken" },
-    noZero: "MAXIMUS beschrijft zijn gamma niet als tolerantievrij. Precisie wordt opgegeven als een klasse met een vastgelegde tolerantie en een omschreven architectuur van de kwaliteitscontrole.",
+    noZero: "MAXIMUS beschrijft zijn vermelde gamma niet als tolerantievrij. De precisie binnen het gamma wordt opgegeven als een klasse met een vastgelegde tolerantie en een omschreven architectuur van de kwaliteitscontrole. ZERO maakt geen deel uit van het gamma.",
+    zero: {
+      eyebrow: "Exclusieve optie",
+      title: "ZERO",
+      sub: "Nul gram tolerantie.",
+      p: "De drie klassen houden een afgewerkt racket binnen een opgegeven tolerantieband. ZERO laat die band vervallen. Het racket wordt gebouwd en gemeten tot de meetwaarde gelijk is aan het opgegeven cijfer bij de resolutie van het meetinstrument van de fabriek, en die meetwaarde wordt met het racket meegeleverd. ZERO maakt geen deel uit van het vermelde gamma en is geen vierde klasse: het wordt individueel overeengekomen, voor één racket of één afgestemde set, als exclusief maatwerk. In overleg wordt dezelfde aanpak toegepast op balans en swingweight.",
+      points: [
+        ["Geen tolerantieband", "Het opgegeven cijfer is het resultaat, niet het midden van een tolerantie."],
+        ["Eén racket per keer", "Als één eenheid gebouwd, gemeten en vastgelegd."],
+        ["Meegeleverd met het racket", "De meetwaarde wordt overhandigd en bewaard in de productieregistratie."],
+        ["Schriftelijk bevestigd", "Parameters, omvang en levertijd worden vóór de productie overeengekomen."],
+      ],
+      note: "Afgestemd op de resolutie van het meetinstrument van de fabriek. Een identiek weergegeven cijfer is geen bewering dat er geen fysieke spreiding is. Beschikbaarheid en voorwaarden worden per order individueel overeengekomen.",
+      cta: "ZERO aanvragen",
+    },
     cta: "Samenstellen met een precisieklasse",
   },
   grip: {

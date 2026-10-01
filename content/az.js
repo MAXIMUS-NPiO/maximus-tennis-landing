@@ -363,7 +363,21 @@ const az = {
     extendedTitle: "Genişləndirilmiş texniki model",
     extendedP: "Məlumat modeli əlavə parametrləri dəstəkləyir. Onlar üçün hələ dəyər və ya tolerantlıq sinfi yoxdur; texniki brifdə tələb olunan hədəflər kimi göstərilə bilərlər.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Burulma davranışı", length: "Uzunluq", beamProfile: "Çərçivə profili", headGeometry: "Baş həndəsəsi", stringPattern: "Sim sxemi", durability: "Davamlılıq", vibration: "Vibrasiya xüsusiyyətləri" },
-    noZero: "MAXIMUS öz çeşidini sıfır tolerantlıqlı kimi təqdim etmir. Dəqiqlik bəyan edilmiş tolerantlığı və müəyyən edilmiş keyfiyyət nəzarəti arxitekturası olan sinif kimi göstərilir.",
+    noZero: "MAXIMUS siyahıdakı çeşidini sıfır tolerantlıqlı kimi təqdim etmir. Çeşiddəki dəqiqlik bəyan edilmiş tolerantlığı və müəyyən edilmiş keyfiyyət nəzarəti arxitekturası olan sinif kimi göstərilir. ZERO çeşidin bir hissəsi deyil.",
+    zero: {
+      eyebrow: "Eksklüziv seçim",
+      title: "ZERO",
+      sub: "Sıfır qram tolerantlıq.",
+      p: "Üç sinif hazır raketi bəyan edilmiş tolerantlıq zolağının içində saxlayır. ZERO bu zolağı aradan götürür. Raket, ölçmə dəyəri zavod cihazının ayırdetmə qabiliyyəti səviyyəsində bəyan edilmiş dəyərə bərabər olana qədər hazırlanır və ölçülür; həmin ölçmə dəyəri raketlə birlikdə verilir. O, siyahıdakı çeşidin bir hissəsi deyil və dördüncü sinif deyil: bir raket və ya bir uyğunlaşdırılmış dəst üçün sifariş üzrə hazırlanan eksklüziv kimi fərdi razılaşdırılır. Razılaşma əsasında eyni yanaşma balansa və swingweight-ə də tətbiq edilir.",
+      points: [
+        ["Zolaq yoxdur", "Bəyan edilmiş dəyər nəticənin özüdür, tolerantlığın mərkəzi deyil."],
+        ["Hər dəfə bir raket", "Vahid məhsul kimi hazırlanır, ölçülür və qeydə alınır."],
+        ["Raketlə birlikdə verilir", "Ölçülmüş dəyər təhvil verilir və istehsal qeydində saxlanılır."],
+        ["Yazılı şəkildə təsdiqlənir", "Parametrlər, əhatə dairəsi və hazırlanma müddəti istehsaldan əvvəl razılaşdırılır."],
+      ],
+      note: "Bərabərlik zavod ölçmə cihazının ayırdetmə qabiliyyəti səviyyəsində etibarlıdır. Göstərilən dəyərin eyni olması sıfır fiziki dəyişkənlik iddiası deyil. Mövcudluq və şərtlər hər sifariş üçün fərdi razılaşdırılır.",
+      cta: "ZERO tələb edin",
+    },
     cta: "Dəqiqlik sinfi ilə konfiqurasiya edin",
   },
   grip: {

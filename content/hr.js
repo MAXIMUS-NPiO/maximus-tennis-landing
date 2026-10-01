@@ -363,7 +363,21 @@ const hr = {
     extendedTitle: "Prošireni tehnički model",
     extendedP: "Model podataka podržava dodatne parametre. Za njih još ne postoje vrijednosti ni klase tolerancije; mogu se navesti kao zahtijevani ciljevi u tehničkom zahtjevu.",
     extended: { twistweight: "Twistweight", torsionalBehaviour: "Torzijsko ponašanje", length: "Duljina", beamProfile: "Profil okvira", headGeometry: "Geometrija glave", stringPattern: "Raspored žica", durability: "Trajnost", vibration: "Karakteristike vibracija" },
-    noZero: "MAXIMUS ne opisuje svoj asortiman kao asortiman s nultom tolerancijom. Preciznost se navodi kao klasa s deklariranom tolerancijom i definiranom arhitekturom kontrole kvalitete.",
+    noZero: "MAXIMUS ne opisuje svoj navedeni asortiman kao asortiman s nultom tolerancijom. Preciznost u asortimanu navodi se kao klasa s deklariranom tolerancijom i definiranom arhitekturom kontrole kvalitete. ZERO nije dio asortimana.",
+    zero: {
+      eyebrow: "Ekskluzivna opcija",
+      title: "ZERO",
+      sub: "Nulta tolerancija na gram.",
+      p: "Tri klase drže gotov reket unutar deklariranog raspona. ZERO ukida taj raspon. Reket se izrađuje i mjeri dok izmjerena vrijednost ne bude jednaka deklariranoj vrijednosti u rezoluciji tvorničkog mjernog instrumenta, a ta se vrijednost izdaje s njim. Nije dio navedenog asortimana ni četvrta klasa: dogovara se pojedinačno, za jedan reket ili jedan usklađeni set, kao ekskluzivna izrada po mjeri. Po dogovoru se isti pristup primjenjuje na balans i swingweight.",
+      points: [
+        ["Bez raspona", "Deklarirana vrijednost je rezultat, a ne središte tolerancije."],
+        ["Jedan po jedan", "Izrađuje se, mjeri i evidentira kao pojedinačna jedinica."],
+        ["Izdaje se s reketom", "Izmjerena vrijednost predaje se i čuva u proizvodnoj evidenciji."],
+        ["Potvrđeno u pisanom obliku", "Parametri, obuhvat i rok izrade dogovaraju se prije proizvodnje."],
+      ],
+      note: "Usklađenost se postiže u rezoluciji tvorničkog mjernog instrumenta. Ista prikazana vrijednost nije tvrdnja o nultoj fizičkoj varijaciji. Dostupnost i uvjeti dogovaraju se pojedinačno za svaku narudžbu.",
+      cta: "Zatražite ZERO",
+    },
     cta: "Konfigurirajte s klasom preciznosti",
   },
   grip: {

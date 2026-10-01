@@ -71,6 +71,37 @@ const ALLOWED_BY_LOCALE = {
     "Status",
     "Swingweight", "Twistweight",
   ]),
+  nl: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Tennis",   // the Dutch names of these sports
+    "Contact", "Training", "Product", "Menu", "Status", "Sport", "Comfort", "Beginner",  // Dutch words spelled as in English
+    "3 series", "4 parameters",                                  // "series" and "parameters" are the Dutch plurals too
+    "SPIN — 100 in² · Spin",                                     // series mark, unit, and the Dutch word for the stroke
+    "Swingweight", "Twistweight",                                // what Dutch stringers say
+  ]),
+  hr: new Set([
+    "Padel", "Pickleball", "Badminton",
+    "Sport", "Status",                                           // Croatian words spelled as in English
+    "Swingweight", "Twistweight",
+  ]),
+  el: new Set([
+    "Pickleball", "Racquetball",                                 // no Greek name in use
+    "Swingweight", "Twistweight",
+  ]),
+  id: new Set([
+    "Padel", "Pickleball", "Squash", "Racquetball",
+    "Status", "Menu", "Distributor",                             // Indonesian words spelled as in English
+    "Swingweight", "Twistweight",
+  ]),
+  az: new Set([
+    "Padel", "Badminton", "Tennis",
+    "Nominal", "Fitting",                                        // used as written by the Azerbaijani trade
+    "Swingweight", "Twistweight",
+  ]),
+  uz: new Set([
+    "Padel", "Badminton", "Tennis",
+    "Fitting",
+    "Swingweight", "Twistweight",
+  ]),
   de: new Set([
     "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
     "Status", "Training", "Organisation", "Name", "Innovation", "Institution", "Distributor",

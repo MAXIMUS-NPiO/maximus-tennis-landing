@@ -212,13 +212,30 @@ details.expander > div { padding: 0 18px 18px; }
 }
 .lang-trigger:hover, .lang-trigger[aria-expanded="true"] { border-color: #6c7a52; color: #cfe08a; }
 .lang-caret { font-size: 10px; line-height: 1; }
+/* The panel shows every language at once wherever the screen allows it: the languages fill
+   columns top to bottom, and the number of columns follows from the fixed row count, so adding a
+   language widens the panel instead of lengthening the scroll. A phone keeps the single scrolling
+   column, which is the only shape that fits there. */
 .lang-panel {
   position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 70;
-  min-width: 190px; max-width: calc(100vw - 24px); max-height: min(60vh, 420px); overflow-y: auto;
+  min-width: 190px; max-width: calc(100vw - 24px); max-height: min(70vh, 560px); overflow-y: auto;
   margin: 0; padding: 6px; list-style: none;
   background: var(--white); color: var(--ink);
   border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: 0 10px 28px rgba(23, 27, 24, 0.22);
+}
+@media (max-width: 559px) and (min-width: 360px) and (min-height: 740px) {
+  .lang-panel { display: grid; grid-auto-flow: column; grid-template-rows: repeat(15, auto); gap: 0 2px; max-height: none; overflow: visible; }
+  .lang-panel:not(.open) { display: none; }
+  .lang-panel a { padding: 8px 9px; font-size: 14.5px; }
+}
+@media (min-width: 560px) and (min-height: 620px) {
+  .lang-panel { display: grid; grid-auto-flow: column; grid-template-rows: repeat(15, auto); gap: 0 4px; max-height: none; overflow: visible; }
+  .lang-panel:not(.open) { display: none; }
+}
+@media (min-width: 900px) and (min-height: 560px) {
+  .lang-panel { grid-template-rows: repeat(10, auto); }
+  .lang-panel a { padding: 9px 12px; font-size: 15px; }
 }
 .lang-panel:not(.open) { display: none; }
 .lang-panel li { list-style: none; }

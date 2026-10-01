@@ -24,7 +24,10 @@ export const site = {
    *   match    — language tags of a visitor's device that select this language
    *   dir      — writing direction; omit for left to right
    */
-  locales: ["en", "de", "nl", "fr", "es", "it", "pt", "pl", "hu", "sk", "hr", "sr", "ro", "bg", "el", "sv", "no", "tr", "az", "uz", "kk", "uk", "ru", "ar", "hi", "id", "ja", "ko", "zh"],
+  // Order of the language menu. Ukrainian sits with the other European languages and Russian
+  // before the non-European block, so the two are neither adjacent in the list nor in the
+  // same column of the panel. Both placements are geographic; neither is a ranking.
+  locales: ["en", "de", "nl", "fr", "es", "it", "pt", "pl", "hu", "sk", "hr", "sr", "ro", "bg", "el", "uk", "sv", "no", "tr", "az", "uz", "kk", "ru", "ar", "hi", "id", "ja", "ko", "zh"],
   defaultLocale: "en",
   localeMeta: {
     en: { name: "English", short: "EN", hrefLang: "en", ogLocale: "en_GB", match: ["en"],

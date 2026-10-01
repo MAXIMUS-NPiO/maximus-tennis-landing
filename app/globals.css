@@ -690,3 +690,7 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
    than in the middle of インパクト. Browsers that do not know auto-phrase drop that one
    declaration and keep the kinsoku rules of line-break: strict. */
 :lang(ja) { line-break: strict; word-break: auto-phrase; }
+
+/* The authorship statement on the terms page: set apart from the numbered sections, because it is
+   a statement by the author rather than one of the terms. */
+.copyright-note { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 15px; }

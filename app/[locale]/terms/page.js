@@ -13,6 +13,9 @@ export default async function Page({ params }) {
       <Section first narrow>
         <GoverningVersion locale={locale} text={dict.common.truth.governing} />
         <div className="stack-lg">{T.sections.map(([h, p]) => <div key={h}><h2 className="h-3" style={{ marginBottom: 8 }}>{h}</h2><p className="muted">{p}</p></div>)}</div>
+        {/* Authorship, stated by the author. It sits under the intellectual-property section in every
+            language, in that language, and names the one person who holds the copyright. */}
+        <p className="copyright-note">{T.copyright}</p>
       </Section>
     </>
   );

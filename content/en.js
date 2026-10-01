@@ -900,6 +900,7 @@ const en = {
   },
   terms: {
     title: "Terms of use",
+    copyright: "Copyright in this website — its texts, photographs, design and code — belongs to Maximus Kiriyakulov alone. It has not been assigned to any company or to any other person.",
     updated: "Version 2026-09-21",
     sections: [
       ["Information, not offer", "Product information on this website describes approved specifications, configuration architecture and programme explanations. It is not an offer to sell, a price list, a stock statement or a delivery commitment. Commercial terms are agreed separately in writing with the contracting entity identified in each transaction."],

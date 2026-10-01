@@ -900,6 +900,7 @@ const tr = {
   },
   terms: {
     title: "Kullanım şartları",
+    copyright: "Bu web sitesinin — metinlerinin, fotoğraflarının, tasarımının ve kodunun — telif hakkı yalnızca Maximus Kiriyakulov'a aittir. Bu hak hiçbir şirkete veya başka bir kişiye devredilmemiştir.",
     updated: "Sürüm 2026-09-21",
     sections: [
       ["Bilgi, teklif değil", "Bu web sitesindeki ürün bilgileri; onaylı şartnameleri, yapılandırma mimarisini ve program açıklamalarını anlatır. Satış teklifi, fiyat listesi, stok beyanı veya teslim taahhüdü değildir. Ticari şartlar, her işlemde belirtilen sözleşme tarafıyla ayrıca yazılı olarak kararlaştırılır."],

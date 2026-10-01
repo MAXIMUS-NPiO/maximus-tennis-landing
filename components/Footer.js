@@ -27,7 +27,9 @@ export default function Footer({ locale, dict }) {
         <div>{entities.institutional.name} · {entities.equipment.name} · {entities.ip.name}</div>
         <div>{footer.rights}</div>
         <div>{footer.boundary}</div>
-        <div>© 2026 MAXIMUS</div>
+        {/* The copyright notice names the author himself, not the brand: under the Berne Convention
+            the name appearing on the work in the usual manner is the presumed author and rights holder. */}
+        <div>© 2026 Maximus Kiriyakulov</div>
       </div>
     </footer>
   );

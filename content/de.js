@@ -900,6 +900,7 @@ const de = {
   },
   terms: {
     title: "Nutzungsbedingungen",
+    copyright: "Das Urheberrecht an dieser Website — an ihren Texten, Fotografien, am Design und am Code — liegt allein bei Maximus Kiriyakulov. Es wurde weder an ein Unternehmen noch an eine andere Person übertragen.",
     updated: "Fassung 2026-09-21",
     sections: [
       ["Information, kein Angebot", "Die Produktinformationen auf dieser Website beschreiben freigegebene Spezifikationen, Konfigurationsarchitektur und Programmerklärungen. Sie sind kein Verkaufsangebot, keine Preisliste, keine Bestandsangabe und keine Lieferverpflichtung. Kommerzielle Bedingungen werden gesondert schriftlich mit der in jeder Transaktion benannten Vertragspartei vereinbart."],

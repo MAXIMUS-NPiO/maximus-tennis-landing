@@ -24,7 +24,7 @@ export const site = {
    *   match    — language tags of a visitor's device that select this language
    *   dir      — writing direction; omit for left to right
    */
-  locales: ["en", "de", "fr", "es", "it", "pt", "tr", "uk", "ru", "ar", "ja", "ko", "zh"],
+  locales: ["en", "de", "fr", "es", "it", "pt", "pl", "hu", "sk", "sr", "ro", "bg", "sv", "no", "tr", "uk", "ru", "ar", "ja", "ko", "zh"],
   defaultLocale: "en",
   localeMeta: {
     en: { name: "English", short: "EN", hrefLang: "en", ogLocale: "en_GB", match: ["en"],
@@ -51,6 +51,22 @@ export const site = {
       suggest: { text: "Este sitio está disponible en español.", go: "Cambiar a español", stay: "Permanecer en esta versión" } },
     it: { name: "Italiano", short: "IT", hrefLang: "it", ogLocale: "it_IT", match: ["it"],
       suggest: { text: "Questo sito è disponibile in italiano.", go: "Passa all'italiano", stay: "Resta su questa versione" } },
+    pl: { name: "Polski", short: "PL", hrefLang: "pl", ogLocale: "pl_PL", match: ["pl"],
+      suggest: { text: "Ta strona jest dostępna po polsku.", go: "Przejdź na polski", stay: "Zostań na tej wersji" } },
+    hu: { name: "Magyar", short: "HU", hrefLang: "hu", ogLocale: "hu_HU", match: ["hu"],
+      suggest: { text: "Ez az oldal magyarul is elérhető.", go: "Váltás magyarra", stay: "Maradok ezen a verzión" } },
+    sk: { name: "Slovenčina", short: "SK", hrefLang: "sk", ogLocale: "sk_SK", match: ["sk"],
+      suggest: { text: "Táto stránka je dostupná aj v slovenčine.", go: "Prepnúť na slovenčinu", stay: "Zostať na tejto verzii" } },
+    sr: { name: "Srpski", short: "SR", hrefLang: "sr-Latn", ogLocale: "sr_RS", match: ["sr"],
+      suggest: { text: "Ovaj sajt je dostupan na srpskom.", go: "Pređi na srpski", stay: "Ostani na ovoj verziji" } },
+    ro: { name: "Română", short: "RO", hrefLang: "ro", ogLocale: "ro_RO", match: ["ro"],
+      suggest: { text: "Acest site este disponibil în română.", go: "Comută la română", stay: "Rămâi pe această versiune" } },
+    bg: { name: "Български", short: "BG", hrefLang: "bg", ogLocale: "bg_BG", match: ["bg"],
+      suggest: { text: "Този сайт е достъпен на български.", go: "Превключи на български", stay: "Остани на тази версия" } },
+    sv: { name: "Svenska", short: "SV", hrefLang: "sv", ogLocale: "sv_SE", match: ["sv"],
+      suggest: { text: "Den här webbplatsen finns på svenska.", go: "Byt till svenska", stay: "Stanna på den här versionen" } },
+    no: { name: "Norsk", short: "NO", hrefLang: "nb", ogLocale: "nb_NO", match: ["no", "nb", "nn"],
+      suggest: { text: "Dette nettstedet er tilgjengelig på norsk.", go: "Bytt til norsk", stay: "Bli på denne versjonen" } },
     zh: { name: "简体中文", short: "中文", hrefLang: "zh-CN", ogLocale: "zh_CN", match: ["zh"],
       suggest: { text: "本网站提供简体中文版本。", go: "切换到简体中文", stay: "保持当前版本" } },
   },

@@ -900,6 +900,7 @@ const fr = {
   },
   terms: {
     title: "Conditions d'utilisation",
+    copyright: "Le droit d'auteur sur ce site — ses textes, ses photographies, son design et son code — appartient exclusivement à Maximus Kiriyakulov. Il n'a été cédé ni à une société ni à une autre personne.",
     updated: "Version 2026-09-21",
     sections: [
       ["Information, et non offre", "Les informations produit de ce site décrivent des spécifications approuvées, l'architecture de configuration et des explications de programme. Elles ne constituent ni une offre de vente, ni une liste de prix, ni un état des stocks, ni un engagement de livraison. Les conditions commerciales sont convenues séparément par écrit avec l'entité contractante identifiée dans chaque transaction."],

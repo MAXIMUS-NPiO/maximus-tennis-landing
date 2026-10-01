@@ -24,6 +24,9 @@ const ALLOWED = new Set([
   "Email",              // used as written in every locale on this site
   "VAT TRN",            // the tax label as it appears on the licence
   "10–13", "14–17",     // age bands: figures
+  // Trainer captions: the product name plus a weight and a balance — nothing else to translate.
+  "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
+  "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
 ]);
 
 /**
@@ -32,6 +35,42 @@ const ALLOWED = new Set([
  * Chinese value that was never translated. Each entry is a real word of that language.
  */
 const ALLOWED_BY_LOCALE = {
+  pl: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",   // the Polish names of these sports
+    "Menu", "Status",                                              // Polish words spelled as in English
+    "Swingweight", "Twistweight",                                  // what Polish stringers say
+  ]),
+  hu: new Set([
+    "Padel", "Pickleball", "Racquetball",                          // no Hungarian form in use
+    "Swingweight", "Twistweight",
+  ]),
+  sk: new Set([
+    "Padel", "Pickleball", "Squash", "Racquetball",
+    "Swingweight", "Twistweight",
+  ]),
+  sr: new Set([
+    "Padel", "Pickleball", "Badminton",
+    "Sport", "Status",                                             // Serbian words spelled as in English
+    "Swingweight", "Twistweight",
+  ]),
+  ro: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Beach tennis",
+    "Contact", "Control", "Transfer",                              // Romanian words spelled as in English
+    "GREAT — 97 in² · Control", "MAXIMUS GREAT · 97 in² · Control", // series mark, unit, and that same word
+    "Swingweight", "Twistweight",
+  ]),
+  bg: new Set([]),
+  sv: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Tennis",
+    "Distribution", "Innovation", "Institution", "Organisation", "Process", "Service", "Sport", "Status",
+    "Under 10", "Version 2026-09-21",                              // "under" and "version" are Swedish too
+    "Swingweight", "Twistweight",
+  ]),
+  no: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Tennis",
+    "Status",
+    "Swingweight", "Twistweight",
+  ]),
   de: new Set([
     "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
     "Status", "Training", "Organisation", "Name", "Innovation", "Institution", "Distributor",

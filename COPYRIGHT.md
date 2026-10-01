@@ -2,7 +2,7 @@
 
 Copyright in this website — its texts, photographs, design and code — belongs to **Maximus Kiriyakulov** alone. It has not been assigned to any company or to any other person. Where a company of the MAXIMUS ecosystem publishes or otherwise uses this work, it does so without any transfer of the copyright.
 
-The same statement is published on the site itself, in each of its twenty-one languages, on the terms page, and the notice in the footer of every page names the author.
+The same statement is published on the site itself, in each of its twenty-nine languages, on the terms page, and the notice in the footer of every page names the author.
 
 Protection arises without registration. Under the Berne Convention, in force for the United Arab Emirates since 14 July 2004 and binding in more than 180 states, protection is automatic and may not be made conditional on any formality. Article 15(1): the person whose name appears on the work in the usual manner is presumed to be its author, and may bring proceedings as such, unless the contrary is proved.
 

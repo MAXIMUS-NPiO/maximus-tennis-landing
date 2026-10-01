@@ -125,6 +125,18 @@ const pl = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Ustawienia analityki",
+    subscribe: {
+      title: "W kontakcie z MAXIMUS",
+      line: "Nowe serie, terminy doboru rakiety, materiały treningowe i program dla właścicieli. Kilka listów w roku, nic więcej.",
+      label: "Adres e-mail",
+      placeholder: "your@email.com",
+      button: "Zapisz się",
+      sending: "Wysyłanie",
+      done: "Adres jest na liście. Piszemy tylko wtedy, gdy mamy coś wartego przeczytania.",
+      invalid: "Prosimy sprawdzić adres.",
+      failed: "Adres nie został zapisany. Prosimy spróbować ponownie za chwilę.",
+      terms: "Zapisując się, zgadzają się Państwo na przesyłanie tych informacji przez MAXIMUS i na przechowywanie Państwa adresu w tym celu. W każdym liście znajduje się link do rezygnacji.",
+    },
     rights: "MAXIMUS® i emblemat lwa są znakami ekosystemu MAXIMUS. MIPA — wewnętrzna kontrola własności intelektualnej, pochodzenia i dokumentów.",
     boundary:
       "Warunki handlowe i umowne są ustalane odrębnie na piśmie. Zakup rakiety nie tworzy członkostwa instytucjonalnego, praw inwestycyjnych, własności praw intelektualnych ani uprawnienia do tantiem.",

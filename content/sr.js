@@ -125,6 +125,18 @@ const sr = {
     instagram: "Instagram",
     email: "E-pošta",
     analytics: "Podešavanja analitike",
+    subscribe: {
+      title: "Ostanite uz MAXIMUS",
+      line: "Nove serije, termini prilagođavanja, materijali za trening i program za vlasnike. Nekoliko pisama godišnje, ništa više.",
+      label: "Adresa e-pošte",
+      placeholder: "your@email.com",
+      button: "Pretplatite se",
+      sending: "Šalje se",
+      done: "Adresa je na listi. Pišemo samo kada imamo nešto vredno čitanja.",
+      invalid: "Proverite adresu.",
+      failed: "Adresa nije zabeležena. Pokušajte ponovo za trenutak.",
+      terms: "Pretplatom prihvatate da vam MAXIMUS može da šalje ta obaveštenja i da u tu svrhu čuva vašu adresu. Svako pismo sadrži link za odjavu.",
+    },
     rights: "MAXIMUS® i amblem lava su oznake MAXIMUS ekosistema. MIPA: interna kontrola intelektualne svojine, porekla i dokumentacije.",
     boundary:
       "Komercijalni i ugovorni uslovi dogovaraju se posebno, u pisanoj formi. Kupovina reketa ne stvara institucionalno članstvo, investicijska prava, vlasništvo nad intelektualnom svojinom niti pravo na tantijeme.",

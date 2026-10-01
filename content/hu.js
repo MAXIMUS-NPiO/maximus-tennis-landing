@@ -125,6 +125,18 @@ const hu = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Analitikai beállítások",
+    subscribe: {
+      title: "Maradjon a MAXIMUS világában",
+      line: "Új sorozatok, ütőillesztési időpontok, edzésanyagok és a tulajdonosi program. Évente néhány levél, semmi más.",
+      label: "E-mail-cím",
+      placeholder: "your@email.com",
+      button: "Feliratkozás",
+      sending: "Küldés",
+      done: "Felkerült a listára. Csak akkor írunk, ha van olyan hír, amit érdemes elolvasni.",
+      invalid: "Kérjük, ellenőrizze a címet.",
+      failed: "A cím nem került rögzítésre. Kérjük, próbálja újra egy pillanat múlva.",
+      terms: "A feliratkozással hozzájárul ahhoz, hogy a MAXIMUS megküldje Önnek ezeket a híreket, és a címét ebből a célból megőrizze. Minden levél tartalmaz leiratkozási hivatkozást.",
+    },
     rights: "A MAXIMUS® és az oroszlánembléma a MAXIMUS ökoszisztéma védjegyei. MIPA: belső szellemi tulajdon-, eredet- és dokumentumkontroll.",
     boundary:
       "A kereskedelmi és szerződéses feltételekről külön, írásban állapodunk meg. Egy ütő megvásárlása nem keletkeztet intézményi tagságot, befektetési jogokat, szellemi tulajdont vagy jogdíjra való jogosultságot.",

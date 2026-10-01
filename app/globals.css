@@ -363,6 +363,36 @@ details.expander > div { padding: 0 18px 18px; }
 .footer-contacts { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 .footer-contacts a { color: #cfd3cc; text-decoration: none; }
 .footer-contacts a:hover { color: var(--white); }
+/* Subscription to updates — the one place on the site where a visitor joins without writing a
+   request. One field, one action; the field and the button are one object on every width. */
+.footer-subscribe { margin-top: 22px; padding-top: 18px; border-top: 1px solid #222; }
+.footer-sub-h { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); font-weight: 650; }
+.subscribe-line { margin: 8px 0 0; max-width: 54ch; color: #cfd3cc; }
+.subscribe-row { display: flex; margin-top: 12px; max-width: 520px; border: 1px solid #3a3f38; border-radius: 2px; background: #0b0c0b; }
+.subscribe-row:focus-within { border-color: #cfd3cc; }
+.subscribe-row input[type="email"] {
+  flex: 1 1 auto; min-width: 0; border: 0; background: transparent; color: var(--white);
+  font: inherit; font-size: 16px; padding: 13px 14px; min-height: 48px; border-radius: 0;
+}
+.subscribe-row input[type="email"]::placeholder { color: #7f867b; }
+.subscribe-row input[type="email"]:focus { outline: none; }
+.subscribe-row button {
+  flex: 0 0 auto; border: 0; border-inline-start: 1px solid #3a3f38; background: var(--white); color: var(--black);
+  font: inherit; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0 20px; min-height: 48px; cursor: pointer;
+}
+.subscribe-row button:hover { background: #e7e4df; }
+.subscribe-row button:disabled { opacity: 0.6; cursor: default; }
+.subscribe-row button:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.subscribe-error { margin: 8px 0 0; color: #f0b4a8; font-size: 14px; }
+.subscribe-terms { margin: 10px 0 0; max-width: 62ch; font-size: 12.5px; line-height: 1.45; color: #8d948a; }
+.subscribe-done { margin: 10px 0 0; max-width: 54ch; color: var(--white); font-size: 16px; }
+@media (max-width: 420px) {
+  .subscribe-row { flex-wrap: wrap; }
+  .subscribe-row input[type="email"] { flex: 1 0 100%; }
+  .subscribe-row button { flex: 1 0 100%; border-inline-start: 0; border-top: 1px solid #3a3f38; }
+}
+
 .footer-acc-row { margin-top: 20px; display: grid; border-top: 1px solid #222; }
 .footer-acc-row > * { min-width: 0; }
 .footer-acc { border-bottom: 1px solid #222; }
@@ -545,6 +575,7 @@ html { scroll-padding-top: 84px; }
 /* Honeypot: clipped rather than pushed off-screen, so it adds nothing to the scrollable area in
    either writing direction. It stays in the DOM and in the form, and is already aria-hidden with
    tabindex="-1", so no person and no screen reader reaches it. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; margin: -1px; }
 .hp-field { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; padding: 0; margin: -1px; }
 .err-summary { border: 2px solid #a33a3a; border-radius: var(--radius); padding: 14px 16px; background: #fbeeee; }
 .err-summary p { margin: 0; }

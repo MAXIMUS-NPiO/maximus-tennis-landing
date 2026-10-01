@@ -125,6 +125,18 @@ const en = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Analytics settings",
+    subscribe: {
+      title: "Stay with MAXIMUS",
+      line: "New series, fitting dates, training material and the owner programme. A few letters a year, nothing else.",
+      label: "Email address",
+      placeholder: "your@email.com",
+      button: "Subscribe",
+      sending: "Sending",
+      done: "You are on the list. We write only when there is something worth reading.",
+      invalid: "Please check the address.",
+      failed: "The address was not registered. Please try again in a moment.",
+      terms: "By subscribing you agree that MAXIMUS may send you these updates and keep your address for that purpose. Every letter carries an unsubscribe link.",
+    },
     rights: "MAXIMUS® and the lion emblem are marks of the MAXIMUS ecosystem. MIPA internal IP, provenance and document control.",
     boundary:
       "Commercial and contractual terms are agreed separately in writing. A racquet purchase does not create institutional membership, investment rights, ownership of intellectual property or an entitlement to royalties.",

@@ -125,6 +125,18 @@ const id = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Pengaturan analitik",
+    subscribe: {
+      title: "Tetap terhubung dengan MAXIMUS",
+      line: "Seri baru, jadwal fitting, materi latihan dan program pemilik. Beberapa surat dalam setahun, tidak lebih.",
+      label: "Alamat e-mail",
+      placeholder: "your@email.com",
+      button: "Berlangganan",
+      sending: "Mengirim",
+      done: "Anda sudah masuk daftar. Kami menulis hanya bila ada yang layak dibaca.",
+      invalid: "Mohon periksa alamatnya.",
+      failed: "Alamat belum tercatat. Silakan coba lagi dalam beberapa saat.",
+      terms: "Dengan berlangganan, Anda setuju MAXIMUS mengirimkan pembaruan ini kepada Anda dan menyimpan alamat Anda untuk tujuan tersebut. Setiap surat memuat tautan untuk berhenti berlangganan.",
+    },
     rights: "MAXIMUS® dan lambang singa adalah merek dari ekosistem MAXIMUS. MIPA: kendali internal atas kekayaan intelektual, asal-usul dan dokumen.",
     boundary:
       "Syarat komersial dan kontraktual disepakati secara terpisah dan tertulis. Pembelian sebuah raket tidak menciptakan keanggotaan institusional, hak investasi, kepemilikan atas kekayaan intelektual atau hak atas royalti.",

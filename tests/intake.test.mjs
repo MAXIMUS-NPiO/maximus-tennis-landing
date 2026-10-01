@@ -137,6 +137,51 @@ test("accepted request: server id, stored record, allowlisted attribution, no IP
   assert.equal(lead.notify.status, "pending");
 });
 
+test("a subscription to updates needs only an address, and is stored like any other request", async () => {
+  const store = createMemoryStore();
+  const sub = {
+    purpose: "updates",
+    locale: "de",
+    fields: { email: "reader@example.org" },
+    consent: true,
+    idempotencyKey: uuid(),
+    elapsedMs: 9000,
+    hp: "",
+  };
+  const r = await acceptRequest(sub, { ip: "198.51.100.4", config: cfg(store) });
+  assert.equal(r.http, 201);
+  assert.equal(r.body.status, "accepted");
+  assert.match(r.body.request_id, ID_RE);
+  assert.ok(r.body.request_id.startsWith("MX-UPD-"));
+  const lead = await store.getLead(r.body.request_id);
+  assert.equal(lead.record.contact.email, "reader@example.org");
+  assert.equal(lead.record.contact.name, undefined);
+  assert.equal(lead.notify.status, "pending");
+  assert.ok(!JSON.stringify(lead.record).includes("198.51.100.4"));
+});
+
+test("a subscription without an address is refused", async () => {
+  const store = createMemoryStore();
+  const r = await acceptRequest(
+    { purpose: "updates", locale: "en", fields: {}, consent: true, idempotencyKey: uuid(), elapsedMs: 9000, hp: "" },
+    { ip: "198.51.100.5", config: cfg(store) }
+  );
+  assert.equal(r.http, 400);
+  assert.equal(r.body.errors.email, "required");
+  assert.equal(await store.countLeads(), 0);
+});
+
+test("a subscription filled in faster than a human is refused", async () => {
+  const store = createMemoryStore();
+  const r = await acceptRequest(
+    { purpose: "updates", locale: "en", fields: { email: "bot@example.org" }, consent: true, idempotencyKey: uuid(), elapsedMs: 40, hp: "" },
+    { ip: "198.51.100.6", config: cfg(store) }
+  );
+  assert.equal(r.http, 400);
+  assert.equal(r.body.code, "too_fast");
+  assert.equal(await store.countLeads(), 0);
+});
+
 test("double submit with the same idempotency key creates one request", async () => {
   const store = createMemoryStore();
   const p = payload();

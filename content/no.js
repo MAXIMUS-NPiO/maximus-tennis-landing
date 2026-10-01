@@ -125,6 +125,18 @@ const no = {
     instagram: "Instagram",
     email: "E-post",
     analytics: "Analyseinnstillinger",
+    subscribe: {
+      title: "Hold kontakten med MAXIMUS",
+      line: "Nye serier, datoer for tilpasning, treningsmateriell og eierprogrammet. Noen få brev i året, ikke noe mer.",
+      label: "E-postadresse",
+      placeholder: "your@email.com",
+      button: "Abonner",
+      sending: "Sender",
+      done: "Du står på listen. Vi skriver bare når det er noe verdt å lese.",
+      invalid: "Kontroller adressen.",
+      failed: "Adressen ble ikke registrert. Prøv igjen om et øyeblikk.",
+      terms: "Ved å abonnere samtykker du i at MAXIMUS kan sende deg disse oppdateringene og lagre adressen din til dette formålet. Hvert brev inneholder en lenke for å melde seg av.",
+    },
     rights: "MAXIMUS® og løveemblemet er merker som tilhører MAXIMUS-økosystemet. MIPA: intern kontroll av IP, proveniens og dokumenter.",
     boundary:
       "Kommersielle og kontraktsmessige vilkår avtales særskilt og skriftlig. Kjøp av en racket gir ikke institusjonelt medlemskap, investeringsrettigheter, eierskap til immaterielle rettigheter eller krav på royalty.",

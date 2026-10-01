@@ -125,6 +125,18 @@ const ko = {
     instagram: "Instagram",
     email: "Email",
     analytics: "분석 설정",
+    subscribe: {
+      title: "MAXIMUS와 함께",
+      line: "새 시리즈, 피팅 일정, 트레이닝 자료, 오너 프로그램 소식을 전해 드립니다. 1년에 몇 통뿐, 그 외에는 보내지 않습니다.",
+      label: "이메일 주소",
+      placeholder: "your@email.com",
+      button: "구독하기",
+      sending: "전송 중",
+      done: "구독이 등록되었습니다. 읽을 가치가 있는 소식이 있을 때만 보내 드립니다.",
+      invalid: "이메일 주소를 확인하십시오.",
+      failed: "이메일 주소가 등록되지 않았습니다. 잠시 후 다시 시도하십시오.",
+      terms: "구독하시면 MAXIMUS가 이 소식을 보내고 그 목적으로 이메일 주소를 보관하는 데 동의하는 것으로 간주합니다. 모든 메일에는 수신 거부 링크가 포함됩니다.",
+    },
     rights: "MAXIMUS®와 사자 엠블럼은 MAXIMUS 생태계의 상표입니다. MIPA 내부 IP·출처·문서 관리.",
     boundary:
       "상업 및 계약 조건은 별도로 서면 합의합니다. 라켓 구매는 기관 회원 자격, 투자 권리, 지식재산 소유, 로열티 청구권을 발생시키지 않습니다.",

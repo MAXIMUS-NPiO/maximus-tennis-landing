@@ -125,6 +125,18 @@ const nl = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Statistiekinstellingen",
+    subscribe: {
+      title: "Blijf verbonden met MAXIMUS",
+      line: "Nieuwe series, datums voor aanmetingen, trainingsmateriaal en het eigenaarsprogramma. Een paar brieven per jaar, niets meer.",
+      label: "E-mailadres",
+      placeholder: "your@email.com",
+      button: "Aanmelden",
+      sending: "Versturen",
+      done: "U staat op de lijst. Wij schrijven alleen als er iets is dat het lezen waard is.",
+      invalid: "Controleer het adres.",
+      failed: "Het adres is niet geregistreerd. Probeer het over een ogenblik opnieuw.",
+      terms: "Door u aan te melden gaat u ermee akkoord dat MAXIMUS u deze berichten stuurt en uw adres daarvoor bewaart. Elke brief bevat een link om u af te melden.",
+    },
     rights: "MAXIMUS® en het leeuwenembleem zijn merken van het MAXIMUS-ecosysteem. MIPA: interne controle van IE, herkomst en documenten.",
     boundary:
       "Commerciële en contractuele voorwaarden worden afzonderlijk schriftelijk overeengekomen. De aankoop van een racket schept geen institutioneel lidmaatschap, geen investeringsrechten, geen eigendom van intellectuele eigendom en geen aanspraak op royalty's.",

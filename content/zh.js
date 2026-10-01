@@ -125,6 +125,18 @@ const zh = {
     instagram: "Instagram",
     email: "电子邮箱",
     analytics: "数据分析设置",
+    subscribe: {
+      title: "与MAXIMUS同行",
+      line: "新系列、试打与适配日程、训练资料与所有者计划。一年数封，别无其他。",
+      label: "电子邮箱地址",
+      placeholder: "your@email.com",
+      button: "订阅",
+      sending: "订阅中",
+      done: "您已加入订阅名单。我们只在确有值得一读的内容时才来信。",
+      invalid: "请检查电子邮箱地址。",
+      failed: "该电子邮箱地址未登记成功。请稍后重试。",
+      terms: "订阅即表示您同意MAXIMUS向您发送这些内容，并为此保留您的电子邮箱地址。每封邮件均附带退订链接。",
+    },
     rights: "MAXIMUS®及狮子徽标为MAXIMUS生态系统的标识。MIPA内部知识产权、来源溯源与文件控制。",
     boundary:
       "商业与合同条款另行以书面形式约定。购买球拍不产生机构会员资格、投资权利、知识产权所有权或特许权使用费权益。",

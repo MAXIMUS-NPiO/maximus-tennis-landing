@@ -125,6 +125,18 @@ const de = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Analyse-Einstellungen",
+    subscribe: {
+      title: "Bleiben Sie mit MAXIMUS verbunden",
+      line: "Neue Serien, Fitting-Termine, Trainingsmaterial und das Eigentümerprogramm. Wenige Briefe im Jahr, nichts weiter.",
+      label: "E-Mail-Adresse",
+      placeholder: "your@email.com",
+      button: "Abonnieren",
+      sending: "Wird gesendet",
+      done: "Sie stehen auf der Liste. Wir schreiben nur, wenn es etwas Lesenswertes gibt.",
+      invalid: "Bitte prüfen Sie die Adresse.",
+      failed: "Die Adresse wurde nicht registriert. Versuchen Sie es in einem Moment erneut.",
+      terms: "Mit dem Abonnement stimmen Sie zu, dass MAXIMUS Ihnen diese Mitteilungen senden und Ihre Adresse zu diesem Zweck speichern darf. Jeder Brief enthält einen Link zur Abmeldung.",
+    },
     rights: "MAXIMUS® und das Löwenemblem sind Marken des MAXIMUS-Ökosystems. MIPA: interne Kontrolle von IP, Provenienz und Dokumenten.",
     boundary:
       "Kommerzielle und vertragliche Bedingungen werden gesondert schriftlich vereinbart. Der Kauf eines Schlägers begründet keine institutionelle Mitgliedschaft, keine Investmentrechte, kein Eigentum an geistigem Eigentum und keinen Anspruch auf Lizenzgebühren.",

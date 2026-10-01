@@ -125,6 +125,18 @@ const tr = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Analitik ayarları",
+    subscribe: {
+      title: "MAXIMUS ile kalın",
+      line: "Yeni seriler, fitting tarihleri, antrenman materyalleri ve sahip programı. Yılda birkaç e-posta — başka hiçbir şey.",
+      label: "E-posta adresi",
+      placeholder: "your@email.com",
+      button: "Abone ol",
+      sending: "Gönderiliyor",
+      done: "Listedesiniz. Yalnızca okumaya değer bir şey olduğunda yazıyoruz.",
+      invalid: "Lütfen adresi kontrol edin.",
+      failed: "Adres kaydedilmedi. Lütfen birazdan tekrar deneyin.",
+      terms: "Abone olarak MAXIMUS'un bu güncellemeleri size göndermesini ve adresinizi bu amaçla saklamasını kabul edersiniz. Her e-postada abonelikten çıkma bağlantısı yer alır.",
+    },
     rights: "MAXIMUS® ve aslan amblemi, MAXIMUS ekosisteminin markalarıdır. MIPA dahili fikri mülkiyet, köken ve doküman kontrolü.",
     boundary:
       "Ticari ve sözleşmeye ilişkin şartlar ayrıca yazılı olarak kararlaştırılır. Bir raketin satın alınması; kurumsal üyelik, yatırım hakkı, fikri mülkiyet sahipliği veya telif payı hakkı doğurmaz.",

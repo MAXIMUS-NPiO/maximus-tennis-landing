@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import { site, entities } from "../data/site";
 import { href } from "../lib/paths";
 import { ConsentSettings } from "./Analytics";
+import Subscribe from "./Subscribe";
 
 /**
  * The footer is collapsed by default. Three link groups and the legal block open on demand
@@ -34,6 +35,10 @@ export default function Footer({ locale, dict }) {
           <a href={`mailto:${site.email}`}>{site.email}</a>
           <a href={site.instagram} target="_blank" rel="noreferrer">{footer.instagram} {site.instagramHandle}</a>
         </div>
+      </div>
+      <div className="shell footer-subscribe">
+        <h2 className="footer-sub-h">{footer.subscribe.title}</h2>
+        <Subscribe locale={locale} dict={footer.subscribe} />
       </div>
       <div className="shell footer-acc-row">
         <Group title={footer.product} items={product} locale={locale} nav={nav} />

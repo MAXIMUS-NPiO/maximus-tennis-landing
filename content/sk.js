@@ -125,6 +125,18 @@ const sk = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Nastavenia analytiky",
+    subscribe: {
+      title: "Zostaňte s MAXIMUS",
+      line: "Nové série, termíny prispôsobenia, tréningové materiály a program pre majiteľov. Niekoľko listov ročne, nič viac.",
+      label: "E-mailová adresa",
+      placeholder: "your@email.com",
+      button: "Prihlásiť sa",
+      sending: "Odosielanie",
+      done: "Adresa je v zozname. Píšeme len vtedy, keď máme niečo, čo stojí za prečítanie.",
+      invalid: "Skontrolujte, prosím, adresu.",
+      failed: "Adresa nebola zaregistrovaná. Skúste to, prosím, o chvíľu znova.",
+      terms: "Prihlásením sa súhlasíte s tým, aby vám MAXIMUS posielal tieto aktuality a na tento účel uchovával vašu adresu. Každý list obsahuje odkaz na odhlásenie.",
+    },
     rights: "MAXIMUS® a emblém leva sú známkami ekosystému MAXIMUS. MIPA — interná kontrola duševného vlastníctva, pôvodu a dokumentov.",
     boundary:
       "Komerčné a zmluvné podmienky sa dohadujú osobitne a písomne. Kúpa rakety nezakladá inštitucionálne členstvo, investičné práva, vlastníctvo duševného majetku ani nárok na licenčné odmeny.",

@@ -125,6 +125,18 @@ const sv = {
     instagram: "Instagram",
     email: "E-post",
     analytics: "Inställningar för webbanalys",
+    subscribe: {
+      title: "Håll kontakten med MAXIMUS",
+      line: "Nya serier, datum för anpassning, träningsmaterial och ägarprogrammet. Några brev om året, inget mer.",
+      label: "E-postadress",
+      placeholder: "your@email.com",
+      button: "Prenumerera",
+      sending: "Skickar",
+      done: "Du står på listan. Vi skriver bara när det finns något värt att läsa.",
+      invalid: "Kontrollera adressen.",
+      failed: "Adressen registrerades inte. Försök igen om en stund.",
+      terms: "Genom att prenumerera godkänner du att MAXIMUS får skicka dig dessa uppdateringar och lagra din adress för det ändamålet. Varje brev innehåller en länk för att avsluta prenumerationen.",
+    },
     rights: "MAXIMUS® och lejonemblemet är varumärken i MAXIMUS-ekosystemet. MIPA: intern kontroll av immateriella rättigheter, proveniens och dokument.",
     boundary:
       "Kommersiella och avtalsmässiga villkor avtalas separat och skriftligt. Köpet av en racket ger inte institutionellt medlemskap, investeringsrättigheter, äganderätt till immateriella rättigheter eller rätt till royalty.",

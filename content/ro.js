@@ -125,6 +125,18 @@ const ro = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Setări de analiză",
+    subscribe: {
+      title: "Rămâneți cu MAXIMUS",
+      line: "Serii noi, date de fitting, materiale de antrenament și programul pentru proprietari. Câteva scrisori pe an, nimic altceva.",
+      label: "Adresă de e-mail",
+      placeholder: "your@email.com",
+      button: "Abonați-vă",
+      sending: "Se trimite",
+      done: "Adresa dumneavoastră este pe listă. Scriem numai atunci când avem ceva ce merită citit.",
+      invalid: "Verificați adresa.",
+      failed: "Adresa nu a fost înregistrată. Încercați din nou într-o clipă.",
+      terms: "Prin abonare, acceptați ca MAXIMUS să vă trimită aceste noutăți și să păstreze adresa dumneavoastră în acest scop. Fiecare scrisoare include opțiunea de dezabonare.",
+    },
     rights: "MAXIMUS® și emblema cu leu sunt mărci ale ecosistemului MAXIMUS. MIPA: proprietate intelectuală internă, proveniență și control documentar.",
     boundary:
       "Condițiile comerciale și contractuale se convin separat, în scris. Cumpărarea unei rachete nu creează calitatea de membru instituțional, drepturi de investiție, titlu de proprietate intelectuală sau dreptul la redevențe.",

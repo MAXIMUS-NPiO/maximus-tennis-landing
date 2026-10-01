@@ -22,6 +22,7 @@ const ALLOWED = new Set([
   "coach", "club", "distribution", "strategic", "institutional",
   "| MAXIMUS",          // the title suffix: the mark itself
   "Email",              // used as written in every locale on this site
+  "your@email.com",     // the placeholder is an address pattern, not a sentence
   "VAT TRN",            // the tax label as it appears on the licence
   "10–13", "14–17",     // age bands: figures
   // Trainer captions: the product name plus a weight and a balance — nothing else to translate.

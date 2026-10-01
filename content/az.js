@@ -125,6 +125,18 @@ const az = {
     instagram: "Instagram",
     email: "E-poçt",
     analytics: "Analitika parametrləri",
+    subscribe: {
+      title: "MAXIMUS ilə qalın",
+      line: "Yeni seriyalar, fitting tarixləri, məşq materialları və sahib proqramı. İldə bir neçə məktub — başqa heç nə.",
+      label: "E-poçt ünvanı",
+      placeholder: "your@email.com",
+      button: "Abunə ol",
+      sending: "Göndərilir",
+      done: "Siz siyahıdasınız. Yalnız oxumağa dəyər bir şey olanda yazırıq.",
+      invalid: "Zəhmət olmasa ünvanı yoxlayın.",
+      failed: "Ünvan qeydə alınmadı. Zəhmət olmasa bir az sonra yenidən cəhd edin.",
+      terms: "Abunə olmaqla MAXIMUS-un bu yenilikləri sizə göndərməsinə və ünvanınızı bu məqsədlə saxlamasına razılıq verirsiniz. Hər məktubda abunəlikdən çıxmaq üçün keçid var.",
+    },
     rights: "MAXIMUS® və aslan emblemi MAXIMUS ekosisteminin nişanlarıdır. MIPA daxili əqli mülkiyyət, mənşə və sənəd nəzarəti.",
     boundary:
       "Kommersiya və müqavilə şərtləri ayrıca, yazılı şəkildə razılaşdırılır. Raketin alınması institusional üzvlük, investisiya hüququ, əqli mülkiyyət sahibliyi və ya royalti hüququ yaratmır.",

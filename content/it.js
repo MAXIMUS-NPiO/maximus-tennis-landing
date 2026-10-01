@@ -125,6 +125,18 @@ const it = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Impostazioni di analisi",
+    subscribe: {
+      title: "Resti con MAXIMUS",
+      line: "Nuove serie, date di fitting, materiali di allenamento e il programma dei proprietari. Qualche lettera all'anno, nient'altro.",
+      label: "Indirizzo email",
+      placeholder: "your@email.com",
+      button: "Iscriviti",
+      sending: "Invio",
+      done: "Il suo indirizzo è in elenco. Scriviamo solo quando c'è qualcosa che vale la pena leggere.",
+      invalid: "Verifichi l'indirizzo.",
+      failed: "L'indirizzo non è stato registrato. Riprovi tra un istante.",
+      terms: "Iscrivendosi, acconsente che MAXIMUS le invii questi aggiornamenti e conservi il suo indirizzo a tale scopo. Ogni lettera contiene un collegamento per annullare l'iscrizione.",
+    },
     rights: "MAXIMUS® e l'emblema del leone sono marchi dell'ecosistema MAXIMUS. MIPA: proprietà intellettuale interna, provenienza e controllo documentale.",
     boundary:
       "I termini commerciali e contrattuali sono concordati separatamente per iscritto. L'acquisto di una racchetta non crea appartenenza istituzionale, diritti di investimento, titolarità di proprietà intellettuale o diritto a royalty.",

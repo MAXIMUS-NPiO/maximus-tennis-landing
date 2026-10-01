@@ -125,6 +125,18 @@ const uz = {
     instagram: "Instagram",
     email: "E-pochta",
     analytics: "Analitika sozlamalari",
+    subscribe: {
+      title: "MAXIMUS bilan qoling",
+      line: "Yangi seriyalar, fitting sanalari, mashgʻulot materiallari va egalar dasturi. Yilda bir necha xat — boshqa hech narsa.",
+      label: "E-pochta manzili",
+      placeholder: "your@email.com",
+      button: "Obuna boʻlish",
+      sending: "Yuborilmoqda",
+      done: "Siz roʻyxatdasiz. Faqat oʻqishga arziydigan narsa boʻlganda yozamiz.",
+      invalid: "Iltimos, manzilni tekshiring.",
+      failed: "Manzil qayd etilmadi. Iltimos, bir oz vaqtdan soʻng qaytadan urinib koʻring.",
+      terms: "Obuna boʻlish orqali siz MAXIMUS bu yangiliklarni sizga yuborishi va manzilingizni shu maqsadda saqlashiga rozilik bildirasiz. Har bir xatda obunani bekor qilish havolasi boʻladi.",
+    },
     rights: "MAXIMUS® va sher emblemasi — MAXIMUS ekotizimining belgilari. MIPA — ichki intellektual mulk, kelib chiqish va hujjat nazorati.",
     boundary:
       "Tijorat va shartnoma shartlari alohida, yozma ravishda kelishiladi. Raketka xaridi institutsional aʼzolik, investitsiya huquqlari, intellektual mulk egaligi yoki royalti olish huquqini vujudga keltirmaydi.",

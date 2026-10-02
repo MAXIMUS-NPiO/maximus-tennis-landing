@@ -65,6 +65,65 @@ function dl(obj) {
   return rows ? `<dl>${rows}</dl>` : "<p>—</p>";
 }
 
+
+/** Top n fields with a given prefix, largest first, as a small table. */
+function topTable(title, totals, prefix, n = 8, blank = "—") {
+  const rows = Object.entries(totals)
+    .filter(([k]) => k.startsWith(prefix))
+    .map(([k, v]) => [k.slice(prefix.length) || blank, v])
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, n)
+    .map(([k, v]) => `<tr><td>${esc(k)}</td><td>${v}</td></tr>`)
+    .join("");
+  return `<h3>${esc(title)}</h3><table><tbody>${rows || `<tr><td>${esc(blank)}</td><td>0</td></tr>`}</tbody></table>`;
+}
+
+/**
+ * The dashboard: who came and from where, and what came in. The visit numbers are aggregate
+ * counters written by edge middleware — no visitor is identified, counted twice or followed
+ * between days (lib/visits.js).
+ */
+function dashboard(visits, leads, total, pending, processing) {
+  const totals = {};
+  let today = 0;
+  let week = 0;
+  const series = [];
+  visits.forEach((d, i) => {
+    const n = Number(d.fields.all || 0);
+    if (i === 0) today = n;
+    if (i < 7) week += n;
+    series.push([d.day, n]);
+    for (const [k, v] of Object.entries(d.fields)) totals[k] = (totals[k] || 0) + Number(v || 0);
+  });
+  const month = Number(totals.all || 0);
+  const byPurpose = {};
+  for (const { record: r } of leads) byPurpose[r.purpose] = (byPurpose[r.purpose] || 0) + 1;
+  const subscribers = byPurpose.updates || 0;
+  const purposeRows = Object.entries(byPurpose)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `<tr><td>${esc(k)}</td><td>${v}</td></tr>`)
+    .join("");
+  const days = series
+    .slice(0, 14)
+    .map(([d, n]) => `<tr><td>${esc(d)}</td><td>${n}</td></tr>`)
+    .join("");
+  const noVisits = month === 0
+    ? "<p>No visits counted yet. Counting starts with the deployment that introduced it; a page opened before that is not in these numbers.</p>"
+    : "";
+  return `<h1>MAXIMUS — site register</h1>
+<p>Visits today <b>${today}</b> · last 7 days <b>${week}</b> · last 30 days <b>${month}</b><br>
+Subscribers <b>${subscribers}</b> · requests stored <b>${total}</b> · notifications pending <b>${pending}</b><br>
+Store <code>${esc(processing.store)}</code> · notification channel <code>${esc(processing.notification || "not configured")}</code></p>
+${noVisits}
+${topTable("Countries", totals, "c:")}
+${topTable("Languages", totals, "loc:")}
+${topTable("Came from", totals, "src:")}
+${topTable("Pages", totals, "p:")}
+${topTable("Screen", totals, "dev:", 4)}
+<h3>Visits by day</h3><table><thead><tr><th>Day</th><th>Visits</th></tr></thead><tbody>${days || '<tr><td>—</td><td>0</td></tr>'}</tbody></table>
+<h3>Requests by purpose</h3><table><tbody>${purposeRows || '<tr><td>—</td><td>0</td></tr>'}</tbody></table>`;
+}
+
 export async function GET(request) {
   const config = readConfig();
   const auth = await authorise(request, config);
@@ -97,15 +156,21 @@ export async function GET(request) {
 <form method="post"><input type="hidden" name="id" value="${esc(r.request_id)}"><button type="submit">Retry notification now</button></form>`;
       return page(r.request_id, body);
     }
-    const [leads, total, pending] = await Promise.all([config.store.listLeads(100), config.store.countLeads(), config.store.pendingCount()]);
+    const [leads, total, pending, visits] = await Promise.all([
+      config.store.listLeads(500),
+      config.store.countLeads(),
+      config.store.pendingCount(),
+      typeof config.store.visits === "function" ? config.store.visits(30).catch(() => []) : Promise.resolve([]),
+    ]);
     const rows = leads
+      .slice(0, 100)
       .map(({ record: r, notify: n }) => `<tr><td><a href="?id=${encodeURIComponent(r.request_id)}"><code>${esc(r.request_id)}</code></a></td><td>${esc(r.created_at)}</td><td>${esc(r.purpose)}</td><td>${esc(r.locale)}</td><td>${esc(r.contact && r.contact.country)}</td><td>${statusCell(n)}</td><td>${esc(n.attempts || 0)}</td><td><code>${esc(n.last_error || "")}</code></td></tr>`)
       .join("");
-    const body = `<h1>Requests</h1>
-<p>Total stored: <b>${total}</b> · notifications pending or scheduled: <b>${pending}</b> · store: <code>${esc(processing.store)}</code> · notification channel: <code>${esc(processing.notification || "not configured")}</code></p>
+    const body = `${dashboard(visits, leads, total, pending, processing)}
+<h2>Latest requests</h2>
 <form method="post"><input type="hidden" name="id" value="all"><button type="submit">Process due notifications now</button></form>
 <table><thead><tr><th>Request ID</th><th>Received (UTC)</th><th>Purpose</th><th>Locale</th><th>Country</th><th>Notification</th><th>Attempts</th><th>Last error</th></tr></thead><tbody>${rows || '<tr><td colspan="8">No requests yet.</td></tr>'}</tbody></table>`;
-    return page("Requests", body);
+    return page("MAXIMUS register", body);
   } catch (e) {
     return page("Store unavailable", `<p>The store did not answer: <code>${esc((e && e.code) || "error")}</code>.</p>`, 503);
   }

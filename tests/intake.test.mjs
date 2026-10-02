@@ -485,3 +485,62 @@ test("notification message contains validated content only and a neutral status 
   assert.match(text, /Requested weight \(g\) — technical review: 301/);
   assert.match(text, /not an order/);
 });
+
+/* ------------------------------------------------------------------ visit counting */
+
+test("a page view is counted as aggregate fields, with no identifier of any kind", async () => {
+  const { visitFields } = await import("../lib/visits.js");
+  const req = {
+    headers: new Map([
+      ["user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15"],
+      ["accept", "text/html,application/xhtml+xml"],
+      ["x-vercel-ip-country", "ae"],
+      ["referer", "https://www.google.com/search?q=maximus+tennis&secret=abc"],
+      ["host", "maximus.tennis"],
+    ]),
+  };
+  req.headers.get = Map.prototype.get.bind(req.headers);
+  const f = visitFields(req, "ru", "/precision");
+  assert.deepEqual(f, ["all", "loc:ru", "c:AE", "src:google.com", "dev:mobile", "p:/precision"]);
+  const joined = f.join(" ");
+  assert.ok(!joined.includes("secret"));
+  assert.ok(!joined.includes("search"));
+});
+
+test("bots, prefetches and non-page requests are not counted", async () => {
+  const { visitFields } = await import("../lib/visits.js");
+  const make = (h) => {
+    const m = new Map(Object.entries(h));
+    return { headers: { get: (k) => (m.has(k) ? m.get(k) : null) } };
+  };
+  assert.equal(visitFields(make({ "user-agent": "Googlebot/2.1", accept: "text/html" }), "en", "/"), null);
+  assert.equal(visitFields(make({ "user-agent": "Mozilla/5.0", accept: "text/html", "next-router-prefetch": "1" }), "en", "/"), null);
+  assert.equal(visitFields(make({ "user-agent": "Mozilla/5.0", accept: "application/json" }), "en", "/"), null);
+  assert.equal(visitFields(make({ accept: "text/html" }), "en", "/"), null);
+});
+
+test("a visit written with no store configured is a no-op, never an error", async () => {
+  const { recordVisit } = await import("../lib/visits.js");
+  assert.equal(await recordVisit({}, ["all"]), false);
+});
+
+test("visits are written to the day's hash and expire on their own", async () => {
+  const { recordVisit, dayKey } = await import("../lib/visits.js");
+  const sent = [];
+  const fake = async (url, init) => {
+    sent.push({ url, body: JSON.parse(init.body) });
+    return { ok: true };
+  };
+  const now = new Date("2026-10-02T09:00:00Z");
+  const ok = await recordVisit(
+    { KV_REST_API_URL: "https://store.example", KV_REST_API_TOKEN: "t" },
+    ["all", "c:AE"],
+    now,
+    fake
+  );
+  assert.equal(ok, true);
+  assert.equal(sent[0].url, "https://store.example/pipeline");
+  assert.deepEqual(sent[0].body[0], ["HINCRBY", dayKey(now), "all", "1"]);
+  assert.deepEqual(sent[0].body[1], ["HINCRBY", dayKey(now), "c:AE", "1"]);
+  assert.equal(sent[0].body[2][0], "EXPIRE");
+});

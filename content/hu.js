@@ -1000,10 +1000,10 @@ const hu = {
     decline: "Elutasítás",
   },
   media: {
-    spotHeadsUp: "Öt MAXIMUS Spot Trainer egymás mellett, a kör alakú ütőfelülettel felfelé és a markolattal lefelé, a fejeken nyugvó labdákkal",
+    spotComposition: "MAXIMUS Spot Trainer: a teljes kompozíció — az eszköz elölről és oldalról, a gravírozott oroszlánembléma a kör alakú ütőfelületen, a MAXIMUS és SPOT TRAINER gravírozás a száron és a nyolcszögletű, oroszlánjeles markolatvég-kupak",
     greatHero: "MAXIMUS GREAT sorozat, 363 g: a teljes kompozíció piros és sárga fejdíszítéssel, fényes MAXIMUS feliratozással, a Maximus-aláírással a száron és az oroszlános markolatvég-kupakkal",
-    spotRow: "Öt MAXIMUS Spot Trainer egy sorban, labdákkal a kör alakú ütőfelületeken",
-    spotPair: "Két MAXIMUS Spot Trainer állva a MAXIMUS oroszlánembléma előtt, labdákkal a kör alakú ütőfelületeiken",
+    spotDetail: "Két MAXIMUS Spot Trainer közelebbről: a gravírozott oroszlán a matt fekete ütőfelületen, a bordázott markolatszalag és a nyolcszögletű, oroszlánjeles markolatvég-kupakok",
+    spotPair: "Két MAXIMUS Spot Trainer szögben, sötét felületen fekve, az egyik száron MAXIMUS, a másikon SPOT TRAINER gravírozással, mindkét kör alakú ütőfelületen az oroszlánemblémával",
     spinVisual: "MAXIMUS SPIN: fej húrokkal, fényes MAXIMUS feliratozás, markolat és oroszlános markolatvég-kupak",
     powerVisual: "MAXIMUS POWER: fej húrokkal, fényes MAXIMUS feliratozás, perszonalizációs gravírozás, markolat és oroszlános markolatvég-kupak",
     greatVisual: "MAXIMUS GREAT: fej húrokkal, fényes MAXIMUS feliratozás, perszonalizációs gravírozás, markolat, oroszlános markolatvég-kupak és a G sorozatjelölés a nyakon",

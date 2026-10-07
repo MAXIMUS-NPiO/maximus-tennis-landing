@@ -1000,10 +1000,10 @@ const de = {
     decline: "Ablehnen",
   },
   media: {
-    spotHeadsUp: "Fünf MAXIMUS Spot Trainer nebeneinander, die runden Zielköpfe nach oben und die Griffe nach unten, mit Bällen, die auf den Köpfen liegen",
+    spotComposition: "MAXIMUS Spot Trainer: die vollständige Komposition — das Gerät von vorn und von der Seite, das gravierte runde Löwenemblem auf dem runden Zielkopf, die Gravur MAXIMUS und SPOT TRAINER entlang des Schafts und die achteckige Griffkappe mit der Löwenmarke",
     greatHero: "Serie MAXIMUS GREAT, 363 g: die vollständige Komposition mit roten und gelben Kopfdetails, glänzendem MAXIMUS-Schriftzug, dem Maximus-Autogramm auf dem Schaft und der Löwen-Griffkappe",
-    spotRow: "Fünf MAXIMUS Spot Trainer in einer Reihe ausgelegt, Bälle liegen auf ihren runden Zielköpfen",
-    spotPair: "Zwei MAXIMUS Spot Trainer stehen aufrecht vor dem MAXIMUS-Löwenemblem, Bälle auf ihren runden Zielköpfen",
+    spotDetail: "Zwei MAXIMUS Spot Trainer in Nahaufnahme: der gravierte Löwe auf dem mattschwarzen Zielkopf, das gerippte Griffband und die achteckigen Griffkappen mit der Löwenmarke",
+    spotPair: "Zwei MAXIMUS Spot Trainer schräg auf einer dunklen Fläche liegend, MAXIMUS entlang des einen Schafts und SPOT TRAINER entlang des anderen graviert, mit dem runden Löwenemblem auf jedem Zielkopf",
     spinVisual: "MAXIMUS SPIN: Kopf mit Saiten, glänzender MAXIMUS-Schriftzug, Griff und Löwen-Griffkappe",
     powerVisual: "MAXIMUS POWER: Kopf mit Saiten, glänzender MAXIMUS-Schriftzug, Personalisierungsgravur, Griff und Löwen-Griffkappe",
     greatVisual: "MAXIMUS GREAT: Kopf mit Saiten, glänzender MAXIMUS-Schriftzug, Personalisierungsgravur, Griff, Löwen-Griffkappe und das G-Serienzeichen am Herz",

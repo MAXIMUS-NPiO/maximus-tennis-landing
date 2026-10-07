@@ -89,7 +89,7 @@ export default async function Home({ params }) {
             <h3 className="h-3">{dict.training.spot.h}</h3>
             <p>{H.training.spotP}</p>
           </div>
-          <Photo id="spotHeadsUp" alt={M.spotHeadsUp} sizes="(min-width: 900px) 58vw, 92vw" className="tp-photo" />
+          <Photo id="spotPair" alt={M.spotPair} sizes="(min-width: 900px) 540px, 92vw" className="tp-photo" />
           <div className="tp-spot-cta">
             <div className="btn-row"><Cta locale={locale} to="spot" label={H.training.spotCta} kind="btn-outline" track="home_spot" /></div>
           </div>

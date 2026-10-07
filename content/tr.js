@@ -1000,10 +1000,10 @@ const tr = {
     decline: "Reddet",
   },
   media: {
-    spotHeadsUp: "Yan yana beş MAXIMUS Spot Trainer; yuvarlak temas kafaları yukarıda, sapları aşağıda, kafalarının üzerinde duran toplarla",
+    spotComposition: "MAXIMUS Spot Trainer: eksiksiz kompozisyon — önden ve yandan görünen antrenman raketi, yuvarlak temas kafasındaki gravürlü yuvarlak aslan amblemi, şaft boyunca MAXIMUS ve SPOT TRAINER gravürü ve aslan markalı sekizgen sap kapağı",
     greatHero: "MAXIMUS GREAT serisi, 363 g: kırmızı ve sarı kafa detayları, parlak MAXIMUS yazısı, şaft üzerindeki Maximus imzası ve aslanlı sap kapağıyla eksiksiz kompozisyon",
-    spotRow: "Sıra hâlinde dizilmiş beş MAXIMUS Spot Trainer; yuvarlak temas kafalarının üzerinde duran toplarla",
-    spotPair: "MAXIMUS aslan ambleminin önünde dikey duran iki MAXIMUS Spot Trainer; yuvarlak temas kafalarında toplarla",
+    spotDetail: "Daha yakından görünen iki MAXIMUS Spot Trainer: mat siyah temas kafasındaki gravürlü aslan, tırtıklı grip sargısı ve aslan markalı sekizgen sap kapakları",
+    spotPair: "Koyu renkli bir zemin üzerinde açılı şekilde yatan iki MAXIMUS Spot Trainer; bir şaft boyunca MAXIMUS, diğer şaft boyunca SPOT TRAINER gravürü, her temas kafasında aslan amblemi",
     spinVisual: "MAXIMUS SPIN: kordajlı kafa, parlak MAXIMUS yazısı, grip ve aslanlı sap kapağı",
     powerVisual: "MAXIMUS POWER: kordajlı kafa, parlak MAXIMUS yazısı, kişiselleştirme gravürü, grip ve aslanlı sap kapağı",
     greatVisual: "MAXIMUS GREAT: kordajlı kafa, parlak MAXIMUS yazısı, kişiselleştirme gravürü, grip, aslanlı sap kapağı ve boğazdaki G seri işareti",

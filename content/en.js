@@ -1000,10 +1000,10 @@ const en = {
     decline: "Decline",
   },
   media: {
-    spotHeadsUp: "Five MAXIMUS Spot Trainers side by side, round contact heads up and handles down, with balls resting on the heads",
+    spotComposition: "MAXIMUS Spot Trainer: the complete composition — the trainer seen front and side, the engraved lion roundel on the round contact head, the MAXIMUS and SPOT TRAINER engraving along the shaft, and the octagonal butt cap carrying the lion mark",
     greatHero: "MAXIMUS GREAT series, 363 g: the complete composition with red and yellow head detailing, gloss MAXIMUS lettering, the Maximus autograph on the shaft and the lion butt cap",
-    spotRow: "Five MAXIMUS Spot Trainers laid out in a row, balls resting on their round contact heads",
-    spotPair: "Two MAXIMUS Spot Trainers standing upright in front of the MAXIMUS lion emblem, balls on their round contact heads",
+    spotDetail: "Two MAXIMUS Spot Trainers seen closer: the engraved lion on the matte black contact head, the ribbed grip wrap and the octagonal butt caps with the lion mark",
+    spotPair: "Two MAXIMUS Spot Trainers laid at an angle on a dark surface, MAXIMUS engraved along one shaft and SPOT TRAINER along the other, with the lion roundel on each contact head",
     spinVisual: "MAXIMUS SPIN: head with strings, gloss MAXIMUS lettering, grip and lion butt cap",
     powerVisual: "MAXIMUS POWER: head with strings, gloss MAXIMUS lettering, personalisation engraving, grip and lion butt cap",
     greatVisual: "MAXIMUS GREAT: head with strings, gloss MAXIMUS lettering, personalisation engraving, grip, lion butt cap and the G series mark on the throat",

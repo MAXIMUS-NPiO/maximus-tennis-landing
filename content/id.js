@@ -1000,10 +1000,10 @@ const id = {
     decline: "Tolak",
   },
   media: {
-    spotHeadsUp: "Lima MAXIMUS Spot Trainer berjajar, kepala kontak bundar menghadap ke atas dan gagang di bawah, dengan bola bertumpu di atas kepalanya",
+    spotComposition: "MAXIMUS Spot Trainer: komposisi lengkap — alat tampak dari depan dan dari samping, lambang singa dalam lingkaran yang digravir pada kepala kontak bundar, gravir MAXIMUS dan SPOT TRAINER di sepanjang batang, serta tutup gagang bersegi delapan dengan lambang singa",
     greatHero: "Seri MAXIMUS GREAT, 363 g: komposisi lengkap dengan detail kepala berwarna merah dan kuning, tulisan MAXIMUS mengilap, tanda tangan Maximus pada batang dan tutup gagang berlambang singa",
-    spotRow: "Lima MAXIMUS Spot Trainer ditata dalam satu baris, bola bertumpu di atas kepala kontak bundarnya",
-    spotPair: "Dua MAXIMUS Spot Trainer berdiri tegak di depan lambang singa MAXIMUS, bola di atas kepala kontak bundarnya",
+    spotDetail: "Dua MAXIMUS Spot Trainer dilihat lebih dekat: singa yang digravir pada kepala kontak hitam matte, bungkus grip beralur dan tutup gagang bersegi delapan dengan lambang singa",
+    spotPair: "Dua MAXIMUS Spot Trainer diletakkan menyudut di atas permukaan gelap, MAXIMUS digravir di sepanjang batang yang satu dan SPOT TRAINER di sepanjang batang yang lain, dengan lambang singa dalam lingkaran pada setiap kepala kontak",
     spinVisual: "MAXIMUS SPIN: kepala bersenar, tulisan MAXIMUS mengilap, grip dan tutup gagang berlambang singa",
     powerVisual: "MAXIMUS POWER: kepala bersenar, tulisan MAXIMUS mengilap, gravir personalisasi, grip dan tutup gagang berlambang singa",
     greatVisual: "MAXIMUS GREAT: kepala bersenar, tulisan MAXIMUS mengilap, gravir personalisasi, grip, tutup gagang berlambang singa dan tanda seri G pada leher raket",

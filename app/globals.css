@@ -683,6 +683,11 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 .vc-frame-zoom:focus-visible { outline: 2px solid #d8d4cf; outline-offset: 6px; }
 
 .vc-selected { display: grid; gap: 28px; align-items: center; }
+/* The halo is a positioned element with z-index 0, so it painted OVER the column beside it: plain
+   block content is painted before positioned descendants. The figures sat under the glow and the
+   first word of every line read dimmer than the rest. Lifting the column puts the text back on top;
+   the halo stays exactly as wide as it was. */
+.vc-selected-info { position: relative; z-index: 1; }
 @media (min-width: 860px) { .vc-selected { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 52px; } }
 .vc-variant-name { margin: 0; font-size: 16px; letter-spacing: 0.02em; font-weight: 650; color: #c9c4be; }
 .vc-weight { margin: 4px 0 18px; display: flex; align-items: baseline; gap: 10px; color: #fff; }
@@ -736,6 +741,40 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 }
 .vc-lightbox-close:focus-visible { outline: 2px solid #d8d4cf; outline-offset: 3px; }
 
+/* ---------------------------------------------------------------------------
+   Spot Trainer (owner set, 7 Oct 2026) — presented in the same language as the
+   performance series: the dark plate, the photograph on a blurred halo of
+   itself, the figures beside it, every composition opening to full size.
+   The product has four listed weights rather than one, so the single giant
+   numeral of the weight catalogue becomes a ladder of four.
+   --------------------------------------------------------------------------- */
+.spot-weights-label {
+  margin: 12px 0 0; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 650; color: #a9a49e;
+}
+.spot-weights {
+  margin: 4px 0 20px; display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 0 10px; color: #fff; font-variant-numeric: tabular-nums;
+}
+.spot-weights span { font-size: clamp(30px, 6.4vw, 62px); line-height: 1; font-weight: 700; letter-spacing: -0.03em; }
+.spot-weights span:not(:first-child)::before { content: "·"; margin-inline-end: 10px; color: #6f6b67; font-weight: 400; }
+.spot-weights i { font-style: normal; font-size: clamp(17px, 2.8vw, 26px); color: #a9a49e; font-weight: 650; }
+
+/* These compositions are square and carry a bright smoke background, so the column beside the
+   photograph is given more room than in the weight catalogue. */
+@media (min-width: 860px) { .spot-showcase .vc-selected { gap: 68px; } }
+
+/* The status mark sits inside the specification table here, so it is drawn for the dark plate
+   instead of carrying the light page background into it. The red dot is unchanged. */
+.spot-showcase .vc-specs .status {
+  background: transparent; color: #c3bfb9; border-color: rgba(255, 255, 255, 0.28);
+  margin-inline-end: 10px; vertical-align: middle;
+}
+.spot-showcase .vc-balance-note { max-width: 54ch; }
+
+.spot-views { list-style: none; margin: 44px 0 0; padding: 0; display: grid; gap: 26px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .spot-views { grid-template-columns: 1fr 1fr; gap: 40px; } }
+
 /* `.whole` is now the default behaviour of .detail-grid: every tile carries the photograph's own
    ratio, so the whole crop is visible without a letterbox. The class is kept for the markup that
    still uses it and adds nothing of its own. */
@@ -762,7 +801,7 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
    which is what letterboxed the portrait frame and left the large blank areas. */
 .training-pair {
   display: grid;
-  grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+  grid-template-columns: minmax(0, 50fr) minmax(0, 50fr);
   /* Three content rows plus a slack row, so the taller photograph cannot stretch the
      spacing between the Methodology and Spot Trainer blocks. */
   grid-template-rows: auto auto auto 1fr;
@@ -774,7 +813,10 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 .training-pair > .tp-spot-text { grid-column: 1; grid-row: 2; margin-top: 28px; }
 .training-pair > .tp-spot-cta { grid-column: 1; grid-row: 3; margin-top: 14px; }
 .training-pair > .tp-section-cta { grid-column: 1; grid-row: 4; align-self: end; padding-top: 26px; }
-.training-pair > .tp-photo { grid-column: 2; grid-row: 1 / span 4; margin: 0; align-self: start; }
+/* The Spot Trainer composition is square (owner set, 7 Oct 2026). At the full column width it
+   stood twice as tall as the text beside it and left the column empty under the buttons, so it is
+   held to a product-tile width and centred against the text instead of being stretched to fill. */
+.training-pair > .tp-photo { grid-column: 2; grid-row: 1 / span 4; margin: 0; align-self: center; justify-self: center; width: 100%; max-width: 540px; }
 .training-pair > .tp-photo img {
   width: 100%;
   height: auto;
@@ -791,7 +833,7 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
   .training-pair > .tp-spot-cta,
   .training-pair > .tp-section-cta { grid-column: 1; grid-row: auto; align-self: start; }
   .training-pair > .tp-spot-text { margin-top: 26px; }
-  .training-pair > .tp-photo { margin-top: 16px; }
+  .training-pair > .tp-photo { margin-top: 16px; max-width: 100%; }
   .training-pair > .tp-spot-cta { margin-top: 12px; }
   .training-pair > .tp-section-cta { margin-top: 22px; padding-top: 0; }
 }
@@ -832,7 +874,13 @@ p, li, dd, figcaption {
   -webkit-hyphens: auto;
   hyphenate-limit-chars: 7 3 3;
 }
-.statement, .eyebrow, .spec-list dd, .schematic-legend dd, .pp-note, .vc-lightbox-cap { text-align: start; hyphens: manual; }
+.statement, .eyebrow, .spec-list dd, .schematic-legend dd, .pp-note { text-align: start; hyphens: manual; }
+/* The caption sits under a centred photograph, so it is centred with it, not justified. */
+.vc-lightbox-cap { text-align: center; hyphens: manual; }
+/* Specification values and the note beside them are short lines in a narrow column: justifying
+   them stretches the word spacing instead of tidying it, and a status mark followed by a sentence
+   tears open a gap the width of the column. */
+.vc-specs dd, .vc-balance-note, .spot-weights { text-align: start; hyphens: manual; }
 /* The one place justification is left off: the short tiles. Their measure is about thirty
    characters by design, and at that width justifying a line of three words opens the gaps between
    them instead of closing the right edge — the untidiness it is meant to remove. */

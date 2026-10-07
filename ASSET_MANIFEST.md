@@ -52,18 +52,33 @@ The composition shows the frame from three angles, the string bed with the colou
 
 Great balances stay labelled **calculated** (`balanceStatus: MODELLED`): they are not printed on these images and the owner has not stated that they are individual factory measurements.
 
-## 3a. Owner visual set — Spot Trainer (supplied 29 Sep 2026)
+## 3a. Owner visual set — Spot Trainer (studio set, supplied 7 Oct 2026)
 
-Two photographs of the Spot Trainer supplied by the owner. Published whole, long side capped at 1600 px, JPEG q88 4:4:4. They show the round contact head, the shaft, the grip and the balls resting on the heads.
+Three studio compositions of the Spot Trainer supplied by the owner, 1254 × 1254 PNG, the same
+package format as the performance series. Published whole, converted to WebP q92 method 6 (PSNR
+43.5–46.8 dB against the source, maximum pixel difference 15/255). Nothing cropped, masked,
+retouched or substituted. They show the lion roundel engraved on the round contact head, the
+MAXIMUS and SPOT TRAINER engraving along the shaft, the grip wrap and the octagonal butt cap
+carrying the lion mark.
 
 | Published file | Source | Where used |
 | --- | --- | --- |
-| `public/media/spot/spot-trainers-row.jpg` | owner photograph, five trainers in a row | Home page training section; Spot Trainer page |
-| `public/media/spot/spot-trainers-pair.jpg` | owner photograph, two trainers upright | Spot Trainer page |
+| `public/media/spot/spot-trainer-composition.webp` | owner studio composition, full view with the head, shaft and butt cap details | Spot Trainer page — lead photograph |
+| `public/media/spot/spot-trainer-pair.webp` | owner studio composition, two trainers at an angle | Home page training section; Spot Trainer page |
+| `public/media/spot/spot-trainer-detail.webp` | owner studio composition, the pair closer | Spot Trainer page |
 
-The balls in both photographs carry a printed store address. The address is not written as site text and is not linked anywhere; it is legible only at full size. Flagged to the owner on 29 Sep 2026 — replace the frames on his instruction.
+They are presented in the same frame as the performance series: the dark plate, the blurred halo of
+the photograph's own placeholder behind it, and the full-size view on click.
 
-A 30-second clip of the same product was supplied and **not published**: 480 px wide, blurred filler bars, no methodology content. It is not a substitute for methodology footage (A6-adjacent; no gap opened because the methodology is explained in text).
+**Withdrawn on the same instruction** — `spot-trainers-row.jpg`, `spot-trainers-pair.jpg`,
+`spot-trainers-heads-up.jpg` (owner photographs of 29 Sep 2026, deleted from the repository). They
+were working shots on a grey wall, and the balls in them carried a printed store address that is
+legible at full size. That address is not published as site text anywhere; the frames carrying it
+are now gone from the site as well. This closes the flag raised on 29 Sep 2026.
+
+A 30-second clip of the same product was supplied and **not published**: 480 px wide, blurred filler
+bars, no methodology content. It is not a substitute for methodology footage (A6-adjacent; no gap
+opened because the methodology is explained in text).
 
 ## 4. Sweet Spot Trainer — owner visual set (2_1, 2_2)
 

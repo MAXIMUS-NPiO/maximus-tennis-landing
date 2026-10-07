@@ -1000,10 +1000,10 @@ const uz = {
     decline: "Rad etish",
   },
   media: {
-    spotHeadsUp: "Beshta MAXIMUS Spot Trainer yonma-yon, yumaloq kontakt boshlari yuqoriga va dastaklari pastga qaratilgan, toʻplar boshlarda turgan holatda",
+    spotComposition: "MAXIMUS Spot Trainer: toʻliq kompozitsiya — oldidan va yondan koʻrsatilgan trenajyor, yumaloq kontakt boshidagi gravirovka qilingan yumaloq sher emblemasi, shaft boʻylab MAXIMUS va SPOT TRAINER gravirovkasi va sher belgili sakkiz qirrali dastak qopqogʻi",
     greatHero: "MAXIMUS GREAT seriyasi, 363 g: qizil va sariq bosh detallari, yaltiroq MAXIMUS yozuvi, shaftdagi Maximus avtografi va sherli dastak qopqogʻi bilan toʻliq kompozitsiya",
-    spotRow: "Beshta MAXIMUS Spot Trainer bir qatorda joylashtirilgan, toʻplar ularning yumaloq kontakt boshlarida turgan holatda",
-    spotPair: "MAXIMUS sher emblemasi oldida tik turgan ikkita MAXIMUS Spot Trainer, toʻplar yumaloq kontakt boshlarida",
+    spotDetail: "Ikkita MAXIMUS Spot Trainer yaqindan koʻrsatilgan: mat qora kontakt boshidagi gravirovka qilingan sher, qovurgʻali grip oʻrami va sher belgili sakkiz qirrali dastak qopqoqlari",
+    spotPair: "Toʻq rangli sirt ustida qiya holatda yotgan ikkita MAXIMUS Spot Trainer, bir shaft boʻylab MAXIMUS, ikkinchi shaft boʻylab SPOT TRAINER gravirovkasi, har bir kontakt boshida sher emblemasi",
     spinVisual: "MAXIMUS SPIN: torlangan bosh, yaltiroq MAXIMUS yozuvi, grip va sherli dastak qopqogʻi",
     powerVisual: "MAXIMUS POWER: torlangan bosh, yaltiroq MAXIMUS yozuvi, personalizatsiya gravirovkasi, grip va sherli dastak qopqogʻi",
     greatVisual: "MAXIMUS GREAT: torlangan bosh, yaltiroq MAXIMUS yozuvi, personalizatsiya gravirovkasi, grip, sherli dastak qopqogʻi va boʻyindagi G seriyasi belgisi",

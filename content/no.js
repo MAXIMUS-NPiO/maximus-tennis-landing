@@ -1000,10 +1000,10 @@ const no = {
     decline: "Avslå",
   },
   media: {
-    spotHeadsUp: "Fem MAXIMUS Spot Trainer side om side, med de runde treffhodene opp og håndtakene ned, og baller som ligger på hodene",
+    spotComposition: "MAXIMUS Spot Trainer: hele komposisjonen — treningsredskapet forfra og fra siden, det graverte runde løveemblemet på det runde treffhodet, graveringen MAXIMUS og SPOT TRAINER langs skaftet og den åttekantede endehetten med løvemerket",
     greatHero: "MAXIMUS GREAT-serien, 363 g: hele komposisjonen med røde og gule detaljer på hodet, blank MAXIMUS-skrift, Maximus-autografen på skaftet og endehetten med løven",
-    spotRow: "Fem MAXIMUS Spot Trainer lagt ut på rad, med baller som ligger på de runde treffhodene",
-    spotPair: "To MAXIMUS Spot Trainer som står oppreist foran MAXIMUS-løveemblemet, med baller på de runde treffhodene",
+    spotDetail: "To MAXIMUS Spot Trainer sett nærmere: den graverte løven på det matt svarte treffhodet, det riflede grepbåndet og de åttekantede endehettene med løvemerket",
+    spotPair: "To MAXIMUS Spot Trainer lagt i vinkel på en mørk flate, med MAXIMUS gravert langs det ene skaftet og SPOT TRAINER langs det andre, og løveemblemet på hvert treffhode",
     spinVisual: "MAXIMUS SPIN: hode med strenger, blank MAXIMUS-skrift, grep og endehette med løven",
     powerVisual: "MAXIMUS POWER: hode med strenger, blank MAXIMUS-skrift, personaliseringsgravering, grep og endehette med løven",
     greatVisual: "MAXIMUS GREAT: hode med strenger, blank MAXIMUS-skrift, personaliseringsgravering, grep, endehette med løven og G-seriemerket på halsen",

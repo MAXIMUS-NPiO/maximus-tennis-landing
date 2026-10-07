@@ -1,7 +1,7 @@
 "use client";
-import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
-import Image from "next/image";
+import { useCallback, useId, useMemo, useRef, useState } from "react";
 import { variantsByWeight } from "../data/media";
+import { Stage, Lightbox, useZoom } from "./PhotoStage";
 
 /**
  * Product name pattern fixed by the Founder: "MAXIMUS Spin series — 222 g".
@@ -14,35 +14,13 @@ const PREFERRED_WEIGHT = 290;
 const firstWeight = (variants) =>
   (variants.some((v) => v.weight === PREFERRED_WEIGHT) ? PREFERRED_WEIGHT : variants[Math.floor(variants.length / 2)].weight);
 
-/** Ambient backdrop: the image's own blur placeholder, enlarged and blurred behind the photograph.
- *  It only ever appears OUTSIDE the photograph, so nothing in the composition is masked or dimmed. */
-function Stage({ images, weight, alt, priority = false, sizes, onZoom, zoomLabel }) {
-  const img = images[weight];
-  if (!img) return null;
-  const inner = (
-    <>
-      {img.blurDataURL && <span className="vc-ambient" aria-hidden="true" style={{ backgroundImage: `url(${img.blurDataURL})` }} />}
-      <Image src={img} alt={alt} sizes={sizes} priority={priority} placeholder="blur" quality={86} />
-    </>
-  );
-  if (!onZoom) return <div className="vc-frame">{inner}</div>;
-  return (
-    <button type="button" className="vc-frame vc-frame-zoom" onClick={onZoom} aria-label={zoomLabel}>
-      {inner}
-      <span className="vc-zoom-hint" aria-hidden="true">{zoomLabel}</span>
-    </button>
-  );
-}
-
 /** Only the strings this section needs are handed to the client — never the whole dictionary. */
 export default function VariantCatalogue({ seriesId, seriesName, strings, variants, headSizeSqIn, construction, grips, precision, balanceNote }) {
   const { catalogue: C, units: L, alt: altTemplate } = strings;
   const images = variantsByWeight[seriesId] || {};
   const [weight, setWeight] = useState(() => firstWeight(variants));
-  const [zoom, setZoom] = useState(false);
+  const { open: zoom, openZoom, close: closeZoom } = useZoom();
   const stageRef = useRef(null);
-  const closeRef = useRef(null);
-  const returnRef = useRef(null);
   const headingId = useId();
 
   const current = useMemo(() => variants.find((v) => v.weight === weight) || variants[0], [variants, weight]);
@@ -58,22 +36,6 @@ export default function VariantCatalogue({ seriesId, seriesName, strings, varian
     if (scroll && stageRef.current) stageRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
   }, []);
 
-  const openZoom = useCallback((el) => { returnRef.current = el || null; setZoom(true); }, []);
-  const closeZoom = useCallback(() => {
-    setZoom(false);
-    if (returnRef.current && returnRef.current.focus) returnRef.current.focus();
-  }, []);
-
-  useEffect(() => {
-    if (!zoom) return undefined;
-    const onKey = (e) => { if (e.key === "Escape") { e.stopPropagation(); closeZoom(); } };
-    document.addEventListener("keydown", onKey);
-    if (closeRef.current) closeRef.current.focus();
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
-  }, [zoom, closeZoom]);
-
   return (
     <>
       <section className="section vc-catalogue" aria-labelledby={headingId}>
@@ -84,8 +46,7 @@ export default function VariantCatalogue({ seriesId, seriesName, strings, varian
 
           <div className="vc-selected" ref={stageRef}>
             <Stage
-              images={images}
-              weight={current.weight}
+              img={images[current.weight]}
               alt={altFor(current)}
               priority
               sizes="(min-width: 1080px) 620px, (min-width: 760px) 55vw, 94vw"
@@ -126,8 +87,7 @@ export default function VariantCatalogue({ seriesId, seriesName, strings, varian
               <li key={v.weight}>
                 <article className={`vc-card ${v.weight === current.weight ? "on" : ""}`}>
                   <Stage
-                    images={images}
-                    weight={v.weight}
+                    img={images[v.weight]}
                     alt={altFor(v)}
                     sizes="(min-width: 1080px) 300px, (min-width: 760px) 30vw, 88vw"
                     onZoom={(e) => { pick(v.weight, false); openZoom(e.currentTarget); }}
@@ -147,13 +107,14 @@ export default function VariantCatalogue({ seriesId, seriesName, strings, varian
       </section>
 
       {zoom && (
-        <div className="vc-lightbox" role="dialog" aria-modal="true" aria-label={name(current.weight)} onClick={closeZoom}>
-          <div className="vc-lightbox-inner" onClick={(e) => e.stopPropagation()}>
-            <Image src={images[current.weight]} alt={altFor(current)} sizes="(min-width: 1200px) 1100px, 96vw" quality={90} placeholder="blur" />
-            <p className="vc-lightbox-cap">{name(current.weight)} · {C.balanceLabel} {current.balance} {L.mm}</p>
-            <button type="button" className="vc-lightbox-close" onClick={closeZoom} ref={closeRef}>{C.close}</button>
-          </div>
-        </div>
+        <Lightbox
+          img={images[current.weight]}
+          alt={altFor(current)}
+          label={name(current.weight)}
+          caption={`${name(current.weight)} · ${C.balanceLabel} ${current.balance} ${L.mm}`}
+          closeLabel={C.close}
+          onClose={closeZoom}
+        />
       )}
     </>
   );

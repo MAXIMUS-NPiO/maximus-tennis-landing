@@ -1000,10 +1000,10 @@ const zh = {
     decline: "拒绝",
   },
   media: {
-    spotHeadsUp: "五支 MAXIMUS Spot Trainer 并排放置，圆形击球面朝上、拍柄朝下，网球放在击球面上",
+    spotComposition: "MAXIMUS Spot Trainer：完整构图，含正面与侧面的训练拍、圆形击球面上刻有的狮子圆形徽标、沿拍杆的 MAXIMUS 与 SPOT TRAINER 刻字，以及带狮子标识的八角形拍柄底盖",
     greatHero: "MAXIMUS GREAT 系列 363 克：完整构图，含红黄拍头装饰、亮面 MAXIMUS 字样、拍杆上的 Maximus 亲笔签名以及拍柄底盖的狮子标识",
-    spotRow: "五支 MAXIMUS Spot Trainer 排成一行，网球放在圆形击球面上",
-    spotPair: "两支 MAXIMUS Spot Trainer 立于 MAXIMUS 狮子标识前，网球放在圆形击球面上",
+    spotDetail: "两支 MAXIMUS Spot Trainer 的近景：哑光黑色击球面上刻有的狮子、带棱纹的握柄缠绕带，以及带狮子标记的八角形底盖",
+    spotPair: "两支 MAXIMUS Spot Trainer 斜放在深色台面上，一支拍杆上刻有 MAXIMUS，另一支刻有 SPOT TRAINER，两者的圆形击球面上均有狮子圆形徽标",
     spinVisual: "MAXIMUS SPIN：穿线拍头、亮面MAXIMUS字样、握柄与狮子底盖",
     powerVisual: "MAXIMUS POWER：穿线拍头、亮面MAXIMUS字样、个性化刻字、握柄与狮子底盖",
     greatVisual: "MAXIMUS GREAT：穿线拍头、亮面MAXIMUS字样、个性化刻字、握柄、狮子底盖与拍喉上的G系列标记",

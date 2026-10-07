@@ -1000,10 +1000,10 @@ const es = {
     decline: "Rechazar",
   },
   media: {
-    spotHeadsUp: "Cinco MAXIMUS Spot Trainer uno al lado del otro, con las cabezas redondas de impacto hacia arriba y los mangos hacia abajo, y pelotas apoyadas sobre las cabezas",
+    spotComposition: "MAXIMUS Spot Trainer: la composición completa — el Spot Trainer visto de frente y de perfil, el emblema redondo del león grabado en la cabeza redonda de impacto, el grabado MAXIMUS y SPOT TRAINER a lo largo del corazón y la tapa octogonal del mango con la marca del león",
     greatHero: "Serie MAXIMUS GREAT, 363 g: la composición completa con los detalles rojos y amarillos en la cabeza, las letras MAXIMUS brillantes, el autógrafo Maximus en el corazón y la tapa del mango con el león",
-    spotRow: "Cinco MAXIMUS Spot Trainer dispuestos en fila, con pelotas apoyadas sobre sus cabezas redondas de impacto",
-    spotPair: "Dos MAXIMUS Spot Trainer de pie ante el emblema del león MAXIMUS, con pelotas sobre sus cabezas redondas de impacto",
+    spotDetail: "Dos MAXIMUS Spot Trainer vistos más de cerca: el león grabado en la cabeza de impacto negra mate, el envoltorio acanalado de la empuñadura y las tapas octogonales del mango con la marca del león",
+    spotPair: "Dos MAXIMUS Spot Trainer colocados en diagonal sobre una superficie oscura, con MAXIMUS grabado a lo largo del corazón de uno y SPOT TRAINER en el del otro, y el emblema redondo del león en cada cabeza de impacto",
     spinVisual: "MAXIMUS SPIN: cabeza encordada, letras MAXIMUS brillantes, empuñadura y tapa del mango con el león",
     powerVisual: "MAXIMUS POWER: cabeza encordada, letras MAXIMUS brillantes, grabado de personalización, empuñadura y tapa del mango con el león",
     greatVisual: "MAXIMUS GREAT: cabeza encordada, letras MAXIMUS brillantes, grabado de personalización, empuñadura, tapa del mango con el león y la marca de la serie G en la garganta",

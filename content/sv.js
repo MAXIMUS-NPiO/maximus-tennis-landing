@@ -1000,10 +1000,10 @@ const sv = {
     decline: "Neka",
   },
   media: {
-    spotHeadsUp: "Fem MAXIMUS Spot Trainer sida vid sida, med de runda träffytorna uppåt och handtagen nedåt, och bollar som vilar på träffytorna",
+    spotComposition: "MAXIMUS Spot Trainer: den kompletta kompositionen — träningsracketen framifrån och från sidan, det graverade runda lejonemblemet på den runda träffytan, graveringen MAXIMUS och SPOT TRAINER längs skaftet och den åttkantiga greppkapseln med lejonmärket",
     greatHero: "MAXIMUS GREAT-serien, 363 g: den kompletta kompositionen med röda och gula detaljer på huvudet, glansig MAXIMUS-text, Maximus-autografen på skaftet och lejonet på greppkapseln",
-    spotRow: "Fem MAXIMUS Spot Trainer lagda i en rad, med bollar som vilar på de runda träffytorna",
-    spotPair: "Två MAXIMUS Spot Trainer stående upprätt framför MAXIMUS lejonemblem, med bollar på de runda träffytorna",
+    spotDetail: "Två MAXIMUS Spot Trainer sedda närmare: det graverade lejonet på den matt svarta träffytan, den räfflade grepplindningen och de åttkantiga greppkapslarna med lejonmärket",
+    spotPair: "Två MAXIMUS Spot Trainer lagda i vinkel på en mörk yta, med MAXIMUS graverat längs det ena skaftet och SPOT TRAINER längs det andra, och lejonemblemet på varje träffyta",
     spinVisual: "MAXIMUS SPIN: huvud med strängar, glansig MAXIMUS-text, grepp och greppkapsel med lejonet",
     powerVisual: "MAXIMUS POWER: huvud med strängar, glansig MAXIMUS-text, personaliseringsgravyr, grepp och greppkapsel med lejonet",
     greatVisual: "MAXIMUS GREAT: huvud med strängar, glansig MAXIMUS-text, personaliseringsgravyr, grepp, greppkapsel med lejonet och seriemärket G på halsen",

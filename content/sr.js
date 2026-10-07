@@ -1000,10 +1000,10 @@ const sr = {
     decline: "Odbijte",
   },
   media: {
-    spotHeadsUp: "Pet MAXIMUS Spot Trainer meta jedna uz drugu, okruglim glavama za kontakt nagore i ručkama nadole, sa lopticama koje leže na glavama",
+    spotComposition: "MAXIMUS Spot Trainer: kompletna kompozicija — meta prikazana spreda i sa strane, gravirani medaljon sa lavom na okrugloj glavi za kontakt, gravura MAXIMUS i SPOT TRAINER duž vrata i osmougaoni poklopac ručke sa oznakom lava",
     greatHero: "MAXIMUS GREAT serija, 363 g: kompletna kompozicija sa crvenim i žutim detaljima na glavi, sjajnim MAXIMUS natpisom, Maximus autogramom na vratu reketa i poklopcem ručke sa lavom",
-    spotRow: "Pet MAXIMUS Spot Trainer meta poređanih u niz, sa lopticama koje leže na okruglim glavama za kontakt",
-    spotPair: "Dve MAXIMUS Spot Trainer mete stoje uspravno pred amblemom MAXIMUS lava, sa lopticama na okruglim glavama za kontakt",
+    spotDetail: "Dve MAXIMUS Spot Trainer mete izbliza: gravirani lav na mat crnoj glavi za kontakt, rebrasti omot ručke i osmougaoni poklopci ručki sa oznakom lava",
+    spotPair: "Dve MAXIMUS Spot Trainer mete položene pod uglom na tamnoj površini, sa gravurom MAXIMUS duž jednog vrata i SPOT TRAINER duž drugog, sa medaljonom lava na svakoj glavi za kontakt",
     spinVisual: "MAXIMUS SPIN: glava sa žicama, sjajni MAXIMUS natpis, ručka i poklopac ručke sa lavom",
     powerVisual: "MAXIMUS POWER: glava sa žicama, sjajni MAXIMUS natpis, gravura personalizacije, ručka i poklopac ručke sa lavom",
     greatVisual: "MAXIMUS GREAT: glava sa žicama, sjajni MAXIMUS natpis, gravura personalizacije, ručka, poklopac ručke sa lavom i oznaka serije G na grlu reketa",

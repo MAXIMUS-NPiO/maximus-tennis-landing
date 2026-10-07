@@ -1000,10 +1000,10 @@ const fr = {
     decline: "Refuser",
   },
   media: {
-    spotHeadsUp: "Cinq MAXIMUS Spot Trainer côte à côte, têtes de contact rondes vers le haut et manches vers le bas, avec des balles posées sur les têtes",
+    spotComposition: "MAXIMUS Spot Trainer : la composition complète — le Spot Trainer vu de face et de profil, l'emblème rond au lion gravé sur la tête de contact ronde, la gravure MAXIMUS et SPOT TRAINER le long du cœur et le capuchon de manche octogonal avec la marque au lion",
     greatHero: "Série MAXIMUS GREAT, 363 g : la composition complète avec les détails rouges et jaunes sur le tamis, le lettrage MAXIMUS brillant, l'autographe Maximus sur le cœur et le capuchon de manche au lion",
-    spotRow: "Cinq MAXIMUS Spot Trainer alignés, des balles posées sur leurs têtes de contact rondes",
-    spotPair: "Deux MAXIMUS Spot Trainer dressés devant l'emblème au lion MAXIMUS, des balles posées sur leurs têtes de contact rondes",
+    spotDetail: "Deux MAXIMUS Spot Trainer vus de plus près : le lion gravé sur la tête de contact noir mat, le grip nervuré et les capuchons de manche octogonaux avec la marque au lion",
+    spotPair: "Deux MAXIMUS Spot Trainer posés en biais sur une surface sombre, MAXIMUS gravé le long du cœur de l'un et SPOT TRAINER le long de celui de l'autre, avec l'emblème rond au lion sur chaque tête de contact",
     spinVisual: "MAXIMUS SPIN : tamis cordé, lettrage MAXIMUS brillant, grip et capuchon de manche au lion",
     powerVisual: "MAXIMUS POWER : tamis cordé, lettrage MAXIMUS brillant, gravure de personnalisation, grip et capuchon de manche au lion",
     greatVisual: "MAXIMUS GREAT : tamis cordé, lettrage MAXIMUS brillant, gravure de personnalisation, grip, capuchon de manche au lion et marque de série G sur le cœur",

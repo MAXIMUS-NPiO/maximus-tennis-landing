@@ -1000,10 +1000,10 @@ const ja = {
     decline: "許可しない",
   },
   media: {
-    spotHeadsUp: "MAXIMUS Spot Trainer 5本を並べ、丸いコンタクトヘッドを上、ハンドルを下にして、ヘッドの上にボールを載せた状態",
+    spotComposition: "MAXIMUS Spot Trainer：全体の構成。正面と側面から見た本体、丸いコンタクトヘッドに刻印されたライオンの円形エンブレム、シャフトに沿って入った MAXIMUS と SPOT TRAINER の刻印、ライオンマーク入りの八角形バットキャップ",
     greatHero: "MAXIMUS GREAT シリーズ 363 g：赤と黄のフェース装飾、グロスの MAXIMUS レタリング、シャフトの Maximus のサイン、ライオンのバットキャップを含む全体の構成",
-    spotRow: "MAXIMUS Spot Trainer 5本を横一列に並べ、丸いコンタクトヘッドの上にボールを載せた状態",
-    spotPair: "MAXIMUS のライオンエンブレムの前に立てた MAXIMUS Spot Trainer 2本。丸いコンタクトヘッドの上にボールを載せた状態",
+    spotDetail: "MAXIMUS Spot Trainer 2本を近くから見た状態。マットブラックのコンタクトヘッドに刻印されたライオン、リブ入りのグリップラップ、ライオンマーク入りの八角形バットキャップ",
+    spotPair: "暗い面に斜めに置いた MAXIMUS Spot Trainer 2本。一方のシャフトには MAXIMUS、もう一方には SPOT TRAINER が刻印され、それぞれのコンタクトヘッドにライオンの円形エンブレムが入っている",
     spinVisual: "MAXIMUS SPIN：ストリングを張ったフェース、グロスの MAXIMUS レタリング、グリップ、ライオンのバットキャップ",
     powerVisual: "MAXIMUS POWER：ストリングを張ったフェース、グロスの MAXIMUS レタリング、パーソナライズ刻印、グリップ、ライオンのバットキャップ",
     greatVisual: "MAXIMUS GREAT：ストリングを張ったフェース、グロスの MAXIMUS レタリング、パーソナライズ刻印、グリップ、ライオンのバットキャップ、スロートの G シリーズマーク",

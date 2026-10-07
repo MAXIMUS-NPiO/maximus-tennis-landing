@@ -1000,10 +1000,10 @@ const ro = {
     decline: "Refuzați",
   },
   media: {
-    spotHeadsUp: "Cinci Spot Trainer MAXIMUS unul lângă altul, cu capetele rotunde de contact în sus și mânerele în jos, cu mingi așezate pe capete",
+    spotComposition: "MAXIMUS Spot Trainer: compoziția completă — dispozitivul de antrenament văzut din față și din profil, medalionul gravat cu leu pe capul rotund de contact, gravura MAXIMUS și SPOT TRAINER de-a lungul tijei și capacul inferior octogonal cu emblema leului",
     greatHero: "Seria MAXIMUS GREAT, 363 g: compoziția completă, cu detalii roșii și galbene pe cap, inscripția MAXIMUS lucioasă, autograful Maximus pe tijă și capacul inferior cu leu",
-    spotRow: "Cinci Spot Trainer MAXIMUS așezate în rând, cu mingi pe capetele rotunde de contact",
-    spotPair: "Două Spot Trainer MAXIMUS în poziție verticală, în fața emblemei cu leu MAXIMUS, cu mingi pe capetele rotunde de contact",
+    spotDetail: "Două MAXIMUS Spot Trainer văzute mai de aproape: leul gravat pe capul de contact negru mat, înfășurarea nervurată a mânerului și capacele inferioare octogonale cu emblema leului",
+    spotPair: "Două MAXIMUS Spot Trainer așezate oblic pe o suprafață întunecată, cu MAXIMUS gravat de-a lungul unei tije și SPOT TRAINER de-a lungul celeilalte, cu medalionul cu leu pe fiecare cap de contact",
     spinVisual: "MAXIMUS SPIN: capul cu cordaj, inscripția MAXIMUS lucioasă, mânerul și capacul inferior cu leu",
     powerVisual: "MAXIMUS POWER: capul cu cordaj, inscripția MAXIMUS lucioasă, gravura de personalizare, mânerul și capacul inferior cu leu",
     greatVisual: "MAXIMUS GREAT: capul cu cordaj, inscripția MAXIMUS lucioasă, gravura de personalizare, mânerul, capacul inferior cu leu și marcajul seriei G pe gâtul rachetei",

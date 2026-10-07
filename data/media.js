@@ -22,9 +22,9 @@ import handleLion from "../public/media/handle-lion.jpg";
 import engraving from "../public/media/engraving.jpg";
 import lettering from "../public/media/lettering.jpg";
 import sstSystem from "../public/media/sst-system.jpg";
-import spotPair from "../public/media/spot/spot-trainers-pair.jpg";
-import spotRow from "../public/media/spot/spot-trainers-row.jpg";
-import spotHeadsUp from "../public/media/spot/spot-trainers-heads-up.jpg";
+import spotComposition from "../public/media/spot/spot-trainer-composition.webp";
+import spotPair from "../public/media/spot/spot-trainer-pair.webp";
+import spotDetail from "../public/media/spot/spot-trainer-detail.webp";
 import sst270 from "../public/media/sst-270.jpg";
 import sst285 from "../public/media/sst-285.jpg";
 import sst300 from "../public/media/sst-300.jpg";
@@ -194,9 +194,9 @@ export const media = {
   sstShafts: owner(sstShafts, "sst", "Sweet Spot Trainer shafts with the MAXIMUS lettering"),
   sstGrips: owner(sstGrips, "sst", "Sweet Spot Trainer grips and butt caps"),
   sstButtcaps: owner(sstButtcaps, "sst", "Sweet Spot Trainer four-racquet system, butt caps"),
-  spotPair: owner(spotPair, "spot", "Spot Trainer: two trainers upright with balls on the round contact heads"),
-  spotRow: owner(spotRow, "spot", "Spot Trainer: five trainers laid out with balls on the round contact heads"),
-  spotHeadsUp: owner(spotHeadsUp, "spot", "Spot Trainer: five trainers side by side, round contact heads up and handles down"),
+  spotComposition: owner(spotComposition, "spot", "Spot Trainer: complete composition — full view, front and side, with the lion roundel on the contact head, the MAXIMUS and SPOT TRAINER engraving on the shaft and the octagonal lion butt cap"),
+  spotPair: owner(spotPair, "spot", "Spot Trainer: two trainers laid at an angle, MAXIMUS and SPOT TRAINER engraved along the shafts"),
+  spotDetail: owner(spotDetail, "spot", "Spot Trainer: the two trainers closer — the engraved lion on the matte contact head, the grip wrap and the octagonal butt caps"),
 };
 
 /** Sweet Spot Trainer gallery. */
@@ -214,10 +214,17 @@ export const seriesMedia = {
   spin: { card: "spinVisual", full: "spinVisual", details: ["spinHead", "handleLion"] },
 };
 
-export const trainingMedia = { sst: "sstSystem", spot: "spotHeadsUp" };
+export const trainingMedia = { sst: "sstSystem", spot: "spotPair" };
 
-/** Spot Trainer photographs (owner set, 29 Sep 2026). */
-export const spotGallery = ["spotHeadsUp", "spotPair"];
+/**
+ * Spot Trainer studio set (owner instruction, 7 October 2026). It replaces the photographs of
+ * 29 September: those were working shots on a grey wall, and the printed ball labels in them
+ * carried a trading address that is not published on this site. Withdrawn and removed.
+ *
+ * Published whole, in the order they are shown: the complete composition first, then the two
+ * angled views. Source files 1254 x 1254, the same studio package as the performance series.
+ */
+export const spotGallery = ["spotComposition", "spotPair", "spotDetail"];
 
 /**
  * Inspection video 08 is prepared but NOT released: the owner must review the full clip first.

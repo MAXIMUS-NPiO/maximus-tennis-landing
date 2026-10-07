@@ -1000,10 +1000,10 @@ const pt = {
     decline: "Recusar",
   },
   media: {
-    spotHeadsUp: "Cinco MAXIMUS Spot Trainers lado a lado, com as cabeças redondas de contato para cima e os cabos para baixo, e bolas apoiadas nas cabeças",
+    spotComposition: "MAXIMUS Spot Trainer: a composição completa — o Spot Trainer visto de frente e de perfil, o emblema redondo do leão gravado na cabeça redonda de contato, a gravação MAXIMUS e SPOT TRAINER ao longo da haste e a tampa octogonal do cabo com a marca do leão",
     greatHero: "MAXIMUS série GREAT, 363 g: a composição completa com detalhes vermelhos e amarelos na cabeça, letras MAXIMUS brilhantes, a assinatura Maximus na haste e a tampa do cabo com o leão",
-    spotRow: "Cinco MAXIMUS Spot Trainers dispostos em fila, com bolas apoiadas nas suas cabeças redondas de contato",
-    spotPair: "Dois MAXIMUS Spot Trainers em pé diante do emblema do leão MAXIMUS, com bolas nas suas cabeças redondas de contato",
+    spotDetail: "Dois MAXIMUS Spot Trainers vistos mais de perto: o leão gravado na cabeça de contato preta fosca, o enrolamento canelado do grip e as tampas octogonais do cabo com a marca do leão",
+    spotPair: "Dois MAXIMUS Spot Trainers apoiados na diagonal sobre uma superfície escura, com MAXIMUS gravado ao longo de uma das hastes e SPOT TRAINER ao longo da outra, e o emblema redondo do leão em cada cabeça de contato",
     spinVisual: "MAXIMUS SPIN: cabeça com cordas, letras MAXIMUS brilhantes, grip e tampa do cabo com o leão",
     powerVisual: "MAXIMUS POWER: cabeça com cordas, letras MAXIMUS brilhantes, gravação de personalização, grip e tampa do cabo com o leão",
     greatVisual: "MAXIMUS GREAT: cabeça com cordas, letras MAXIMUS brilhantes, gravação de personalização, grip, tampa do cabo com o leão e a marca da série G na garganta",

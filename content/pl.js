@@ -1000,10 +1000,10 @@ const pl = {
     decline: "Odrzuć",
   },
   media: {
-    spotHeadsUp: "Pięć trenażerów MAXIMUS Spot Trainer obok siebie, okrągłe główki kontaktowe skierowane w górę, rączki w dół, z piłkami leżącymi na główkach",
+    spotComposition: "MAXIMUS Spot Trainer: pełna kompozycja — trenażer widziany z przodu i z boku, grawerowany okrągły emblemat lwa na okrągłej główce kontaktowej, grawer MAXIMUS i SPOT TRAINER wzdłuż trzonu oraz ośmiokątny kapturek ze znakiem lwa",
     greatHero: "Seria MAXIMUS GREAT, 363 g: pełna kompozycja z czerwonymi i żółtymi detalami główki, błyszczącym napisem MAXIMUS, autografem Maximus na trzonie i kapturkiem z lwem",
-    spotRow: "Pięć trenażerów MAXIMUS Spot Trainer ułożonych w rzędzie, z piłkami na okrągłych główkach kontaktowych",
-    spotPair: "Dwa trenażery MAXIMUS Spot Trainer stojące pionowo przed emblematem lwa MAXIMUS, z piłkami na okrągłych główkach kontaktowych",
+    spotDetail: "Dwa trenażery MAXIMUS Spot Trainer z bliska: grawerowany lew na matowej czarnej główce kontaktowej, żebrowana owijka rączki i ośmiokątne kapturki ze znakiem lwa",
+    spotPair: "Dwa trenażery MAXIMUS Spot Trainer ułożone pod skosem na ciemnej powierzchni, z grawerem MAXIMUS wzdłuż jednego trzonu i SPOT TRAINER wzdłuż drugiego oraz z okrągłym emblematem lwa na każdej główce kontaktowej",
     spinVisual: "MAXIMUS SPIN: główka z naciągiem, błyszczący napis MAXIMUS, rączka i kapturek z lwem",
     powerVisual: "MAXIMUS POWER: główka z naciągiem, błyszczący napis MAXIMUS, grawer personalizacyjny, rączka i kapturek z lwem",
     greatVisual: "MAXIMUS GREAT: główka z naciągiem, błyszczący napis MAXIMUS, grawer personalizacyjny, rączka, kapturek z lwem i znak serii G na sercu rakiety",

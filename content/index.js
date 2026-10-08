@@ -13,6 +13,8 @@ import hr from "./hr";
 import el from "./el";
 import hi from "./hi";
 import id from "./id";
+import fil from "./fil";
+import th from "./th";
 import az from "./az";
 import uz from "./uz";
 import kk from "./kk";
@@ -49,5 +51,5 @@ import eu from "./eu";
 import gl from "./gl";
 import be from "./be";
 
-export const bundles = { en, de, nl, fr, es, it, pt, pl, hu, sk, hr, sr, ro, bg, el, sv, no, tr, az, uz, kk, uk, ru, ar, hi, id, ja, ko, zh, cs, sl, bs, mk, sq, da, fi, is: isl, ga, et, lv, lt, mt, ca, eu, gl, be };
+export const bundles = { en, de, nl, fr, es, it, pt, pl, hu, sk, hr, sr, ro, bg, el, sv, no, tr, az, uz, kk, uk, ru, ar, hi, id, fil, th, ja, ko, zh, cs, sl, bs, mk, sq, da, fi, is: isl, ga, et, lv, lt, mt, ca, eu, gl, be };
 export default bundles;

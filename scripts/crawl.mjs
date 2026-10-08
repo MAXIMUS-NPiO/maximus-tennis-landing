@@ -27,7 +27,7 @@ const COMPETITORS = [
   /\bv(ö|o)lkl\b/i, /\bprince\b/i, /\bwilson\b/i,
 ];
 // Two names were tried and withdrawn: "gamma" is the Italian word for a product range and
-// "pacific" is a geography this site writes about. Across twenty-nine languages a brand pattern
+// "pacific" is a geography this site writes about. Across every language on the site a brand pattern
 // has to be one that no language uses as an ordinary word.
 // The English master is the source every translation is written from, so catching a comparison
 // here catches it before it can reach twenty-eight other languages.

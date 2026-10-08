@@ -8,7 +8,7 @@ Production Next.js site for MAXIMUS / MAXIMUS GPS. Version 4.2 (21 September 202
 - Static generation for every public page (`generateStaticParams`); request intake runs in Node.js route handlers.
 
 ## Structure
-- `app/[locale]/…` — public pages (32 destinations × 29 locales). `app/api/leads/*` — request intake, scheduled retry, private register.
+- `app/[locale]/…` — public pages (33 destinations × 48 locales). `app/api/leads/*` — request intake, scheduled retry, private register.
 - `content/en.js` (master) and one file per language, registered in `content/index.js` — every visitor-facing string, 1206 per language. Same key structure, enforced by `scripts/check-i18n.mjs`; `scripts/check-translation.mjs` additionally fails if a translated file still carries the English value of a key, outside a per-language allowlist of terms the trade keeps in English.
 - `data/products.js` — single numerical product source (matrices, precision classes, grips, training families) with evidence statuses. Internal engineering formulas are deliberately not stored in this repository.
 - `data/media.js` — registered photographs (see `ASSET_MANIFEST.md`); `data/site.js` — routes, navigation, identities, ecosystem statuses, request purposes.

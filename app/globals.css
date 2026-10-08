@@ -310,7 +310,7 @@ details.expander > div { padding: 0 18px 18px; }
   .lang-panel a { padding-inline: 6px; font-size: 14px; }
 }
 @media (max-width: 359px) {
-  .lang-panel { grid-template-rows: repeat(23, auto); }
+  .lang-panel { grid-template-rows: repeat(24, auto); }
 }
 /* Tablet: four columns of twelve, aligned with the end of the header row. */
 @media (min-width: 560px) and (max-width: 899px) {
@@ -954,6 +954,11 @@ p, li, dd, figcaption {
 :lang(ja) p, :lang(ja) li, :lang(ja) dd, :lang(ja) figcaption,
 :lang(ko) p, :lang(ko) li, :lang(ko) dd, :lang(ko) figcaption,
 :lang(zh) p, :lang(zh) li, :lang(zh) dd, :lang(zh) figcaption { hyphens: manual; }
+/* Filipino and Thai are set flush to the start. Browsers carry no Filipino hyphenation dictionary,
+   and Thai puts spaces only between phrases, so in both a justified line can stretch only its few
+   spaces — the rivers of white space the hyphenation above exists to prevent.
+   :where keeps the weight of a plain element rule, so classes that set their own alignment still win. */
+:where(:lang(tl), :lang(th)) :is(p, li, dd, figcaption) { text-align: start; }
 
 /* =============================================================================================
    Catalogue theme (Founder's instruction, 8 October 2026). The site takes the visual language of
@@ -1159,3 +1164,7 @@ h1.eyebrow, h2.eyebrow, h3.eyebrow, h4.eyebrow, .footer-sub-h { font-family: var
    gives it the room, so no word has to be cut. */
 .pparams .status { display: inline-flex; white-space: normal; font-size: 11.5px; letter-spacing: 0.06em; padding: 4px 9px; line-height: 1.3; }
 .pparams div { background: var(--paper); }
+
+/* Thai stacks vowels and tone marks above and below the line. Headings set nearly solid for the
+   Latin serif let the marks of one line touch the next, so Thai display text is given room. */
+:lang(th) :is(h1, h2, h3, h4, .h-display, .h-1, .h-2, .h-3, .statement, .index-name, .pp-name, .card h3) { line-height: 1.3; }

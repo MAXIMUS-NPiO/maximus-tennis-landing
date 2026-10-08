@@ -44,7 +44,7 @@ const locales = process.argv.slice(2).length ? process.argv.slice(2) : site.loca
  * The ZERO claim is publishable only together with its measurement qualification. The crawler can
  * only read that qualification in English, so the binding check lives here, where every language is
  * loaded: the two sentences that carry it must exist and must still be sentences. This catches the
- * realistic failure — a locale where someone shortens or empties them — in all twenty-nine.
+ * realistic failure — a locale where someone shortens or empties them — in every registered language.
  */
 const MIN_ZERO = { p: 70, note: 30 };
 function checkZero(dict, locale) {

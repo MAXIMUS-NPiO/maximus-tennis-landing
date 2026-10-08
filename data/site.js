@@ -27,7 +27,7 @@ export const site = {
   // Order of the language menu. Ukrainian sits with the other European languages and Russian
   // before the non-European block, so the two are neither adjacent in the list nor in the
   // same column of the panel. Both placements are geographic; neither is a ranking.
-  locales: ["en", "de", "nl", "da", "no", "sv", "fi", "is", "ga", "fr", "ca", "eu", "gl", "es", "pt", "it", "mt", "pl", "cs", "sk", "hu", "sl", "hr", "bs", "sr", "mk", "sq", "ro", "bg", "el", "et", "lv", "lt", "uk", "be", "tr", "az", "uz", "kk", "ru", "ar", "hi", "id", "ja", "ko", "zh"],
+  locales: ["en", "de", "nl", "da", "no", "sv", "fi", "is", "ga", "fr", "ca", "eu", "gl", "es", "pt", "it", "mt", "pl", "cs", "sk", "hu", "sl", "hr", "bs", "sr", "mk", "sq", "ro", "bg", "el", "et", "lv", "lt", "uk", "be", "tr", "az", "uz", "kk", "ru", "ar", "hi", "id", "fil", "th", "ja", "ko", "zh"],
   defaultLocale: "en",
   localeMeta: {
     en: { name: "English", short: "EN", hrefLang: "en", ogLocale: "en_GB", match: ["en"],
@@ -64,6 +64,12 @@ export const site = {
       suggest: { text: "यह साइट हिन्दी में भी उपलब्ध है।", go: "हिन्दी में देखें", stay: "इसी संस्करण पर रहें" } },
     id: { name: "Bahasa Indonesia", short: "ID", hrefLang: "id", ogLocale: "id_ID", match: ["id", "in"],
       suggest: { text: "Situs ini juga tersedia dalam bahasa Indonesia.", go: "Beralih ke bahasa Indonesia", stay: "Tetap di versi ini" } },
+    // Filipino: Google accepts only ISO 639-1 codes in hreflang, and Filipino has none of its own, so
+    // <html lang>, hreflang and the sitemap use "tl" (Tagalog, the basis of Filipino); the path stays /fil.
+    fil: { name: "Filipino", short: "FIL", hrefLang: "tl", ogLocale: "tl_PH", match: ["fil", "tl"],
+      suggest: { text: "Mayroon ding bersyong Filipino ang site na ito.", go: "Lumipat sa Filipino", stay: "Manatili sa bersyong ito" } },
+    th: { name: "ไทย", short: "TH", hrefLang: "th", ogLocale: "th_TH", match: ["th"],
+      suggest: { text: "เว็บไซต์นี้มีให้บริการเป็นภาษาไทยด้วย", go: "เปลี่ยนเป็นภาษาไทย", stay: "อยู่ในเวอร์ชันนี้ต่อ" } },
     az: { name: "Azərbaycan", short: "AZ", hrefLang: "az", ogLocale: "az_AZ", match: ["az"],
       suggest: { text: "Bu sayt Azərbaycan dilində də mövcuddur.", go: "Azərbaycan dilinə keç", stay: "Bu versiyada qal" } },
     uz: { name: "Oʻzbekcha", short: "UZ", hrefLang: "uz", ogLocale: "uz_UZ", match: ["uz"],

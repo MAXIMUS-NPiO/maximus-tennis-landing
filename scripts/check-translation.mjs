@@ -216,7 +216,16 @@ const ALLOWED_BY_LOCALE = {
     "GREAT — 97 in² · Control", "MAXIMUS GREAT · 97 in² · Control",
   ]),
   // mk and be need no entries: nothing in them collides with English.
-
+  fil: new Set([
+    "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Beach tennis",  // the names Philippine sport uses
+    "Coach", "Retailer", "Distributor", "Fitting",                 // what the Philippine trade says
+    "Menu", "Analytics",                                            // interface words Filipino screens use as written
+    "Privacy",                                                      // the word of Philippine law and notices (Data Privacy Act)
+    "Swingweight", "Twistweight",
+    "SPIN — 100 in² · Spin",                                        // series mark, unit, and the stroke as Filipino players name it
+    "Family Plan",  // kept as the programme's name: the Filipino rendering reads as "family planning" (contraception) there
+  ]),
+  // th needs no entries: nothing in it collides with English.
 };
 
 function walk(obj, trail, out) {

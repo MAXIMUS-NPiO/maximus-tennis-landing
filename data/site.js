@@ -186,13 +186,18 @@ export const routes = {
   terms: "/terms",
 };
 
-/** Grouped header navigation. Keys resolve to translated labels in content/<locale>.js → nav. */
+/**
+ * Grouped header navigation. Keys resolve to translated labels in content/<locale>.js → nav.
+ * Family Plan is a category of its own on the bar, as the Founder asked, placed second, next to
+ * the racquets. To keep the bar clear of the lockup in all forty-six languages, the configurator
+ * moved into the Racquets menu, beside "Help me choose": both are ways of arriving at a racquet.
+ * Measured, not guessed — see scripts/check-header.mjs.
+ */
 export const navGroups = [
-  { key: "racquets", items: ["choose", "racquets", "great", "power", "spin", "precision", "grip", "custom"] },
+  { key: "racquets", items: ["choose", "build", "racquets", "great", "power", "spin", "precision", "grip", "custom"] },
   { key: "familyPlan", href: "familyPlan" },
   { key: "training", items: ["training", "sst", "spot", "methodology"] },
   { key: "gps", href: "gps" },
-  { key: "build", href: "build" },
   { key: "ecosystem", items: ["ecosystem", "engineering", "experience", "brands", "families", "owners", "network"] },
   { key: "partnerships", items: ["partnerships", "coaches", "clubs", "distribution", "strategic", "institutional"] },
   { key: "contact", href: "contact" },

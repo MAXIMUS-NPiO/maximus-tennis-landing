@@ -133,6 +133,15 @@ export default function FamilyPlan({ t, numLocale }) {
 
   const cur = plan.currency;
   const step = plan.step;
+  // Amounts of money are written by the browser only. The prerendering server carries the whole of
+  // the Unicode locale data and a browser may carry less: measured in Chromium, an amount in
+  // Macedonian, Icelandic, Basque and eight more of the site's languages comes out differently from
+  // the server's, and React then throws the page's markup away. Until the calculator is live in the
+  // browser an amount shows as a dash. Counts and hours need no such care: before that moment they
+  // are the zeros of the empty plan, which every runtime writes alike.
+  const PENDING = "\u2014";
+  const fMoney = (v) => (ready ? money(numLocale, cur, v) : PENDING);
+  const fMoneyFinal = (v) => (ready ? moneyFinal(numLocale, cur, v) : PENDING);
   const onTabKey = (e, i) => {
     const n = t.steps.length;
     let k = null;
@@ -168,6 +177,7 @@ export default function FamilyPlan({ t, numLocale }) {
 
   const unitCell = (value, undefinedText) => {
     if (value === null) return <span className="fp-undefined">{undefinedText}</span>;
+    if (!ready) return PENDING;
     const u = unitPrice(numLocale, cur, value);
     return u.below ? fill(t.economics.below, { value: u.text }) : u.text;
   };
@@ -292,7 +302,7 @@ export default function FamilyPlan({ t, numLocale }) {
                 </thead>
                 <tbody>
                   <tr><th scope="row">{t.annual.sessions}</th>{SCENARIOS.map((id) => <td key={id}>{count(numLocale, result.annual[id].playerSessions)}</td>)}</tr>
-                  <tr><th scope="row">{t.annual.cost}</th>{SCENARIOS.map((id) => <td key={id}>{money(numLocale, cur, result.annual[id].trainingCost)}</td>)}</tr>
+                  <tr><th scope="row">{t.annual.cost}</th>{SCENARIOS.map((id) => <td key={id}>{fMoney(result.annual[id].trainingCost)}</td>)}</tr>
                   <tr><th scope="row">{t.annual.hours}</th>{SCENARIOS.map((id) => <td key={id}>{hours(numLocale, result.annual[id].playerHours, 1)} {t.units.h}</td>)}</tr>
                   <tr><th scope="row">{t.annual.length}</th>{SCENARIOS.map((id) => <td key={id}>{lengthCell(plan.scenarios[id])}</td>)}</tr>
                   <tr><th scope="row">{t.annual.contacts}</th>{SCENARIOS.map((id) => <td key={id}>{count(numLocale, result.annual[id].contacts)}</td>)}</tr>
@@ -314,7 +324,7 @@ export default function FamilyPlan({ t, numLocale }) {
                 <tr><th scope="col"><span className="sr-only">{t.economics.title}</span></th>{SCENARIOS.map((id) => <th key={id} scope="col" className={plan.selected === id ? "sel" : ""}>{t.scenarios[id]}</th>)}</tr>
               </thead>
               <tbody>
-                <tr><th scope="row">{t.economics.session}</th>{SCENARIOS.map((id) => <td key={id}>{moneyFinal(numLocale, cur, result.values.scenarios[id].cost)}</td>)}</tr>
+                <tr><th scope="row">{t.economics.session}</th>{SCENARIOS.map((id) => <td key={id}>{fMoneyFinal(result.values.scenarios[id].cost)}</td>)}</tr>
                 <tr><th scope="row">{t.economics.hour}</th>{SCENARIOS.map((id) => <td key={id}>{unitCell(result.annual[id].costPerHour, t.economics.undefinedMinutes)}</td>)}</tr>
                 <tr><th scope="row">{t.economics.contact}</th>{SCENARIOS.map((id) => <td key={id}>{unitCell(result.annual[id].costPerContact, t.economics.undefinedContacts)}</td>)}</tr>
               </tbody>
@@ -343,7 +353,7 @@ export default function FamilyPlan({ t, numLocale }) {
                   <tr key={row.horizon}>
                     <th scope="row">{fill(t.longTerm.years, { n: count(numLocale, row.horizon) })}</th>
                     <td>{count(numLocale, row.activeYears)}</td>
-                    {SCENARIOS.map((id) => <td key={id}>{money(numLocale, cur, result.longTerm[id][i].cost)}</td>)}
+                    {SCENARIOS.map((id) => <td key={id}>{fMoney(result.longTerm[id][i].cost)}</td>)}
                   </tr>
                 ))}
               </tbody>
@@ -370,12 +380,12 @@ export default function FamilyPlan({ t, numLocale }) {
           return (
             <div className="fp-final" aria-live="polite">
               <p className="fp-final-heading">{fill(t.final.heading, { scenario: t.scenarios[plan.selected], months: count(numLocale, f.months) })}</p>
-              <p className="fp-total"><span className="fp-total-label">{t.final.total}</span><span className="fp-total-value">{moneyFinal(numLocale, cur, f.total)}</span></p>
+              <p className="fp-total"><span className="fp-total-label">{t.final.total}</span><span className="fp-total-value">{fMoneyFinal(f.total)}</span></p>
               <dl className="fp-breakdown">
-                <div><dt>{t.final.training}</dt><dd>{moneyFinal(numLocale, cur, f.trainingCost)}</dd></div>
-                <div><dt>{t.final.extras}</dt><dd>{moneyFinal(numLocale, cur, f.extraCosts)}</dd></div>
-                <div className="sub"><dt>{t.final.oneOff}</dt><dd>{moneyFinal(numLocale, cur, f.oneOffCosts)}</dd></div>
-                <div className="sub"><dt>{t.final.monthly}</dt><dd>{moneyFinal(numLocale, cur, f.monthlyExtraCosts)} × {count(numLocale, f.months)}</dd></div>
+                <div><dt>{t.final.training}</dt><dd>{fMoneyFinal(f.trainingCost)}</dd></div>
+                <div><dt>{t.final.extras}</dt><dd>{fMoneyFinal(f.extraCosts)}</dd></div>
+                <div className="sub"><dt>{t.final.oneOff}</dt><dd>{fMoneyFinal(f.oneOffCosts)}</dd></div>
+                <div className="sub"><dt>{t.final.monthly}</dt><dd>{fMoneyFinal(f.monthlyExtraCosts)} × {count(numLocale, f.months)}</dd></div>
                 <div><dt>{t.final.sessions}</dt><dd>{count(numLocale, f.playerSessions)}</dd></div>
                 <div><dt>{t.final.hours}</dt><dd>{hours(numLocale, f.playerHours, 2)} {t.units.h}</dd></div>
                 <div><dt>{t.final.contacts}</dt><dd>{count(numLocale, f.contacts)}</dd></div>
@@ -389,10 +399,10 @@ export default function FamilyPlan({ t, numLocale }) {
                 <summary>{t.final.inputs}</summary>
                 <dl className="fp-breakdown">
                   {SCENARIO_FIELDS.map((k) => (
-                    <div key={k}><dt>{t.fields[k].label}</dt><dd>{k === "cost" ? moneyFinal(numLocale, cur, result.values.scenarios[plan.selected][k]) : hours(numLocale, result.values.scenarios[plan.selected][k], 2)}</dd></div>
+                    <div key={k}><dt>{t.fields[k].label}</dt><dd>{k === "cost" ? fMoneyFinal(result.values.scenarios[plan.selected][k]) : hours(numLocale, result.values.scenarios[plan.selected][k], 2)}</dd></div>
                   ))}
                   {ONE_OFF_EXTRAS.concat(MONTHLY_EXTRAS).map((k) => (
-                    <div key={k}><dt>{t.extras[k]}</dt><dd>{moneyFinal(numLocale, cur, result.values.extras[k])}</dd></div>
+                    <div key={k}><dt>{t.extras[k]}</dt><dd>{fMoneyFinal(result.values.extras[k])}</dd></div>
                   ))}
                   {result.values.quoteSource && <div><dt>{t.extras.quoteSource}</dt><dd>{result.values.quoteSource}</dd></div>}
                   {result.values.quoteDate && <div><dt>{t.extras.quoteDate}</dt><dd>{result.values.quoteDate}</dd></div>}

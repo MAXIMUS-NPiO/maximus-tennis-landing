@@ -811,7 +811,7 @@ const nl = {
     disclosure: {
       public: { h: "Openbaar", p: "Goedgekeurde productspecificaties, constructie, configuratiearchitectuur, trainingsdoelen, geverifieerde capaciteiten, uitleg over programma's en routes voor samenwerking." },
       qualified: { h: "Gekwalificeerde aanvraag", p: "Technische eisen, aantallen, belangstelling voor een gebied, ontwikkelingsomvang en relevante commerciële gesprekken." },
-      controlled: { h: "Beheerst door geheimhoudingsovereenkomst of contract", p: "Interne formules, uitgewerkte protocollen voor kwaliteitscontrole, laminaatopbouw, gereedschap, productiemethoden, identiteit van leveranciers, kostprijzen, economische cijfers per koper, beschermde methodiek, niet-gepubliceerde overeenkomsten en gevoelige rechtendossiers." },
+      controlled: { h: "Beheerst door geheimhoudings\u00adovereenkomst of contract", p: "Interne formules, uitgewerkte protocollen voor kwaliteitscontrole, laminaatopbouw, gereedschap, productiemethoden, identiteit van leveranciers, kostprijzen, economische cijfers per koper, beschermde methodiek, niet-gepubliceerde overeenkomsten en gevoelige rechtendossiers." },
     },
   },
   contact: {

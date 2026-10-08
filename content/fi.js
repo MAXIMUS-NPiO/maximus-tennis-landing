@@ -80,7 +80,7 @@ const fi = {
   },
   nav: {
     language: "Kieli",
-    groups: { racquets: "Mailat", training: "Harjoittelu", ecosystem: "Ekosysteemi", partnerships: "Kumppanuudet" },
+    groups: { racquets: "Mailat", training: "Harjoittelu", ecosystem: "Ekosysteemi", partnerships: "Kumppanit" },
     familyPlan: "Perhesuunnitelma",
     racquets: "Mailasarjat ja vertailu",
     great: "GREAT — 97 in² · Hallinta",

@@ -971,7 +971,7 @@ const et = {
       unavailable: "Päringuid ei ole praegu võimalik vastu võtta.",
       default: "Tekkis ootamatu viga.",
     },
-    keepNote: "Teie sisestatu hoitakse sellel lehel alles, nii et saate uuesti proovida.",
+    keepNote: "Teie sisestatu hoitakse sellel lehel alles, et saaksite uuesti proovida.",
     sendByEmail: "Saada see päring e-kirjaga",
     sendByEmailNote: "Teie e-posti rakendus avaneb selle päringu tekstiga. MAXIMUS saab selle kätte, kui te kirja saadate.",
     mailConfig: "Seadistus",
@@ -1076,7 +1076,7 @@ const et = {
       travel: "Reisid ja üritused — kuus, kogu pere",
       quoteSource: "Kust hinnad pärinevad (valikuline)",
       quoteDate: "Hindade kuupäev (valikuline)",
-      quoteNote: "Kuvatakse täpselt nii, nagu selle sisestasite. MAXIMUS neid hindu ei kontrolli.",
+      quoteNote: "Kuvatakse täpselt sellisena, nagu selle sisestasite. MAXIMUS neid hindu ei kontrolli.",
     },
     storage: {
       save: "Salvesta plaan selles seadmes",

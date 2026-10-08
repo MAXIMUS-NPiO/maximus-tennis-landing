@@ -157,6 +157,63 @@ const ALLOWED_BY_LOCALE = {
     "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
     "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
   ]),
+  // ---- Languages added 8 October 2026. Each string below is a real word of that language that
+  // happens to be spelled as in English — chiefly the names of the racquet sports and the two
+  // stringing-trade terms the trade writes in English everywhere.
+  cs: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
+    "Swingweight", "Twistweight",
+    "Role", "Sport", "Distributor", "Licence",                     // ordinary Czech words
+  ]),
+  sl: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
+    "Swingweight", "Twistweight",
+  ]),
+  bs: new Set(["Badminton"]),
+  sq: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
+    "Swingweight", "Twistweight", "Distributor", "Menu",
+  ]),
+  da: new Set([
+    "Tennis", "Padel", "Pickleball", "Squash", "Badminton",
+    "Swingweight", "Twistweight", "Balance",
+    "Start", "Status", "Menu", "Organisation", "Institution", "Distribution", "Service",
+    "SPIN — 100 in² · Spin",                                       // mark + unit + the Danish word for the stroke
+  ]),
+  fi: new Set([
+    "Tennis", "Padel", "Pickleball", "Squash", "Racquetball",
+    "Swingweight", "Twistweight",
+  ]),
+  is: new Set(["Tennis", "Padel", "Pickleball", "Badminton", "Racquetball"]),
+  ga: new Set(["Pickleball", "Racquetball"]),
+  et: new Set([
+    "Tennis", "Padel", "Squash", "Pickleball", "Racquetball",
+  ]),
+  lv: new Set(["Pickleball"]),
+  lt: new Set(["Pickleball"]),
+  mt: new Set([
+    "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
+    "Swingweight", "Twistweight", "Sport", "Status", "Menu",
+    "SPIN — 100 in² · Spin",
+  ]),
+  ca: new Set([
+    "Tennis", "Pickleball", "Squash", "Racquetball",
+    "Swingweight", "Twistweight",
+    "Control", "No", "Nominal", "Professional",                    // Catalan words spelled as in English
+    "GREAT — 97 in² · Control", "MAXIMUS GREAT · 97 in² · Control",
+  ]),
+  eu: new Set([
+    "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
+    "Swingweight", "Twistweight",
+  ]),
+  gl: new Set([
+    "Pickleball", "Squash", "Racquetball",
+    "Swingweight", "Twistweight",
+    "Balance", "Control", "Nominal", "3 series",
+    "GREAT — 97 in² · Control", "MAXIMUS GREAT · 97 in² · Control",
+  ]),
+  // mk and be need no entries: nothing in them collides with English.
+
 };
 
 function walk(obj, trail, out) {

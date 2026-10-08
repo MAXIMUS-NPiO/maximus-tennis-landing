@@ -81,7 +81,7 @@ const tr = {
   nav: {
     language: "Dil",
     groups: { racquets: "Raketler", training: "Antrenman", ecosystem: "Ekosistem", partnerships: "İş birlikleri" },
-    familyPlan: "Aile Planı",
+    familyPlan: "Aile Tenisi",
     racquets: "Raket serileri ve karşılaştırma",
     great: "GREAT — 97 in² · Kontrol",
     power: "POWER — 98 in² · Güç",
@@ -156,7 +156,7 @@ const tr = {
       ["3 seri", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Aile Planı · Bizimle katkıda bulunun",
+      eyebrow: "Aile Tenis Planı · Bizimle katkıda bulunun",
       title: "Aile bütçeniz. Neyi karşılar? Neyi inşa eder?",
       p: "Üç senaryo yan yana — mevcut, planlanan ve istenen. Bütçenizin karşıladığı antrenmanlar, saatler ve top temasları ile bir antrenmanın, bir saatin ve bir vuruşun maliyeti — hepsi kendi rakamlarınızla hesaplanır.",
       points: [
@@ -165,7 +165,7 @@ const tr = {
         ["On yıl ileriye", "Belirlediğiniz yaşlarla sınırlı, bir ila on yıllık harcama planı."],
         ["Kortun ötesinde", "Önde gelen okullara kabul sürecinde destek ve oyuncuya ait kalan dijital varlıklar."],
       ],
-      cta: "Aile planınızı hesaplayın",
+      cta: "Aile tenis planınızı hesaplayın",
     },
     paths: {
       eyebrow: "Buradan başlayın",
@@ -1013,21 +1013,21 @@ const tr = {
     decline: "Reddet",
   },
   familyPlan: {
-    title: "Aile Planı",
+    title: "Aile Tenis Planı",
     metaDescription: "Ailenizin tenis bütçesini hesaplayın: antrenmanlar, saatler, top temasları ve bir antrenmanın, bir saatin ve bir vuruşun maliyeti — kendi rakamlarınızla, üç senaryoda.",
-    eyebrow: "Aile Planı · Bizimle katkıda bulunun",
+    eyebrow: "Aile Tenis Planı · Bizimle katkıda bulunun",
     heroTitle: "Ailenizin tenisi ne kadara mal oluyor — ve karşılığında ne alıyorsunuz?",
     heroLead: "Aile bütçenizi, karşıladığı antrenmanları ve saatleri, tahmini top temaslarını ve bir antrenmanın, bir saatin ve bir vuruşun maliyetini hesaplayın — kendi koşullarınızla.",
-    heroCta: "Aile planınızı hesaplayın",
+    heroCta: "Aile tenis planınızı hesaplayın",
     strategy: {
       eyebrow: "Hedefimiz",
       title: "Daha çok tenis. Daha çok fırsat. Birlikte.",
       p1: "Hedefimiz, katılımı genişleterek ve tenise giden yolu daha anlaşılır ve erişilebilir kılarak dünya tenis pazarını on kat büyütmek. MAXIMUS; yönetim, metodoloji, kalite, sonuçlar ve oyunun yaygınlaştırılması yoluyla öncülük etmeyi amaçlar.",
       p2: "Diğer tenis üreticilerini ve markalarını potansiyel iş ortakları olarak görüyoruz. Şirketlerin, antrenörlerin, kulüplerin ve ailelerin güçlerini; tenisi karşılıklı yarar esasıyla geliştirmek, tanıtmak ve büyütmek için ortak bir programda birleştirmeyi öneriyoruz.",
       p3: "MAXIMUS bu yaklaşımın beşinci elementidir: ayrı güçlerin birlikte çalışmasına yardımcı olan birleştirici rol. Ortak zorluklarımız hastalıklar, çocukların hareketsizliği ve insanların oynamaya başlamasının ve oynamayı sürdürmesinin önündeki engellerdir.",
-      p4: "Bir aile için her şey netlikle başlar. Aile Planı; bütçeyi, antrenman ve saat sayısını, tahmini top teması hacmini ve antrenmanın maliyetini gösterir. Koşulları değiştirin ve size uyan senaryoyu seçin.",
+      p4: "Bir aile için her şey netlikle başlar. Aile Tenis Planı; bütçeyi, antrenman ve saat sayısını, tahmini top teması hacmini ve antrenmanın maliyetini gösterir. Koşulları değiştirin ve size uyan senaryoyu seçin.",
       note: "On kat büyüme, MAXIMUS olarak belirlediğimiz stratejik hedeftir; halihazırda ulaşılmış bir sonuç değildir. Hesaplayıcı senaryo hesaplamaları gösterir; hiçbir tasarruf, hiçbir tıbbi etki ve hiçbir sportif sonuç vaat etmez.",
-      ctaCalc: "Aile planınızı hesaplayın",
+      ctaCalc: "Aile tenis planınızı hesaplayın",
       ctaPartner: "Tenisi birlikte geliştirmeyi görüşelim",
     },
     beyond: {

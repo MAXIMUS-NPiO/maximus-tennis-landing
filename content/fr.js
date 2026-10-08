@@ -81,7 +81,7 @@ const fr = {
   nav: {
     language: "Langue",
     groups: { racquets: "Raquettes", training: "Entraînement", ecosystem: "Écosystème", partnerships: "Partenariats" },
-    familyPlan: "Plan Famille",
+    familyPlan: "Tennis Famille",
     racquets: "Séries de raquettes et comparaison",
     great: "GREAT — 97 in² · Contrôle",
     power: "POWER — 98 in² · Puissance",
@@ -156,7 +156,7 @@ const fr = {
       ["3 séries", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Plan Famille · Contribuez à nos côtés",
+      eyebrow: "Plan Tennis Famille · Contribuez à nos côtés",
       title: "Votre budget familial. Ce qu'il finance. Ce qu'il construit.",
       p: "Trois scénarios côte à côte — actuel, prévu et souhaité. Les séances, les heures et les contacts balle que finance votre budget, et le coût d'une séance, d'une heure et d'une frappe, calculés à partir de vos propres chiffres.",
       points: [
@@ -165,7 +165,7 @@ const fr = {
         ["Sur dix ans", "Le plan de dépenses sur un à dix ans, limité par les âges que vous indiquez."],
         ["Au-delà du court", "Un accompagnement vers l'admission dans des écoles de premier plan, et des actifs numériques qui restent acquis au joueur."],
       ],
-      cta: "Calculer votre plan famille",
+      cta: "Calculer votre plan tennis famille",
     },
     paths: {
       eyebrow: "Commencez ici",
@@ -1013,21 +1013,21 @@ const fr = {
     decline: "Refuser",
   },
   familyPlan: {
-    title: "Plan Famille",
+    title: "Plan Tennis Famille",
     metaDescription: "Calculez le budget tennis de votre famille : séances, heures, contacts balle et coût d'une séance, d'une heure et d'une frappe — à partir de vos propres chiffres, selon trois scénarios.",
-    eyebrow: "Plan Famille · Contribuez à nos côtés",
+    eyebrow: "Plan Tennis Famille · Contribuez à nos côtés",
     heroTitle: "Combien coûte le tennis de votre famille — et que vous apporte-t-il ?",
     heroLead: "Calculez votre budget familial, les séances et les heures qu'il finance, les contacts balle estimés et le coût d'une séance, d'une heure et d'une frappe — à vos conditions.",
-    heroCta: "Calculer votre plan famille",
+    heroCta: "Calculer votre plan tennis famille",
     strategy: {
       eyebrow: "Notre objectif",
       title: "Plus de tennis. Plus d'opportunités. Ensemble.",
       p1: "Notre objectif est de multiplier par dix le marché mondial du tennis en élargissant la pratique et en rendant l'entrée dans le tennis plus claire et plus accessible. MAXIMUS entend montrer la voie par la gestion, la méthodologie, la qualité, les résultats et la popularisation du jeu.",
       p2: "Nous considérons les autres fabricants de matériel de tennis et leurs marques comme des partenaires potentiels. Nous proposons d'unir les forces des entreprises, des entraîneurs, des clubs et des familles au sein d'un programme commun pour développer, promouvoir et déployer le tennis à plus grande échelle, sur une base mutuellement avantageuse.",
       p3: "MAXIMUS est le cinquième élément de cette démarche : le rôle fédérateur qui aide des forces distinctes à agir ensemble. Nos défis communs sont la maladie, la sédentarité des enfants et les obstacles qui empêchent de commencer le tennis et de le poursuivre.",
-      p4: "Pour une famille, tout commence par la clarté. Le Plan Famille montre le budget, le nombre de séances et d'heures, le volume estimé de contacts balle et le coût de la pratique. Modifiez les conditions et choisissez le scénario qui vous convient.",
+      p4: "Pour une famille, tout commence par la clarté. Le Plan Tennis Famille montre le budget, le nombre de séances et d'heures, le volume estimé de contacts balle et le coût de la pratique. Modifiez les conditions et choisissez le scénario qui vous convient.",
       note: "Multiplier le marché par dix est l'objectif stratégique de MAXIMUS, et non un résultat déjà atteint. Le calculateur présente des calculs par scénario et ne promet ni économie, ni effet médical, ni résultat sportif.",
-      ctaCalc: "Calculer votre plan famille",
+      ctaCalc: "Calculer votre plan tennis famille",
       ctaPartner: "Discuter ensemble du développement du tennis",
     },
     beyond: {

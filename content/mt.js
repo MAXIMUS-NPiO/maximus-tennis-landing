@@ -81,7 +81,7 @@ const mt = {
   nav: {
     language: "Lingwa",
     groups: { racquets: "Rakketti", training: "Taħriġ", ecosystem: "Ekosistema", partnerships: "Sħubijiet" },
-    familyPlan: "Pjan tal-Familja",
+    familyPlan: "Tennis għall-Familja",
     racquets: "Is-serje ta' rakketti u t-tqabbil",
     great: "GREAT — 97 in² · Kontroll",
     power: "POWER — 98 in² · Qawwa",
@@ -156,7 +156,7 @@ const mt = {
       ["3 serje", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Pjan tal-Familja · Ikkontribwixxi magħna",
+      eyebrow: "Pjan tat-Tennis għall-Familja · Ikkontribwixxi magħna",
       title: "Il-baġit tal-familja tiegħek. X'jixtri. X'jibni.",
       p: "Tliet xenarji ħdejn xulxin — issa, ippjanat u xewqa. Is-sessjonijiet, is-sigħat u l-kuntatti mal-ballun li jixtri l-baġit tiegħek, u l-ispiża ta' sessjoni waħda, siegħa waħda u daqqa waħda, ikkalkulata min-numri tiegħek stess.",
       points: [
@@ -165,7 +165,7 @@ const mt = {
         ["Għaxar snin 'il quddiem", "Il-pjan tal-infiq fuq perjodu minn sena sa għaxar snin, fil-limiti tal-etajiet li tagħżel."],
         ["Lil hinn mill-korti", "Appoġġ għad-dħul fi skejjel ewlenin, u assi diġitali li jibqgħu tal-plejer."],
       ],
-      cta: "Ikkalkula l-pjan tal-familja tiegħek",
+      cta: "Ikkalkula l-pjan tat-tennis għall-familja tiegħek",
     },
     paths: {
       eyebrow: "Ibda minn hawn",
@@ -1013,21 +1013,21 @@ const mt = {
     decline: "Irrifjuta",
   },
   familyPlan: {
-    title: "Pjan tal-Familja",
+    title: "Pjan tat-Tennis għall-Familja",
     metaDescription: "Ikkalkula l-baġit tat-tennis tal-familja tiegħek: sessjonijiet, sigħat, kuntatti mal-ballun u l-ispiża ta' sessjoni waħda, siegħa waħda u daqqa waħda — min-numri tiegħek stess, f'tliet xenarji.",
-    eyebrow: "Pjan tal-Familja · Ikkontribwixxi magħna",
+    eyebrow: "Pjan tat-Tennis għall-Familja · Ikkontribwixxi magħna",
     heroTitle: "Kemm jiswa t-tennis tal-familja tiegħek — u x'jixtri dak l-infiq?",
     heroLead: "Ikkalkula l-baġit tal-familja tiegħek, is-sessjonijiet u s-sigħat li jħallas għalihom, il-kuntatti stmati mal-ballun u l-ispiża ta' sessjoni waħda, siegħa waħda u daqqa waħda — skont il-kundizzjonijiet tiegħek.",
-    heroCta: "Ikkalkula l-pjan tal-familja tiegħek",
+    heroCta: "Ikkalkula l-pjan tat-tennis għall-familja tiegħek",
     strategy: {
       eyebrow: "Il-mira tagħna",
       title: "Aktar tennis. Aktar opportunitajiet. Flimkien.",
       p1: "Il-mira tagħna hija li s-suq dinji tat-tennis jikber għaxar darbiet, billi nwessgħu l-parteċipazzjoni u nagħmlu t-triq lejn it-tennis aktar ċara u aċċessibbli. MAXIMUS għandu l-għan li jmexxi permezz tal-ġestjoni, tal-metodoloġija, tal-kwalità, tar-riżultati u tal-popolarizzazzjoni tal-logħba.",
       p2: "Aħna naraw lill-manifatturi l-oħra tat-tennis u lill-marki tagħhom bħala sħab potenzjali. Nipproponu li ngħaqqdu l-qawwiet tal-kumpaniji, tal-kowċis, tal-klabbs u tal-familji fi programm komuni biex it-tennis jiġi żviluppat, promoss u mkabbar fuq bażi ta' benefiċċju reċiproku.",
       p3: "MAXIMUS huwa l-ħames element ta' dan l-approċċ: ir-rwol li jgħaqqad u li jgħin lill-qawwiet separati jaħdmu flimkien. L-isfidi komuni tagħna huma l-mard, l-inattività fiżika tat-tfal u l-ostakli li jżommu lin-nies milli jibdew jilagħbu u milli jkomplu jilagħbu.",
-      p4: "Għal familja, kollox jibda miċ-ċarezza. Il-Pjan tal-Familja juri l-baġit, l-għadd ta' sessjonijiet u sigħat, il-volum stmat ta' kuntatti mal-ballun u l-ispiża tat-taħriġ. Biddel il-kundizzjonijiet u agħżel ix-xenarju li jaqbillek.",
+      p4: "Għal familja, kollox jibda miċ-ċarezza. Il-Pjan tat-Tennis għall-Familja juri l-baġit, l-għadd ta' sessjonijiet u sigħat, il-volum stmat ta' kuntatti mal-ballun u l-ispiża tat-taħriġ. Biddel il-kundizzjonijiet u agħżel ix-xenarju li jaqbillek.",
       note: "It-tkabbir ta' għaxar darbiet huwa mira strateġika ta' MAXIMUS, mhux riżultat li diġà nkiseb. Il-kalkulatur juri kalkoli ta' xenarji u ma jwiegħed l-ebda tfaddil, l-ebda effett mediku u l-ebda riżultat sportiv.",
-      ctaCalc: "Ikkalkula l-pjan tal-familja tiegħek",
+      ctaCalc: "Ikkalkula l-pjan tat-tennis għall-familja tiegħek",
       ctaPartner: "Iddiskuti magħna l-iżvilupp tat-tennis",
     },
     beyond: {

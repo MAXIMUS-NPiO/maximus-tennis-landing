@@ -36,8 +36,20 @@ const COMPARISONS = [
   /only brand/i, /\bcompetitors?\b/i,
 ];
 
+/**
+ * The family programme is about tennis, and its name says so in every language (Founder, 8 October
+ * 2026): a literal "family plan" reads as family planning — contraception — in the Philippines and
+ * in several other markets. Neither the old name nor the term for family planning may appear.
+ */
+const FAMILY_PLANNING = [
+  /\bfamily[\s\u00a0-]+plan/i, /pagpaplano ng pamilya/i, /keluarga berencana/i, /rencana keluarga/i,
+  /วางแผนครอบครัว/, /परिवार नियोजन/, /计划生育/, /家庭计划/, /家族計画/, /가족\s?계획/, /تنظيم الأسرة/,
+  /планирование семьи/i, /планування сім/i, /familienplanung/i, /planning familial/i,
+  /planificación familiar/i, /planejamento familiar/i, /pianificazione familiare/i,
+];
+
 const FORBIDDEN_TEXT = [
-  ...COMPETITORS, ...COMPARISONS,
+  ...COMPETITORS, ...COMPARISONS, ...FAMILY_PLANNING,
   /\bjude\b/i, /\bnii\b/i, /5,?000 racquets? per week/i, /20,000 per month/i, /temporary/i, /placeholder/i,
   /lorem ipsum/i, /TODO/, /royalt[a-z]* (rate|percentage) of \d/i, /50\s?%/, /240\s?[–-]\s?340/, /\bwallet\b/i, /\bpayout/i,
 ];

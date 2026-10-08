@@ -81,7 +81,7 @@ const cs = {
   nav: {
     language: "Jazyk",
     groups: { racquets: "Rakety", training: "Trénink", ecosystem: "Ekosystém", partnerships: "Partnerství" },
-    familyPlan: "Rodinný plán",
+    familyPlan: "Rodinný tenis",
     racquets: "Série raket a srovnání",
     great: "GREAT — 97 in² · Kontrola",
     power: "POWER — 98 in² · Síla",
@@ -156,7 +156,7 @@ const cs = {
       ["3 série", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Rodinný plán · Přispějte spolu s námi",
+      eyebrow: "Rodinný tenisový plán · Přispějte spolu s námi",
       title: "Váš rodinný rozpočet. Co za něj pořídíte. Co s ním vybudujete.",
       p: "Tři scénáře vedle sebe — současnost, plán a přání. Tréninky, hodiny a kontakty s míčem, které váš rozpočet zaplatí, a cena jednoho tréninku, jedné hodiny a jednoho úderu — vše vypočtené z vašich vlastních čísel.",
       points: [
@@ -165,7 +165,7 @@ const cs = {
         ["Deset let dopředu", "Plán výdajů na jeden až deset let, ohraničený počátečním a konečným věkem, které zadáte."],
         ["Mimo kurt", "Podpora při přijetí na přední školy a digitální aktiva, která zůstávají hráči."],
       ],
-      cta: "Spočítat svůj rodinný plán",
+      cta: "Spočítat svůj rodinný tenisový plán",
     },
     paths: {
       eyebrow: "Začněte zde",
@@ -1013,21 +1013,21 @@ const cs = {
     decline: "Odmítnout",
   },
   familyPlan: {
-    title: "Rodinný plán",
+    title: "Rodinný tenisový plán",
     metaDescription: "Spočítejte tenisový rozpočet své rodiny: tréninky, hodiny, kontakty s míčem a cenu jednoho tréninku, jedné hodiny a jednoho úderu — z vlastních čísel, ve třech scénářích.",
-    eyebrow: "Rodinný plán · Přispějte spolu s námi",
+    eyebrow: "Rodinný tenisový plán · Přispějte spolu s námi",
     heroTitle: "Kolik stojí tenis vaši rodinu — a co za to získáte?",
     heroLead: "Spočítejte si rodinný rozpočet, tréninky a hodiny, které z něj zaplatíte, odhadovaný počet kontaktů s míčem a cenu jednoho tréninku, jedné hodiny a jednoho úderu — podle vlastních podmínek.",
-    heroCta: "Spočítat svůj rodinný plán",
+    heroCta: "Spočítat svůj rodinný tenisový plán",
     strategy: {
       eyebrow: "Náš cíl",
       title: "Více tenisu. Více příležitostí. Společně.",
       p1: "Naším cílem je zdesetinásobit světový tenisový trh — rozšířením účasti a tím, že cestu k tenisu učiníme srozumitelnější a dostupnější. MAXIMUS usiluje o vedoucí postavení prostřednictvím řízení, metodiky, kvality, výsledků a popularizace hry.",
       p2: "Ostatní výrobce tenisového vybavení a jejich značky vnímáme jako potenciální partnery. Navrhujeme spojit silné stránky firem, trenérů, klubů a rodin ve společném programu, který bude tenis rozvíjet, propagovat a rozšiřovat ke vzájemnému prospěchu.",
       p3: "MAXIMUS je pátým prvkem tohoto přístupu: sjednocující rolí, která pomáhá samostatným silám spolupracovat. Našimi společnými výzvami jsou nemoci, nedostatek pohybu u dětí a překážky, které lidem brání začít hrát a ve hře pokračovat.",
-      p4: "Pro rodinu začíná všechno jasným přehledem. Rodinný plán ukazuje rozpočet, počet tréninků a hodin, odhadovaný objem kontaktů s míčem a náklady na trénink. Změňte podmínky a vyberte scénář, který vám vyhovuje.",
+      p4: "Pro rodinu začíná všechno jasným přehledem. Rodinný tenisový plán ukazuje rozpočet, počet tréninků a hodin, odhadovaný objem kontaktů s míčem a náklady na trénink. Změňte podmínky a vyberte scénář, který vám vyhovuje.",
       note: "Desetinásobný růst je strategický cíl, který si MAXIMUS stanovil, nikoli již dosažený výsledek. Kalkulačka zobrazuje výpočty scénářů a neslibuje žádnou úsporu, žádný zdravotní účinek ani žádný sportovní výsledek.",
-      ctaCalc: "Spočítat svůj rodinný plán",
+      ctaCalc: "Spočítat svůj rodinný tenisový plán",
       ctaPartner: "Projednat společný rozvoj tenisu",
     },
     beyond: {

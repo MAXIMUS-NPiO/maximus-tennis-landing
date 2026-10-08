@@ -81,7 +81,7 @@ const pt = {
   nav: {
     language: "Idioma",
     groups: { racquets: "Raquetes", training: "Treinamento", ecosystem: "Ecossistema", partnerships: "Parcerias" },
-    familyPlan: "Plano Familiar",
+    familyPlan: "Tênis em Família",
     racquets: "Séries de raquetes e comparação",
     great: "GREAT — 97 in² · Controle",
     power: "POWER — 98 in² · Potência",
@@ -156,7 +156,7 @@ const pt = {
       ["3 séries", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Plano Familiar · Contribua conosco",
+      eyebrow: "Plano de Tênis em Família · Contribua conosco",
       title: "Seu orçamento familiar. O que ele cobre. O que ele constrói.",
       p: "Três cenários lado a lado: atual, planejado e desejado. As sessões, as horas e os contatos com a bola que o seu orçamento cobre, e o custo de uma sessão, de uma hora e de um golpe, calculados a partir dos seus próprios números.",
       points: [
@@ -165,7 +165,7 @@ const pt = {
         ["Dez anos à frente", "O plano de gastos de um a dez anos, limitado pelas idades que você definir."],
         ["Além da quadra", "Apoio na admissão em escolas de primeira linha, e ativos digitais que ficam com o jogador."],
       ],
-      cta: "Calcule o seu plano familiar",
+      cta: "Calcule o seu plano de tênis em família",
     },
     paths: {
       eyebrow: "Comece aqui",
@@ -1013,21 +1013,21 @@ const pt = {
     decline: "Recusar",
   },
   familyPlan: {
-    title: "Plano Familiar",
+    title: "Plano de Tênis em Família",
     metaDescription: "Calcule o orçamento de tênis da sua família: sessões, horas, contatos com a bola e o custo de uma sessão, de uma hora e de um golpe — com os seus próprios números, em três cenários.",
-    eyebrow: "Plano Familiar · Contribua conosco",
+    eyebrow: "Plano de Tênis em Família · Contribua conosco",
     heroTitle: "Quanto custa o tênis da sua família — e o que você recebe em troca?",
     heroLead: "Calcule o orçamento da sua família, as sessões e as horas que ele cobre, os contatos com a bola estimados e o custo de uma sessão, de uma hora e de um golpe — com os seus próprios critérios.",
-    heroCta: "Calcule o seu plano familiar",
+    heroCta: "Calcule o seu plano de tênis em família",
     strategy: {
       eyebrow: "Nosso objetivo",
       title: "Mais tênis. Mais oportunidades. Juntos.",
       p1: "Nosso objetivo é multiplicar por dez o mercado mundial de tênis, ampliando a participação e tornando o caminho até o tênis mais claro e acessível. A MAXIMUS busca liderar esse caminho por meio da gestão, da metodologia, da qualidade, dos resultados e da popularização do esporte.",
       p2: "Vemos os outros fabricantes de equipamentos de tênis e suas marcas como potenciais parceiros. Propomos unir as forças de empresas, treinadores, clubes e famílias em um programa conjunto para desenvolver, promover e ampliar a escala do tênis, de forma mutuamente vantajosa.",
       p3: "A MAXIMUS é o quinto elemento dessa abordagem: o papel agregador que ajuda forças separadas a trabalhar juntas. Nossos desafios em comum são a doença, o sedentarismo infantil e as barreiras que impedem as pessoas de começar a jogar e de continuar jogando.",
-      p4: "Para uma família, tudo começa pela clareza. O Plano Familiar mostra o orçamento, o número de sessões e de horas, o volume estimado de contatos com a bola e o custo da prática. Mude as condições e escolha o cenário que faz mais sentido para você.",
+      p4: "Para uma família, tudo começa pela clareza. O Plano de Tênis em Família mostra o orçamento, o número de sessões e de horas, o volume estimado de contatos com a bola e o custo da prática. Mude as condições e escolha o cenário que faz mais sentido para você.",
       note: "Multiplicar o mercado por dez é o objetivo estratégico da MAXIMUS, não um resultado já alcançado. A calculadora mostra cálculos por cenário e não promete nenhuma economia, nem efeito médico, nem resultado esportivo.",
-      ctaCalc: "Calcule o seu plano familiar",
+      ctaCalc: "Calcule o seu plano de tênis em família",
       ctaPartner: "Conversar sobre o desenvolvimento conjunto do tênis",
     },
     beyond: {

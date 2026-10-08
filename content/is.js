@@ -81,7 +81,7 @@ const isl = {
   nav: {
     language: "Tungumál",
     groups: { racquets: "Spaðar", training: "Þjálfun", ecosystem: "Vistkerfi", partnerships: "Samstarf" },
-    familyPlan: "Fjölskylduáætlun",
+    familyPlan: "Fjölskyldutennis",
     racquets: "Spaðalínur og samanburður",
     great: "GREAT — 97 in² · Stjórn",
     power: "POWER — 98 in² · Kraftur",
@@ -156,7 +156,7 @@ const isl = {
       ["3 línur", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Fjölskylduáætlun · Leggðu þitt af mörkum með okkur",
+      eyebrow: "Tennisáætlun fjölskyldunnar · Leggðu þitt af mörkum með okkur",
       title: "Fjárhagsáætlun fjölskyldu þinnar. Hvað fæst fyrir hana. Hvað hún byggir upp.",
       p: "Þrjár sviðsmyndir hlið við hlið — núna, áformað og ósk. Æfingarnar, klukkustundirnar og boltasnertingarnar sem fjárhagsáætlunin dugar fyrir, og kostnaðurinn við eina æfingu, eina klukkustund og eitt högg — reiknað út frá þínum eigin tölum.",
       points: [
@@ -165,7 +165,7 @@ const isl = {
         ["Tíu ár fram í tímann", "Útgjaldaáætlun til eins til tíu ára, afmörkuð af aldursbilinu sem þú tilgreinir."],
         ["Utan vallar", "Stuðningur við inngöngu í fremstu skóla og stafrænar eignir sem haldast hjá leikmanninum."],
       ],
-      cta: "Reiknaðu fjölskylduáætlunina þína",
+      cta: "Reiknaðu tennisáætlun fjölskyldunnar þinnar",
     },
     paths: {
       eyebrow: "Byrjaðu hér",
@@ -1013,21 +1013,21 @@ const isl = {
     decline: "Hafna",
   },
   familyPlan: {
-    title: "Fjölskylduáætlun",
+    title: "Tennisáætlun fjölskyldunnar",
     metaDescription: "Reiknaðu fjárhagsáætlun fjölskyldunnar fyrir tennis: æfingar, klukkustundir, boltasnertingar og kostnað við eina æfingu, eina klukkustund og eitt högg — út frá þínum eigin tölum, í þremur sviðsmyndum.",
-    eyebrow: "Fjölskylduáætlun · Leggðu þitt af mörkum með okkur",
+    eyebrow: "Tennisáætlun fjölskyldunnar · Leggðu þitt af mörkum með okkur",
     heroTitle: "Hvað kostar tennis fjölskyldunnar — og hvað fæst fyrir það?",
     heroLead: "Reiknaðu fjárhagsáætlun fjölskyldunnar, æfingarnar og klukkustundirnar sem hún greiðir fyrir, áætlaðan fjölda boltasnertinga og kostnaðinn við eina æfingu, eina klukkustund og eitt högg — á þínum eigin forsendum.",
-    heroCta: "Reiknaðu fjölskylduáætlunina þína",
+    heroCta: "Reiknaðu tennisáætlun fjölskyldunnar þinnar",
     strategy: {
       eyebrow: "Markmið okkar",
       title: "Meira tennis. Fleiri tækifæri. Saman.",
       p1: "Markmið okkar er að tífalda tennismarkað heimsins með því að auka þátttöku og gera leiðina inn í tennis skýrari og aðgengilegri. MAXIMUS stefnir að forystu með stjórnun, aðferðafræði, gæðum, árangri og útbreiðslu íþróttarinnar.",
       p2: "Við lítum á aðra tennisframleiðendur og vörumerki þeirra sem mögulega samstarfsaðila. Við leggjum til að styrkleikar fyrirtækja, þjálfara, klúbba og fjölskyldna verði sameinaðir í sameiginlegu verkefni til að þróa tennis, kynna það og auka umfang þess á grundvelli gagnkvæms ávinnings.",
       p3: "MAXIMUS er fimmta frumefnið í þessari nálgun: hlutverkið sem sameinar og hjálpar aðskildum styrkleikum að vinna saman. Sameiginlegar áskoranir okkar eru sjúkdómar, hreyfingarleysi barna og þær hindranir sem koma í veg fyrir að fólk byrji að spila og haldi því áfram.",
-      p4: "Fyrir fjölskyldu byrjar allt á skýrri yfirsýn. Fjölskylduáætlunin sýnir fjárhagsáætlunina, fjölda æfinga og klukkustunda, áætlað magn boltasnertinga og kostnaðinn við æfingarnar. Breyttu forsendunum og veldu þá sviðsmynd sem hentar þér.",
+      p4: "Fyrir fjölskyldu byrjar allt á skýrri yfirsýn. Tennisáætlun fjölskyldunnar sýnir fjárhagsáætlunina, fjölda æfinga og klukkustunda, áætlað magn boltasnertinga og kostnaðinn við æfingarnar. Breyttu forsendunum og veldu þá sviðsmynd sem hentar þér.",
       note: "Tíföldun er stefnumarkmið MAXIMUS, ekki árangur sem þegar hefur náðst. Reiknivélin sýnir útreikninga fyrir sviðsmyndir og lofar engum sparnaði, engum læknisfræðilegum áhrifum og engum íþróttaárangri.",
-      ctaCalc: "Reiknaðu fjölskylduáætlunina þína",
+      ctaCalc: "Reiknaðu tennisáætlun fjölskyldunnar þinnar",
       ctaPartner: "Ræða sameiginlega þróun tennis",
     },
     beyond: {

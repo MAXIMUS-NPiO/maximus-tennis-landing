@@ -223,7 +223,6 @@ const ALLOWED_BY_LOCALE = {
     "Privacy",                                                      // the word of Philippine law and notices (Data Privacy Act)
     "Swingweight", "Twistweight",
     "SPIN — 100 in² · Spin",                                        // series mark, unit, and the stroke as Filipino players name it
-    "Family Plan",  // kept as the programme's name: the Filipino rendering reads as "family planning" (contraception) there
   ]),
   // th needs no entries: nothing in it collides with English.
 };

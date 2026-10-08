@@ -80,8 +80,8 @@ const ga = {
   },
   nav: {
     language: "Teanga",
-    groups: { racquets: "Raicéid", training: "Traenáil", ecosystem: "Éiceachóras", partnerships: "Comhpháirtíochtaí" },
-    familyPlan: "Plean Teaghlaigh",
+    groups: { racquets: "Raicéid", training: "Traenáil", ecosystem: "Éiceachóras", partnerships: "Comhpháirtithe" },
+    familyPlan: "Leadóg Theaghlaigh",
     racquets: "Sraitheanna raicéad agus comparáid",
     great: "GREAT — 97 in² · Smacht",
     power: "POWER — 98 in² · Cumhacht",
@@ -156,7 +156,7 @@ const ga = {
       ["3 shraith", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Plean Teaghlaigh · Bí páirteach linn",
+      eyebrow: "Plean Leadóige an Teaghlaigh · Bí páirteach linn",
       title: "Buiséad do theaghlaigh. Cad a cheannaíonn sé. Cad a thógann sé.",
       p: "Trí chás taobh le taobh — anois, beartaithe agus mian. Na seisiúin, na huaireanta agus na teagmhálacha liathróide a cheannaíonn do bhuiséad, agus costas seisiúin amháin, uair an chloig amháin agus buille amháin, ríofa ó d'uimhreacha féin.",
       points: [
@@ -165,7 +165,7 @@ const ga = {
         ["Deich mbliana chun tosaigh", "An plean caiteachais thar bhliain amháin go deich mbliana, teoranta ag na haoiseanna a shocraíonn tú."],
         ["Lasmuigh den chúirt", "Tacaíocht le hiontráil i bpríomhscoileanna, agus sócmhainní digiteacha a fhanann leis an imreoir."],
       ],
-      cta: "Ríomh plean do theaghlaigh",
+      cta: "Ríomh plean leadóige do theaghlaigh",
     },
     paths: {
       eyebrow: "Tosaigh anseo",
@@ -1013,21 +1013,21 @@ const ga = {
     decline: "Diúltaigh",
   },
   familyPlan: {
-    title: "Plean Teaghlaigh",
+    title: "Plean Leadóige an Teaghlaigh",
     metaDescription: "Ríomh buiséad leadóige do theaghlaigh: seisiúin, uaireanta, teagmhálacha liathróide agus costas seisiúin amháin, uair an chloig amháin agus buille amháin — ó d'uimhreacha féin, i dtrí chás.",
-    eyebrow: "Plean Teaghlaigh · Bí páirteach linn",
+    eyebrow: "Plean Leadóige an Teaghlaigh · Bí páirteach linn",
     heroTitle: "Cé mhéad a chosnaíonn leadóg do theaghlaigh — agus cad a fhaigheann tú ar an airgead sin?",
     heroLead: "Ríomh buiséad do theaghlaigh, na seisiúin agus na huaireanta a íocann sé astu, an líon measta teagmhálacha liathróide agus costas seisiúin amháin, uair an chloig amháin agus buille amháin — ar do théarmaí féin.",
-    heroCta: "Ríomh plean do theaghlaigh",
+    heroCta: "Ríomh plean leadóige do theaghlaigh",
     strategy: {
       eyebrow: "Ár sprioc",
       title: "Níos mó leadóige. Níos mó deiseanna. Le chéile.",
       p1: "Tá sé mar sprioc againn margadh domhanda na leadóige a mhéadú faoi dheich trí rannpháirtíocht a leathnú agus an bealach isteach sa leadóg a dhéanamh níos soiléire agus níos inrochtana. Féachann MAXIMUS le bheith ar thús cadhnaíochta trí bhainistíocht, trí mhodheolaíocht, trí cháilíocht, trí thorthaí agus tríd an gcluiche a chur i mbéal an phobail.",
       p2: "Feicimid na déantóirí trealaimh leadóige eile agus a mbrandaí mar chomhpháirtithe féideartha. Molaimid láidreachtaí cuideachtaí, cóitseálaithe, clubanna agus teaghlach a chomhcheangal i gclár comhroinnte chun an leadóg a fhorbairt, a chur chun cinn agus a leathnú ar bhonn comhthairbheach.",
       p3: "Is é MAXIMUS an cúigiú dúil sa chur chuige seo: an ról aontaitheach a chuidíonn le láidreachtaí ar leith oibriú le chéile. Is iad ár ndúshláin chomhroinnte ná breoiteacht, easpa gníomhaíochta coirp i measc leanaí agus na bacainní a choisceann ar dhaoine tosú ag imirt agus leanúint ar aghaidh leis.",
-      p4: "Don teaghlach, tosaíonn gach rud le soiléireacht. Taispeánann Plean Teaghlaigh an buiséad, líon na seisiún agus na n-uaireanta, an líon measta teagmhálacha liathróide agus costas an chleachtaidh. Athraigh na coinníollacha agus roghnaigh an cás a oireann duit.",
+      p4: "Don teaghlach, tosaíonn gach rud le soiléireacht. Taispeánann Plean Leadóige an Teaghlaigh an buiséad, líon na seisiún agus na n-uaireanta, an líon measta teagmhálacha liathróide agus costas an chleachtaidh. Athraigh na coinníollacha agus roghnaigh an cás a oireann duit.",
       note: "Is sprioc straitéiseach de chuid MAXIMUS é fás faoi dheich, ní toradh atá bainte amach cheana féin. Taispeánann an t-áireamhán ríomhanna cásanna agus ní gheallann sé coigilt, éifeacht leighis ná toradh spóirt.",
-      ctaCalc: "Ríomh plean do theaghlaigh",
+      ctaCalc: "Ríomh plean leadóige do theaghlaigh",
       ctaPartner: "Pléigh forbairt na leadóige in éineacht linn",
     },
     beyond: {

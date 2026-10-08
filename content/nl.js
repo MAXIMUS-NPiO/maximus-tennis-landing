@@ -81,7 +81,7 @@ const nl = {
   nav: {
     language: "Taal",
     groups: { racquets: "Rackets", training: "Training", ecosystem: "Ecosysteem", partnerships: "Samenwerking" },
-    familyPlan: "Gezinsplan",
+    familyPlan: "Gezinstennis",
     racquets: "Racketseries en vergelijking",
     great: "GREAT — 97 in² · Controle",
     power: "POWER — 98 in² · Kracht",
@@ -156,7 +156,7 @@ const nl = {
       ["3 series", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Gezinsplan · Draag samen met ons bij",
+      eyebrow: "Gezinstennisplan · Draag samen met ons bij",
       title: "Uw gezinsbudget. Wat het oplevert. Wat het opbouwt.",
       p: "Drie scenario's naast elkaar — huidig, gepland en gewenst. De trainingen, uren en balcontacten die uw budget oplevert, en de kosten van één training, één uur en één slag, berekend op basis van uw eigen cijfers.",
       points: [
@@ -165,7 +165,7 @@ const nl = {
         ["Tien jaar vooruit", "Het uitgavenplan over één tot tien jaar, begrensd door de leeftijden die u opgeeft."],
         ["Buiten de baan", "Ondersteuning bij toelating tot toonaangevende scholen, en digitale activa die bij de speler blijven."],
       ],
-      cta: "Bereken uw gezinsplan",
+      cta: "Bereken uw gezinstennisplan",
     },
     paths: {
       eyebrow: "Begin hier",
@@ -1013,21 +1013,21 @@ const nl = {
     decline: "Weigeren",
   },
   familyPlan: {
-    title: "Gezinsplan",
+    title: "Gezinstennisplan",
     metaDescription: "Bereken het tennisbudget van uw gezin: trainingen, uren, balcontacten en de kosten van één training, één uur en één slag — op basis van uw eigen cijfers, in drie scenario's.",
-    eyebrow: "Gezinsplan · Draag samen met ons bij",
+    eyebrow: "Gezinstennisplan · Draag samen met ons bij",
     heroTitle: "Wat kost het tennis van uw gezin — en wat krijgt u ervoor?",
     heroLead: "Bereken uw gezinsbudget, de trainingen en uren die het betaalt, het geschatte aantal balcontacten en de kosten van één training, één uur en één slag — op uw eigen voorwaarden.",
-    heroCta: "Bereken uw gezinsplan",
+    heroCta: "Bereken uw gezinstennisplan",
     strategy: {
       eyebrow: "Ons doel",
       title: "Meer tennis. Meer kansen. Samen.",
       p1: "Ons doel is de wereldwijde tennismarkt te vertienvoudigen door de deelname te verbreden en de weg naar tennis duidelijker en toegankelijker te maken. MAXIMUS streeft naar een leidende rol door management, methodiek, kwaliteit, resultaten en het populair maken van het spel.",
       p2: "Wij zien de andere tennisfabrikanten en hun merken als mogelijke partners. Wij stellen voor de krachten van bedrijven, trainers, clubs en gezinnen te bundelen in een gezamenlijk programma om tennis te ontwikkelen, te promoten en op te schalen, tot wederzijds voordeel.",
       p3: "MAXIMUS is het vijfde element van deze aanpak: de verbindende rol die afzonderlijke krachten helpt samen te werken. Onze gedeelde uitdagingen zijn ziekte, bewegingsarmoede bij kinderen en de drempels die mensen ervan weerhouden om te beginnen met spelen en te blijven spelen.",
-      p4: "Voor een gezin begint alles met duidelijkheid. Het Gezinsplan toont het budget, het aantal trainingen en uren, het geschatte aantal balcontacten en de kosten van het oefenen. Pas de uitgangspunten aan en kies het scenario dat bij u past.",
+      p4: "Voor een gezin begint alles met duidelijkheid. Het Gezinstennisplan toont het budget, het aantal trainingen en uren, het geschatte aantal balcontacten en de kosten van het oefenen. Pas de uitgangspunten aan en kies het scenario dat bij u past.",
       note: "Tienvoudige groei is het strategische doel van MAXIMUS, geen resultaat dat al is bereikt. De rekentool toont berekeningen per scenario en belooft geen besparing, geen medisch effect en geen sportief resultaat.",
-      ctaCalc: "Bereken uw gezinsplan",
+      ctaCalc: "Bereken uw gezinstennisplan",
       ctaPartner: "Bespreek hoe we tennis samen ontwikkelen",
     },
     beyond: {

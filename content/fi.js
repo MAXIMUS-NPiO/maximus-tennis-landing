@@ -81,7 +81,7 @@ const fi = {
   nav: {
     language: "Kieli",
     groups: { racquets: "Mailat", training: "Harjoittelu", ecosystem: "Ekosysteemi", partnerships: "Kumppanit" },
-    familyPlan: "Perhesuunnitelma",
+    familyPlan: "Perhetennis",
     racquets: "Mailasarjat ja vertailu",
     great: "GREAT — 97 in² · Hallinta",
     power: "POWER — 98 in² · Voima",
@@ -156,7 +156,7 @@ const fi = {
       ["3 sarjaa", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Perhesuunnitelma · Osallistu kanssamme",
+      eyebrow: "Perheen tennissuunnitelma · Osallistu kanssamme",
       title: "Perheesi budjetti. Mitä sillä saa. Mitä se rakentaa.",
       p: "Kolme skenaariota rinnakkain — nyt, suunniteltu ja toive. Harjoituskerrat, tunnit ja pallokosketukset, jotka budjetillasi saat, sekä yhden harjoituskerran, yhden tunnin ja yhden lyönnin hinta omista luvuistasi laskettuna.",
       points: [
@@ -165,7 +165,7 @@ const fi = {
         ["Kymmenen vuotta eteenpäin", "Kulusuunnitelma yhdestä kymmeneen vuoteen asettamiesi ikien rajoissa."],
         ["Kentän ulkopuolella", "Tukea pääsyyn johtaviin kouluihin sekä digitaalista omaisuutta, joka pysyy pelaajalla."],
       ],
-      cta: "Laske perheesi suunnitelma",
+      cta: "Laske perheesi tennissuunnitelma",
     },
     paths: {
       eyebrow: "Aloita tästä",
@@ -1013,21 +1013,21 @@ const fi = {
     decline: "Kiellä",
   },
   familyPlan: {
-    title: "Perhesuunnitelma",
+    title: "Perheen tennissuunnitelma",
     metaDescription: "Laske perheesi tennisbudjetti: harjoituskerrat, tunnit, pallokosketukset sekä yhden harjoituskerran, yhden tunnin ja yhden lyönnin hinta — omista luvuistasi, kolmessa skenaariossa.",
-    eyebrow: "Perhesuunnitelma · Osallistu kanssamme",
+    eyebrow: "Perheen tennissuunnitelma · Osallistu kanssamme",
     heroTitle: "Mitä perheesi tennis maksaa — ja mitä sillä saa?",
     heroLead: "Laske perheesi budjetti, sillä maksettavat harjoituskerrat ja tunnit, arvioidut pallokosketukset sekä yhden harjoituskerran, yhden tunnin ja yhden lyönnin hinta — omilla ehdoillasi.",
-    heroCta: "Laske perheesi suunnitelma",
+    heroCta: "Laske perheesi tennissuunnitelma",
     strategy: {
       eyebrow: "Tavoitteemme",
       title: "Enemmän tennistä. Enemmän mahdollisuuksia. Yhdessä.",
       p1: "Tavoitteemme on kasvattaa maailman tennismarkkinat kymmenkertaisiksi laajentamalla osallistumista sekä tekemällä tiestä tenniksen pariin selkeämmän ja helpommin saavutettavan. MAXIMUS pyrkii edelläkävijäksi johtamisen, menetelmän, laadun, tulosten ja lajin suosion kasvattamisen kautta.",
       p2: "Näemme muut tennisvälineiden valmistajat ja niiden brändit mahdollisina kumppaneina. Ehdotamme, että yritysten, valmentajien, seurojen ja perheiden vahvuudet yhdistetään yhteiseen ohjelmaan, jolla tennistä kehitetään, edistetään ja laajennetaan kaikkia osapuolia hyödyttävällä tavalla.",
       p3: "MAXIMUS on tämän lähestymistavan viides elementti: yhdistävä rooli, joka auttaa erillisiä vahvuuksia toimimaan yhdessä. Yhteisiä haasteitamme ovat sairaudet, lasten liikkumattomuus sekä kynnykset, jotka estävät ihmisiä aloittamasta pelaamista ja jatkamasta sitä.",
-      p4: "Perheelle kaikki alkaa selkeydestä. Perhesuunnitelma näyttää budjetin, harjoituskertojen ja tuntien määrän, arvioidun pallokosketusmäärän ja harjoittelun hinnan. Muuta ehtoja ja valitse sinulle sopiva skenaario.",
+      p4: "Perheelle kaikki alkaa selkeydestä. Perheen tennissuunnitelma näyttää budjetin, harjoituskertojen ja tuntien määrän, arvioidun pallokosketusmäärän ja harjoittelun hinnan. Muuta ehtoja ja valitse sinulle sopiva skenaario.",
       note: "Kymmenkertainen kasvu on strateginen tavoite, jonka MAXIMUS on asettanut, eikä jo saavutettu tulos. Laskuri näyttää skenaariolaskelmia eikä lupaa säästöä, lääketieteellistä vaikutusta eikä urheilullista tulosta.",
-      ctaCalc: "Laske perheesi suunnitelma",
+      ctaCalc: "Laske perheesi tennissuunnitelma",
       ctaPartner: "Keskustele tenniksen yhteisestä kehittämisestä",
     },
     beyond: {

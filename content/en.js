@@ -81,7 +81,7 @@ const en = {
   nav: {
     language: "Language",
     groups: { racquets: "Racquets", training: "Training", ecosystem: "Ecosystem", partnerships: "Partnerships" },
-    familyPlan: "Family Plan",
+    familyPlan: "Family Tennis",
     racquets: "Racquet series and comparison",
     great: "GREAT — 97 in² · Control",
     power: "POWER — 98 in² · Power",
@@ -156,7 +156,7 @@ const en = {
       ["3 series", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Family Plan · Contribute with us",
+      eyebrow: "Family Tennis Plan · Contribute with us",
       title: "Your family budget. What it buys. What it builds.",
       p: "Three scenarios side by side — now, planned and wish. The sessions, hours and ball contacts your budget buys, and the cost of one session, one hour and one stroke, calculated from your own numbers.",
       points: [
@@ -165,7 +165,7 @@ const en = {
         ["Ten years ahead", "The spending plan over one to ten years, limited by the ages you set."],
         ["Beyond the court", "Support with admission to leading schools, and digital assets that stay with the player."],
       ],
-      cta: "Calculate your family plan",
+      cta: "Calculate your family tennis plan",
     },
     paths: {
       eyebrow: "Start here",
@@ -1013,21 +1013,21 @@ const en = {
     decline: "Decline",
   },
   familyPlan: {
-    title: "Family Plan",
+    title: "Family Tennis Plan",
     metaDescription: "Calculate your family's tennis budget: sessions, hours, ball contacts and the cost of one session, one hour and one stroke — from your own numbers, in three scenarios.",
-    eyebrow: "Family Plan · Contribute with us",
+    eyebrow: "Family Tennis Plan · Contribute with us",
     heroTitle: "What does your family's tennis cost — and what does it buy?",
     heroLead: "Calculate your family budget, the sessions and hours it pays for, the estimated ball contacts and the cost of one session, one hour and one stroke — on your own terms.",
-    heroCta: "Calculate your family plan",
+    heroCta: "Calculate your family tennis plan",
     strategy: {
       eyebrow: "Our goal",
       title: "More tennis. More opportunity. Together.",
       p1: "Our goal is to grow the world tennis market tenfold by widening participation and making the path into tennis clearer and more accessible. MAXIMUS aims to lead through management, methodology, quality, results and the popularisation of the game.",
       p2: "We see the other tennis makers and their brands as potential partners. We propose combining the strengths of companies, coaches, clubs and families in a shared programme to develop, promote and scale tennis on a mutually beneficial basis.",
       p3: "MAXIMUS is the fifth element of this approach: the uniting role that helps separate strengths work together. Our shared challenges are illness, children's inactivity and the barriers that stop people from starting and continuing to play.",
-      p4: "For a family, everything starts with clarity. Family Plan shows the budget, the number of sessions and hours, the estimated volume of ball contacts and the cost of practice. Change the conditions and choose the scenario that suits you.",
+      p4: "For a family, everything starts with clarity. Family Tennis Plan shows the budget, the number of sessions and hours, the estimated volume of ball contacts and the cost of practice. Change the conditions and choose the scenario that suits you.",
       note: "Tenfold growth is MAXIMUS's strategic goal, not a result already achieved. The calculator shows scenario calculations and promises no saving, no medical effect and no sporting result.",
-      ctaCalc: "Calculate your family plan",
+      ctaCalc: "Calculate your family tennis plan",
       ctaPartner: "Discuss developing tennis together",
     },
     beyond: {

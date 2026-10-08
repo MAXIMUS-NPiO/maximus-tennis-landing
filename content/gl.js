@@ -81,7 +81,7 @@ const gl = {
   nav: {
     language: "Idioma",
     groups: { racquets: "Raquetas", training: "Adestramento", ecosystem: "Ecosistema", partnerships: "Colaboracións" },
-    familyPlan: "Plan Familiar",
+    familyPlan: "Tenis en Familia",
     racquets: "Series de raquetas e comparación",
     great: "GREAT — 97 in² · Control",
     power: "POWER — 98 in² · Potencia",
@@ -156,7 +156,7 @@ const gl = {
       ["3 series", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Plan Familiar · Contribúa connosco",
+      eyebrow: "Plan de Tenis en Familia · Contribúa connosco",
       title: "O seu orzamento familiar. O que cobre. O que constrúe.",
       p: "Tres escenarios en paralelo: actual, previsto e desexado. As sesións, as horas e os contactos coa bóla que cobre o seu orzamento, e o custo dunha sesión, dunha hora e dun golpe, calculados a partir das súas propias cifras.",
       points: [
@@ -165,7 +165,7 @@ const gl = {
         ["Dez anos por diante", "O plan de gasto dun a dez anos, limitado polas idades que indique."],
         ["Máis alá da pista", "Apoio para acceder a centros educativos de primeiro nivel, e activos dixitais que quedan co xogador."],
       ],
-      cta: "Calcule o seu plan familiar",
+      cta: "Calcule o seu plan de tenis en familia",
     },
     paths: {
       eyebrow: "Comece aquí",
@@ -1013,21 +1013,21 @@ const gl = {
     decline: "Rexeitar",
   },
   familyPlan: {
-    title: "Plan Familiar",
+    title: "Plan de Tenis en Familia",
     metaDescription: "Calcule o orzamento de tenis da súa familia: sesións, horas, contactos coa bóla e o custo dunha sesión, dunha hora e dun golpe, a partir das súas propias cifras e en tres escenarios.",
-    eyebrow: "Plan Familiar · Contribúa connosco",
+    eyebrow: "Plan de Tenis en Familia · Contribúa connosco",
     heroTitle: "Canto lle custa o tenis á súa familia e que obtén a cambio?",
     heroLead: "Calcule o seu orzamento familiar, as sesións e as horas que cobre, os contactos coa bóla estimados e o custo dunha sesión, dunha hora e dun golpe, cos seus propios criterios.",
-    heroCta: "Calcule o seu plan familiar",
+    heroCta: "Calcule o seu plan de tenis en familia",
     strategy: {
       eyebrow: "O noso obxectivo",
       title: "Máis tenis. Máis oportunidades. Xuntos.",
       p1: "O noso obxectivo é multiplicar por dez o mercado mundial do tenis ampliando a participación e facendo que o camiño cara ao tenis sexa máis claro e accesible. MAXIMUS aspira a liderar este camiño mediante a xestión, a metodoloxía, a calidade, os resultados e a popularización do xogo.",
       p2: "Vemos os demais fabricantes de material de tenis e as súas marcas como socios potenciais. Propoñemos unir as forzas de empresas, adestradores, clubs e familias nun programa compartido para desenvolver, promover e levar o tenis a unha escala maior, en beneficio mutuo.",
       p3: "MAXIMUS é o quinto elemento deste enfoque: o papel aglutinador que axuda a que forzas separadas traballen xuntas. Os nosos retos comúns son a enfermidade, o sedentarismo infantil e as barreiras que impiden comezar a xogar e seguir xogando.",
-      p4: "Para unha familia, todo comeza pola claridade. O Plan Familiar amosa o orzamento, o número de sesións e de horas, o volume estimado de contactos coa bóla e o custo da práctica. Cambie as condicións e escolla o escenario que mellor lle conveña.",
+      p4: "Para unha familia, todo comeza pola claridade. O Plan de Tenis en Familia amosa o orzamento, o número de sesións e de horas, o volume estimado de contactos coa bóla e o custo da práctica. Cambie as condicións e escolla o escenario que mellor lle conveña.",
       note: "Multiplicar o mercado por dez é o obxectivo estratéxico de MAXIMUS, non un resultado xa acadado. A calculadora amosa cálculos por escenarios e non promete ningún aforro, ningún efecto médico nin ningún resultado deportivo.",
-      ctaCalc: "Calcule o seu plan familiar",
+      ctaCalc: "Calcule o seu plan de tenis en familia",
       ctaPartner: "Falemos de desenvolver xuntos o tenis",
     },
     beyond: {

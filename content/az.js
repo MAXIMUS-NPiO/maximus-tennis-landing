@@ -81,7 +81,7 @@ const az = {
   nav: {
     language: "Dil",
     groups: { racquets: "Raketlər", training: "Məşq", ecosystem: "Ekosistem", partnerships: "Tərəfdaşlıq" },
-    familyPlan: "Ailə Planı",
+    familyPlan: "Ailə Tennisi",
     racquets: "Raket seriyaları və müqayisə",
     great: "GREAT — 97 in² · Nəzarət",
     power: "POWER — 98 in² · Güc",
@@ -156,7 +156,7 @@ const az = {
       ["3 seriya", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Ailə Planı · Bizimlə töhfə verin",
+      eyebrow: "Ailə Tennis Planı · Bizimlə töhfə verin",
       title: "Ailə büdcəniz. Nəyi qarşılayır? Nəyi qurur?",
       p: "Üç ssenari yan-yana — indi, plan və arzu. Büdcənizin qarşıladığı məşqlər, saatlar və topla təmaslar, həmçinin bir məşqin, bir saatın və bir zərbənin dəyəri — hamısı öz rəqəmlərinizlə hesablanır.",
       points: [
@@ -165,7 +165,7 @@ const az = {
         ["On il irəli", "Təyin etdiyiniz yaşlarla məhdudlaşan, bir ildən on ilədək xərc planı."],
         ["Kortdan kənarda", "Aparıcı məktəblərə qəbulda dəstək və oyunçuda qalan rəqəmsal aktivlər."],
       ],
-      cta: "Ailə planınızı hesablayın",
+      cta: "Ailə tennis planınızı hesablayın",
     },
     paths: {
       eyebrow: "Buradan başlayın",
@@ -1013,21 +1013,21 @@ const az = {
     decline: "İmtina et",
   },
   familyPlan: {
-    title: "Ailə Planı",
+    title: "Ailə Tennis Planı",
     metaDescription: "Ailənizin tennis büdcəsini hesablayın: məşqlər, saatlar, topla təmaslar və bir məşqin, bir saatın və bir zərbənin dəyəri — öz rəqəmlərinizlə, üç ssenaridə.",
-    eyebrow: "Ailə Planı · Bizimlə töhfə verin",
+    eyebrow: "Ailə Tennis Planı · Bizimlə töhfə verin",
     heroTitle: "Ailənizin tennisi neçəyə başa gəlir — və bunun qarşılığında nə əldə edirsiniz?",
     heroLead: "Ailə büdcənizi, onun ödədiyi məşqləri və saatları, təxmini topla təmasları və bir məşqin, bir saatın və bir zərbənin dəyərini hesablayın — öz şərtlərinizlə.",
-    heroCta: "Ailə planınızı hesablayın",
+    heroCta: "Ailə tennis planınızı hesablayın",
     strategy: {
       eyebrow: "Məqsədimiz",
       title: "Daha çox tennis. Daha çox imkan. Birlikdə.",
       p1: "Məqsədimiz iştirakı genişləndirərək və tennisə gedən yolu daha aydın və əlçatan edərək dünya tennis bazarını on dəfə böyütməkdir. MAXIMUS idarəetmə, metodologiya, keyfiyyət, nəticələr və oyunun populyarlaşdırılması vasitəsilə liderlik etməyi qarşısına məqsəd qoyur.",
       p2: "Digər tennis istehsalçılarını və onların brendlərini potensial tərəfdaş kimi görürük. Şirkətlərin, məşqçilərin, klubların və ailələrin güclərini tennisi qarşılıqlı fayda əsasında inkişaf etdirmək, təbliğ etmək və genişləndirmək üçün ortaq proqramda birləşdirməyi təklif edirik.",
       p3: "MAXIMUS bu yanaşmanın beşinci elementidir: ayrı-ayrı güclərin birlikdə işləməsinə kömək edən birləşdirici rol. Ortaq çağırışlarımız xəstəliklər, uşaqların hərəkətsizliyi və insanların oynamağa başlamasının və davam etməsinin qarşısını alan əngəllərdir.",
-      p4: "Ailə üçün hər şey aydınlıqdan başlayır. Ailə Planı büdcəni, məşq və saat sayını, topla təmasların təxmini həcmini və məşqin dəyərini göstərir. Şərtləri dəyişin və sizə uyğun ssenarini seçin.",
+      p4: "Ailə üçün hər şey aydınlıqdan başlayır. Ailə Tennis Planı büdcəni, məşq və saat sayını, topla təmasların təxmini həcmini və məşqin dəyərini göstərir. Şərtləri dəyişin və sizə uyğun ssenarini seçin.",
       note: "On qat artım MAXIMUS olaraq qarşımıza qoyduğumuz strateji məqsəddir, artıq əldə olunmuş nəticə deyil. Kalkulyator ssenari hesablamalarını göstərir və heç bir qənaət, heç bir tibbi effekt və heç bir idman nəticəsi vəd etmir.",
-      ctaCalc: "Ailə planınızı hesablayın",
+      ctaCalc: "Ailə tennis planınızı hesablayın",
       ctaPartner: "Tennisi birlikdə inkişaf etdirməyi müzakirə edək",
     },
     beyond: {

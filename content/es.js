@@ -81,7 +81,7 @@ const es = {
   nav: {
     language: "Idioma",
     groups: { racquets: "Raquetas", training: "Entrenamiento", ecosystem: "Ecosistema", partnerships: "Alianzas" },
-    familyPlan: "Plan Familiar",
+    familyPlan: "Tenis en Familia",
     racquets: "Series de raquetas y comparación",
     great: "GREAT — 97 in² · Control",
     power: "POWER — 98 in² · Potencia",
@@ -156,7 +156,7 @@ const es = {
       ["3 series de rendimiento", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Plan Familiar · Contribuya con nosotros",
+      eyebrow: "Plan de Tenis en Familia · Contribuya con nosotros",
       title: "Su presupuesto familiar. Lo que cubre. Lo que construye.",
       p: "Tres escenarios en paralelo: actual, previsto y deseado. Las sesiones, las horas y los contactos con la pelota que cubre su presupuesto, y el coste de una sesión, de una hora y de un golpe, calculados a partir de sus propias cifras.",
       points: [
@@ -165,7 +165,7 @@ const es = {
         ["A diez años vista", "El plan de gasto de uno a diez años, limitado por las edades que usted indique."],
         ["Más allá de la pista", "Apoyo para acceder a centros educativos de primer nivel, y activos digitales que permanecen con el jugador."],
       ],
-      cta: "Calcule su plan familiar",
+      cta: "Calcule su plan de tenis en familia",
     },
     paths: {
       eyebrow: "Empiece aquí",
@@ -1013,21 +1013,21 @@ const es = {
     decline: "Rechazar",
   },
   familyPlan: {
-    title: "Plan Familiar",
+    title: "Plan de Tenis en Familia",
     metaDescription: "Calcule el presupuesto de tenis de su familia: sesiones, horas, contactos con la pelota y el coste de una sesión, de una hora y de un golpe, a partir de sus propias cifras y en tres escenarios.",
-    eyebrow: "Plan Familiar · Contribuya con nosotros",
+    eyebrow: "Plan de Tenis en Familia · Contribuya con nosotros",
     heroTitle: "¿Cuánto le cuesta el tenis a su familia y qué obtiene a cambio?",
     heroLead: "Calcule su presupuesto familiar, las sesiones y las horas que cubre, los contactos con la pelota estimados y el coste de una sesión, de una hora y de un golpe, con sus propios criterios.",
-    heroCta: "Calcule su plan familiar",
+    heroCta: "Calcule su plan de tenis en familia",
     strategy: {
       eyebrow: "Nuestro objetivo",
       title: "Más tenis. Más oportunidades. Juntos.",
       p1: "Nuestro objetivo es multiplicar por diez el mercado mundial del tenis ampliando la participación y haciendo que el camino hacia el tenis sea más claro y accesible. MAXIMUS aspira a liderar este camino mediante la gestión, la metodología, la calidad, los resultados y la popularización del juego.",
       p2: "Vemos a los demás fabricantes de material de tenis y a sus marcas como socios potenciales. Proponemos unir las fortalezas de empresas, entrenadores, clubes y familias en un programa compartido para desarrollar, promover y llevar el tenis a una escala mayor, en beneficio mutuo.",
       p3: "MAXIMUS es el quinto elemento de este enfoque: el papel aglutinador que ayuda a que fuerzas separadas trabajen juntas. Nuestros retos comunes son la enfermedad, el sedentarismo infantil y las barreras que impiden empezar a jugar y seguir jugando.",
-      p4: "Para una familia, todo empieza por la claridad. El Plan Familiar muestra el presupuesto, el número de sesiones y de horas, el volumen estimado de contactos con la pelota y el coste de la práctica. Cambie las condiciones y elija el escenario que mejor le convenga.",
+      p4: "Para una familia, todo empieza por la claridad. El Plan de Tenis en Familia muestra el presupuesto, el número de sesiones y de horas, el volumen estimado de contactos con la pelota y el coste de la práctica. Cambie las condiciones y elija el escenario que mejor le convenga.",
       note: "Multiplicar el mercado por diez es el objetivo estratégico de MAXIMUS, no un resultado ya alcanzado. La calculadora muestra cálculos por escenarios y no promete ningún ahorro, ningún efecto médico ni ningún resultado deportivo.",
-      ctaCalc: "Calcule su plan familiar",
+      ctaCalc: "Calcule su plan de tenis en familia",
       ctaPartner: "Hablemos de desarrollar juntos el tenis",
     },
     beyond: {

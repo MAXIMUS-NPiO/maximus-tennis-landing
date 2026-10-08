@@ -81,7 +81,7 @@ const eu = {
   nav: {
     language: "Hizkuntza",
     groups: { racquets: "Erraketak", training: "Entrenamendua", ecosystem: "Ekosistema", partnerships: "Lankidetzak" },
-    familyPlan: "Familia Plana",
+    familyPlan: "Familia Tenisa",
     racquets: "Erraketa-serieak eta konparazioa",
     great: "GREAT — 97 in² · Kontrola",
     power: "POWER — 98 in² · Indarra",
@@ -156,7 +156,7 @@ const eu = {
       ["3 serie", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Familia Plana · Egin ekarpena gurekin",
+      eyebrow: "Familiako Tenis Plana · Egin ekarpena gurekin",
       title: "Zure familiaren aurrekontua. Zer ordaintzen duen. Zer eraikitzen duen.",
       p: "Hiru agertoki elkarren ondoan: egungoa, aurreikusia eta desiratua. Zure aurrekontuak ordaintzen dituen saioak, orduak eta pilota-kontaktuak, eta saio baten, ordu baten eta kolpe baten kostua, zeure zenbakiekin kalkulatuta.",
       points: [
@@ -165,7 +165,7 @@ const eu = {
         ["Hamar urteko ikuspegia", "Gastu-plana urte batetik hamar urtera, zuk ezarritako adinek mugatuta."],
         ["Pistatik haratago", "Ikastetxe entzutetsuetan sartzeko laguntza, eta jokalariarekin geratzen diren aktibo digitalak."],
       ],
-      cta: "Kalkulatu zure familia-plana",
+      cta: "Kalkulatu zure familiako tenis-plana",
     },
     paths: {
       eyebrow: "Hasi hemen",
@@ -1013,21 +1013,21 @@ const eu = {
     decline: "Ez baimendu",
   },
   familyPlan: {
-    title: "Familia Plana",
+    title: "Familiako Tenis Plana",
     metaDescription: "Kalkulatu zure familiaren tenis-aurrekontua: saioak, orduak, pilota-kontaktuak eta saio baten, ordu baten eta kolpe baten kostua — zeure zenbakiekin, hiru agertokitan.",
-    eyebrow: "Familia Plana · Egin ekarpena gurekin",
+    eyebrow: "Familiako Tenis Plana · Egin ekarpena gurekin",
     heroTitle: "Zenbat kostatzen zaio tenisa zure familiari — eta zer lortzen du horren truke?",
     heroLead: "Kalkulatu zure familiaren aurrekontua, harekin ordaintzen diren saioak eta orduak, pilota-kontaktu estimatuak eta saio baten, ordu baten eta kolpe baten kostua — zeure baldintzetan.",
-    heroCta: "Kalkulatu zure familia-plana",
+    heroCta: "Kalkulatu zure familiako tenis-plana",
     strategy: {
       eyebrow: "Gure helburua",
       title: "Tenis gehiago. Aukera gehiago. Elkarrekin.",
       p1: "Gure helburua munduko tenis-merkatua hamar aldiz handitzea da, parte-hartzea zabalduz eta tenisera iristeko bidea argiago eta eskuragarriago eginez. MAXIMUS markak bide horretan gidari izan nahi du kudeaketaren, metodologiaren, kalitatearen, emaitzen eta jokoaren zabalkundearen bidez.",
       p2: "Tenis-ekipamenduaren beste fabrikatzaileak eta haien markak balizko bazkidetzat hartzen ditugu. Enpresen, entrenatzaileen, kluben eta familien indarrak programa partekatu batean batzea proposatzen dugu, tenisa garatzeko, sustatzeko eta eskala handiagora eramateko, elkarren onurarako.",
       p3: "MAXIMUS da ikuspegi honen bosgarren elementua: indar bereiziei elkarrekin lan egiten laguntzen dien rol bateratzailea. Gure erronka partekatuak gaixotasuna, haurren sedentarismoa eta jendeari jokatzen hastea eta jarraitzea eragozten dioten oztopoak dira.",
-      p4: "Familia batentzat, dena argitasunarekin hasten da. Familia Planak aurrekontua, saio- eta ordu-kopurua, pilota-kontaktuen bolumen estimatua eta entrenamenduaren kostua erakusten ditu. Aldatu baldintzak eta aukeratu hobekien datorkizun agertokia.",
+      p4: "Familia batentzat, dena argitasunarekin hasten da. Familiako Tenis Planak aurrekontua, saio- eta ordu-kopurua, pilota-kontaktuen bolumen estimatua eta entrenamenduaren kostua erakusten ditu. Aldatu baldintzak eta aukeratu hobekien datorkizun agertokia.",
       note: "Hamar aldiz haztea MAXIMUS markaren helburu estrategikoa da, ez jada lortutako emaitza bat. Kalkulagailuak agertokien araberako kalkuluak erakusten ditu, eta ez du agintzen ez aurrezpenik, ez efektu medikorik, ez kirol-emaitzarik.",
-      ctaCalc: "Kalkulatu zure familia-plana",
+      ctaCalc: "Kalkulatu zure familiako tenis-plana",
       ctaPartner: "Hitz egin dezagun tenisa elkarrekin garatzeaz",
     },
     beyond: {

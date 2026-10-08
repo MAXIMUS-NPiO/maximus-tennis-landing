@@ -81,7 +81,7 @@ const hu = {
   nav: {
     language: "Nyelv",
     groups: { racquets: "Ütők", training: "Edzés", ecosystem: "Ökoszisztéma", partnerships: "Partnerség" },
-    familyPlan: "Családi terv",
+    familyPlan: "Családi tenisz",
     racquets: "Ütősorozatok és összehasonlítás",
     great: "GREAT — 97 in² · Kontroll",
     power: "POWER — 98 in² · Erő",
@@ -156,7 +156,7 @@ const hu = {
       ["3 sorozat", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Családi terv · Tegyünk érte együtt",
+      eyebrow: "Családi teniszterv · Tegyünk érte együtt",
       title: "Az Ön családi költségvetése. Mire elég. Mit épít.",
       p: "Három forgatókönyv egymás mellett — jelenlegi, tervezett és kívánt. Az edzések, órák és labdaérintések, amelyeket a költségvetése fedez, valamint egy edzés, egy óra és egy ütés költsége — mindez az Ön saját adataiból számolva.",
       points: [
@@ -165,7 +165,7 @@ const hu = {
         ["Tíz évre előre", "Kiadási terv egytől tíz évig, az Ön által megadott életkorok keretei között."],
         ["A pályán túl", "Támogatás a vezető iskolákba való bejutáshoz, és digitális vagyonelemek, amelyek a játékosnál maradnak."],
       ],
-      cta: "Családi terv kiszámítása",
+      cta: "Családi teniszterv kiszámítása",
     },
     paths: {
       eyebrow: "Kezdje itt",
@@ -1013,21 +1013,21 @@ const hu = {
     decline: "Elutasítás",
   },
   familyPlan: {
-    title: "Családi terv",
+    title: "Családi teniszterv",
     metaDescription: "Számolja ki családja teniszköltségvetését: edzések, órák, labdaérintések, valamint egy edzés, egy óra és egy ütés költsége — saját adataiból, három forgatókönyvben.",
-    eyebrow: "Családi terv · Tegyünk érte együtt",
+    eyebrow: "Családi teniszterv · Tegyünk érte együtt",
     heroTitle: "Mennyibe kerül a családjának a tenisz — és mit kap érte?",
     heroLead: "Számolja ki a családi költségvetést, az abból fedezett edzéseket és órákat, a becsült labdaérintéseket, valamint egy edzés, egy óra és egy ütés költségét — a saját feltételei szerint.",
-    heroCta: "Családi terv kiszámítása",
+    heroCta: "Családi teniszterv kiszámítása",
     strategy: {
       eyebrow: "Célunk",
       title: "Több tenisz. Több lehetőség. Együtt.",
       p1: "Célunk, hogy a világ teniszpiacát a tízszeresére növeljük: a részvétel szélesítésével, és azzal, hogy a teniszhez vezető utat átláthatóbbá és elérhetőbbé tesszük. A MAXIMUS arra törekszik, hogy a menedzsment, a módszertan, a minőség, az eredmények és a játék népszerűsítése révén vezető szerepet töltsön be.",
       p2: "A többi teniszfelszerelés-gyártót és márkáikat lehetséges partnernek tekintjük. Azt javasoljuk, hogy a vállalatok, edzők, klubok és családok erősségeit egy közös programban egyesítsük, amely kölcsönösen előnyös alapon fejleszti, népszerűsíti és szélesebb körben terjeszti a teniszt.",
       p3: "A MAXIMUS ennek a megközelítésnek az ötödik eleme: az az egyesítő szerep, amely segít abban, hogy a különálló erősségek együttműködjenek. Közös kihívásaink a betegségek, a gyermekek mozgásszegény életmódja, valamint azok az akadályok, amelyek miatt az emberek nem kezdenek el játszani, vagy abbahagyják a játékot.",
-      p4: "Egy család számára minden az átláthatósággal kezdődik. A Családi terv megmutatja a költségvetést, az edzések és órák számát, a labdaérintések becsült mennyiségét és a gyakorlás költségét. Módosítsa a feltételeket, és válassza ki az Önnek megfelelő forgatókönyvet.",
+      p4: "Egy család számára minden az átláthatósággal kezdődik. A Családi teniszterv megmutatja a költségvetést, az edzések és órák számát, a labdaérintések becsült mennyiségét és a gyakorlás költségét. Módosítsa a feltételeket, és válassza ki az Önnek megfelelő forgatókönyvet.",
       note: "A tízszeres növekedés a MAXIMUS stratégiai célja, nem pedig már elért eredmény. A kalkulátor forgatókönyv-számításokat mutat, és nem ígér sem megtakarítást, sem egészségügyi hatást, sem sporteredményt.",
-      ctaCalc: "Családi terv kiszámítása",
+      ctaCalc: "Családi teniszterv kiszámítása",
       ctaPartner: "Beszéljük meg a tenisz közös fejlesztését",
     },
     beyond: {

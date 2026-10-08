@@ -81,7 +81,7 @@ const zh = {
   nav: {
     language: "语言",
     groups: { racquets: "球拍", training: "训练", ecosystem: "生态系统", partnerships: "合作" },
-    familyPlan: "家庭网球规划",
+    familyPlan: "家庭网球",
     racquets: "球拍系列与对比",
     great: "GREAT — 97 in² · 控制",
     power: "POWER — 98 in² · 力量",
@@ -684,7 +684,7 @@ const zh = {
     categoriesTitle: "分别处理",
     categories: ["因被许可权利或符合条件的销售而产生的合同特许权使用费", "由计划定义的参与权益", "购买或服务抵扣额度", "预付款", "机构会员资格"],
     categoriesP: "这些类别绝不视为可以互换。",
-    statusTitle: "家庭计划的实际状态",
+    statusTitle: "家庭项目的实际状态",
     journeyTitle: "家庭路径",
     journey: [
       ["目标", "球员下一步希望达成的目标。"],

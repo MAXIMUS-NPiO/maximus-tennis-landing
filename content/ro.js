@@ -81,7 +81,7 @@ const ro = {
   nav: {
     language: "Limbă",
     groups: { racquets: "Rachete", training: "Antrenament", ecosystem: "Ecosistem", partnerships: "Parteneriate" },
-    familyPlan: "Planul familiei",
+    familyPlan: "Tenis în familie",
     racquets: "Seriile de rachete și comparația",
     great: "GREAT — 97 in² · Control",
     power: "POWER — 98 in² · Putere",
@@ -156,7 +156,7 @@ const ro = {
       ["3 serii", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Planul familiei · Contribuiți alături de noi",
+      eyebrow: "Planul de tenis al familiei · Contribuiți alături de noi",
       title: "Bugetul familiei dumneavoastră. Ce cumpără. Ce construiește.",
       p: "Trei scenarii, unul lângă altul — actual, planificat și dorit. Antrenamentele, orele și contactele cu mingea pe care le cumpără bugetul dumneavoastră, precum și costul unui antrenament, al unei ore și al unei lovituri — toate calculate pe baza propriilor dumneavoastră cifre.",
       points: [
@@ -165,7 +165,7 @@ const ro = {
         ["Orizont de zece ani", "Planul de cheltuieli pe o perioadă de la un an la zece ani, limitată de vârstele pe care le stabiliți."],
         ["Dincolo de teren", "Sprijin pentru admiterea la școli de prestigiu și active digitale care rămân ale jucătorului."],
       ],
-      cta: "Calculați planul familiei dumneavoastră",
+      cta: "Calculați planul de tenis al familiei dumneavoastră",
     },
     paths: {
       eyebrow: "Începeți aici",
@@ -1013,21 +1013,21 @@ const ro = {
     decline: "Refuzați",
   },
   familyPlan: {
-    title: "Planul familiei",
+    title: "Planul de tenis al familiei",
     metaDescription: "Calculați bugetul familiei pentru tenis: antrenamente, ore, contacte cu mingea și costul unui antrenament, al unei ore și al unei lovituri — pe baza propriilor cifre, în trei scenarii.",
-    eyebrow: "Planul familiei · Contribuiți alături de noi",
+    eyebrow: "Planul de tenis al familiei · Contribuiți alături de noi",
     heroTitle: "Cât costă tenisul familiei dumneavoastră — și ce obțineți în schimb?",
     heroLead: "Calculați bugetul familiei, antrenamentele și orele pe care le acoperă, contactele estimate cu mingea și costul unui antrenament, al unei ore și al unei lovituri — în condițiile stabilite de dumneavoastră.",
-    heroCta: "Calculați planul familiei dumneavoastră",
+    heroCta: "Calculați planul de tenis al familiei dumneavoastră",
     strategy: {
       eyebrow: "Obiectivul nostru",
       title: "Mai mult tenis. Mai multe oportunități. Împreună.",
       p1: "Obiectivul nostru este să creștem de zece ori piața mondială a tenisului, lărgind participarea și făcând drumul către tenis mai clar și mai accesibil. MAXIMUS își propune un rol de lider prin management, metodologie, calitate, rezultate și popularizarea jocului.",
       p2: "Îi privim pe ceilalți producători din industria tenisului și brandurile lor ca pe potențiali parteneri. Propunem reunirea forțelor companiilor, antrenorilor, cluburilor și familiilor într-un program comun de dezvoltare, promovare și extindere a tenisului, pe o bază reciproc avantajoasă.",
       p3: "MAXIMUS este al cincilea element al acestei abordări: rolul unificator care ajută forțe separate să lucreze împreună. Provocările noastre comune sunt bolile, inactivitatea copiilor și barierele care îi împiedică pe oameni să înceapă să joace și să continue.",
-      p4: "Pentru o familie, totul începe cu claritatea. Planul familiei arată bugetul, numărul de antrenamente și de ore, volumul estimat de contacte cu mingea și costul antrenamentului. Modificați condițiile și alegeți scenariul care vi se potrivește.",
+      p4: "Pentru o familie, totul începe cu claritatea. Planul de tenis al familiei arată bugetul, numărul de antrenamente și de ore, volumul estimat de contacte cu mingea și costul antrenamentului. Modificați condițiile și alegeți scenariul care vi se potrivește.",
       note: "Creșterea de zece ori este obiectivul strategic al MAXIMUS, nu un rezultat deja atins. Calculatorul prezintă calcule pe scenarii și nu promite nicio economie, niciun efect medical și niciun rezultat sportiv.",
-      ctaCalc: "Calculați planul familiei dumneavoastră",
+      ctaCalc: "Calculați planul de tenis al familiei dumneavoastră",
       ctaPartner: "Discutați despre dezvoltarea împreună a tenisului",
     },
     beyond: {

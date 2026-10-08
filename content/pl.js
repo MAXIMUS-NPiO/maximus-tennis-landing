@@ -81,7 +81,7 @@ const pl = {
   nav: {
     language: "Język",
     groups: { racquets: "Rakiety", training: "Trening", ecosystem: "Ekosystem", partnerships: "Współpraca" },
-    familyPlan: "Plan rodzinny",
+    familyPlan: "Tenis rodzinny",
     racquets: "Serie rakiet i porównanie",
     great: "GREAT — 97 in² · Kontrola",
     power: "POWER — 98 in² · Moc",
@@ -156,7 +156,7 @@ const pl = {
       ["3 serie", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Plan rodzinny · Wnieś wkład razem z nami",
+      eyebrow: "Rodzinny plan tenisowy · Wnieś wkład razem z nami",
       title: "Budżet Państwa rodziny. Na co wystarcza. Co buduje.",
       p: "Trzy scenariusze obok siebie — obecny, planowany i wymarzony. Treningi, godziny i kontakty z piłką, na które wystarcza Państwa budżet, oraz koszt jednego treningu, jednej godziny i jednego uderzenia — obliczone na podstawie Państwa własnych danych.",
       points: [
@@ -165,7 +165,7 @@ const pl = {
         ["Dziesięć lat naprzód", "Plan wydatków na okres od roku do dziesięciu lat, ograniczony podanym przez Państwa przedziałem wieku."],
         ["Poza kortem", "Wsparcie w rekrutacji do czołowych szkół oraz aktywa cyfrowe, które pozostają przy zawodniku."],
       ],
-      cta: "Oblicz swój plan rodzinny",
+      cta: "Oblicz swój rodzinny plan tenisowy",
     },
     paths: {
       eyebrow: "Zacznij tutaj",
@@ -1013,21 +1013,21 @@ const pl = {
     decline: "Odrzuć",
   },
   familyPlan: {
-    title: "Plan rodzinny",
+    title: "Rodzinny plan tenisowy",
     metaDescription: "Oblicz tenisowy budżet swojej rodziny: treningi, godziny, kontakty z piłką oraz koszt jednego treningu, jednej godziny i jednego uderzenia — na podstawie własnych danych, w trzech scenariuszach.",
-    eyebrow: "Plan rodzinny · Wnieś wkład razem z nami",
+    eyebrow: "Rodzinny plan tenisowy · Wnieś wkład razem z nami",
     heroTitle: "Ile tenis kosztuje Państwa rodzinę — i co za to Państwo otrzymują?",
     heroLead: "Tutaj obliczą Państwo budżet rodziny, opłacane z niego treningi i godziny, szacowaną liczbę kontaktów z piłką oraz koszt jednego treningu, jednej godziny i jednego uderzenia — na własnych warunkach.",
-    heroCta: "Oblicz swój plan rodzinny",
+    heroCta: "Oblicz swój rodzinny plan tenisowy",
     strategy: {
       eyebrow: "Nasz cel",
       title: "Więcej tenisa. Więcej możliwości. Razem.",
       p1: "Naszym celem jest dziesięciokrotny wzrost światowego rynku tenisa — przez poszerzanie grona grających oraz wytyczanie jaśniejszej i bardziej dostępnej drogi do tenisa. MAXIMUS dąży do przywództwa poprzez zarządzanie, metodykę, jakość, wyniki i popularyzację gry.",
       p2: "Innych producentów sprzętu tenisowego i ich marki postrzegamy jako potencjalnych partnerów. Proponujemy połączenie mocnych stron firm, trenerów, klubów i rodzin we wspólnym programie rozwoju, promocji i upowszechniania tenisa na dużą skalę — na zasadach obopólnej korzyści.",
       p3: "MAXIMUS jest piątym elementem tego podejścia: pełni rolę spoiwa, które pomaga odrębnym siłom działać razem. Nasze wspólne wyzwania to choroby, brak ruchu wśród dzieci oraz bariery, przez które ludzie nie zaczynają grać albo rezygnują z gry.",
-      p4: "Dla rodziny wszystko zaczyna się od jasnego obrazu sytuacji. Plan rodzinny pokazuje budżet, liczbę treningów i godzin, szacowaną liczbę kontaktów z piłką oraz koszt treningów. Wystarczy zmienić warunki i wybrać scenariusz, który Państwu odpowiada.",
+      p4: "Dla rodziny wszystko zaczyna się od jasnego obrazu sytuacji. Rodzinny plan tenisowy pokazuje budżet, liczbę treningów i godzin, szacowaną liczbę kontaktów z piłką oraz koszt treningów. Wystarczy zmienić warunki i wybrać scenariusz, który Państwu odpowiada.",
       note: "Dziesięciokrotny wzrost to cel strategiczny, który wyznacza sobie MAXIMUS, a nie wynik już osiągnięty. Kalkulator pokazuje obliczenia scenariuszy i nie obiecuje żadnej oszczędności, żadnego efektu medycznego ani żadnego wyniku sportowego.",
-      ctaCalc: "Oblicz swój plan rodzinny",
+      ctaCalc: "Oblicz swój rodzinny plan tenisowy",
       ctaPartner: "Omów z nami wspólny rozwój tenisa",
     },
     beyond: {

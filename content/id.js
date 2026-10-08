@@ -81,7 +81,7 @@ const id = {
   nav: {
     language: "Bahasa",
     groups: { racquets: "Raket", training: "Latihan", ecosystem: "Ekosistem", partnerships: "Kemitraan" },
-    familyPlan: "Rencana Keluarga",
+    familyPlan: "Tenis Keluarga",
     racquets: "Seri raket dan perbandingan",
     great: "GREAT — 97 in² · Kontrol",
     power: "POWER — 98 in² · Tenaga",
@@ -156,7 +156,7 @@ const id = {
       ["3 seri", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Rencana Keluarga · Berkontribusi bersama kami",
+      eyebrow: "Rencana Tenis Keluarga · Berkontribusi bersama kami",
       title: "Anggaran keluarga Anda. Apa yang didapat. Apa yang dibangun.",
       p: "Tiga skenario berdampingan — sekarang, rencana, dan keinginan. Sesi, jam, dan kontak bola yang dapat dibiayai anggaran Anda, serta biaya satu sesi, satu jam, dan satu pukulan, dihitung dari angka Anda sendiri.",
       points: [
@@ -165,7 +165,7 @@ const id = {
         ["Sepuluh tahun ke depan", "Rencana pengeluaran untuk satu hingga sepuluh tahun, dibatasi oleh usia yang Anda tetapkan."],
         ["Di luar lapangan", "Dukungan untuk masuk ke sekolah unggulan, serta aset digital yang tetap menjadi milik pemain."],
       ],
-      cta: "Hitung rencana keluarga Anda",
+      cta: "Hitung rencana tenis keluarga Anda",
     },
     paths: {
       eyebrow: "Mulai di sini",
@@ -1013,21 +1013,21 @@ const id = {
     decline: "Tolak",
   },
   familyPlan: {
-    title: "Rencana Keluarga",
+    title: "Rencana Tenis Keluarga",
     metaDescription: "Hitung anggaran tenis keluarga Anda: sesi, jam, kontak bola, serta biaya satu sesi, satu jam, dan satu pukulan — dari angka Anda sendiri, dalam tiga skenario.",
-    eyebrow: "Rencana Keluarga · Berkontribusi bersama kami",
+    eyebrow: "Rencana Tenis Keluarga · Berkontribusi bersama kami",
     heroTitle: "Berapa biaya tenis keluarga Anda — dan apa yang Anda dapatkan?",
     heroLead: "Hitung anggaran keluarga Anda, sesi dan jam yang dibiayainya, perkiraan jumlah kontak bola, serta biaya satu sesi, satu jam, dan satu pukulan — sesuai ketentuan Anda sendiri.",
-    heroCta: "Hitung rencana keluarga Anda",
+    heroCta: "Hitung rencana tenis keluarga Anda",
     strategy: {
       eyebrow: "Tujuan kami",
       title: "Lebih banyak tenis. Lebih banyak peluang. Bersama.",
       p1: "Tujuan kami adalah menumbuhkan pasar tenis dunia sepuluh kali lipat dengan memperluas partisipasi serta membuat jalan menuju tenis lebih jelas dan lebih mudah dijangkau. MAXIMUS bertujuan memimpin melalui manajemen, metodologi, kualitas, hasil, dan upaya mempopulerkan permainan ini.",
       p2: "Kami memandang produsen perlengkapan tenis lainnya beserta merek mereka sebagai mitra potensial. Kami mengusulkan untuk menyatukan kekuatan perusahaan, pelatih, klub, dan keluarga dalam satu program bersama guna mengembangkan, mempromosikan, dan memperluas tenis atas dasar saling menguntungkan.",
       p3: "MAXIMUS adalah unsur kelima dalam pendekatan ini: peran pemersatu yang membantu kekuatan-kekuatan yang terpisah bekerja bersama. Tantangan bersama kita adalah penyakit, kurangnya aktivitas fisik anak-anak, dan berbagai hambatan yang menghalangi orang untuk mulai bermain dan terus bermain.",
-      p4: "Bagi keluarga, semuanya dimulai dari kejelasan. Rencana Keluarga menampilkan anggaran, jumlah sesi dan jam, perkiraan volume kontak bola, serta biaya latihan. Ubah kondisinya dan pilih skenario yang paling sesuai bagi Anda.",
+      p4: "Bagi keluarga, semuanya dimulai dari kejelasan. Rencana Tenis Keluarga menampilkan anggaran, jumlah sesi dan jam, perkiraan volume kontak bola, serta biaya latihan. Ubah kondisinya dan pilih skenario yang paling sesuai bagi Anda.",
       note: "Pertumbuhan sepuluh kali lipat adalah tujuan strategis MAXIMUS, bukan hasil yang sudah tercapai. Kalkulator ini menampilkan perhitungan skenario dan tidak menjanjikan penghematan, efek medis, maupun hasil olahraga apa pun.",
-      ctaCalc: "Hitung rencana keluarga Anda",
+      ctaCalc: "Hitung rencana tenis keluarga Anda",
       ctaPartner: "Diskusikan pengembangan tenis bersama",
     },
     beyond: {

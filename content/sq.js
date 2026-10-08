@@ -81,7 +81,7 @@ const sq = {
   nav: {
     language: "Gjuha",
     groups: { racquets: "Raketa", training: "Trajnim", ecosystem: "Ekosistemi", partnerships: "Partneritete" },
-    familyPlan: "Plani familjar",
+    familyPlan: "Tenisi familjar",
     racquets: "Seritë e raketave dhe krahasimi",
     great: "GREAT — 97 in² · Kontroll",
     power: "POWER — 98 in² · Fuqi",
@@ -156,7 +156,7 @@ const sq = {
       ["3 seri", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Plani familjar · Kontribuoni me ne",
+      eyebrow: "Plani i tenisit të familjes · Kontribuoni me ne",
       title: "Buxheti i familjes suaj. Çfarë blen. Çfarë ndërton.",
       p: "Tre skenarë krah për krah — tani, në plan dhe dëshira. Sesionet, orët dhe kontaktet me topin që blen buxheti juaj, si edhe kostoja e një sesioni, e një ore dhe e një goditjeje — të gjitha të llogaritura nga numrat tuaj.",
       points: [
@@ -165,7 +165,7 @@ const sq = {
         ["Horizont dhjetëvjeçar", "Plani i shpenzimeve nga një deri në dhjetë vjet, i kufizuar nga moshat që caktoni."],
         ["Përtej fushës", "Mbështetje për pranimin në shkolla prestigjioze dhe asete dixhitale që mbeten te lojtari."],
       ],
-      cta: "Llogaritni planin e familjes suaj",
+      cta: "Llogaritni planin e tenisit të familjes suaj",
     },
     paths: {
       eyebrow: "Nisni nga këtu",
@@ -1013,21 +1013,21 @@ const sq = {
     decline: "Refuzo",
   },
   familyPlan: {
-    title: "Plani familjar",
+    title: "Plani i tenisit të familjes",
     metaDescription: "Llogaritni buxhetin e tenisit për familjen tuaj: sesionet, orët, kontaktet me topin dhe koston e një sesioni, të një ore dhe të një goditjeje — nga numrat tuaj, në tre skenarë.",
-    eyebrow: "Plani familjar · Kontribuoni me ne",
+    eyebrow: "Plani i tenisit të familjes · Kontribuoni me ne",
     heroTitle: "Sa i kushton tenisi familjes suaj — dhe çfarë merrni në këmbim?",
     heroLead: "Llogaritni buxhetin familjar, sesionet dhe orët që ai mbulon, kontaktet e vlerësuara me topin dhe koston e një sesioni, të një ore dhe të një goditjeje — sipas kushteve tuaja.",
-    heroCta: "Llogaritni planin e familjes suaj",
+    heroCta: "Llogaritni planin e tenisit të familjes suaj",
     strategy: {
       eyebrow: "Qëllimi ynë",
       title: "Më shumë tenis. Më shumë mundësi. Së bashku.",
       p1: "Qëllimi ynë është ta rrisim dhjetëfish tregun botëror të tenisit, duke zgjeruar pjesëmarrjen dhe duke e bërë rrugën drejt tenisit më të qartë dhe më të arritshme. MAXIMUS synon të udhëheqë përmes menaxhimit, metodologjisë, cilësisë, rezultateve dhe popullarizimit të lojës.",
       p2: "Prodhuesit e tjerë në tenis dhe markat e tyre i shohim si partnerë të mundshëm. Propozojmë të bashkojmë forcat e kompanive, trajnerëve, klubeve dhe familjeve në një program të përbashkët për të zhvilluar, promovuar dhe zgjeruar tenisin, mbi baza përfitimi të ndërsjellë.",
       p3: "MAXIMUS është elementi i pestë i kësaj qasjeje: roli bashkues që i ndihmon forcat e veçanta të punojnë së bashku. Sfidat tona të përbashkëta janë sëmundjet, mungesa e aktivitetit fizik te fëmijët dhe pengesat që i ndalojnë njerëzit të fillojnë dhe të vazhdojnë të luajnë.",
-      p4: "Për një familje, gjithçka nis me qartësinë. Plani familjar tregon buxhetin, numrin e sesioneve dhe të orëve, vëllimin e vlerësuar të kontakteve me topin dhe koston e praktikës. Ndryshoni kushtet dhe zgjidhni skenarin që ju përshtatet.",
+      p4: "Për një familje, gjithçka nis me qartësinë. Plani i tenisit të familjes tregon buxhetin, numrin e sesioneve dhe të orëve, vëllimin e vlerësuar të kontakteve me topin dhe koston e praktikës. Ndryshoni kushtet dhe zgjidhni skenarin që ju përshtatet.",
       note: "Rritja dhjetëfish është objektivi strategjik i MAXIMUS, jo një rezultat i arritur tashmë. Kalkulatori tregon llogaritje sipas skenarëve dhe nuk premton asnjë kursim, asnjë efekt mjekësor dhe asnjë rezultat sportiv.",
-      ctaCalc: "Llogaritni planin e familjes suaj",
+      ctaCalc: "Llogaritni planin e tenisit të familjes suaj",
       ctaPartner: "Diskutoni zhvillimin e përbashkët të tenisit",
     },
     beyond: {

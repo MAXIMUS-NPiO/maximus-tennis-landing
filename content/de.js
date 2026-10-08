@@ -81,7 +81,7 @@ const de = {
   nav: {
     language: "Sprache",
     groups: { racquets: "Schläger", training: "Training", ecosystem: "Ökosystem", partnerships: "Partnerschaften" },
-    familyPlan: "Familienplan",
+    familyPlan: "Familientennis",
     racquets: "Schlägerserien und Vergleich",
     great: "GREAT — 97 in² · Kontrolle",
     power: "POWER — 98 in² · Power",
@@ -156,7 +156,7 @@ const de = {
       ["3 Serien", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Familienplan · Leisten Sie mit uns Ihren Beitrag",
+      eyebrow: "Familien-Tennisplan · Leisten Sie mit uns Ihren Beitrag",
       title: "Ihr Familienbudget. Was es finanziert. Was es aufbaut.",
       p: "Drei Szenarien nebeneinander — aktuell, geplant und gewünscht. Die Trainingseinheiten, Stunden und Ballkontakte, die Ihr Budget finanziert, und die Kosten einer Einheit, einer Stunde und eines Schlags — berechnet aus Ihren eigenen Zahlen.",
       points: [
@@ -165,7 +165,7 @@ const de = {
         ["Die nächsten zehn Jahre", "Der Ausgabenplan über ein bis zehn Jahre, begrenzt durch die Altersspanne, die Sie festlegen."],
         ["Über den Platz hinaus", "Unterstützung bei der Aufnahme an führenden Schulen und digitale Vermögenswerte, die beim Spieler bleiben."],
       ],
-      cta: "Ihren Familienplan berechnen",
+      cta: "Ihren Familien-Tennisplan berechnen",
     },
     paths: {
       eyebrow: "Hier beginnen",
@@ -1013,21 +1013,21 @@ const de = {
     decline: "Ablehnen",
   },
   familyPlan: {
-    title: "Familienplan",
+    title: "Familien-Tennisplan",
     metaDescription: "Berechnen Sie das Tennisbudget Ihrer Familie: Trainingseinheiten, Stunden, Ballkontakte und die Kosten einer Einheit, einer Stunde und eines Schlags — aus Ihren eigenen Zahlen, in drei Szenarien.",
-    eyebrow: "Familienplan · Leisten Sie mit uns Ihren Beitrag",
+    eyebrow: "Familien-Tennisplan · Leisten Sie mit uns Ihren Beitrag",
     heroTitle: "Was kostet das Tennis Ihrer Familie — und was bekommen Sie dafür?",
     heroLead: "Berechnen Sie Ihr Familienbudget, die Trainingseinheiten und Stunden, die es finanziert, die geschätzten Ballkontakte und die Kosten einer Einheit, einer Stunde und eines Schlags — nach Ihren eigenen Vorgaben.",
-    heroCta: "Ihren Familienplan berechnen",
+    heroCta: "Ihren Familien-Tennisplan berechnen",
     strategy: {
       eyebrow: "Unser Ziel",
       title: "Mehr Tennis. Mehr Möglichkeiten. Gemeinsam.",
       p1: "Unser Ziel ist es, den weltweiten Tennismarkt auf das Zehnfache zu vergrößern, indem wir die Teilnahme ausweiten und den Weg ins Tennis klarer und zugänglicher machen. MAXIMUS strebt eine führende Rolle an — durch Management, Methodik, Qualität, Ergebnisse und die Popularisierung des Spiels.",
       p2: "Wir sehen die anderen Tennishersteller und ihre Marken als potenzielle Partner. Wir schlagen vor, die Stärken von Unternehmen, Trainern, Vereinen und Familien in einem gemeinsamen Programm zu bündeln, um Tennis zum gegenseitigen Nutzen zu entwickeln, zu fördern und zu skalieren.",
       p3: "MAXIMUS ist das fünfte Element dieses Ansatzes: die verbindende Rolle, die getrennten Stärken hilft, zusammenzuwirken. Unsere gemeinsamen Herausforderungen sind Krankheiten, Bewegungsmangel bei Kindern und die Hürden, die Menschen davon abhalten, mit dem Spielen zu beginnen und dabeizubleiben.",
-      p4: "Für eine Familie beginnt alles mit Klarheit. Der Familienplan zeigt das Budget, die Zahl der Trainingseinheiten und Stunden, das geschätzte Volumen an Ballkontakten und die Kosten des Trainings. Ändern Sie die Bedingungen und wählen Sie das Szenario, das zu Ihnen passt.",
+      p4: "Für eine Familie beginnt alles mit Klarheit. Der Familien-Tennisplan zeigt das Budget, die Zahl der Trainingseinheiten und Stunden, das geschätzte Volumen an Ballkontakten und die Kosten des Trainings. Ändern Sie die Bedingungen und wählen Sie das Szenario, das zu Ihnen passt.",
       note: "Das zehnfache Wachstum ist das strategische Ziel von MAXIMUS, kein bereits erreichtes Ergebnis. Der Rechner zeigt Szenarioberechnungen und verspricht keine Ersparnis, keine medizinische Wirkung und kein sportliches Ergebnis.",
-      ctaCalc: "Ihren Familienplan berechnen",
+      ctaCalc: "Ihren Familien-Tennisplan berechnen",
       ctaPartner: "Über die gemeinsame Entwicklung des Tennis sprechen",
     },
     beyond: {

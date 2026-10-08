@@ -81,7 +81,7 @@ const ca = {
   nav: {
     language: "Idioma",
     groups: { racquets: "Raquetes", training: "Entrenament", ecosystem: "Ecosistema", partnerships: "Col·laboracions" },
-    familyPlan: "Pla Familiar",
+    familyPlan: "Tennis familiar",
     racquets: "Sèries de raquetes i comparació",
     great: "GREAT — 97 in² · Control",
     power: "POWER — 98 in² · Potència",
@@ -156,7 +156,7 @@ const ca = {
       ["3 sèries", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Pla Familiar · Contribuïu amb nosaltres",
+      eyebrow: "Pla de Tennis Familiar · Contribuïu amb nosaltres",
       title: "El vostre pressupost familiar. Què cobreix. Què construeix.",
       p: "Tres escenaris en paral·lel: actual, previst i desitjat. Les sessions, les hores i els contactes amb la pilota que cobreix el vostre pressupost, i el cost d'una sessió, d'una hora i d'un cop, calculats a partir de les vostres pròpies xifres.",
       points: [
@@ -165,7 +165,7 @@ const ca = {
         ["A deu anys vista", "El pla de despesa d'un a deu anys, limitat per les edats que indiqueu."],
         ["Més enllà de la pista", "Suport per accedir a centres educatius de primer nivell, i actius digitals que es queden amb el jugador."],
       ],
-      cta: "Calculeu el vostre pla familiar",
+      cta: "Calculeu el vostre pla de tennis familiar",
     },
     paths: {
       eyebrow: "Comenceu aquí",
@@ -1013,21 +1013,21 @@ const ca = {
     decline: "Rebutjar",
   },
   familyPlan: {
-    title: "Pla Familiar",
+    title: "Pla de Tennis Familiar",
     metaDescription: "Calculeu el pressupost de tennis de la vostra família: sessions, hores, contactes amb la pilota i el cost d'una sessió, d'una hora i d'un cop, a partir de les vostres pròpies xifres i en tres escenaris.",
-    eyebrow: "Pla Familiar · Contribuïu amb nosaltres",
+    eyebrow: "Pla de Tennis Familiar · Contribuïu amb nosaltres",
     heroTitle: "Quant costa el tennis de la vostra família i què n'obteniu a canvi?",
     heroLead: "Calculeu el vostre pressupost familiar, les sessions i les hores que cobreix, els contactes amb la pilota estimats i el cost d'una sessió, d'una hora i d'un cop, amb els vostres propis criteris.",
-    heroCta: "Calculeu el vostre pla familiar",
+    heroCta: "Calculeu el vostre pla de tennis familiar",
     strategy: {
       eyebrow: "El nostre objectiu",
       title: "Més tennis. Més oportunitats. Junts.",
       p1: "El nostre objectiu és multiplicar per deu el mercat mundial del tennis ampliant la participació i fent que el camí cap al tennis sigui més clar i accessible. MAXIMUS aspira a liderar aquest camí mitjançant la gestió, la metodologia, la qualitat, els resultats i la popularització del joc.",
       p2: "Veiem els altres fabricants de material de tennis i les seves marques com a socis potencials. Proposem unir les forces d'empreses, entrenadors, clubs i famílies en un programa compartit per desenvolupar, promoure i portar el tennis a una escala més gran, en benefici mutu.",
       p3: "MAXIMUS és el cinquè element d'aquest enfocament: el paper aglutinador que ajuda forces separades a treballar juntes. Els nostres reptes comuns són la malaltia, el sedentarisme infantil i les barreres que impedeixen començar a jugar i continuar jugant.",
-      p4: "Per a una família, tot comença per la claredat. El Pla Familiar mostra el pressupost, el nombre de sessions i d'hores, el volum estimat de contactes amb la pilota i el cost de la pràctica. Canvieu les condicions i trieu l'escenari que més us convingui.",
+      p4: "Per a una família, tot comença per la claredat. El Pla de Tennis Familiar mostra el pressupost, el nombre de sessions i d'hores, el volum estimat de contactes amb la pilota i el cost de la pràctica. Canvieu les condicions i trieu l'escenari que més us convingui.",
       note: "Multiplicar el mercat per deu és l'objectiu estratègic de MAXIMUS, no un resultat ja assolit. La calculadora mostra càlculs per escenaris i no promet cap estalvi, cap efecte mèdic ni cap resultat esportiu.",
-      ctaCalc: "Calculeu el vostre pla familiar",
+      ctaCalc: "Calculeu el vostre pla de tennis familiar",
       ctaPartner: "Parlem de desenvolupar junts el tennis",
     },
     beyond: {

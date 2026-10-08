@@ -81,7 +81,7 @@ const fil = {
   nav: {
     language: "Wika",
     groups: { racquets: "Raketa", training: "Pagsasanay", ecosystem: "Ekosistema", partnerships: "Katuwang" },
-    familyPlan: "Family Plan",
+    familyPlan: "Tennis ng Pamilya",
     racquets: "Mga serye ng raketa at paghahambing",
     great: "GREAT — 97 in² · Kontrol",
     power: "POWER — 98 in² · Lakas",
@@ -156,7 +156,7 @@ const fil = {
       ["3 serye", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Family Plan · Mag-ambag kasama namin",
+      eyebrow: "Plano sa Tennis ng Pamilya · Mag-ambag kasama namin",
       title: "Ang badyet ng inyong pamilya. Ang nabibili nito. Ang nabubuo nito.",
       p: "Tatlong senaryong magkakatabi — ngayon, nakaplano at ninanais. Ang mga sesyon, oras at pagtama sa bola na nabibili ng inyong badyet, at ang halaga ng isang sesyon, isang oras at isang tira, na kinakalkula mula sa sarili ninyong mga numero.",
       points: [
@@ -165,7 +165,7 @@ const fil = {
         ["Sampung taon sa hinaharap", "Ang plano ng gastusin para sa isa hanggang sampung taon, na nililimitahan ng mga edad na itinakda ninyo."],
         ["Higit pa sa court", "Suporta sa pagpasok sa mga nangungunang paaralan, at mga digital na ari-arian na nananatili sa manlalaro."],
       ],
-      cta: "Kalkulahin ang inyong Family Plan",
+      cta: "Kalkulahin ang plano sa tennis ng inyong pamilya",
     },
     paths: {
       eyebrow: "Magsimula rito",
@@ -1013,21 +1013,21 @@ const fil = {
     decline: "Tanggihan",
   },
   familyPlan: {
-    title: "Family Plan",
+    title: "Plano sa Tennis ng Pamilya",
     metaDescription: "Kalkulahin ang badyet ng inyong pamilya para sa tennis: mga sesyon, oras, pagtama sa bola at ang halaga ng isang sesyon, isang oras at isang tira — mula sa sarili ninyong mga numero, sa tatlong senaryo.",
-    eyebrow: "Family Plan · Mag-ambag kasama namin",
+    eyebrow: "Plano sa Tennis ng Pamilya · Mag-ambag kasama namin",
     heroTitle: "Magkano ang gastos sa tennis ng inyong pamilya — at ano ang nabibili nito?",
     heroLead: "Kalkulahin ang badyet ng inyong pamilya, ang mga sesyon at oras na binabayaran nito, ang tinatayang mga pagtama sa bola at ang halaga ng isang sesyon, isang oras at isang tira — ayon sa sarili ninyong mga kondisyon.",
-    heroCta: "Kalkulahin ang inyong Family Plan",
+    heroCta: "Kalkulahin ang plano sa tennis ng inyong pamilya",
     strategy: {
       eyebrow: "Ang aming layunin",
       title: "Mas maraming tennis. Mas maraming pagkakataon. Sama-sama.",
       p1: "Ang aming layunin ay palakihin nang sampung ulit ang pandaigdigang merkado ng tennis sa pamamagitan ng pagpapalawak ng partisipasyon at ng paggawang mas malinaw at mas abot-kamay ng landas patungo sa tennis. Nilalayon ng MAXIMUS na manguna sa pamamagitan ng pamamahala, metodolohiya, kalidad, mga resulta at pagpapalaganap ng laro.",
       p2: "Itinuturing namin ang ibang mga tagagawa sa tennis at ang kanilang mga brand bilang mga posibleng katuwang. Iminumungkahi naming pagsamahin ang mga kalakasan ng mga kumpanya, coach, club at pamilya sa isang magkasanib na programa upang paunlarin, itaguyod at palawakin ang tennis nang may kapwa pakinabang.",
       p3: "Ang MAXIMUS ang ikalimang elemento ng pamamaraang ito: ang papel na nagbubuklod, na tumutulong upang gumana nang magkakasama ang magkakahiwalay na kalakasan. Ang mga hamong pinagsasaluhan natin ay ang karamdaman, ang kawalan ng pisikal na aktibidad ng mga bata at ang mga hadlang na pumipigil sa mga tao na magsimula at magpatuloy sa paglalaro.",
-      p4: "Para sa isang pamilya, nagsisimula ang lahat sa kalinawan. Ipinapakita ng Family Plan ang badyet, ang bilang ng mga sesyon at oras, ang tinatayang dami ng pagtama sa bola at ang halaga ng pagsasanay. Baguhin ang mga kondisyon at piliin ang senaryong angkop sa inyo.",
+      p4: "Para sa isang pamilya, nagsisimula ang lahat sa kalinawan. Ipinapakita ng Plano sa Tennis ng Pamilya ang badyet, ang bilang ng mga sesyon at oras, ang tinatayang dami ng pagtama sa bola at ang halaga ng pagsasanay. Baguhin ang mga kondisyon at piliin ang senaryong angkop sa inyo.",
       note: "Ang sampung ulit na paglago ay estratehikong layunin ng MAXIMUS, hindi isang resultang nakamit na. Nagpapakita ang kalkulador ng mga kalkulasyon ayon sa senaryo at hindi ito nangangako ng anumang pagtitipid, anumang epektong medikal o anumang resultang pampalakasan.",
-      ctaCalc: "Kalkulahin ang inyong Family Plan",
+      ctaCalc: "Kalkulahin ang plano sa tennis ng inyong pamilya",
       ctaPartner: "Talakayin ang sama-samang pagpapaunlad ng tennis",
     },
     beyond: {

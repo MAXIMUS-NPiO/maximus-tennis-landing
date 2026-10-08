@@ -81,7 +81,7 @@ const uz = {
   nav: {
     language: "Til",
     groups: { racquets: "Raketkalar", training: "Mashgʻulot", ecosystem: "Ekotizim", partnerships: "Hamkorlik" },
-    familyPlan: "Oilaviy reja",
+    familyPlan: "Oilaviy tennis",
     racquets: "Raketka seriyalari va qiyoslash",
     great: "GREAT — 97 in² · Nazorat",
     power: "POWER — 98 in² · Quvvat",
@@ -156,7 +156,7 @@ const uz = {
       ["3 seriya", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Oilaviy reja · Biz bilan birga hissa qoʻshing",
+      eyebrow: "Oilaviy tennis rejasi · Biz bilan birga hissa qoʻshing",
       title: "Oilaviy byudjetingiz. U nimaga yetadi. U nimani yaratadi.",
       p: "Uchta ssenariy yonma-yon: «Hozir», «Reja» va «Orzu». Byudjetingiz qancha mashgʻulot, soat va toʻp bilan kontaktga yetishi hamda bitta mashgʻulot, bir soat va bitta zarba qanchaga tushishi — hammasi oʻz raqamlaringiz asosida hisoblanadi.",
       points: [
@@ -165,7 +165,7 @@ const uz = {
         ["Oʻn yil oldinga", "Bir yildan oʻn yilgacha boʻlgan xarajatlar rejasi — siz belgilagan yosh oraligʻida."],
         ["Kortdan tashqarida", "Yetakchi maktablarga kirishda koʻmak hamda oʻyinchida qoladigan raqamli aktivlar."],
       ],
-      cta: "Oilaviy rejani hisoblash",
+      cta: "Oilaviy tennis rejasini hisoblash",
     },
     paths: {
       eyebrow: "Shu yerdan boshlang",
@@ -1013,21 +1013,21 @@ const uz = {
     decline: "Rad etish",
   },
   familyPlan: {
-    title: "Oilaviy reja",
+    title: "Oilaviy tennis rejasi",
     metaDescription: "Oilangizning tennis byudjetini hisoblang: mashgʻulotlar, soatlar, toʻp bilan kontaktlar hamda bitta mashgʻulot, bir soat va bitta zarba narxi — oʻz raqamlaringiz asosida, uchta ssenariyda.",
-    eyebrow: "Oilaviy reja · Biz bilan birga hissa qoʻshing",
+    eyebrow: "Oilaviy tennis rejasi · Biz bilan birga hissa qoʻshing",
     heroTitle: "Tennis oilangizga qanchaga tushadi — va buning evaziga nima olasiz?",
     heroLead: "Oilaviy byudjetingizni, u qoplaydigan mashgʻulotlar va soatlar sonini, toʻp bilan kontaktlarning taxminiy miqdorini hamda bitta mashgʻulot, bir soat va bitta zarba narxini oʻz shartlaringiz asosida hisoblang.",
-    heroCta: "Oilaviy rejani hisoblash",
+    heroCta: "Oilaviy tennis rejasini hisoblash",
     strategy: {
       eyebrow: "Maqsadimiz",
       title: "Koʻproq tennis. Koʻproq imkoniyat. Birgalikda.",
       p1: "Maqsadimiz — tennis oʻynaydiganlar doirasini kengaytirib, tennisga yoʻlni yanada tushunarli va qulay qilib, jahon tennis bozorini oʻn barobar oʻstirish. MAXIMUS boshqaruv, metodologiya, sifat, natijalar va oʻyinni ommalashtirish orqali yetakchilikka intiladi.",
       p2: "Boshqa tennis jihozlari ishlab chiqaruvchilarini va ularning brendlarini biz salohiyatli hamkorlar deb bilamiz. Kompaniyalar, murabbiylar, klublar va oilalarning kuchlarini tennisni oʻzaro manfaatli asosda rivojlantirish, targʻib qilish va miqyosini kengaytirishga qaratilgan umumiy dasturda birlashtirishni taklif qilamiz.",
       p3: "MAXIMUS — bu yondashuvning beshinchi elementi: alohida kuchlarning birgalikda ishlashiga yordam beradigan birlashtiruvchi boʻgʻin. Umumiy muammolarimiz — kasalliklar, bolalarning kam harakatliligi hamda odamlarning tennis oʻynashni boshlashi va davom ettirishiga xalaqit beradigan toʻsiqlar.",
-      p4: "Oila uchun hammasi aniqlikdan boshlanadi. «Oilaviy reja» byudjetni, mashgʻulotlar va soatlar sonini, toʻp bilan kontaktlarning taxminiy hajmini va mashgʻulotlar narxini koʻrsatadi. Shartlarni oʻzgartiring va oʻzingizga mos ssenariyni tanlang.",
+      p4: "Oila uchun hammasi aniqlikdan boshlanadi. «Oilaviy tennis rejasi» byudjetni, mashgʻulotlar va soatlar sonini, toʻp bilan kontaktlarning taxminiy hajmini va mashgʻulotlar narxini koʻrsatadi. Shartlarni oʻzgartiring va oʻzingizga mos ssenariyni tanlang.",
       note: "Oʻn barobar oʻsish — MAXIMUS strategik maqsadi, allaqachon erishilgan natija emas. Kalkulyator ssenariy hisob-kitoblarini koʻrsatadi va hech qanday tejash, tibbiy samara yoki sport natijasini vaʼda qilmaydi.",
-      ctaCalc: "Oilaviy rejani hisoblash",
+      ctaCalc: "Oilaviy tennis rejasini hisoblash",
       ctaPartner: "Tennisni birgalikda rivojlantirishni muhokama qilish",
     },
     beyond: {

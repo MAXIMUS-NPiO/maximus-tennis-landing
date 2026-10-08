@@ -81,7 +81,7 @@ const lt = {
   nav: {
     language: "Kalba",
     groups: { racquets: "Raketės", training: "Treniruotės", ecosystem: "Ekosistema", partnerships: "Partnerystė" },
-    familyPlan: "Šeimos planas",
+    familyPlan: "Šeimos tenisas",
     racquets: "Raketių serijos ir palyginimas",
     great: "GREAT — 97 in² · Kontrolė",
     power: "POWER — 98 in² · Galia",
@@ -156,7 +156,7 @@ const lt = {
       ["3 serijos", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Šeimos planas · Prisidėkite kartu su mumis",
+      eyebrow: "Šeimos teniso planas · Prisidėkite kartu su mumis",
       title: "Jūsų šeimos biudžetas. Ką už jį gaunate. Ką jis kuria.",
       p: "Trys scenarijai greta — dabar, planuojama ir norima. Treniruotės, valandos ir kontaktai su kamuoliu, kuriuos gaunate už savo biudžetą, ir vienos treniruotės, vienos valandos bei vieno smūgio kaina, apskaičiuota pagal jūsų pačių skaičius.",
       points: [
@@ -165,7 +165,7 @@ const lt = {
         ["Dešimt metų į priekį", "Išlaidų planas nuo vienerių iki dešimties metų, ribojamas jūsų nurodytu amžiumi."],
         ["Už korto ribų", "Pagalba stojant į pirmaujančias mokyklas ir skaitmeninis turtas, kuris lieka žaidėjui."],
       ],
-      cta: "Apskaičiuokite savo šeimos planą",
+      cta: "Apskaičiuokite savo šeimos teniso planą",
     },
     paths: {
       eyebrow: "Pradėkite nuo čia",
@@ -1013,21 +1013,21 @@ const lt = {
     decline: "Atsisakyti",
   },
   familyPlan: {
-    title: "Šeimos planas",
+    title: "Šeimos teniso planas",
     metaDescription: "Apskaičiuokite savo šeimos teniso biudžetą: treniruotes, valandas, kontaktus su kamuoliu ir vienos treniruotės, vienos valandos bei vieno smūgio kainą — pagal savo skaičius, trimis scenarijais.",
-    eyebrow: "Šeimos planas · Prisidėkite kartu su mumis",
+    eyebrow: "Šeimos teniso planas · Prisidėkite kartu su mumis",
     heroTitle: "Kiek kainuoja jūsų šeimos tenisas — ir ką už tai gaunate?",
     heroLead: "Apskaičiuokite savo šeimos biudžetą, treniruotes ir valandas, už kurias jis sumoka, numatomus kontaktus su kamuoliu ir vienos treniruotės, vienos valandos bei vieno smūgio kainą — savo sąlygomis.",
-    heroCta: "Apskaičiuokite savo šeimos planą",
+    heroCta: "Apskaičiuokite savo šeimos teniso planą",
     strategy: {
       eyebrow: "Mūsų tikslas",
       title: "Daugiau teniso. Daugiau galimybių. Kartu.",
       p1: "Mūsų tikslas — dešimt kartų padidinti pasaulio teniso rinką, plečiant dalyvavimą ir darant kelią į tenisą aiškesnį bei prieinamesnį. MAXIMUS siekia pirmauti valdymu, metodika, kokybe, rezultatais ir žaidimo populiarinimu.",
       p2: "Kitus teniso įrangos gamintojus ir jų prekių ženklus matome kaip galimus partnerius. Siūlome sujungti įmonių, trenerių, klubų ir šeimų stipriąsias puses bendroje programoje, kuri abipusės naudos pagrindu plėtotų tenisą, jį populiarintų ir didintų jo mastą.",
       p3: "MAXIMUS yra penktasis šio požiūrio elementas: vienijantis vaidmuo, padedantis atskiroms stiprybėms veikti kartu. Mūsų bendri iššūkiai — ligos, vaikų fizinis pasyvumas ir kliūtys, trukdančios žmonėms pradėti žaisti ir žaisti toliau.",
-      p4: "Šeimai viskas prasideda nuo aiškumo. Šeimos planas parodo biudžetą, treniruočių ir valandų skaičių, numatomą kontaktų su kamuoliu kiekį ir treniruočių kainą. Pakeiskite sąlygas ir pasirinkite jums tinkamą scenarijų.",
+      p4: "Šeimai viskas prasideda nuo aiškumo. Šeimos teniso planas parodo biudžetą, treniruočių ir valandų skaičių, numatomą kontaktų su kamuoliu kiekį ir treniruočių kainą. Pakeiskite sąlygas ir pasirinkite jums tinkamą scenarijų.",
       note: "Dešimteriopas augimas yra strateginis tikslas, kurį išsikėlė MAXIMUS, o ne jau pasiektas rezultatas. Skaičiuoklė rodo scenarijų skaičiavimus ir nežada nei sutaupymų, nei medicininio poveikio, nei sportinio rezultato.",
-      ctaCalc: "Apskaičiuokite savo šeimos planą",
+      ctaCalc: "Apskaičiuokite savo šeimos teniso planą",
       ctaPartner: "Aptarkime bendrą teniso plėtrą",
     },
     beyond: {

@@ -81,7 +81,7 @@ const et = {
   nav: {
     language: "Keel",
     groups: { racquets: "Reketid", training: "Treening", ecosystem: "Ökosüsteem", partnerships: "Partnerlus" },
-    familyPlan: "Pereplaan",
+    familyPlan: "Peretennis",
     racquets: "Reketiseeriad ja võrdlus",
     great: "GREAT — 97 in² · Kontroll",
     power: "POWER — 98 in² · Jõud",
@@ -156,7 +156,7 @@ const et = {
       ["3 seeriat", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Pereplaan · Panusta koos meiega",
+      eyebrow: "Pere tenniseplaan · Panusta koos meiega",
       title: "Teie pere eelarve. Mida selle eest saab. Mida see loob.",
       p: "Kolm stsenaariumi kõrvuti — praegu, plaanitud ja soov. Treeningud, tunnid ja pallikontaktid, mida teie eelarve eest saab, ning ühe treeningu, ühe tunni ja ühe löögi hind, arvutatud teie enda arvudest.",
       points: [
@@ -165,7 +165,7 @@ const et = {
         ["Kümme aastat ette", "Kuluplaan ühe kuni kümne aasta peale, teie määratud vanuste piires."],
         ["Väljaspool väljakut", "Tugi juhtivatesse koolidesse sisseastumisel ja digitaalsed varad, mis jäävad mängijale."],
       ],
-      cta: "Arvuta oma pereplaan",
+      cta: "Arvuta oma pere tenniseplaan",
     },
     paths: {
       eyebrow: "Alustage siit",
@@ -1013,21 +1013,21 @@ const et = {
     decline: "Keeldu",
   },
   familyPlan: {
-    title: "Pereplaan",
+    title: "Pere tenniseplaan",
     metaDescription: "Arvutage oma pere tennise eelarve: treeningud, tunnid, pallikontaktid ning ühe treeningu, ühe tunni ja ühe löögi hind — teie enda arvudest, kolmes stsenaariumis.",
-    eyebrow: "Pereplaan · Panusta koos meiega",
+    eyebrow: "Pere tenniseplaan · Panusta koos meiega",
     heroTitle: "Kui palju maksab teie pere tennis — ja mida selle eest saab?",
     heroLead: "Arvutage oma pere eelarve, treeningud ja tunnid, mille eest see tasub, hinnangulised pallikontaktid ning ühe treeningu, ühe tunni ja ühe löögi hind — teie enda tingimustel.",
-    heroCta: "Arvuta oma pereplaan",
+    heroCta: "Arvuta oma pere tenniseplaan",
     strategy: {
       eyebrow: "Meie eesmärk",
       title: "Rohkem tennist. Rohkem võimalusi. Koos.",
       p1: "Meie eesmärk on kasvatada maailma tennisturg kümnekordseks, laiendades osalust ning muutes tee tennise juurde selgemaks ja kättesaadavamaks. MAXIMUS soovib olla eestvedaja juhtimise, metoodika, kvaliteedi, tulemuste ja tennise populariseerimise kaudu.",
       p2: "Näeme teisi tennisetootjaid ja nende brände võimalike partneritena. Teeme ettepaneku ühendada ettevõtete, treenerite, klubide ja perede tugevused ühises programmis, et arendada, edendada ja laiendada tennist vastastikku kasulikel alustel.",
       p3: "MAXIMUS on selle lähenemise viies element: ühendav roll, mis aitab eraldi tugevustel koos toimida. Meie ühised väljakutsed on haigused, laste vähene liikumine ja takistused, mis ei lase inimestel mängimist alustada ega jätkata.",
-      p4: "Pere jaoks algab kõik selgusest. Pereplaan näitab eelarvet, treeningute ja tundide arvu, pallikontaktide hinnangulist mahtu ja harjutamise hinda. Muutke tingimusi ja valige endale sobiv stsenaarium.",
+      p4: "Pere jaoks algab kõik selgusest. Pere tenniseplaan näitab eelarvet, treeningute ja tundide arvu, pallikontaktide hinnangulist mahtu ja harjutamise hinda. Muutke tingimusi ja valige endale sobiv stsenaarium.",
       note: "Kümnekordne kasv on strateegiline eesmärk, mille MAXIMUS on seadnud, mitte juba saavutatud tulemus. Kalkulaator näitab stsenaariumide arvutusi ega luba säästu, meditsiinilist mõju ega sportlikku tulemust.",
-      ctaCalc: "Arvuta oma pereplaan",
+      ctaCalc: "Arvuta oma pere tenniseplaan",
       ctaPartner: "Aruta meiega tennise ühist arendamist",
     },
     beyond: {

@@ -81,7 +81,7 @@ const sv = {
   nav: {
     language: "Språk",
     groups: { racquets: "Racketar", training: "Träning", ecosystem: "Ekosystem", partnerships: "Partnerskap" },
-    familyPlan: "Familjeplan",
+    familyPlan: "Familjetennis",
     racquets: "Racketserier och jämförelse",
     great: "GREAT — 97 in² · Kontroll",
     power: "POWER — 98 in² · Kraft",
@@ -156,7 +156,7 @@ const sv = {
       ["3 serier", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Familjeplan · Bidra tillsammans med oss",
+      eyebrow: "Familjetennisplan · Bidra tillsammans med oss",
       title: "Din familjebudget. Vad den räcker till. Vad den bygger upp.",
       p: "Tre scenarier sida vid sida — nu, planerat och önskat. De träningspass, timmar och bollkontakter som din budget räcker till, och kostnaden för ett pass, en timme och ett slag — beräknat utifrån dina egna siffror.",
       points: [
@@ -165,7 +165,7 @@ const sv = {
         ["Tio år framåt", "Utgiftsplanen över ett till tio år, begränsad av det åldersspann du anger."],
         ["Bortom banan", "Stöd vid antagning till ledande skolor, och digitala tillgångar som stannar hos spelaren."],
       ],
-      cta: "Beräkna din familjeplan",
+      cta: "Beräkna din familjetennisplan",
     },
     paths: {
       eyebrow: "Börja här",
@@ -1013,21 +1013,21 @@ const sv = {
     decline: "Neka",
   },
   familyPlan: {
-    title: "Familjeplan",
+    title: "Familjetennisplan",
     metaDescription: "Beräkna familjens tennisbudget: träningspass, timmar, bollkontakter och kostnaden för ett pass, en timme och ett slag — utifrån dina egna siffror, i tre scenarier.",
-    eyebrow: "Familjeplan · Bidra tillsammans med oss",
+    eyebrow: "Familjetennisplan · Bidra tillsammans med oss",
     heroTitle: "Vad kostar familjens tennis — och vad får du för pengarna?",
     heroLead: "Beräkna familjens budget, de träningspass och timmar den betalar för, det uppskattade antalet bollkontakter och kostnaden för ett pass, en timme och ett slag — på dina egna villkor.",
-    heroCta: "Beräkna din familjeplan",
+    heroCta: "Beräkna din familjetennisplan",
     strategy: {
       eyebrow: "Vårt mål",
       title: "Mer tennis. Fler möjligheter. Tillsammans.",
       p1: "Vårt mål är att tiodubbla världens tennismarknad genom att bredda deltagandet och göra vägen in i tennisen tydligare och mer tillgänglig. MAXIMUS siktar på att gå i täten genom ledning, metodik, kvalitet, resultat och popularisering av spelet.",
       p2: "Vi ser de andra tennistillverkarna och deras varumärken som möjliga partner. Vi föreslår att styrkorna hos företag, tränare, klubbar och familjer förenas i ett gemensamt program för att utveckla, främja och skala upp tennisen till ömsesidig nytta.",
       p3: "MAXIMUS är det femte elementet i detta synsätt: den förenande rollen som hjälper skilda styrkor att samverka. Våra gemensamma utmaningar är sjukdom, fysisk inaktivitet bland barn och de trösklar som hindrar människor från att börja spela och att fortsätta.",
-      p4: "För en familj börjar allt med tydlighet. Familjeplanen visar budgeten, antalet träningspass och timmar, den uppskattade mängden bollkontakter och vad träningen kostar. Ändra förutsättningarna och välj det scenario som passar dig.",
+      p4: "För en familj börjar allt med tydlighet. Familjetennisplanen visar budgeten, antalet träningspass och timmar, den uppskattade mängden bollkontakter och vad träningen kostar. Ändra förutsättningarna och välj det scenario som passar dig.",
       note: "En tiodubbling är det strategiska målet för MAXIMUS, inte ett resultat som redan har uppnåtts. Kalkylatorn visar scenarioberäkningar och utlovar ingen besparing, ingen medicinsk effekt och inget idrottsligt resultat.",
-      ctaCalc: "Beräkna din familjeplan",
+      ctaCalc: "Beräkna din familjetennisplan",
       ctaPartner: "Diskutera hur vi kan utveckla tennisen tillsammans",
     },
     beyond: {

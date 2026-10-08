@@ -81,7 +81,7 @@ const lv = {
   nav: {
     language: "Valoda",
     groups: { racquets: "Raketes", training: "Treniņi", ecosystem: "Ekosistēma", partnerships: "Partnerība" },
-    familyPlan: "Ģimenes plāns",
+    familyPlan: "Ģimenes teniss",
     racquets: "Rakešu sērijas un salīdzinājums",
     great: "GREAT — 97 in² · Kontrole",
     power: "POWER — 98 in² · Spēks",
@@ -156,7 +156,7 @@ const lv = {
       ["3 sērijas", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Ģimenes plāns · Piedalieties kopā ar mums",
+      eyebrow: "Ģimenes tenisa plāns · Piedalieties kopā ar mums",
       title: "Jūsu ģimenes budžets. Ko par to var iegūt. Ko tas veido.",
       p: "Trīs scenāriji blakus — tagad, plānots un vēlme. Nodarbības, stundas un saskares ar bumbu, ko var iegūt par jūsu budžetu, un vienas nodarbības, vienas stundas un viena sitiena cena, aprēķināta no jūsu pašu skaitļiem.",
       points: [
@@ -165,7 +165,7 @@ const lv = {
         ["Desmit gadi uz priekšu", "Izdevumu plāns no viena līdz desmit gadiem, jūsu norādīto vecumu robežās."],
         ["Ārpus korta", "Atbalsts uzņemšanai vadošajās skolās un digitālie aktīvi, kas paliek spēlētājam."],
       ],
-      cta: "Aprēķiniet savu ģimenes plānu",
+      cta: "Aprēķiniet savu ģimenes tenisa plānu",
     },
     paths: {
       eyebrow: "Sāciet šeit",
@@ -1013,21 +1013,21 @@ const lv = {
     decline: "Atteikt",
   },
   familyPlan: {
-    title: "Ģimenes plāns",
+    title: "Ģimenes tenisa plāns",
     metaDescription: "Aprēķiniet savas ģimenes tenisa budžetu: nodarbības, stundas, saskares ar bumbu un vienas nodarbības, vienas stundas un viena sitiena cenu — no jūsu pašu skaitļiem, trīs scenārijos.",
-    eyebrow: "Ģimenes plāns · Piedalieties kopā ar mums",
+    eyebrow: "Ģimenes tenisa plāns · Piedalieties kopā ar mums",
     heroTitle: "Cik maksā jūsu ģimenes teniss — un ko par to iegūstat?",
     heroLead: "Aprēķiniet savas ģimenes budžetu, nodarbības un stundas, ko tas apmaksā, aplēstās saskares ar bumbu un vienas nodarbības, vienas stundas un viena sitiena cenu — pēc saviem noteikumiem.",
-    heroCta: "Aprēķiniet savu ģimenes plānu",
+    heroCta: "Aprēķiniet savu ģimenes tenisa plānu",
     strategy: {
       eyebrow: "Mūsu mērķis",
       title: "Vairāk tenisa. Vairāk iespēju. Kopā.",
       p1: "Mūsu mērķis ir desmitkārt palielināt pasaules tenisa tirgu, paplašinot līdzdalību un padarot ceļu uz tenisu skaidrāku un pieejamāku. MAXIMUS tiecas būt līderis, balstoties uz pārvaldību, metodiku, kvalitāti, rezultātiem un spēles popularizēšanu.",
       p2: "Mēs redzam pārējos tenisa aprīkojuma ražotājus un to zīmolus kā potenciālus partnerus. Mēs piedāvājam apvienot uzņēmumu, treneru, klubu un ģimeņu stiprās puses kopīgā programmā, lai attīstītu, veicinātu un paplašinātu tenisu visām pusēm izdevīgā veidā.",
       p3: "MAXIMUS ir šīs pieejas piektais elements: vienojošā loma, kas palīdz atsevišķām stiprajām pusēm darboties kopā. Mūsu kopīgie izaicinājumi ir slimības, bērnu mazkustīgums un šķēršļi, kas cilvēkiem liedz sākt spēlēt un turpināt spēlēt.",
-      p4: "Ģimenei viss sākas ar skaidrību. Ģimenes plāns parāda budžetu, nodarbību un stundu skaitu, aplēsto saskaru ar bumbu apjomu un treniņu izmaksas. Mainiet nosacījumus un izvēlieties sev piemērotāko scenāriju.",
+      p4: "Ģimenei viss sākas ar skaidrību. Ģimenes tenisa plāns parāda budžetu, nodarbību un stundu skaitu, aplēsto saskaru ar bumbu apjomu un treniņu izmaksas. Mainiet nosacījumus un izvēlieties sev piemērotāko scenāriju.",
       note: "Desmitkārtīga izaugsme ir stratēģisks mērķis, ko MAXIMUS ir izvirzījis, nevis jau sasniegts rezultāts. Kalkulators parāda scenāriju aprēķinus un nesola ne ietaupījumu, ne medicīnisku efektu, ne sportisku rezultātu.",
-      ctaCalc: "Aprēķiniet savu ģimenes plānu",
+      ctaCalc: "Aprēķiniet savu ģimenes tenisa plānu",
       ctaPartner: "Apspriedīsim tenisa attīstību kopā",
     },
     beyond: {

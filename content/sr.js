@@ -81,7 +81,7 @@ const sr = {
   nav: {
     language: "Jezik",
     groups: { racquets: "Reketi", training: "Trening", ecosystem: "Ekosistem", partnerships: "Partnerstva" },
-    familyPlan: "Porodični plan",
+    familyPlan: "Porodični tenis",
     racquets: "Serije reketa i uporedni pregled",
     great: "GREAT — 97 in² · Kontrola",
     power: "POWER — 98 in² · Snaga",
@@ -156,7 +156,7 @@ const sr = {
       ["3 serije", "GREAT · POWER · SPIN"],
     ],
     familyPlan: {
-      eyebrow: "Porodični plan · Doprinesite sa nama",
+      eyebrow: "Porodični teniski plan · Doprinesite sa nama",
       title: "Vaš porodični budžet. Šta za njega dobijate. Šta njime gradite.",
       p: "Tri scenarija jedan pored drugog — trenutno, planirano i željeno. Koliko treninga, sati i kontakata sa lopticom pokriva vaš budžet i koliko košta jedan trening, jedan sat i jedan udarac — sve izračunato na osnovu vaših sopstvenih brojeva.",
       points: [
@@ -165,7 +165,7 @@ const sr = {
         ["Deset godina unapred", "Plan troškova za period od jedne do deset godina, ograničen rasponom uzrasta koji sami odredite."],
         ["Van terena", "Podrška pri upisu u vodeće škole i digitalna imovina koja ostaje igraču."],
       ],
-      cta: "Izračunajte svoj porodični plan",
+      cta: "Izračunajte svoj porodični teniski plan",
     },
     paths: {
       eyebrow: "Počnite odavde",
@@ -1013,21 +1013,21 @@ const sr = {
     decline: "Odbijte",
   },
   familyPlan: {
-    title: "Porodični plan",
+    title: "Porodični teniski plan",
     metaDescription: "Izračunajte teniski budžet svoje porodice: treninge, sate, kontakte sa lopticom i cenu jednog treninga, jednog sata i jednog udarca — na osnovu sopstvenih brojeva, u tri scenarija.",
-    eyebrow: "Porodični plan · Doprinesite sa nama",
+    eyebrow: "Porodični teniski plan · Doprinesite sa nama",
     heroTitle: "Koliko vašu porodicu košta tenis — i šta za to dobijate?",
     heroLead: "Izračunajte porodični budžet, treninge i sate koje on pokriva, procenjeni broj kontakata sa lopticom i cenu jednog treninga, jednog sata i jednog udarca — po sopstvenim uslovima.",
-    heroCta: "Izračunajte svoj porodični plan",
+    heroCta: "Izračunajte svoj porodični teniski plan",
     strategy: {
       eyebrow: "Naš cilj",
       title: "Više tenisa. Više prilika. Zajedno.",
       p1: "Naš cilj je da desetostruko povećamo svetsko tržište tenisa tako što ćemo proširiti učešće i put u tenis učiniti jasnijim i dostupnijim. MAXIMUS teži da preuzme vodeću ulogu kroz upravljanje, metodologiju, kvalitet, rezultate i popularizaciju igre.",
       p2: "Druge proizvođače teniske opreme i njihove brendove vidimo kao potencijalne partnere. Predlažemo da snage kompanija, trenera, klubova i porodica udružimo u zajednički program za razvoj, promociju i širenje tenisa, na obostranu korist.",
       p3: "MAXIMUS je peti element ovog pristupa: uloga koja ujedinjuje i pomaže da odvojene snage deluju zajedno. Naši zajednički izazovi su bolesti, neaktivnost dece i prepreke koje ljude sprečavaju da počnu i nastave da igraju.",
-      p4: "Za porodicu sve počinje jasnoćom. Porodični plan prikazuje budžet, broj treninga i sati, procenjeni broj kontakata sa lopticom i cenu treniranja. Promenite uslove i izaberite scenario koji vam odgovara.",
+      p4: "Za porodicu sve počinje jasnoćom. Porodični teniski plan prikazuje budžet, broj treninga i sati, procenjeni broj kontakata sa lopticom i cenu treniranja. Promenite uslove i izaberite scenario koji vam odgovara.",
       note: "Za MAXIMUS je desetostruki rast strateški cilj, a ne već ostvaren rezultat. Kalkulator prikazuje proračune po scenarijima i ne obećava ni uštedu, ni medicinski efekat, ni sportski rezultat.",
-      ctaCalc: "Izračunajte svoj porodični plan",
+      ctaCalc: "Izračunajte svoj porodični teniski plan",
       ctaPartner: "Razgovarajmo o zajedničkom razvoju tenisa",
     },
     beyond: {

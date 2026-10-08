@@ -10,7 +10,9 @@ test("device language selects the locale, honouring q values", () => {
   assert.equal(pick("zh-CN,zh;q=0.9"), "zh");
   assert.equal(pick("zh-Hans-CN"), "zh");
   assert.equal(pick("en-GB,en;q=0.9"), "en");
-  assert.equal(pick("be-BY,be;q=0.9"), "ru");
+  // Belarusian has had its own version since 8 October 2026. Before that a Belarusian device was
+  // steered to Russian; it must now be served its own language.
+  assert.equal(pick("be-BY,be;q=0.9"), "be");
   // The highest q wins even when it is not first in the header.
   assert.equal(pick("en;q=0.2,ru;q=0.9"), "ru");
   // An unknown language falls back to the default rather than to nothing.

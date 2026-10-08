@@ -122,6 +122,7 @@ const ALLOWED_BY_LOCALE = {
     "Swingweight", "Twistweight", "Fitting",                    // what French stringers say
     "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
     "Sweet Spot Trainer, 300 g / 325 mm", "Sweet Spot Trainer, 400 g / 320 mm",
+      "Horizon",                                                   // the French word for a planning horizon
   ]),
   es: new Set([
     "Squash", "Pickleball", "Racquetball", "No",

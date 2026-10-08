@@ -1118,7 +1118,7 @@ const en = {
       title: "Final calculation",
       scenario: "Scenario",
       months: "Period, in months",
-      heading: "{scenario} · {months} months",
+      heading: "{scenario} · {months}-month period",
       total: "Total for the period",
       training: "Sessions",
       extras: "Additional costs",

@@ -1,5 +1,30 @@
 # DESIGN.md — MAXIMUS website design system
 
+## Current direction: the Partner Catalogue (Founder, 8 October 2026)
+
+The site takes the visual language of the MAXIMUS Partner Catalogue. It supersedes the light
+"Engineering Gallery" tokens below wherever the two differ; the principles of honest statuses,
+real parameters and restraint still hold.
+
+- **Ground**: black with gloss — each band carries a faint light falling from one edge
+  (`--bg #0a0a09`, `--paper #151514`, `--ink #ece8e1`, `--accent #b3bd6f`). Tokens live in
+  `app/globals.css → :root`.
+- **Type**: Cormorant Garamond for display, Inter for text, both self-hosted (`@fontsource`).
+  Display sizes and card columns are set so the longest word in every language fits whole.
+- **Buttons**: no white fills. A filled call to action is **carbon** — a 2×2 twill weave under a
+  clear coat, framed in titanium (`--carbon-weave`, `--carbon-coat`, `--titanium`); it draws the
+  eye by texture, not brightness. The same material marks a selected step or chip. Outline
+  buttons stay outlined.
+- **Photographs emerge from the page**, never sit on it as rectangles: beneath each picture its own
+  surroundings, continued outwards and blurred (`public/media/glow`, written by
+  `scripts/photo-glow.mjs`), fade into the ground with `mix-blend-mode: lighten`; the picture's
+  outermost edge is feathered into them — 5% at the sides, 1.5% at top and bottom, where MIPA
+  markings and specification strips sit. In a grid the continuations stay close to their pictures;
+  a picture that stands alone lets them reach further. The enlarged view shows every file whole.
+  Re-run `node scripts/photo-glow.mjs` after adding or replacing a photograph.
+
+## Earlier direction (21 September 2026)
+
 Direction: **Engineering Gallery**. Reference for the direction (not a template, not a source of assets or code): the teenage engineering style entry on Refero — https://styles.refero.design/style/aecf9dda-5cba-4dc7-9e73-59b65d895cdf. Principles borrowed: objecthood, engineering precision, light space, thin dividers, a strict grid, expressive typography. Nothing from the reference is copied — no logos, images, paid material or code.
 
 ## Principles

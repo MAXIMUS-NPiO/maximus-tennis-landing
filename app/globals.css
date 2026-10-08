@@ -731,12 +731,8 @@ html.has-consent-bar { scroll-padding-bottom: 190px; }
 .vc-catalogue .lead { color: #c3bfb9; margin-bottom: 34px; }
 
 .vc-frame { position: relative; display: block; width: 100%; padding: 0; border: 0; background: transparent; }
-.vc-frame img { position: relative; z-index: 1; display: block; width: 100%; height: auto; border-radius: 4px; }
-.vc-ambient {
-  position: absolute; inset: -11%; z-index: 0; border-radius: 40px; pointer-events: none;
-  background-size: 100% 100%; background-position: center; background-repeat: no-repeat;
-  filter: blur(58px) saturate(1.06); opacity: 1;
-}
+.vc-frame img { display: block; width: 100%; height: auto; }
+/* .vc-ambient: see the photograph rules in the catalogue theme below. */
 .vc-frame-zoom { cursor: zoom-in; }
 .vc-zoom-hint {
   position: absolute; z-index: 2; right: 12px; bottom: 12px; padding: 7px 12px; border-radius: 999px;
@@ -1008,25 +1004,40 @@ h1, h2, h3, .h-display, .h-1, .h-2, .h-3, .statement, .pp-name {
 .card { border-color: var(--line); }
 .card, .series-card, .eco-node, .panel, .summary { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset; }
 
-/* Photographs emerge from the ground. The halo is the picture's own blurred placeholder, set
-   beneath and around it inside an isolated stacking context: it lights the page in the picture's
-   own tones and dissolves the rectangle, while the photograph itself stays whole and untouched. */
+/* Photographs emerge from the page (Founder, 8 October 2026: "not pasted-in squares — the
+   background flows into the picture, the picture is a continuation of the background").
+   Two layers do it, for every photograph on the site:
+   - Beneath, the picture's own surroundings continued outwards: its edge pixels extended by 45% on
+     every side and blurred (public/media/glow, written by scripts/photo-glow.mjs), laid at the same
+     scale so its middle sits exactly under the picture. It fades out into the page in an ellipse and
+     is blended with "lighten": it can only light the dark ground around the picture, so it never
+     dims text, a button or another photograph, and it carries across section boundaries without a
+     seam.
+   - On top, the picture itself, its outermost edge feathered into that continuation: 5% at the
+     sides; 1.5% at top and bottom, where the MIPA marking and the specification strips sit, so they
+     stay whole. The enlarged view shows every file complete and unfeathered. */
 .photo { position: relative; }
-.photo-frame { position: relative; display: block; isolation: isolate; }
-/* The matte is a soft shadow in the photograph's own edge colour (measured from the file by
-   scripts/edge-colors.mjs): opaque where it meets the picture, so the boundary has nothing to show
-   against, then falling away into the black. It lies beneath the picture; no pixel of the picture
-   is masked, faded or retouched. A wide, faint halo of the picture's own tones adds the gloss. */
-.photo-frame.edge img { box-shadow: 0 0 0 1px var(--edge), 0 0 54px 20px var(--edge); }
-.photo-ambient {
-  content: ""; position: absolute; z-index: -1; pointer-events: none; inset: -18%; border-radius: 90px;
-  background-image: var(--halo); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;
-  filter: blur(80px) saturate(1.05); opacity: 0.35;
+.photo-frame, .vc-frame { position: relative; display: block; }
+.photo-ambient, .vc-ambient {
+  position: absolute; inset: -45%; z-index: 0; pointer-events: none; border-radius: 0; filter: none; opacity: 1;
+  background: var(--glow) center / 100% 100% no-repeat;
+  mix-blend-mode: lighten;
+  -webkit-mask-image: radial-gradient(closest-side, #000 var(--glow-in, 54%), transparent var(--glow-out, 80%));
+  mask-image: radial-gradient(closest-side, #000 var(--glow-in, 54%), transparent var(--glow-out, 80%));
 }
-.photo img { position: relative; border-radius: 2px; }
-.photo figcaption { position: relative; }
+/* In a grid the continuations stay close to their pictures, so the band between them stays black;
+   a picture that stands alone lets its surroundings reach further into the page. */
+.hero-photo, .tp-photo, .series-hero-photo, .vc-selected { --glow-in: 64%; --glow-out: 100%; }
+.photo-frame img, .vc-frame img {
+  position: relative; z-index: 1; border-radius: 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 1.5%, #000 98.5%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 1.5%, #000 98.5%, transparent);
+  mask-composite: intersect;
+}
+.photo figcaption { position: relative; z-index: 1; }
+.vc-zoom-hint { z-index: 2; }
 .photo-pending { background: var(--paper); }
-@media (prefers-reduced-transparency: reduce) { .photo-ambient { opacity: 0.5; } }
 
 /* Forms on the dark ground. */
 .field input, .field select, .field textarea { background: #111110; border-color: var(--line-strong); color: var(--ink); }
@@ -1168,3 +1179,66 @@ h1.eyebrow, h2.eyebrow, h3.eyebrow, h4.eyebrow, .footer-sub-h { font-family: var
 /* Thai stacks vowels and tone marks above and below the line. Headings set nearly solid for the
    Latin serif let the marks of one line touch the next, so Thai display text is given room. */
 :lang(th) :is(h1, h2, h3, h4, .h-display, .h-1, .h-2, .h-3, .statement, .index-name, .pp-name, .card h3) { line-height: 1.3; }
+
+/* Carbon (Founder, 8 October 2026: "the buttons are not white — carbon, so they catch the eye by
+   their texture, not by being white; we are talking about carbon"). Every filled call to action is
+   a 2×2 twill carbon weave under a clear coat, framed in titanium: muted, never glaring, and set
+   apart from the page by its material, the material MAXIMUS frames are made of. The weave is a
+   16 px SVG tile defined here; nothing is downloaded. Outline buttons stay as they are. */
+:root {
+  --carbon-weave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cdefs%3E%3ClinearGradient id='v' x1='0' x2='1' y1='0' y2='0'%3E%3Cstop offset='0' stop-color='%23111'/%3E%3Cstop offset='.5' stop-color='%23262626'/%3E%3Cstop offset='1' stop-color='%23111'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23161616'/%3E%3Cstop offset='.5' stop-color='%23303030'/%3E%3Cstop offset='1' stop-color='%23161616'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' width='4' height='4' fill='url(%23v)'/%3E%3Crect x='4' y='0' width='4' height='4' fill='url(%23v)'/%3E%3Crect x='8' y='0' width='4' height='4' fill='url(%23h)'/%3E%3Crect x='12' y='0' width='4' height='4' fill='url(%23h)'/%3E%3Crect x='0' y='4' width='4' height='4' fill='url(%23h)'/%3E%3Crect x='4' y='4' width='4' height='4' fill='url(%23v)'/%3E%3Crect x='8' y='4' width='4' height='4' fill='url(%23v)'/%3E%3Crect x='12' y='4' width='4' height='4' fill='url(%23h)'/%3E%3Crect x='0' y='8' width='4' height='4' fill='url(%23h)'/%3E%3Crect x='4' y='8' width='4' height='4' fill='url(%23h)'/%3E%3Crect x='8' y='8' width='4' height='4' fill='url(%23v)'/%3E%3Crect x='12' y='8' width='4' height='4' fill='url(%23v)'/%3E%3Crect x='0' y='12' width='4' height='4' fill='url(%23v)'/%3E%3Crect x='4' y='12' width='4' height='4' fill='url(%23h)'/%3E%3Crect x='8' y='12' width='4' height='4' fill='url(%23h)'/%3E%3Crect x='12' y='12' width='4' height='4' fill='url(%23v)'/%3E%3C/svg%3E");
+  --carbon-coat: linear-gradient(165deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.03) 32%, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 66%, rgba(255, 255, 255, 0.06) 84%, rgba(255, 255, 255, 0) 100%);
+  --titanium: linear-gradient(135deg, #a3a6a0 0%, #4c4e4a 36%, #8d908b 64%, #3c3e3b 100%);
+  --titanium-lit: linear-gradient(135deg, #d6d8d3 0%, #6e716c 36%, #bcbfba 64%, #585a56 100%);
+  --carbon-ink: #edebe5;
+}
+.btn, .band-ink .btn, .lang-suggest .btn-small, .subscribe-row button {
+  color: var(--carbon-ink);
+  background: var(--carbon-coat) padding-box, var(--carbon-weave) 0 0 / 16px 16px repeat padding-box, var(--titanium) border-box;
+  border: 1px solid transparent;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.6), 0 8px 22px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.btn:hover, .band-ink .btn:hover, .lang-suggest .btn-small:hover, .subscribe-row button:hover {
+  color: #fff;
+  background: var(--carbon-coat) padding-box, var(--carbon-weave) 0 0 / 16px 16px repeat padding-box, var(--titanium-lit) border-box;
+  border-color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), inset 0 -1px 0 rgba(0, 0, 0, 0.6), 0 10px 28px rgba(0, 0, 0, 0.55);
+  transform: translateY(-1px);
+}
+.btn:active, .band-ink .btn:active, .subscribe-row button:active { transform: translateY(0); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4); }
+.btn[disabled]:hover, .subscribe-row button:disabled:hover { transform: none; }
+.subscribe-row button { border-radius: 0; }
+/* The selected step of the Family Plan is a pressed carbon key. */
+.fp-tabs button.on {
+  color: var(--carbon-ink);
+  background: var(--carbon-coat), var(--carbon-weave) 0 0 / 16px 16px repeat;
+  box-shadow: inset 0 0 0 1px rgba(163, 166, 160, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+}
+.fp-tabs button.on .fp-tab-n { color: var(--accent); }
+/* The selected weight in the catalogue is a carbon chip too, not a white one. */
+.vc-chip.on {
+  color: var(--carbon-ink);
+  background: var(--carbon-coat) padding-box, var(--carbon-weave) 0 0 / 16px 16px repeat padding-box, var(--titanium-lit) border-box;
+  border-color: transparent;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 0 1px rgba(179, 189, 111, 0.45), 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+.vc-chip.on i { color: #c9c6c0; }
+@media (prefers-reduced-motion: reduce) {
+  .btn, .band-ink .btn, .lang-suggest .btn-small, .subscribe-row button { transition: none; }
+  .btn:hover, .band-ink .btn:hover, .lang-suggest .btn-small:hover, .subscribe-row button:hover { transform: none; }
+}
+
+/* The three series stand on the band itself, not in boxes: each photograph emerges from the dark
+   out of its own surroundings and the text sits beneath it (Founder, 8 October 2026: "not a square,
+   template solution"). */
+.series-card { border: 0; background: transparent; overflow: visible; box-shadow: none; }
+.series-grid { gap: 40px 34px; }
+.series-photo figcaption { padding: 10px 2px 0; }
+.series-body { padding: 14px 2px 6px; }
+/* The weight catalogue and the Spot Trainer showcase were a grey plate from the light design. On the
+   black page that plate read as a box; the pictures now emerge from the same black as the rest. */
+.vc-catalogue { background: radial-gradient(120% 70% at 50% 0%, #161614 0%, var(--bg) 60%); }

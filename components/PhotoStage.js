@@ -5,18 +5,19 @@ import Image from "next/image";
 /**
  * The frame every product photograph on this site is shown in.
  *
- * Ambient backdrop: the image's own blur placeholder, enlarged and blurred behind the photograph.
- * It only ever appears OUTSIDE the photograph, so nothing in the composition is masked or dimmed,
- * and the rectangular edge of a studio file dissolves into the dark band instead of cutting it.
+ * Beneath the picture lies its own surroundings, continued outwards (`glow`: a file in
+ * public/media/glow written by scripts/photo-glow.mjs), so the picture emerges from the dark band
+ * instead of sitting on it as a rectangle. The composition itself is untouched; only its outermost
+ * edge is feathered (CSS). The enlarged view shows every file whole and unfeathered.
  *
  * One implementation, used by the weight catalogue of the performance series and by the Spot
  * Trainer: the two must not drift apart.
  */
-export function Stage({ img, alt, priority = false, sizes, quality = 86, onZoom, zoomLabel }) {
+export function Stage({ img, alt, glow, priority = false, sizes, quality = 86, onZoom, zoomLabel }) {
   if (!img) return null;
   const inner = (
     <>
-      {img.blurDataURL && <span className="vc-ambient" aria-hidden="true" style={{ backgroundImage: `url(${img.blurDataURL})` }} />}
+      {glow && <span className="vc-ambient" aria-hidden="true" style={{ "--glow": `url(${glow})` }} />}
       <Image src={img} alt={alt} sizes={sizes} priority={priority} placeholder="blur" quality={quality} />
     </>
   );

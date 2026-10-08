@@ -48,6 +48,7 @@ export default function VariantCatalogue({ seriesId, seriesName, strings, varian
             <Stage
               img={images[current.weight]}
               alt={altFor(current)}
+              glow={`/media/glow/${seriesId}-${current.weight}.webp`}
               priority
               sizes="(min-width: 1080px) 620px, (min-width: 760px) 55vw, 94vw"
               onZoom={(e) => openZoom(e.currentTarget)}
@@ -89,6 +90,7 @@ export default function VariantCatalogue({ seriesId, seriesName, strings, varian
                   <Stage
                     img={images[v.weight]}
                     alt={altFor(v)}
+                    glow={`/media/glow/${seriesId}-${v.weight}.webp`}
                     sizes="(min-width: 1080px) 300px, (min-width: 760px) 30vw, 88vw"
                     onZoom={(e) => { pick(v.weight, false); openZoom(e.currentTarget); }}
                     zoomLabel={C.zoom}

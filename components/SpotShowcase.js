@@ -7,8 +7,8 @@ const NAME = "MAXIMUS Spot Trainer";
 
 /**
  * Spot Trainer, presented the way the performance series are presented: the owner's studio
- * compositions on the dark plate, each sitting on a blurred halo of itself, each opening to full
- * size, with the confirmed figures beside the lead photograph.
+ * compositions emerging from the dark band out of their own continued surroundings, each opening
+ * to full size, with the confirmed figures beside the lead photograph.
  *
  * The photographs are the product record, so every one of them is shown whole — no crop, no
  * overlay, no text burned over them by this site.
@@ -31,6 +31,7 @@ export default function SpotShowcase({ eyebrow, title, lead, views, weights, wei
             <Stage
               img={hero.img}
               alt={hero.alt}
+              glow={`/media/glow/${hero.id}.webp`}
               priority
               sizes="(min-width: 1080px) 620px, (min-width: 760px) 55vw, 94vw"
               onZoom={(e) => { setI(0); openZoom(e.currentTarget); }}
@@ -63,6 +64,7 @@ export default function SpotShowcase({ eyebrow, title, lead, views, weights, wei
                 <Stage
                   img={v.img}
                   alt={v.alt}
+                  glow={`/media/glow/${v.id}.webp`}
                   sizes="(min-width: 1080px) 520px, (min-width: 760px) 46vw, 94vw"
                   onZoom={(e) => { setI(n + 1); openZoom(e.currentTarget); }}
                   zoomLabel={strings.zoom}

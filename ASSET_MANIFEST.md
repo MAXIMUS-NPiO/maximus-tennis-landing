@@ -63,12 +63,14 @@ carrying the lion mark.
 
 | Published file | Source | Where used |
 | --- | --- | --- |
-| `public/media/spot/spot-trainer-composition.webp` | owner studio composition, full view with the head, shaft and butt cap details | Spot Trainer page — lead photograph |
-| `public/media/spot/spot-trainer-pair.webp` | owner studio composition, two trainers at an angle | Home page training section; Spot Trainer page |
+| `public/media/spot/spot-trainer-composition.webp` | owner studio composition, full view with the head, shaft and butt cap details — **re-supplied by the owner on 8 Oct 2026**: in the first file the butt caps of the two standing trainers were turned outwards; the replacement shows them correctly. Same format, WebP q92 method 6 (PSNR 44.3 dB, maximum pixel difference 23/255); the first file is removed | Home page training section; Spot Trainer page — lead photograph |
+| `public/media/spot/spot-trainer-pair.webp` | owner studio composition, two trainers at an angle | Spot Trainer page |
 | `public/media/spot/spot-trainer-detail.webp` | owner studio composition, the pair closer | Spot Trainer page |
 
-They are presented in the same frame as the performance series: the dark plate, the blurred halo of
-the photograph's own placeholder behind it, and the full-size view on click.
+They are presented in the same frame as the performance series: the photograph emerges from the
+dark band out of its own surroundings, continued outwards (`public/media/glow`, written by
+`scripts/photo-glow.mjs`), with its outermost edge feathered; the full-size view on click shows the
+file whole.
 
 **Withdrawn on the same instruction** — `spot-trainers-row.jpg`, `spot-trainers-pair.jpg`,
 `spot-trainers-heads-up.jpg` (owner photographs of 29 Sep 2026, deleted from the repository). They

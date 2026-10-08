@@ -165,6 +165,7 @@ export const routes = {
   methodology: "/training/methodology",
   gps: "/gps",
   build: "/build",
+  familyPlan: "/family-plan",
   choose: "/choose",
   experience: "/experience",
   engineering: "/engineering",
@@ -188,6 +189,7 @@ export const routes = {
 /** Grouped header navigation. Keys resolve to translated labels in content/<locale>.js → nav. */
 export const navGroups = [
   { key: "racquets", items: ["choose", "racquets", "great", "power", "spin", "precision", "grip", "custom"] },
+  { key: "familyPlan", href: "familyPlan" },
   { key: "training", items: ["training", "sst", "spot", "methodology"] },
   { key: "gps", href: "gps" },
   { key: "build", href: "build" },

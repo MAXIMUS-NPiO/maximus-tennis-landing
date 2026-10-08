@@ -1,3 +1,9 @@
+// The catalogue's typefaces, self-hosted: each file declares its scripts by unicode-range, so a
+// browser downloads only the subsets the page actually uses.
+import "@fontsource-variable/inter";
+import "@fontsource/cormorant-garamond/500.css";
+import "@fontsource/cormorant-garamond/600.css";
+import "@fontsource/cormorant-garamond/500-italic.css";
 import "../globals.css";
 import { notFound } from "next/navigation";
 import Header from "../../components/Header";

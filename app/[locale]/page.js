@@ -68,6 +68,17 @@ export default async function Home({ params }) {
         </div>
       </Section>
 
+      {/* 01c — Family Plan. The Founder asked for it to be among the first things on the site: the
+          family's budget, what it buys and what it builds, one click from the front page. */}
+      <Section id="family-plan" band="band-2" eyebrow={H.familyPlan.eyebrow} title={H.familyPlan.title} lead={H.familyPlan.p}>
+        <div className="grid-4 fp-home-points">
+          {H.familyPlan.points.map(([h, t]) => (
+            <div key={h} className="card"><h3>{h}</h3><p style={{ marginTop: 8 }}>{t}</p></div>
+          ))}
+        </div>
+        <div className="btn-row"><Cta locale={locale} to="familyPlan" label={H.familyPlan.cta} track="home_familyplan" /></div>
+      </Section>
+
       {/* 02 — the training system, ahead of audience routes and the performance series */}
       <Section id="training" band="band-1" eyebrow={H.training.eyebrow} title={H.training.title} lead={H.training.p}>
         <div className="training-lead">

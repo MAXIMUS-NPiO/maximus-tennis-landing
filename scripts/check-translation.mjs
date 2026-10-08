@@ -24,6 +24,8 @@ const ALLOWED = new Set([
   "Email",              // used as written in every locale on this site
   "your@email.com",     // the placeholder is an address pattern, not a sentence
   "ZERO",               // the name of the exclusive option, Latin in every locale like the mark itself
+  "min", "h", "≈",      // Family Plan units: minutes, hours, and the sign for an approximate figure
+  "{scenario}: {field}", // Family Plan error label: two placeholders and a colon, nothing to translate
   "VAT TRN",            // the tax label as it appears on the licence
   "10–13", "14–17",     // age bands: figures
   // Trainer captions: the product name plus a weight and a balance — nothing else to translate.

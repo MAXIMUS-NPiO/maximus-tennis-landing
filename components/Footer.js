@@ -23,7 +23,7 @@ function Group({ title, items, locale, nav }) {
 
 export default function Footer({ locale, dict }) {
   const { nav, footer } = dict;
-  const product = ["choose", "racquets", "precision", "grip", "custom", "training", "gps", "build"];
+  const product = ["familyPlan", "choose", "racquets", "precision", "grip", "custom", "training", "gps", "build"];
   const eco = ["ecosystem", "engineering", "experience", "brands", "families", "owners", "network"];
   const org = ["partnerships", "contact", "legal", "privacy", "terms"];
   return (

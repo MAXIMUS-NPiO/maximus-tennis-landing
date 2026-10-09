@@ -1151,7 +1151,7 @@ const ga = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: an chumadóireacht iomlán — an traenálaí ó thosach agus ó thaobh, rondal greanta an leoin ar an gceann teagmhála cruinn, an greanadh MAXIMUS agus SPOT TRAINER feadh an chrainn, agus an caipín deiridh ochtagánach le marc an leoin",
-    greatHero: "Sraith MAXIMUS GREAT, 369 g: an chumadóireacht iomlán le mionsonraí dearga agus buí ar an gceann, litreoireacht MAXIMUS shnasta, síniú Maximus ar an gcrann agus caipín deiridh an leoin",
+    greatHero: "Sraith MAXIMUS GREAT, 363 g: an chumadóireacht iomlán le mionsonraí dearga agus buí ar an gceann, litreoireacht MAXIMUS shnasta, síniú Maximus ar an gcrann agus marc an leoin ar an hanla",
     spotDetail: "Dhá MAXIMUS Spot Trainer níos cóngaraí: an leon greanta ar an gceann teagmhála dubh neamhlonrach, an fillteán greama rillithe agus na caipíní deiridh ochtagánacha le marc an leoin",
     spotPair: "Dhá MAXIMUS Spot Trainer leagtha ar fhiar ar dhromchla dorcha, MAXIMUS greanta feadh crainn amháin agus SPOT TRAINER feadh an chrainn eile, le rondal an leoin ar gach ceann teagmhála",
     spinVisual: "MAXIMUS SPIN: ceann le sreanga, litreoireacht MAXIMUS shnasta, greim agus caipín deiridh an leoin",

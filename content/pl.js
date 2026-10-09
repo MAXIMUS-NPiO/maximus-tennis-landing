@@ -1151,7 +1151,7 @@ const pl = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: pełna kompozycja — trenażer widziany z przodu i z boku, grawerowany okrągły emblemat lwa na okrągłej główce kontaktowej, grawer MAXIMUS i SPOT TRAINER wzdłuż trzonu oraz ośmiokątny kapturek ze znakiem lwa",
-    greatHero: "Seria MAXIMUS GREAT, 369 g: pełna kompozycja z czerwonymi i żółtymi detalami główki, błyszczącym napisem MAXIMUS, autografem Maximus na trzonie i kapturkiem z lwem",
+    greatHero: "Seria MAXIMUS GREAT, 363 g: pełna kompozycja z czerwonymi i żółtymi detalami główki, błyszczącym napisem MAXIMUS, autografem Maximus na trzonie i znakiem lwa na rękojeści",
     spotDetail: "Dwa trenażery MAXIMUS Spot Trainer z bliska: grawerowany lew na matowej czarnej główce kontaktowej, żebrowana owijka rączki i ośmiokątne kapturki ze znakiem lwa",
     spotPair: "Dwa trenażery MAXIMUS Spot Trainer ułożone pod skosem na ciemnej powierzchni, z grawerem MAXIMUS wzdłuż jednego trzonu i SPOT TRAINER wzdłuż drugiego oraz z okrągłym emblematem lwa na każdej główce kontaktowej",
     spinVisual: "MAXIMUS SPIN: główka z naciągiem, błyszczący napis MAXIMUS, rączka i kapturek z lwem",

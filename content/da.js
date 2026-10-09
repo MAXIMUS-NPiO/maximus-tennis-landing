@@ -1151,7 +1151,7 @@ const da = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: den samlede komposition — traineren set forfra og fra siden, det graverede løvemærke på det runde kontakthoved, graveringen MAXIMUS og SPOT TRAINER langs skaftet og den ottekantede endehætte med løvemærket",
-    greatHero: "MAXIMUS GREAT-serien, 369 g: den samlede komposition med røde og gule detaljer på hovedet, blank MAXIMUS-skrift, Maximus-autografen på skaftet og endehætten med løven",
+    greatHero: "MAXIMUS GREAT-serien, 363 g: den samlede komposition med røde og gule detaljer på hovedet, blank MAXIMUS-skrift, Maximus-autografen på skaftet og løven på grebet",
     spotDetail: "To MAXIMUS Spot Trainers tættere på: den graverede løve på det matsorte kontakthoved, den riflede grebsomvikling og de ottekantede endehætter med løvemærket",
     spotPair: "To MAXIMUS Spot Trainers lagt skråt på en mørk flade, MAXIMUS graveret langs det ene skaft og SPOT TRAINER langs det andet, med løvemærket på hvert kontakthoved",
     spinVisual: "MAXIMUS SPIN: hoved med strenge, blank MAXIMUS-skrift, greb og endehætte med løven",

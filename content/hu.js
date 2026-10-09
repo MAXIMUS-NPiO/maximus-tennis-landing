@@ -1151,7 +1151,7 @@ const hu = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: a teljes kompozíció — az eszköz elölről és oldalról, a gravírozott oroszlánembléma a kör alakú ütőfelületen, a MAXIMUS és SPOT TRAINER gravírozás a száron és a nyolcszögletű, oroszlánjeles markolatvég-kupak",
-    greatHero: "MAXIMUS GREAT sorozat, 369 g: a teljes kompozíció piros és sárga fejdíszítéssel, fényes MAXIMUS feliratozással, a Maximus-aláírással a száron és az oroszlános markolatvég-kupakkal",
+    greatHero: "MAXIMUS GREAT sorozat, 363 g: a teljes kompozíció piros és sárga fejdíszítéssel, fényes MAXIMUS feliratozással, a Maximus-aláírással a száron és az oroszlánjellel a markolaton",
     spotDetail: "Két MAXIMUS Spot Trainer közelebbről: a gravírozott oroszlán a matt fekete ütőfelületen, a bordázott markolatszalag és a nyolcszögletű, oroszlánjeles markolatvég-kupakok",
     spotPair: "Két MAXIMUS Spot Trainer szögben, sötét felületen fekve, az egyik száron MAXIMUS, a másikon SPOT TRAINER gravírozással, mindkét kör alakú ütőfelületen az oroszlánemblémával",
     spinVisual: "MAXIMUS SPIN: fej húrokkal, fényes MAXIMUS feliratozás, markolat és oroszlános markolatvég-kupak",

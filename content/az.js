@@ -1151,7 +1151,7 @@ const az = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: tam kompozisiya — öndən və yandan görünən məşq raketi, dairəvi təmas başındakı qravüralı dairəvi aslan emblemi, şaft boyunca MAXIMUS və SPOT TRAINER qravürası və aslan nişanlı səkkizbucaqlı alt qapaq",
-    greatHero: "MAXIMUS GREAT seriyası, 369 g: qırmızı və sarı baş detalları, parlaq MAXIMUS yazısı, şaftdakı Maximus avtoqrafı və aslanlı alt qapaqla tam kompozisiya",
+    greatHero: "MAXIMUS GREAT seriyası, 363 g: qırmızı və sarı baş detalları, parlaq MAXIMUS yazısı, şaftdakı Maximus avtoqrafı və dəstəkdəki aslan emblemi ilə tam kompozisiya",
     spotDetail: "Daha yaxından görünən iki MAXIMUS Spot Trainer: mat qara təmas başındakı qravüralı aslan, yivli tutacaq sarğısı və aslan nişanlı səkkizbucaqlı alt qapaqlar",
     spotPair: "Tünd səth üzərində maili şəkildə uzanmış iki MAXIMUS Spot Trainer, bir şaft boyunca MAXIMUS, digər şaft boyunca SPOT TRAINER qravürası, hər təmas başında aslan emblemi",
     spinVisual: "MAXIMUS SPIN: simli baş, parlaq MAXIMUS yazısı, tutacaq və aslanlı alt qapaq",

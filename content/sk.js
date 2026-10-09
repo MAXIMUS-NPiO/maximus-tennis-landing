@@ -1151,7 +1151,7 @@ const sk = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: celá kompozícia — trenažér spredu a zboku, gravírovaný medailón s levom na okrúhlej kontaktnej hlave, gravúra MAXIMUS a SPOT TRAINER po drieku a osemhranná koncová krytka s emblémom leva",
-    greatHero: "Séria MAXIMUS GREAT, 369 g: celá kompozícia s červeným a žltým detailom na hlave, lesklým písmom MAXIMUS, podpisom Maximus na drieku a koncovou krytkou s levom",
+    greatHero: "Séria MAXIMUS GREAT, 363 g: celá kompozícia s červeným a žltým detailom na hlave, lesklým písmom MAXIMUS, podpisom Maximus na drieku a znakom leva na rukoväti",
     spotDetail: "Dva trenažéry MAXIMUS Spot Trainer zblízka: gravírovaný lev na matnej čiernej kontaktnej hlave, rebrovaná omotávka gripu a osemhranné koncové krytky s emblémom leva",
     spotPair: "Dva trenažéry MAXIMUS Spot Trainer položené pod uhlom na tmavej ploche, na jednom drieku gravúra MAXIMUS a na druhom SPOT TRAINER, s medailónom leva na každej kontaktnej hlave",
     spinVisual: "MAXIMUS SPIN: hlava s výpletom, lesklé písmo MAXIMUS, grip a koncová krytka s levom",

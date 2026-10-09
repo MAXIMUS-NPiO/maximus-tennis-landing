@@ -1151,7 +1151,7 @@ const isl = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: heil samsetning — æfingaspaðinn að framan og frá hlið, grafið ljónsmerki í hringlaga höggflötinn, áletrunin MAXIMUS og SPOT TRAINER meðfram skaftinu og átthyrnd endahlíf með ljónsmerkinu",
-    greatHero: "MAXIMUS GREAT-línan, 369 g: heil samsetning með rauðum og gulum áherslum á höfðinu, glansandi MAXIMUS-áletrun, undirskrift Maximus á skaftinu og endahlíf með ljóni",
+    greatHero: "MAXIMUS GREAT-línan, 363 g: heil samsetning með rauðum og gulum áherslum á höfðinu, glansandi MAXIMUS-áletrun, undirskrift Maximus á skaftinu og ljónsmerki á handfanginu",
     spotDetail: "Tveir MAXIMUS Spot Trainer í nærmynd: grafið ljón í mattsvörtum höggfleti, rifflað grip og átthyrndar endahlífar með ljónsmerkinu",
     spotPair: "Tveir MAXIMUS Spot Trainer lagðir á ská á dökkt yfirborð, MAXIMUS grafið meðfram einu skafti og SPOT TRAINER meðfram öðru, með ljónsmerki í hvorum höggfleti",
     spinVisual: "MAXIMUS SPIN: höfuð með strengjum, glansandi MAXIMUS-áletrun, grip og endahlíf með ljóni",

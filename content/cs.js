@@ -1151,7 +1151,7 @@ const cs = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: celá kompozice — trainer zpředu a z profilu, gravírovaný lev v kruhovém poli na kruhové kontaktní hlavě, gravura MAXIMUS a SPOT TRAINER po délce krčku a osmihranná koncová krytka s emblémem lva",
-    greatHero: "Série MAXIMUS GREAT, 369 g: celá kompozice s červeným a žlutým detailem hlavy, lesklým nápisem MAXIMUS, podpisem Maximus na krčku a koncovou krytkou se lvem",
+    greatHero: "Série MAXIMUS GREAT, 363 g: celá kompozice s červeným a žlutým detailem hlavy, lesklým nápisem MAXIMUS, podpisem Maximus na krčku a znakem lva na rukojeti",
     spotDetail: "Dva kusy MAXIMUS Spot Trainer zblízka: gravírovaný lev na matně černé kontaktní hlavě, žebrovaná omotávka gripu a osmihranné koncové krytky s emblémem lva",
     spotPair: "Dva kusy MAXIMUS Spot Trainer položené šikmo na tmavé ploše, na jednom krčku gravura MAXIMUS a na druhém SPOT TRAINER, s kruhovým polem se lvem na každé kontaktní hlavě",
     spinVisual: "MAXIMUS SPIN: hlava s výpletem, lesklý nápis MAXIMUS, grip a koncová krytka se lvem",

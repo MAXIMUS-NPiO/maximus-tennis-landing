@@ -1151,7 +1151,7 @@ const nl = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: de volledige compositie — de Spot Trainer van voren en van de zijkant, het gegraveerde ronde leeuwenembleem op de ronde contactkop, de gravure MAXIMUS en SPOT TRAINER langs de schacht en de achthoekige gripkap met het leeuwenmerk",
-    greatHero: "MAXIMUS GREAT-serie, 369 g: de volledige compositie met rode en gele accenten op de kop, glanzende MAXIMUS-belettering, de handtekening van Maximus op de schacht en de leeuwengripkap",
+    greatHero: "MAXIMUS GREAT-serie, 363 g: de volledige compositie met rode en gele accenten op de kop, glanzende MAXIMUS-belettering, de handtekening van Maximus op de schacht en het leeuwenembleem op de greep",
     spotDetail: "Twee MAXIMUS Spot Trainers van dichterbij: de gegraveerde leeuw op de mat zwarte contactkop, de geribbelde gripwikkeling en de achthoekige gripkappen met het leeuwenmerk",
     spotPair: "Twee MAXIMUS Spot Trainers schuin op een donker oppervlak gelegd, met MAXIMUS gegraveerd langs de ene schacht en SPOT TRAINER langs de andere, en het ronde leeuwenembleem op elke contactkop",
     spinVisual: "MAXIMUS SPIN: kop met bespanning, glanzende MAXIMUS-belettering, grip en leeuwengripkap",

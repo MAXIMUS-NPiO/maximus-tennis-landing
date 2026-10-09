@@ -1151,7 +1151,7 @@ const gl = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: a composición completa — o adestrador visto de fronte e de lado, o medallón do león gravado na cabeza de contacto redonda, o gravado MAXIMUS e SPOT TRAINER ao longo do pescozo, e o tapón octogonal coa marca do león",
-    greatHero: "Serie MAXIMUS GREAT, 369 g: a composición completa cos detalles vermellos e amarelos na cabeza, as letras MAXIMUS brillantes, o autógrafo de Maximus no pescozo e o tapón co león",
+    greatHero: "Serie MAXIMUS GREAT, 363 g: a composición completa cos detalles vermellos e amarelos na cabeza, as letras MAXIMUS brillantes, o autógrafo de Maximus no pescozo e o león no mango",
     spotDetail: "Dous MAXIMUS Spot Trainer vistos máis de preto: o león gravado na cabeza de contacto negra mate, a cinta de empuñadura estriada e os tapóns octogonais coa marca do león",
     spotPair: "Dous MAXIMUS Spot Trainer colocados en ángulo sobre unha superficie escura, con MAXIMUS gravado nun pescozo e SPOT TRAINER no outro, e o medallón do león en cada cabeza de contacto",
     spinVisual: "MAXIMUS SPIN: cabeza con cordaxe, letras MAXIMUS brillantes, empuñadura e tapón co león",

@@ -1151,7 +1151,7 @@ const fil = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: ang buong komposisyon — ang trainer na makikita mula sa harap at gilid, ang inukit na bilog na sagisag ng leon sa bilog na head ng pagtama, ang pag-ukit ng MAXIMUS at SPOT TRAINER sa kahabaan ng tangkay, at ang oktagonal na takip sa dulo ng hawakan na may markang leon",
-    greatHero: "Seryeng MAXIMUS GREAT, 369 g: ang buong komposisyon na may pula at dilaw na detalye sa head, makintab na letrang MAXIMUS, ang lagda ni Maximus sa tangkay at ang takip na may leon sa dulo ng hawakan",
+    greatHero: "Seryeng MAXIMUS GREAT, 363 g: ang buong komposisyon na may pula at dilaw na detalye sa head, makintab na letrang MAXIMUS, ang lagda ni Maximus sa tangkay at ang leon sa hawakan",
     spotDetail: "Dalawang MAXIMUS Spot Trainer na makikita nang mas malapitan: ang inukit na leon sa matte na itim na head ng pagtama, ang balot ng grip na may mga nakaumbok na guhit at ang mga oktagonal na takip sa dulo ng hawakan na may markang leon",
     spotPair: "Dalawang MAXIMUS Spot Trainer na nakalapag nang pahilis sa madilim na ibabaw, may nakaukit na MAXIMUS sa kahabaan ng isang tangkay at SPOT TRAINER sa kabila, at may bilog na sagisag ng leon sa bawat head ng pagtama",
     spinVisual: "MAXIMUS SPIN: head na may string, makintab na letrang MAXIMUS, grip at takip na may leon sa dulo ng hawakan",

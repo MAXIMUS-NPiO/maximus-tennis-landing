@@ -1151,7 +1151,7 @@ const sq = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: kompozimi i plotë — trajnuesi i parë nga përpara dhe nga ana, rrethi i gdhendur me luan në kokën e rrumbullakët të kontaktit, gdhendja MAXIMUS dhe SPOT TRAINER përgjatë bishtit, dhe kapaku tetëkëndor fundor me shenjën e luanit",
-    greatHero: "Seria MAXIMUS GREAT, 369 g: kompozimi i plotë me detaje të kuqe dhe të verdha në kokë, shkrimi MAXIMUS me shkëlqim, autografi Maximus në bisht dhe kapaku fundor me luan",
+    greatHero: "Seria MAXIMUS GREAT, 363 g: kompozimi i plotë me detaje të kuqe dhe të verdha në kokë, shkrimi MAXIMUS me shkëlqim, autografi Maximus në bisht dhe luani në dorezë",
     spotDetail: "Dy MAXIMUS Spot Trainer nga më afër: luani i gdhendur në kokën mat të zezë të kontaktit, mbështjellja me rrudha e dorezës dhe kapakët tetëkëndorë fundorë me shenjën e luanit",
     spotPair: "Dy MAXIMUS Spot Trainer të vendosur me kënd mbi një sipërfaqe të errët, MAXIMUS i gdhendur përgjatë një bishti dhe SPOT TRAINER përgjatë tjetrit, me rrethin e luanit në çdo kokë kontakti",
     spinVisual: "MAXIMUS SPIN: koka me tela, shkrimi MAXIMUS me shkëlqim, doreza dhe kapaku fundor me luan",

@@ -47,8 +47,8 @@ The composition shows the frame from three angles, the string bed with the colou
 | Published file | Source | Where used |
 | --- | --- | --- |
 | `public/media/great/maximus-great-236g-…webp` … `-369g-…webp` (32 files) | assets/great/ of the supplied package | Great series page: selected-variant panel, weight switcher, catalogue of 33 weights, zoom view |
-| `public/media/great/maximus-great-369g-v3.webp` | the package's 369 g composition | also the **home page hero** (from 8 Oct 2026) |
-| ~~`public/media/great/maximus-great-363g-v1.webp`~~ | owner PNG of 29 Sep 2026 — **withdrawn 8 Oct 2026**: the butt cap of the standing racquet is drawn twisted out of shape. Removed from the site and from the repository | The 363 g weight stays listed and is shown in the catalogue by its figures only, until a corrected composition is supplied (CONTENT_GAPS A11) |
+| `public/media/great/maximus-great-363g-v2.webp` | owner PNG of 9 Oct 2026, 1254 × 1254, the corrected 363 g composition: the butt cap of the standing racquet stands straight (seen edge-on; the lion shows on the grip). Converted to lossless WebP, pixel-identical to the PNG, nothing else changed | Great catalogue at 363 g; **home page hero** |
+| ~~`public/media/great/maximus-great-363g-v1.webp`~~ | owner PNG of 29 Sep 2026 — **withdrawn 8 Oct 2026**: the butt cap of the standing racquet is drawn twisted out of shape. Removed from the site and from the repository; replaced by v2 on 9 Oct 2026 | — |
 | `public/media/great-visual.webp` | copy of the 288 g composition | Great card on the home page; Great series hero |
 
 Great balances stay labelled **calculated** (`balanceStatus: MODELLED`): they are not printed on these images and the owner has not stated that they are individual factory measurements.

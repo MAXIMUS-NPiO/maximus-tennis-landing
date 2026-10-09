@@ -1151,7 +1151,7 @@ const bs = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: cjelovita kompozicija — trenažer sprijeda i sa strane, gravirani medaljon s lavom na okrugloj glavi za kontakt, gravura MAXIMUS i SPOT TRAINER duž vrata reketa i osmougaoni poklopac ručke s oznakom lava",
-    greatHero: "MAXIMUS GREAT serija, 369 g: cjelovita kompozicija s crvenim i žutim detaljima na glavi, sjajnim MAXIMUS natpisom, Maximusovim autogramom na vratu reketa i poklopcem ručke s lavom",
+    greatHero: "MAXIMUS GREAT serija, 363 g: cjelovita kompozicija s crvenim i žutim detaljima na glavi, sjajnim MAXIMUS natpisom, Maximusovim autogramom na vratu reketa i znakom lava na ručki",
     spotDetail: "Dva MAXIMUS Spot Trainera izbliza: gravirani lav na mat crnoj glavi za kontakt, rebrasti omot ručke i osmougaoni poklopci ručki s oznakom lava",
     spotPair: "Dva MAXIMUS Spot Trainera položena pod uglom na tamnoj površini, s gravurom MAXIMUS duž jednog vrata reketa i SPOT TRAINER duž drugog, s medaljonom lava na svakoj glavi za kontakt",
     spinVisual: "MAXIMUS SPIN: glava sa žicama, sjajni MAXIMUS natpis, ručka i poklopac ručke s lavom",

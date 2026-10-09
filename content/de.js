@@ -1151,7 +1151,7 @@ const de = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: die vollständige Komposition — das Gerät von vorn und von der Seite, das gravierte runde Löwenemblem auf dem runden Zielkopf, die Gravur MAXIMUS und SPOT TRAINER entlang des Schafts und die achteckige Griffkappe mit der Löwenmarke",
-    greatHero: "Serie MAXIMUS GREAT, 369 g: die vollständige Komposition mit roten und gelben Kopfdetails, glänzendem MAXIMUS-Schriftzug, dem Maximus-Autogramm auf dem Schaft und der Löwen-Griffkappe",
+    greatHero: "Serie MAXIMUS GREAT, 363 g: die vollständige Komposition mit roten und gelben Kopfdetails, glänzendem MAXIMUS-Schriftzug, dem Maximus-Autogramm auf dem Schaft und dem Löwenemblem am Griff",
     spotDetail: "Zwei MAXIMUS Spot Trainer in Nahaufnahme: der gravierte Löwe auf dem mattschwarzen Zielkopf, das gerippte Griffband und die achteckigen Griffkappen mit der Löwenmarke",
     spotPair: "Zwei MAXIMUS Spot Trainer schräg auf einer dunklen Fläche liegend, MAXIMUS entlang des einen Schafts und SPOT TRAINER entlang des anderen graviert, mit dem runden Löwenemblem auf jedem Zielkopf",
     spinVisual: "MAXIMUS SPIN: Kopf mit Saiten, glänzender MAXIMUS-Schriftzug, Griff und Löwen-Griffkappe",

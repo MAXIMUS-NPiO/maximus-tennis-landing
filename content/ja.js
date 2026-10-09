@@ -1151,7 +1151,7 @@ const ja = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer：全体の構成。正面と側面から見た本体、丸いコンタクトヘッドに刻印されたライオンの円形エンブレム、シャフトに沿って入った MAXIMUS と SPOT TRAINER の刻印、ライオンマーク入りの八角形バットキャップ",
-    greatHero: "MAXIMUS GREAT シリーズ 369 g：赤と黄のフェース装飾、グロスの MAXIMUS レタリング、シャフトの Maximus のサイン、ライオンのバットキャップを含む全体の構成",
+    greatHero: "MAXIMUS GREAT シリーズ 363 g：赤と黄のフェース装飾、グロスの MAXIMUS レタリング、シャフトの Maximus のサイン、グリップのライオンマークを含む全体の構成",
     spotDetail: "MAXIMUS Spot Trainer 2本を近くから見た状態。マットブラックのコンタクトヘッドに刻印されたライオン、リブ入りのグリップラップ、ライオンマーク入りの八角形バットキャップ",
     spotPair: "暗い面に斜めに置いた MAXIMUS Spot Trainer 2本。一方のシャフトには MAXIMUS、もう一方には SPOT TRAINER が刻印され、それぞれのコンタクトヘッドにライオンの円形エンブレムが入っている",
     spinVisual: "MAXIMUS SPIN：ストリングを張ったフェース、グロスの MAXIMUS レタリング、グリップ、ライオンのバットキャップ",

@@ -1151,7 +1151,7 @@ const fi = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: täydellinen kokonaisuus — harjoitusmaila edestä ja sivulta, kaiverrettu leijonatunnus pyöreässä osumalavassa, MAXIMUS- ja SPOT TRAINER -kaiverrukset varren suunnassa sekä kahdeksankulmainen päätytulppa leijonamerkillä",
-    greatHero: "MAXIMUS GREAT -sarja, 369 g: täydellinen kokonaisuus punaisin ja keltaisin lapayksityiskohdin, kiiltävä MAXIMUS-teksti, Maximuksen nimikirjoitus varressa ja päätytulppa leijonamerkillä",
+    greatHero: "MAXIMUS GREAT -sarja, 363 g: täydellinen kokonaisuus punaisin ja keltaisin lapayksityiskohdin, kiiltävä MAXIMUS-teksti, Maximuksen nimikirjoitus varressa ja leijonamerkki kahvassa",
     spotDetail: "Kaksi MAXIMUS Spot Traineria lähempää: kaiverrettu leijona mattamustassa osumalavassa, uritettu otekäärintä ja kahdeksankulmaiset päätytulpat leijonamerkillä",
     spotPair: "Kaksi MAXIMUS Spot Traineria vinottain tummalla pinnalla, MAXIMUS kaiverrettuna toiseen varteen ja SPOT TRAINER toiseen, leijonatunnus kummassakin osumalavassa",
     spinVisual: "MAXIMUS SPIN: lapa kiristyksin, kiiltävä MAXIMUS-teksti, ote ja päätytulppa leijonamerkillä",

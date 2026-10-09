@@ -1151,7 +1151,7 @@ const ko = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: 전체 구성 — 정면과 측면에서 본 본체, 원형 타깃 헤드에 각인된 사자 원형 엠블럼, 샤프트를 따라 새겨진 MAXIMUS와 SPOT TRAINER, 사자 마크가 있는 팔각형 버트캡",
-    greatHero: "MAXIMUS GREAT 시리즈, 369 g: 빨강과 노랑 헤드 디테일, 유광 MAXIMUS 레터링, 샤프트의 Maximus 오토그래프, 사자 버트캡을 갖춘 전체 구성",
+    greatHero: "MAXIMUS GREAT 시리즈, 363 g: 빨강과 노랑 헤드 디테일, 유광 MAXIMUS 레터링, 샤프트의 Maximus 오토그래프, 그립의 사자 엠블럼을 갖춘 전체 구성",
     spotDetail: "MAXIMUS Spot Trainer 두 개를 가까이에서 본 모습: 무광 블랙 타깃 헤드에 각인된 사자, 골이 진 그립 랩, 사자 마크가 있는 팔각형 버트캡",
     spotPair: "어두운 바닥에 비스듬히 놓인 MAXIMUS Spot Trainer 두 개. 한쪽 샤프트에는 MAXIMUS, 다른 쪽에는 SPOT TRAINER가 각인되어 있고, 각 타깃 헤드에는 사자 원형 엠블럼이 있는 모습",
     spinVisual: "MAXIMUS SPIN: 스트링이 장착된 헤드, 유광 MAXIMUS 레터링, 그립, 사자 버트캡",

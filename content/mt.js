@@ -1151,7 +1151,7 @@ const mt = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: il-kompożizzjoni sħiħa — ir-rakketta ta' taħriġ minn quddiem u mill-ġenb, iċ-ċirku inċiż bl-iljun fuq ir-ras tonda tal-kuntatt, l-inċiżjoni MAXIMUS u SPOT TRAINER mal-zokk, u t-tapp ta' wara b'tmien ġnub bil-marka tal-iljun",
-    greatHero: "Is-serje MAXIMUS GREAT, 369 g: il-kompożizzjoni sħiħa bid-dettalji ħomor u sofor fir-ras, il-kitba MAXIMUS lustruża, l-awtografu Maximus fuq iz-zokk u t-tapp ta' wara bl-iljun",
+    greatHero: "Is-serje MAXIMUS GREAT, 363 g: il-kompożizzjoni sħiħa bid-dettalji ħomor u sofor fir-ras, il-kitba MAXIMUS lustruża, l-awtografu Maximus fuq iz-zokk u l-iljun fuq il-manku",
     spotDetail: "Żewġ MAXIMUS Spot Trainer mill-qrib: l-iljun inċiż fuq ir-ras matt sewda tal-kuntatt, il-faxxa bil-kustilji tal-manku u t-tappijiet ta' wara b'tmien ġnub bil-marka tal-iljun",
     spotPair: "Żewġ MAXIMUS Spot Trainer mimduda b'angolu fuq wiċċ skur, MAXIMUS inċiż fuq zokk wieħed u SPOT TRAINER fuq l-ieħor, biċ-ċirku tal-iljun fuq kull ras tal-kuntatt",
     spinVisual: "MAXIMUS SPIN: ras bil-kordi, kitba MAXIMUS lustruża, manku u tapp ta' wara bl-iljun",

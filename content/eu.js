@@ -1151,7 +1151,7 @@ const eu = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: konposizio osoa — entrenagailua aurretik eta saihetsetik ikusita, lehoiaren domina grabatua kontaktu-buru biribilean, MAXIMUS eta SPOT TRAINER grabatuak lepoan zehar, eta lehoiaren marka daraman oinarri-tapa oktogonala",
-    greatHero: "MAXIMUS GREAT seriea, 369 g: konposizio osoa buruko xehetasun gorri eta horiekin, MAXIMUS letra distiratsuekin, Maximus-en autografoarekin lepoan eta lehoiaren oinarri-taparekin",
+    greatHero: "MAXIMUS GREAT seriea, 363 g: konposizio osoa buruko xehetasun gorri eta horiekin, MAXIMUS letra distiratsuekin, Maximus-en autografoarekin lepoan eta kirtenean lehoiaren ikurrarekin",
     spotDetail: "Bi MAXIMUS Spot Trainer hurbilagotik ikusita: lehoia grabatua kontaktu-buru beltz matean, helduleku-zinta ildaskatua eta lehoiaren marka duten oinarri-tapa oktogonalak",
     spotPair: "Bi MAXIMUS Spot Trainer angeluan jarrita gainazal ilun batean, MAXIMUS lepo batean grabatua eta SPOT TRAINER bestean, lehoiaren domina kontaktu-buru bakoitzean",
     spinVisual: "MAXIMUS SPIN: burua kordekin, MAXIMUS letra distiratsuak, heldulekua eta lehoiaren oinarri-tapa",

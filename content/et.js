@@ -1151,7 +1151,7 @@ const et = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: täielik kompositsioon — treeningreket eest- ja külgvaates, graveeritud lõvimedaljon ümmargusel kontaktipeal, MAXIMUS ja SPOT TRAINER gravüür piki varrast ning kaheksanurkne otsakork lõvimärgiga",
-    greatHero: "MAXIMUS GREAT seeria, 369 g: täielik kompositsioon punase ja kollase peadetailiga, läikiv MAXIMUS kiri, Maximuse allkiri varrel ja lõvimärgiga otsakork",
+    greatHero: "MAXIMUS GREAT seeria, 363 g: täielik kompositsioon punase ja kollase peadetailiga, läikiv MAXIMUS kiri, Maximuse allkiri varrel ja lõvimärk käepidemel",
     spotDetail: "Kaks MAXIMUS Spot Trainerit lähivaates: graveeritud lõvi matil mustal kontaktipeal, soonitud haardemähis ja kaheksanurksed otsakorgid lõvimärgiga",
     spotPair: "Kaks MAXIMUS Spot Trainerit nurga all tumedal pinnal, ühel varrel gravüür MAXIMUS ja teisel SPOT TRAINER, lõvimedaljon kummalgi kontaktipeal",
     spinVisual: "MAXIMUS SPIN: pea keeltega, läikiv MAXIMUS kiri, haare ja lõvimärgiga otsakork",

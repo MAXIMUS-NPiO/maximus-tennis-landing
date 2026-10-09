@@ -1151,7 +1151,7 @@ const it = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: la composizione completa — lo Spot Trainer visto di fronte e di profilo, l'emblema rotondo del leone inciso sulla testa rotonda di contatto, l'incisione MAXIMUS e SPOT TRAINER lungo il fusto e il tappo ottagonale del manico con il marchio del leone",
-    greatHero: "Serie MAXIMUS GREAT, 369 g: la composizione completa con i dettagli rossi e gialli sulla testa, la scritta MAXIMUS lucida, l'autografo Maximus sul fusto e il tappo del manico con il leone",
+    greatHero: "Serie MAXIMUS GREAT, 363 g: la composizione completa con i dettagli rossi e gialli sulla testa, la scritta MAXIMUS lucida, l'autografo Maximus sul fusto e il leone sul manico",
     spotDetail: "Due MAXIMUS Spot Trainer visti più da vicino: il leone inciso sulla testa di contatto nera opaca, la fasciatura a coste del grip e i tappi ottagonali del manico con il marchio del leone",
     spotPair: "Due MAXIMUS Spot Trainer appoggiati in diagonale su una superficie scura, con MAXIMUS inciso lungo il fusto di uno e SPOT TRAINER su quello dell'altro, e l'emblema rotondo del leone su ciascuna testa di contatto",
     spinVisual: "MAXIMUS SPIN: testa con corde, scritta MAXIMUS lucida, grip e tappo del manico con il leone",

@@ -1151,7 +1151,7 @@ const id = {
   },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: komposisi lengkap — alat tampak dari depan dan dari samping, lambang singa dalam lingkaran yang digravir pada kepala kontak bundar, gravir MAXIMUS dan SPOT TRAINER di sepanjang batang, serta tutup gagang bersegi delapan dengan lambang singa",
-    greatHero: "Seri MAXIMUS GREAT, 369 g: komposisi lengkap dengan detail kepala berwarna merah dan kuning, tulisan MAXIMUS mengilap, tanda tangan Maximus pada batang dan tutup gagang berlambang singa",
+    greatHero: "Seri MAXIMUS GREAT, 363 g: komposisi lengkap dengan detail kepala berwarna merah dan kuning, tulisan MAXIMUS mengilap, tanda tangan Maximus pada batang dan lambang singa pada gagang",
     spotDetail: "Dua MAXIMUS Spot Trainer dilihat lebih dekat: singa yang digravir pada kepala kontak hitam matte, bungkus grip beralur dan tutup gagang bersegi delapan dengan lambang singa",
     spotPair: "Dua MAXIMUS Spot Trainer diletakkan menyudut di atas permukaan gelap, MAXIMUS digravir di sepanjang batang yang satu dan SPOT TRAINER di sepanjang batang yang lain, dengan lambang singa dalam lingkaran pada setiap kepala kontak",
     spinVisual: "MAXIMUS SPIN: kepala bersenar, tulisan MAXIMUS mengilap, grip dan tutup gagang berlambang singa",

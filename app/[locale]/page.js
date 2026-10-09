@@ -43,7 +43,7 @@ export default async function Home({ params }) {
               <Cta locale={locale} to="great" label={H.heroCta2} kind="btn-outline" track="hero_great" />
             </div>
           </div>
-          <Photo id="greatHero" alt={M.greatHero} caption={H.heroCaption} priority sizes="(min-width: 900px) 560px, 94vw" className="hero-photo" />
+          <Photo id="greatHero" alt={M.greatHero} caption={H.heroCaption} priority sizes="(min-width: 900px) 560px, 100vw" className="hero-photo" />
           <div className="hero-meta">
             {H.heroMeta.map(([b, s]) => <div key={b}><b>{b}</b>{s}</div>)}
           </div>
@@ -82,7 +82,7 @@ export default async function Home({ params }) {
       {/* 02 — the training system, ahead of audience routes and the performance series */}
       <Section id="training" band="band-1" eyebrow={H.training.eyebrow} title={H.training.title} lead={H.training.p}>
         <div className="training-lead">
-          <Photo id="sst300" alt={M.sst300} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern} · ${H.training.sstCaption}`} sizes="(min-width: 900px) 520px, 94vw" className="training-photo" />
+          <Photo id="sst300" alt={M.sst300} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern} · ${H.training.sstCaption}`} sizes="(min-width: 900px) 520px, 100vw" className="training-photo" />
           <div>
             <h3 className="h-3">{dict.training.sst.h}</h3>
             <p className="lead">{H.training.sstP}</p>
@@ -100,7 +100,7 @@ export default async function Home({ params }) {
             <h3 className="h-3">{dict.training.spot.h}</h3>
             <p>{H.training.spotP}</p>
           </div>
-          <Photo id="spotComposition" alt={M.spotComposition} sizes="(min-width: 900px) 540px, 92vw" className="tp-photo" />
+          <Photo id="spotComposition" alt={M.spotComposition} sizes="(min-width: 900px) 540px, 100vw" className="tp-photo" />
           <div className="tp-spot-cta">
             <div className="btn-row"><Cta locale={locale} to="spot" label={H.training.spotCta} kind="btn-outline" track="home_spot" /></div>
           </div>
@@ -128,11 +128,10 @@ export default async function Home({ params }) {
         <div className="series-grid">
           {seriesList.map((s) => {
             const card = seriesMedia[s.id].card;
-            const requested = s.matrixStatus === "REQUESTED_ARCHITECTURE";
             return (
               <article key={s.id} className="series-card">
                 {card ? (
-                  <Photo id={card} alt={M[card]} caption={H.series.photoLabel[s.id]} sizes="(min-width: 1024px) 30vw, (min-width: 760px) 45vw, 92vw" className="series-photo" />
+                  <Photo id={card} alt={M[card]} sizes="(min-width: 1024px) 30vw, (min-width: 760px) 45vw, 100vw" className="series-photo" />
                 ) : (
                   <PhotoPending name={s.short} sub={`${s.headSizeSqIn} ${L.sqin}`} note={H.series.photoPending} className="series-photo" />
                 )}
@@ -140,10 +139,6 @@ export default async function Home({ params }) {
                   <p className="eyebrow">{dict.racquets.direction[s.direction]} · {s.headSizeSqIn} {L.sqin}</p>
                   <h3>{s.name}</h3>
                   <p className="mono">{s.matrix.length} {L.points} · {s.matrix[0].weight}–{s.matrix[s.matrix.length - 1].weight} {L.grams}</p>
-                  <div className="badges">
-                    <span className={`status ${requested ? "requested" : "confirmed"}`}>{L.weight}: {requested ? S.requested : S.confirmed}</span>
-                    <span className={`status ${s.balanceStatus === "MODELLED" ? "modelled" : "notprovided"}`}>{L.balance}: {s.balanceStatus === "MODELLED" ? S.modelled : S.notprovided}</span>
-                  </div>
                   <div className="btn-row">
                     <Cta locale={locale} to="build" query={`series=${s.id}&from=series`} label={`${H.series.configure} ${s.short}`} track={`home_configure_${s.id}`} series={s.id} />
                     <Cta locale={locale} to={s.id} label={H.series.open} kind="btn-outline" />
@@ -157,11 +152,11 @@ export default async function Home({ params }) {
       </Section>
 
       {/* 04 — precision switch */}
-      <Section id="precision" band="band-1" eyebrow={H.precision.eyebrow} title={H.precision.title}>
-        <p className="statement" style={{ marginBottom: 18 }}><span className="accent">{H.precision.sub}</span></p>
-        <p className="lead" style={{ marginBottom: 26 }}>{H.precision.lead}</p>
+      <Section id="precision" center eyebrow={H.precision.eyebrow} title={H.precision.title}>
+        <p className="statement"><span className="accent">{H.precision.sub}</span></p>
+        <p className="lead">{H.precision.lead}</p>
         <PrecisionSwitch dict={{ precision: dict.precision, common: dict.common }} />
-        <p className="muted small" style={{ marginTop: 14 }}>{dict.precision.programmeNote}</p>
+        <p className="muted small section-note">{dict.precision.programmeNote}</p>
         <div className="btn-row"><Cta locale={locale} to="precision" label={H.precision.cta} kind="btn-outline" /></div>
       </Section>
 
@@ -205,9 +200,8 @@ export default async function Home({ params }) {
           <Photo id="engraving" alt={M.engraving} caption={H.manufacturing.captions.handle} sizes="(min-width: 760px) 38vw, 48vw" />
           <Photo id="spinHead" alt={M.spinHead} caption={H.manufacturing.captions.finish} sizes="(min-width: 760px) 38vw, 48vw" />
         </div>
-        <div className="grid-2" style={{ marginTop: 26 }}>
-          <div className="card"><span className="status confirmed">{S.confirmed}</span><h3 style={{ marginTop: 12 }}>{H.manufacturing.confirmedTitle}</h3><Kickers items={H.manufacturing.confirmed} /></div>
-          <div className="card"><span className="status notprovided">{S.notprovided}</span><h3 style={{ marginTop: 12 }}>{H.manufacturing.pendingTitle}</h3><p>{H.manufacturing.pending}</p></div>
+        <div className="facts">
+          <Kickers items={H.manufacturing.confirmed} />
         </div>
         <div className="btn-row"><Cta locale={locale} to="engineering" label={H.manufacturing.cta} kind="btn-outline" /></div>
       </Section>
@@ -215,7 +209,7 @@ export default async function Home({ params }) {
       {/* 10 — GPS, personalisation, development, extended ecosystem */}
       <Section id="world" band="band-2" eyebrow={H.world.eyebrow} title={H.world.title}>
         <div className="grid-4">
-          {[["gps", "gps", "current"], ["personal", "build", "agreement"], ["development", "methodology", "agreement"], ["ecosystem", "ecosystem", "concept"]].map(([k, to, st]) => (
+          {[["gps", "gps", "current"], ["personal", "build", "agreement"], ["development", "methodology", "agreement"], ["ecosystem", "ecosystem", "current"]].map(([k, to, st]) => (
             <Link key={k} href={href(locale, to)} className="card card-link">
               <span className={`status ${st}`}>{S[st]}</span>
               <h3 style={{ marginTop: 12 }}>{H.world.items[k].h}</h3>

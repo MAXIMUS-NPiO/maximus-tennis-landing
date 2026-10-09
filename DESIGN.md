@@ -1,27 +1,44 @@
 # DESIGN.md — MAXIMUS website design system
 
-## Current direction: the Partner Catalogue (Founder, 8 October 2026)
+## Current direction: one story on one surface (Founder, 8 October 2026, second pass)
 
-The site takes the visual language of the MAXIMUS Partner Catalogue. It supersedes the light
-"Engineering Gallery" tokens below wherever the two differ; the principles of honest statuses,
-real parameters and restraint still hold.
+The site takes the visual language of the MAXIMUS Partner Catalogue and of the MAXIMUS
+compositions themselves. It supersedes the light "Engineering Gallery" tokens below wherever the
+two differ; the principles of real parameters and restraint still hold.
 
-- **Ground**: black with gloss — each band carries a faint light falling from one edge
-  (`--bg #0a0a09`, `--paper #151514`, `--ink #ece8e1`, `--accent #b3bd6f`). Tokens live in
+- **Ground**: one graphite surface from the header to the footer — the tone of the compositions'
+  own studio backdrop (`--bg #151514`, `--paper #1b1b1a`, `--ink #ece8e1`, `--accent #b3bd6f`).
+  No band carries a plate of its own and **no rule separates the sections**; the sections follow
+  one another with less air between them (30 px a side on a phone, 46 px from 760 px). The header
+  and the footer stay black, because the official lockup is drawn on black: the header ends in a
+  short shadow, and the page darkens into the footer over its last 56 px. Tokens live in
   `app/globals.css → :root`.
 - **Type**: Cormorant Garamond for display, Inter for text, both self-hosted (`@fontsource`).
   Display sizes and card columns are set so the longest word in every language fits whole.
-- **Buttons**: no white fills. A filled call to action is **carbon** — a 2×2 twill weave under a
-  clear coat, framed in titanium (`--carbon-weave`, `--carbon-coat`, `--titanium`); it draws the
-  eye by texture, not brightness. The same material marks a selected step or chip. Outline
-  buttons stay outlined.
-- **Photographs emerge from the page**, never sit on it as rectangles: beneath each picture its own
-  surroundings, continued outwards and blurred (`public/media/glow`, written by
-  `scripts/photo-glow.mjs`), fade into the ground with `mix-blend-mode: lighten`; the picture's
-  outermost edge is feathered into them — 5% at the sides, 1.5% at top and bottom, where MIPA
-  markings and specification strips sit. In a grid the continuations stay close to their pictures;
-  a picture that stands alone lets them reach further. The enlarged view shows every file whole.
-  Re-run `node scripts/photo-glow.mjs` after adding or replacing a photograph.
+- **No boxes**: cards, ecosystem nodes, panels, schematics, precision figures and the weight
+  matrix stand on the page as type, without border or plate. Short lists (confirmed facts,
+  further parameters, other racquet sports) are set as columns of short lines. A specification
+  table with less than 780 px reads row by row (container query, `data-label`).
+- **Buttons are carbon, the racquet's own material**: a deep black body with the fine grain of
+  unidirectional carbon (an SVG noise tile — no weave, so no squares), a clear coat lit from
+  above, a broad sheen that crosses the button as the button crosses the screen (scroll-driven;
+  on hover elsewhere), a titanium edge and silver lettering. Outline buttons are a titanium ring.
+  A selected precision class, Family Plan step or catalogue weight is the same carbon key.
+- **Photographs are a continuation of the page**, never rectangles on it: the page already has
+  their backdrop's tone; beneath each picture its backdrop is continued a short way past its
+  edges — the colour of each edge, point by point, carried outwards and dissolved — further where
+  the edge is lit (the smoke beside the POWER and SPIN racquets), within a few per cent where it
+  already has the page's tone (`public/media/glow`, written by `scripts/photo-glow.mjs`). The layer
+  lies under the text (z-index −1); nothing of the racquet is smeared outwards. The picture's own
+  outermost 2.5 % at the sides and 1.6 % at top and bottom are softened, so the racquet stays sharp
+  nearly to the edge and titles, MIPA markings and specification strips stay whole. On a phone the
+  leading photographs run from edge to edge. The enlarged view shows every file whole. Re-run
+  `node scripts/photo-glow.mjs` after adding or replacing a photograph.
+- **Centred blocks**: the precision system on the home page (heading, the three class keys, the
+  four controlled parameters, the QC line) and the whole footer stand on the axis of the page.
+- **Statuses**: the site does not announce what it has not published. No "Not provided", "Not
+  yet published", "Concept" or "Manufacturing target" mark is shown; the extended ecosystem is
+  live (Founder: "not a concept — it is all live, it all works").
 
 ## Earlier direction (21 September 2026)
 
@@ -32,7 +49,7 @@ Direction: **Engineering Gallery**. Reference for the direction (not a template,
 2. Real parameters are the visual material: series index (97 / 98 / 100 in²), precision classes, L0–L7, weight matrices.
 3. Light space and thin rules instead of decoration. No gradients, textures, visual noise, endless identical cards or SaaS styling.
 4. Premium perception comes from proportion, typography, alignment and restraint.
-5. Every status is honest in ordinary language. Ecosystem: Current · Available by agreement · In development · Concept. Product values: Confirmed · Calculated · Requested architecture · Not provided.
+5. Every status is honest in ordinary language. Ecosystem: Current · Available by agreement. Product values: Confirmed · Calculated · Requested architecture. (8 October 2026: no "Concept", "Not provided" or "Manufacturing target" mark is shown.)
 
 ## Colour tokens (`app/globals.css` → `:root`)
 | Token | Value | Use |

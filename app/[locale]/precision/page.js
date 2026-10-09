@@ -1,6 +1,6 @@
 import { ctx, meta } from "../../../lib/page";
 import { extendedParameters } from "../../../data/products";
-import { PageHero, Section, Cta, Note, Chain } from "../../../components/Ui";
+import { PageHero, Section, Cta, Note, Chain, Kickers } from "../../../components/Ui";
 import { PrecisionTable } from "../../../components/Product";
 import PrecisionSwitch from "../../../components/PrecisionSwitch";
 import { StiffnessSchematic } from "../../../components/Schematics";
@@ -18,7 +18,6 @@ export default async function Page({ params }) {
         <h2 className="h-3" style={{ margin: "40px 0 14px" }}>{P.switch.fullTable}</h2>
         <PrecisionTable dict={dict} />
         <p className="muted small" style={{ marginTop: 14 }}>{P.programmeNote}</p>
-        <Note>{P.targetsNote}</Note>
         <Note red>{P.noZero}</Note>
       </Section>
       {/* The exclusive option. Set apart from the three listed classes on purpose: it is not a
@@ -46,8 +45,10 @@ export default async function Page({ params }) {
         </div>
       </Section>
       <Section title={P.matchedTitle}><p className="lead">{P.matchedP}</p></Section>
-      <Section band="band-1" title={P.extendedTitle} lead={P.extendedP}>
-        <div className="grid-4">{extendedParameters.map((k) => <div key={k} className="card"><h3>{P.extended[k]}</h3><span className="status notprovided">{dict.common.statuses.notprovided}</span></div>)}</div>
+      {/* Further parameters are made to the client's order (Founder, 8 October 2026: "we make what the
+          client orders"), so they are listed as what a technical brief may address, with no status. */}
+      <Section title={P.extendedTitle} lead={dict.custom.scopeTitle}>
+        <div className="facts"><Kickers items={extendedParameters.map((k) => P.extended[k])} /></div>
         <div className="btn-row"><Cta locale={locale} to="build" label={P.cta} /><Cta locale={locale} to="custom" label={dict.custom.cta} kind="btn-outline" /></div>
       </Section>
     </>

@@ -257,6 +257,9 @@ export default function Configurator({ dict, locale }) {
   );
 
   const balance = s && c.mode === "listed" && c.weight ? balanceFor(s.id, c.weight) : null;
+  // A series whose balance table the Founder confirmed (SPIN) is labelled confirmed, not calculated.
+  const balanceConfirmed = !!s && s.balanceStatus === "FOUNDER_CONFIRMED";
+  const balanceWord = balanceConfirmed ? ST.confirmed : ST.modelled;
   const total = full.value.racquetsTotal;
   const cls = precisionClasses.find((p) => p.id === c.cls);
 
@@ -266,7 +269,7 @@ export default function Configurator({ dict, locale }) {
     c.mode === "listed"
       ? [L.weight, c.weight ? `${c.weight} ${L.grams} — ${s && s.matrixStatus === "REQUESTED_ARCHITECTURE" ? B.status.requestedArchitecture : B.status.listed}` : "—", 2]
       : [B.q.customWeight, c.customWeight ? `${c.customWeight} ${L.grams} — ${B.status.technicalReview}` : "—", 2],
-    c.mode === "listed" && s ? [L.balance, balance !== null ? `${balance} ${L.mm} — ${ST.modelled}` : B.status.notPublished, 2] : null,
+    c.mode === "listed" && s ? [L.balance, balance !== null ? `${balance} ${L.mm} — ${balanceWord}` : B.status.notPublished, 2] : null,
     [dict.form.fields.basis, c.basis ? `${dict.lead.basis[c.basis]} — ${B.status.requestedCondition}` : B.listedBasis, 4],
     [L.grip, c.grip ? `${c.grip} · ${grips.find((g) => g.id === c.grip).inches}${grips.find((g) => g.id === c.grip).fraction}″ — ${B.gripNote}` : "—", 3],
     c.balanceReq ? [B.q.balanceRequest, `${c.balanceReq} ${L.mm} — ${L.requestTarget}`, 4] : null,
@@ -332,13 +335,13 @@ export default function Configurator({ dict, locale }) {
           {c.mode === "listed" ? (
             <div className="field">
               <label htmlFor="c-weight">{B.q.listed} — {s.short}</label>
-              <span className="hint" id="c-weight-hint">{s.matrixStatus === "REQUESTED_ARCHITECTURE" ? B.spinNote : B.balanceCaption}</span>
-              <select id="c-weight" value={c.weight || ""} onChange={(e) => set("weight", e.target.value ? Number(e.target.value) : undefined)} {...inv("weight")} aria-describedby={["c-weight-hint", errors.weight ? "c-weight-err" : null].filter(Boolean).join(" ")}>
+              {!balanceConfirmed && <span className="hint" id="c-weight-hint">{s.matrixStatus === "REQUESTED_ARCHITECTURE" ? B.spinNote : B.balanceCaption}</span>}
+              <select id="c-weight" value={c.weight || ""} onChange={(e) => set("weight", e.target.value ? Number(e.target.value) : undefined)} {...inv("weight")} aria-describedby={[balanceConfirmed ? null : "c-weight-hint", errors.weight ? "c-weight-err" : null].filter(Boolean).join(" ") || undefined}>
                 <option value="">{L.select}</option>
                 {s.matrix.map((p) => <option key={p.weight} value={p.weight}>{p.weight} {L.grams}{p.balance !== null ? ` · ${p.balance} ${L.mm}` : ""}</option>)}
               </select>
               {fieldErr("weight")}
-              {c.weight && balance !== null && <span className="hint">{B.q.balanceShown}: <strong className="mono">{balance} {L.mm}</strong> — {ST.modelled}</span>}
+              {c.weight && balance !== null && <span className="hint">{balanceConfirmed ? L.balance : B.q.balanceShown}: <strong className="mono">{balance} {L.mm}</strong> — {balanceWord}</span>}
             </div>
           ) : (
             <div className="field">

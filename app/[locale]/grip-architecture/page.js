@@ -17,7 +17,7 @@ export default async function Page({ params }) {
         <div className="split">
           <div className="stack"><p className="lead">{G.p1}</p><p>{G.p2}</p><p className="muted">{G.p3}</p></div>
           <div className="spec-wrap" tabIndex={0}><table className="spec"><thead><tr><th>{G.columns.size}</th><th className="num">{G.columns.nominal}</th><th>{G.columns.family}</th></tr></thead><tbody>
-            {grips.map((g) => <tr key={g.id}><td><strong>{g.id}</strong></td><td className="num">{g.inches}{g.fraction}″</td><td><small>{G.families}</small></td></tr>)}
+            {grips.map((g) => <tr key={g.id}><td className="row-head"><strong>{g.id}</strong></td><td className="num" data-label={G.columns.nominal}>{g.inches}{g.fraction}″</td><td data-label={G.columns.family}><small>{G.families}</small></td></tr>)}
           </tbody></table></div>
         </div>
         <div className="btn-row"><Cta locale={locale} to="build" query="from=grip" label={G.cta} /></div>

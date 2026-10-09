@@ -16,7 +16,7 @@
 import spinVisual from "../public/media/spin-visual.jpg";
 import powerVisual from "../public/media/power-visual.jpg";
 import greatVisual from "../public/media/great-visual.webp";
-import greatHero from "../public/media/great/maximus-great-363g-v1.webp";
+import greatHero from "../public/media/great/maximus-great-369g-v3.webp";
 import spinHead from "../public/media/spin-head.jpg";
 import handleLion from "../public/media/handle-lion.jpg";
 import engraving from "../public/media/engraving.jpg";
@@ -132,7 +132,6 @@ import g333 from "../public/media/great/maximus-great-333g-v3.webp";
 import g339 from "../public/media/great/maximus-great-339g-v3.webp";
 import g344 from "../public/media/great/maximus-great-344g-v3.webp";
 import g355 from "../public/media/great/maximus-great-355g-v3.webp";
-import g363 from "../public/media/great/maximus-great-363g-v1.webp";
 import g369 from "../public/media/great/maximus-great-369g-v3.webp";
 
 const owner = (src, model, purpose) => ({ src, model, kind: "owner", purpose });
@@ -165,13 +164,17 @@ export const powerByWeight = {
  * Great compositions by listed weight. Complete, uncropped files exactly as supplied in the
  * Founder's package (lossless WebP, 1254 x 1254, versioned file names kept); the weight printed
  * inside each image matches data/products.js.
+ *
+ * 363 g has no composition: the file supplied for it (maximus-great-363g-v1, 29 Sep 2026) drew the
+ * butt cap of the standing racquet twisted out of shape and was withdrawn by the Founder on
+ * 8 October 2026. The weight stays listed; the catalogue shows it without a picture until a
+ * corrected composition is supplied. No other weight's picture may stand in for it.
  */
 export const greatByWeight = {
   236: g236, 239: g239, 242: g242, 245: g245, 248: g248, 251: g251, 254: g254, 257: g257,
   260: g260, 263: g263, 266: g266, 269: g269, 272: g272, 277: g277, 280: g280, 284: g284,
   288: g288, 292: g292, 295: g295, 299: g299, 303: g303, 306: g306, 309: g309, 313: g313,
-  319: g319, 323: g323, 329: g329, 333: g333, 339: g339, 344: g344, 355: g355, 363: g363,
-  369: g369,
+  319: g319, 323: g323, 329: g329, 333: g333, 339: g339, 344: g344, 355: g355, 369: g369,
 };
 
 /** Variant images by series id — used by the weight catalogue. */
@@ -181,7 +184,7 @@ export const media = {
   spinVisual: owner(spinVisual, "spin", "SPIN: complete composition, 290 g"),
   powerVisual: owner(powerVisual, "power", "POWER: complete composition, 290 g"),
   greatVisual: owner(greatVisual, "great", "GREAT: complete composition, 288 g (lion butt cap, G series mark on the throat)"),
-  greatHero: owner(greatHero, "great", "GREAT: complete composition, 363 g \u2014 red and yellow head detailing, gloss MAXIMUS lettering and the Maximus autograph on the shaft"),
+  greatHero: owner(greatHero, "great", "GREAT: complete composition, 369 g \u2014 red and yellow head detailing, gloss MAXIMUS lettering and the Maximus autograph on the shaft"),
   spinHead: owner(spinHead, "spin", "SPIN head and string bed — detail view"),
   handleLion: owner(handleLion, "spin", "Throat, grip and butt cap with the lion mark — detail view"),
   engraving: owner(engraving, "spin", "Silver personalisation engraving on the shaft — detail view"),

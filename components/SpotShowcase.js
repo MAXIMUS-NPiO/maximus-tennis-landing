@@ -45,12 +45,12 @@ export default function SpotShowcase({ eyebrow, title, lead, views, weights, wei
                 <i>{strings.grams}</i>
               </p>
               <dl className="vc-specs">
-                {specs.map(([dt, dd, pending]) => (
+                {/* Only published values are listed; nothing is inferred to fill a row, and no row
+                    announces a value that is not published (Founder, 8 October 2026). */}
+                {specs.map(([dt, dd]) => (
                   <div key={dt}>
                     <dt>{dt}</dt>
-                    {/* A value that is not published says so in the table itself, with the same
-                        status mark the rest of the site uses. Nothing is inferred to fill it. */}
-                    <dd>{pending && <span className="status notprovided">{pending}</span>}{dd}</dd>
+                    <dd>{dd}</dd>
                   </div>
                 ))}
               </dl>

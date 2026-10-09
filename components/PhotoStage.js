@@ -5,10 +5,10 @@ import Image from "next/image";
 /**
  * The frame every product photograph on this site is shown in.
  *
- * Beneath the picture lies its own surroundings, continued outwards (`glow`: a file in
- * public/media/glow written by scripts/photo-glow.mjs), so the picture emerges from the dark band
- * instead of sitting on it as a rectangle. The composition itself is untouched; only its outermost
- * edge is feathered (CSS). The enlarged view shows every file whole and unfeathered.
+ * Beneath the picture lies its own backdrop, continued a short way past its edges and dissolved into
+ * the page (`glow`: a file in public/media/glow written by scripts/photo-glow.mjs), so the picture
+ * is a continuation of the page instead of a rectangle on it. The composition itself is untouched;
+ * only its outermost pixels are softened (CSS). The enlarged view shows every file whole.
  *
  * One implementation, used by the weight catalogue of the performance series and by the Spot
  * Trainer: the two must not drift apart.

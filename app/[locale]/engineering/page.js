@@ -30,9 +30,8 @@ export default async function Page({ params }) {
           <Photo id="spinHead" alt={dict.media.spinHead} caption={dict.home.manufacturing.captions.finish} sizes="(min-width: 760px) 38vw, 48vw" />
         </div>
         {inspectionVideo.released && <InspectionVideo src={inspectionVideo.src} poster={inspectionVideo.poster} label={dict.media.spinVisual} caption={dict.media.greatHead} />}
-        <div className="grid-2" style={{ marginTop: 24 }}>
-          <div className="card"><span className="status confirmed">{dict.common.statuses.confirmed}</span><h3 style={{ marginTop: 12 }}>{dict.home.manufacturing.confirmedTitle}</h3><Kickers items={dict.home.manufacturing.confirmed} /></div>
-          <div className="card"><span className="status notprovided">{dict.common.statuses.notprovided}</span><h3 style={{ marginTop: 12 }}>{dict.home.manufacturing.pendingTitle}</h3><p>{dict.home.manufacturing.pending}</p></div>
+        <div className="facts">
+          <Kickers items={dict.home.manufacturing.confirmed} />
         </div>
       </Section>
     </>

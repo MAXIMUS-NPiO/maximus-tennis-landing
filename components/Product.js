@@ -19,7 +19,7 @@ export function SeriesCards({ locale, dict }) {
 }
 
 export function PrecisionTable({ dict, compact = false }) {
-  const p = dict.precision, L = dict.common.labels, st = dict.common.statuses;
+  const p = dict.precision, L = dict.common.labels;
   return (
     <div className="spec-wrap" tabIndex={0}>
       <table className="spec">
@@ -31,15 +31,14 @@ export function PrecisionTable({ dict, compact = false }) {
         <tbody>
           {precisionClasses.map((c) => (
             <tr key={c.id}>
-              <td><strong>{c.id}</strong><br /><small className="muted">{p.classes[c.id].name}</small></td>
-              <td className="num">±{c.weightG} {L.grams}</td>
-              <td className="num">±{c.balanceMm} {L.mm}</td>
-              <td className="num">±{c.swingweightKgCm2} {L.kgcm2}</td>
-              <td>
-                {c.stiffness.kind === "target-tolerance" ? <>±{c.stiffness.valueRA} {L.ra} <small className="muted">({p.stiffTarget})</small></> : <small>{p.stiffExact}</small>}
-                <br /><span className="status target" style={{ marginTop: 6 }}>{st.target}</span>
+              <td className="row-head"><strong>{c.id}</strong><br /><small className="muted">{p.classes[c.id].name}</small></td>
+              <td className="num" data-label={p.columns.weight}>±{c.weightG} {L.grams}</td>
+              <td className="num" data-label={p.columns.balance}>±{c.balanceMm} {L.mm}</td>
+              <td className="num" data-label={p.columns.sw}>±{c.swingweightKgCm2} {L.kgcm2}</td>
+              <td data-label={p.columns.stiff}>
+                {c.stiffness.kind === "target-tolerance" ? <>±{c.stiffness.valueRA} {L.ra}</> : <small>{p.stiffExact}</small>}
               </td>
-              {!compact && <td><small>{p.classes[c.id].qc}</small></td>}
+              {!compact && <td data-label={p.columns.qc}><small>{p.classes[c.id].qc}</small></td>}
             </tr>
           ))}
         </tbody>

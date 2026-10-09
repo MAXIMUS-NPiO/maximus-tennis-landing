@@ -43,9 +43,13 @@ export default async function Page({ params }) {
   const balances = s.matrix.map((p) => p.balance).filter((b) => b !== null);
   const balanceRange = balances.length ? `${Math.min(...balances)}\u2013${Math.max(...balances)} ${L.mm}` : null;
   const hero = m.full; // a detail photo is never promoted to the series hero
-  // A weight catalogue is shown only where a complete composition exists for every listed weight.
-  const hasVariantImages = Object.prototype.hasOwnProperty.call(variantsByWeight, id)
-    && s.matrix.every((p) => variantsByWeight[id][p.weight] && p.balance !== null);
+  // A weight catalogue is shown where the series has its own compositions and every listed weight
+  // has its balance. A weight whose composition was withdrawn stays in the catalogue without a
+  // picture (components/VariantCatalogue.js); no other weight's picture stands in for it.
+  const images = Object.prototype.hasOwnProperty.call(variantsByWeight, id) ? variantsByWeight[id] : null;
+  const hasVariantImages = !!images
+    && s.matrix.every((p) => p.balance !== null)
+    && s.matrix.filter((p) => images[p.weight]).length >= s.matrix.length - 2;
   const faq = balanceConfirmed ? [P.faqSpinBalance, ...P.faq.slice(1)] : P.faq;
   const configure = <Cta locale={locale} to="build" query={`series=${id}&from=series`} label={P.ctaBuild} track={`series_configure_${id}`} series={id} />;
   const ask = <Cta locale={locale} to="contact" query={`purpose=product&series=${id}`} label={P.ctaAsk} kind="btn-outline" track={`series_ask_${id}`} series={id} />;
@@ -99,12 +103,10 @@ export default async function Page({ params }) {
             {m.details.filter((d) => d !== hero).map((d) => <Photo key={d} id={d} alt={M[d]} caption={M[d]} sizes="(min-width: 760px) 30vw, 92vw" />)}
           </div>
         ) : null}
-        {!m.full && <Note red>{P.detailPending}</Note>}
         <div className="split" style={{ marginTop: 20 }}>
           <PrecisionTable dict={dict} compact />
           <div className="stack"><GripRow dict={dict} emphasise={false} /><p className="muted small">{dict.home.carbon.gripP}</p></div>
         </div>
-        <Note>{P.notPublished}</Note>
         <div className="btn-row">{configure}</div>
       </Section>
 

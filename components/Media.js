@@ -11,9 +11,10 @@ export function Photo({ id, alt, caption, priority = false, sizes = "(min-width:
   const w = m.src?.width;
   const h = m.src?.height;
   const ar = w && h ? Math.round((w / h) * 1000) / 1000 : null;
-  // Beneath the picture lies its own surroundings, continued outwards (public/media/glow, written
-  // by scripts/photo-glow.mjs), so the picture emerges from the page instead of sitting on it as a
-  // rectangle. The picture's content is untouched; only its outermost edge is feathered (CSS).
+  // Beneath the picture lies its own backdrop, continued a short way past its edges and dissolved into
+  // the page (public/media/glow, written by scripts/photo-glow.mjs), so the picture emerges from the
+  // page instead of sitting on it as a rectangle. The picture's content is untouched; only its
+  // outermost pixels are feathered (CSS).
   return (
     <figure className={`photo ${className}`} style={ar ? { "--ar": ar } : undefined}>
       {/* The light is anchored to the picture alone, not to the caption beneath it. */}
@@ -26,13 +27,16 @@ export function Photo({ id, alt, caption, priority = false, sizes = "(min-width:
   );
 }
 
-/** Typographic tile used where no approved photograph exists yet (listed in CONTENT_GAPS.md). */
-export function PhotoPending({ name, sub, note, className = "" }) {
+/**
+ * Typographic tile used where no approved photograph exists (listed in CONTENT_GAPS.md): the name
+ * and the figures only. The site does not announce what it has not published (Founder,
+ * 8 October 2026), so the tile carries no "not yet published" line; `note` is accepted and ignored.
+ */
+export function PhotoPending({ name, sub, className = "" }) {
   return (
     <div className={`photo-pending ${className}`}>
       <span className="pp-name">{name}</span>
       {sub && <span className="pp-sub">{sub}</span>}
-      <span className="pp-note">{note}</span>
     </div>
   );
 }

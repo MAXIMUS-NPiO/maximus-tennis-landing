@@ -21,9 +21,9 @@ export default async function Page({ params }) {
         </div>
       </PageHero>
       <Section first>
-        <Photo id="sstSystem" alt={dict.media.sstSystem} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} priority sizes="(min-width: 1024px) 900px, 94vw" className="hero-photo" />
+        <Photo id="sstSystem" alt={dict.media.sstSystem} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} priority sizes="(min-width: 1024px) 900px, 100vw" className="hero-photo" />
       </Section>
-      <Section title={S.systemTitle} lead={S.systemLead}>
+      <Section title={S.systemTitle}>
         <span className="status confirmed" style={{ marginBottom: 14 }}>{S.baseline}</span>
         <div className="grid-4">
           {sst.system.map((x) => <div key={x.weight} className="stat"><b>{x.weight} {L.grams}</b><span>{L.balance}: {x.balance} {L.mm}</span></div>)}

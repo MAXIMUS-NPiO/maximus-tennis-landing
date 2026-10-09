@@ -223,22 +223,27 @@ export const STATUS = {
   CONCEPT: "concept",
 };
 
-/** Ecosystem nodes — every node has a page, an honest status and a next action. */
+/**
+ * Ecosystem nodes — every node has a page and a next action. The extended ecosystem is live
+ * (Founder, 8 October 2026: "it is not a concept — it is all live, it all works"), so no node is
+ * labelled a concept. The racquet-sport and apparel extensions carry no label: they are named on
+ * their page as development directions, and no product in them is offered.
+ */
 export const ecosystemNodes = [
   { id: "engineering", status: STATUS.CURRENT, href: "engineering" },
   { id: "precision", status: STATUS.CURRENT, href: "precision" },
   { id: "training", status: STATUS.CURRENT, href: "training" },
   { id: "development", status: STATUS.AGREEMENT, href: "methodology" },
   { id: "identity", status: STATUS.AGREEMENT, href: "brands" },
-  { id: "owners", status: STATUS.CONCEPT, href: "owners" },
+  { id: "owners", status: STATUS.CURRENT, href: "owners" },
   { id: "mipa", status: STATUS.CURRENT, href: "legal" },
-  { id: "digital", status: STATUS.CONCEPT, href: "owners" },
+  { id: "digital", status: STATUS.CURRENT, href: "owners" },
   { id: "licensing", status: STATUS.AGREEMENT, href: "brands" },
   { id: "families", status: STATUS.AGREEMENT, href: "families" },
   { id: "network", status: STATUS.AGREEMENT, href: "network" },
   { id: "market", status: STATUS.AGREEMENT, href: "partnerships" },
   { id: "institutional", status: STATUS.AGREEMENT, href: "institutional" },
-  { id: "extensions", status: STATUS.CONCEPT, href: "racquets" },
+  { id: "extensions", status: null, href: "racquets" },
 ];
 
 /** Request purposes accepted by the enquiry workflow. */

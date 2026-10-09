@@ -7,7 +7,6 @@ export const generateMetadata = meta("families", (d) => [d.families.title, d.fam
 export default async function Page({ params }) {
   const { locale, dict } = await ctx(params);
   const F = dict.families;
-  const S = dict.common.statuses;
   return (
     <>
       <PageHero eyebrow={dict.nav.families} title={F.title} lead={F.lead}>
@@ -29,8 +28,8 @@ export default async function Page({ params }) {
       </Section>
       <Section>
         <div className="grid-2">
-          <div className="card"><span className="status current">{S.current}</span><h3 style={{ marginTop: 12 }}>{F.nowTitle}</h3><Kickers items={F.now} /></div>
-          <div className="card"><span className="status concept">{S.concept}</span><h3 style={{ marginTop: 12 }}>{F.plannedTitle}</h3><Kickers items={F.planned} /></div>
+          <div className="card"><h3>{F.nowTitle}</h3><Kickers items={F.now} /></div>
+          <div className="card"><h3>{F.plannedTitle}</h3><Kickers items={F.planned} /></div>
         </div>
       </Section>
       <Section band="band-2" title={F.categoriesTitle} lead={F.categoriesP}><div className="chain">{F.categories.map((c) => <span key={c}>{c}</span>)}</div></Section>

@@ -46,8 +46,9 @@ The composition shows the frame from three angles, the string bed with the colou
 
 | Published file | Source | Where used |
 | --- | --- | --- |
-| `public/media/great/maximus-great-236g-…webp` … `-369g-…webp` (33 files) | assets/great/ of the supplied package (32) + the 363 g composition supplied 29 Sep 2026 | Great series page: selected-variant panel, weight switcher, catalogue of 33 cards, zoom view; home page hero |
-| `public/media/great/maximus-great-363g-v1.webp` | owner PNG of 29 Sep 2026, 1254 × 1254, converted to lossless WebP, nothing else changed | Great catalogue at 363 g; **home page hero** (the newest approved GREAT composition) |
+| `public/media/great/maximus-great-236g-…webp` … `-369g-…webp` (32 files) | assets/great/ of the supplied package | Great series page: selected-variant panel, weight switcher, catalogue of 33 weights, zoom view |
+| `public/media/great/maximus-great-369g-v3.webp` | the package's 369 g composition | also the **home page hero** (from 8 Oct 2026) |
+| ~~`public/media/great/maximus-great-363g-v1.webp`~~ | owner PNG of 29 Sep 2026 — **withdrawn 8 Oct 2026**: the butt cap of the standing racquet is drawn twisted out of shape. Removed from the site and from the repository | The 363 g weight stays listed and is shown in the catalogue by its figures only, until a corrected composition is supplied (CONTENT_GAPS A11) |
 | `public/media/great-visual.webp` | copy of the 288 g composition | Great card on the home page; Great series hero |
 
 Great balances stay labelled **calculated** (`balanceStatus: MODELLED`): they are not printed on these images and the owner has not stated that they are individual factory measurements.
@@ -67,10 +68,16 @@ carrying the lion mark.
 | `public/media/spot/spot-trainer-pair.webp` | owner studio composition, two trainers at an angle | Spot Trainer page |
 | `public/media/spot/spot-trainer-detail.webp` | owner studio composition, the pair closer | Spot Trainer page |
 
-They are presented in the same frame as the performance series: the photograph emerges from the
-dark band out of its own surroundings, continued outwards (`public/media/glow`, written by
-`scripts/photo-glow.mjs`), with its outermost edge feathered; the full-size view on click shows the
-file whole.
+They are presented in the same frame as the performance series: the photograph is a continuation of
+the page — its backdrop's edge colours carried a short way outwards and dissolved
+(`public/media/glow`, written by `scripts/photo-glow.mjs`), its outermost 2.5 % at the sides and
+1.6 % at top and bottom softened; the full-size view on click shows the file whole.
+
+**Photo surroundings (`public/media/glow/`)** — one small WebP with transparency per photograph,
+generated from the photograph itself by `scripts/photo-glow.mjs` (8 Oct 2026, second version): the
+colour of each edge, point by point, carried straight outwards and faded to nothing — within a few
+per cent where the edge already has the page's tone, up to 24 % of the photograph's size where it is
+lit. They contain no other material and are regenerated, and withdrawn ones removed, on every run.
 
 **Withdrawn on the same instruction** — `spot-trainers-row.jpg`, `spot-trainers-pair.jpg`,
 `spot-trainers-heads-up.jpg` (owner photographs of 29 Sep 2026, deleted from the repository). They

@@ -14,6 +14,21 @@ const PREFERRED_WEIGHT = 290;
 const firstWeight = (variants) =>
   (variants.some((v) => v.weight === PREFERRED_WEIGHT) ? PREFERRED_WEIGHT : variants[Math.floor(variants.length / 2)].weight);
 
+/**
+ * A listed weight whose composition has been withdrawn (data/media.js) is shown by its figures
+ * alone, set the way the compositions set them. No other weight's picture stands in for it, and
+ * the plate cannot be enlarged: there is nothing to enlarge.
+ */
+function Plate({ seriesName, weight, unit }) {
+  return (
+    <div className="vc-plate" aria-hidden="true">
+      <span className="vc-plate-brand">MAXIMUS</span>
+      <span className="vc-plate-series">{seriesName} series</span>
+      <span className="vc-plate-weight">{weight}<i>{unit}</i></span>
+    </div>
+  );
+}
+
 /** Only the strings this section needs are handed to the client — never the whole dictionary. */
 export default function VariantCatalogue({ seriesId, seriesName, strings, variants, headSizeSqIn, construction, grips, precision, balanceNote }) {
   const { catalogue: C, units: L, alt: altTemplate } = strings;
@@ -45,15 +60,19 @@ export default function VariantCatalogue({ seriesId, seriesName, strings, varian
           <p className="lead">{fill(C.lead)}</p>
 
           <div className="vc-selected" ref={stageRef}>
-            <Stage
-              img={images[current.weight]}
-              alt={altFor(current)}
-              glow={`/media/glow/${seriesId}-${current.weight}.webp`}
-              priority
-              sizes="(min-width: 1080px) 620px, (min-width: 760px) 55vw, 94vw"
-              onZoom={(e) => openZoom(e.currentTarget)}
-              zoomLabel={C.zoom}
-            />
+            {images[current.weight] ? (
+              <Stage
+                img={images[current.weight]}
+                alt={altFor(current)}
+                glow={`/media/glow/${seriesId}-${current.weight}.webp`}
+                priority
+                sizes="(min-width: 1080px) 620px, (min-width: 760px) 55vw, 94vw"
+                onZoom={(e) => openZoom(e.currentTarget)}
+                zoomLabel={C.zoom}
+              />
+            ) : (
+              <Plate seriesName={seriesName} weight={current.weight} unit={L.grams} />
+            )}
             <div className="vc-selected-info">
               <p className="vc-variant-name">{name(current.weight)}</p>
               <p className="vc-weight"><span className="vc-weight-value">{current.weight}</span><span className="vc-weight-unit">{L.grams}</span></p>
@@ -87,14 +106,18 @@ export default function VariantCatalogue({ seriesId, seriesName, strings, varian
             {variants.map((v) => (
               <li key={v.weight}>
                 <article className={`vc-card ${v.weight === current.weight ? "on" : ""}`}>
-                  <Stage
-                    img={images[v.weight]}
-                    alt={altFor(v)}
-                    glow={`/media/glow/${seriesId}-${v.weight}.webp`}
-                    sizes="(min-width: 1080px) 300px, (min-width: 760px) 30vw, 88vw"
-                    onZoom={(e) => { pick(v.weight, false); openZoom(e.currentTarget); }}
-                    zoomLabel={C.zoom}
-                  />
+                  {images[v.weight] ? (
+                    <Stage
+                      img={images[v.weight]}
+                      alt={altFor(v)}
+                      glow={`/media/glow/${seriesId}-${v.weight}.webp`}
+                      sizes="(min-width: 1080px) 300px, (min-width: 760px) 30vw, 88vw"
+                      onZoom={(e) => { pick(v.weight, false); openZoom(e.currentTarget); }}
+                      zoomLabel={C.zoom}
+                    />
+                  ) : (
+                    <Plate seriesName={seriesName} weight={v.weight} unit={L.grams} />
+                  )}
                   <p className="vc-card-name">{name(v.weight)}</p>
                   <p className="vc-card-weight"><span>{v.weight}</span><i>{L.grams}</i></p>
                   <p className="vc-card-balance">{C.balanceLabel}: <b>{v.balance} {L.mm}</b></p>

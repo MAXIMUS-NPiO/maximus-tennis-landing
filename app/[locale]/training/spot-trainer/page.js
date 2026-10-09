@@ -8,7 +8,7 @@ export const generateMetadata = meta("spot", (d) => [d.spot.title, d.spot.lead])
 
 export default async function Page({ params }) {
   const { locale, dict } = await ctx(params);
-  const S = dict.spot, L = dict.common.labels, ST = dict.common.statuses;
+  const S = dict.spot, L = dict.common.labels;
   const C = dict.seriesPage.catalogue;
 
   // The photographs are handed over as plain image records, so the dictionary stays on the server
@@ -27,7 +27,6 @@ export default async function Page({ params }) {
         weightsLabel={S.weightsTitle}
         specs={[
           [C.gripsLabel, spot.grips],
-          [C.headLabel, S.dims, ST.notprovided],
         ]}
         note={`${S.grips} ${S.weightsP}`}
         strings={{ zoom: C.zoom, close: C.close, grams: L.grams }}

@@ -15,13 +15,20 @@ export function PageHero({ eyebrow, title, lead, statement, children }) {
   );
 }
 
-export function Section({ id, band = "", eyebrow, title, lead, children, first = false, narrow = false }) {
+/**
+ * A section of a page. Sections carry no rule and no plate of their own: the page is one surface
+ * and the sections follow one another on it (Founder, 8 October 2026: "no line between the parts,
+ * one story"). `band` is kept as a hook for the few sections that set something of their own.
+ * `center` sets the heading, lead and actions on the axis of the page.
+ */
+export function Section({ id, band = "", eyebrow, title, lead, children, first = false, narrow = false, center = false }) {
+  const cls = ["section", band, first && "first", center && "is-center"].filter(Boolean).join(" ");
   return (
-    <section id={id} className={`section ${band} ${first ? "first" : ""}`}>
+    <section id={id} className={cls}>
       <div className={`shell ${narrow ? "narrow" : ""}`}>
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-        {title && <h2 className="h-2" style={{ marginBottom: lead ? 14 : 24 }}>{title}</h2>}
-        {lead && <p className="lead" style={{ marginBottom: 28 }}>{lead}</p>}
+        {title && <h2 className={`h-2 section-title${lead ? " has-lead" : ""}`}>{title}</h2>}
+        {lead && <p className="lead section-lead">{lead}</p>}
         {children}
       </div>
     </section>

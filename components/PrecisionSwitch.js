@@ -5,10 +5,11 @@ import { precisionClasses } from "../data/products";
 /**
  * Interactive precision-class switch (P2.5 / P1.5 / P0.5). A proper tablist: arrow keys move
  * between classes, Home/End jump, the panel always shows the four controlled parameters.
- * Stiffness is rendered as a manufacturing target; P0.5 is never presented as zero error.
+ * Stiffness is stated like the other three: the class tolerance, built to the client's order
+ * (Founder, 8 October 2026 — no "manufacturing target" label). P0.5 is never presented as zero error.
  */
 export default function PrecisionSwitch({ dict, initial = "P2.5" }) {
-  const P = dict.precision, L = dict.common.labels, S = dict.common.statuses;
+  const P = dict.precision, L = dict.common.labels;
   const [cur, setCur] = useState(initial);
   const id = useId();
   const tabsRef = useRef(null);
@@ -60,7 +61,6 @@ export default function PrecisionSwitch({ dict, initial = "P2.5" }) {
           <div>
             <span>{L.stiffness}</span>
             {stiff ? <b>{stiff}</b> : <b className="text">{P.stiffExact}</b>}
-            <small>{stiff ? P.stiffTarget : P.switch.protocolNote} · <span className="status target" style={{ marginTop: 4 }}>{S.target}</span></small>
           </div>
         </div>
         <p className="pswitch-qc"><strong>{P.switch.qcLabel}:</strong> {P.classes[c.id].qc}</p>

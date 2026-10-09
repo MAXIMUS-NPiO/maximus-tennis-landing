@@ -25,7 +25,7 @@ export function EcosystemMap({ locale, dict, compact = false }) {
           <span className="num">{String(i + 1).padStart(2, "0")}</span>
           <h3>{nodes[n.id].h}</h3>
           {!compact && <p>{nodes[n.id].p}</p>}
-          <span className={`status ${n.status}`}>{st[n.status]}</span>
+          {n.status && <span className={`status ${n.status}`}>{st[n.status]}</span>}
           <span className="next">{nodes[n.id].a} →</span>
         </Link>
       ))}

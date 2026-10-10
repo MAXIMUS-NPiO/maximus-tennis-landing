@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /** Product-data integrity checks — protects the published matrices and precision system. */
 const { series, grips, precisionClasses, sweetSpotTrainer, spotTrainer } = await import("../data/products.js");
 const fail = [];
@@ -38,7 +39,7 @@ for (const id of ["great", "power", "spin"]) {
 }
 expect(sweetSpotTrainer.precisionClassesApply === false, "SST: precision classes must not apply");
 
-// The internal balance formula must never be present in the repository.
+// Nothing internal may be present in what the site ships (formula, figures, names).
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = path.join(d, f); if (["node_modules", ".next", ".git"].includes(f)) return []; return statSync(p).isDirectory() ? walk(p) : [p]; });
@@ -48,17 +49,19 @@ const walk = (d) => readdirSync(d).flatMap((f) => { const p = path.join(d, f); i
 const banned = [
   /\bbabolat\b/i, /\byonex\b/i, /\btecnifibre\b/i, /\bsolinco\b/i, /\bdunlop\b/i, /\bv(ö|o)lkl\b/i,
   /\bwilson\b/i, /other brands?/i, /no one else/i, /nobody else/i, /unlike (other|any)/i, /only brand/i,
-  /381\.135245/, /0\.162636422/, /shaleni/i, /borteyman/i, /ghana/i, /go tennis/i, /norris/i,
-  /maximussports\.ae/i, /1[ ,.]?104[ ,.]?600/, /2[ ,.]?946[ ,.]?618/, /\b(102|136|204|139)\s?(EUR|€)/, /\bJude\b/, /\bNii\b/, /240\s?[–-]\s?340/,
 ];
-// Scope: everything that can reach the public bundle or rendered pages. Internal governance
-// documents (*.md) and the check scripts legitimately NAME the banned terms and are excluded.
+// Confidential terms (internal coefficients and figures, prices, names, an address not to be linked)
+// are checked by hash only, so that this public repository does not itself publish them
+// (scripts/lib/guard.mjs).
+const { confidentialHits } = await import("./lib/guard.mjs");
+// Scope: everything that can reach the public bundle or rendered pages.
 const PUBLIC_DIRS = ["app", "components", "content", "data", "lib", "public"];
 const publicFiles = PUBLIC_DIRS.flatMap((d) => walk(path.join(process.cwd(), d))).concat([path.join(process.cwd(), "middleware.js"), path.join(process.cwd(), "next.config.mjs")]);
 for (const f of publicFiles) {
   if (!/\.(js|mjs|json|css|svg|txt|html)$/.test(f)) continue;
   const txt = readFileSync(f, "utf8");
   for (const re of banned) if (re.test(txt)) fail.push(`banned content ${re} in ${path.relative(process.cwd(), f)}`);
+  if (confidentialHits(txt)) fail.push(`confidential term (guarded by hash) in ${path.relative(process.cwd(), f)}`);
 }
 
 if (fail.length) { console.error(fail.join("\n")); process.exit(1); }

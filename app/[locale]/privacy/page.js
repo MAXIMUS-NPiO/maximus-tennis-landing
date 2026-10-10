@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { ctx, meta } from "../../../lib/page";
 import { site } from "../../../data/site";
 import { processingSummary } from "../../../lib/intake/config";

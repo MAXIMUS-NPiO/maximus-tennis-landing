@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Finnish dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const fi = {
   meta: {
@@ -80,6 +81,7 @@ const fi = {
   },
   nav: {
     language: "Kieli",
+    langMenu: { title: "Valitse kieli", count: "Kieliä: {n} · koko sivusto jokaisella kielellä", search: "Nimi tai koodi", device: "Laitteesi", empty: "Mikään kieli ei vastaa hakua ”{q}”.", close: "Sulje", all: "Kaikki" },
     groups: { racquets: "Mailat", training: "Harjoittelu", ecosystem: "Ekosysteemi", partnerships: "Kumppanit" },
     familyPlan: "Perhetennis",
     racquets: "Mailasarjat ja vertailu",
@@ -126,6 +128,7 @@ const fi = {
     instagram: "Instagram",
     email: "Sähköposti",
     analytics: "Analytiikan asetukset",
+    authorship: "Tämän sivuston tekstien, kuvien, ulkoasun, laskelmien, algoritmien ja koodin tekijä. Kaikki oikeudet pidätetään.",
     subscribe: {
       title: "Pysy mukana MAXIMUS-maailmassa",
       line: "Uudet sarjat, mailasovitusten päivämäärät, harjoittelumateriaali ja omistajaohjelma. Muutama kirje vuodessa, ei muuta.",
@@ -939,7 +942,7 @@ const fi = {
   },
   terms: {
     title: "Käyttöehdot",
-    copyright: "Tämän verkkosivuston tekijänoikeus — sen tekstit, valokuvat, ulkoasu ja koodi — kuuluu yksin Maximus Kiriyakuloville. Sitä ei ole luovutettu millekään yhtiölle eikä kenellekään muulle henkilölle.",
+    copyright: "Tämän verkkosivuston tekijänoikeus — sen tekstit, valokuvat, ulkoasu ja koodi — kuuluu yksin Maximus Kiriyakuloville. Sama koskee sen kuvia ja visualisointeja, laskelmia ja laskentamalleja, niitä toteuttavia algoritmeja sekä datataulukoita ja niiden rakennetta. Sitä ei ole luovutettu millekään yhtiölle eikä kenellekään muulle henkilölle. Julkaiseminen ei anna lisenssiä: kopiointi, jäljentäminen, muokkaaminen, tietojen poimiminen sekä teksti- ja tiedonlouhinta, myös tekoälyn kouluttamiseen, edellyttävät tekijän etukäteen antamaa kirjallista lupaa.",
     updated: "Versio 2026-09-21",
     sections: [
       ["Tietoa, ei tarjous", "Tämän verkkosivuston tuotetieto kuvaa hyväksyttyjä spesifikaatioita, määritysarkkitehtuuria ja ohjelmien selityksiä. Se ei ole myyntitarjous, hinnasto, varastotieto eikä toimitussitoumus. Kaupalliset ehdot sovitaan erikseen kirjallisesti sen sopimusosapuolen kanssa, joka ilmoitetaan kussakin liiketoimessa."],
@@ -1149,6 +1152,7 @@ const fi = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Menetelmä, laskentamalli ja algoritmit © {years} Maximus Kiriyakulov. Kaikki oikeudet pidätetään." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: täydellinen kokonaisuus — harjoitusmaila edestä ja sivulta, kaiverrettu leijonatunnus pyöreässä osumalavassa, MAXIMUS- ja SPOT TRAINER -kaiverrukset varren suunnassa sekä kahdeksankulmainen päätytulppa leijonamerkillä",
     greatHero: "MAXIMUS GREAT -sarja, 363 g: täydellinen kokonaisuus punaisin ja keltaisin lapayksityiskohdin, kiiltävä MAXIMUS-teksti, Maximuksen nimikirjoitus varressa ja leijonamerkki kahvassa",

@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Link from "next/link";
 import { getDict } from "../../lib/i18n";
 import { pageMeta } from "../../lib/metadata";

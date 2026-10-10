@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Image from "next/image";
 import lockup from "../public/brand/maximus-gps-lockup-tight.png";
 import emblem from "../public/brand/maximus-lion-emblem.png";

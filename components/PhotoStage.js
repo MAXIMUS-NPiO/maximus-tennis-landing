@@ -1,6 +1,8 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { RightsMeta, imageObject } from "./Authorship";
 
 /**
  * The frame every product photograph on this site is shown in.
@@ -18,12 +20,13 @@ export function Stage({ img, alt, glow, priority = false, sizes, quality = 86, o
   const inner = (
     <>
       {glow && <span className="vc-ambient" aria-hidden="true" style={{ "--glow": `url(${glow})` }} />}
-      <Image src={img} alt={alt} sizes={sizes} priority={priority} placeholder="blur" quality={quality} />
+      <Image src={img} alt={alt} sizes={sizes} priority={priority} placeholder="blur" quality={quality} itemProp="contentUrl" />
+      <RightsMeta />
     </>
   );
-  if (!onZoom) return <div className="vc-frame">{inner}</div>;
+  if (!onZoom) return <div className="vc-frame" {...imageObject}>{inner}</div>;
   return (
-    <button type="button" className="vc-frame vc-frame-zoom" onClick={onZoom} aria-label={zoomLabel}>
+    <button type="button" className="vc-frame vc-frame-zoom" onClick={onZoom} aria-label={zoomLabel} {...imageObject}>
       {inner}
       <span className="vc-zoom-hint" aria-hidden="true">{zoomLabel}</span>
     </button>

@@ -1,5 +1,7 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Image from "next/image";
 import { media } from "../data/media";
+import { RightsMeta, imageObject } from "./Authorship";
 
 /** Responsive photograph: priority for the hero, lazy elsewhere; always with localized alt text. */
 export function Photo({ id, alt, caption, priority = false, sizes = "(min-width: 1024px) 33vw, 100vw", className = "" }) {
@@ -16,11 +18,12 @@ export function Photo({ id, alt, caption, priority = false, sizes = "(min-width:
   // page instead of sitting on it as a rectangle. The picture's content is untouched; only its
   // outermost pixels are feathered (CSS).
   return (
-    <figure className={`photo ${className}`} style={ar ? { "--ar": ar } : undefined}>
+    <figure className={`photo ${className}`} style={ar ? { "--ar": ar } : undefined} {...imageObject}>
       {/* The light is anchored to the picture alone, not to the caption beneath it. */}
       <span className="photo-frame">
         <span className="photo-ambient" aria-hidden="true" style={{ "--glow": `url(/media/glow/${id}.webp)` }} />
-        <Image src={m.src} alt={alt} sizes={sizes} priority={priority} placeholder="blur" quality={80} />
+        <Image src={m.src} alt={alt} sizes={sizes} priority={priority} placeholder="blur" quality={80} itemProp="contentUrl" />
+        <RightsMeta />
       </span>
       {caption && <figcaption>{caption}</figcaption>}
     </figure>

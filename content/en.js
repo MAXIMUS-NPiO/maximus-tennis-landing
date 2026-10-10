@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* English master dictionary — MAXIMUS website v4.0. Numerical product data lives in data/products.js. */
 const en = {
   meta: {
@@ -80,6 +81,7 @@ const en = {
   },
   nav: {
     language: "Language",
+    langMenu: { title: "Choose your language", count: "Languages: {n} · the full site in each", search: "Name or code", device: "Your device", empty: "No language matches “{q}”.", close: "Close", all: "All" },
     groups: { racquets: "Racquets", training: "Training", ecosystem: "Ecosystem", partnerships: "Partnerships" },
     familyPlan: "Family Tennis",
     racquets: "Racquet series and comparison",
@@ -126,6 +128,7 @@ const en = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Analytics settings",
+    authorship: "Author of the texts, images, design, calculations, algorithms and code of this site. All rights reserved.",
     subscribe: {
       title: "Stay with MAXIMUS",
       line: "New series, fitting dates, training material and the owner programme. A few letters a year, nothing else.",
@@ -939,7 +942,7 @@ const en = {
   },
   terms: {
     title: "Terms of use",
-    copyright: "Copyright in this website — its texts, photographs, design and code — belongs to Maximus Kiriyakulov alone. It has not been assigned to any company or to any other person.",
+    copyright: "Copyright in this website — its texts, photographs, design and code — belongs to Maximus Kiriyakulov alone. The same holds for its images and visualisations, its calculations and calculation models, the algorithms that implement them, and its data tables and their arrangement. It has not been assigned to any company or to any other person. Publication grants no licence: copying, reproduction, adaptation, extraction of data and text and data mining, including for training artificial intelligence, require the author's prior written permission.",
     updated: "Version 2026-09-21",
     sections: [
       ["Information, not offer", "Product information on this website describes approved specifications, configuration architecture and programme explanations. It is not an offer to sell, a price list, a stock statement or a delivery commitment. Commercial terms are agreed separately in writing with the contracting entity identified in each transaction."],
@@ -1149,6 +1152,7 @@ const en = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Methodology, calculation model and algorithms © {years} Maximus Kiriyakulov. All rights reserved." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: the complete composition — the trainer seen front and side, the engraved lion roundel on the round contact head, the MAXIMUS and SPOT TRAINER engraving along the shaft, and the octagonal butt cap carrying the lion mark",
     greatHero: "MAXIMUS GREAT series, 363 g: the complete composition with red and yellow head detailing, gloss MAXIMUS lettering, the Maximus autograph on the shaft and the lion mark on the grip",

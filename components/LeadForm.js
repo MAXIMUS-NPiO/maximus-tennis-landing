@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 "use client";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { fieldsFor, validateRequest, GRIP_IDS } from "../lib/intake/schema";

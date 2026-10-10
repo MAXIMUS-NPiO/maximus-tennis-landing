@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Photo surroundings — each photograph's own backdrop, continued a short way past its edges and
  * dissolved into the page, so the picture emerges from the page instead of sitting on it as a
@@ -27,6 +28,10 @@
 import sharp from "sharp";
 import { mkdirSync, readFileSync, readdirSync, unlinkSync } from "node:fs";
 import path from "node:path";
+import { AUTHOR, noticeLine } from "../lib/authorship.js";
+
+// Every file written here carries the author's notice in its own metadata, like the photographs.
+const RIGHTS_EXIF = { IFD0: { Artist: AUTHOR, Copyright: noticeLine(new Date().getUTCFullYear()) } };
 
 const root = process.cwd();
 const OUT = path.join(root, "public", "media", "glow");
@@ -147,6 +152,7 @@ for (const [key, imp] of jobs) {
   const info = await sharp(out, { raw: { width: W, height: H, channels: 4 } })
     .blur(1.2)
     .resize(OUT_WIDTH, outH, { fit: "fill" })
+    .withExif(RIGHTS_EXIF)
     .webp({ quality: 80, alphaQuality: 90 })
     .toFile(path.join(OUT, `${key}.webp`));
   written.add(`${key}.webp`);

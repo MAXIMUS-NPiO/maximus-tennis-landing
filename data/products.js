@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * MAXIMUS product data — single numerical source for all locales.
  *

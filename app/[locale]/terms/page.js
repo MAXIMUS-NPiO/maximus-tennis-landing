@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { ctx, meta } from "../../../lib/page";
 import { PageHero, Section } from "../../../components/Ui";
 import GoverningVersion from "../../../components/GoverningVersion";
@@ -15,7 +16,7 @@ export default async function Page({ params }) {
         <div className="stack-lg">{T.sections.map(([h, p]) => <div key={h}><h2 className="h-3" style={{ marginBottom: 8 }}>{h}</h2><p className="muted">{p}</p></div>)}</div>
         {/* Authorship, stated by the author. It sits under the intellectual-property section in every
             language, in that language, and names the one person who holds the copyright. */}
-        <p className="copyright-note">{T.copyright}</p>
+        <p className="copyright-note" id="copyright">{T.copyright}</p>
       </Section>
     </>
   );

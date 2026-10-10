@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Polish dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const pl = {
   meta: {
@@ -80,6 +81,7 @@ const pl = {
   },
   nav: {
     language: "Język",
+    langMenu: { title: "Wybierz język", count: "Języki: {n} · cała strona w każdym z nich", search: "Nazwa lub kod", device: "Twoje urządzenie", empty: "Żaden język nie pasuje do „{q}”.", close: "Zamknij", all: "Wszystkie" },
     groups: { racquets: "Rakiety", training: "Trening", ecosystem: "Ekosystem", partnerships: "Współpraca" },
     familyPlan: "Tenis rodzinny",
     racquets: "Serie rakiet i porównanie",
@@ -126,6 +128,7 @@ const pl = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Ustawienia analityki",
+    authorship: "Autor tekstów, obrazów, projektu, obliczeń, algorytmów i kodu tej strony. Wszelkie prawa zastrzeżone.",
     subscribe: {
       title: "W kontakcie z MAXIMUS",
       line: "Nowe serie, terminy doboru rakiety, materiały treningowe i program dla właścicieli. Kilka listów w roku, nic więcej.",
@@ -939,7 +942,7 @@ const pl = {
   },
   terms: {
     title: "Warunki korzystania",
-    copyright: "Właścicielem praw autorskich do tej strony — jej tekstów, fotografii, projektu graficznego i kodu — jest wyłącznie Maximus Kiriyakulov. Prawa te nie zostały przeniesione ani na żadną spółkę, ani na żadną inną osobę.",
+    copyright: "Właścicielem praw autorskich do tej strony — jej tekstów, fotografii, projektu graficznego i kodu — jest wyłącznie Maximus Kiriyakulov. To samo dotyczy jej obrazów i wizualizacji, obliczeń i modeli obliczeniowych, realizujących je algorytmów oraz tabel danych i ich układu. Prawa te nie zostały przeniesione ani na żadną spółkę, ani na żadną inną osobę. Publikacja nie udziela żadnej licencji: kopiowanie, zwielokrotnianie, opracowywanie, pobieranie danych oraz eksploracja tekstów i danych, w tym w celu trenowania sztucznej inteligencji, wymagają uprzedniej pisemnej zgody autora.",
     updated: "Wersja 2026-09-21",
     sections: [
       ["Informacja, nie oferta", "Informacje o produktach na tej stronie opisują zatwierdzone specyfikacje, architekturę konfiguracji i wyjaśnienia programów. Nie są ofertą sprzedaży, cennikiem, informacją o stanach magazynowych ani zobowiązaniem dostawy. Warunki handlowe są uzgadniane odrębnie na piśmie z podmiotem wskazanym jako strona umowy w danej transakcji."],
@@ -1149,6 +1152,7 @@ const pl = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodologia, model obliczeniowy i algorytmy © {years} Maximus Kiriyakulov. Wszelkie prawa zastrzeżone." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: pełna kompozycja — trenażer widziany z przodu i z boku, grawerowany okrągły emblemat lwa na okrągłej główce kontaktowej, grawer MAXIMUS i SPOT TRAINER wzdłuż trzonu oraz ośmiokątny kapturek ze znakiem lwa",
     greatHero: "Seria MAXIMUS GREAT, 363 g: pełna kompozycja z czerwonymi i żółtymi detalami główki, błyszczącym napisem MAXIMUS, autografem Maximus na trzonie i znakiem lwa na rękojeści",

@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Indonesian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const id = {
   meta: {
@@ -80,6 +81,7 @@ const id = {
   },
   nav: {
     language: "Bahasa",
+    langMenu: { title: "Pilih bahasa Anda", count: "Bahasa: {n} · seluruh situs dalam setiap bahasa", search: "Nama atau kode", device: "Perangkat Anda", empty: "Tidak ada bahasa yang cocok dengan “{q}”.", close: "Tutup", all: "Semua" },
     groups: { racquets: "Raket", training: "Latihan", ecosystem: "Ekosistem", partnerships: "Kemitraan" },
     familyPlan: "Tenis Keluarga",
     racquets: "Seri raket dan perbandingan",
@@ -126,6 +128,7 @@ const id = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Pengaturan analitik",
+    authorship: "Pencipta teks, gambar, desain, perhitungan, algoritme, dan kode situs ini. Hak cipta dilindungi.",
     subscribe: {
       title: "Tetap terhubung dengan MAXIMUS",
       line: "Seri baru, jadwal fitting, materi latihan dan program pemilik. Beberapa surat dalam setahun, tidak lebih.",
@@ -939,7 +942,7 @@ const id = {
   },
   terms: {
     title: "Ketentuan penggunaan",
-    copyright: "Hak cipta atas situs ini — teks, foto, desain dan kodenya — sepenuhnya milik Maximus Kiriyakulov. Hak itu tidak dialihkan kepada perusahaan mana pun maupun kepada orang lain.",
+    copyright: "Hak cipta atas situs ini — teks, foto, desain dan kodenya — sepenuhnya milik Maximus Kiriyakulov. Hal yang sama berlaku untuk gambar dan visualisasinya, perhitungan dan model perhitungannya, algoritme yang menjalankannya, serta tabel data dan susunannya. Hak itu tidak dialihkan kepada perusahaan mana pun maupun kepada orang lain. Publikasi tidak memberikan lisensi apa pun: penyalinan, reproduksi, adaptasi, ekstraksi data, serta penambangan teks dan data, termasuk untuk melatih kecerdasan buatan, memerlukan izin tertulis sebelumnya dari pencipta.",
     updated: "Versi 2026-09-21",
     sections: [
       ["Informasi, bukan penawaran", "Informasi produk di situs ini menguraikan spesifikasi yang disetujui, arsitektur konfigurasi dan penjelasan program. Informasi itu bukan penawaran untuk menjual, bukan daftar harga, bukan pernyataan stok dan bukan komitmen pengiriman. Syarat komersial disepakati secara terpisah dan tertulis dengan badan hukum pihak kontrak yang disebutkan dalam setiap transaksi."],
@@ -1149,6 +1152,7 @@ const id = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodologi, model perhitungan, dan algoritme © {years} Maximus Kiriyakulov. Hak cipta dilindungi." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: komposisi lengkap — alat tampak dari depan dan dari samping, lambang singa dalam lingkaran yang digravir pada kepala kontak bundar, gravir MAXIMUS dan SPOT TRAINER di sepanjang batang, serta tutup gagang bersegi delapan dengan lambang singa",
     greatHero: "Seri MAXIMUS GREAT, 363 g: komposisi lengkap dengan detail kepala berwarna merah dan kuning, tulisan MAXIMUS mengilap, tanda tangan Maximus pada batang dan lambang singa pada gagang",

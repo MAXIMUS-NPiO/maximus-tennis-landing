@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Latvian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const lv = {
   meta: {
@@ -80,6 +81,7 @@ const lv = {
   },
   nav: {
     language: "Valoda",
+    langMenu: { title: "Izvēlieties valodu", count: "Valodas: {n} · visa vietne katrā no tām", search: "Nosaukums vai kods", device: "Jūsu ierīce", empty: "Neviena valoda neatbilst vaicājumam “{q}”.", close: "Aizvērt", all: "Visas" },
     groups: { racquets: "Raketes", training: "Treniņi", ecosystem: "Ekosistēma", partnerships: "Partnerība" },
     familyPlan: "Ģimenes teniss",
     racquets: "Rakešu sērijas un salīdzinājums",
@@ -126,6 +128,7 @@ const lv = {
     instagram: "Instagram",
     email: "E-pasts",
     analytics: "Analītikas iestatījumi",
+    authorship: "Šīs vietnes tekstu, attēlu, dizaina, aprēķinu, algoritmu un koda autors. Visas tiesības aizsargātas.",
     subscribe: {
       title: "Palieciet kopā ar MAXIMUS",
       line: "Jaunas sērijas, pielāgošanas datumi, treniņu materiāli un īpašnieku programma. Dažas vēstules gadā, nekas vairāk.",
@@ -939,7 +942,7 @@ const lv = {
   },
   terms: {
     title: "Lietošanas noteikumi",
-    copyright: "Autortiesības uz šo vietni — tās tekstiem, fotogrāfijām, dizainu un kodu — pieder vienīgi Maksimam Kirijakulovam. Tās nav nodotas nevienai sabiedrībai un nevienai citai personai.",
+    copyright: "Autortiesības uz šo vietni — tās tekstiem, fotogrāfijām, dizainu un kodu — pieder vienīgi Maksimam Kirijakulovam. Tas pats attiecas uz tās attēliem un vizualizācijām, aprēķiniem un aprēķinu modeļiem, algoritmiem, kas tos īsteno, kā arī uz tās datu tabulām un to struktūru. Tās nav nodotas nevienai sabiedrībai un nevienai citai personai. Publicēšana nepiešķir nekādu licenci: kopēšanai, reproducēšanai, pārveidošanai, datu ieguvei un teksta un datu izracei, arī mākslīgā intelekta apmācībai, ir nepieciešama autora iepriekšēja rakstiska atļauja.",
     updated: "Versija 2026-09-21",
     sections: [
       ["Informācija, nevis piedāvājums", "Produkta informācija šajā vietnē apraksta apstiprinātas specifikācijas, konfigurācijas arhitektūru un programmu skaidrojumus. Tas nav pārdošanas piedāvājums, cenu lapa, krājumu paziņojums vai piegādes saistība. Komerciālie noteikumi tiek saskaņoti atsevišķi rakstiski ar līgumslēdzēju, kas norādīts katrā darījumā."],
@@ -1149,6 +1152,7 @@ const lv = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodika, aprēķinu modelis un algoritmi © {years} Maximus Kiriyakulov. Visas tiesības aizsargātas." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: pilnā kompozīcija — treniņu rakete no priekšpuses un sāniem, gravēts lauvas aplis uz apaļās saskares galvas, MAXIMUS un SPOT TRAINER gravējums gar kakliņu un astoņstūra roktura gala vāciņš ar lauvas zīmi",
     greatHero: "MAXIMUS GREAT sērija, 363 g: pilnā kompozīcija ar sarkanu un dzeltenu galvas apdari, spīdīgu MAXIMUS uzrakstu, Maximus autogrāfu uz kakliņa un lauvas zīmi uz roktura",

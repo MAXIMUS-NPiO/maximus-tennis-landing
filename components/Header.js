@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -13,7 +14,7 @@ import { href } from "../lib/paths";
  * Escape, Tab-out or outside click (never hover-only). Mobile: a toggle button and native
  * <details> groups. All toggles carry aria-expanded / aria-controls.
  */
-export default function Header({ locale, nav }) {
+export default function Header({ locale, nav, langMenu }) {
   const [open, setOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState(null);
   const pathname = usePathname() || "";
@@ -82,7 +83,7 @@ export default function Header({ locale, nav }) {
         </ul>
         <div className="header-tools">
           {/* One language control, visible at every width including a phone. */}
-          <LocaleMenu locale={locale} label={nav.language || "Language"} />
+          <LocaleMenu locale={locale} label={nav.language || "Language"} menu={nav.langMenu} {...langMenu} />
           <button type="button" ref={toggleRef} className="menu-toggle" aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen((v) => !v)} aria-label={open ? nav.close : nav.menu}>
             <span aria-hidden="true">{open ? "✕" : "☰"}</span>
           </button>

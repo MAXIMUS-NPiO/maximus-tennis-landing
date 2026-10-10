@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Azerbaijani dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const az = {
   meta: {
@@ -80,6 +81,7 @@ const az = {
   },
   nav: {
     language: "Dil",
+    langMenu: { title: "Dilinizi seçin", count: "Dillər: {n} · hər birində bütün sayt", search: "Ad və ya kod", device: "Cihazınız", empty: "“{q}” sorğusuna uyğun dil yoxdur.", close: "Bağla", all: "Hamısı" },
     groups: { racquets: "Raketlər", training: "Məşq", ecosystem: "Ekosistem", partnerships: "Tərəfdaşlıq" },
     familyPlan: "Ailə Tennisi",
     racquets: "Raket seriyaları və müqayisə",
@@ -126,6 +128,7 @@ const az = {
     instagram: "Instagram",
     email: "E-poçt",
     analytics: "Analitika parametrləri",
+    authorship: "Bu saytın mətnlərinin, təsvirlərinin, dizaynının, hesablamalarının, alqoritmlərinin və kodunun müəllifi. Bütün hüquqlar qorunur.",
     subscribe: {
       title: "MAXIMUS ilə qalın",
       line: "Yeni seriyalar, fitting tarixləri, məşq materialları və sahib proqramı. İldə bir neçə məktub — başqa heç nə.",
@@ -939,7 +942,7 @@ const az = {
   },
   terms: {
     title: "İstifadə şərtləri",
-    copyright: "Bu saytın — mətnlərinin, fotoşəkillərinin, dizaynının və kodunun — müəllif hüququ yalnız Maximus Kiriyakulova aiddir. O, heç bir şirkətə və heç bir digər şəxsə ötürülməyib.",
+    copyright: "Bu saytın — mətnlərinin, fotoşəkillərinin, dizaynının və kodunun — müəllif hüququ yalnız Maximus Kiriyakulova aiddir. Eyni qayda saytın təsvirlərinə və vizuallaşdırmalarına, hesablamalarına və hesablama modellərinə, onları həyata keçirən alqoritmlərə, həmçinin məlumat cədvəllərinə və onların quruluşuna da aiddir. O, heç bir şirkətə və heç bir digər şəxsə ötürülməyib. Dərc edilməsi heç bir lisenziya vermir: surətçıxarma, təkrar istehsal, uyğunlaşdırma, məlumatların çıxarılması, eləcə də süni intellektin öyrədilməsi daxil olmaqla mətn və məlumatların analizi müəllifin əvvəlcədən yazılı icazəsini tələb edir.",
     updated: "Versiya 2026-09-21",
     sections: [
       ["Məlumat, təklif deyil", "Bu saytdakı məhsul məlumatı təsdiqlənmiş spesifikasiyaları, konfiqurasiya arxitekturasını və proqram izahlarını təsvir edir. Bu, satış təklifi, qiymət cədvəli, anbar qalığı bəyanatı və ya çatdırılma öhdəliyi deyil. Kommersiya şərtləri hər əməliyyatda göstərilən müqavilə tərəfi ilə ayrıca, yazılı şəkildə razılaşdırılır."],
@@ -1149,6 +1152,7 @@ const az = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodologiya, hesablama modeli və alqoritmlər © {years} Maximus Kiriyakulov. Bütün hüquqlar qorunur." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: tam kompozisiya — öndən və yandan görünən məşq raketi, dairəvi təmas başındakı qravüralı dairəvi aslan emblemi, şaft boyunca MAXIMUS və SPOT TRAINER qravürası və aslan nişanlı səkkizbucaqlı alt qapaq",
     greatHero: "MAXIMUS GREAT seriyası, 363 g: qırmızı və sarı baş detalları, parlaq MAXIMUS yazısı, şaftdakı Maximus avtoqrafı və dəstəkdəki aslan emblemi ilə tam kompozisiya",

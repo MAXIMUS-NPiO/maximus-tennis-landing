@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Slovak dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const sk = {
   meta: {
@@ -80,6 +81,7 @@ const sk = {
   },
   nav: {
     language: "Jazyk",
+    langMenu: { title: "Vyberte jazyk", count: "Jazyky: {n} · celá stránka v každom z nich", search: "Názov alebo kód", device: "Vaše zariadenie", empty: "Výrazu „{q}“ nezodpovedá žiadny jazyk.", close: "Zavrieť", all: "Všetky" },
     groups: { racquets: "Rakety", training: "Tréning", ecosystem: "Ekosystém", partnerships: "Partnerstvá" },
     familyPlan: "Rodinný tenis",
     racquets: "Série rakiet a porovnanie",
@@ -126,6 +128,7 @@ const sk = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Nastavenia analytiky",
+    authorship: "Autor textov, obrázkov, dizajnu, výpočtov, algoritmov a kódu tejto stránky. Všetky práva vyhradené.",
     subscribe: {
       title: "Zostaňte s MAXIMUS",
       line: "Nové série, termíny prispôsobenia, tréningové materiály a program pre majiteľov. Niekoľko listov ročne, nič viac.",
@@ -939,7 +942,7 @@ const sk = {
   },
   terms: {
     title: "Podmienky používania",
-    copyright: "Výlučným nositeľom autorských práv k tejto webovej stránke — k jej textom, fotografiám, dizajnu a kódu — je Maximus Kiriyakulov. Tieto práva neboli prevedené na žiadnu spoločnosť ani na žiadnu inú osobu.",
+    copyright: "Výlučným nositeľom autorských práv k tejto webovej stránke — k jej textom, fotografiám, dizajnu a kódu — je Maximus Kiriyakulov. To isté platí pre jej obrázky a vizualizácie, výpočty a výpočtové modely, algoritmy, ktoré ich vykonávajú, ako aj pre jej dátové tabuľky a ich usporiadanie. Tieto práva neboli prevedené na žiadnu spoločnosť ani na žiadnu inú osobu. Zverejnením sa neudeľuje žiadna licencia: kopírovanie, rozmnožovanie, úpravy, vyťažovanie údajov a vyťažovanie textov a údajov vrátane trénovania umelej inteligencie si vyžadujú predchádzajúci písomný súhlas autora.",
     updated: "Verzia 2026-09-21",
     sections: [
       ["Informácia, nie ponuka", "Informácie o produktoch na tejto webovej stránke opisujú schválené špecifikácie, konfiguračnú architektúru a vysvetlenia programov. Nie sú ponukou na predaj, cenníkom, vyjadrením o zásobách ani záväzkom k dodaniu. Komerčné podmienky sa dohadujú osobitne a písomne so zmluvným subjektom uvedeným v každej transakcii."],
@@ -1149,6 +1152,7 @@ const sk = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodika, výpočtový model a algoritmy © {years} Maximus Kiriyakulov. Všetky práva vyhradené." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: celá kompozícia — trenažér spredu a zboku, gravírovaný medailón s levom na okrúhlej kontaktnej hlave, gravúra MAXIMUS a SPOT TRAINER po drieku a osemhranná koncová krytka s emblémom leva",
     greatHero: "Séria MAXIMUS GREAT, 363 g: celá kompozícia s červeným a žltým detailom na hlave, lesklým písmom MAXIMUS, podpisom Maximus na drieku a znakom leva na rukoväti",

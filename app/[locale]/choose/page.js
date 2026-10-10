@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { ctx, meta, formDict } from "../../../lib/page";
 import { PageHero, Section, Steps, Cta, Note } from "../../../components/Ui";
 import LeadForm from "../../../components/LeadForm";

@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { notFound } from "next/navigation";
 import { ctx } from "../../../../lib/page";
 import { pageMeta } from "../../../../lib/metadata";

@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Locale parity check: every locale must expose exactly the same key structure as English,
  * with the same array lengths and the same non-translatable technical values (hrefs, purposes).

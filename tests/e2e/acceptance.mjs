@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Acceptance scenarios (§14 of the implementation brief) against a running production build.
  *

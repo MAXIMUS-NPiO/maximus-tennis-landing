@@ -1,7 +1,9 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { ctx, meta } from "../../../lib/page";
 import { site } from "../../../data/site";
 import { Cta } from "../../../components/Ui";
 import FamilyPlan from "../../../components/FamilyPlan";
+import { ModelRights } from "../../../components/Authorship";
 
 export const generateMetadata = meta("familyPlan", (d) => [d.familyPlan.title, d.familyPlan.metaDescription]);
 
@@ -46,6 +48,7 @@ export default async function Page({ params }) {
       <section id="calculator" className="section fp-calc">
         <div className="shell">
           <FamilyPlan t={F} numLocale={numLocale} />
+          <ModelRights dict={dict} />
         </div>
       </section>
 

@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { readConfig, telegramSettings } from "../../../lib/intake/config";
 import { fixedOwnerTelegramDelivery, handleSiteEvent, siteEventResponse } from "../../../lib/intake/site-events";
 

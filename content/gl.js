@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Galician dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const gl = {
   meta: {
@@ -80,6 +81,7 @@ const gl = {
   },
   nav: {
     language: "Idioma",
+    langMenu: { title: "Escolle a túa lingua", count: "Linguas: {n} · o sitio completo en cada unha", search: "Nome ou código", device: "O teu dispositivo", empty: "Ningunha lingua coincide con «{q}».", close: "Pechar", all: "Todas" },
     groups: { racquets: "Raquetas", training: "Adestramento", ecosystem: "Ecosistema", partnerships: "Colaboracións" },
     familyPlan: "Tenis en Familia",
     racquets: "Series de raquetas e comparación",
@@ -126,6 +128,7 @@ const gl = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Configuración de analítica",
+    authorship: "Autor dos textos, imaxes, deseño, cálculos, algoritmos e código deste sitio web. Todos os dereitos reservados.",
     subscribe: {
       title: "Siga con MAXIMUS",
       line: "Series novas, datas de axuste, material de adestramento e o programa de propietarios. Unhas poucas cartas ao ano, nada máis.",
@@ -939,7 +942,7 @@ const gl = {
   },
   terms: {
     title: "Condicións de uso",
-    copyright: "Os dereitos de autor deste sitio web — os textos, as fotografías, o deseño e o código — pertencen unicamente a Maximus Kiriyakulov. Non se cederon a ningunha empresa nin a ningunha outra persoa.",
+    copyright: "Os dereitos de autor deste sitio web — os textos, as fotografías, o deseño e o código — pertencen unicamente a Maximus Kiriyakulov. O mesmo aplícase ás súas imaxes e visualizacións, aos seus cálculos e modelos de cálculo, aos algoritmos que os executan e ás súas táboas de datos e á súa organización. Non se cederon a ningunha empresa nin a ningunha outra persoa. A publicación non outorga ningunha licenza: a copia, a reprodución, a adaptación, a extracción de datos e a minaría de textos e datos, incluído o adestramento de intelixencia artificial, requiren a autorización previa por escrito do autor.",
     updated: "Versión 2026-09-21",
     sections: [
       ["Información, non oferta", "A información de produto deste sitio web describe especificacións aprobadas, arquitectura de configuración e explicacións dos programas. Non é unha oferta de venda, nin unha lista de prezos, nin unha declaración de existencias, nin un compromiso de entrega. As condicións comerciais acórdanse á parte e por escrito coa entidade contratante identificada en cada operación."],
@@ -1149,6 +1152,7 @@ const gl = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodoloxía, modelo de cálculo e algoritmos © {years} Maximus Kiriyakulov. Todos os dereitos reservados." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: a composición completa — o adestrador visto de fronte e de lado, o medallón do león gravado na cabeza de contacto redonda, o gravado MAXIMUS e SPOT TRAINER ao longo do pescozo, e o tapón octogonal coa marca do león",
     greatHero: "Serie MAXIMUS GREAT, 363 g: a composición completa cos detalles vermellos e amarelos na cabeza, as letras MAXIMUS brillantes, o autógrafo de Maximus no pescozo e o león no mango",

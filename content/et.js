@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Estonian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const et = {
   meta: {
@@ -80,6 +81,7 @@ const et = {
   },
   nav: {
     language: "Keel",
+    langMenu: { title: "Valige keel", count: "Keeli: {n} · kogu sait igas keeles", search: "Nimi või kood", device: "Teie seade", empty: "Päringule „{q}“ ei vasta ükski keel.", close: "Sulge", all: "Kõik" },
     groups: { racquets: "Reketid", training: "Treening", ecosystem: "Ökosüsteem", partnerships: "Partnerlus" },
     familyPlan: "Peretennis",
     racquets: "Reketiseeriad ja võrdlus",
@@ -126,6 +128,7 @@ const et = {
     instagram: "Instagram",
     email: "E-post",
     analytics: "Analüütika seaded",
+    authorship: "Selle veebisaidi tekstide, piltide, kujunduse, arvutuste, algoritmide ja koodi autor. Kõik õigused kaitstud.",
     subscribe: {
       title: "Hoidke end MAXIMUS uudistega kursis",
       line: "Uued seeriad, sobitamise kuupäevad, treeningmaterjal ja omanikuprogramm. Mõni kiri aastas, ei midagi muud.",
@@ -939,7 +942,7 @@ const et = {
   },
   terms: {
     title: "Kasutustingimused",
-    copyright: "Selle veebisaidi autoriõigus — tekstide, fotode, kujunduse ja koodi oma — kuulub ainult Maximus Kiriyakulovile. Seda ei ole loovutatud ühelegi äriühingule ega ühelegi teisele isikule.",
+    copyright: "Selle veebisaidi autoriõigus — tekstide, fotode, kujunduse ja koodi oma — kuulub ainult Maximus Kiriyakulovile. Sama kehtib selle piltide ja visualiseeringute, arvutuste ja arvutusmudelite, neid teostavate algoritmide ning andmetabelite ja nende ülesehituse kohta. Seda ei ole loovutatud ühelegi äriühingule ega ühelegi teisele isikule. Avaldamine ei anna mingit litsentsi: kopeerimiseks, reprodutseerimiseks, töötlemiseks, andmete väljavõtmiseks ning teksti- ja andmekaeveks, sealhulgas tehisintellekti treenimiseks, on vaja autori eelnevat kirjalikku luba.",
     updated: "Versioon 2026-09-21",
     sections: [
       ["Teave, mitte pakkumine", "Selle veebisaidi tooteteave kirjeldab heakskiidetud spetsifikatsioone, seadistusarhitektuuri ja programmide selgitusi. See ei ole müügipakkumine, hinnakiri, laoseisu teade ega tarnekohustus. Ärilised tingimused lepitakse eraldi kirjalikult kokku lepingupartneriga, kes on igas tehingus nimetatud."],
@@ -1149,6 +1152,7 @@ const et = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metoodika, arvutusmudel ja algoritmid © {years} Maximus Kiriyakulov. Kõik õigused kaitstud." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: täielik kompositsioon — treeningreket eest- ja külgvaates, graveeritud lõvimedaljon ümmargusel kontaktipeal, MAXIMUS ja SPOT TRAINER gravüür piki varrast ning kaheksanurkne otsakork lõvimärgiga",
     greatHero: "MAXIMUS GREAT seeria, 363 g: täielik kompositsioon punase ja kollase peadetailiga, läikiv MAXIMUS kiri, Maximuse allkiri varrel ja lõvimärk käepidemel",

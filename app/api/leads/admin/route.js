@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { readConfig, processingSummary } from "../../../../lib/intake/config";
 import { deliver, processDue } from "../../../../lib/intake/notify";
 import { safeEqual, clientIp, ipBucket } from "../../../../lib/intake/service";

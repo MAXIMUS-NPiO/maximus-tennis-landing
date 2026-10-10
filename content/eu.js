@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Basque dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const eu = {
   meta: {
@@ -80,6 +81,7 @@ const eu = {
   },
   nav: {
     language: "Hizkuntza",
+    langMenu: { title: "Aukeratu hizkuntza", count: "Hizkuntzak: {n} · webgune osoa bakoitzean", search: "Izena edo kodea", device: "Zure gailua", empty: "Ez dago «{q}» bilaketarekin bat datorren hizkuntzarik.", close: "Itxi", all: "Guztiak" },
     groups: { racquets: "Erraketak", training: "Entrenamendua", ecosystem: "Ekosistema", partnerships: "Lankidetzak" },
     familyPlan: "Familia Tenisa",
     racquets: "Erraketa-serieak eta konparazioa",
@@ -126,6 +128,7 @@ const eu = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Analitikaren ezarpenak",
+    authorship: "Webgune honetako testuen, irudien, diseinuaren, kalkuluen, algoritmoen eta kodearen egilea. Eskubide guztiak erreserbatuta.",
     subscribe: {
       title: "Jarraitu MAXIMUS munduan",
       line: "Serie berriak, doikuntza-datak, entrenamendu-materiala eta jabeen programa. Urtean gutun gutxi batzuk, besterik ez.",
@@ -939,7 +942,7 @@ const eu = {
   },
   terms: {
     title: "Erabilera-baldintzak",
-    copyright: "Webgune honen egile-eskubideak — testuak, argazkiak, diseinua eta kodea — Maximus Kiriyakulov-enak dira soilik. Ez dira enpresa bati edo beste pertsona bati laga.",
+    copyright: "Webgune honen egile-eskubideak — testuak, argazkiak, diseinua eta kodea — Maximus Kiriyakulov-enak dira soilik. Gauza bera gertatzen da haren irudi eta bistaratzeekin, kalkulu eta kalkulu-ereduekin, horiek gauzatzen dituzten algoritmoekin eta datu-taulekin eta haien antolaketarekin. Ez dira enpresa bati edo beste pertsona bati laga. Argitaratzeak ez du lizentziarik ematen: kopiatzeko, erreproduzitzeko, egokitzeko, datuak ateratzeko eta testu- eta datu-meatzaritzarako, adimen artifiziala entrenatzeko barne, egilearen aldez aurretiko idatzizko baimena behar da.",
     updated: "2026-09-21 bertsioa",
     sections: [
       ["Informazioa, ez eskaintza", "Webgune honetako produktu-informazioak onartutako zehaztapenak, konfigurazio-arkitektura eta programen azalpenak deskribatzen ditu. Ez da salmenta-eskaintza bat, ez prezio-zerrenda bat, ez izakinen adierazpen bat, ez entrega-konpromiso bat. Baldintza komertzialak bereiz eta idatziz adosten dira eragiketa bakoitzean identifikatutako kontratu-entitatearekin."],
@@ -1149,6 +1152,7 @@ const eu = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodologia, kalkulu-eredua eta algoritmoak © {years} Maximus Kiriyakulov. Eskubide guztiak erreserbatuta." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: konposizio osoa — entrenagailua aurretik eta saihetsetik ikusita, lehoiaren domina grabatua kontaktu-buru biribilean, MAXIMUS eta SPOT TRAINER grabatuak lepoan zehar, eta lehoiaren marka daraman oinarri-tapa oktogonala",
     greatHero: "MAXIMUS GREAT seriea, 363 g: konposizio osoa buruko xehetasun gorri eta horiekin, MAXIMUS letra distiratsuekin, Maximus-en autografoarekin lepoan eta kirtenean lehoiaren ikurrarekin",

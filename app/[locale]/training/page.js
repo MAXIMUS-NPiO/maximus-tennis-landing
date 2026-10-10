@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Link from "next/link";
 import { ctx, meta } from "../../../lib/page";
 import { href } from "../../../lib/paths";

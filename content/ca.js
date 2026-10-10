@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Catalan dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const ca = {
   meta: {
@@ -80,6 +81,7 @@ const ca = {
   },
   nav: {
     language: "Idioma",
+    langMenu: { title: "Tria la teva llengua", count: "Llengües: {n} · el lloc complet en cadascuna", search: "Nom o codi", device: "El teu dispositiu", empty: "Cap llengua coincideix amb «{q}».", close: "Tanca", all: "Totes" },
     groups: { racquets: "Raquetes", training: "Entrenament", ecosystem: "Ecosistema", partnerships: "Col·laboracions" },
     familyPlan: "Tennis familiar",
     racquets: "Sèries de raquetes i comparació",
@@ -126,6 +128,7 @@ const ca = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Configuració d'analítica",
+    authorship: "Autor dels textos, imatges, disseny, càlculs, algorismes i codi d'aquest lloc web. Tots els drets reservats.",
     subscribe: {
       title: "Continueu amb MAXIMUS",
       line: "Sèries noves, dates d'adaptació, material d'entrenament i el programa de propietaris. Unes poques cartes l'any, res més.",
@@ -939,7 +942,7 @@ const ca = {
   },
   terms: {
     title: "Condicions d'ús",
-    copyright: "Els drets d'autor d'aquest lloc web — els textos, les fotografies, el disseny i el codi — pertanyen únicament a Maximus Kiriyakulov. No s'han cedit a cap empresa ni a cap altra persona.",
+    copyright: "Els drets d'autor d'aquest lloc web — els textos, les fotografies, el disseny i el codi — pertanyen únicament a Maximus Kiriyakulov. El mateix s'aplica a les seves imatges i visualitzacions, als seus càlculs i models de càlcul, als algorismes que els apliquen i a les seves taules de dades i la seva organització. No s'han cedit a cap empresa ni a cap altra persona. La publicació no atorga cap llicència: la còpia, la reproducció, l'adaptació, l'extracció de dades i la mineria de textos i dades, inclòs l'entrenament d'intel·ligència artificial, requereixen l'autorització prèvia per escrit de l'autor.",
     updated: "Versió 2026-09-21",
     sections: [
       ["Informació, no oferta", "La informació de producte d'aquest lloc web descriu especificacions aprovades, arquitectura de configuració i explicacions dels programes. No és una oferta de venda, ni una llista de preus, ni una declaració d'estoc, ni un compromís de lliurament. Les condicions comercials s'acorden a part i per escrit amb l'entitat contractant identificada a cada operació."],
@@ -1149,6 +1152,7 @@ const ca = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodologia, model de càlcul i algorismes © {years} Maximus Kiriyakulov. Tots els drets reservats." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: la composició completa — l'entrenador vist de davant i de costat, el medalló del lleó gravat al cap de contacte rodó, el gravat MAXIMUS i SPOT TRAINER al llarg del coll i el tap octogonal amb la marca del lleó",
     greatHero: "Sèrie MAXIMUS GREAT, 363 g: la composició completa amb els detalls vermells i grocs al cap, les lletres MAXIMUS brillants, l'autògraf de Maximus al coll i el lleó al mànec",

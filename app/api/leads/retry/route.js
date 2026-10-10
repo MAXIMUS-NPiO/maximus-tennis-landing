@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { readConfig } from "../../../../lib/intake/config";
 import { processDue } from "../../../../lib/intake/notify";
 import { retryBabyOutbox } from "../../../../lib/intake/site-events";

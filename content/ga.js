@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Irish (Gaeilge, An Caighdeán Oifigiúil) dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const ga = {
   meta: {
@@ -80,6 +81,7 @@ const ga = {
   },
   nav: {
     language: "Teanga",
+    langMenu: { title: "Roghnaigh do theanga", count: "Teangacha: {n} · an suíomh iomlán i ngach ceann", search: "Ainm nó cód", device: "Do ghléas", empty: "Níl teanga ar bith ag teacht le “{q}”.", close: "Dún", all: "Uile" },
     groups: { racquets: "Raicéid", training: "Traenáil", ecosystem: "Éiceachóras", partnerships: "Comhpháirtithe" },
     familyPlan: "Leadóg Theaghlaigh",
     racquets: "Sraitheanna raicéad agus comparáid",
@@ -126,6 +128,7 @@ const ga = {
     instagram: "Instagram",
     email: "Ríomhphost",
     analytics: "Socruithe anailísíochta",
+    authorship: "Údar théacsanna, íomhánna, dhearadh, ríomhanna, algartam agus chód an tsuímh seo. Gach ceart ar cosaint.",
     subscribe: {
       title: "Fan le MAXIMUS",
       line: "Sraitheanna nua, dátaí feistithe, ábhar traenála agus clár na n-úinéirí. Cúpla litir sa bhliain, agus sin é.",
@@ -939,7 +942,7 @@ const ga = {
   },
   terms: {
     title: "Téarmaí úsáide",
-    copyright: "Is le Maximus Kiriyakulov amháin an cóipcheart sa suíomh seo — a théacsanna, a ghrianghraif, a dhearadh agus a chód. Níor sannadh é d'aon chuideachta ná d'aon duine eile.",
+    copyright: "Is le Maximus Kiriyakulov amháin an cóipcheart sa suíomh seo — a théacsanna, a ghrianghraif, a dhearadh agus a chód. Is amhlaidh an scéal maidir lena íomhánna agus a léirshamhlú, a ríomhanna agus a shamhlacha ríofa, na halgartaim a chuireann i bhfeidhm iad, agus a tháblaí sonraí agus a n-eagar. Níor sannadh é d'aon chuideachta ná d'aon duine eile. Ní thugann foilsiú aon cheadúnas: teastaíonn cead i scríbhinn roimh ré ón údar le haghaidh cóipeála, atáirgthe, oiriúnaithe, sonraí a bhaint agus mianadóireachta téacs agus sonraí, lena n-áirítear chun intleacht shaorga a oiliúint.",
     updated: "Leagan 2026-09-21",
     sections: [
       ["Eolas, agus ní tairiscint", "Déanann faisnéis táirge ar an suíomh seo cur síos ar shonraíochtaí ceadaithe, ar ailtireacht cumraíochta agus ar mhínithe clár. Ní tairiscint díola, ní praghasliosta, ní ráiteas stoic ná ní gealltanas seachadta í. Aontaítear téarmaí tráchtála ar leithligh i scríbhinn leis an aonán conarthach a shainaithnítear i ngach idirbheart."],
@@ -1149,6 +1152,7 @@ const ga = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Modheolaíocht, samhail ríofa agus algartaim © {years} Maximus Kiriyakulov. Gach ceart ar cosaint." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: an chumadóireacht iomlán — an traenálaí ó thosach agus ó thaobh, rondal greanta an leoin ar an gceann teagmhála cruinn, an greanadh MAXIMUS agus SPOT TRAINER feadh an chrainn, agus an caipín deiridh ochtagánach le marc an leoin",
     greatHero: "Sraith MAXIMUS GREAT, 363 g: an chumadóireacht iomlán le mionsonraí dearga agus buí ar an gceann, litreoireacht MAXIMUS shnasta, síniú Maximus ar an gcrann agus marc an leoin ar an hanla",

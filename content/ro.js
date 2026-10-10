@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Romanian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const ro = {
   meta: {
@@ -80,6 +81,7 @@ const ro = {
   },
   nav: {
     language: "Limbă",
+    langMenu: { title: "Alegeți limba", count: "Limbi: {n} · întregul site în fiecare", search: "Nume sau cod", device: "Dispozitivul dvs.", empty: "Nicio limbă nu corespunde cu „{q}”.", close: "Închide", all: "Toate" },
     groups: { racquets: "Rachete", training: "Antrenament", ecosystem: "Ecosistem", partnerships: "Parteneriate" },
     familyPlan: "Tenis în familie",
     racquets: "Seriile de rachete și comparația",
@@ -126,6 +128,7 @@ const ro = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Setări de analiză",
+    authorship: "Autorul textelor, imaginilor, designului, calculelor, algoritmilor și codului acestui site. Toate drepturile rezervate.",
     subscribe: {
       title: "Rămâneți cu MAXIMUS",
       line: "Serii noi, date de fitting, materiale de antrenament și programul pentru proprietari. Câteva scrisori pe an, nimic altceva.",
@@ -939,7 +942,7 @@ const ro = {
   },
   terms: {
     title: "Termeni de utilizare",
-    copyright: "Dreptul de autor asupra acestui site — asupra textelor, fotografiilor, designului și codului său — aparține exclusiv lui Maximus Kiriyakulov. Nu a fost cedat niciunei societăți și niciunei alte persoane.",
+    copyright: "Dreptul de autor asupra acestui site — asupra textelor, fotografiilor, designului și codului său — aparține exclusiv lui Maximus Kiriyakulov. Același lucru este valabil pentru imaginile și vizualizările sale, calculele și modelele de calcul, algoritmii care le pun în aplicare, precum și pentru tabelele de date și organizarea lor. Nu a fost cedat niciunei societăți și niciunei alte persoane. Publicarea nu acordă nicio licență: copierea, reproducerea, adaptarea, extragerea de date și extragerea de text și date, inclusiv pentru antrenarea inteligenței artificiale, necesită acordul prealabil scris al autorului.",
     updated: "Versiunea 2026-09-21",
     sections: [
       ["Informare, nu ofertă", "Informațiile despre produse de pe acest site descriu specificații aprobate, arhitectura de configurare și explicații ale programelor. Nu reprezintă o ofertă de vânzare, o listă de prețuri, o declarație de stoc sau un angajament de livrare. Condițiile comerciale se convin separat, în scris, cu entitatea contractantă indicată în fiecare tranzacție."],
@@ -1149,6 +1152,7 @@ const ro = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodologie, model de calcul și algoritmi © {years} Maximus Kiriyakulov. Toate drepturile rezervate." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: compoziția completă — dispozitivul de antrenament văzut din față și din profil, medalionul gravat cu leu pe capul rotund de contact, gravura MAXIMUS și SPOT TRAINER de-a lungul tijei și capacul inferior octogonal cu emblema leului",
     greatHero: "Seria MAXIMUS GREAT, 363 g: compoziția completă, cu detalii roșii și galbene pe cap, inscripția MAXIMUS lucioasă, autograful Maximus pe tijă și leul de pe mâner",

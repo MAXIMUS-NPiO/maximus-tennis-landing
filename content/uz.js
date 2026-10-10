@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Uzbek dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const uz = {
   meta: {
@@ -80,6 +81,7 @@ const uz = {
   },
   nav: {
     language: "Til",
+    langMenu: { title: "Tilni tanlang", count: "Tillar: {n} · har birida butun sayt", search: "Nomi yoki kodi", device: "Qurilmangiz", empty: "“{q}” soʻroviga mos til yoʻq.", close: "Yopish", all: "Barchasi" },
     groups: { racquets: "Raketkalar", training: "Mashgʻulot", ecosystem: "Ekotizim", partnerships: "Hamkorlik" },
     familyPlan: "Oilaviy tennis",
     racquets: "Raketka seriyalari va qiyoslash",
@@ -126,6 +128,7 @@ const uz = {
     instagram: "Instagram",
     email: "E-pochta",
     analytics: "Analitika sozlamalari",
+    authorship: "Ushbu sayt matnlari, tasvirlari, dizayni, hisob-kitoblari, algoritmlari va kodining muallifi. Barcha huquqlar himoyalangan.",
     subscribe: {
       title: "MAXIMUS bilan qoling",
       line: "Yangi seriyalar, fitting sanalari, mashgʻulot materiallari va egalar dasturi. Yilda bir necha xat — boshqa hech narsa.",
@@ -939,7 +942,7 @@ const uz = {
   },
   terms: {
     title: "Foydalanish shartlari",
-    copyright: "Bu saytga — uning matnlari, suratlari, dizayni va kodiga — mualliflik huquqi faqat Maximus Kiriyakulovga tegishli. U hech qanday kompaniyaga va hech qanday boshqa shaxsga oʻtkazilmagan.",
+    copyright: "Bu saytga — uning matnlari, suratlari, dizayni va kodiga — mualliflik huquqi faqat Maximus Kiriyakulovga tegishli. Xuddi shu narsa uning tasvirlari va vizualizatsiyalari, hisob-kitoblari va hisoblash modellari, ularni amalga oshiruvchi algoritmlar hamda maʼlumotlar jadvallari va ularning tuzilishiga ham tegishli. U hech qanday kompaniyaga va hech qanday boshqa shaxsga oʻtkazilmagan. Eʼlon qilinishi hech qanday litsenziya bermaydi: nusxa koʻchirish, takrorlash, qayta ishlash, maʼlumotlarni ajratib olish hamda matn va maʼlumotlarni tahlil qilish, jumladan sunʼiy intellektni oʻqitish uchun ham, muallifning oldindan yozma ruxsatini talab qiladi.",
     updated: "Versiya 2026-09-21",
     sections: [
       ["Maʼlumot, taklif emas", "Bu saytdagi mahsulot maʼlumoti tasdiqlangan spetsifikatsiyalarni, konfiguratsiya arxitekturasini va dastur tushuntirishlarini taʼriflaydi. Bu sotish taklifi, narxlar roʻyxati, ombordagi qoldiq bayoni yoki yetkazib berish majburiyati emas. Tijorat shartlari har bir operatsiyada koʻrsatilgan shartnoma tuzuvchi shaxs bilan alohida, yozma ravishda kelishiladi."],
@@ -1149,6 +1152,7 @@ const uz = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodika, hisoblash modeli va algoritmlar © {years} Maximus Kiriyakulov. Barcha huquqlar himoyalangan." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: toʻliq kompozitsiya — oldidan va yondan koʻrsatilgan trenajyor, yumaloq kontakt boshidagi gravirovka qilingan yumaloq sher emblemasi, shaft boʻylab MAXIMUS va SPOT TRAINER gravirovkasi va sher belgili sakkiz qirrali dastak qopqogʻi",
     greatHero: "MAXIMUS GREAT seriyasi, 363 g: qizil va sariq bosh detallari, yaltiroq MAXIMUS yozuvi, shaftdagi Maximus avtografi va dastakdagi sher belgisi bilan toʻliq kompozitsiya",

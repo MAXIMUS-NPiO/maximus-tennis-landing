@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Crawl every localized route, verify HTTP 200, follow every internal link once, and scan the
  * rendered HTML for strings that must never appear on the public site.
@@ -12,9 +13,11 @@ const LANG_RE = new RegExp(`<html lang="(${HREFLANGS.map((x) => x.replace(/[.*+?
 
 // Checked against the whole HTML (markup, attributes and inline data).
 const FORBIDDEN_RAW = [
-  /shaleni/i, /ghana/i, /borteyman/i, /norris/i, /go tennis/i, /1,104,600/, /2,946,618/, /381\.135245/, /0\.162636422/,
-  /NOT_PROVIDED/, /FOUNDER_CONFIRMED/, /gm@maximussports/i, /maximussports\.ae/i, /\+971/,
+  /NOT_PROVIDED/, /FOUNDER_CONFIRMED/, /\+971/,
 ];
+// Confidential terms are checked by hash (scripts/lib/guard.mjs), so this public script does not
+// publish what it guards.
+const { confidentialHits } = await import("./lib/guard.mjs");
 // Checked against visible text only (tags, scripts and styles removed): wording that must never be published.
 /**
  * MAXIMUS talks about itself and compares itself with no one (Founder, 1 October 2026). Two things
@@ -50,8 +53,8 @@ const FAMILY_PLANNING = [
 
 const FORBIDDEN_TEXT = [
   ...COMPETITORS, ...COMPARISONS, ...FAMILY_PLANNING,
-  /\bjude\b/i, /\bnii\b/i, /5,?000 racquets? per week/i, /20,000 per month/i, /temporary/i, /placeholder/i,
-  /lorem ipsum/i, /TODO/, /royalt[a-z]* (rate|percentage) of \d/i, /50\s?%/, /240\s?[–-]\s?340/, /\bwallet\b/i, /\bpayout/i,
+  /temporary/i, /placeholder/i,
+  /lorem ipsum/i, /TODO/, /royalt[a-z]* (rate|percentage) of \d/i, /50\s?%/, /\bwallet\b/i, /\bpayout/i,
 ];
 const visibleText = (html) => html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ");
 
@@ -84,6 +87,15 @@ while (queue.length) {
   const { status, html } = await get(path);
   if (status !== 200) { problems.push(`${status} ${path}`); continue; }
   for (const re of FORBIDDEN_RAW) if (re.test(html)) problems.push(`forbidden ${re} in ${path}`);
+  if (confidentialHits(html)) problems.push(`confidential term (guarded by hash) in ${path}`);
+  // Authorship on every page (Founder, 10 October 2026): the footer line with the author's name,
+  // the head metadata, the structured data; the calculation-model line under every tool; the
+  // anchored rights statement on the terms page.
+  if (!/data-authorship="site"[^>]*>[\s\S]{0,200}?Maximus Kiriyakulov/.test(html)) problems.push(`footer authorship line missing in ${path}`);
+  if (!/<meta name="copyright" content="© 20\d\d(–20\d\d)? Maximus Kiriyakulov/.test(html)) problems.push(`copyright meta missing in ${path}`);
+  if (!/"copyrightHolder":\{"@type":"Person","name":"Maximus Kiriyakulov"\}/.test(html)) problems.push(`structured authorship missing in ${path}`);
+  if (/\/(family-plan|build|gps)$/.test(path) && !/data-authorship="model"[^>]*>[^<]*Maximus Kiriyakulov/.test(html)) problems.push(`calculation-model authorship missing in ${path}`);
+  if (/\/terms$/.test(path) && !/id="copyright"/.test(html)) problems.push(`rights statement anchor missing in ${path}`);
   const text = visibleText(html);
   for (const re of FORBIDDEN_TEXT) if (re.test(text)) problems.push(`forbidden text ${re} in ${path}`);
   // English pages only: the qualifier phrases are English. Every other language is covered by the
@@ -106,4 +118,4 @@ if (nf.status !== 404) problems.push(`expected 404 for unknown page, got ${nf.st
 
 console.log(`checked ${seen.size} paths`);
 if (problems.length) { console.error(problems.join("\n")); process.exit(1); }
-console.log("crawl OK — all 200, no forbidden strings, lang/canonical/hreflang present");
+console.log("crawl OK — all 200, no forbidden strings, lang/canonical/hreflang present, authorship on every page");

@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Family Plan — the control cases of §10 of the Founder's brief, one test each.
  * Integer arithmetic is compared exactly; fractional hours and unit prices within 1e-9.

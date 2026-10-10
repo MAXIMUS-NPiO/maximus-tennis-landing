@@ -1,0 +1,19 @@
+{
+  "@context": ["http://www.w3.org/ns/odrl.jsonld", { "tdm": "http://www.w3.org/ns/tdmrep#" }],
+  "@type": "Offer",
+  "profile": "http://www.w3.org/ns/tdmrep",
+  "uid": "https://maximus.tennis/tdm-policy.json",
+  "assigner": {
+    "uid": "https://maximus.tennis/en/terms#copyright",
+    "vcard:fn": "Maximus Kiriyakulov",
+    "vcard:hasEmail": "gps@maximus.tennis",
+    "vcard:hasURL": "https://maximus.tennis/en/contact"
+  },
+  "permission": [
+    {
+      "target": "https://maximus.tennis/",
+      "action": "tdm:mine",
+      "duty": [{ "action": "obtainConsent" }]
+    }
+  ]
+}

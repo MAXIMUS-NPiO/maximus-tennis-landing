@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Korean dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const ko = {
   meta: {
@@ -80,6 +81,7 @@ const ko = {
   },
   nav: {
     language: "언어",
+    langMenu: { title: "언어 선택", count: "언어: {n}개 · 각 언어로 사이트 전체 제공", search: "이름 또는 코드", device: "사용 중인 기기", empty: "‘{q}’와(과) 일치하는 언어가 없습니다.", close: "닫기", all: "전체" },
     groups: { racquets: "라켓", training: "트레이닝", ecosystem: "생태계", partnerships: "파트너십" },
     familyPlan: "패밀리 테니스",
     racquets: "라켓 시리즈와 비교",
@@ -126,6 +128,7 @@ const ko = {
     instagram: "Instagram",
     email: "Email",
     analytics: "분석 설정",
+    authorship: "이 웹사이트의 텍스트, 이미지, 디자인, 계산, 알고리즘 및 코드의 저작자. 모든 권리 보유.",
     subscribe: {
       title: "MAXIMUS와 함께",
       line: "새 시리즈, 피팅 일정, 트레이닝 자료, 오너 프로그램 소식을 전해 드립니다. 1년에 몇 통뿐, 그 외에는 보내지 않습니다.",
@@ -939,7 +942,7 @@ const ko = {
   },
   terms: {
     title: "이용약관",
-    copyright: "이 웹사이트(텍스트, 사진, 디자인 및 코드)의 저작권은 오직 Maximus Kiriyakulov 개인에게 귀속됩니다. 어떠한 회사에도, 다른 어떠한 사람에게도 양도되지 않았습니다.",
+    copyright: "이 웹사이트(텍스트, 사진, 디자인 및 코드)의 저작권은 오직 Maximus Kiriyakulov 개인에게 귀속됩니다. 이미지와 시각화, 계산과 계산 모델, 이를 구현하는 알고리즘, 그리고 데이터 표와 그 구성에도 동일하게 적용됩니다. 어떠한 회사에도, 다른 어떠한 사람에게도 양도되지 않았습니다. 게시는 어떠한 이용 허락도 부여하지 않습니다. 복제, 재제작, 각색, 데이터 추출, 그리고 인공지능 학습을 포함한 텍스트 및 데이터 마이닝에는 저작자의 사전 서면 허가가 필요합니다.",
     updated: "버전 2026-09-21",
     sections: [
       ["정보 제공이며 청약이 아님", "이 웹사이트의 제품 정보는 승인된 사양, 구성 아키텍처, 프로그램 설명을 기술합니다. 판매 청약, 가격표, 재고 명세, 납품 약정이 아닙니다. 상업 조건은 각 거래에 명시된 계약 주체와 별도로 서면 합의합니다."],
@@ -1149,6 +1152,7 @@ const ko = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "방법론, 계산 모델 및 알고리즘 © {years} Maximus Kiriyakulov. 모든 권리 보유." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: 전체 구성 — 정면과 측면에서 본 본체, 원형 타깃 헤드에 각인된 사자 원형 엠블럼, 샤프트를 따라 새겨진 MAXIMUS와 SPOT TRAINER, 사자 마크가 있는 팔각형 버트캡",
     greatHero: "MAXIMUS GREAT 시리즈, 363 g: 빨강과 노랑 헤드 디테일, 유광 MAXIMUS 레터링, 샤프트의 Maximus 오토그래프, 그립의 사자 엠블럼을 갖춘 전체 구성",

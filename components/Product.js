@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Link from "next/link";
 import { seriesList, precisionClasses, grips } from "../data/products";
 import { href } from "../lib/paths";

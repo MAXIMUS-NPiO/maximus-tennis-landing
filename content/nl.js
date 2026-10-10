@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Dutch dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const nl = {
   meta: {
@@ -80,6 +81,7 @@ const nl = {
   },
   nav: {
     language: "Taal",
+    langMenu: { title: "Kies uw taal", count: "Talen: {n} · de volledige website in elke taal", search: "Naam of code", device: "Uw apparaat", empty: "Geen taal gevonden voor ‘{q}’.", close: "Sluiten", all: "Alle" },
     groups: { racquets: "Rackets", training: "Training", ecosystem: "Ecosysteem", partnerships: "Samenwerking" },
     familyPlan: "Gezinstennis",
     racquets: "Racketseries en vergelijking",
@@ -126,6 +128,7 @@ const nl = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Statistiekinstellingen",
+    authorship: "Auteur van de teksten, afbeeldingen, het ontwerp, de berekeningen, algoritmen en code van deze website. Alle rechten voorbehouden.",
     subscribe: {
       title: "Blijf verbonden met MAXIMUS",
       line: "Nieuwe series, datums voor aanmetingen, trainingsmateriaal en het eigenaarsprogramma. Een paar brieven per jaar, niets meer.",
@@ -939,7 +942,7 @@ const nl = {
   },
   terms: {
     title: "Gebruiksvoorwaarden",
-    copyright: "Het auteursrecht op deze website — de teksten, foto's, het ontwerp en de code — berust uitsluitend bij Maximus Kiriyakulov. Het is niet overgedragen aan enige onderneming of aan enige andere persoon.",
+    copyright: "Het auteursrecht op deze website — de teksten, foto's, het ontwerp en de code — berust uitsluitend bij Maximus Kiriyakulov. Hetzelfde geldt voor de afbeeldingen en visualisaties, de berekeningen en rekenmodellen, de algoritmen die ze uitvoeren, en de gegevenstabellen en hun ordening. Het is niet overgedragen aan enige onderneming of aan enige andere persoon. Publicatie verleent geen licentie: kopiëren, verveelvoudigen, bewerken, het onttrekken van gegevens en tekst- en datamining, ook voor het trainen van kunstmatige intelligentie, vereisen de voorafgaande schriftelijke toestemming van de auteur.",
     updated: "Versie 2026-09-21",
     sections: [
       ["Informatie, geen aanbod", "De productinformatie op deze website beschrijft goedgekeurde specificaties, configuratiearchitectuur en uitleg over programma's. Het is geen aanbod tot verkoop, geen prijslijst, geen voorraadopgave en geen leveringsverplichting. Commerciële voorwaarden worden afzonderlijk schriftelijk overeengekomen met de contracterende entiteit die in elke transactie wordt benoemd."],
@@ -1149,6 +1152,7 @@ const nl = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Methodiek, rekenmodel en algoritmen © {years} Maximus Kiriyakulov. Alle rechten voorbehouden." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: de volledige compositie — de Spot Trainer van voren en van de zijkant, het gegraveerde ronde leeuwenembleem op de ronde contactkop, de gravure MAXIMUS en SPOT TRAINER langs de schacht en de achthoekige gripkap met het leeuwenmerk",
     greatHero: "MAXIMUS GREAT-serie, 363 g: de volledige compositie met rode en gele accenten op de kop, glanzende MAXIMUS-belettering, de handtekening van Maximus op de schacht en het leeuwenembleem op de greep",

@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Hungarian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const hu = {
   meta: {
@@ -80,6 +81,7 @@ const hu = {
   },
   nav: {
     language: "Nyelv",
+    langMenu: { title: "Válasszon nyelvet", count: "Nyelvek: {n} · a teljes oldal mindegyiken", search: "Név vagy kód", device: "Az Ön eszköze", empty: "Egyetlen nyelv sem felel meg ennek: „{q}”.", close: "Bezárás", all: "Összes" },
     groups: { racquets: "Ütők", training: "Edzés", ecosystem: "Ökoszisztéma", partnerships: "Partnerség" },
     familyPlan: "Családi tenisz",
     racquets: "Ütősorozatok és összehasonlítás",
@@ -126,6 +128,7 @@ const hu = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Analitikai beállítások",
+    authorship: "Az oldal szövegeinek, képeinek, dizájnjának, számításainak, algoritmusainak és kódjának szerzője. Minden jog fenntartva.",
     subscribe: {
       title: "Maradjon a MAXIMUS világában",
       line: "Új sorozatok, ütőillesztési időpontok, edzésanyagok és a tulajdonosi program. Évente néhány levél, semmi más.",
@@ -939,7 +942,7 @@ const hu = {
   },
   terms: {
     title: "Felhasználási feltételek",
-    copyright: "E weboldal — szövegei, fényképei, dizájnja és kódja — szerzői jogának kizárólagos jogosultja Maximus Kiriyakulov. A jogot nem ruházták át sem társaságra, sem más személyre.",
+    copyright: "E weboldal — szövegei, fényképei, dizájnja és kódja — szerzői jogának kizárólagos jogosultja Maximus Kiriyakulov. Ugyanez vonatkozik képeire és vizualizációira, számításaira és számítási modelljeire, az ezeket megvalósító algoritmusokra, valamint adattábláira és azok elrendezésére. A jogot nem ruházták át sem társaságra, sem más személyre. A közzététel semmilyen engedélyt nem ad: a másoláshoz, többszörözéshez, átdolgozáshoz, az adatok kinyeréséhez, valamint a szöveg- és adatbányászathoz – a mesterséges intelligencia betanítását is beleértve – a szerző előzetes írásbeli engedélye szükséges.",
     updated: "Verzió 2026-09-21",
     sections: [
       ["Információ, nem ajánlat", "A weboldal termékinformációi a jóváhagyott specifikációkat, a konfigurációs architektúrát és a programmagyarázatokat írják le. Nem eladási ajánlat, nem árlista, nem készletnyilatkozat és nem szállítási vállalás. A kereskedelmi feltételekről külön, írásban állapodunk meg a tranzakcióban azonosított szerződő szervezettel."],
@@ -1149,6 +1152,7 @@ const hu = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Módszertan, számítási modell és algoritmusok © {years} Maximus Kiriyakulov. Minden jog fenntartva." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: a teljes kompozíció — az eszköz elölről és oldalról, a gravírozott oroszlánembléma a kör alakú ütőfelületen, a MAXIMUS és SPOT TRAINER gravírozás a száron és a nyolcszögletű, oroszlánjeles markolatvég-kupak",
     greatHero: "MAXIMUS GREAT sorozat, 363 g: a teljes kompozíció piros és sárga fejdíszítéssel, fényes MAXIMUS feliratozással, a Maximus-aláírással a száron és az oroszlánjellel a markolaton",

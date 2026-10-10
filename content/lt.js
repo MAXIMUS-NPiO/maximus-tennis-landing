@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Lithuanian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const lt = {
   meta: {
@@ -80,6 +81,7 @@ const lt = {
   },
   nav: {
     language: "Kalba",
+    langMenu: { title: "Pasirinkite kalbą", count: "Kalbos: {n} · visa svetainė kiekviena iš jų", search: "Pavadinimas arba kodas", device: "Jūsų įrenginys", empty: "Užklausą „{q}“ atitinkančios kalbos nėra.", close: "Uždaryti", all: "Visos" },
     groups: { racquets: "Raketės", training: "Treniruotės", ecosystem: "Ekosistema", partnerships: "Partnerystė" },
     familyPlan: "Šeimos tenisas",
     racquets: "Raketių serijos ir palyginimas",
@@ -126,6 +128,7 @@ const lt = {
     instagram: "Instagram",
     email: "El. paštas",
     analytics: "Analitikos nuostatos",
+    authorship: "Šios svetainės tekstų, vaizdų, dizaino, skaičiavimų, algoritmų ir kodo autorius. Visos teisės saugomos.",
     subscribe: {
       title: "Likite su MAXIMUS",
       line: "Naujos serijos, pritaikymo datos, treniruočių medžiaga ir savininkų programa. Kelti laiškai per metus, nieko daugiau.",
@@ -939,7 +942,7 @@ const lt = {
   },
   terms: {
     title: "Naudojimo sąlygos",
-    copyright: "Autorių teisės į šią svetainę — jos tekstus, fotografijas, dizainą ir kodą — priklauso vien Maximus Kiriyakulov. Jos nebuvo perleistos jokiai bendrovei ir jokiam kitam asmeniui.",
+    copyright: "Autorių teisės į šią svetainę — jos tekstus, fotografijas, dizainą ir kodą — priklauso vien Maximus Kiriyakulov. Tas pats taikoma jos vaizdams ir vizualizacijoms, skaičiavimams ir skaičiavimo modeliams, juos įgyvendinantiems algoritmams, taip pat jos duomenų lentelėms ir jų struktūrai. Jos nebuvo perleistos jokiai bendrovei ir jokiam kitam asmeniui. Paskelbimas nesuteikia jokios licencijos: kopijuoti, atgaminti, perdirbti, išgauti duomenis ir vykdyti tekstų bei duomenų gavybą, įskaitant dirbtinio intelekto mokymą, galima tik gavus išankstinį rašytinį autoriaus leidimą.",
     updated: "Versija 2026-09-21",
     sections: [
       ["Informacija, o ne pasiūlymas", "Produkto informacija šioje svetainėje aprašo patvirtintas specifikacijas, konfigūracijos architektūrą ir programų paaiškinimus. Tai nėra pasiūlymas parduoti, kainų sąrašas, atsargų pareiškimas ar pristatymo įsipareigojimas. Komercinės sąlygos derinamos atskirai raštu su sutarties šalimi, nurodyta kiekviename sandoryje."],
@@ -1149,6 +1152,7 @@ const lt = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodika, skaičiavimo modelis ir algoritmai © {years} Maximus Kiriyakulov. Visos teisės saugomos." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: visa kompozicija — treniruočių raketė iš priekio ir iš šono, graviruotas liūto skydelis ant apvalios kontakto galvos, MAXIMUS ir SPOT TRAINER graviūra kakliuko ilgyje bei aštuonkampis rankenos galo dangtelis su liūto ženklu",
     greatHero: "MAXIMUS GREAT serija, 363 g: visa kompozicija su raudonu ir geltonu galvos apdailos akcentu, blizgiu MAXIMUS užrašu, Maximus autografu ant kakliuko ir liūto ženklu ant rankenos",

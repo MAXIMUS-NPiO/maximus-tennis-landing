@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Icelandic dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const isl = {
   meta: {
@@ -80,6 +81,7 @@ const isl = {
   },
   nav: {
     language: "Tungumál",
+    langMenu: { title: "Veldu tungumál", count: "Tungumál: {n} · allur vefurinn á hverju þeirra", search: "Heiti eða kóði", device: "Tækið þitt", empty: "Ekkert tungumál passar við „{q}“.", close: "Loka", all: "Öll" },
     groups: { racquets: "Spaðar", training: "Þjálfun", ecosystem: "Vistkerfi", partnerships: "Samstarf" },
     familyPlan: "Fjölskyldutennis",
     racquets: "Spaðalínur og samanburður",
@@ -126,6 +128,7 @@ const isl = {
     instagram: "Instagram",
     email: "Tölvupóstur",
     analytics: "Vefmælingastillingar",
+    authorship: "Höfundur texta, mynda, hönnunar, útreikninga, reiknirita og kóða þessa vefs. Allur réttur áskilinn.",
     subscribe: {
       title: "Vertu með MAXIMUS",
       line: "Nýjar línur, mátunardagar, þjálfunarefni og eigendaverkefnið. Nokkur bréf á ári, ekkert annað.",
@@ -939,7 +942,7 @@ const isl = {
   },
   terms: {
     title: "Notkunarskilmálar",
-    copyright: "Höfundarréttur að þessum vef — textum hans, ljósmyndum, hönnun og kóða — tilheyrir Maximus Kiriyakulov einum. Hann hefur ekki verið framseldur til nokkurs félags eða nokkurs annars einstaklings.",
+    copyright: "Höfundarréttur að þessum vef — textum hans, ljósmyndum, hönnun og kóða — tilheyrir Maximus Kiriyakulov einum. Hið sama gildir um myndir hans og myndræna framsetningu, útreikninga og reiknilíkön, reikniritin sem framkvæma þá og gagnatöflur hans og uppbyggingu þeirra. Hann hefur ekki verið framseldur til nokkurs félags eða nokkurs annars einstaklings. Birting veitir ekkert leyfi: afritun, eftirgerð, aðlögun, útdráttur gagna og texta- og gagnanám, þar á meðal til þjálfunar gervigreindar, krefjast fyrirfram skriflegs leyfis höfundar.",
     updated: "Útgáfa 2026-09-21",
     sections: [
       ["Upplýsingar, ekki tilboð", "Vöruupplýsingar á þessum vef lýsa samþykktum forskriftum, uppbyggingu stillinga og skýringum á verkefnum. Þær eru ekki tilboð um sölu, verðskrá, yfirlit um lager eða afhendingarskuldbinding. Viðskiptaskilmálar eru samþykktir sérstaklega og skriflega með þeim samningsaðila sem tilgreindur er í hverjum viðskiptum."],
@@ -1149,6 +1152,7 @@ const isl = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Aðferðafræði, reiknilíkan og reiknirit © {years} Maximus Kiriyakulov. Allur réttur áskilinn." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: heil samsetning — æfingaspaðinn að framan og frá hlið, grafið ljónsmerki í hringlaga höggflötinn, áletrunin MAXIMUS og SPOT TRAINER meðfram skaftinu og átthyrnd endahlíf með ljónsmerkinu",
     greatHero: "MAXIMUS GREAT-línan, 363 g: heil samsetning með rauðum og gulum áherslum á höfðinu, glansandi MAXIMUS-áletrun, undirskrift Maximus á skaftinu og ljónsmerki á handfanginu",

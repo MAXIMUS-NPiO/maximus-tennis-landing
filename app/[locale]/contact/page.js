@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { Suspense } from "react";
 import { ctx, meta, formDict } from "../../../lib/page";
 import { site } from "../../../data/site";

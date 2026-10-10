@@ -1,9 +1,11 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Link from "next/link";
 import Logo from "./Logo";
 import { site, entities } from "../data/site";
 import { href } from "../lib/paths";
 import { ConsentSettings } from "./Analytics";
 import Subscribe from "./Subscribe";
+import { notice } from "../lib/authorship";
 
 /**
  * The footer is collapsed by default. Three link groups and the legal block open on demand
@@ -48,10 +50,14 @@ export default function Footer({ locale, dict }) {
       <div className="shell footer-bottom">
         {/* The copyright notice names the author himself, not the brand: under the Berne Convention
             the name appearing on the work in the usual manner is the presumed author and rights
-            holder. It also opens the corporate and boundary statements, which belong on the page
-            but not in front of every visitor. */}
+            holder. It stands open on every page, in the page's language, with what it covers
+            (Founder, 10 October 2026: authorship by default, everywhere). The corporate and
+            boundary statements follow on demand. */}
+        <p className="footer-authorship" data-authorship="site">
+          <span className="footer-notice">{notice()}.</span> {footer.authorship}
+        </p>
         <details className="footer-legal">
-          <summary>© 2026 Maximus Kiriyakulov</summary>
+          <summary>{nav.legal}</summary>
           <div className="footer-legal-body">
             <p>{entities.institutional.name} · {entities.equipment.name} · {entities.ip.name}</p>
             <p>{footer.rights}</p>

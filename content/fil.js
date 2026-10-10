@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Filipino dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const fil = {
   meta: {
@@ -80,6 +81,7 @@ const fil = {
   },
   nav: {
     language: "Wika",
+    langMenu: { title: "Piliin ang iyong wika", count: "Mga wika: {n} · buong site sa bawat isa", search: "Pangalan o code", device: "Ang iyong aparato", empty: "Walang wikang tumutugma sa “{q}”.", close: "Isara", all: "Lahat" },
     groups: { racquets: "Raketa", training: "Pagsasanay", ecosystem: "Ekosistema", partnerships: "Katuwang" },
     familyPlan: "Tennis ng Pamilya",
     racquets: "Mga serye ng raketa at paghahambing",
@@ -126,6 +128,7 @@ const fil = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Mga setting ng analytics",
+    authorship: "May-akda ng mga teksto, larawan, disenyo, kalkulasyon, algoritmo at code ng site na ito. Nakalaan ang lahat ng karapatan.",
     subscribe: {
       title: "Manatiling kasama ng MAXIMUS",
       line: "Mga bagong serye, mga petsa ng fitting, materyales sa pagsasanay at ang programa para sa mga may-ari. Ilang liham bawat taon, wala nang iba.",
@@ -939,7 +942,7 @@ const fil = {
   },
   terms: {
     title: "Mga tuntunin ng paggamit",
-    copyright: "Ang karapatang-ari sa website na ito — ang mga teksto, litrato, disenyo at code nito — ay pag-aari lamang ni Maximus Kiriyakulov. Hindi ito inilipat sa anumang kumpanya o sa sinumang ibang tao.",
+    copyright: "Ang karapatang-ari sa website na ito — ang mga teksto, litrato, disenyo at code nito — ay pag-aari lamang ni Maximus Kiriyakulov. Ganito rin ang para sa mga larawan at biswalisasyon nito, mga kalkulasyon at modelo ng kalkulasyon, mga algoritmong nagpapatupad sa mga ito, at mga talaan ng datos nito at ang pagkakaayos ng mga ito. Hindi ito inilipat sa anumang kumpanya o sa sinumang ibang tao. Walang ibinibigay na lisensiya ang paglalathala: ang pagkopya, muling paglikha, pag-aangkop, pagkuha ng datos, at pagmimina ng teksto at datos, kabilang ang pagsasanay ng artipisyal na intelihensiya, ay nangangailangan ng naunang nakasulat na pahintulot ng may-akda.",
     updated: "Bersyon 2026-09-21",
     sections: [
       ["Impormasyon, hindi alok", "Inilalarawan ng impormasyon tungkol sa produkto sa website na ito ang mga aprubadong espesipikasyon, arkitektura ng konpigurasyon at mga paliwanag tungkol sa programa. Hindi ito alok na magbenta, listahan ng presyo, pahayag tungkol sa imbentaryo o pangako sa paghahatid. Ang mga komersyal na tuntunin ay pinagkakasunduan nang hiwalay at nakasulat kasama ang entidad na nakikipagkontrata na tinutukoy sa bawat transaksyon."],
@@ -1149,6 +1152,7 @@ const fil = {
       in: "Senaryong {scenario}: {field}",
     },
   },
+  rights: { model: "Metodolohiya, modelo ng kalkulasyon at mga algoritmo © {years} Maximus Kiriyakulov. Nakalaan ang lahat ng karapatan." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: ang buong komposisyon — ang trainer na makikita mula sa harap at gilid, ang inukit na bilog na sagisag ng leon sa bilog na head ng pagtama, ang pag-ukit ng MAXIMUS at SPOT TRAINER sa kahabaan ng tangkay, at ang oktagonal na takip sa dulo ng hawakan na may markang leon",
     greatHero: "Seryeng MAXIMUS GREAT, 363 g: ang buong komposisyon na may pula at dilaw na detalye sa head, makintab na letrang MAXIMUS, ang lagda ni Maximus sa tangkay at ang leon sa hawakan",

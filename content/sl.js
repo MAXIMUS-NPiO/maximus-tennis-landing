@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Slovenian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const sl = {
   meta: {
@@ -80,6 +81,7 @@ const sl = {
   },
   nav: {
     language: "Jezik",
+    langMenu: { title: "Izberite jezik", count: "Jeziki: {n} · celotno spletno mesto v vsakem", search: "Ime ali koda", device: "Vaša naprava", empty: "Noben jezik se ne ujema z »{q}«.", close: "Zapri", all: "Vsi" },
     groups: { racquets: "Loparji", training: "Vadba", ecosystem: "Ekosistem", partnerships: "Partnerstva" },
     familyPlan: "Družinski tenis",
     racquets: "Serije loparjev in primerjava",
@@ -126,6 +128,7 @@ const sl = {
     instagram: "Instagram",
     email: "E-pošta",
     analytics: "Nastavitve analitike",
+    authorship: "Avtor besedil, slik, oblikovanja, izračunov, algoritmov in kode tega spletnega mesta. Vse pravice pridržane.",
     subscribe: {
       title: "Ostanite z MAXIMUS",
       line: "Nove serije, termini prilagajanja loparjev, gradiva za vadbo in program za lastnike. Nekaj pisem na leto, nič drugega.",
@@ -939,7 +942,7 @@ const sl = {
   },
   terms: {
     title: "Pogoji uporabe",
-    copyright: "Avtorska pravica na tem spletnem mestu — na njegovih besedilih, fotografijah, oblikovanju in kodi — pripada izključno Maximusu Kiriyakulovu. Ni bila prenesena na nobeno družbo in na nobeno drugo osebo.",
+    copyright: "Avtorska pravica na tem spletnem mestu — na njegovih besedilih, fotografijah, oblikovanju in kodi — pripada izključno Maximusu Kiriyakulovu. Enako velja za njegove slike in vizualizacije, izračune in računske modele, algoritme, ki jih izvajajo, ter za njegove podatkovne tabele in njihovo ureditev. Ni bila prenesena na nobeno družbo in na nobeno drugo osebo. Objava ne podeljuje nobene licence: kopiranje, reproduciranje, predelava, pridobivanje podatkov ter besedilno in podatkovno rudarjenje, tudi za učenje umetne inteligence, zahtevajo predhodno pisno dovoljenje avtorja.",
     updated: "Različica 2026-09-21",
     sections: [
       ["Informacija, ne ponudba", "Informacije o izdelkih na tem spletnem mestu opisujejo odobrene specifikacije, arhitekturo nastavitev in razlage programov. Niso ponudba za prodajo, cenik, izjava o zalogi ali zaveza o dobavi. Poslovni pogoji se dogovorijo posebej in pisno s pogodbenim subjektom, navedenim pri vsaki transakciji."],
@@ -1149,6 +1152,7 @@ const sl = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodologija, računski model in algoritmi © {years} Maximus Kiriyakulov. Vse pravice pridržane." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: celotna kompozicija — pripomoček od spredaj in s strani, gravirani lev v okroglem polju na okrogli kontaktni glavi, gravura MAXIMUS in SPOT TRAINER po vratu ter osmerokotni zaključni pokrovček z levom",
     greatHero: "Serija MAXIMUS GREAT, 363 g: celotna kompozicija z rdečimi in rumenimi detajli glave, sijajnim napisom MAXIMUS, podpisom Maximus na vratu in znakom leva na ročaju",

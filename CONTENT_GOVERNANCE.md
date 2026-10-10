@@ -16,7 +16,7 @@ There is no CMS. Content is a version-controlled content layer with a documented
 ## Publication rules
 1. A concept or planned service is never promoted to an operational service by editing text alone. Status labels (`STATUS` in `data/site.js`) change only with an implementation or a written decision.
 2. No prices, stock, lead times, minimum quantities, warranties, capacity figures, royalty rates, forecasts, valuations, partner names or testimonials without current written approval and a source.
-3. No SHALENI content, no discontinued foam-handle products, no rejected visuals or their derivatives, no "zero tolerance" wording, no competitor comparisons, no superlatives (elite, exclusive, revolutionary, world-class, best, number one).
+3. No content of the Founder's other brands, no discontinued foam-handle products, no rejected visuals or their derivatives, no "zero tolerance" wording, no competitor comparisons, no superlatives (elite, exclusive, revolutionary, world-class, best, number one).
 4. Product photography follows `ASSET_MANIFEST.md`; missing material is recorded in `CONTENT_GAPS.md` with what it blocks.
 5. No dependency on other trading sites: primary product CTAs lead to this site's own request flows; no store links in primary routes.
 6. Requests: the only production intake is `POST /api/leads` (see README). Mock handlers, `mailto:`, copy-to-clipboard or browser storage never count as accepted requests. Contact details, free text, engraving and child information never enter browser storage or analytics.

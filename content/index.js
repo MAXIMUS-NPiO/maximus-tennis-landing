@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Content registry. One line per language, next to its entry in data/site.js → localeMeta.
  * Static imports are required so the bundler can include each file.

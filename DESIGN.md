@@ -101,7 +101,7 @@ Status dots: current/confirmed = accent; development/requested/target = `#b8862b
 - Only the official MAXIMUS marks: the MAXIMUS GPS lockup, the lion emblem and the GPS mark, raster sources cropped only, never redrawn, recoloured or approximated.
 - Product photography is used only within the purpose stated in the owner's manifest and registered in `ASSET_MANIFEST.md`; production use requires release approval. No deformed frames, altered string beds, invented logos, generative reconstruction or third-party racquets; previously rejected visuals and their derivatives are excluded.
 - Where approved imagery is missing, the section shows a typographic tile and exact data; the gap is recorded in `CONTENT_GAPS.md`, never filled with a substitute. The GREAT inspection video is prepared but not released until the owner reviews the full clip.
-- Discontinued foam-handle products and SHALENI content never appear on this site.
+- Discontinued foam-handle products and content of the Founder's other brands never appear on this site.
 
 ## Control
 - MIPA is the internal IP, provenance and document-control layer of the MAXIMUS ecosystem. No MIPA registration number is claimed for this design system or the website version; a record reference is assigned only through the controlled MIPA process.

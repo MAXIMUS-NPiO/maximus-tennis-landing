@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Japanese dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const ja = {
   meta: {
@@ -80,6 +81,7 @@ const ja = {
   },
   nav: {
     language: "言語",
+    langMenu: { title: "言語を選択", count: "対応言語：{n}・各言語でサイト全体を閲覧可能", search: "名称またはコード", device: "お使いのデバイス", empty: "「{q}」に一致する言語はありません。", close: "閉じる", all: "すべて" },
     groups: { racquets: "ラケット", training: "トレーニング", ecosystem: "エコシステム", partnerships: "パートナーシップ" },
     familyPlan: "ファミリーテニス",
     racquets: "ラケットシリーズと比較",
@@ -126,6 +128,7 @@ const ja = {
     instagram: "Instagram",
     email: "Email",
     analytics: "アナリティクス設定",
+    authorship: "本サイトの文章、画像、デザイン、計算、アルゴリズムおよびコードの著作者です。無断複製・転載を禁じます。",
     subscribe: {
       title: "MAXIMUS とともに",
       line: "新シリーズ、フィッティングの日程、トレーニング資料、オーナープログラムについてお知らせします。年に数通のみ、それ以外はお送りしません。",
@@ -939,7 +942,7 @@ const ja = {
   },
   terms: {
     title: "利用規約",
-    copyright: "このウェブサイト（テキスト、写真、デザインおよびコード）の著作権は、Maximus Kiriyakulov 個人に単独で帰属します。いかなる会社にも、また他のいかなる者にも譲渡されていません。",
+    copyright: "このウェブサイト（テキスト、写真、デザインおよびコード）の著作権は、Maximus Kiriyakulov 個人に単独で帰属します。その画像とビジュアライゼーション、計算と計算モデル、それらを実行するアルゴリズム、ならびにデータ表とその構成についても同様です。いかなる会社にも、また他のいかなる者にも譲渡されていません。公開によっていかなる利用許諾も与えられるものではありません。複製、再製、翻案、データの抽出、ならびに人工知能の学習を含むテキスト・データマイニングには、著作者の事前の書面による許可が必要です。",
     updated: "バージョン 2026-09-21",
     sections: [
       ["情報の提供であり、申込みの誘引ではありません", "このウェブサイトの製品情報は、承認された仕様、構成の設計、プログラムの説明を記載するものです。販売の申込み、価格表、在庫の表明、納品の確約ではありません。商業条件は、各取引で明示される契約主体との間で別途書面により合意します。"],
@@ -1149,6 +1152,7 @@ const ja = {
       in: "{scenario}：{field}",
     },
   },
+  rights: { model: "手法、計算モデルおよびアルゴリズム © {years} Maximus Kiriyakulov。無断複製・転載を禁じます。" },
   media: {
     spotComposition: "MAXIMUS Spot Trainer：全体の構成。正面と側面から見た本体、丸いコンタクトヘッドに刻印されたライオンの円形エンブレム、シャフトに沿って入った MAXIMUS と SPOT TRAINER の刻印、ライオンマーク入りの八角形バットキャップ",
     greatHero: "MAXIMUS GREAT シリーズ 363 g：赤と黄のフェース装飾、グロスの MAXIMUS レタリング、シャフトの Maximus のサイン、グリップのライオンマークを含む全体の構成",

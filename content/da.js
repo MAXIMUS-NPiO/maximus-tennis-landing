@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Danish dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const da = {
   meta: {
@@ -80,6 +81,7 @@ const da = {
   },
   nav: {
     language: "Sprog",
+    langMenu: { title: "Vælg dit sprog", count: "Sprog: {n} · hele hjemmesiden på hvert sprog", search: "Navn eller kode", device: "Din enhed", empty: "Intet sprog matcher »{q}«.", close: "Luk", all: "Alle" },
     groups: { racquets: "Ketchere", training: "Træning", ecosystem: "Økosystem", partnerships: "Partnerskaber" },
     familyPlan: "Familietennis",
     racquets: "Ketcherserier og sammenligning",
@@ -126,6 +128,7 @@ const da = {
     instagram: "Instagram",
     email: "E-mail",
     analytics: "Indstillinger for analyse",
+    authorship: "Ophavsmand til tekster, billeder, design, beregninger, algoritmer og kode på denne hjemmeside. Alle rettigheder forbeholdes.",
     subscribe: {
       title: "Bliv hos MAXIMUS",
       line: "Nye serier, datoer for tilpasning, træningsmateriale og ejerprogrammet. Nogle få breve om året, intet andet.",
@@ -939,7 +942,7 @@ const da = {
   },
   terms: {
     title: "Brugsbetingelser",
-    copyright: "Ophavsretten til denne hjemmeside — dens tekster, fotografier, design og kode — tilhører Maximus Kiriyakulov alene. Den er ikke overdraget til noget selskab eller nogen anden person.",
+    copyright: "Ophavsretten til denne hjemmeside — dens tekster, fotografier, design og kode — tilhører Maximus Kiriyakulov alene. Det samme gælder dens billeder og visualiseringer, dens beregninger og beregningsmodeller, de algoritmer, der udfører dem, samt dens datatabeller og deres opbygning. Den er ikke overdraget til noget selskab eller nogen anden person. Offentliggørelsen giver ingen licens: kopiering, gengivelse, bearbejdning, udtræk af data samt tekst- og datamining, også til træning af kunstig intelligens, kræver ophavsmandens forudgående skriftlige tilladelse.",
     updated: "Udgave 2026-09-21",
     sections: [
       ["Information, ikke et tilbud", "Produktinformationen på denne hjemmeside beskriver godkendte specifikationer, konfigurationsarkitektur og forklaringer af programmer. Den er ikke et salgstilbud, en prisliste, en lageroversigt eller en leveringsforpligtelse. Kommercielle vilkår aftales særskilt og skriftligt med den kontraktpart, der angives i hver transaktion."],
@@ -1149,6 +1152,7 @@ const da = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metode, beregningsmodel og algoritmer © {years} Maximus Kiriyakulov. Alle rettigheder forbeholdes." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: den samlede komposition — traineren set forfra og fra siden, det graverede løvemærke på det runde kontakthoved, graveringen MAXIMUS og SPOT TRAINER langs skaftet og den ottekantede endehætte med løvemærket",
     greatHero: "MAXIMUS GREAT-serien, 363 g: den samlede komposition med røde og gule detaljer på hovedet, blank MAXIMUS-skrift, Maximus-autografen på skaftet og løven på grebet",

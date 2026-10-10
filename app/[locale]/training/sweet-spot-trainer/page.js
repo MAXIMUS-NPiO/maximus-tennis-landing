@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { ctx, meta } from "../../../../lib/page";
 import { sweetSpotTrainer as sst } from "../../../../data/products";
 import { PageHero, Section, Cta, Kickers, Note } from "../../../../components/Ui";

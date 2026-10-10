@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Maltese dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const mt = {
   meta: {
@@ -80,6 +81,7 @@ const mt = {
   },
   nav: {
     language: "Lingwa",
+    langMenu: { title: "Agħżel il-lingwa tiegħek", count: "Lingwi: {n} · is-sit kollu f'kull waħda", search: "Isem jew kodiċi", device: "L-apparat tiegħek", empty: "L-ebda lingwa ma taqbel ma' “{q}”.", close: "Agħlaq", all: "Kollha" },
     groups: { racquets: "Rakketti", training: "Taħriġ", ecosystem: "Ekosistema", partnerships: "Sħubijiet" },
     familyPlan: "Tennis għall-Familja",
     racquets: "Is-serje ta' rakketti u t-tqabbil",
@@ -126,6 +128,7 @@ const mt = {
     instagram: "Instagram",
     email: "Email",
     analytics: "Preferenzi tal-analitika",
+    authorship: "Awtur tat-testi, l-immaġini, id-disinn, il-kalkoli, l-algoritmi u l-kodiċi ta' din il-websajt. Id-drittijiet kollha riżervati.",
     subscribe: {
       title: "Ibqa' ma' MAXIMUS",
       line: "Serje ġodda, dati ta' fitting, materjal ta' taħriġ u l-programm tas-sidien. Ftit ittri fis-sena, xejn aktar.",
@@ -939,7 +942,7 @@ const mt = {
   },
   terms: {
     title: "Termini tal-użu",
-    copyright: "Id-drittijiet tal-awtur f'din il-websajt — it-testi, ir-ritratti, id-disinn u l-kodiċi — huma ta' Maximus Kiriyakulov biss. Ma ġewx assenjati lil ebda kumpanija u lil ebda persuna oħra.",
+    copyright: "Id-drittijiet tal-awtur f'din il-websajt — it-testi, ir-ritratti, id-disinn u l-kodiċi — huma ta' Maximus Kiriyakulov biss. L-istess japplika għall-immaġini u l-viżwalizzazzjonijiet tagħha, għall-kalkoli u l-mudelli ta' kalkolu tagħha, għall-algoritmi li jwettquhom, u għat-tabelli tad-data tagħha u l-arranġament tagħhom. Ma ġewx assenjati lil ebda kumpanija u lil ebda persuna oħra. Il-pubblikazzjoni ma tagħti l-ebda liċenzja: l-ikkupjar, ir-riproduzzjoni, l-adattament, l-estrazzjoni tad-data u t-tħaffir tat-test u d-data, inkluż għat-taħriġ tal-intelliġenza artifiċjali, jeħtieġu l-permess bil-miktub minn qabel tal-awtur.",
     updated: "Verżjoni 2026-09-21",
     sections: [
       ["Informazzjoni, mhux offerta", "L-informazzjoni dwar il-prodotti f'din il-websajt tiddeskrivi speċifikazzjonijiet approvati, arkitettura ta' konfigurazzjoni u spjegazzjonijiet tal-programmi. Mhijiex offerta ta' bejgħ, lista ta' prezzijiet, dikjarazzjoni tal-istokk jew impenn ta' kunsinna. It-termini kummerċjali jiġu miftiehma separatament bil-miktub mal-entità kuntrattwali identifikata f'kull tranżazzjoni."],
@@ -1149,6 +1152,7 @@ const mt = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodoloġija, mudell ta' kalkolu u algoritmi © {years} Maximus Kiriyakulov. Id-drittijiet kollha riżervati." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: il-kompożizzjoni sħiħa — ir-rakketta ta' taħriġ minn quddiem u mill-ġenb, iċ-ċirku inċiż bl-iljun fuq ir-ras tonda tal-kuntatt, l-inċiżjoni MAXIMUS u SPOT TRAINER mal-zokk, u t-tapp ta' wara b'tmien ġnub bil-marka tal-iljun",
     greatHero: "Is-serje MAXIMUS GREAT, 363 g: il-kompożizzjoni sħiħa bid-dettalji ħomor u sofor fir-ras, il-kitba MAXIMUS lustruża, l-awtografu Maximus fuq iz-zokk u l-iljun fuq il-manku",

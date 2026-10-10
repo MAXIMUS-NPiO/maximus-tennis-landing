@@ -1,7 +1,9 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { ctx, meta, formDict } from "../../../lib/page";
 import { productDataVersion } from "../../../data/products";
 import { PageHero, Section, Note } from "../../../components/Ui";
 import GpsWizard, { GPS_RULES_VERSION } from "../../../components/GpsWizard";
+import { ModelRights } from "../../../components/Authorship";
 
 export const generateMetadata = meta("gps", (d) => [d.gps.metaTitle, d.gps.lead]);
 
@@ -17,6 +19,7 @@ export default async function Page({ params }) {
         <Note>{G.honesty}</Note>
         <div style={{ height: 20 }} />
         <GpsWizard locale={locale} dict={formDict(dict, ["racquets"])} />
+        <ModelRights dict={dict} />
       </Section>
     </>
   );

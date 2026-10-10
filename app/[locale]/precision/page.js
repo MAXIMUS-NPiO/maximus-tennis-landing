@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { ctx, meta } from "../../../lib/page";
 import { extendedParameters } from "../../../data/products";
 import { PageHero, Section, Cta, Note, Chain, Kickers } from "../../../components/Ui";

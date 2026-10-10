@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Inspection video — prepared, NOT released (ASSET_MANIFEST.md, 08_Great_Source_Video.mp4).
  * Poster + native controls, preload="none", no autoplay, no loop: nothing moves or downloads

@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /** Language negotiation: the device language selects a locale, a named language is never overridden. */
 import { test } from "node:test";
 import assert from "node:assert/strict";

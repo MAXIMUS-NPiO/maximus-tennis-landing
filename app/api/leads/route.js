@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { after } from "next/server";
 import { readConfig } from "../../../lib/intake/config";
 import { acceptRequest, afterAccept, clientIp } from "../../../lib/intake/service";

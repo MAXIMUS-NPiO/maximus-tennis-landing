@@ -2,17 +2,21 @@
   "name": "maximus-tennis-landing",
   "version": "4.2.0",
   "private": true,
+  "author": "Maximus Kiriyakulov",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "check:data": "node --no-warnings scripts/check-data.mjs",
     "check:i18n": "node --no-warnings scripts/check-i18n.mjs",
-    "test": "npm run check:data && npm run check:i18n && npm run check:translation && npm run test:unit",
+    "test": "npm run check:data && npm run check:i18n && npm run check:translation && npm run check:authorship && npm run test:unit",
     "crawl": "node --no-warnings scripts/crawl.mjs",
     "test:unit": "node --no-warnings --import ./tests/register.mjs --test tests/*.test.mjs",
     "check:translation": "node --no-warnings scripts/check-translation.mjs",
-    "check:header": "node --no-warnings scripts/check-header.mjs"
+    "check:header": "node --no-warnings scripts/check-header.mjs",
+    "check:authorship": "node --no-warnings scripts/check-authorship.mjs",
+    "check:language-menu": "node --no-warnings scripts/check-language-menu.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",

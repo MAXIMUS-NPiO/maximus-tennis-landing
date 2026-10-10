@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* Croatian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const hr = {
   meta: {
@@ -80,6 +81,7 @@ const hr = {
   },
   nav: {
     language: "Jezik",
+    langMenu: { title: "Odaberite jezik", count: "Jezici: {n} · cijele stranice na svakom", search: "Naziv ili kôd", device: "Vaš uređaj", empty: "Nijedan jezik ne odgovara upitu „{q}”.", close: "Zatvori", all: "Svi" },
     groups: { racquets: "Reketi", training: "Trening", ecosystem: "Ekosustav", partnerships: "Partnerstva" },
     familyPlan: "Obiteljski tenis",
     racquets: "Serije reketa i usporedba",
@@ -126,6 +128,7 @@ const hr = {
     instagram: "Instagram",
     email: "E-pošta",
     analytics: "Postavke analitike",
+    authorship: "Autor tekstova, slika, dizajna, izračuna, algoritama i koda ovih web-stranica. Sva prava pridržana.",
     subscribe: {
       title: "Ostanite uz MAXIMUS",
       line: "Nove serije, termini prilagodbe, materijali za trening i program za vlasnike. Nekoliko pisama godišnje, ništa više.",
@@ -939,7 +942,7 @@ const hr = {
   },
   terms: {
     title: "Uvjeti korištenja",
-    copyright: "Autorsko pravo na ovim web-stranicama — na njihovim tekstovima, fotografijama, dizajnu i kodu — pripada isključivo Maximusu Kiriyakulovu. Nije preneseno nijednoj tvrtki niti bilo kojoj drugoj osobi.",
+    copyright: "Autorsko pravo na ovim web-stranicama — na njihovim tekstovima, fotografijama, dizajnu i kodu — pripada isključivo Maximusu Kiriyakulovu. Isto vrijedi za njihove slike i vizualizacije, izračune i računske modele, algoritme koji ih provode te za njihove podatkovne tablice i njihov raspored. Nije preneseno nijednoj tvrtki niti bilo kojoj drugoj osobi. Objavom se ne daje nikakva licencija: kopiranje, umnožavanje, prerada, izdvajanje podataka te rudarenje teksta i podataka, uključujući treniranje umjetne inteligencije, zahtijevaju prethodno pisano dopuštenje autora.",
     updated: "Verzija 2026-09-21",
     sections: [
       ["Informacija, ne ponuda", "Informacije o proizvodima na ovim web-stranicama opisuju odobrene specifikacije, arhitekturu konfiguracije i objašnjenja programa. Nisu ponuda za prodaju, cjenik, izjava o zalihama niti obveza isporuke. Komercijalni se uvjeti dogovaraju posebno, u pisanom obliku, s ugovornim subjektom navedenim u svakoj transakciji."],
@@ -1149,6 +1152,7 @@ const hr = {
       in: "{scenario}: {field}",
     },
   },
+  rights: { model: "Metodologija, računski model i algoritmi © {years} Maximus Kiriyakulov. Sva prava pridržana." },
   media: {
     spotComposition: "MAXIMUS Spot Trainer: cjelovita kompozicija — trenažer sprijeda i sa strane, gravirani medaljon s lavom na okrugloj glavi za kontakt, gravura MAXIMUS i SPOT TRAINER duž vrata i osmerokutni poklopac ručke s oznakom lava",
     greatHero: "MAXIMUS GREAT serija, 363 g: cjelovita kompozicija s crvenim i žutim detaljima na glavi, sjajnim MAXIMUS natpisom, Maximusovim autogramom na vratu reketa i znakom lava na ručki",

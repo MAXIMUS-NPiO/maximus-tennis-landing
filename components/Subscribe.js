@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 "use client";
 import { useId, useState } from "react";
 import { useLeadSubmit } from "./useLeadSubmit";

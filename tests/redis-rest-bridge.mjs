@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Test-only Upstash-compatible REST bridge in front of a real redis-server (RESP over TCP).
  * POST /            body: ["CMD", "arg", ...]         → { result } | { error }

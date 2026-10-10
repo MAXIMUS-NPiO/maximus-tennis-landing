@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /* 简体中文词典 — MAXIMUS 网站 v4.0。产品数值数据位于 data/products.js。结构与 content/en.js 严格一致。 */
 const zh = {
   meta: {
@@ -80,6 +81,7 @@ const zh = {
   },
   nav: {
     language: "语言",
+    langMenu: { title: "选择语言", count: "语言：{n} 种 · 每种语言均提供完整网站", search: "名称或代码", device: "您的设备", empty: "没有与“{q}”匹配的语言。", close: "关闭", all: "全部" },
     groups: { racquets: "球拍", training: "训练", ecosystem: "生态系统", partnerships: "合作" },
     familyPlan: "家庭网球",
     racquets: "球拍系列与对比",
@@ -126,6 +128,7 @@ const zh = {
     instagram: "Instagram",
     email: "电子邮箱",
     analytics: "数据分析设置",
+    authorship: "本网站文字、图像、设计、计算、算法及代码的作者。保留所有权利。",
     subscribe: {
       title: "与MAXIMUS同行",
       line: "新系列、试打与适配日程、训练资料与所有者计划。一年数封，别无其他。",
@@ -939,7 +942,7 @@ const zh = {
   },
   terms: {
     title: "使用条款",
-    copyright: "本网站（文字、照片、设计与代码）的著作权仅归 Maximus Kiriyakulov 个人所有。该权利未转让给任何公司或任何其他人。",
+    copyright: "本网站（文字、照片、设计与代码）的著作权仅归 Maximus Kiriyakulov 个人所有。其图像与可视化内容、计算与计算模型、实现这些计算的算法，以及数据表格及其编排，同样如此。该权利未转让给任何公司或任何其他人。发布本网站并不授予任何许可：复制、翻印、改编、提取数据以及文本与数据挖掘（包括用于训练人工智能）均须事先获得作者的书面许可。",
     updated: "版本2026-09-21",
     sections: [
       ["信息，而非要约", "本网站的产品信息描述经批准的规格、配置架构与计划说明。它不是销售要约、价目表、库存声明或交付承诺。商业条款与每笔交易中列明的签约主体另行以书面形式约定。"],
@@ -1149,6 +1152,7 @@ const zh = {
       in: "{scenario}：{field}",
     },
   },
+  rights: { model: "方法、计算模型及算法 © {years} Maximus Kiriyakulov。保留所有权利。" },
   media: {
     spotComposition: "MAXIMUS Spot Trainer：完整构图，含正面与侧面的训练拍、圆形击球面上刻有的狮子圆形徽标、沿拍杆的 MAXIMUS 与 SPOT TRAINER 刻字，以及带狮子标识的八角形拍柄底盖",
     greatHero: "MAXIMUS GREAT 系列 363 克：完整构图，含红黄拍头装饰、亮面 MAXIMUS 字样、拍杆上的 Maximus 亲笔签名以及拍柄上的狮子标识",

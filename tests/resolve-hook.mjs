@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { existsSync, statSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 

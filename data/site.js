@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Verified site-level data. Strings that are legal identifiers, addresses or brand marks
  * are kept here once and rendered identically in every locale.

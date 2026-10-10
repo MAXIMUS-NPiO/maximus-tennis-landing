@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Consent-mode analytics test against a build made WITH NEXT_PUBLIC_GA_MEASUREMENT_ID.
  * The Google tag request is intercepted (never reaches Google); gtag calls are read from dataLayer.

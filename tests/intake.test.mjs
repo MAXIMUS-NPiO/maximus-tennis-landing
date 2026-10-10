@@ -1,3 +1,4 @@
+/*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /**
  * Intake tests: schema, service, idempotency, rate limit, durable store (real redis-server through
  * an Upstash-compatible REST bridge), notification delivery (webhook receiver + SMTP sink), retries.

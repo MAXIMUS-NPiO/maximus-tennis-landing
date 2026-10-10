@@ -1,5 +1,6 @@
 import { readConfig } from "../../../../lib/intake/config";
 import { processDue } from "../../../../lib/intake/notify";
+import { retryBabyOutbox } from "../../../../lib/intake/site-events";
 import { safeEqual } from "../../../../lib/intake/service";
 
 /**
@@ -19,9 +20,11 @@ export async function GET(request) {
   if (!safeEqual(request.headers.get("authorization") || "", `Bearer ${config.cronSecret}`)) return json(401, { status: "unauthorized" });
   if (!config.store) return json(503, { status: "unavailable" });
   try {
+    const baby = await retryBabyOutbox({ secret: process.env.BABY_TENNIS_NOTIFY_SECRET });
     const summary = await processDue(config.store, config.notifier, { limit: 20 });
-    return json(200, { status: "ok", ...summary, pending: await config.store.pendingCount() });
+    return json(200, { status: "ok", ...summary, baby, pending: await config.store.pendingCount() });
   } catch (e) {
     return json(503, { status: "unavailable", code: (e && e.code) || "error" });
   }
 }
+

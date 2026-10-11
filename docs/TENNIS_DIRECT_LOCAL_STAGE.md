@@ -3,7 +3,7 @@
 
 This stage starts from draft PR2 commit `b6b5e5ece80e0f8da1ab00359e2e1f7bb8ac7f1a`, independently confirmed against GitHub on 2026-10-11. It is prepared on the MacBook in a separate clone and local branch. The iMac checkout, production, PR head and deployed settings are outside this stage. No push or deployment is authorized here.
 
-The PR snapshot contains no `AGENTS.md` or `.agents/skills`. Existing repository payment contracts, stores, tests and readiness documents are the implementation sources. Existing installed dependencies are reused; no package installation, bank SDK download, new access or real payment is part of verification.
+The PR snapshot contains no `AGENTS.md` or `.agents/skills`. Existing repository payment contracts, stores, tests and readiness documents are the implementation sources. The initial checks reused installed dependencies. A subsequently authorized `npm ci --ignore-scripts --no-audit --no-fund` restored the already-declared dependencies from `registry.npmjs.org` into this isolated clone. Package versions and both manifest checksums are unchanged; no new dependency, bank SDK, new access or real payment was introduced.
 
 ## Boundaries
 
@@ -42,6 +42,9 @@ Local checks on Node 24.15.0, with the existing Next 15.5.24 and React 19.1.1:
 - Checkout component plus existing client suite: 20/20 passed, including 15 real mounted React DOM cases in the existing local Chrome. The component test uses the installed Next compiler/webpack; CSP blocks external requests. All 48 locales retain separate status text.
 - Independent Codex source review: identified refund-completeness and asynchronous owner/expiry-check gaps were fixed; no remaining blocking findings were reported. Claude subscription authentication was unavailable, so independent Claude review is not claimed.
 - `git diff --check`: passed.
-- `NEXT_TELEMETRY_DISABLED=1 npm run build`: blocked because the reused local `node_modules` lacks the already-declared `@fontsource-variable/inter` and `@fontsource/cormorant-garamond` packages. No installation or fallback font change was made. A successful full production build and built-bundle inspection are still required in the complete existing release environment.
+- `NEXT_TELEMETRY_DISABLED=1 npm run build`: passed after restoring the existing lockfile dependencies; 1,832/1,832 pages generated. Both font packages are exactly version 5.3.0. The earlier missing-font failure is retained as historical evidence, not a current build blocker. No fallback font or application source change was needed.
+- `node --no-warnings scripts/check-authorship.mjs --built`: passed for 298 sources, 241 images, 48 languages and 89 built bundles. The complete `REQUIRE_LOCAL_SMTP=true npm test` was rerun after restoration with the same 549 passes, 20 skips and zero failures. Both manifest SHA-256 checksums still match the pre-restoration values.
+
+Redis environment discovery checked PATH, existing applications, standard system/user binary and cache locations, runtime sockets and container stores. No existing Redis executable or Docker/Podman/Colima/OrbStack/Lima/container runtime was found. No Redis installation, image download, system setting change or production Redis connection was attempted. The 20 Redis-dependent skips therefore remain an environment limitation. Built output is local verification only, not a deployed or bank-enabled release.
 
 The accompanying local handoff records the final commit, patch checksum and full logs. A decreasing authenticated refund aggregate, including an older concurrent response, deliberately remains a sticky manual-review case; see the [reconciliation contract](TENNIS_RECONCILIATION_CONTRACT.md). No check establishes bank availability or production readiness.

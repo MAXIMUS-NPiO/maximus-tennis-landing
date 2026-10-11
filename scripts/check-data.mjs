@@ -54,22 +54,17 @@ const banned = [
 // are checked by hash only, so that this public repository does not itself publish them
 // (scripts/lib/guard.mjs).
 const { confidentialHits } = await import("./lib/guard.mjs");
+const { approvedCheckoutSourceForGuard } = await import("./lib/approved-checkout-guard.mjs");
 const { storeProductSourceForGuard } = await import("../data/store-products.js");
 // Scope: everything that can reach the public bundle or rendered pages.
 const PUBLIC_DIRS = ["app", "components", "content", "data", "lib", "public"];
 const publicFiles = PUBLIC_DIRS.flatMap((d) => walk(path.join(process.cwd(), d))).concat([path.join(process.cwd(), "middleware.js"), path.join(process.cwd(), "next.config.mjs")]);
-// Owner authorised the existing SPORTS payment backend on 10 October 2026.
-// This exception is confined to server transport and validated checkout handoff.
-const checkoutFiles = new Set(["lib/commerce/cscart.js", "lib/commerce/cscart-api.js", "lib/platform/commerce-ledger.js", "components/OrderAccount.js"]);
-// Mask only the authorised exact hostname in these four files. Every remaining term and every
-// comparative-content rule still passes through the unchanged guards; other paths get no exception.
-const approvedCheckoutHost = /(?<![A-Za-z0-9.-])maximussports\.ae(?![A-Za-z0-9.-])/gi;
 for (const f of publicFiles) {
   if (!/\.(js|mjs|json|css|svg|txt|html)$/.test(f)) continue;
   const txt = readFileSync(f, "utf8");
   for (const re of banned) if (re.test(txt)) fail.push(`banned content ${re} in ${path.relative(process.cwd(), f)}`);
   const relativePath = path.relative(process.cwd(), f);
-  const checkoutText = checkoutFiles.has(relativePath) ? txt.replace(approvedCheckoutHost, "approvedcheckout") : txt;
+  const checkoutText = approvedCheckoutSourceForGuard(relativePath, txt);
   const guardedText = storeProductSourceForGuard(relativePath, checkoutText);
   if (confidentialHits(guardedText)) fail.push(`confidential term (guarded by hash) in ${path.relative(process.cwd(), f)}`);
 }

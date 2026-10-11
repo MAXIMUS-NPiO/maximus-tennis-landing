@@ -273,13 +273,13 @@ test("more than limit actual active worker leases do not hide a newer due captur
   assert.equal((await f.summary()).currencies[0].capturedPaymentCount, 4);
 });
 
-test("exponential backoff persists across bridge reconstruction then bounded attempts require review", async () => {
-  const f = fixture({ bridgeOptions: { maxProcessingAttempts: 3, retryMaxMs: 2000 } });
+test("missing capture has its own durable bounded backoff without consuming ordinary failure attempts", async () => {
+  const f = fixture({ bridgeOptions: { maxCaptureDependencyAttempts: 3, retryMaxMs: 2000 } });
   f.event("refund", { kind: "refund", amountMinor: "100" });
   const queued = await f.bridge.enqueueReference("refund");
   await assert.rejects(f.bridge.processWork(queued.workId), { code: "ledger_capture_required" });
   let row = await f.bridge.readWorkStatus(queued.workId);
-  assert.equal(row.nextAttemptAt, f.deps.now() + 1000); assert.equal(row.attempts, 1);
+  assert.equal(row.nextAttemptAt, f.deps.now() + 1000); assert.equal(row.attempts, 1); assert.equal(row.retryCycleAttempts, 0); assert.equal(row.captureDependencyAttempts, 1);
   const rebuilt = createCommerceLedgerBridge(f.deps);
   await assert.rejects(rebuilt.processWork(queued.workId), { code: "commerce_ledger_retry_not_due" });
   assert.deepEqual((await rebuilt.retryPending()).items, []);
@@ -290,12 +290,45 @@ test("exponential backoff persists across bridge reconstruction then bounded att
   f.advance(1); const result = await rebuilt.retryPending();
   assert.equal(result.items[0].status, "review_required"); assert.equal(result.items[0].retryable, false);
   row = await rebuilt.readWorkStatus(queued.workId);
-  assert.equal(row.attempts, 3); assert.equal(row.nextAttemptAt, null); assert.ok(row.reviewRequiredAt);
+  assert.equal(row.attempts, 3); assert.equal(row.captureDependencyAttempts, 3); assert.equal(row.retryCycleAttempts, 0); assert.equal(row.lastErrorCode, "commerce_ledger_capture_dependency_exhausted"); assert.equal(row.nextAttemptAt, null); assert.ok(row.reviewRequiredAt);
   f.advance(86400000); assert.deepEqual((await rebuilt.retryPending()).items, []);
   await assert.rejects(rebuilt.processWork(queued.workId), { code: "commerce_ledger_review_required" });
   const work = await f.store.get("commerceLedgerWork", queued.workId);
   assert.equal((await f.store.listIndex(`commerce-ledger:review:${work.doc.mappingHash}`))[0], queued.workId);
   assert.equal(await f.store.countType("commerceLedgerInbox"), 1); assert.equal(await f.store.countType("ledgerJournal"), 0);
+});
+
+test("ordinary journal transport failures still exhaust the default five-attempt budget", async () => {
+  const f = fixture(); f.event(); const queued = await f.bridge.enqueueReference("capture");
+  const get = f.store.get.bind(f.store);
+  f.store.get = async (...args) => {
+    if (args[0] === "ledgerPayment") throw Object.assign(Error("synthetic-unavailable-journal-storage"), { code: "store_unavailable", status: 503 });
+    return get(...args);
+  };
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const result = await f.bridge.retryPending({ limit: 1 });
+    assert.equal(result.items.length, 1);
+    assert.equal(result.items[0].status, attempt === 4 ? "review_required" : "pending");
+    f.advance(1000 * 2 ** attempt);
+  }
+  const work = await f.bridge.readWorkStatus(queued.workId);
+  assert.equal(work.attempts, 5); assert.equal(work.retryCycleAttempts, 5); assert.equal(work.captureDependencyAttempts, 0);
+  assert.equal(work.lastErrorCode, "store_unavailable"); assert.deepEqual((await f.bridge.retryPending()).items, []);
+  assert.equal(await f.store.countType("ledgerJournal"), 0);
+});
+
+test("an absent capture reaches explicit review at its durable deadline even below its separate count bound", async () => {
+  const f = fixture({ bridgeOptions: { maxCaptureDependencyMs: 1000 } });
+  f.event("refund", { kind: "refund", amountMinor: "100" }); const queued = await f.bridge.enqueueReference("refund");
+  await assert.rejects(f.bridge.processWork(queued.workId), { code: "ledger_capture_required" });
+  const first = await f.bridge.readWorkStatus(queued.workId);
+  assert.equal(Date.parse(first.captureDependencyExpiresAt), f.deps.now() + 1000);
+  const rebuilt = createCommerceLedgerBridge({ ...f.deps, maxCaptureDependencyMs: 30 * 86400000 });
+  f.advance(1000); await rebuilt.retryPending();
+  const reviewed = await rebuilt.readWorkStatus(queued.workId);
+  assert.equal(reviewed.status, "review_required"); assert.equal(reviewed.captureDependencyAttempts, 2); assert.equal(reviewed.retryCycleAttempts, 0);
+  assert.equal(reviewed.captureDependencyStartedAt, first.captureDependencyStartedAt); assert.equal(reviewed.captureDependencyExpiresAt, first.captureDependencyExpiresAt);
+  assert.equal(reviewed.lastErrorCode, "commerce_ledger_capture_dependency_exhausted"); assert.equal(await f.store.countType("ledgerJournal"), 0);
 });
 
 test("malformed mutable work state is durably quarantined so the next due capture can proceed", async () => {
@@ -312,7 +345,7 @@ test("malformed mutable work state is durably quarantined so the next due captur
 
 test("operator retry requires exact independent approval and consumes that case only once", async () => {
   const approvals = new Map();
-  const f = fixture({ bridgeOptions: { maxProcessingAttempts: 1, resolveAuthorizedRetry: async ref => structuredClone(approvals.get(ref)) } });
+  const f = fixture({ bridgeOptions: { maxProcessingAttempts: 1, maxCaptureDependencyAttempts: 1, resolveAuthorizedRetry: async ref => structuredClone(approvals.get(ref)) } });
   f.event("refund", { kind: "refund", amountMinor: "100" });
   const queued = await f.bridge.enqueueReference("refund");
   await assert.rejects(f.bridge.processWork(queued.workId), { code: "ledger_capture_required" });
@@ -330,7 +363,7 @@ test("operator retry requires exact independent approval and consumes that case 
   assert.equal(results.filter(item => item.duplicate).length, 1);
   assert.equal(await f.store.countType("commerceLedgerRetryApproval"), 1);
   let state = await f.bridge.readWorkStatus(queued.workId);
-  assert.equal(state.attempts, 1); assert.equal(state.retryCycleAttempts, 0); assert.equal(state.status, "pending");
+  assert.equal(state.attempts, 1); assert.equal(state.retryCycleAttempts, 0); assert.equal(state.captureDependencyAttempts, 0); assert.equal(state.captureDependencyStartedAt, null); assert.equal(state.captureDependencyExpiresAt, null); assert.equal(state.status, "pending");
   await f.bridge.retryPending(); // Still no original capture: a second bounded cycle goes to review.
   assert.equal((await f.bridge.requeueReviewedWork("case")).duplicate, true);
   state = await f.bridge.readWorkStatus(queued.workId);
@@ -343,7 +376,7 @@ test("operator retry requires exact independent approval and consumes that case 
 
 test("operator approval expiring during asynchronous reads cannot requeue reviewed work", async () => {
   let approval;
-  const f = fixture({ bridgeOptions: { maxProcessingAttempts: 1, resolveAuthorizedRetry: async () => approval } });
+  const f = fixture({ bridgeOptions: { maxProcessingAttempts: 1, maxCaptureDependencyAttempts: 1, resolveAuthorizedRetry: async () => approval } });
   f.event("refund", { kind: "refund", amountMinor: "100" }); const queued = await f.bridge.enqueueReference("refund");
   await assert.rejects(f.bridge.processWork(queued.workId), { code: "ledger_capture_required" });
   const work = await f.store.get("commerceLedgerWork", queued.workId);

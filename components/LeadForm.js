@@ -7,6 +7,7 @@ import { site } from "../data/site";
 import { href } from "../lib/paths";
 import { track } from "../lib/analytics";
 import { useLeadSubmit } from "./useLeadSubmit";
+import { tennisCheckoutLabels } from "../content/tennis-checkout";
 
 /**
  * Production request form. One component for every purpose; fields, limits and allowed values come
@@ -59,6 +60,9 @@ export default function LeadForm({
   orderPlan,
   orderTechnical,
   paymentPreference,
+  purchaseIntent,
+  programRequest,
+  onStateChange,
 }) {
   const F = dict.form;
   const L = dict.common.labels;
@@ -76,7 +80,8 @@ export default function LeadForm({
   const successRef = useRef(null);
   const alertRef = useRef(null);
   const ctx = useMemo(() => context || {}, [context]);
-  const { state, result, submit, reset } = useLeadSubmit({ purpose, locale, context: ctx, series, endpoint, orderPlan, orderTechnical, paymentPreference });
+  const { state, result, submit, reset } = useLeadSubmit({ purpose, locale, context: ctx, series, endpoint, orderPlan, orderTechnical, paymentPreference, purchaseIntent, programRequest });
+  useEffect(() => { onStateChange?.(state); }, [state, onStateChange]);
 
   useEffect(() => {
     if (fixedPurpose) setPurpose(fixedPurpose);
@@ -154,7 +159,7 @@ export default function LeadForm({
     if (state === "submitting") return;
     markStarted();
     const parent = beforeSubmit ? beforeSubmit() : { ok: true };
-    const payload = { purpose, locale, fields: fieldsPayload(), config, profile, consent };
+    const payload = { purpose, locale, fields: fieldsPayload(), config, profile, consent, ...(purchaseIntent ? { purchaseIntent, ...(programRequest ? { programRequest } : {}) } : {}) };
     const r = validateRequest(payload);
     const own = {};
     for (const [k, code] of Object.entries(r.errors)) if (order.includes(k)) own[k] = code;
@@ -283,7 +288,15 @@ export default function LeadForm({
     const prof = flatList(profile);
     if (prof.length) lines.push(`GPS: ${prof.join("; ")}`);
     if (typeof window !== "undefined") lines.push(`${LD.mailPage}: ${window.location.pathname}`);
-    return `mailto:${site.email}?subject=${encodeURIComponent(`[MAXIMUS] ${purposeText}`)}&body=${encodeURIComponent(lines.join("\n").slice(0, 1800))}`;
+    const choice = tennisCheckoutLabels[locale];
+    const purchaseLines = purchaseIntent ? [choice[purchaseIntent === 'goods_with_program_interest' ? 'goodsAndProgram' : 'goodsOnly']] : [];
+    if (purchaseIntent === 'goods_with_program_interest') {
+      purchaseLines.push(choice.programPending);
+      if (programRequest?.principal && programRequest?.currency) purchaseLines.push(`${choice.programPrincipal}: ${programRequest.principal.trim()} ${programRequest.currency}`);
+    }
+    // Keep the complete requested amount outside the legacy contact/config truncation.
+    const body = [...purchaseLines, lines.join("\n").slice(0, 1800)].join("\n");
+    return `mailto:${site.email}?subject=${encodeURIComponent(`[MAXIMUS] ${purposeText}`)}&body=${encodeURIComponent(body)}`;
   };
 
   const errorKeys = order.filter((k) => errors[k]);

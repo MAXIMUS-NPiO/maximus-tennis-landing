@@ -31,6 +31,12 @@ function fixture({ store = createMemoryStore() } = {}) {
   const make = () => createTennisControlProofService({ store, orders, reader, now: () => at, production: false });
   return { store, record, make, setRead: fn => { read = fn; }, revoke: () => { ownerActive = false; }, calls: () => calls };
 }
+function deferred() {
+  let resolve;
+  const promise = new Promise(done => { resolve = done; });
+  return { promise, resolve };
+}
+const fullyRefunded = () => [movement({ refundedMinor: '100' }), movement({ kind: 'refund', transactionId: 'refund_1', amountMinor: '100', refundedMinor: '100' })];
 
 test('control capture proof confirms only exact USD1 server movement and emits no goods/ledger/session fields', async () => {
   const f = fixture(), result = await f.make().inspect(input);
@@ -45,6 +51,72 @@ test('control proof repeats, concurrent queries and reconstructed service do not
   assert.ok(results.every(r => r.status === 'captured' && r.movementCount === 1));
   const saved = await f.store.get(TENNIS_CONTROL_PROOF_TYPE, orderId);
   assert.equal(saved.version, 1); assert.equal((await f.make().inspect(input)).duplicate, true);
+});
+for (const seeded of [false, true]) test(`older concurrent capture response cannot poison newer refund${seeded ? ', including a lost refund ACK and reconstructed service' : ' from an absent proof'}`, async () => {
+  const base = createMemoryStore(); let dropped = false;
+  const store = { ...base, async commit(c) {
+    const result = await base.commit(c);
+    if (seeded && !dropped && c.writes?.some(w => w.type === TENNIS_CONTROL_PROOF_TYPE && w.doc.status === 'refunded')) { dropped = true; throw new Error('lost_refund_ack'); }
+    return result;
+  } };
+  const f = fixture({ store });
+  if (seeded) await f.make().inspect(input);
+  const started = deferred(), release = deferred(); let reads = 0;
+  f.setRead(async () => { if (++reads === 1) { started.resolve(); await release.promise; return [movement()]; } return fullyRefunded(); });
+  const older = f.make().inspect(input);
+  await started.promise;
+  const newer = await f.make().inspect(input);
+  assert.equal(newer.status, 'refunded');
+  if (seeded) { assert.equal(dropped, true); assert.equal(newer.duplicate, true); }
+  release.resolve();
+  const late = await older;
+  assert.equal(late.status, 'refunded'); assert.equal(late.refundedMinor, '100'); assert.equal(late.reason, null);
+  assert.equal(reads, 3); // The older query is re-read after observing the competing durable version.
+  const saved = await base.get(TENNIS_CONTROL_PROOF_TYPE, orderId);
+  assert.equal(saved.version, seeded ? 2 : 1);
+  const restarted = await f.make().inspect(input);
+  assert.equal(restarted.status, 'refunded'); assert.equal(restarted.duplicate, true);
+  assert.equal((await base.get(TENNIS_CONTROL_PROOF_TYPE, orderId)).version, saved.version);
+});
+test('CAS conflict after reading the baseline also refreshes a superseded provider snapshot', async () => {
+  const base = createMemoryStore(), committing = deferred(), release = deferred(); let held = false;
+  const store = { ...base, async commit(c) {
+    if (!held && c.writes?.some(w => w.type === TENNIS_CONTROL_PROOF_TYPE && w.doc.status === 'captured')) { held = true; committing.resolve(); await release.promise; }
+    return base.commit(c);
+  } };
+  const f = fixture({ store }); let reads = 0;
+  f.setRead(async () => ++reads === 1 ? [movement()] : fullyRefunded());
+  const older = f.make().inspect(input);
+  await committing.promise;
+  assert.equal((await f.make().inspect(input)).status, 'refunded');
+  release.resolve();
+  assert.equal((await older).status, 'refunded'); assert.equal(reads, 3);
+  assert.equal((await base.get(TENNIS_CONTROL_PROOF_TYPE, orderId)).version, 1);
+});
+test('a newly started observation that loses a committed refund still causes sticky review', async () => {
+  const f = fixture(); f.setRead(async () => fullyRefunded());
+  assert.equal((await f.make().inspect(input)).status, 'refunded');
+  f.setRead(async () => [movement()]);
+  const regressed = await f.make().inspect(input);
+  assert.equal(regressed.status, 'review_required'); assert.equal(regressed.reason, 'provider_history_changed');
+  assert.equal(regressed.refundedMinor, '100');
+  f.setRead(async () => fullyRefunded());
+  assert.equal((await f.make().inspect(input)).status, 'review_required');
+});
+test('concurrent supported progress cannot discard authenticated unsupported monetary evidence', async () => {
+  const f = fixture(), started = deferred(), release = deferred(); let reads = 0;
+  f.setRead(async () => {
+    if (++reads === 1) { started.resolve(); await release.promise; throw Object.assign(new Error('private provider history'), { code: 'native_mpgs_dispute_requires_review' }); }
+    return fullyRefunded();
+  });
+  const disputed = f.make().inspect(input);
+  await started.promise;
+  assert.equal((await f.make().inspect(input)).status, 'refunded');
+  release.resolve();
+  const result = await disputed;
+  assert.equal(result.status, 'review_required'); assert.equal(result.reason, 'provider_history_requires_review');
+  assert.equal(result.refundedMinor, '100'); assert.equal(reads, 2);
+  assert.equal((await f.make().inspect(input)).status, 'review_required');
 });
 test('control proof recovers a lost durable commit ACK without another payment operation', async () => {
   const base = createMemoryStore(); let dropped = false;

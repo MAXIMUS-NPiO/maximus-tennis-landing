@@ -34,7 +34,8 @@ test('mounted checkout preserves safe states, consent, lifecycle and descriptor 
   t.after(async () => { browser?.kill('SIGTERM'); if (server) await new Promise(resolve => server.close(resolve)); await rm(dir, { recursive: true, force: true }); });
   const webpackModule = require('next/dist/compiled/webpack/webpack'); webpackModule.init();
   const compiler = webpackModule.webpack({
-    mode: 'production', target: 'web', devtool: false,
+    // React development enables real StrictMode effect replay in its dedicated case.
+    mode: 'development', target: 'web', devtool: false,
     context: resolve('.'), entry: resolve('tests/browser/tennis-component.mjs'),
     output: { path: dir, filename: 'fixture.js' },
     module: { rules: [{ test: /\.js$/, exclude: /node_modules/, use: { loader: resolve('tests/browser/tennis-component-loader.cjs') } }] },
@@ -64,6 +65,6 @@ test('mounted checkout preserves safe states, consent, lifecycle and descriptor 
   assert.ok(encoded && encoded !== 'pending', `Component harness did not complete: ${output.slice(-1500)}`);
   const report = JSON.parse(Buffer.from(encoded, 'base64').toString('utf8'));
   assert.deepEqual(report.failures, [], JSON.stringify(report));
-  assert.equal(report.passed.length, 15, JSON.stringify(report));
+  assert.equal(report.passed.length, 22, JSON.stringify(report));
   t.diagnostic(`Real React DOM cases passed: ${report.passed.join('; ')}`);
 });

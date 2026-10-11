@@ -20,7 +20,7 @@ import { createMemoryStore, createUpstashStore, resolveStore, readRestCredential
 import { acceptRequest, afterAccept, makeRequestId, safeEqual } from "../lib/intake/service.js";
 import { deliver, processDue, nextAttemptAt, RETRY_SCHEDULE_MS, MAX_ATTEMPTS, createWebhookNotifier, createSmtpNotifier, createTelegramNotifier, buildMessage } from "../lib/intake/notify.js";
 import { readConfig, resolveNotifier, telegramSettings } from "../lib/intake/config.js";
-import { startBridge, RedisConn } from "./redis-rest-bridge.mjs";
+import { startTestRedis, startBridge, RedisConn } from "./redis-rest-bridge.mjs";
 
 const uuid = () => crypto.randomUUID();
 const ID_RE = /^MX-[A-Z]{3}-\d{8}-[0-9A-HJKMNP-TV-Z]{6}$/;
@@ -400,22 +400,21 @@ let redis, bridge, upstash, unavailable;
 const REDIS_PORT = 6391;
 before(async () => {
   try {
-    redis = spawn("redis-server", ["--port", String(REDIS_PORT), "--save", "", "--appendonly", "no"], { stdio: ["ignore", "pipe", "ignore"] });
-    await waitForReady(redis, "Ready to accept connections", 3000, "redis");
+    redis = await startTestRedis(REDIS_PORT);
     bridge = await startBridge({ redisPort: REDIS_PORT, token: "bridge-token" });
     upstash = createUpstashStore({ url: bridge.url, token: "bridge-token" });
     await upstash.ping();
   } catch (e) {
     if (bridge) bridge.close();
-    if (redis) redis.kill();
-    const expected = ["ENOENT", "EPERM", "EACCES", "ECONNREFUSED", "redis_timeout", "redis_exit", "redis_connect_timeout", "bridge_listen_timeout"];
+    await redis?.close();
+    const expected = ["ENOENT", "EPERM", "EACCES"];
     if (process.env.INTAKE_REQUIRE_REDIS === "1" || !expected.includes(e.code)) throw e;
     unavailable = `local Redis integration unavailable: ${e.code}`;
   }
 });
-after(() => {
+after(async () => {
   if (bridge) bridge.close();
-  if (redis) redis.kill();
+  await redis?.close();
 });
 function integrationTest(name, run) {
   test(name, async (t) => {

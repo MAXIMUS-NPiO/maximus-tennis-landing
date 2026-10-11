@@ -154,3 +154,32 @@ test('caller AbortSignal reaches the request and cancellation remains a coarse u
   const pending = requestTennisCheckout(input(), { fetchImpl: async (_, { signal }) => new Promise((resolve, reject) => signal.addEventListener('abort', () => reject(new Error('synthetic-private-cancel-reason')), { once: true })), signal: controller.signal, now: AT });
   controller.abort(); await assert.rejects(pending, { code: 'session_unavailable' });
 });
+
+test('already cancelled reads and preparations never invoke the transport', async () => {
+  const controller = new AbortController(); controller.abort();
+  const options = { signal: controller.signal, fetchImpl: async () => assert.fail('cancelled request must not fetch'), now: AT };
+  await assert.rejects(loadTennisCheckout(ORDER, options), { code: 'session_unavailable' });
+  await assert.rejects(requestTennisCheckout(input(), options), { code: 'session_unavailable' });
+});
+
+test('cancellation during a late account response or JSON body prevents a follow-up order read', async () => {
+  for (const duringBody of [false, true]) {
+    const controller = new AbortController(); let calls = 0;
+    await assert.rejects(loadTennisCheckout(ORDER, { signal: controller.signal, fetchImpl: async () => {
+      assert.equal(++calls, 1, 'no order fetch after cancelled session');
+      if (!duringBody) controller.abort();
+      return { ok: true, redirected: false, json: async () => {
+        if (duringBody) controller.abort();
+        return { user: { id: USER, emailVerified: true }, csrfToken: CSRF };
+      } };
+    } }), { code: 'session_unavailable' });
+    assert.equal(calls, 1);
+  }
+});
+
+test('a late ready response from an aborted preparation cannot return a descriptor', async () => {
+  const controller = new AbortController();
+  await assert.rejects(requestTennisCheckout(input(), { signal: controller.signal, now: AT, fetchImpl: async () => ({
+    ok: true, redirected: false, json: async () => { controller.abort(); return ready(); },
+  }) }), { code: 'session_unavailable' });
+});

@@ -18,6 +18,7 @@ const FORBIDDEN_RAW = [
 // Confidential terms are checked by hash (scripts/lib/guard.mjs), so this public script does not
 // publish what it guards.
 const { confidentialHits } = await import("./lib/guard.mjs");
+const { storePurchaseHtmlForGuard } = await import("../data/store-products.js");
 // Checked against visible text only (tags, scripts and styles removed): wording that must never be published.
 /**
  * MAXIMUS talks about itself and compares itself with no one (Founder, 1 October 2026). Two things
@@ -87,7 +88,7 @@ while (queue.length) {
   const { status, html } = await get(path);
   if (status !== 200) { problems.push(`${status} ${path}`); continue; }
   for (const re of FORBIDDEN_RAW) if (re.test(html)) problems.push(`forbidden ${re} in ${path}`);
-  if (confidentialHits(html)) problems.push(`confidential term (guarded by hash) in ${path}`);
+  if (confidentialHits(storePurchaseHtmlForGuard(path, html))) problems.push(`confidential term (guarded by hash) in ${path}`);
   // Authorship on every page (Founder, 10 October 2026): the footer line with the author's name,
   // the head metadata, the structured data; the calculation-model line under every tool; the
   // anchored rights statement on the terms page.

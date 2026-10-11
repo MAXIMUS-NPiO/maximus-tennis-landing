@@ -26,7 +26,7 @@ const now = () => (typeof performance !== "undefined" ? performance.now() : Date
  * The idempotency key is stable for an unchanged payload (a retry or a double click never creates a
  * second request) and is regenerated when the payload changes.
  */
-export function useLeadSubmit({ purpose, locale, context = {}, series }) {
+export function useLeadSubmit({ purpose, locale, context = {}, series, endpoint = "/api/leads", orderPlan, orderTechnical, paymentPreference }) {
   const [state, setState] = useState("editing");
   const [result, setResult] = useState(null);
   const keyRef = useRef({ sig: null, key: null });
@@ -41,7 +41,7 @@ export function useLeadSubmit({ purpose, locale, context = {}, series }) {
     async ({ fields, config, profile, consent, hp }) => {
       if (busyRef.current) return { ok: false, code: "busy" };
       busyRef.current = true;
-      const body = { purpose, locale, fields, ...(config ? { config } : {}), ...(profile ? { profile } : {}), consent: consent === true };
+      const body = { purpose, locale, fields, ...(orderPlan ? { plan: orderPlan, technical: orderTechnical, paymentPreference } : {}), ...(config ? { config } : {}), ...(profile ? { profile } : {}), consent: consent === true };
       const sig = JSON.stringify(body);
       if (keyRef.current.sig !== sig) keyRef.current = { sig, key: uuidv4() };
       const payload = {
@@ -62,9 +62,17 @@ export function useLeadSubmit({ purpose, locale, context = {}, series }) {
       let res;
       let data = null;
       try {
-        res = await fetch("/api/leads", {
+        const headers = { "Content-Type": "application/json" };
+        if (endpoint === "/api/orders") {
+          const session = await fetch("/api/accounts/session", { credentials: "same-origin", cache: "no-store", signal: ctrl.signal });
+          if (session.ok) {
+            const account = await session.json();
+            if (typeof account.csrfToken === "string") headers["X-CSRF-Token"] = account.csrfToken;
+          }
+        }
+        res = await fetch(endpoint, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers,
           body: JSON.stringify(payload),
           signal: ctrl.signal,
           credentials: "same-origin",
@@ -85,7 +93,7 @@ export function useLeadSubmit({ purpose, locale, context = {}, series }) {
 
       if (res.ok && data && data.status === "accepted" && typeof data.request_id === "string") {
         setState("accepted");
-        setResult({ requestId: data.request_id, duplicate: !!data.duplicate });
+        setResult({ requestId: data.request_id, duplicate: !!data.duplicate, ...(data.order ? { order: data.order, accessToken: data.access_token, accountLink: data.account_link || null } : {}) });
         track("lead_submit_success", { ...a, request_id: data.request_id });
         return { ok: true, requestId: data.request_id };
       }
@@ -102,7 +110,7 @@ export function useLeadSubmit({ purpose, locale, context = {}, series }) {
       track("lead_submit_error", { ...a, error_code: String(code).slice(0, 40) });
       return { ok: false, code };
     },
-    [purpose, locale, series, context]
+    [purpose, locale, series, context, endpoint, orderPlan, orderTechnical, paymentPreference]
   );
 
   const reset = useCallback(() => {

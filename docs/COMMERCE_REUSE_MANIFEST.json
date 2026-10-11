@@ -1,0 +1,252 @@
+{
+  "source_commit": "867e6a8",
+  "source_checkout": "/Users/maximus/Documents/Codex/2026-10-09/task-3/maximus-tennis-landing",
+  "target_base_commit": "5c330af90945bcae1ee09d89d95da4004b3e5508",
+  "status": "local disabled reuse; not live payment integration",
+  "files": [
+    {
+      "path": "lib/commerce/access.js",
+      "source_sha256": "1fe345cea60c42e5689fee01b57bc38bcef41143a35d0754bbc45c9dff4c303c",
+      "current_sha256": "599e03d6410ee7517252a59c6c7bcfcce31979f9ef7bc6a809a69513660c9316"
+    },
+    {
+      "path": "lib/commerce/account-handler.js",
+      "source_sha256": "e7b41fcffbb967d522fd6972db4ae3e39606b0c54466e097a74cbfeb6d03fb42",
+      "current_sha256": "4b283330afd7e77c655c6ae809da01a545329305e0d0082980212bb767c244a7"
+    },
+    {
+      "path": "lib/commerce/accounts.js",
+      "source_sha256": "9d4d729a240e84ac5417b990f75ae19f4e75a31d7c87797f60cb9e31351e8f40",
+      "current_sha256": "5a050257b67c83bca900d7e01babad832cb83be1ff4ebaf645507abd26c8bc36"
+    },
+    {
+      "path": "lib/commerce/catalog.js",
+      "source_sha256": "55584746d1e8a470f90adf13c7ff71df43454c88694381dac5c9fffea83ccc58",
+      "current_sha256": "123d90e33ea847bd04bcddaec6e3e2f7f4979d36132c931708a3532e920b3d69"
+    },
+    {
+      "path": "lib/commerce/config.js",
+      "source_sha256": "8cc28865f758df64eed5e1c47b1fb3c6ccdc64c4e096d7f4e60aa1d293108b61",
+      "current_sha256": "23fdc89f27d002b1db93b0f7040407aae4e3d3bdd93cb6af8a39ce4855f54081"
+    },
+    {
+      "path": "lib/commerce/cscart.js",
+      "source_sha256": "f9dd54116413e25415aa6c1b0ee19fcb010200cca85ba496f7cf12eec5768c93",
+      "current_sha256": "17cf9b6cff2ad2a569eaf030d5ceda5d3034290a2993b0c1f0b225dc23698166"
+    },
+    {
+      "path": "lib/commerce/gateway.js",
+      "source_sha256": "aec72c8c5b2b1d558333a7636ecba4b81584d4399234a9decb176d11727bf70e",
+      "current_sha256": "f9841f5ad8258f5062e573cf2db409cf1ec04a690454266f6350199114c4d4f9"
+    },
+    {
+      "path": "lib/commerce/hosted.js",
+      "source_sha256": "264ffb79d071829b20c4471446943a61e61f46988cc692877cbc1fef37b09f7f",
+      "current_sha256": "e92daf213d6ed34e06a93b6afde28edb57da392bffb40e4fd186d5980a650cb0"
+    },
+    {
+      "path": "lib/commerce/http.js",
+      "source_sha256": "335fa7c170f8b36930adf7340d45796279a0ee34327d681be56a3ba43b9394bc",
+      "current_sha256": "457766fdc3241ccb73ba6672d05a0cf3d4931f5fdfb448944cedda28e75d7b00"
+    },
+    {
+      "path": "lib/commerce/mail.js",
+      "source_sha256": "04675a996e5623d9a0bfc439ead22edaff4bf1d782e9b75f58b5ddbebf293e75",
+      "current_sha256": "f2f08aa22790d45f449eeedbecc77e3f614e9ac82df11ee05f1dbe7fd204b824"
+    },
+    {
+      "path": "lib/commerce/quotation.js",
+      "source_sha256": "755ab2765e62e832579b0fe09035095140d6709ded291a2fe5a5c70ff02ab12a",
+      "current_sha256": "456591c173c72efe2a4e76147a29ef27d6d2125b229605b8731ae132610d461f"
+    },
+    {
+      "path": "lib/commerce/service.js",
+      "source_sha256": "16849a1bf6bec0f1497aea873753b693d35f5a1a84fd00cbab3d82ae90f3a485",
+      "current_sha256": "5d4346cc546435b673b25e124872e074ee4e6f50d3c84147e9ece897e5ea738d"
+    },
+    {
+      "path": "lib/commerce/store.js",
+      "source_sha256": "b80790d8aef76e0f71ce6d219a77bd30979625c583d4691f60e0f9a48cf4ab35",
+      "current_sha256": "5055689c15ed66f04d2eacb692f0d916e865693fbb9c80047d18f9ab8b0678f8"
+    },
+    {
+      "path": "lib/commerce/technical.js",
+      "source_sha256": "6861fe732da3292e2b7a80f1e640ba75fa64056bf3a9c6f56e67d44fe38b784c",
+      "current_sha256": "99833d3b84a8050ccd41b2d25f6f7cf26d300a1e3709f227bd1f954d7328d8f5"
+    },
+    {
+      "path": "lib/commerce/vegas-contract.js",
+      "source_sha256": "d3e163b127389883b46f69bf85214305fa5f33a5ee0b0bf2735e4ef6144edb20",
+      "current_sha256": "205f5afaa2c52c726d42d7722e3e47eb1c31f052716ee217a438641241a2ef88"
+    },
+    {
+      "path": "app/api/orders/account/route.js",
+      "source_sha256": "708836d075c5292ce87c5fa7ecfe279c6033523363afecb98e24d8f7c69f4065",
+      "current_sha256": "9ec551c54c3932942ae86db8c5eea9bbe2ebed81c828a5b1b9445307062e253a"
+    },
+    {
+      "path": "app/api/orders/checkout/route.js",
+      "source_sha256": "7bbebee869afd87cb7794fa68157dba1342d1167015fe1cb739099a61161f71f",
+      "current_sha256": "663e7bbcb36e44c14570d28f4622f3006099d7081c9ba18b24e6d5735b4a7bd7"
+    },
+    {
+      "path": "app/api/orders/hosted/route.js",
+      "source_sha256": "aad08afc4c358acbda1ba20d48e1eb3b483700378e2ee075825590b25d3510cb",
+      "current_sha256": "ec6f700f006222a617b53ad9a2c8efb7d2ad6793d539f8bbabe84b67af82ec6b"
+    },
+    {
+      "path": "app/api/orders/retry/route.js",
+      "source_sha256": "81fccd107ef093d8b4201ff82d3af3ffc321a705159848becab0d449f6375637",
+      "current_sha256": "dfa05371e3689e38f758d33999be275b3950de4977abb1d8c2f4cfe848990c77"
+    },
+    {
+      "path": "app/api/orders/route.js",
+      "source_sha256": "02fc9550586d54232628bdc08c84ec43fa4cb0e14cb6639710b0150c7746a6ad",
+      "current_sha256": "f5961bb4eb3199bc421257c4b9efac663e9cba37443ba3033ba744c51cb8dc34"
+    },
+    {
+      "path": "app/api/orders/webhook/route.js",
+      "source_sha256": "48e53dda63a7845c7b0694e55ab314d47fc537ac06fc391444e3a1c202ccdf9d",
+      "current_sha256": "ebda685776aab560b4d709fc83c294728f16abcdf8e7fd4743e5140c19932bde"
+    },
+    {
+      "path": "integrations/cscart-receiver/README.md",
+      "source_sha256": "eb83296e884d3be5663c6415144401220e485d26d57345931f3fd5293f0f2ce4",
+      "current_sha256": "eb83296e884d3be5663c6415144401220e485d26d57345931f3fd5293f0f2ce4"
+    },
+    {
+      "path": "integrations/cscart-receiver/http.js",
+      "source_sha256": "b02163a924044e9acd715df925945764c279108d8d90f71fef440a84f59d95fd",
+      "current_sha256": "1adc40ca5fb82d37888fde23fec85334f718c97156595e0ca00ac565380e4fd7"
+    },
+    {
+      "path": "integrations/cscart-receiver/service.js",
+      "source_sha256": "262bc863eecc96e4a24b444ae8e90091975a7cce83a1e3d60ad9a665fdeaacaf",
+      "current_sha256": "2efb063613e1e5e0d2bc4faeba99be048164858ce58f4d3445f065603899d74a"
+    },
+    {
+      "path": "integrations/cscart-receiver/store.js",
+      "source_sha256": "b8a5a495ea8f15f770dffaf7fb36c96ff205e3b0a97903a72cae054d1e0db4fe",
+      "current_sha256": "4e277f97fcf820d9eb296c07115dbf5aa5d5489b050c0125521028f7ebb24d7e"
+    },
+    {
+      "path": "components/OrderFlow.js",
+      "source_sha256": "3e4c37e59f80c5b1bff42c29f93e9445ec5f1d554c165cdedc5cf2f8698e6b4d",
+      "current_sha256": "98709d84ef48974c2adb469d4a09d08c974f6470147500d5ce39d38bec884fe7"
+    },
+    {
+      "path": "components/OrderAccount.js",
+      "source_sha256": "3bbc7009241f3c446396a893e2683aba27bd00f4e4dae4c781c6a16bcf6de978",
+      "current_sha256": "93c06e4d755dfb4e0ff1684250ae137b190f680c268e10e2fc5be107f5064c72"
+    },
+    {
+      "path": "content/commerce.js",
+      "source_sha256": "2513a76adede2ae803dcdd7f775a92c93bc482c9be558c3c0f5cadbef44d9f5b",
+      "current_sha256": "ab852acb83fe238a5da0df755f0a4919e6b40017aa2dbd56a3aa562350e22378"
+    },
+    {
+      "path": "app/[locale]/orders/page.js",
+      "source_sha256": "a2d043301f4bce13a86374981b2a9dda965b42f504b7257aa8b9227c89ef418f",
+      "current_sha256": "70b397ea67c1c6580ef19426076fa8e0fbbe1365ab61826c326bd79fa7a89756"
+    },
+    {
+      "path": "tests/commerce.test.mjs",
+      "source_sha256": "910e56a2bd80deff93811df17bb57b64e55d9a4853deb927c31a290152f1e096",
+      "current_sha256": "b66be95b5d618a6cfe1d21c051a64e08d7194e3817ad2620ddebc0514c689d77"
+    },
+    {
+      "path": "tests/account-security.test.mjs",
+      "source_sha256": "8804785a37fab9ac8bbe825c9ff996c11263455233cae137a6dc3af01f7e35cb",
+      "current_sha256": "3d8d016d536a982a424fdec3a9435af97f85ca2aa04a6222f9f73fa176e6e2e2"
+    },
+    {
+      "path": "tests/custom-unstrung.test.mjs",
+      "source_sha256": "5acc4162c24ad1868e75ca57e0b2ba3e295bd6b5a2e90fc1845eedad05b8b22f",
+      "current_sha256": "fdc27a03c1b190252999be6bff9d6829986d381d259a5c506f0eac224dafe2c6"
+    },
+    {
+      "path": "tests/customer-smtp.test.mjs",
+      "source_sha256": "09b213a60c745bb0b10874718a5fd832d82b6b98ce6a8ef1502daca143f00e57",
+      "current_sha256": "4c1221590186ddd3a0b71d6b7473d270cca9ce6a21b77dfeea8b30314f76b061"
+    },
+    {
+      "path": "tests/hosted-popup-mock.test.mjs",
+      "source_sha256": "3e7f7cf2dfa2ed60bdb28e22d9c29bcd7b0ce5d881a31d69f1a125707aea11ba",
+      "current_sha256": "dce92d5fbd32c386de926e6ef8e4d9ce0a5acb5228a6c291770c48c20f9a454a"
+    },
+    {
+      "path": "tests/cscart-receiver.test.mjs",
+      "source_sha256": "f4784320677329e222e9c631209479755c3ad9c3a0d06554ff163ba53ab96153",
+      "current_sha256": "166b5cf2455a5ccaa9e68afaeabdb06ac2a0f9723ccdce34eb9134eb3933852e"
+    },
+    {
+      "path": "tests/node-smtp-sink.mjs",
+      "source_sha256": "f6650633c500f930b6226824f4ee5f8b68dcd06a209633267d5a2a1ccb6394d8",
+      "current_sha256": "7e96fd95fc1dea7251728eecf70085ab59fa0e41125b7371ffc1a4f643d4ee08"
+    },
+    {
+      "path": "tests/browser/hosted-mock.mjs",
+      "source_sha256": "06f5fb5dec425575452504f360370f4f16625143d9d92fb86d52bf4d30aacf57",
+      "current_sha256": "404442d02591c9e7a39d2f179e313c25a0f3e10de038ab8ebe371b72a7bb69a0"
+    }
+  ],
+  "excluded_scope": [
+    "lib/commerce/lead-receipt.js and old intake customer lead queue changes",
+    "old tests/intake*.mjs split; current harness retained",
+    "old subscriptions integration and browser bundling scripts",
+    "historical readiness reports are not fresh release evidence"
+  ],
+  "local_edits": [
+    {
+      "path": "tests/commerce.test.mjs",
+      "reason": "Removed two unsupported customer lead queue cases; real schema/IDs in Redis REST mock; invalid-submission fixture does not GET an absent ID.",
+      "sha256": "b66be95b5d618a6cfe1d21c051a64e08d7194e3817ad2620ddebc0514c689d77"
+    },
+    {
+      "path": "lib/commerce/store.js",
+      "reason": "Complete JSON/schema/ID/finite-due preflight before any command or memory mutation; Lua key type/binding/score/schema preflight and immutable ID/snapshot/invoice.",
+      "sha256": "5055689c15ed66f04d2eacb692f0d916e865693fbb9c80047d18f9ab8b0678f8"
+    },
+    {
+      "path": "tests/commerce-store-regressions.test.mjs",
+      "reason": "Seven new memory/REST preflight, concurrency, immutability and alias regressions; native Redis tests separately owned by test agent.",
+      "sha256": "b98a51a1961400a575e21b6b0d10381c3317c11c191880e488c2a501d5b7348c"
+    }
+  ],
+  "verification": {
+    "current_core_regressions": {
+      "passed": 48,
+      "failed": 0,
+      "skipped": 0,
+      "command": "node --no-warnings --import ./tests/register.mjs --test tests/commerce-store-regressions.test.mjs tests/commerce.test.mjs tests/account-security.test.mjs tests/hosted-popup-mock.test.mjs tests/custom-unstrung.test.mjs"
+    },
+    "native_redis": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "runtime": "Redis 8.10.2, dedicated owned local process on 127.0.0.1:6392, fresh temporary data directory",
+      "test_file": "tests/commerce-store-redis.test.mjs",
+      "verification_log": "/Users/maximus/Documents/Codex/2026-10-10/task/local-integration-env/release-native-store-test.log",
+      "scope": "Raw CREATE/CAS bad scores/schema/IDs/JSON/key types cannot mutate state; snapshot/invoice immutability and stale CAS; REST concurrent duplicate idempotency and atomic paid/invoice/event/outbox."
+    },
+    "live_payment": "Not performed; native CS-Cart live adapter absent, mock receiver refuses live.",
+    "local_receiver_and_smtp": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "command": "REQUIRE_LOCAL_SMTP=true node --no-warnings --import ./tests/register.mjs --test tests/cscart-receiver.test.mjs tests/customer-smtp.test.mjs",
+      "scope": "Rerun after commerce store hardening: durable file mock CS-Cart receiver, real loopback HTTP and SMTP; existing locked nodemailer 10.0.10; no external request."
+    },
+    "release_gate": "Full strict repository tests and production build are separately run by root/test agent; these targeted results do not prove live checkout."
+  },
+  "merged_main_commit": "3aed3a5d9b86c8a7b525e313811a31948ff38090",
+  "authorship_integration": "Owner notice added to reused/new source files under current main; source_sha256 retains original reuse provenance.",
+  "publication_snapshot_policy": {
+    "base": "current remote main; no intermediate private local history",
+    "excluded": [
+      "unused data/bank.js",
+      "historical individual and proposed price-book data"
+    ],
+    "preserved": "original Claude checkout; private approved runtime DI contract"
+  }
+}

@@ -7,6 +7,68 @@
  */
 import http from "node:http";
 import net from "node:net";
+import { spawn } from "node:child_process";
+import { mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+
+// Each native-store suite owns its Redis process and a fresh, disposable data directory.
+// Never attach to an already listening server or load another checkout's dump.rdb.
+export async function startTestRedis(port, { timeoutMs = 3000 } = {}) {
+  const directory = mkdtempSync(join(tmpdir(), "maximus-native-redis-"));
+  let child;
+  const close = async () => {
+    try {
+      if (child?.pid && child.exitCode === null && child.signalCode === null) {
+        await new Promise((resolve, reject) => {
+          let killTimer, finalTimer;
+          const finish = (error) => {
+            clearTimeout(killTimer); clearTimeout(finalTimer);
+            child.removeListener("exit", onExit);
+            error ? reject(error) : resolve();
+          };
+          const onExit = () => finish();
+          child.once("exit", onExit);
+          killTimer = setTimeout(() => child.kill("SIGKILL"), 1000);
+          finalTimer = setTimeout(() => finish(bridgeError("redis_cleanup_timeout")), 2000);
+          child.kill("SIGTERM");
+        });
+      }
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  };
+  try {
+    child = spawn("redis-server", ["--bind", "127.0.0.1", "--protected-mode", "yes", "--port", String(port), "--dir", directory, "--save", "", "--appendonly", "no"], {
+      stdio: ["ignore", "pipe", "pipe"],
+      env: { PATH: process.env.PATH || "/usr/bin:/bin", TMPDIR: tmpdir(), MAXIMUS_TEST_REDIS_DIR: directory },
+    });
+    await new Promise((resolve, reject) => {
+      let settled = false, output = "";
+      const finish = (error) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        child.stdout.removeListener("data", onData);
+        child.stdout.resume();
+        error ? reject(error) : resolve();
+      };
+      const onData = data => {
+        output = (output + String(data)).slice(-4096);
+        if (output.includes("Ready to accept connections")) finish();
+      };
+      const timer = setTimeout(() => finish(bridgeError("redis_startup_timeout")), timeoutMs);
+      child.stderr.resume();
+      child.stdout.on("data", onData);
+      child.on("error", finish);
+      child.once("exit", () => finish(bridgeError("redis_startup_exit")));
+    });
+    return { close };
+  } catch (error) {
+    await close();
+    throw error;
+  }
+}
 
 function encode(args) {
   let out = `*${args.length}\r\n`;
@@ -47,63 +109,135 @@ function parse(buf, i = 0) {
   throw new Error("RESP parse error");
 }
 
-class RedisConn {
-  constructor(port) {
-    this.sock = net.connect(port, "127.0.0.1");
+function bridgeError(code) {
+  return Object.assign(new Error(code), { code });
+}
+
+// Test-only connection with bounded readiness and command waits. A failed connection cannot
+// serve later commands: keeping the RESP queue alive would pair replies with the wrong request.
+export class RedisConn {
+  constructor(port, { connectImpl = net.connect, timeoutMs = 2000 } = {}) {
     this.buf = Buffer.alloc(0);
     this.queue = [];
+    this.failure = null;
+    this.sock = connectImpl(port, "127.0.0.1");
+    this.ready = new Promise((resolve, reject) => {
+      this.rejectReady = reject;
+      this.connectTimer = setTimeout(() => this.fail(bridgeError("redis_connect_timeout")), timeoutMs);
+      this.sock.once("connect", () => {
+        clearTimeout(this.connectTimer);
+        resolve();
+      });
+    });
+    // startBridge consumes this immediately; direct callers may await it after a socket event.
+    this.ready.catch(() => {});
+    this.timeoutMs = timeoutMs;
+    this.sock.on("error", (e) => this.fail(e));
+    this.sock.on("close", () => this.fail(bridgeError("redis_connection_closed")));
     this.sock.on("data", (d) => {
-      this.buf = Buffer.concat([this.buf, d]);
-      while (this.queue.length) {
-        const r = parse(this.buf, 0);
-        if (!r) break;
-        this.buf = this.buf.slice(r.next);
-        this.queue.shift()(r.value);
+      try {
+        this.buf = Buffer.concat([this.buf, d]);
+        while (this.queue.length) {
+          const r = parse(this.buf, 0);
+          if (!r) break;
+          this.buf = this.buf.slice(r.next);
+          const pending = this.queue.shift();
+          clearTimeout(pending.timer);
+          pending.resolve(r.value);
+        }
+      } catch (e) {
+        this.fail(e);
       }
     });
   }
-  send(args) {
-    return new Promise((resolve) => {
-      this.queue.push(resolve);
-      this.sock.write(encode(args));
+  fail(error) {
+    if (this.failure) return;
+    this.failure = error;
+    clearTimeout(this.connectTimer);
+    this.rejectReady(error);
+    for (const pending of this.queue.splice(0)) {
+      clearTimeout(pending.timer);
+      pending.reject(error);
+    }
+    this.sock.destroy();
+  }
+  async send(args) {
+    await this.ready;
+    if (this.failure) throw this.failure;
+    return new Promise((resolve, reject) => {
+      const pending = { resolve, reject, timer: setTimeout(() => this.fail(bridgeError("redis_command_timeout")), this.timeoutMs) };
+      this.queue.push(pending);
+      try {
+        this.sock.write(encode(args));
+      } catch (e) {
+        this.fail(e);
+      }
     });
+  }
+  close() {
+    this.fail(bridgeError("bridge_closed"));
   }
 }
 
 const wrap = (v) => (v && typeof v === "object" && !Array.isArray(v) && v.__error ? { error: v.__error } : { result: v });
 
-export function startBridge({ redisPort, port = 0, token }) {
-  const conn = new RedisConn(redisPort);
-  const server = http.createServer(async (req, res) => {
-    if (req.headers.authorization !== `Bearer ${token}`) {
-      res.writeHead(401, { "Content-Type": "application/json" });
-      return res.end(JSON.stringify({ error: "Unauthorized" }));
-    }
-    let body = "";
-    for await (const c of req) body += c;
-    let data;
+export async function startBridge({ redisPort, port = 0, token, timeoutMs = 2000, connectImpl = net.connect, createServerImpl = http.createServer }) {
+  const conn = new RedisConn(redisPort, { connectImpl, timeoutMs });
+  const server = createServerImpl(async (req, res) => {
     try {
-      data = JSON.parse(body);
+      if (req.headers.authorization !== `Bearer ${token}`) {
+        res.writeHead(401, { "Content-Type": "application/json" });
+        return res.end(JSON.stringify({ error: "Unauthorized" }));
+      }
+      let body = "";
+      for await (const c of req) body += c;
+      let data;
+      try {
+        data = JSON.parse(body);
+        if (!Array.isArray(data) || (req.url === "/pipeline" && data.some((cmd) => !Array.isArray(cmd)))) throw new Error("bad json");
+      } catch {
+        res.writeHead(400);
+        return res.end(JSON.stringify({ error: "bad json" }));
+      }
+      if (req.url === "/pipeline") {
+        const out = [];
+        for (const cmd of data) out.push(wrap(await conn.send(cmd)));
+        res.writeHead(200, { "Content-Type": "application/json" });
+        return res.end(JSON.stringify(out));
+      }
+      const r = wrap(await conn.send(data));
+      res.writeHead(r.error ? 400 : 200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(r));
     } catch {
-      res.writeHead(400);
-      return res.end(JSON.stringify({ error: "bad json" }));
+      if (!res.headersSent) res.writeHead(503, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ error: "redis_unavailable" }));
     }
-    if (req.url === "/pipeline") {
-      const out = [];
-      for (const cmd of data) out.push(wrap(await conn.send(cmd)));
-      res.writeHead(200, { "Content-Type": "application/json" });
-      return res.end(JSON.stringify(out));
-    }
-    const r = wrap(await conn.send(data));
-    res.writeHead(r.error ? 400 : 200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify(r));
   });
-  return new Promise((resolve) => server.listen(port, "127.0.0.1", () => resolve({ server, url: `http://127.0.0.1:${server.address().port}`, close: () => { server.close(); conn.sock.destroy(); } })));
+  const close = () => { server.close(); server.closeAllConnections?.(); conn.close(); };
+  let listenTimer;
+  const listening = new Promise((resolve, reject) => {
+    listenTimer = setTimeout(() => reject(bridgeError("bridge_listen_timeout")), timeoutMs);
+    // Retain an error listener after startup too, so an error is never an uncaught event.
+    server.on("error", (e) => { reject(e); close(); });
+    server.listen(port, "127.0.0.1", resolve);
+  });
+  try {
+    await Promise.all([conn.ready, listening]);
+    return { server, url: `http://127.0.0.1:${server.address().port}`, close };
+  } catch (e) {
+    close();
+    throw e;
+  } finally {
+    clearTimeout(listenTimer);
+  }
 }
 
 if (process.argv[1] && process.argv[1].endsWith("redis-rest-bridge.mjs")) {
   const redisPort = Number(process.env.REDIS_PORT || 6390);
   const port = Number(process.env.BRIDGE_PORT || 8079);
   const token = process.env.BRIDGE_TOKEN || "local-test-token";
-  startBridge({ redisPort, port, token }).then(({ url }) => console.log(`bridge ${url} → redis :${redisPort}`));
+  startBridge({ redisPort, port, token }).then(({ url }) => console.log(`bridge ${url} → redis :${redisPort}`)).catch((e) => {
+    console.error(`bridge startup failed: ${e.code || "unknown_error"}`);
+    process.exitCode = 1;
+  });
 }

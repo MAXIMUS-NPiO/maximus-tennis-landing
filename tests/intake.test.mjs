@@ -2,11 +2,13 @@
 /**
  * Intake tests: schema, service, idempotency, rate limit, durable store (real redis-server through
  * an Upstash-compatible REST bridge), notification delivery (webhook receiver + SMTP sink), retries.
- * Run: npm run test:intake   (requires redis-server and python3 with aiosmtpd for the SMTP case)
+ * Run: npm run test:unit. Redis/SMTP integration prerequisites are reported as skips when absent.
+ * Set INTAKE_REQUIRE_REDIS=1 to require Redis; INTAKE_REQUIRE_SMTP=1 also requires SMTP.
  */
-import { test, before, after } from "node:test";
+import { test, describe, before, after } from "node:test";
 import assert from "node:assert/strict";
 import http from "node:http";
+import { EventEmitter } from "node:events";
 import crypto from "node:crypto";
 import { spawn } from "node:child_process";
 import { mkdtempSync, readdirSync, readFileSync } from "node:fs";
@@ -18,7 +20,7 @@ import { createMemoryStore, createUpstashStore, resolveStore, readRestCredential
 import { acceptRequest, afterAccept, makeRequestId, safeEqual } from "../lib/intake/service.js";
 import { deliver, processDue, nextAttemptAt, RETRY_SCHEDULE_MS, MAX_ATTEMPTS, createWebhookNotifier, createSmtpNotifier, createTelegramNotifier, buildMessage } from "../lib/intake/notify.js";
 import { readConfig, resolveNotifier, telegramSettings } from "../lib/intake/config.js";
-import { startBridge } from "./redis-rest-bridge.mjs";
+import { startBridge, RedisConn } from "./redis-rest-bridge.mjs";
 
 const uuid = () => crypto.randomUUID();
 const ID_RE = /^MX-[A-Z]{3}-\d{8}-[0-9A-HJKMNP-TV-Z]{6}$/;
@@ -63,13 +65,16 @@ test("listed weight must belong to the exact series matrix", () => {
   assert.ok(validateConfig({ ...baseConfig, weight: 236 }).ok);
 });
 
-test("custom weight: zero, negative, non-numeric and decimals rejected; basis required", () => {
+test("custom weight rejects invalid integers and preserves the required Unstrung basis", () => {
   const c = { ...baseConfig, mode: "custom", weight: undefined };
   assert.equal(validateConfig({ ...c, customWeight: 0 }).errors["config.customWeight"], "out_of_range");
   assert.equal(validateConfig({ ...c, customWeight: "-300" }).errors["config.customWeight"], "out_of_range");
   assert.equal(validateConfig({ ...c, customWeight: "heavy" }).errors["config.customWeight"], "not_number");
   assert.equal(validateConfig({ ...c, customWeight: "301.5" }).errors["config.customWeight"], "decimal_not_supported");
-  assert.equal(validateConfig({ ...c, customWeight: 301 }).errors["config.basis"], "required");
+  const defaultBasis = validateConfig({ ...c, customWeight: 301 });
+  assert.ok(defaultBasis.ok);
+  assert.equal(defaultBasis.value.basis, "unstrung");
+  assert.equal(validateConfig({ ...c, customWeight: 301, basis: "strung" }).errors["config.basis"], "invalid");
   const ok = validateConfig({ ...c, customWeight: 301, basis: "unstrung" });
   assert.ok(ok.ok);
   assert.equal(ok.value.customWeight, 301);
@@ -354,23 +359,72 @@ test("configuration: REST credentials are accepted under any Vercel variable pre
 
 /* ------------------------------------------------------------------ real redis through REST bridge */
 
-let redis, bridge, upstash;
+// Pure tests have no dependency on this suite's infrastructure. Set INTAKE_REQUIRE_REDIS=1
+// when the integration environment is expected to be present: missing prerequisites then fail.
+function waitForReady(child, marker, timeoutMs, label) {
+  child.stderr?.resume?.(); // drain diagnostics without printing process output
+  return new Promise((resolve, reject) => {
+    let settled = false;
+    let output = "";
+    const finish = (error) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      child.stdout.removeListener("data", onData);
+      child.stdout.resume?.(); // keep a ready/noisy process from filling its output pipe
+      if (error) { child.kill(); reject(error); } else resolve();
+    };
+    const onData = (d) => {
+      output = (output + String(d)).slice(-4096);
+      if (output.includes(marker)) finish();
+    };
+    const timer = setTimeout(() => finish(Object.assign(new Error(`${label} readiness timed out`), { code: `${label}_timeout` })), timeoutMs);
+    child.stdout.on("data", onData);
+    // Keep the listener after readiness, so a later process error is never unhandled.
+    child.on("error", finish);
+    child.once("exit", (code, signal) => finish(Object.assign(new Error(`${label} exited before readiness (${code ?? signal})`), { code: `${label}_exit` })));
+  });
+}
+
+function listenLocal(server) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => { server.close(); reject(Object.assign(new Error("local listen timed out"), { code: "listen_timeout" })); }, 2000);
+    server.once("error", (e) => { clearTimeout(timer); reject(e); });
+    server.listen(0, "127.0.0.1", () => { clearTimeout(timer); resolve(); });
+  });
+}
+
+// This block is scoped: its before hook cannot block schema, memory or mock notification tests.
+describe("local Redis integrations", () => {
+let redis, bridge, upstash, unavailable;
 const REDIS_PORT = 6391;
-
 before(async () => {
-  redis = spawn("redis-server", ["--port", String(REDIS_PORT), "--save", "", "--appendonly", "no"], { stdio: "ignore" });
-  await new Promise((r) => setTimeout(r, 400));
-  bridge = await startBridge({ redisPort: REDIS_PORT, token: "bridge-token" });
-  upstash = createUpstashStore({ url: bridge.url, token: "bridge-token" });
-  await upstash.ping();
+  try {
+    redis = spawn("redis-server", ["--port", String(REDIS_PORT), "--save", "", "--appendonly", "no"], { stdio: ["ignore", "pipe", "ignore"] });
+    await waitForReady(redis, "Ready to accept connections", 3000, "redis");
+    bridge = await startBridge({ redisPort: REDIS_PORT, token: "bridge-token" });
+    upstash = createUpstashStore({ url: bridge.url, token: "bridge-token" });
+    await upstash.ping();
+  } catch (e) {
+    if (bridge) bridge.close();
+    if (redis) redis.kill();
+    const expected = ["ENOENT", "EPERM", "EACCES", "ECONNREFUSED", "redis_timeout", "redis_exit", "redis_connect_timeout", "bridge_listen_timeout"];
+    if (process.env.INTAKE_REQUIRE_REDIS === "1" || !expected.includes(e.code)) throw e;
+    unavailable = `local Redis integration unavailable: ${e.code}`;
+  }
 });
-
 after(() => {
   if (bridge) bridge.close();
   if (redis) redis.kill();
 });
+function integrationTest(name, run) {
+  test(name, async (t) => {
+    if (unavailable) { t.skip(unavailable); return; }
+    await run(t);
+  });
+}
 
-test("redis store: atomic idempotent create, index, pending queue, rate limit", async () => {
+integrationTest("redis store: atomic idempotent create, index, pending queue, rate limit", async () => {
   assert.equal(await upstash.ping(), true);
   const p = payload();
   const c = cfg(upstash);
@@ -391,7 +445,7 @@ test("redis store: atomic idempotent create, index, pending queue, rate limit", 
   assert.equal((await acceptRequest(payload(), { ip: "192.0.2.12", config: cfg(down) })).body.code, "store_unreachable");
 });
 
-test("redis store: lock prevents concurrent double delivery", async () => {
+integrationTest("redis store: lock prevents concurrent double delivery", async () => {
   const r = await acceptRequest(payload(), { ip: "192.0.2.20", config: cfg(upstash) });
   let calls = 0;
   const slow = { channel: "test", send: async () => { calls++; await new Promise((res) => setTimeout(res, 150)); return { ok: true, messageId: "m" }; } };
@@ -402,7 +456,7 @@ test("redis store: lock prevents concurrent double delivery", async () => {
 
 /* ------------------------------------------------------------------ webhook channel */
 
-test("webhook: signed delivery, failure schedules a retry, request stays stored", async () => {
+integrationTest("webhook: signed delivery, failure schedules a retry, request stays stored", async () => {
   const secret = "whsec-0123456789abcdef";
   const received = [];
   let fail = true;
@@ -413,7 +467,8 @@ test("webhook: signed delivery, failure schedules a retry, request stays stored"
     res.writeHead(fail ? 500 : 204);
     res.end();
   });
-  await new Promise((r) => srv.listen(0, "127.0.0.1", r));
+  try {
+  await listenLocal(srv);
   const url = `http://127.0.0.1:${srv.address().port}/hook`;
   const notifier = createWebhookNotifier({ url, secret });
   const r = await acceptRequest(payload(), { ip: "192.0.2.30", config: cfg(upstash) });
@@ -431,22 +486,21 @@ test("webhook: signed delivery, failure schedules a retry, request stays stored"
   assert.equal(last.headers["x-maximus-signature"], `sha256=${expected}`);
   assert.equal(JSON.parse(last.body).request_id, r.body.request_id);
   assert.equal((await upstash.getLead(r.body.request_id)).notify.status, "sent");
-  srv.close();
+  } finally { srv.close(); srv.closeAllConnections?.(); }
 });
 
 /* ------------------------------------------------------------------ SMTP channel */
 
-test("SMTP: plain-text notification with Reply-To; unreachable server schedules a retry", async (t) => {
+integrationTest("SMTP: plain-text notification with Reply-To; unreachable server schedules a retry", async (t) => {
   const dir = mkdtempSync(join(tmpdir(), "mx-smtp-"));
   const port = 2525 + Math.floor(Math.random() * 1000);
   const sink = spawn("python3", ["tests/smtp_sink.py", dir, String(port)], { stdio: ["ignore", "pipe", "pipe"] });
-  const started = await new Promise((resolve) => {
-    const timer = setTimeout(() => resolve(false), 5000);
-    sink.stdout.on("data", (d) => { if (String(d).includes("smtp sink")) { clearTimeout(timer); resolve(true); } });
-    sink.on("exit", () => { clearTimeout(timer); resolve(false); });
-  });
-  if (!started) {
-    t.skip("python3 aiosmtpd not available");
+  try {
+    await waitForReady(sink, "smtp sink", 5000, "smtp");
+  } catch (e) {
+    sink.kill();
+    if (process.env.INTAKE_REQUIRE_SMTP === "1") throw e;
+    t.skip(`local SMTP sink unavailable: ${e.code || "startup_error"}`);
     return;
   }
   try {
@@ -479,6 +533,8 @@ test("SMTP: plain-text notification with Reply-To; unreachable server schedules 
     sink.kill();
   }
 });
+
+}); // local Redis integrations
 
 test("notification message contains validated content only and a neutral status line", () => {
   const { subject, text } = buildMessage({ request_id: "MX-CFG-20260921-ABCDEF", created_at: "2026-09-21T10:00:00.000Z", purpose: "config", locale: "ru", contact, details: {}, config: { series: "spin", customWeight: 301, basis: "unstrung" }, context: {}, attribution: {} });
@@ -544,4 +600,111 @@ test("visits are written to the day's hash and expire on their own", async () =>
   assert.deepEqual(sent[0].body[0], ["HINCRBY", dayKey(now), "all", "1"]);
   assert.deepEqual(sent[0].body[1], ["HINCRBY", dayKey(now), "c:AE", "1"]);
   assert.equal(sent[0].body[2][0], "EXPIRE");
+});
+
+/* ------------------------------------------------------------------ harness failure regressions (no sockets/processes) */
+function fakeSocket() {
+  const socket = new EventEmitter();
+  socket.writes = [];
+  socket.write = (data) => { socket.writes.push(data); };
+  socket.destroy = () => { socket.destroyed = true; };
+  return socket;
+}
+function fakeServer() {
+  const server = new EventEmitter();
+  server.close = () => { server.closed = true; };
+  server.closeAllConnections = () => { server.connectionsClosed = true; };
+  server.address = () => ({ port: 12345 });
+  server.listen = (_port, _host, ready) => queueMicrotask(ready);
+  return server;
+}
+function fakeChild() {
+  const child = new EventEmitter();
+  child.stdout = new EventEmitter();
+  child.kill = () => { child.killed = true; };
+  return child;
+}
+
+test("harness: spawn error and early exit reject readiness and stop the child", async () => {
+  for (const event of ["error", "exit"]) {
+    const child = fakeChild();
+    const wait = waitForReady(child, "ready", 100, "redis");
+    queueMicrotask(() => event === "error" ? child.emit("error", Object.assign(new Error("missing"), { code: "ENOENT" })) : child.emit("exit", 1));
+    await assert.rejects(wait, { code: event === "error" ? "ENOENT" : "redis_exit" });
+    assert.equal(child.killed, true);
+  }
+});
+test("harness: readiness requires the child's marker and has a deadline", async () => {
+  const child = fakeChild();
+  const wait = waitForReady(child, "ready", 100, "redis");
+  child.stdout.emit("data", "rea"); child.stdout.emit("data", "dy");
+  await wait;
+  assert.equal(child.killed, undefined);
+  const silent = fakeChild();
+  await assert.rejects(waitForReady(silent, "ready", 15, "redis"), { code: "redis_timeout" });
+  assert.equal(silent.killed, true);
+});
+test("bridge: connection error and connection deadline reject readiness", async () => {
+  const socket = fakeSocket();
+  const conn = new RedisConn(1, { connectImpl: () => socket, timeoutMs: 100 });
+  const assertion = assert.rejects(conn.ready, { code: "EPERM" });
+  socket.emit("error", Object.assign(new Error("denied"), { code: "EPERM" }));
+  await assertion; assert.equal(socket.destroyed, true);
+  const silent = fakeSocket();
+  const waiting = new RedisConn(1, { connectImpl: () => silent, timeoutMs: 15 });
+  await assert.rejects(waiting.ready, { code: "redis_connect_timeout" });
+  assert.equal(silent.destroyed, true);
+});
+test("bridge: socket close rejects every queued and future command", async () => {
+  const socket = fakeSocket();
+  const conn = new RedisConn(1, { connectImpl: () => socket });
+  socket.emit("connect"); await conn.ready;
+  const a = assert.rejects(conn.send(["PING"]), { code: "redis_connection_closed" });
+  const b = assert.rejects(conn.send(["GET", "x"]), { code: "redis_connection_closed" });
+  await Promise.resolve(); socket.emit("close");
+  await Promise.all([a, b]);
+  await assert.rejects(conn.send(["PING"]), { code: "redis_connection_closed" });
+  assert.equal(conn.queue.length, 0);
+});
+test("bridge: command deadline closes the whole RESP queue", async () => {
+  const socket = fakeSocket();
+  const conn = new RedisConn(1, { connectImpl: () => socket, timeoutMs: 15 });
+  socket.emit("connect"); await conn.ready;
+  await Promise.all([assert.rejects(conn.send(["PING"]), { code: "redis_command_timeout" }), assert.rejects(conn.send(["GET", "x"]), { code: "redis_command_timeout" })]);
+  assert.equal(socket.destroyed, true); assert.equal(conn.queue.length, 0);
+});
+test("bridge: fragmented RESP replies resolve commands in order", async () => {
+  const socket = fakeSocket();
+  const conn = new RedisConn(1, { connectImpl: () => socket });
+  socket.emit("connect"); await conn.ready;
+  const a = conn.send(["PING"]), b = conn.send(["GET", "x"]);
+  await Promise.resolve();
+  socket.emit("data", Buffer.from("+PO")); socket.emit("data", Buffer.from("NG\r\n$3\r\nfoo\r\n"));
+  assert.equal(await a, "PONG"); assert.equal(await b, "foo"); conn.close();
+});
+test("bridge: invalid RESP rejects commands without leaving a queue", async () => {
+  const socket = fakeSocket();
+  const conn = new RedisConn(1, { connectImpl: () => socket });
+  socket.emit("connect"); await conn.ready;
+  const assertion = assert.rejects(conn.send(["PING"]), /RESP parse error/);
+  await Promise.resolve(); socket.emit("data", Buffer.from("?bad\r\n"));
+  await assertion; assert.equal(socket.destroyed, true);
+});
+test("bridge: listen failure and listen timeout reject startup and clean resources", async () => {
+  for (const mode of ["error", "timeout"]) {
+    const socket = fakeSocket(), server = fakeServer();
+    server.listen = () => { if (mode === "error") queueMicrotask(() => server.emit("error", Object.assign(new Error("denied"), { code: "EPERM" }))); };
+    const result = startBridge({ redisPort: 1, token: "synthetic", timeoutMs: 15, connectImpl: () => { queueMicrotask(() => socket.emit("connect")); return socket; }, createServerImpl: () => server });
+    await assert.rejects(result, { code: mode === "error" ? "EPERM" : "bridge_listen_timeout" });
+    assert.equal(socket.destroyed, true); assert.equal(server.closed, true);
+  }
+});
+test("bridge: backend failure returns HTTP 503 rather than an unhandled rejection", async () => {
+  const socket = fakeSocket(), server = fakeServer(); let handler;
+  const bridge = await startBridge({ redisPort: 1, token: "synthetic", connectImpl: () => { queueMicrotask(() => socket.emit("connect")); return socket; }, createServerImpl: (fn) => { handler = fn; return server; } });
+  socket.emit("close");
+  const req = { headers: { authorization: "Bearer synthetic" }, url: "/", async *[Symbol.asyncIterator]() { yield '["PING"]'; } };
+  const res = { writeHead(status) { this.status = status; }, end(body) { this.body = body; } };
+  await handler(req, res); assert.equal(res.status, 503); assert.equal(JSON.parse(res.body).error, "redis_unavailable");
+  bridge.close(); assert.equal(server.connectionsClosed, true);
 });

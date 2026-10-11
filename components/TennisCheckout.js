@@ -57,7 +57,12 @@ export default function TennisCheckout({ dict, locale }) {
       setCheckoutState(result.status === 'ready' ? 'renderer_unavailable' : result.status);
     } catch (cause) {
       if (current === sequence.current && !abort.signal.aborted) {
-        if (cause.code === 'account_required') { setError('account_required'); setCheckoutState(null); }
+        if (cause.code === 'account_required') {
+          // An expired session or rejected CSRF cannot retain a payable-looking
+          // order and checked consent. Refresh must establish the account again.
+          setOrder(null); setSession(null); setTerms(false);
+          setError('account_required'); setCheckoutState(null);
+        }
         else setCheckoutState('uncertain'); // A lost response is not evidence that creation failed.
       }
     } finally {

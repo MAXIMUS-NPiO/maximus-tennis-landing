@@ -47,19 +47,24 @@ function clean() {
   if (current?.root) flushSync(() => current.root.unmount());
   current = null; mount.replaceChildren(); window.setTimeout = originalSetTimeout;
 }
-async function setup({ mutate, guest = false, fragment = `#order=${ORDER}&access=${CAPABILITY}`, post } = {}) {
+function StrictModeProbe({ fixture, children }) {
+  React.useEffect(() => { fixture.lifecycle.push('mount'); return () => fixture.lifecycle.push('cleanup'); }, [fixture]);
+  return children;
+}
+async function setup({ mutate, guest = false, fragment = `#order=${ORDER}&access=${CAPABILITY}`, post, readSession, readOrder, settle = true, strictMode = false } = {}) {
   clean(); originalHistory(null, '', `/${fragment}`); navigations.length = logs.length = writes.length = 0;
-  const fixture = { doc: order(), calls: [], response: deferred(), root: createRoot(mount) }; current = fixture;
+  const fixture = { doc: order(), calls: [], lifecycle: [], response: deferred(), root: createRoot(mount), readSession, readOrder }; current = fixture;
   if (mutate) mutate(fixture.doc);
   globalThis.fetch = async (path, options) => {
     fixture.calls.push({ path, options });
-    if (path === '/api/accounts/session') return guest ? json({}, 401) : json({ user: { id: USER, emailVerified: true }, csrfToken: CSRF });
-    if (path === `/api/accounts/orders/${ORDER}`) return json({ order: fixture.doc });
+    if (path === '/api/accounts/session') return fixture.readSession ? fixture.readSession(options) : guest ? json({}, 401) : json({ user: { id: USER, emailVerified: true }, csrfToken: CSRF });
+    if (path === `/api/accounts/orders/${ORDER}`) return fixture.readOrder ? fixture.readOrder(options) : json({ order: fixture.doc });
     if (path === `/api/accounts/orders/${ORDER}/checkout` && options.method === 'POST') return post ? post(options) : fixture.response.promise;
     throw new Error('Unexpected fetch in isolated fixture');
   };
-  flushSync(() => fixture.root.render(React.createElement(TennisCheckout, { dict, locale: 'en' })));
-  await waitFor(() => mount.querySelector('[aria-busy="false"]'));
+  const component = React.createElement(TennisCheckout, { dict, locale: 'en' });
+  flushSync(() => fixture.root.render(strictMode ? React.createElement(React.StrictMode, null, React.createElement(StrictModeProbe, { fixture }, component)) : component));
+  if (settle) await waitFor(() => mount.querySelector('[aria-busy="false"]'));
   return fixture;
 }
 async function consent() { assert(checkbox() && !checkbox().checked, 'Consent must start unchecked'); checkbox().click(); await waitFor(() => !button().disabled); }
@@ -100,6 +105,19 @@ try {
   await scenario('TEST quote never renders a prepare action', async () => {
     await setup({ mutate: doc => { doc.snapshot.quotation.test = true; } });
     assert(!checkbox() && !button() && posts().length === 0, 'TEST quote not payable');
+  });
+  await scenario('control-order identifiers cannot enter the goods checkout or create a goods payment', async () => {
+    await setup({ fragment: `#order=MX-CTL-${'a'.repeat(32)}` });
+    assert(current.calls.length === 0 && !checkbox() && !button(), 'Control orders require their separate verified journey');
+    assert(location.hash === '' && mount.textContent.includes(P.accountRequired), 'Unsupported control fragment cleared');
+  });
+  await scenario('StrictMode effect replay preserves explicit consent and sends one request per action', async () => {
+    await setup({ strictMode: true });
+    assert(current.lifecycle.slice(0, 3).join(',') === 'mount,cleanup,mount', 'Actual development effect replay must run');
+    assert(posts().length === 0 && button().disabled && !checkbox().checked, 'Effect replay must not initiate payment');
+    await submit(); current.response.resolve(json(result('ready')));
+    await waitFor(() => paymentState() === P.sessionUnavailable && mount.querySelector('[aria-busy="false"]'));
+    assert(posts().length === 1 && button().disabled, 'One intentional request, no renderer mount');
   });
   for (const [status, label] of [['creating', 'checkoutCreating'], ['uncertain', 'checkoutUncertain'], ['review_required', 'checkoutReviewRequired'], ['expired', 'checkoutExpired'], ['ready', 'sessionUnavailable']]) {
     await scenario(`${status} response retains its safe display state and blocks blind retries`, async () => {
@@ -146,6 +164,49 @@ try {
     window.setTimeout = (callback, delay, ...args) => originalSetTimeout(callback, delay === 20000 ? 20 : delay, ...args);
     await submit(); await waitFor(() => paymentState() === P.checkoutUncertain);
     assert(posts()[0].options.signal.aborted && posts().length === 1 && button().disabled, 'Timeout is uncertain and cannot retry blindly');
+  });
+  for (const status of [401, 403]) {
+    await scenario(`checkout HTTP${status} clears stale account data and consent until an authenticated refresh`, async () => {
+      await setup({ post: async () => json({ code: 'synthetic-private-provider-detail' }, status) }); await submit();
+      await waitFor(() => mount.querySelector('[aria-busy="false"]') && mount.textContent.includes(P.accountRequired));
+      assert(!button() && !checkbox() && !mount.textContent.includes(ORDER), 'Rejected authentication must clear the old order and action');
+      assert(posts().length === 1, 'No automatic repeat after authentication failure');
+      refresh().click(); await waitFor(() => checkbox() && mount.querySelector('[aria-busy="false"]'));
+      assert(!checkbox().checked && button().disabled && !mount.textContent.includes(P.accountRequired), 'Authenticated reload requires new explicit consent');
+      assert(posts().length === 1, 'Refreshing authentication cannot prepare a new session');
+    });
+  }
+  await scenario('unmount during account read aborts and prevents a late follow-up order request', async () => {
+    const pending = deferred();
+    const fixture = await setup({ readSession: () => pending.promise, settle: false });
+    await waitFor(() => fixture.calls.length === 1); const signal = fixture.calls[0].options.signal;
+    flushSync(() => fixture.root.unmount()); fixture.root = null;
+    pending.resolve(json({ user: { id: USER, emailVerified: true }, csrfToken: CSRF }));
+    await new Promise(resolve => originalSetTimeout(resolve, 10));
+    assert(signal.aborted && fixture.calls.length === 1 && mount.childElementCount === 0, 'Cancelled account load cannot continue or render');
+  });
+  await scenario('a refresh response arriving after remount cannot restore old terms or consent', async () => {
+    await setup(); const older = deferred(); let reads = 0;
+    current.readOrder = () => { reads++; return older.promise; };
+    const target = refresh();
+    target.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    await waitFor(() => reads === 1);
+    const fixture = current, firstSignal = fixture.calls.at(-1).options.signal;
+    flushSync(() => fixture.root.unmount()); fixture.root = null;
+    const changed = await setup({ mutate: doc => {
+      doc.snapshot.offer.termsVersion = doc.snapshot.quotation.termsVersion = 'synthetic-new-owner-session-terms';
+      doc.snapshot.offer.termsText = 'New authenticated review terms';
+    } });
+    older.resolve(json({ order: fixture.doc })); await new Promise(resolve => originalSetTimeout(resolve, 10));
+    assert(firstSignal.aborted && current === changed && mount.textContent.includes('New authenticated review terms'), 'Old read cannot overwrite a new mount');
+    assert(!checkbox().checked && button().disabled && posts().length === 0, 'Late old terms cannot consent or submit');
+  });
+  await scenario('a late ready response from an old mount cannot affect a new authenticated checkout', async () => {
+    const old = await setup(); await submit(); const signal = posts()[0].options.signal;
+    const fresh = await setup(); old.response.resolve(json(result('ready')));
+    await new Promise(resolve => originalSetTimeout(resolve, 10));
+    assert(signal.aborted && current === fresh && !paymentState() && !checkbox().checked && button().disabled, 'Old ready descriptor cannot alter fresh state');
+    assert(posts().length === 0, 'Remount cannot automatically prepare payment');
   });
   await scenario('unmount aborts a pending request and ignores its late ready response', async () => {
     await setup(); await submit(); const fixture = current, signal = posts()[0].options.signal;

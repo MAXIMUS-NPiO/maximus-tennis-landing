@@ -74,9 +74,11 @@ test("the approved URL exception cannot hide other URLs, changed targets or othe
   assert.ok(masked.endsWith(other)); assert.equal(confidentialHits(masked), 1);
 });
 
-test("the product action is a native store link and does not call local order/payment/ledger services", () => {
+test("the purchase action opens this site's configurator without substituting a stock product or creating payment", () => {
   const component = readFileSync(new URL("../components/StorePurchase.js", import.meta.url), "utf8");
-  assert.match(component, /<a[^>]*href=\{product\.url\}/);
-  assert.match(component, /T\.priceLabel/); assert.match(component, /T\.total/); assert.match(component, /T\.checkout/);
+  assert.match(component, /data-tennis-checkout="configuration"/);
+  assert.match(component, /href\(locale, 'build'\)/);
+  assert.match(component, /C\.goodsOnly/); assert.match(component, /C\.goodsAndProgram/);
+  assert.doesNotMatch(component, /store-products|storePurchaseLabels|product\.url|maximussports\.ae|series=|V50-300G/);
   assert.doesNotMatch(component, /fetch\(|\/api\/|sessionToken|accessToken|createOrder|paid|funding|financing|ledger\./i);
 });

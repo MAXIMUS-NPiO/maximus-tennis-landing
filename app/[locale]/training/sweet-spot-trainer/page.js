@@ -5,6 +5,7 @@ import { PageHero, Section, Cta, Kickers, Note } from "../../../../components/Ui
 import { GripRow } from "../../../../components/Product";
 import { Photo } from "../../../../components/Media";
 import { sstGallery, sstDetails } from "../../../../data/media";
+import StorePurchase from "../../../../components/StorePurchase";
 
 export const generateMetadata = meta("sst", (d) => [d.sst.title, d.sst.lead]);
 
@@ -21,6 +22,7 @@ export default async function Page({ params }) {
           <div><b>{sst.grips}</b>{S.columns.grips}</div>
         </div>
       </PageHero>
+      <StorePurchase locale={locale} dict={dict} />
       <Section first>
         <Photo id="sstSystem" alt={dict.media.sstSystem} caption={`${sst.headSizeSqIn} ${L.sqin} · ${sst.lengthIn}″ · ${sst.stringPattern}`} priority sizes="(min-width: 1024px) 900px, 100vw" className="hero-photo" />
       </Section>

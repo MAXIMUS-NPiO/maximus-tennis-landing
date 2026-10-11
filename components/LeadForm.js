@@ -55,6 +55,10 @@ export default function LeadForm({
   hideMessage = false,
   optionalExtras = true,
   onAccepted,
+  endpoint,
+  orderPlan,
+  orderTechnical,
+  paymentPreference,
 }) {
   const F = dict.form;
   const L = dict.common.labels;
@@ -72,7 +76,7 @@ export default function LeadForm({
   const successRef = useRef(null);
   const alertRef = useRef(null);
   const ctx = useMemo(() => context || {}, [context]);
-  const { state, result, submit, reset } = useLeadSubmit({ purpose, locale, context: ctx, series });
+  const { state, result, submit, reset } = useLeadSubmit({ purpose, locale, context: ctx, series, endpoint, orderPlan, orderTechnical, paymentPreference });
 
   useEffect(() => {
     if (fixedPurpose) setPurpose(fixedPurpose);
@@ -133,7 +137,7 @@ export default function LeadForm({
   }, [result]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if (state === "accepted" && onAccepted && result) onAccepted(result.requestId);
+    if (state === "accepted" && onAccepted && result) onAccepted(result.requestId, result);
     if (state === "accepted" && successRef.current) successRef.current.focus();
     if (state === "failed" && alertRef.current) alertRef.current.focus();
   }, [state]);

@@ -114,7 +114,7 @@ function dashboard(visits, leads, total, pending, processing) {
   return `<h1>MAXIMUS — site register</h1>
 <p>Visits today <b>${today}</b> · last 7 days <b>${week}</b> · last 30 days <b>${month}</b><br>
 Subscribers <b>${subscribers}</b> · requests stored <b>${total}</b> · notifications pending <b>${pending}</b><br>
-Store <code>${esc(processing.store)}</code> · notification channel <code>${esc(processing.notification || "not configured")}</code></p>
+Store <code>${esc(processing.store)}</code> · notification channels <code>${esc(processing.notifications.join(", ") || "not configured")}</code> · email copy <code>${esc(processing.emailCopy)}</code></p>
 ${noVisits}
 ${topTable("Countries", totals, "c:")}
 ${topTable("Languages", totals, "loc:")}
@@ -201,7 +201,7 @@ export async function POST(request) {
       return page("Processed", `<p>Processed ${s.processed}: sent ${s.sent}, scheduled ${s.retry}, failed ${s.failed}, notification not configured ${s.not_configured}.</p><p><a href="?">Back</a></p>`);
     }
     if (!ID_RE.test(id)) return page("Not found", "<p>Unknown request.</p>", 404);
-    const r = await deliver(config.store, config.notifier, id);
+    const r = await deliver(config.store, config.notifier, id, Date.now(), { forceRetry: true });
     return page("Retry", `<p>Result for <code>${esc(id)}</code>: <b>${esc(r.state)}</b>${r.errorCode ? ` (<code>${esc(r.errorCode)}</code>)` : ""}.</p><p><a href="?id=${encodeURIComponent(id)}">Back</a></p>`);
   } catch (e) {
     return page("Store unavailable", `<p>The store did not answer: <code>${esc((e && e.code) || "error")}</code>.</p>`, 503);

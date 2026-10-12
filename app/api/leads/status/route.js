@@ -21,6 +21,8 @@ export async function GET() {
   const body = {
     store: configured,
     notification: summary.notification,
+    notifications: summary.notifications,
+    emailCopy: summary.emailCopy,
     ...(configured ? {} : { variablesPresent: Object.keys(process.env).filter((k) => REST_NAME.test(k)).sort() }),
   };
   if (summary.notification === "telegram") {

@@ -17,10 +17,9 @@ export default async function Page({ params }) {
   const X = T.sections;
   const p = processingSummary();
   // The notification section names the channel actually configured on the server, never a planned one.
-  const notify = p.notification === null ? X.notifyNone
-    : p.notification === "telegram" ? X.notifyTelegram
-    : p.notification === "webhook" ? X.notifyWebhook
-    : X.notifyEmail;
+  const notices = p.notifications.map((channel) => channel === "telegram" ? X.notifyTelegram
+    : channel === "webhook" ? X.notifyWebhook : X.notifyEmail);
+  const notify = notices.length ? [notices[0][0], notices.map((notice) => notice[1]).join(" ")] : X.notifyNone;
   const sections = [X.collect, X.purpose, p.store ? X.storageOn : X.storageOff, ...(p.store ? [notify] : []), X.browser, p.analytics ? X.analyticsOn : X.analyticsOff, X.retention, X.children, X.rights, X.controlled];
   return (
     <>

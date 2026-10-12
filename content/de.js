@@ -141,7 +141,7 @@ const de = {
       failed: "Die Adresse wurde nicht registriert. Versuchen Sie es in einem Moment erneut.",
       terms: "Mit dem Abonnement stimmen Sie zu, dass MAXIMUS Ihnen diese Mitteilungen senden und Ihre Adresse zu diesem Zweck speichern darf. Jeder Brief enthält einen Link zur Abmeldung.",
     },
-    rights: "MAXIMUS® und das Löwenemblem sind Marken des MAXIMUS-Ökosystems. MIPA: interne Kontrolle von IP, Provenienz und Dokumenten.",
+    rights: "MAXIMUS® und das Löwenemblem sind Marken von Maximus Kiriyakulov. MIPA: interne Kontrolle von IP, Provenienz und Dokumenten.",
     boundary:
       "Kommerzielle und vertragliche Bedingungen werden gesondert schriftlich vereinbart. Der Kauf eines Schlägers begründet keine institutionelle Mitgliedschaft, keine Investmentrechte, kein Eigentum an geistigem Eigentum und keinen Anspruch auf Lizenzgebühren.",
   },
@@ -949,7 +949,7 @@ const de = {
       ["Anfragen", "Eine über diese Website gesendete Anfrage — einschließlich GPS-Profilen, Konfigurationsanfragen und technischen Briefings — wird mit einer Anfrage-ID gespeichert und geprüft. Sie ist keine angenommene Bestellung, keine Fertigungsverpflichtung, kein bestätigter Termin, kein Mitgliedsantrag und kein angenommener Antrag für ein Programm."],
       ["Spezifikationen und Nachweise", "Berechnete Werte, Fertigungszielwerte und bestätigte Spezifikationen werden auf den betreffenden Seiten unterschieden. Werte der Rahmenhärte sind Fertigungszielwerte, solange nichts anderes veröffentlicht ist. Für einen bestimmten Spieler wird kein Ergebnis garantiert."],
       ["Ökosystem, Mitgliedschaft und Rechte", "Der Kauf eines Schlägers begründet keine institutionelle Mitgliedschaft, keine Investmentrechte, kein Eigentum an geistigem Eigentum, keinen Anspruch auf Lizenzgebühren und keine Teilnahmevorteile. Ansprüche folgen den veröffentlichten Programmbedingungen oder einer schriftlichen Vereinbarung."],
-      ["Geistiges Eigentum", "MAXIMUS®, das Löwenemblem, die GPS-Marke und die Inhalte dieser Website sind geschützt. Interne technische Formeln, QS-Protokolle, Laminataufbauten, Werkzeuge, Lieferantenidentitäten, Kalkulation und geschützte Methodik werden hier nicht offengelegt."],
+      ["Geistiges Eigentum", "MAXIMUS®, das Löwenemblem, die GPS-Marke und die Inhalte dieser Website gehören Maximus Kiriyakulov und sind geschützt. Interne technische Formeln, QS-Protokolle, Laminataufbauten, Werkzeuge, Lieferantenidentitäten, Kalkulation und geschützte Methodik werden hier nicht offengelegt."],
     ],
   },
   lead: {

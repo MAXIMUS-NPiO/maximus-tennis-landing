@@ -141,7 +141,7 @@ const id = {
       failed: "Alamat belum tercatat. Silakan coba lagi dalam beberapa saat.",
       terms: "Dengan berlangganan, Anda setuju MAXIMUS mengirimkan pembaruan ini kepada Anda dan menyimpan alamat Anda untuk tujuan tersebut. Setiap surat memuat tautan untuk berhenti berlangganan.",
     },
-    rights: "MAXIMUS® dan lambang singa adalah merek dari ekosistem MAXIMUS. MIPA: kendali internal atas kekayaan intelektual, asal-usul dan dokumen.",
+    rights: "MAXIMUS® dan lambang singa adalah merek milik Maximus Kiriyakulov. MIPA: kendali internal atas kekayaan intelektual, asal-usul dan dokumen.",
     boundary:
       "Syarat komersial dan kontraktual disepakati secara terpisah dan tertulis. Pembelian sebuah raket tidak menciptakan keanggotaan institusional, hak investasi, kepemilikan atas kekayaan intelektual atau hak atas royalti.",
   },
@@ -949,7 +949,7 @@ const id = {
       ["Permintaan", "Permintaan yang dikirim melalui situs ini — termasuk profil GPS, permintaan konfigurasi dan ringkasan teknis — disimpan dengan ID permintaan dan ditinjau. Permintaan itu bukan pesanan yang diterima, bukan komitmen produksi, bukan jadwal pertemuan yang dipastikan, bukan permohonan keanggotaan dan bukan permohonan yang diterima untuk program apa pun."],
       ["Spesifikasi dan bukti", "Nilai hasil perhitungan, target produksi dan spesifikasi terkonfirmasi dibedakan pada halaman yang bersangkutan. Nilai kekakuan merupakan target produksi sampai dipublikasikan sebaliknya. Tidak ada hasil bagi pemain tertentu yang dijamin."],
       ["Ekosistem, keanggotaan dan hak", "Pembelian sebuah raket tidak menciptakan keanggotaan institusional, hak investasi, kepemilikan atas kekayaan intelektual, hak atas royalti atau manfaat partisipasi. Hak-hak mengikuti syarat program yang dipublikasikan atau perjanjian tertulis."],
-      ["Kekayaan intelektual", "MAXIMUS®, lambang singa, merek GPS dan isi situs ini dilindungi. Formula rekayasa internal, protokol kendali mutu, susunan lapisan karbon, perkakas, identitas pemasok, struktur biaya dan metodologi yang dilindungi tidak diungkapkan di sini."],
+      ["Kekayaan intelektual", "MAXIMUS®, lambang singa, merek GPS dan isi situs ini milik Maximus Kiriyakulov dan dilindungi. Formula rekayasa internal, protokol kendali mutu, susunan lapisan karbon, perkakas, identitas pemasok, struktur biaya dan metodologi yang dilindungi tidak diungkapkan di sini."],
     ],
   },
   lead: {

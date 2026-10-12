@@ -141,7 +141,7 @@ const lv = {
       failed: "Adrese netika reģistrēta. Lūdzu, pamēģiniet pēc brīža vēlreiz.",
       terms: "Piesakoties jūs piekrītat, ka MAXIMUS var sūtīt jums šos jaunumus un šim nolūkam saglabāt jūsu adresi. Katrā vēstulē ir atteikšanās saite.",
     },
-    rights: "MAXIMUS® un lauvas emblēma ir MAXIMUS ekosistēmas zīmes. MIPA iekšējais intelektuālā īpašuma, izcelsmes un dokumentu kontroles slānis.",
+    rights: "MAXIMUS® un lauvas emblēma ir zīmes, kuru īpašnieks ir Maximus Kiriyakulov. MIPA iekšējais intelektuālā īpašuma, izcelsmes un dokumentu kontroles slānis.",
     boundary:
       "Komerciālie un līguma noteikumi tiek saskaņoti atsevišķi rakstiski. Raketes iegāde nerada institucionālu dalību, investīciju tiesības, intelektuālā īpašuma piederību vai tiesības uz autoratlīdzību.",
   },
@@ -949,7 +949,7 @@ const lv = {
       ["Pieprasījumi", "Pieprasījums, kas iesniegts caur šo vietni — tostarp GPS profili, konfigurācijas pieprasījumi un tehniskie uzdevumi —, tiek saglabāts ar pieprasījuma numuru un izvērtēts. Tas nav pieņemts pasūtījums, ražošanas saistība, apstiprināta tikšanās, dalības iesniegums vai pieņemts pieteikums kādai programmai."],
       ["Specifikācijas un pierādījumi", "Aprēķinātās vērtības, ražošanas mērķvērtības un apstiprinātās specifikācijas ir nošķirtas attiecīgajās lapās. Stinguma vērtības ir ražošanas mērķvērtības, kamēr nav publicēts citādi. Konkrētam spēlētājam rezultāts nav garantēts."],
       ["Ekosistēma, dalība un tiesības", "Raketes iegāde nerada institucionālu dalību, investīciju tiesības, intelektuālā īpašuma piederību, tiesības uz autoratlīdzību vai dalības labumus. Tiesības izriet no publicētiem programmas noteikumiem vai rakstiska līguma."],
-      ["Intelektuālais īpašums", "MAXIMUS®, lauvas emblēma, GPS zīme un šīs vietnes saturs ir aizsargāti. Iekšējās inženierijas formulas, kvalitātes kontroles protokoli, slāņojumi, instrumenti, piegādātāju dati, izmaksu aplēses un aizsargātā metodika šeit netiek atklāta."],
+      ["Intelektuālais īpašums", "MAXIMUS®, lauvas emblēma, GPS zīme un šīs vietnes saturs ir aizsargāti, un to īpašnieks ir Maximus Kiriyakulov. Iekšējās inženierijas formulas, kvalitātes kontroles protokoli, slāņojumi, instrumenti, piegādātāju dati, izmaksu aplēses un aizsargātā metodika šeit netiek atklāta."],
     ],
   },
   lead: {

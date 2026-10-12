@@ -141,7 +141,7 @@ const nl = {
       failed: "Het adres is niet geregistreerd. Probeer het over een ogenblik opnieuw.",
       terms: "Door u aan te melden gaat u ermee akkoord dat MAXIMUS u deze berichten stuurt en uw adres daarvoor bewaart. Elke brief bevat een link om u af te melden.",
     },
-    rights: "MAXIMUS® en het leeuwenembleem zijn merken van het MAXIMUS-ecosysteem. MIPA: interne controle van IE, herkomst en documenten.",
+    rights: "MAXIMUS® en het leeuwenembleem zijn merken van Maximus Kiriyakulov. MIPA: interne controle van IE, herkomst en documenten.",
     boundary:
       "Commerciële en contractuele voorwaarden worden afzonderlijk schriftelijk overeengekomen. De aankoop van een racket schept geen institutioneel lidmaatschap, geen investeringsrechten, geen eigendom van intellectuele eigendom en geen aanspraak op royalty's.",
   },
@@ -949,7 +949,7 @@ const nl = {
       ["Aanvragen", "Een aanvraag die via deze website wordt ingediend — met inbegrip van GPS-profielen, configuratieaanvragen en technische briefings — wordt met een aanvraagnummer vastgelegd en beoordeeld. Het is geen aanvaarde order, geen productieverplichting, geen bevestigde afspraak, geen aanmelding voor lidmaatschap en geen aanvaarde aanmelding voor enig programma."],
       ["Specificaties en bewijs", "Berekende waarden, productiedoelwaarden en bevestigde specificaties worden op de betreffende pagina's van elkaar onderscheiden. Waarden voor stijfheid zijn productiedoelwaarden totdat anders wordt gepubliceerd. Er wordt geen resultaat voor een individuele speler gegarandeerd."],
       ["Ecosysteem, lidmaatschap en rechten", "De aankoop van een racket schept geen institutioneel lidmaatschap, geen investeringsrechten, geen eigendom van intellectuele eigendom, geen aanspraak op royalty's en geen voordelen van deelname. Aanspraken volgen uit gepubliceerde programmavoorwaarden of uit een schriftelijke overeenkomst."],
-      ["Intellectuele eigendom", "MAXIMUS®, het leeuwenembleem, het GPS-merk en de inhoud van deze website zijn beschermd. Interne technische formules, protocollen voor kwaliteitscontrole, laminaatopbouw, gereedschap, identiteit van leveranciers, kostprijzen en beschermde methodiek worden hier niet verstrekt."],
+      ["Intellectuele eigendom", "MAXIMUS®, het leeuwenembleem, het GPS-merk en de inhoud van deze website zijn eigendom van Maximus Kiriyakulov en zijn beschermd. Interne technische formules, protocollen voor kwaliteitscontrole, laminaatopbouw, gereedschap, identiteit van leveranciers, kostprijzen en beschermde methodiek worden hier niet verstrekt."],
     ],
   },
   lead: {

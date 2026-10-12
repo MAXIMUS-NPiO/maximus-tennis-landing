@@ -141,7 +141,7 @@ const et = {
       failed: "Aadressi ei registreeritud. Palun proovige hetke pärast uuesti.",
       terms: "Tellimusega nõustute, et MAXIMUS võib teile neid uuendusi saata ja hoida selleks otstarbeks teie aadressi. Igas kirjas on tellimuse lõpetamise link.",
     },
-    rights: "MAXIMUS® ja lõvimärk on MAXIMUS ökosüsteemi kaubamärgid. MIPA sisemine intellektuaalomandi, päritolu ja dokumendikontrolli kiht.",
+    rights: "MAXIMUS® ja lõvimärk on kaubamärgid, mille omanik on Maximus Kiriyakulov. MIPA sisemine intellektuaalomandi, päritolu ja dokumendikontrolli kiht.",
     boundary:
       "Ärilised ja lepingulised tingimused lepitakse eraldi kirjalikult kokku. Reketi ost ei loo institutsionaalset liikmesust, investeerimisõigusi, intellektuaalomandi omandiõigust ega õigust litsentsitasudele.",
   },
@@ -949,7 +949,7 @@ const et = {
       ["Päringud", "Selle veebisaidi kaudu esitatud päring — sealhulgas GPS-profiilid, seadistuspäringud ja tehnilised lähteülesanded — salvestatakse koos päringu tunnusega ja vaadatakse läbi. See ei ole vastu võetud tellimus, tootmiskohustus, kinnitatud kohtumine, liikmesuse avaldus ega ühtegi programmi vastu võetud taotlus."],
       ["Spetsifikatsioonid ja tõendid", "Arvutuslikud väärtused, tootmise sihtväärtused ja kinnitatud spetsifikatsioonid on asjakohastel lehtedel eristatud. Jäikuse väärtused on tootmise sihtväärtused, kuni avaldatakse teisiti. Ühelegi konkreetsele mängijale ei ole tulemus tagatud."],
       ["Ökosüsteem, liikmesus ja õigused", "Reketi ost ei loo institutsionaalset liikmesust, investeerimisõigusi, intellektuaalomandi omandiõigust, õigust litsentsitasudele ega osalushüvesid. Õigused tulenevad avaldatud programmi tingimustest või kirjalikust kokkuleppest."],
-      ["Intellektuaalomand", "MAXIMUS®, lõvimärk, GPS-märk ja selle veebisaidi sisu on kaitstud. Sisemisi insenerivalemeid, kvaliteedikontrolli protokolle, kihistusi, tootmisvorme, tarnijate andmeid, kuluarvestust ja kaitstud metoodikat siin ei avaldata."],
+      ["Intellektuaalomand", "MAXIMUS®, lõvimärk, GPS-märk ja selle veebisaidi sisu kuuluvad Maximus Kiriyakulovile ja on kaitstud. Sisemisi insenerivalemeid, kvaliteedikontrolli protokolle, kihistusi, tootmisvorme, tarnijate andmeid, kuluarvestust ja kaitstud metoodikat siin ei avaldata."],
     ],
   },
   lead: {

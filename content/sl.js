@@ -141,7 +141,7 @@ const sl = {
       failed: "Naslova ni bilo mogoče zabeležiti. Prosimo, poskusite znova v nekaj trenutkih.",
       terms: "S prijavo soglašate, da vam MAXIMUS lahko pošilja te novice in za ta namen hrani vaš naslov. Vsako pismo vsebuje povezavo za odjavo.",
     },
-    rights: "MAXIMUS® in lev v emblemu sta znamki ekosistema MAXIMUS. MIPA — interno upravljanje intelektualne lastnine, izvora in dokumentacije.",
+    rights: "MAXIMUS® in lev v emblemu sta znamki, katerih lastnik je Maximus Kiriyakulov. MIPA — interno upravljanje intelektualne lastnine, izvora in dokumentacije.",
     boundary:
       "Poslovni in pogodbeni pogoji se dogovorijo posebej in pisno. Nakup loparja ne ustvarja institucionalnega članstva, naložbenih pravic, lastništva intelektualne lastnine ali upravičenja do licenčnin.",
   },
@@ -949,7 +949,7 @@ const sl = {
       ["Povpraševanja", "Povpraševanje, poslano prek tega spletnega mesta — vključno s profili GPS, povpraševanji za nastavitev in tehničnimi zahtevami — se shrani s številko povpraševanja in gre v presojo. Ni sprejeto naročilo, proizvodna zaveza, potrjen termin, prijava za članstvo ali sprejeta prijava v kateri koli program."],
       ["Specifikacije in dokazila", "Izračunane vrednosti, proizvodni cilji in potrjene specifikacije so na ustreznih straneh razločeni. Vrednosti togosti so proizvodni cilji, dokler ni objavljeno drugače. Noben izid za posameznega igralca ni zagotovljen."],
       ["Ekosistem, članstvo in pravice", "Nakup loparja ne ustvarja institucionalnega članstva, naložbenih pravic, lastništva intelektualne lastnine, upravičenja do licenčnin ali koristi sodelovanja. Upravičenja sledijo objavljenim pogojem programa ali pisni pogodbi."],
-      ["Intelektualna lastnina", "MAXIMUS®, lev v emblemu, znamka GPS in vsebina tega spletnega mesta so zaščiteni. Interne inženirske formule, protokoli kontrole kakovosti, laminati, orodja, identiteta dobaviteljev, izračuni stroškov in zaščitena metodologija tu niso razkriti."],
+      ["Intelektualna lastnina", "MAXIMUS®, lev v emblemu, znamka GPS in vsebina tega spletnega mesta so zaščiteni, njihov lastnik pa je Maximus Kiriyakulov. Interne inženirske formule, protokoli kontrole kakovosti, laminati, orodja, identiteta dobaviteljev, izračuni stroškov in zaščitena metodologija tu niso razkriti."],
     ],
   },
   lead: {

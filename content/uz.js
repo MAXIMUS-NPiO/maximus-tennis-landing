@@ -141,7 +141,7 @@ const uz = {
       failed: "Manzil qayd etilmadi. Iltimos, bir oz vaqtdan soʻng qaytadan urinib koʻring.",
       terms: "Obuna boʻlish orqali siz MAXIMUS bu yangiliklarni sizga yuborishi va manzilingizni shu maqsadda saqlashiga rozilik bildirasiz. Har bir xatda obunani bekor qilish havolasi boʻladi.",
     },
-    rights: "MAXIMUS® va sher emblemasi — MAXIMUS ekotizimining belgilari. MIPA — ichki intellektual mulk, kelib chiqish va hujjat nazorati.",
+    rights: "MAXIMUS® va sher emblemasi — Maximus Kiriyakulovga tegishli belgilar. MIPA — ichki intellektual mulk, kelib chiqish va hujjat nazorati.",
     boundary:
       "Tijorat va shartnoma shartlari alohida, yozma ravishda kelishiladi. Raketka xaridi institutsional aʼzolik, investitsiya huquqlari, intellektual mulk egaligi yoki royalti olish huquqini vujudga keltirmaydi.",
   },
@@ -949,7 +949,7 @@ const uz = {
       ["Soʻrovlar", "Bu sayt orqali yuborilgan soʻrov — shu qatorda GPS profillari, konfiguratsiya soʻrovlari va texnik topshiriqlar — soʻrov raqami bilan saqlanadi va koʻrib chiqiladi. U qabul qilingan buyurtma, ishlab chiqarish majburiyati, tasdiqlangan uchrashuv, aʼzolik arizasi yoki biror dasturga qabul qilingan ariza emas."],
       ["Spetsifikatsiyalar va dalillar", "Hisoblangan qiymatlar, ishlab chiqarish maqsadlari va tasdiqlangan spetsifikatsiyalar tegishli sahifalarda bir-biridan ajratiladi. Qattiqlik qiymatlari boshqacha eʼlon qilinmaguncha ishlab chiqarish maqsadlari hisoblanadi. Muayyan oʻyinchi uchun hech qanday natija kafolatlanmaydi."],
       ["Ekotizim, aʼzolik va huquqlar", "Raketka xaridi institutsional aʼzolik, investitsiya huquqlari, intellektual mulk egaligi, royalti olish huquqi yoki ishtirok imtiyozlarini vujudga keltirmaydi. Huquqlar eʼlon qilingan dastur shartlari yoki yozma kelishuvga amal qiladi."],
-      ["Intellektual mulk", "MAXIMUS®, sher emblemasi, GPS belgisi va bu saytning mazmuni himoyalangan. Ichki injiniring formulalari, sifat nazorati protokollari, karbon qatlamlashlar, asbob-uskuna, yetkazib beruvchilar maʼlumoti, tannarx va himoyalangan metodologiya bu yerda ochilmaydi."],
+      ["Intellektual mulk", "MAXIMUS®, sher emblemasi, GPS belgisi va bu saytning mazmuni Maximus Kiriyakulovga tegishli va himoyalangan. Ichki injiniring formulalari, sifat nazorati protokollari, karbon qatlamlashlar, asbob-uskuna, yetkazib beruvchilar maʼlumoti, tannarx va himoyalangan metodologiya bu yerda ochilmaydi."],
     ],
   },
   lead: {

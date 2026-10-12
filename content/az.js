@@ -141,7 +141,7 @@ const az = {
       failed: "Ünvan qeydə alınmadı. Zəhmət olmasa bir az sonra yenidən cəhd edin.",
       terms: "Abunə olmaqla MAXIMUS-un bu yenilikləri sizə göndərməsinə və ünvanınızı bu məqsədlə saxlamasına razılıq verirsiniz. Hər məktubda abunəlikdən çıxmaq üçün keçid var.",
     },
-    rights: "MAXIMUS® və aslan emblemi MAXIMUS ekosisteminin nişanlarıdır. MIPA daxili əqli mülkiyyət, mənşə və sənəd nəzarəti.",
+    rights: "MAXIMUS® və aslan emblemi Maximus Kiriyakulova məxsus nişanlardır. MIPA daxili əqli mülkiyyət, mənşə və sənəd nəzarəti.",
     boundary:
       "Kommersiya və müqavilə şərtləri ayrıca, yazılı şəkildə razılaşdırılır. Raketin alınması institusional üzvlük, investisiya hüququ, əqli mülkiyyət sahibliyi və ya royalti hüququ yaratmır.",
   },
@@ -949,7 +949,7 @@ const az = {
       ["Sorğular", "Bu sayt vasitəsilə göndərilən sorğu — GPS profilləri, konfiqurasiya sorğuları və texniki briflər də daxil olmaqla — sorğu nömrəsi ilə saxlanılır və nəzərdən keçirilir. O, qəbul edilmiş sifariş, istehsal öhdəliyi, təsdiqlənmiş görüş, üzvlük ərizəsi və ya hər hansı proqrama qəbul edilmiş müraciət deyil."],
       ["Spesifikasiyalar və sübutlar", "Hesablanmış dəyərlər, istehsal hədəfləri və təsdiqlənmiş spesifikasiyalar müvafiq səhifələrdə bir-birindən ayırd edilir. Sərtlik dəyərləri əksi dərc olunana qədər istehsal hədəfləridir. Konkret oyunçu üçün heç bir nəticəyə zəmanət verilmir."],
       ["Ekosistem, üzvlük və hüquqlar", "Raketin alınması institusional üzvlük, investisiya hüququ, əqli mülkiyyət sahibliyi, royalti hüququ və ya iştirak faydaları yaratmır. Hüquqlar dərc edilmiş proqram şərtlərindən və ya yazılı müqavilədən irəli gəlir."],
-      ["Əqli mülkiyyət", "MAXIMUS®, aslan emblemi, GPS nişanı və bu saytın məzmunu qorunur. Daxili mühəndislik formulları, keyfiyyət nəzarəti protokolları, karbon laylarının düzülüşü, qəliblər, təchizatçıların kimliyi, maya dəyəri hesablamaları və qorunan metodologiya burada açıqlanmır."],
+      ["Əqli mülkiyyət", "MAXIMUS®, aslan emblemi, GPS nişanı və bu saytın məzmunu Maximus Kiriyakulova məxsusdur və qorunur. Daxili mühəndislik formulları, keyfiyyət nəzarəti protokolları, karbon laylarının düzülüşü, qəliblər, təchizatçıların kimliyi, maya dəyəri hesablamaları və qorunan metodologiya burada açıqlanmır."],
     ],
   },
   lead: {

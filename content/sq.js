@@ -141,7 +141,7 @@ const sq = {
       failed: "Adresa nuk u regjistrua. Provoni përsëri pas një momenti.",
       terms: "Duke u abonuar, pranoni që MAXIMUS mund t'ju dërgojë këto përditësime dhe të mbajë adresën tuaj për këtë qëllim. Çdo letër përmban një lidhje për çabonim.",
     },
-    rights: "MAXIMUS® dhe emblema e luanit janë shenja të ekosistemit MAXIMUS. Pronësi intelektuale e brendshme, prejardhje dhe kontroll dokumentesh me MIPA.",
+    rights: "MAXIMUS® dhe emblema e luanit janë shenja në pronësi të Maximus Kiriyakulov. Pronësi intelektuale e brendshme, prejardhje dhe kontroll dokumentesh me MIPA.",
     boundary:
       "Kushtet tregtare dhe kontraktuale dakordohen veçmas me shkrim. Blerja e një rakete nuk krijon anëtarësi institucionale, të drejta investimi, pronësi të pronësisë intelektuale ose të drejtë për honorare.",
   },
@@ -949,7 +949,7 @@ const sq = {
       ["Kërkesat", "Një kërkesë e dorëzuar përmes kësaj faqeje — përfshirë profilet GPS, kërkesat e konfigurimit dhe përshkrimet teknike — ruhet me një ID kërkese dhe rishikohet. Nuk është porosi e pranuar, angazhim prodhimi, takim i konfirmuar, aplikim anëtarësie ose aplikim i pranuar në ndonjë program."],
       ["Specifikimet dhe dëshmia", "Vlerat e llogaritura, objektivat e prodhimit dhe specifikimet e konfirmuara dallohen në faqet përkatëse. Vlerat e ngurtësisë janë objektiva prodhimi derisa të publikohet ndryshe. Nuk garantohet asnjë rezultat për një lojtar të caktuar."],
       ["Ekosistemi, anëtarësia dhe të drejtat", "Blerja e një rakete nuk krijon anëtarësi institucionale, të drejta investimi, pronësi të pronësisë intelektuale, të drejtë për honorare ose përfitime pjesëmarrjeje. Të drejtat ndjekin kushtet e publikuara të programit ose një marrëveshje me shkrim."],
-      ["Pronësia intelektuale", "MAXIMUS®, emblema e luanit, shenja GPS dhe përmbajtja e kësaj faqeje janë të mbrojtura. Formulat e brendshme inxhinierike, protokollet e kontrollit të cilësisë, shtresimet, veglat e prodhimit, identitetet e furnitorëve, kostot dhe metodologjia e mbrojtur nuk zbulohen këtu."],
+      ["Pronësia intelektuale", "MAXIMUS®, emblema e luanit, shenja GPS dhe përmbajtja e kësaj faqeje janë në pronësi të Maximus Kiriyakulov dhe janë të mbrojtura. Formulat e brendshme inxhinierike, protokollet e kontrollit të cilësisë, shtresimet, veglat e prodhimit, identitetet e furnitorëve, kostot dhe metodologjia e mbrojtur nuk zbulohen këtu."],
     ],
   },
   lead: {

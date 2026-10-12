@@ -141,7 +141,7 @@ const fil = {
       failed: "Hindi nairehistro ang address. Pakisubukang muli maya-maya.",
       terms: "Sa pag-subscribe, sumasang-ayon kayo na maaaring padalhan kayo ng MAXIMUS ng mga update na ito at itago ang inyong address para sa layuning iyon. May link para mag-unsubscribe ang bawat liham.",
     },
-    rights: "Ang MAXIMUS® at ang sagisag na leon ay mga marka ng ekosistema ng MAXIMUS. MIPA: panloob na IP, pinagmulan at kontrol ng dokumento.",
+    rights: "Ang MAXIMUS® at ang sagisag na leon ay mga markang pag-aari ni Maximus Kiriyakulov. MIPA: panloob na IP, pinagmulan at kontrol ng dokumento.",
     boundary:
       "Ang mga komersyal at kontraktwal na tuntunin ay pinagkakasunduan nang hiwalay at nakasulat. Ang pagbili ng raketa ay hindi lumilikha ng institusyonal na pagiging miyembro, mga karapatan sa pamumuhunan, pagmamay-ari ng intelektwal na ari-arian o karapatang makatanggap ng mga royalty.",
   },
@@ -949,7 +949,7 @@ const fil = {
       ["Mga kahilingan", "Ang isang kahilingang isinumite sa pamamagitan ng website na ito — kabilang ang mga GPS profile, mga kahilingan sa konpigurasyon at mga teknikal na brief — ay iniimbak kasama ng isang ID ng kahilingan at sinusuri. Hindi ito tinanggap na order, pangako sa paggawa, kumpirmadong appointment, aplikasyon para sa pagiging miyembro o tinanggap na aplikasyon sa anumang programa."],
       ["Mga espesipikasyon at ebidensya", "Pinag-iiba sa mga kaugnay na pahina ang mga kinalkulang halaga, mga target sa paggawa at mga kumpirmadong espesipikasyon. Ang mga halaga ng tigas ng frame ay mga target sa paggawa hangga't walang ibang inilalathala. Walang ginagarantiyang resulta para sa isang partikular na manlalaro."],
       ["Ekosistema, pagiging miyembro at mga karapatan", "Ang pagbili ng raketa ay hindi lumilikha ng institusyonal na pagiging miyembro, mga karapatan sa pamumuhunan, pagmamay-ari ng intelektwal na ari-arian, karapatang makatanggap ng mga royalty o mga benepisyo ng pakikilahok. Ang mga karapatang makatanggap ay nakabatay sa mga inilathalang tuntunin ng programa o sa isang nakasulat na kasunduan."],
-      ["Intelektwal na ari-arian", "Protektado ang MAXIMUS®, ang sagisag na leon, ang markang GPS at ang nilalaman ng website na ito. Hindi ibinubunyag dito ang mga panloob na pormula sa inhinyeriya, mga protokol ng QC, pagkakaayos ng mga patong ng materyal, mga kasangkapang pamproduksyon, pagkakakilanlan ng mga tagapagtustos, pagtutuos ng gastos at protektadong metodolohiya."],
+      ["Intelektwal na ari-arian", "Pag-aari ni Maximus Kiriyakulov at protektado ang MAXIMUS®, ang sagisag na leon, ang markang GPS at ang nilalaman ng website na ito. Hindi ibinubunyag dito ang mga panloob na pormula sa inhinyeriya, mga protokol ng QC, pagkakaayos ng mga patong ng materyal, mga kasangkapang pamproduksyon, pagkakakilanlan ng mga tagapagtustos, pagtutuos ng gastos at protektadong metodolohiya."],
     ],
   },
   lead: {

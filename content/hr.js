@@ -141,7 +141,7 @@ const hr = {
       failed: "Adresa nije zabilježena. Pokušajte ponovno za trenutak.",
       terms: "Pretplatom prihvaćate da vam MAXIMUS može slati te obavijesti i da u tu svrhu čuva vašu adresu. Svako pismo sadrži poveznicu za odjavu.",
     },
-    rights: "MAXIMUS® i amblem lava oznake su MAXIMUS ekosustava. MIPA: interna kontrola intelektualnog vlasništva, podrijetla i dokumentacije.",
+    rights: "Vlasnik oznaka MAXIMUS® i amblema lava je Maximus Kiriyakulov. MIPA: interna kontrola intelektualnog vlasništva, podrijetla i dokumentacije.",
     boundary:
       "Komercijalni i ugovorni uvjeti dogovaraju se posebno, u pisanom obliku. Kupnja reketa ne stvara institucionalno članstvo, investicijska prava, nositeljstvo prava intelektualnog vlasništva niti pravo na tantijeme.",
   },
@@ -949,7 +949,7 @@ const hr = {
       ["Zahtjevi", "Zahtjev poslan preko ovih web-stranica — uključujući GPS profile, zahtjeve za konfiguraciju i tehničke zahtjeve — pohranjuje se s ID-om zahtjeva i razmatra se. Nije prihvaćena narudžba, proizvodna obveza, potvrđen termin, prijava za članstvo niti prihvaćena prijava za bilo koji program."],
       ["Specifikacije i dokazi", "Izračunane vrijednosti, proizvodni ciljevi i potvrđene specifikacije razlikuju se na odgovarajućim stranicama. Vrijednosti su krutosti proizvodni ciljevi dok se ne objavi drugačije. Nijedan rezultat za pojedinog igrača nije zajamčen."],
       ["Ekosustav, članstvo i prava", "Kupnja reketa ne stvara institucionalno članstvo, investicijska prava, nositeljstvo prava intelektualnog vlasništva, pravo na tantijeme niti pogodnosti sudjelovanja. Prava proizlaze iz objavljenih uvjeta programa ili iz pisanog ugovora."],
-      ["Intelektualno vlasništvo", "MAXIMUS®, amblem lava, oznaka GPS i sadržaj ovih web-stranica zaštićeni su. Interne inženjerske formule, protokoli kontrole kvalitete, slojevi karbona, alati, identitet dobavljača, obračun troškova i zaštićena metodologija ne otkrivaju se ovdje."],
+      ["Intelektualno vlasništvo", "MAXIMUS®, amblem lava, oznaka GPS i sadržaj ovih web-stranica zaštićeni su, a njihov je vlasnik Maximus Kiriyakulov. Interne inženjerske formule, protokoli kontrole kvalitete, slojevi karbona, alati, identitet dobavljača, obračun troškova i zaštićena metodologija ne otkrivaju se ovdje."],
     ],
   },
   lead: {

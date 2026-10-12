@@ -141,7 +141,7 @@ const mt = {
       failed: "L-indirizz ma ġiex irreġistrat. Erġa' pprova f'mument.",
       terms: "Billi tabbona, taqbel li MAXIMUS jista' jibgħatlek dawn l-aġġornamenti u jżomm l-indirizz tiegħek għal dan il-għan. Kull ittra fiha link biex tħassar l-abbonament.",
     },
-    rights: "MAXIMUS® u l-emblema tal-iljun huma marki tal-ekosistema MAXIMUS. Proprjetà intellettwali interna, provenjenza u kontroll tad-dokumenti bil-MIPA.",
+    rights: "MAXIMUS® u l-emblema tal-iljun huma marki ta' Maximus Kiriyakulov. Proprjetà intellettwali interna, provenjenza u kontroll tad-dokumenti bil-MIPA.",
     boundary:
       "It-termini kummerċjali u kuntrattwali jiġu miftiehma separatament bil-miktub. Ix-xiri ta' rakketta ma joħloqx sħubija istituzzjonali, drittijiet ta' investiment, proprjetà ta' proprjetà intellettwali jew dritt għal royalties.",
   },
@@ -949,7 +949,7 @@ const mt = {
       ["Talbiet", "Talba mibgħuta permezz ta' din il-websajt — inklużi profili GPS, talbiet ta' konfigurazzjoni u briefs tekniċi — tinżamm bi ID tat-talba u tiġi riveduta. Mhijiex ordni aċċettata, impenn ta' manifattura, appuntament ikkonfermat, applikazzjoni għal sħubija jew applikazzjoni aċċettata għal xi programm."],
       ["Speċifikazzjonijiet u evidenza", "Il-valuri kalkulati, il-miri tal-manifattura u l-ispeċifikazzjonijiet ikkonfermati jingħarfu minn xulxin fil-paġni relevanti. Il-valuri tal-ebusija huma miri tal-manifattura sakemm ma jiġi ppubblikat mod ieħor. Ma huwa ggarantit l-ebda riżultat għal plejer partikolari."],
       ["Ekosistema, sħubija u drittijiet", "Ix-xiri ta' rakketta ma joħloqx sħubija istituzzjonali, drittijiet ta' investiment, sjieda ta' proprjetà intellettwali, dritt għal royalties jew benefiċċji ta' parteċipazzjoni. L-intitolamenti jimxu mat-termini ppubblikati tal-programm jew ma' ftehim bil-miktub."],
-      ["Proprjetà intellettwali", "MAXIMUS®, l-emblema tal-iljun, il-marka GPS u l-kontenut ta' din il-websajt huma protetti. Il-formuli interni ta' inġinerija, il-protokolli tal-kontroll tal-kwalità, is-saffi, l-għodda tal-produzzjoni, l-identità tal-fornituri, l-ikkalkular tal-kostijiet u l-metodoloġija protetta ma jiġux żvelati hawn."],
+      ["Proprjetà intellettwali", "MAXIMUS®, l-emblema tal-iljun, il-marka GPS u l-kontenut ta' din il-websajt huma ta' Maximus Kiriyakulov u huma protetti. Il-formuli interni ta' inġinerija, il-protokolli tal-kontroll tal-kwalità, is-saffi, l-għodda tal-produzzjoni, l-identità tal-fornituri, l-ikkalkular tal-kostijiet u l-metodoloġija protetta ma jiġux żvelati hawn."],
     ],
   },
   lead: {

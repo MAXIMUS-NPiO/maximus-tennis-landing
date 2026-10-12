@@ -141,7 +141,7 @@ const sv = {
       failed: "Adressen registrerades inte. Försök igen om en stund.",
       terms: "Genom att prenumerera godkänner du att MAXIMUS får skicka dig dessa uppdateringar och lagra din adress för det ändamålet. Varje brev innehåller en länk för att avsluta prenumerationen.",
     },
-    rights: "MAXIMUS® och lejonemblemet är varumärken i MAXIMUS-ekosystemet. MIPA: intern kontroll av immateriella rättigheter, proveniens och dokument.",
+    rights: "MAXIMUS® och lejonemblemet är varumärken som tillhör Maximus Kiriyakulov. MIPA: intern kontroll av immateriella rättigheter, proveniens och dokument.",
     boundary:
       "Kommersiella och avtalsmässiga villkor avtalas separat och skriftligt. Köpet av en racket ger inte institutionellt medlemskap, investeringsrättigheter, äganderätt till immateriella rättigheter eller rätt till royalty.",
   },
@@ -949,7 +949,7 @@ const sv = {
       ["Förfrågningar", "En förfrågan som skickas via den här webbplatsen — inklusive GPS-profiler, konfigurationsförfrågningar och tekniska underlag — lagras med ett ärendenummer och granskas. Den är inte en accepterad order, ett tillverkningsåtagande, en bekräftad bokning, en medlemsansökan eller en godkänd ansökan till något program."],
       ["Specifikationer och underlag", "Beräknade värden, tillverkningsmål och bekräftade specifikationer skiljs åt på respektive sida. Styvhetsvärden är tillverkningsmål till dess att annat publiceras. Inget resultat för en enskild spelare garanteras."],
       ["Ekosystem, medlemskap och rättigheter", "Köpet av en racket skapar inte institutionellt medlemskap, investeringsrättigheter, äganderätt till immateriella rättigheter, rätt till royalty eller förmåner för deltagande. Rättigheter följer publicerade programvillkor eller ett skriftligt avtal."],
-      ["Immateriella rättigheter", "MAXIMUS®, lejonemblemet, GPS-märket och innehållet på den här webbplatsen är skyddade. Interna tekniska formler, kvalitetsprotokoll, laminatuppbyggnader, verktyg, leverantörers identitet, kalkylering och skyddad metodik lämnas inte ut här."],
+      ["Immateriella rättigheter", "MAXIMUS®, lejonemblemet, GPS-märket och innehållet på den här webbplatsen tillhör Maximus Kiriyakulov och är skyddade. Interna tekniska formler, kvalitetsprotokoll, laminatuppbyggnader, verktyg, leverantörers identitet, kalkylering och skyddad metodik lämnas inte ut här."],
     ],
   },
   lead: {

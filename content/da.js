@@ -141,7 +141,7 @@ const da = {
       failed: "Adressen blev ikke registreret. Prøv igen om et øjeblik.",
       terms: "Ved at tilmelde dig accepterer du, at MAXIMUS må sende dig disse opdateringer og opbevare din adresse til det formål. Hvert brev indeholder et afmeldingslink.",
     },
-    rights: "MAXIMUS® og løveemblemet er mærker tilhørende MAXIMUS-økosystemet. MIPA intern kontrol af IP, proveniens og dokumenter.",
+    rights: "MAXIMUS® og løveemblemet er mærker tilhørende Maximus Kiriyakulov. MIPA intern kontrol af IP, proveniens og dokumenter.",
     boundary:
       "Kommercielle og kontraktuelle vilkår aftales særskilt og skriftligt. Køb af en ketcher skaber ikke institutionelt medlemskab, investeringsrettigheder, ejerskab til immaterielle rettigheder eller krav på royalties.",
   },
@@ -949,7 +949,7 @@ const da = {
       ["Anmodninger", "En anmodning indsendt gennem denne hjemmeside — herunder GPS-profiler, konfigurationsanmodninger og tekniske oplæg — gemmes med et anmodnings-ID og gennemgås. Den er ikke en accepteret ordre, en produktionsforpligtelse, en bekræftet aftale, en ansøgning om medlemskab eller en accepteret ansøgning til noget program."],
       ["Specifikationer og dokumentation", "Beregnede værdier, produktionsmål og bekræftede specifikationer holdes adskilt på de relevante sider. Værdier for stivhed er produktionsmål, indtil andet offentliggøres. Der garanteres intet resultat for en bestemt spiller."],
       ["Økosystem, medlemskab og rettigheder", "Køb af en ketcher skaber ikke institutionelt medlemskab, investeringsrettigheder, ejerskab til immaterielle rettigheder, krav på royalties eller deltagelsesfordele. Rettigheder følger offentliggjorte programvilkår eller en skriftlig aftale."],
-      ["Immaterielle rettigheder", "MAXIMUS®, løveemblemet, GPS-mærket og indholdet på denne hjemmeside er beskyttet. Interne konstruktionsformler, kvalitetsprotokoller, opbygninger, værktøj, leverandørers identitet, kalkulation og beskyttet metodik videregives ikke her."],
+      ["Immaterielle rettigheder", "MAXIMUS®, løveemblemet, GPS-mærket og indholdet på denne hjemmeside tilhører Maximus Kiriyakulov og er beskyttet. Interne konstruktionsformler, kvalitetsprotokoller, opbygninger, værktøj, leverandørers identitet, kalkulation og beskyttet metodik videregives ikke her."],
     ],
   },
   lead: {

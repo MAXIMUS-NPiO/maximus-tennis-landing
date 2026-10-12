@@ -141,7 +141,7 @@ const ga = {
       failed: "Níor cláraíodh an seoladh. Bain triail eile as i gceann nóiméid.",
       terms: "Nuair a liostálann tú, aontaíonn tú go bhféadfaidh MAXIMUS na nuashonruithe seo a sheoladh chugat agus do sheoladh a choinneáil chuige sin. Tá nasc díliostála i ngach litir.",
     },
-    rights: "Is marcanna d'éiceachóras MAXIMUS é MAXIMUS® agus suaitheantas an leoin. Déanann MIPA rialú inmheánach ar mhaoin intleachtúil, ar bhunús ábhair agus ar dhoiciméid.",
+    rights: "Is marcanna de chuid Maximus Kiriyakulov iad MAXIMUS® agus suaitheantas an leoin. Déanann MIPA rialú inmheánach ar mhaoin intleachtúil, ar bhunús ábhair agus ar dhoiciméid.",
     boundary:
       "Aontaítear téarmaí tráchtála agus conarthacha ar leithligh i scríbhinn. Ní chruthaíonn ceannach raicéid ballraíocht institiúideach, cearta infheistíochta, úinéireacht ar mhaoin intleachtúil ná teideal chun ríchíosanna.",
   },
@@ -949,7 +949,7 @@ const ga = {
       ["Iarratais", "Iarratas a chuirtear isteach tríd an suíomh seo — próifílí GPS, iarratais chumraíochta agus cur síos teicniúil san áireamh — stóráiltear le haitheantas iarratais agus déantar athbhreithniú air. Ní ordú glactha, ní gealltanas déantúsaíochta, ní coinne dheimhnithe, ní iarratas ballraíochta ná ní iarratas glactha ar aon chlár é."],
       ["Sonraíochtaí agus fianaise", "Déantar idirdhealú ar na leathanaigh chuí idir luachanna ríofa, spriocanna déantúsaíochta agus sonraíochtaí deimhnithe. Is spriocanna déantúsaíochta na luachanna righne go dtí go bhfoilsítear a mhalairt. Ní ráthaítear aon toradh d'imreoir ar leith."],
       ["Éiceachóras, ballraíocht agus cearta", "Ní chruthaíonn ceannach raicéid ballraíocht institiúideach, cearta infheistíochta, úinéireacht ar mhaoin intleachtúil, teideal chun ríchíosanna ná buntáistí rannpháirtíochta. Leanann teidil téarmaí foilsithe cláir nó comhaontú scríofa."],
-      ["Maoin intleachtúil", "Tá MAXIMUS®, suaitheantas an leoin, marc GPS agus inneachar an tsuímh seo cosanta. Ní nochtar anseo foirmlí innealtóireachta inmheánacha, prótacail rialú cáilíochta, leaganacha, uirlisí, céannacht soláthraithe, costáil ná modheolaíocht chosanta."],
+      ["Maoin intleachtúil", "Is le Maximus Kiriyakulov MAXIMUS®, suaitheantas an leoin, marc GPS agus inneachar an tsuímh seo, agus tá siad cosanta. Ní nochtar anseo foirmlí innealtóireachta inmheánacha, prótacail rialú cáilíochta, leaganacha, uirlisí, céannacht soláthraithe, costáil ná modheolaíocht chosanta."],
     ],
   },
   lead: {

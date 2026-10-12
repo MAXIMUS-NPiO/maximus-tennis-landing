@@ -123,17 +123,25 @@ retries. Changed economic/order/ownership snapshots fail closed rather than over
    cannot add another receipt. Lost acknowledgements after completion are also replay-safe.
 5. Failed processing atomically persists `nextAttemptAt` and rescores the pending index using
    exponential backoff. Default delays start at 1 second and cap at 5 minutes; both are configurable
-   within bounded constructor limits. The default attempt budget is five claims per retry cycle.
+   within bounded constructor limits. The default ordinary-error budget is five claims per retry cycle.
    After exhausting it, work moves to `review_required` and a separate review index with an audit
    entry. Evidence remains intact, and work is never silently completed or deleted. Malformed
    mutable work state or a changed economic payload is also quarantined for review.
+   The verified ledger's exact `ledger_capture_required` error for a refund/chargeback uses a
+   separate prerequisite wait: lifetime attempts remain recorded, while the current claim is
+   removed from the ordinary-error cycle count. Durable `captureDependencyAttempts`,
+   `captureDependencyStartedAt` and `captureDependencyExpiresAt` limit this wait to 100 claims or
+   30 days from the first missing-capture result by default. The original expiry survives process
+   reconstruction/configuration changes. Due backoff still excludes immediate spinning. At either
+   bound the evidence moves to explicit review. Every other error retains the five-error budget.
+   No reversal can post without the ledger's independently verified captured-payment record.
 6. `consumeReference(reference)` composes enqueue and processing. `retryPending({limit})` reads
    only due scores, oldest first, with a bounded batch of at most 100. Future retries and active
    leases are excluded by the store's score bound, so they cannot occupy the first-N due slots.
    Failed due records move into the future or review queue; subsequent batches can reach later
    records without scanning every future item. `processWork` independently rejects premature
    calls, so repeated deliveries cannot bypass backoff. `readWorkStatus(workId)` exposes only
-   sanitized server status, lifetime/cycle attempt counts, next due time, review/completion time,
+   sanitized server status, lifetime/cycle/prerequisite attempt counts and deadline, next due time, review/completion time,
    journal ID and error metadata.
 
 The internal ledger writer has no read authorization and no financial policy adapters. It loads
@@ -152,13 +160,16 @@ absent, expired, foreign or mismatched approvals fail closed. Expiry is rechecke
 before the atomic requeue commit after asynchronous reads or CAS retries.
 
 The commit consumes a persistent unique approval, appends the actor/case audit entry, moves work
-from review to pending and resets only its cycle budget. Lifetime attempts and verified evidence
+from review to pending and resets its ordinary retry cycle and capture-prerequisite wait metadata.
+Lifetime attempts and verified evidence
 remain intact. Concurrent or later replay of the same approval cannot reset another cycle.
 Corrupted economic payloads cannot be requeued by this helper. An operator must investigate the
 original evidence rather than edit financial history.
 
-No autonomous worker is installed. Before operational activation, connect scheduling, monitoring
-and operator review to these durable states and test the actual native adapter failure modes.
+No autonomous production worker is activated. The separate guarded worker/poller and daily source
+scheduler proposal are documented in `LEDGER_WORKER_READINESS.md`; actual native binding/live
+evidence and deployment remain required. Connect monitoring and operator review to these durable
+states and test the actual native adapter failure modes before operational activation.
 Unresolved financial events remain retained and auditable.
 
 Mapping snapshots are immutable and bind queued work to their hash. Changing a mapping version
@@ -167,7 +178,7 @@ old queue or design an audited migration; do not edit persisted records in place
 
 ## Verification and remaining connection work
 
-The targeted bridge suite passed **24/24 tests, zero skips**, with
+The targeted bridge suite passed **26/26 tests, zero skips**, with
 `INTAKE_REQUIRE_REDIS=1`. It covers live/test separation, raw claims and status-only rejection,
 exact amounts/currency/seller/merchant/project, approved goods classification, customer and
 organization binding, atomic enqueue failures, concurrent aliases, conflicting IDs, immutable
@@ -175,6 +186,10 @@ links, secret/card omission, payload tampering, out-of-order reversals and crash
 tests additionally cover more than a batch of failing events or actual active leases before a
 new valid capture, persisted exponential delays, bounded review escalation, malformed-state
 quarantine, atomic single-use exact operator approval and expiry during asynchronous reads.
+The separate prerequisite controls verify count/absolute-expiry bounds and an unchanged ordinary
+five-error budget. The worker suite also exercises 20 same-time movements with the only capture
+last in the actual hashed reference index: 19 partial refunds wait, then all post exactly once
+after the verified full capture, without principal/bonus allocation or fabricated receipt.
 
 The Redis integration used an already available local Redis process owned by the test on
 loopback port 6395, the existing REST bridge and the production store's Lua commit path. Eight

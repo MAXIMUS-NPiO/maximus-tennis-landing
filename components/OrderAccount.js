@@ -3,21 +3,24 @@
 import { useEffect, useRef, useState } from 'react';
 import { commerceLabels } from '../content/commerce';
 import { accountLabels } from '../content/account';
-export default function OrderAccount({ dict, locale, initial, orderId = null }) {
+import { tennisCheckoutLabels } from '../content/tennis-checkout';
+import { readTennisCheckoutFragment, tennisCheckoutHref, tennisPurchaseReview } from '../lib/client/tennis-checkout';
+import { formatCents } from '../lib/platform/money';
+export default function OrderAccount({ dict, locale, initial, orderId = null, allowCheckout = true }) {
   const [credentials, setCredentials] = useState(initial?.accessToken ? { id: initial.requestId, token: initial.accessToken } : null);
   const [order, setOrder] = useState(initial?.order || null);
   const [accountLink, setAccountLink] = useState(initial?.accountLink || null);
   const [error, setError] = useState('');
-  const [terms, setTerms] = useState(false);
   const busy = useRef(false);
   const T = commerceLabels[locale];
   const A = accountLabels[locale];
+  const P = tennisCheckoutLabels[locale];
+  const purchase = tennisPurchaseReview(order?.snapshot);
   useEffect(() => {
     if (initial || orderId) return;
-    const h = new URLSearchParams(window.location.hash.slice(1));
-    const id = h.get('order'), token = h.get('access');
+    const target = readTennisCheckoutFragment(window.location.hash);
     // Capability never enters query/access logs, browser storage or analytics.
-    if (id && token) setCredentials({ id, token });
+    if (target?.accessToken) setCredentials({ id: target.orderId, token: target.accessToken });
     if (window.location.hash) window.history.replaceState(window.history.state, '', window.location.pathname);
   }, [initial, orderId]);
   const call = async (path, body = {}) => {
@@ -55,33 +58,21 @@ export default function OrderAccount({ dict, locale, initial, orderId = null }) 
       setAccountLink('linked'); setError('');
     } catch { setError(A.failed); } finally { busy.current = false; }
   };
-  const pay = async () => {
-    if (!credentials || !terms || busy.current) return;
-    busy.current = true;
-    try {
-      const d = await call('checkout', { termsVersion: order.snapshot.offer.termsVersion });
-      const u = new URL(d.checkout_url, window.location.origin);
-      if (u.origin === window.location.origin) {
-        // MPGS test hosted page is served locally using the official Checkout script.
-        const h = await call('hosted');
-        const w = window.open('', '_blank');
-        if (!w) throw new Error('popup_blocked');
-        w.opener = null; w.document.write(h.html); w.document.close();
-      } else if (u.origin === 'https://maximussports.ae') window.location.assign(u.href);
-      else throw new Error('invalid_checkout');
-    } catch { setError(T.disabled); } finally { busy.current = false; }
-  };
   return <section className="stack" aria-labelledby="order-account-title">
     <h2 className="h-3" id="order-account-title">{T.account}</h2>
     {!order && <p>{dict.common.labels.reference}</p>}
     {error && <p role="alert" className="err">{error}</p>}
-    {accountLink === 'pending' && <div className="stack"><p role="status">{A.failed}</p><button className="btn-outline" type="button" onClick={linkAccount}>{A.linkOrder}</button></div>}
+    {credentials && accountLink !== 'linked' && <div className="stack"><p role="status">{accountLink === 'pending' ? A.failed : P.accountRequired}</p><button className="btn-outline" type="button" onClick={linkAccount}>{A.linkOrder}</button><a href={`/${locale}/account`}>{A.title}</a></div>}
     {accountLink === 'linked' && <p role="status">{A.linked}</p>}
     {order && <>
       <dl className="cfg-summary"><div><dt>{dict.common.labels.reference}</dt><dd>{order.id}</dd></div>
         <div><dt>{dict.common.labels.status}</dt><dd>{order.payment.status}</dd></div></dl>
       <dl className="cfg-summary">{Object.entries(order.snapshot.configuration).map(([k, v]) => <div key={k}><dt>{dict.build.fieldNames[k] || dict.common.labels[k] || k}</dt><dd>{String(v)}</dd></div>)}</dl>
-      <p>{order.snapshot.paymentPreference==='bank_wire'?T.bankWire:T.paymentLink}</p>
+      <p>{P[purchase.labelKey]}</p>
+      {purchase.programPending && <aside className="note stack"><p>{P.programPending}</p>
+        {purchase.requestedPrincipalMinor && <dl className="cfg-summary"><div><dt>{P.programPrincipal}</dt><dd><bdi>{formatCents(purchase.requestedPrincipalMinor, locale, purchase.currency)}</bdi></dd></div></dl>}
+      </aside>}
+      <p>{order.snapshot.paymentPreference==='bank_wire'?T.bankWire:P.checkoutOnSite}</p>
       <dl className="cfg-summary">
         <div><dt>{dict.form.fields.basis}</dt><dd>{dict.lead.basis[order.snapshot.technical.measurement_basis] || dict.common.labels.notProvided}</dd></div>
         <div><dt>{dict.common.labels.balance} · {order.snapshot.technical.final ? dict.common.statuses.confirmed : dict.common.labels.requestTarget}</dt><dd>{order.snapshot.technical.balance.confirmed_balance ?? order.snapshot.technical.balance.requested_balance ?? order.snapshot.technical.balance.proposed_balance ?? dict.common.labels.notProvided} {dict.common.labels.mm}</dd></div>
@@ -95,12 +86,9 @@ export default function OrderAccount({ dict, locale, initial, orderId = null }) 
       {order.snapshot.offer ? <>
         <p className="h-3">{new Intl.NumberFormat(locale, { style: 'currency', currency: order.snapshot.offer.currency }).format(order.snapshot.offer.totalMinor / 100)}</p>
         <p>{order.snapshot.offer.deliveryTerms}</p><p>{order.snapshot.offer.termsText}</p>
-        <label><input type="checkbox" checked={terms} onChange={e => setTerms(e.target.checked)} /> {dict.form.fields.consent}</label>
-        <button className="btn" type="button" disabled={!credentials || !terms || !['ready','pending'].includes(order.payment.status)} onClick={pay}>{T.payment} · TEST</button>
       </> : <p className="note">{dict.common.truth.noPrices}</p>}
-      <p className="note">{T.disabled}</p>
-      <button className="btn-outline" type="button" onClick={() => refresh()}>{dict.common.labels.status}</button>
-      {credentials && <a rel="noreferrer" href={`/${locale}/orders#order=${credentials.id}&access=${credentials.token}`}>{T.account}</a>}
+      {allowCheckout && <div className="stack"><p className="note">{P.sessionUnavailable}</p><div><a className="btn" href={tennisCheckoutHref(locale, order.id)}>{P.continueCheckout}</a></div></div>}
+      {allowCheckout && <button className="btn-outline" type="button" onClick={() => refresh()}>{dict.common.labels.status}</button>}
       {order.invoice && <><h3 className="h-3">{T.invoice} · TEST</h3><dl className="cfg-summary">
         <div><dt>{dict.common.labels.reference}</dt><dd><bdi>{order.invoice.number}</bdi></dd></div>
         <div><dt>{T.purchase}</dt><dd>{order.invoice.seller.legalName}</dd></div>

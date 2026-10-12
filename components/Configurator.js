@@ -1,6 +1,6 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { seriesList, series as SERIES, precisionClasses, grips, balanceFor, productDataVersion } from "../data/products";
 import { validateConfig, TARGET_BOUNDS, SERIES_IDS, GRIP_IDS, CLASS_IDS, BASIS, SET_TYPES, USES, PTYPES, SET_SIZE } from "../lib/intake/schema";
@@ -9,6 +9,7 @@ import { href } from "../lib/paths";
 import { track } from "../lib/analytics";
 import OrderFlow from "./OrderFlow";
 import LeadForm, { errorText } from "./LeadForm";
+import PurchaseChoice from "./PurchaseChoice";
 
 /**
  * Configurator — builds a configuration REQUEST. It never invents an SKU, price, delivery date,
@@ -106,6 +107,13 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
   const [errors, setErrors] = useState({});
   const [notice, setNotice] = useState("");
   const [accepted, setAccepted] = useState(false);
+  const [purchaseIntent, setPurchaseIntent] = useState('goods_only');
+  const [programRequest, setProgramRequest] = useState({ principal: '', currency: 'EUR' });
+  const [purchaseErrors, setPurchaseErrors] = useState({});
+  const [leadState, setLeadState] = useState('editing');
+  const handleLeadState = useCallback(value => { setLeadState(value); if (value === 'editing') setAccepted(false); }, []);
+  // Intention and proposed principal stay in memory; structural browser storage is unchanged.
+  const submittedProgramRequest = purchaseIntent === 'goods_with_program_interest' && programRequest.principal.trim() ? programRequest : undefined;
   const fromRef = useRef("direct");
   const startedRef = useRef(false);
   const completedRef = useRef(false);
@@ -244,6 +252,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
     const e = {};
     for (const [key, code] of Object.entries(errs)) if (key.startsWith("config.")) e[key.slice(7)] = code;
     setErrors(e);
+    setPurchaseErrors(Object.fromEntries(Object.entries(errs).filter(([key]) => key === 'purchaseIntent' || key.startsWith('programRequest'))));
   };
 
   const fieldErr = (k) => (errors[k] ? <span className="err" id={`c-${k}-err`}>{errorText(dict, errors[k])}</span> : null);
@@ -293,7 +302,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
         {STEPS.map((k, i) => (
           <li key={k}>
             {i < step ? (
-              <button type="button" className="done" onClick={() => { setErrors({}); go(i); }}>{String(i + 1).padStart(2, "0")} {B.steps[k]}</button>
+              <button type="button" className="done" disabled={leadState === 'submitting' || leadState === 'accepted'} onClick={() => { setErrors({}); go(i); }}>{String(i + 1).padStart(2, "0")} {B.steps[k]}</button>
             ) : (
               <span className={i === step ? "on" : ""} aria-current={i === step ? "step" : undefined}>{String(i + 1).padStart(2, "0")} {B.steps[k]}</span>
             )}
@@ -449,7 +458,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
               <p><strong>{B.reviewErrors}</strong></p>
               <ul>
                 {allErrors.map(([k, code]) => (
-                  <li key={k}>{B.fieldNames[k] || k}: {errorText(dict, code)} <button type="button" className="linkbtn" onClick={() => { setErrors({ [k]: code }); go(FIELD_STEP[k] ?? 0); }}>{B.edit}</button></li>
+                  <li key={k}>{B.fieldNames[k] || k}: {errorText(dict, code)} <button type="button" className="linkbtn" disabled={leadState === 'submitting' || leadState === 'accepted'} onClick={() => { setErrors({ [k]: code }); go(FIELD_STEP[k] ?? 0); }}>{B.edit}</button></li>
                 ))}
               </ul>
             </div>
@@ -458,22 +467,26 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
             {summary.map(([k, v, st], i) => (
               <div key={i}>
                 <dt>{k}</dt>
-                <dd>{v}{st !== null && st !== undefined && <> <button type="button" className="linkbtn" onClick={() => go(st)} aria-label={`${B.edit}: ${k}`}>{B.edit}</button></>}</dd>
+                <dd>{v}{st !== null && st !== undefined && <> <button type="button" className="linkbtn" disabled={leadState === 'submitting' || leadState === 'accepted'} onClick={() => go(st)} aria-label={`${B.edit}: ${k}`}>{B.edit}</button></>}</dd>
               </div>
             ))}
           </dl>
           <p className="muted small">{dict.common.truth.noPrices}</p>
-          {orderFlowEnabled ? <OrderFlow dict={dict} locale={locale} config={payload} beforeSubmit={beforeSubmit} onServerErrors={onServerErrors} onAccepted={() => setAccepted(true)} /> : <LeadForm
+          <PurchaseChoice dict={dict} locale={locale} intent={purchaseIntent} onIntentChange={value => { setPurchaseIntent(value); setPurchaseErrors({}); }} programRequest={programRequest} onProgramChange={value => { setProgramRequest(value); setPurchaseErrors({}); }} errors={purchaseErrors} locked={leadState === 'submitting' || leadState === 'accepted'} />
+          {orderFlowEnabled ? <OrderFlow dict={dict} locale={locale} config={payload} purchaseIntent={purchaseIntent} programRequest={submittedProgramRequest} beforeSubmit={beforeSubmit} onServerErrors={onServerErrors} onAccepted={() => setAccepted(true)} onStateChange={handleLeadState} locked={leadState === 'submitting' || leadState === 'accepted'} /> : <LeadForm
             dict={dict}
             locale={locale}
             purpose="config"
             config={payload}
+            purchaseIntent={purchaseIntent}
+            programRequest={submittedProgramRequest}
             beforeSubmit={beforeSubmit}
             onServerErrors={onServerErrors}
             context={{ from: fromRef.current }}
             series={c.series}
             submitLabel={B.cta}
             onAccepted={() => setAccepted(true)}
+            onStateChange={handleLeadState}
           />}
         </div>
       )}
@@ -485,11 +498,11 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
         </div>
       )}
       {cur === "review" && !accepted && (
-        <div className="btn-row"><button type="button" className="btn-outline" onClick={back}>{L.back}</button></div>
+        <div className="btn-row"><button type="button" className="btn-outline" disabled={leadState === 'submitting'} onClick={back}>{L.back}</button></div>
       )}
       {cur === "review" && accepted && (
         <div className="btn-row">
-          <button type="button" className="btn-outline" onClick={() => { writeJson(STORAGE_KEYS.config, { v: 2, step: 0, c: DEFAULTS }); setC(DEFAULTS); setAccepted(false); setNotice(""); setErrors({}); completedRef.current = false; startedRef.current = false; go(0); }}>{B.restart}</button>
+          <button type="button" className="btn-outline" onClick={() => { writeJson(STORAGE_KEYS.config, { v: 2, step: 0, c: DEFAULTS }); setC(DEFAULTS); setAccepted(false); setLeadState('editing'); setPurchaseIntent('goods_only'); setProgramRequest({ principal: '', currency: 'EUR' }); setPurchaseErrors({}); setNotice(""); setErrors({}); completedRef.current = false; startedRef.current = false; go(0); }}>{B.restart}</button>
         </div>
       )}
     </div>

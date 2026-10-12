@@ -26,7 +26,7 @@ const now = () => (typeof performance !== "undefined" ? performance.now() : Date
  * The idempotency key is stable for an unchanged payload (a retry or a double click never creates a
  * second request) and is regenerated when the payload changes.
  */
-export function useLeadSubmit({ purpose, locale, context = {}, series, endpoint = "/api/leads", orderPlan, orderTechnical, paymentPreference }) {
+export function useLeadSubmit({ purpose, locale, context = {}, series, endpoint = "/api/leads", orderPlan, orderTechnical, paymentPreference, purchaseIntent, programRequest }) {
   const [state, setState] = useState("editing");
   const [result, setResult] = useState(null);
   const keyRef = useRef({ sig: null, key: null });
@@ -41,7 +41,7 @@ export function useLeadSubmit({ purpose, locale, context = {}, series, endpoint 
     async ({ fields, config, profile, consent, hp }) => {
       if (busyRef.current) return { ok: false, code: "busy" };
       busyRef.current = true;
-      const body = { purpose, locale, fields, ...(orderPlan ? { plan: orderPlan, technical: orderTechnical, paymentPreference } : {}), ...(config ? { config } : {}), ...(profile ? { profile } : {}), consent: consent === true };
+      const body = { purpose, locale, fields, ...(orderPlan ? { plan: orderPlan, technical: orderTechnical, paymentPreference } : {}), ...(purchaseIntent ? { purchaseIntent, ...(programRequest ? { programRequest } : {}) } : {}), ...(config ? { config } : {}), ...(profile ? { profile } : {}), consent: consent === true };
       const sig = JSON.stringify(body);
       if (keyRef.current.sig !== sig) keyRef.current = { sig, key: uuidv4() };
       const payload = {
@@ -110,7 +110,7 @@ export function useLeadSubmit({ purpose, locale, context = {}, series, endpoint 
       track("lead_submit_error", { ...a, error_code: String(code).slice(0, 40) });
       return { ok: false, code };
     },
-    [purpose, locale, series, context, endpoint, orderPlan, orderTechnical, paymentPreference]
+    [purpose, locale, series, context, endpoint, orderPlan, orderTechnical, paymentPreference, purchaseIntent, programRequest]
   );
 
   const reset = useCallback(() => {

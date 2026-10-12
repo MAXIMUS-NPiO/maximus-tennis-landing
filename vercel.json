@@ -1,6 +1,7 @@
 {
   "framework": "nextjs",
   "crons": [
-    { "path": "/api/leads/retry", "schedule": "0 6 * * *" }
+    { "path": "/api/leads/retry", "schedule": "0 6 * * *" },
+    { "path": "/api/ledger/worker", "schedule": "0 7 * * *" }
   ]
 }

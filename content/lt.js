@@ -141,7 +141,7 @@ const lt = {
       failed: "Adresas nebuvo užregistruotas. Pabandykite po akimirkos dar kartą.",
       terms: "Prenumeruodami sutinkate, kad MAXIMUS gali siųsti jums šiuos naujinius ir šiuo tikslu saugoti jūsų adresą. Kiekviename laiške yra atsisakymo nuoroda.",
     },
-    rights: "MAXIMUS® ir liūto emblema yra MAXIMUS ekosistemos ženklai. MIPA vidinis intelektinės nuosavybės, kilmės ir dokumentų kontrolės lygmuo.",
+    rights: "MAXIMUS® ir liūto emblema yra ženklai, kurių savininkas yra Maximus Kiriyakulov. MIPA vidinis intelektinės nuosavybės, kilmės ir dokumentų kontrolės lygmuo.",
     boundary:
       "Komercinės ir sutartinės sąlygos derinamos atskirai raštu. Raketės įsigijimas nesukuria institucinės narystės, investavimo teisių, intelektinės nuosavybės priklausomybės ar teisės į autorinį atlyginimą.",
   },
@@ -949,7 +949,7 @@ const lt = {
       ["Užklausos", "Per šią svetainę pateikta užklausa — įskaitant GPS profilius, konfigūracijos užklausas ir technines užduotis — išsaugoma su užklausos numeriu ir įvertinama. Tai nėra priimtas užsakymas, gamybos įsipareigojimas, patvirtintas susitikimas, narystės prašymas ar priimta paraiška į kurią nors programą."],
       ["Specifikacijos ir įrodymai", "Apskaičiuotos vertės, gamybos tikslinės vertės ir patvirtintos specifikacijos atskiriamos atitinkamuose puslapiuose. Standumo vertės yra gamybos tikslinės vertės, kol nepaskelbta kitaip. Konkrečiam žaidėjui rezultatas negarantuojamas."],
       ["Ekosistema, narystė ir teisės", "Raketės įsigijimas nesukuria institucinės narystės, investavimo teisių, intelektinės nuosavybės priklausomybės, teisės į autorinį atlyginimą ar dalyvavimo naudos. Teisės kyla iš paskelbtų programos sąlygų ar rašytinės sutarties."],
-      ["Intelektinė nuosavybė", "MAXIMUS®, liūto emblema, GPS ženklas ir šios svetainės turinys yra saugomi. Vidinės inžinerijos formulės, kokybės kontrolės protokolai, sluoksniavimas, įrankiai, tiekėjų duomenys, savikaina ir saugoma metodika čia neatskleidžiami."],
+      ["Intelektinė nuosavybė", "MAXIMUS®, liūto emblema, GPS ženklas ir šios svetainės turinys yra saugomi, o jų savininkas yra Maximus Kiriyakulov. Vidinės inžinerijos formulės, kokybės kontrolės protokolai, sluoksniavimas, įrankiai, tiekėjų duomenys, savikaina ir saugoma metodika čia neatskleidžiami."],
     ],
   },
   lead: {

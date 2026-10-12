@@ -141,7 +141,7 @@ const en = {
       failed: "The address was not registered. Please try again in a moment.",
       terms: "By subscribing you agree that MAXIMUS may send you these updates and keep your address for that purpose. Every letter carries an unsubscribe link.",
     },
-    rights: "MAXIMUS® and the lion emblem are marks of the MAXIMUS ecosystem. MIPA internal IP, provenance and document control.",
+    rights: "MAXIMUS® and the lion emblem are marks of Maximus Kiriyakulov. MIPA internal IP, provenance and document control.",
     boundary:
       "Commercial and contractual terms are agreed separately in writing. A racquet purchase does not create institutional membership, investment rights, ownership of intellectual property or an entitlement to royalties.",
   },
@@ -949,7 +949,7 @@ const en = {
       ["Requests", "A request submitted through this website — including GPS profiles, configuration requests and technical briefs — is stored with a request ID and reviewed. It is not an accepted order, a manufacturing commitment, a confirmed appointment, a membership application or an accepted application to any programme."],
       ["Specifications and evidence", "Calculated values, manufacturing targets and confirmed specifications are distinguished on the relevant pages. Stiffness values are manufacturing targets until published otherwise. No result for a specific player is guaranteed."],
       ["Ecosystem, membership and rights", "A racquet purchase does not create institutional membership, investment rights, ownership of intellectual property, an entitlement to royalties or participation benefits. Entitlements follow published programme terms or a written agreement."],
-      ["Intellectual property", "MAXIMUS®, the lion emblem, the GPS mark and the content of this website are protected. Internal engineering formulas, QC protocols, layups, tooling, supplier identities, costing and protected methodology are not disclosed here."],
+      ["Intellectual property", "MAXIMUS®, the lion emblem, the GPS mark and the content of this website belong to Maximus Kiriyakulov and are protected. Internal engineering formulas, QC protocols, layups, tooling, supplier identities, costing and protected methodology are not disclosed here."],
     ],
   },
   lead: {

@@ -141,7 +141,7 @@ const fi = {
       failed: "Osoitetta ei rekisteröity. Yritä hetken kuluttua uudelleen.",
       terms: "Tilaamalla hyväksyt, että MAXIMUS saa lähettää sinulle näitä päivityksiä ja säilyttää osoitteesi tähän tarkoitukseen. Jokaisessa kirjeessä on peruutuslinkki.",
     },
-    rights: "MAXIMUS® ja leijonatunnus ovat MAXIMUS-ekosysteemin merkkejä. MIPA: sisäinen IP-, alkuperä- ja dokumenttien hallinta.",
+    rights: "MAXIMUS® ja leijonatunnus ovat Maximus Kiriyakulovin merkkejä. MIPA: sisäinen IP-, alkuperä- ja dokumenttien hallinta.",
     boundary:
       "Kaupalliset ja sopimusehdot sovitaan erikseen kirjallisesti. Mailan osto ei luo institutionaalista jäsenyyttä, sijoitusoikeuksia, aineettomien oikeuksien omistusta eikä oikeutta rojalteihin.",
   },
@@ -949,7 +949,7 @@ const fi = {
       ["Pyynnöt", "Tämän verkkosivuston kautta lähetetty pyyntö — mukaan lukien GPS-profiilit, määrityspyynnöt ja tekniset toimeksiannot — tallennetaan pyyntötunnuksella ja käsitellään. Se ei ole hyväksytty tilaus, valmistussitoumus, vahvistettu tapaaminen, jäsenhakemus eikä hyväksytty hakemus mihinkään ohjelmaan."],
       ["Spesifikaatiot ja näyttö", "Laskennalliset arvot, tuotantotavoitteet ja vahvistetut spesifikaatiot erotetaan toisistaan asianomaisilla sivuilla. Jäykkyysarvot ovat tuotantotavoitteita, kunnes toisin julkaistaan. Mitään tulosta tietylle pelaajalle ei takata."],
       ["Ekosysteemi, jäsenyys ja oikeudet", "Mailan osto ei luo institutionaalista jäsenyyttä, sijoitusoikeuksia, aineettomien oikeuksien omistusta, oikeutta rojalteihin eikä osallistumisetuja. Oikeudet perustuvat julkaistuihin ohjelmaehtoihin tai kirjalliseen sopimukseen."],
-      ["Aineettomat oikeudet", "MAXIMUS®, leijonatunnus, GPS-merkki ja tämän verkkosivuston sisältö ovat suojattuja. Sisäisiä suunnittelukaavoja, laatuprotokollia, laminointeja, muotteja, toimittajien tietoja, kustannuslaskentaa ja suojattua menetelmää ei luovuteta tässä."],
+      ["Aineettomat oikeudet", "MAXIMUS®, leijonatunnus, GPS-merkki ja tämän verkkosivuston sisältö kuuluvat Maximus Kiriyakuloville ja ovat suojattuja. Sisäisiä suunnittelukaavoja, laatuprotokollia, laminointeja, muotteja, toimittajien tietoja, kustannuslaskentaa ja suojattua menetelmää ei luovuteta tässä."],
     ],
   },
   lead: {

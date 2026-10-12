@@ -141,7 +141,7 @@ const pt = {
       failed: "O endereço não foi registrado. Tente de novo em um instante.",
       terms: "Ao se inscrever, você concorda que a MAXIMUS envie estas novidades e guarde seu endereço para essa finalidade. Cada carta inclui a opção de cancelar a inscrição.",
     },
-    rights: "MAXIMUS® e o emblema do leão são marcas do ecossistema MAXIMUS. IP interno, procedência e controle de documentos MIPA.",
+    rights: "MAXIMUS® e o emblema do leão são marcas de Maximus Kiriyakulov. IP interno, procedência e controle de documentos MIPA.",
     boundary:
       "Termos comerciais e contratuais são acordados separadamente por escrito. A compra de uma raquete não cria associação institucional, direitos de investimento, titularidade de propriedade intelectual nem direito a royalties.",
   },
@@ -949,7 +949,7 @@ const pt = {
       ["Solicitações", "Uma solicitação enviada por este site — inclusive perfis GPS, solicitações de configuração e briefings técnicos — é armazenada com um ID de solicitação e analisada. Não é um pedido aceito, um compromisso de fabricação, um agendamento confirmado, um pedido de associação nem uma candidatura aceita em qualquer programa."],
       ["Especificações e evidência", "Valores calculados, alvos de fabricação e especificações confirmadas são distinguidos nas páginas correspondentes. Os valores de rigidez são alvos de fabricação até que se publique o contrário. Nenhum resultado para um jogador específico é garantido."],
       ["Ecossistema, associação e direitos", "A compra de uma raquete não cria associação institucional, direitos de investimento, titularidade de propriedade intelectual, direito a royalties nem benefícios de participação. Os direitos seguem as condições publicadas do programa ou um contrato escrito."],
-      ["Propriedade intelectual", "MAXIMUS®, o emblema do leão, a marca GPS e o conteúdo deste site são protegidos. Fórmulas internas de engenharia, protocolos de CQ, laminações, ferramental, identidade de fornecedores, custeio e metodologia protegida não são divulgados aqui."],
+      ["Propriedade intelectual", "MAXIMUS®, o emblema do leão, a marca GPS e o conteúdo deste site pertencem a Maximus Kiriyakulov e são protegidos. Fórmulas internas de engenharia, protocolos de CQ, laminações, ferramental, identidade de fornecedores, custeio e metodologia protegida não são divulgados aqui."],
     ],
   },
   lead: {

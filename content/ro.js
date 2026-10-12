@@ -141,7 +141,7 @@ const ro = {
       failed: "Adresa nu a fost înregistrată. Încercați din nou într-o clipă.",
       terms: "Prin abonare, acceptați ca MAXIMUS să vă trimită aceste noutăți și să păstreze adresa dumneavoastră în acest scop. Fiecare scrisoare include opțiunea de dezabonare.",
     },
-    rights: "MAXIMUS® și emblema cu leu sunt mărci ale ecosistemului MAXIMUS. MIPA: proprietate intelectuală internă, proveniență și control documentar.",
+    rights: "MAXIMUS® și emblema cu leu sunt mărci ale lui Maximus Kiriyakulov. MIPA: proprietate intelectuală internă, proveniență și control documentar.",
     boundary:
       "Condițiile comerciale și contractuale se convin separat, în scris. Cumpărarea unei rachete nu creează calitatea de membru instituțional, drepturi de investiție, titlu de proprietate intelectuală sau dreptul la redevențe.",
   },
@@ -949,7 +949,7 @@ const ro = {
       ["Cereri", "O cerere trimisă prin acest site — inclusiv profilurile GPS, cererile de configurație și temele tehnice — se păstrează cu un ID de cerere și este analizată. Nu este o comandă acceptată, un angajament de producție, o programare confirmată, o cerere de aderare sau o candidatură acceptată la vreun program."],
       ["Specificații și dovezi", "Valorile calculate, țintele de producție și specificațiile confirmate sunt distinse pe paginile relevante. Valorile de rigiditate sunt ținte de producție până la publicarea unei alte mențiuni. Nu se garantează niciun rezultat pentru un jucător anume."],
       ["Ecosistem, calitate de membru și drepturi", "Cumpărarea unei rachete nu creează calitatea de membru instituțional, drepturi de investiție, titlu de proprietate intelectuală, dreptul la redevențe sau beneficii de participare. Drepturile decurg din condițiile publicate ale programelor sau dintr-un acord scris."],
-      ["Proprietate intelectuală", "MAXIMUS®, emblema cu leu, marca GPS și conținutul acestui site sunt protejate. Formulele interne de inginerie, protocoalele de control al calității, schemele de laminare, matrițele, identitatea furnizorilor, calculația costurilor și metodologia protejată nu se divulgă aici."],
+      ["Proprietate intelectuală", "MAXIMUS®, emblema cu leu, marca GPS și conținutul acestui site aparțin lui Maximus Kiriyakulov și sunt protejate. Formulele interne de inginerie, protocoalele de control al calității, schemele de laminare, matrițele, identitatea furnizorilor, calculația costurilor și metodologia protejată nu se divulgă aici."],
     ],
   },
   lead: {

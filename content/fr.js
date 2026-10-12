@@ -141,7 +141,7 @@ const fr = {
       failed: "L'adresse n'a pas été enregistrée. Veuillez réessayer dans un instant.",
       terms: "En vous inscrivant, vous acceptez que MAXIMUS vous envoie ces actualités et conserve votre adresse à cette fin. Chaque lettre comporte un lien de désinscription.",
     },
-    rights: "MAXIMUS® et l'emblème au lion sont des marques de l'écosystème MAXIMUS. MIPA : propriété intellectuelle interne, provenance et contrôle documentaire.",
+    rights: "MAXIMUS® et l'emblème au lion sont des marques de Maximus Kiriyakulov. MIPA : propriété intellectuelle interne, provenance et contrôle documentaire.",
     boundary:
       "Les conditions commerciales et contractuelles sont convenues séparément par écrit. L'achat d'une raquette ne crée ni adhésion institutionnelle, ni droits d'investissement, ni propriété de droits intellectuels, ni droit à des redevances.",
   },
@@ -949,7 +949,7 @@ const fr = {
       ["Demandes", "Une demande envoyée via ce site — y compris les profils GPS, les demandes de configuration et les cahiers des charges techniques — est conservée avec un identifiant de demande et examinée. Ce n'est pas une commande acceptée, un engagement de fabrication, un rendez-vous confirmé, une candidature d'adhésion ni une candidature acceptée à un programme."],
       ["Spécifications et preuves", "Les valeurs calculées, les cibles de fabrication et les spécifications confirmées sont distinguées sur les pages concernées. Les valeurs de rigidité sont des cibles de fabrication jusqu'à publication contraire. Aucun résultat pour un joueur donné n'est garanti."],
       ["Écosystème, adhésion et droits", "L'achat d'une raquette ne crée ni adhésion institutionnelle, ni droits d'investissement, ni propriété de droits intellectuels, ni droit à des redevances ou à des avantages de participation. Les droits découlent des conditions de programme publiées ou d'un accord écrit."],
-      ["Propriété intellectuelle", "MAXIMUS®, l'emblème au lion, la marque GPS et le contenu de ce site sont protégés. Les formules d'ingénierie internes, les protocoles qualité, les drapages, l'outillage, l'identité des fournisseurs, les coûts et la méthodologie protégée ne sont pas divulgués ici."],
+      ["Propriété intellectuelle", "MAXIMUS®, l'emblème au lion, la marque GPS et le contenu de ce site appartiennent à Maximus Kiriyakulov et sont protégés. Les formules d'ingénierie internes, les protocoles qualité, les drapages, l'outillage, l'identité des fournisseurs, les coûts et la méthodologie protégée ne sont pas divulgués ici."],
     ],
   },
   lead: {

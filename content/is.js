@@ -141,7 +141,7 @@ const isl = {
       failed: "Netfangið var ekki skráð. Prófaðu aftur eftir smá stund.",
       terms: "Með því að skrá þig samþykkir þú að MAXIMUS megi senda þér þessar fréttir og varðveita netfangið í því skyni. Hvert bréf inniheldur tengil til að afskrá sig.",
     },
-    rights: "MAXIMUS® og ljónsmerkið eru merki vistkerfis MAXIMUS. MIPA sér um innri hugverk, upprunaskráningu og skjalastýringu.",
+    rights: "MAXIMUS® og ljónsmerkið eru merki í eigu Maximus Kiriyakulov. MIPA sér um innri hugverk, upprunaskráningu og skjalastýringu.",
     boundary:
       "Viðskipta- og samningsskilmálar eru samþykktir sérstaklega og skriflega. Kaup á spaða veita ekki aðild að stofnuninni, fjárfestingarréttindi, eignarhald á hugverkum eða rétt til leyfisgjalda.",
   },
@@ -949,7 +949,7 @@ const isl = {
       ["Beiðnir", "Beiðni sem send er í gegnum þennan vef — þar með talin GPS-snið, stillingarbeiðnir og tæknilegar lýsingar — er varðveitt með tilvísunarnúmeri og tekin til yfirferðar. Hún er ekki samþykkt pöntun, framleiðsluskuldbinding, staðfestur tími, aðildarumsókn eða samþykkt umsókn í nokkurt verkefni."],
       ["Forskriftir og gögn", "Reiknuð gildi, framleiðslumarkmið og staðfestar forskriftir eru greind í sundur á viðeigandi síðum. Stífleikagildi eru framleiðslumarkmið þar til annað er birt. Engin niðurstaða fyrir tiltekinn leikmann er tryggð."],
       ["Vistkerfi, aðild og réttindi", "Kaup á spaða veita ekki aðild að stofnuninni, fjárfestingarréttindi, eignarhald á hugverkum, rétt til leyfisgjalda eða hlunnindi þátttöku. Réttindi fylgja birtum skilmálum verkefnis eða skriflegum samningi."],
-      ["Hugverk", "MAXIMUS®, ljónsmerkið, GPS-merkið og innihald þessa vefs eru vernduð. Innri hönnunarformúlur, gæðaferli, lagskiptingar, mót, nöfn framleiðenda, kostnaðarútreikningar og vernduð aðferðafræði eru ekki birt hér."],
+      ["Hugverk", "MAXIMUS®, ljónsmerkið, GPS-merkið og innihald þessa vefs eru í eigu Maximus Kiriyakulov og eru vernduð. Innri hönnunarformúlur, gæðaferli, lagskiptingar, mót, nöfn framleiðenda, kostnaðarútreikningar og vernduð aðferðafræði eru ekki birt hér."],
     ],
   },
   lead: {

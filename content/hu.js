@@ -141,7 +141,7 @@ const hu = {
       failed: "A cím nem került rögzítésre. Kérjük, próbálja újra egy pillanat múlva.",
       terms: "A feliratkozással hozzájárul ahhoz, hogy a MAXIMUS megküldje Önnek ezeket a híreket, és a címét ebből a célból megőrizze. Minden levél tartalmaz leiratkozási hivatkozást.",
     },
-    rights: "A MAXIMUS® és az oroszlánembléma a MAXIMUS ökoszisztéma védjegyei. MIPA: belső szellemi tulajdon-, eredet- és dokumentumkontroll.",
+    rights: "A MAXIMUS® és az oroszlánembléma Maximus Kiriyakulov védjegyei. MIPA: belső szellemi tulajdon-, eredet- és dokumentumkontroll.",
     boundary:
       "A kereskedelmi és szerződéses feltételekről külön, írásban állapodunk meg. Egy ütő megvásárlása nem keletkeztet intézményi tagságot, befektetési jogokat, szellemi tulajdont vagy jogdíjra való jogosultságot.",
   },
@@ -949,7 +949,7 @@ const hu = {
       ["Kérések", "A weboldalon beküldött kérést — beleértve a GPS-profilokat, a konfigurációs kéréseket és a műszaki kéréseket — kérésazonosítóval tároljuk és megvizsgáljuk. Nem elfogadott megrendelés, nem gyártási vállalás, nem megerősített időpont, nem tagsági kérelem és nem elfogadott jelentkezés semmilyen programba."],
       ["Specifikációk és bizonyítékok", "A számított értékeket, a gyártási célértékeket és a megerősített specifikációkat a vonatkozó oldalakon elkülönítjük. A keménységértékek gyártási célértékek, amíg ettől eltérőt nem közlünk. Egyetlen adott játékos számára sem garantálunk eredményt."],
       ["Ökoszisztéma, tagság és jogok", "Egy ütő megvásárlása nem keletkeztet intézményi tagságot, befektetési jogokat, szellemi tulajdont, jogdíjra való jogosultságot vagy részvételi előnyöket. A jogosultságok a közzétett programfeltételeket vagy írásos megállapodást követik."],
-      ["Szellemi tulajdon", "A MAXIMUS®, az oroszlánembléma, a GPS védjegy és a weboldal tartalma védett. A belső mérnöki formulák, a minőségellenőrzési protokollok, a rétegfelépítések, a szerszámozás, a beszállítók azonosítása, a költségkalkuláció és a védett módszertan itt nem kerül nyilvánosságra."],
+      ["Szellemi tulajdon", "A MAXIMUS®, az oroszlánembléma, a GPS védjegy és a weboldal tartalma Maximus Kiriyakulov tulajdona és védett. A belső mérnöki formulák, a minőségellenőrzési protokollok, a rétegfelépítések, a szerszámozás, a beszállítók azonosítása, a költségkalkuláció és a védett módszertan itt nem kerül nyilvánosságra."],
     ],
   },
   lead: {

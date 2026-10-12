@@ -141,7 +141,7 @@ const tr = {
       failed: "Adres kaydedilmedi. Lütfen birazdan tekrar deneyin.",
       terms: "Abone olarak MAXIMUS'un bu güncellemeleri size göndermesini ve adresinizi bu amaçla saklamasını kabul edersiniz. Her e-postada abonelikten çıkma bağlantısı yer alır.",
     },
-    rights: "MAXIMUS® ve aslan amblemi, MAXIMUS ekosisteminin markalarıdır. MIPA dahili fikri mülkiyet, köken ve doküman kontrolü.",
+    rights: "MAXIMUS® ve aslan amblemi, Maximus Kiriyakulov'a ait markalardır. MIPA dahili fikri mülkiyet, köken ve doküman kontrolü.",
     boundary:
       "Ticari ve sözleşmeye ilişkin şartlar ayrıca yazılı olarak kararlaştırılır. Bir raketin satın alınması; kurumsal üyelik, yatırım hakkı, fikri mülkiyet sahipliği veya telif payı hakkı doğurmaz.",
   },
@@ -949,7 +949,7 @@ const tr = {
       ["Talepler", "Bu web sitesi üzerinden gönderilen bir talep — GPS profilleri, yapılandırma talepleri ve teknik brief'ler dahil — bir talep numarasıyla saklanır ve incelenir. Kabul edilmiş bir sipariş, bir üretim taahhüdü, teyit edilmiş bir randevu, bir üyelik başvurusu veya herhangi bir programa kabul edilmiş bir başvuru değildir."],
       ["Şartnameler ve kanıt", "Hesaplanmış değerler, üretim hedefleri ve teyit edilmiş şartnameler ilgili sayfalarda birbirinden ayrılır. Sertlik değerleri, aksi yayımlanana kadar üretim hedefidir. Belirli bir oyuncu için hiçbir sonuç garanti edilmez."],
       ["Ekosistem, üyelik ve haklar", "Bir raketin satın alınması; kurumsal üyelik, yatırım hakkı, fikri mülkiyet sahipliği, telif payı hakkı veya katılım avantajı doğurmaz. Haklar, yayımlanmış program şartlarına ya da yazılı bir sözleşmeye tabidir."],
-      ["Fikri mülkiyet", "MAXIMUS®, aslan amblemi, GPS markası ve bu web sitesinin içeriği korunmaktadır. Dahili mühendislik formülleri, kalite kontrol protokolleri, katman dizilimleri, kalıplar, tedarikçi kimlikleri, maliyetlendirme ve korunan metodoloji burada paylaşılmaz."],
+      ["Fikri mülkiyet", "MAXIMUS®, aslan amblemi, GPS markası ve bu web sitesinin içeriği Maximus Kiriyakulov'a aittir ve korunmaktadır. Dahili mühendislik formülleri, kalite kontrol protokolleri, katman dizilimleri, kalıplar, tedarikçi kimlikleri, maliyetlendirme ve korunan metodoloji burada paylaşılmaz."],
     ],
   },
   lead: {

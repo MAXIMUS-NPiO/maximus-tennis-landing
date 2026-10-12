@@ -141,7 +141,7 @@ const eu = {
       failed: "Helbidea ez da erregistratu. Saiatu berriro une batean.",
       terms: "Harpidetzean, MAXIMUS taldeak berritasun hauek bidaltzea eta zure helbidea horretarako gordetzea onartzen duzu. Gutun bakoitzak baja emateko lotura darama.",
     },
-    rights: "MAXIMUS® eta lehoiaren ikurra MAXIMUS ekosistemaren markak dira. MIPA barne jabetza intelektuala, jatorria eta dokumentu-kontrola.",
+    rights: "MAXIMUS® eta lehoiaren ikurra Maximus Kiriyakuloven markak dira. MIPA barne jabetza intelektuala, jatorria eta dokumentu-kontrola.",
     boundary:
       "Baldintza komertzialak eta kontratualak bereiz eta idatziz adosten dira. Erraketa bat erostea ez da erakunde-kidetza, ez inbertsio-eskubide, ez jabetza intelektualaren titulartasun, ez kanonetarako eskubide.",
   },
@@ -949,7 +949,7 @@ const eu = {
       ["Eskaerak", "Webgune honetatik bidalitako eskaera bat — GPS profilak, konfigurazio-eskaerak eta txosten teknikoak barne — identifikatzaile batekin gordetzen da eta aztertzen da. Ez da onartutako eskari bat, ez fabrikazio-konpromiso bat, ez hitzordu berretsi bat, ez kidetza-eskaera bat, ez edozein programarako onartutako eskaera bat."],
       ["Zehaztapenak eta frogak", "Kalkulatutako balioak, fabrikazio-helburuak eta zehaztapen berretsiak bereizten dira dagozkien orrietan. Zurruntasun-balioak fabrikazio-helburuak dira, bestelakorik argitaratu arte. Ez da jokalari jakin batentzako emaitzarik bermatzen."],
       ["Ekosistema, kidetza eta eskubideak", "Erraketa bat erostea ez da erakunde-kidetza, ez inbertsio-eskubide, ez jabetza intelektualaren titulartasun, ez kanonetarako edo parte-hartze onuretarako eskubide. Eskubideak argitaratutako programa-baldintzen edo akordio idatzi baten araberakoak dira."],
-      ["Jabetza intelektuala", "MAXIMUS®, lehoiaren ikurra, GPS marka eta webgune honen edukia babestuta daude. Barne ingeniaritza-formulak, kalitate-kontrolaren protokoloak, laminatuak, tresneria, hornitzaileen identitatea, kostu-kalkuluak eta babestutako metodologia ez dira hemen ezagutarazten."],
+      ["Jabetza intelektuala", "MAXIMUS®, lehoiaren ikurra, GPS marka eta webgune honen edukia Maximus Kiriyakulovenak dira eta babestuta daude. Barne ingeniaritza-formulak, kalitate-kontrolaren protokoloak, laminatuak, tresneria, hornitzaileen identitatea, kostu-kalkuluak eta babestutako metodologia ez dira hemen ezagutarazten."],
     ],
   },
   lead: {

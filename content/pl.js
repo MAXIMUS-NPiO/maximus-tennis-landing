@@ -141,7 +141,7 @@ const pl = {
       failed: "Adres nie został zapisany. Prosimy spróbować ponownie za chwilę.",
       terms: "Zapisując się, zgadzają się Państwo na przesyłanie tych informacji przez MAXIMUS i na przechowywanie Państwa adresu w tym celu. W każdym liście znajduje się link do rezygnacji.",
     },
-    rights: "MAXIMUS® i emblemat lwa są znakami ekosystemu MAXIMUS. MIPA — wewnętrzna kontrola własności intelektualnej, pochodzenia i dokumentów.",
+    rights: "MAXIMUS® i emblemat lwa są znakami, których właścicielem jest Maximus Kiriyakulov. MIPA — wewnętrzna kontrola własności intelektualnej, pochodzenia i dokumentów.",
     boundary:
       "Warunki handlowe i umowne są ustalane odrębnie na piśmie. Zakup rakiety nie tworzy członkostwa instytucjonalnego, praw inwestycyjnych, własności praw intelektualnych ani uprawnienia do tantiem.",
   },
@@ -949,7 +949,7 @@ const pl = {
       ["Zgłoszenia", "Zgłoszenie przesłane przez tę stronę — w tym profile GPS, zgłoszenia konfiguracji i briefy techniczne — jest zapisywane z numerem i poddawane przeglądowi. Nie jest przyjętym zamówieniem, zobowiązaniem produkcyjnym, potwierdzonym terminem spotkania, wnioskiem o członkostwo ani przyjętym wnioskiem do jakiegokolwiek programu."],
       ["Specyfikacje i dowody", "Wartości obliczone, cele produkcyjne i potwierdzone specyfikacje są rozróżniane na odpowiednich stronach. Wartości sztywności są celami produkcyjnymi, dopóki nie zostanie opublikowane inaczej. Nie gwarantuje się wyniku konkretnemu zawodnikowi."],
       ["Ekosystem, członkostwo i prawa", "Zakup rakiety nie tworzy członkostwa instytucjonalnego, praw inwestycyjnych, własności praw intelektualnych, uprawnienia do tantiem ani korzyści z udziału. Uprawnienia wynikają z opublikowanych warunków programu lub z pisemnej umowy."],
-      ["Własność intelektualna", "MAXIMUS®, emblemat lwa, znak GPS i treść tej strony są chronione. Wewnętrzne receptury konstrukcyjne, protokoły kontroli jakości, układy laminatu, oprzyrządowanie, dane dostawców, kalkulacja kosztów i chroniona metodyka nie są tu ujawniane."],
+      ["Własność intelektualna", "MAXIMUS®, emblemat lwa, znak GPS i treść tej strony są chronione, a ich właścicielem jest Maximus Kiriyakulov. Wewnętrzne receptury konstrukcyjne, protokoły kontroli jakości, układy laminatu, oprzyrządowanie, dane dostawców, kalkulacja kosztów i chroniona metodyka nie są tu ujawniane."],
     ],
   },
   lead: {

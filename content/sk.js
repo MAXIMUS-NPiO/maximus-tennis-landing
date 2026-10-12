@@ -141,7 +141,7 @@ const sk = {
       failed: "Adresa nebola zaregistrovaná. Skúste to, prosím, o chvíľu znova.",
       terms: "Prihlásením sa súhlasíte s tým, aby vám MAXIMUS posielal tieto aktuality a na tento účel uchovával vašu adresu. Každý list obsahuje odkaz na odhlásenie.",
     },
-    rights: "MAXIMUS® a emblém leva sú známkami ekosystému MAXIMUS. MIPA — interná kontrola duševného vlastníctva, pôvodu a dokumentov.",
+    rights: "MAXIMUS® a emblém leva sú známkami, ktorých vlastníkom je Maximus Kiriyakulov. MIPA — interná kontrola duševného vlastníctva, pôvodu a dokumentov.",
     boundary:
       "Komerčné a zmluvné podmienky sa dohadujú osobitne a písomne. Kúpa rakety nezakladá inštitucionálne členstvo, investičné práva, vlastníctvo duševného majetku ani nárok na licenčné odmeny.",
   },
@@ -949,7 +949,7 @@ const sk = {
       ["Žiadosti", "Žiadosť odoslaná prostredníctvom tejto webovej stránky — vrátane profilov GPS, konfiguračných žiadostí a technických zadaní — sa uloží s ID žiadosti a posúdi sa. Nie je prijatou objednávkou, výrobným záväzkom, potvrdeným termínom, žiadosťou o členstvo ani prijatou prihláškou do akéhokoľvek programu."],
       ["Špecifikácie a dôkazy", "Vypočítané hodnoty, výrobné ciele a potvrdené špecifikácie sú na príslušných stránkach odlíšené. Hodnoty tuhosti rámu sú výrobnými cieľmi, kým sa nezverejní inak. Negarantuje sa žiadny výsledok pre konkrétneho hráča."],
       ["Ekosystém, členstvo a práva", "Kúpa rakety nezakladá inštitucionálne členstvo, investičné práva, vlastníctvo duševného majetku, nárok na licenčné odmeny ani výhody z účasti. Nároky vyplývajú zo zverejnených podmienok programu alebo z písomnej zmluvy."],
-      ["Duševné vlastníctvo", "MAXIMUS®, emblém leva, známka GPS a obsah tejto webovej stránky sú chránené. Interné inžinierske receptúry, protokoly kontroly kvality, laminácie, výrobné formy, identita dodávateľov, kalkulácia nákladov a chránená metodika sa tu nesprístupňujú."],
+      ["Duševné vlastníctvo", "MAXIMUS®, emblém leva, známka GPS a obsah tejto webovej stránky sú chránené a ich vlastníkom je Maximus Kiriyakulov. Interné inžinierske receptúry, protokoly kontroly kvality, laminácie, výrobné formy, identita dodávateľov, kalkulácia nákladov a chránená metodika sa tu nesprístupňujú."],
     ],
   },
   lead: {

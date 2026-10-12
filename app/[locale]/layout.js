@@ -49,6 +49,8 @@ export default async function LocaleLayout({ children, params }) {
     logo: `${site.website}/brand/maximus-lion-emblem.png`,
     email: site.email,
     sameAs: [site.instagram],
+    // The brand, its marks and its works belong to the Founder personally (Founder, 12 Oct 2026).
+    founder: authorNode(),
   };
   // The site as a work: its author, the holder of its copyright, and where the rights are stated.
   const work = {

@@ -64,6 +64,8 @@ for (const l of site.locales) {
   const mod = await import(`../content/${l}.js`);
   const d = mod.default || Object.values(mod)[0];
   if (!d.footer?.authorship) fail.push(`${l}: footer.authorship missing`);
+  // The marks line names the Founder as their owner (Founder, 12 Oct 2026: everything is attached to him personally).
+  if (!d.footer?.rights?.includes(AUTHOR)) fail.push(`${l}: footer.rights must name ${AUTHOR} as the owner of the marks`);
   if (!d.rights?.model || !d.rights.model.includes("{years}") || !d.rights.model.includes(AUTHOR)) fail.push(`${l}: rights.model must carry {years} and ${AUTHOR}`);
   // The extended statement (images, calculations, algorithms, data; no licence; no mining) is at
   // least three times the length of the original two sentences in every script.

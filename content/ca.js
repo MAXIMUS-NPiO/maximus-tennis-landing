@@ -141,7 +141,7 @@ const ca = {
       failed: "L'adreça no s'ha registrat. Torneu-ho a provar en un moment.",
       terms: "En subscriure-us accepteu que MAXIMUS us enviï aquestes novetats i conservi la vostra adreça amb aquesta finalitat. Cada carta inclou un enllaç per donar-se de baixa.",
     },
-    rights: "MAXIMUS® i l'emblema del lleó són marques de l'ecosistema MAXIMUS. Propietat intel·lectual interna, procedència i control documental MIPA.",
+    rights: "MAXIMUS® i l'emblema del lleó són marques de Maximus Kiriyakulov. Propietat intel·lectual interna, procedència i control documental MIPA.",
     boundary:
       "Les condicions comercials i contractuals s'acorden a part i per escrit. La compra d'una raqueta no crea cap afiliació institucional, ni drets d'inversió, ni propietat de la propietat intel·lectual, ni dret a cànons.",
   },
@@ -949,7 +949,7 @@ const ca = {
       ["Sol·licituds", "Una sol·licitud enviada per aquest lloc web — inclosos els perfils GPS, les sol·licituds de configuració i els informes tècnics — es guarda amb un identificador i es revisa. No és una comanda acceptada, ni un compromís de fabricació, ni una cita confirmada, ni una sol·licitud d'afiliació, ni una sol·licitud acceptada a cap programa."],
       ["Especificacions i evidència", "Els valors calculats, els objectius de fabricació i les especificacions confirmades es distingeixen a les pàgines corresponents. Els valors de rigidesa són objectius de fabricació fins que es publiqui una altra cosa. No es garanteix cap resultat per a un jugador concret."],
       ["Ecosistema, afiliació i drets", "La compra d'una raqueta no crea afiliació institucional, drets d'inversió, propietat de propietat intel·lectual, dret a cànons ni beneficis de participació. Els drets segueixen les condicions publicades del programa o un acord escrit."],
-      ["Propietat intel·lectual", "MAXIMUS®, l'emblema del lleó, la marca GPS i el contingut d'aquest lloc web estan protegits. Les fórmules d'enginyeria internes, els protocols de control de qualitat, els laminats, l'utillatge, la identitat dels proveïdors, els càlculs de cost i la metodologia protegida no es revelen aquí."],
+      ["Propietat intel·lectual", "MAXIMUS®, l'emblema del lleó, la marca GPS i el contingut d'aquest lloc web pertanyen a Maximus Kiriyakulov i estan protegits. Les fórmules d'enginyeria internes, els protocols de control de qualitat, els laminats, l'utillatge, la identitat dels proveïdors, els càlculs de cost i la metodologia protegida no es revelen aquí."],
     ],
   },
   lead: {

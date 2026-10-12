@@ -141,7 +141,7 @@ const sr = {
       failed: "Adresa nije zabeležena. Pokušajte ponovo za trenutak.",
       terms: "Pretplatom prihvatate da vam MAXIMUS može da šalje ta obaveštenja i da u tu svrhu čuva vašu adresu. Svako pismo sadrži link za odjavu.",
     },
-    rights: "MAXIMUS® i amblem lava su oznake MAXIMUS ekosistema. MIPA: interna kontrola intelektualne svojine, porekla i dokumentacije.",
+    rights: "Vlasnik oznaka MAXIMUS® i amblema lava je Maximus Kiriyakulov. MIPA: interna kontrola intelektualne svojine, porekla i dokumentacije.",
     boundary:
       "Komercijalni i ugovorni uslovi dogovaraju se posebno, u pisanoj formi. Kupovina reketa ne stvara institucionalno članstvo, investicijska prava, vlasništvo nad intelektualnom svojinom niti pravo na tantijeme.",
   },
@@ -949,7 +949,7 @@ const sr = {
       ["Zahtevi", "Zahtev poslat preko ovog sajta — uključujući GPS profile, zahteve za konfiguraciju i tehničke zahteve — čuva se sa ID-om zahteva i razmatra se. Nije prihvaćena narudžbina, proizvodna obaveza, potvrđen termin, prijava za članstvo niti prihvaćena prijava za bilo koji program."],
       ["Specifikacije i dokazi", "Izračunate vrednosti, proizvodni ciljevi i potvrđene specifikacije razlikuju se na odgovarajućim stranicama. Vrednosti krutosti su proizvodni ciljevi dok se ne objavi drugačije. Nijedan rezultat za konkretnog igrača nije garantovan."],
       ["Ekosistem, članstvo i prava", "Kupovina reketa ne stvara institucionalno članstvo, investicijska prava, vlasništvo nad intelektualnom svojinom, pravo na tantijeme niti pogodnosti učešća. Prava proizlaze iz objavljenih uslova programa ili iz pisanog ugovora."],
-      ["Intelektualna svojina", "MAXIMUS®, amblem lava, oznaka GPS i sadržaj ovog sajta su zaštićeni. Interne inženjerske formule, protokoli kontrole kvaliteta, slojevi karbona, alati, identitet dobavljača, obračun troškova i zaštićena metodologija ne otkrivaju se ovde."],
+      ["Intelektualna svojina", "MAXIMUS®, amblem lava, oznaka GPS i sadržaj ovog sajta su zaštićeni, a njihov vlasnik je Maximus Kiriyakulov. Interne inženjerske formule, protokoli kontrole kvaliteta, slojevi karbona, alati, identitet dobavljača, obračun troškova i zaštićena metodologija ne otkrivaju se ovde."],
     ],
   },
   lead: {

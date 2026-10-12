@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Indonesian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const id = {
   meta: {
@@ -1179,4 +1180,4 @@ const id = {
   notFound: { title: "Halaman tidak ditemukan", p: "Halaman yang Anda minta tidak tersedia dalam bahasa ini.", cta: "Ke halaman beranda" },
 };
 
-export default id;
+export default applyCatalogueUpdate("id", id);

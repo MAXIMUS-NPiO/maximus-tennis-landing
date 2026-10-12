@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Slovak dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const sk = {
   meta: {
@@ -1179,4 +1180,4 @@ const sk = {
   notFound: { title: "Stránka sa nenašla", p: "Stránka, ktorú ste požadovali, v tomto jazyku neexistuje.", cta: "Prejsť na domovskú stránku" },
 };
 
-export default sk;
+export default applyCatalogueUpdate("sk", sk);

@@ -16,7 +16,7 @@ export default async function Page({ params }) {
       <Section first>
         <p className="eyebrow">{tennisCheckoutLabels[locale].checkoutOnSite}</p>
         <p className="mono muted">{tennisCheckoutLabels[locale].steps}</p>
-        <Configurator orderFlowEnabled={process.env.ORDER_FLOW_ENABLED === "true"} locale={locale} dict={formDict(dict, ["build", "racquets", "precision"])} />
+        <Configurator orderFlowEnabled={process.env.ORDER_FLOW_ENABLED === "true"} locale={locale} dict={formDict(dict, ["build", "racquets", "precision", "catalogue", "sst"])} />
         <ModelRights dict={dict} />
       </Section>
     </>

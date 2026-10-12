@@ -41,7 +41,7 @@ export default function SpotShowcase({ eyebrow, title, lead, views, weights, wei
             <div className="vc-selected-info">
               <p className="vc-variant-name">{NAME}</p>
               <p className="spot-weights-label">{weightsLabel}</p>
-              <p className="spot-weights">
+              <p className={`spot-weights${weights.length > 4 ? " expanded-weights" : ""}`}>
                 {weights.map((w) => <span key={w}>{w}</span>)}
                 <i>{strings.grams}</i>
               </p>

@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Norwegian (Bokmål) dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const no = {
   meta: {
@@ -1179,4 +1180,4 @@ const no = {
   notFound: { title: "Siden ble ikke funnet", p: "Siden du ba om, finnes ikke på dette språket.", cta: "Gå til forsiden" },
 };
 
-export default no;
+export default applyCatalogueUpdate("no", no);

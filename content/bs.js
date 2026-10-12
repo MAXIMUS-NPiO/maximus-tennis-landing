@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Bosnian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const bs = {
   meta: {
@@ -1179,4 +1180,4 @@ const bs = {
   notFound: { title: "Stranica nije pronađena", p: "Stranica koju ste zatražili ne postoji na ovom jeziku.", cta: "Idite na početnu stranicu" },
 };
 
-export default bs;
+export default applyCatalogueUpdate("bs", bs);

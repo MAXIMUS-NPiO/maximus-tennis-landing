@@ -1,6 +1,6 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Link from "next/link";
-import { seriesList, precisionClasses, grips } from "../data/products";
+import { seriesList, standardLengths, precisionClasses, grips } from "../data/products";
 import { href } from "../lib/paths";
 
 export function SeriesCards({ locale, dict }) {
@@ -12,6 +12,7 @@ export function SeriesCards({ locale, dict }) {
           <p className="eyebrow accent">{r.direction[s.direction]}</p>
           <h3>{s.name}</h3>
           <div className="stat" style={{ marginTop: 12 }}><b>{s.headSizeSqIn} {L.sqin}</b><span>{L.headSize} · {s.matrix.length} {L.points}</span></div>
+          <p className="small">{dict.catalogue.length}: {standardLengths.map((x) => x.inches).join(" · ")} {L.inches}</p>
           <span className="arrow">{r.ctaSeries} →</span>
         </Link>
       ))}

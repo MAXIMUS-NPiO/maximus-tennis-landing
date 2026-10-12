@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Arabic dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const ar = {
   meta: {
@@ -1179,4 +1180,4 @@ const ar = {
   notFound: { title: "الصفحة غير موجودة", p: "الصفحة التي طلبتها غير متوفّرة بهذه اللغة.", cta: "انتقل إلى الصفحة الرئيسية" },
 };
 
-export default ar;
+export default applyCatalogueUpdate("ar", ar);

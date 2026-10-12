@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Finnish dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const fi = {
   meta: {
@@ -1179,4 +1180,4 @@ const fi = {
   notFound: { title: "Sivua ei löytynyt", p: "Pyytämääsi sivua ei ole tällä kielellä.", cta: "Siirry etusivulle" },
 };
 
-export default fi;
+export default applyCatalogueUpdate("fi", fi);

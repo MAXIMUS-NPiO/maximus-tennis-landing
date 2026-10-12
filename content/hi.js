@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Hindi dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const hi = {
   meta: {
@@ -1179,4 +1180,4 @@ const hi = {
   notFound: { title: "पेज नहीं मिला", p: "आपने जो पेज माँगा है, वह इस भाषा में मौजूद नहीं है।", cta: "होमपेज पर जाएँ" },
 };
 
-export default hi;
+export default applyCatalogueUpdate("hi", hi);

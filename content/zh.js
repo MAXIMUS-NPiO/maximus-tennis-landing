@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* 简体中文词典 — MAXIMUS 网站 v4.0。产品数值数据位于 data/products.js。结构与 content/en.js 严格一致。 */
 const zh = {
   meta: {
@@ -1179,4 +1180,4 @@ const zh = {
   notFound: { title: "页面未找到", p: "您请求的页面在此语言版本中不存在。", cta: "返回首页" },
 };
 
-export default zh;
+export default applyCatalogueUpdate("zh", zh);

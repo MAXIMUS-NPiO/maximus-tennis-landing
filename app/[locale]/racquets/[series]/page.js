@@ -1,5 +1,6 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { notFound } from "next/navigation";
+import LengthOptions from "../../../../components/LengthOptions";
 import { ctx } from "../../../../lib/page";
 import { pageMeta } from "../../../../lib/metadata";
 import { routes } from "../../../../data/site";
@@ -99,6 +100,7 @@ export default async function Page({ params }) {
       )}
 
       <Section title={P.optionsTitle}>
+        <LengthOptions dict={dict} />
         {m.details.filter((d) => d !== hero).length > 0 ? (
           <div className={`detail-grid ${id === "spin" ? "whole" : ""}`} style={{ marginBottom: 26 }}>
             {m.details.filter((d) => d !== hero).map((d) => <Photo key={d} id={d} alt={M[d]} caption={M[d]} sizes="(min-width: 760px) 30vw, 92vw" />)}

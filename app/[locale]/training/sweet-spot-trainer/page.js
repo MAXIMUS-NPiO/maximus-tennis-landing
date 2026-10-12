@@ -28,9 +28,11 @@ export default async function Page({ params }) {
       </Section>
       <Section title={S.systemTitle}>
         <span className="status confirmed" style={{ marginBottom: 14 }}>{S.baseline}</span>
-        <div className="grid-4">
-          {sst.system.map((x) => <div key={x.weight} className="stat"><b>{x.weight} {L.grams}</b><span>{L.balance}: {x.balance} {L.mm}</span></div>)}
+        <p>{S.systemLead}</p>
+        <div className="matrix" role="list">
+          {sst.system.map((x) => <div key={x.weight} role="listitem"><b>{x.weight} {L.grams}</b><span>{L.balance}: {x.balance === null ? dict.build.status.notPublished : `${x.balance} ${L.mm}`}</span></div>)}
         </div>
+        <div className="btn-row"><Cta locale={locale} to="build" query="series=sst" label={dict.build.cta} /></div>
         <div className="detail-grid" style={{ marginTop: 20 }}>
           {sstGallery.map((k) => <Photo key={k} id={k} alt={dict.media[k]} caption={dict.media[k]} sizes="(min-width: 760px) 38vw, 48vw" />)}
         </div>

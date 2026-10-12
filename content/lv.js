@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Latvian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const lv = {
   meta: {
@@ -1179,4 +1180,4 @@ const lv = {
   notFound: { title: "Lapa nav atrasta", p: "Jūsu pieprasītā lapa šajā valodā nepastāv.", cta: "Doties uz sākumlapu" },
 };
 
-export default lv;
+export default applyCatalogueUpdate("lv", lv);

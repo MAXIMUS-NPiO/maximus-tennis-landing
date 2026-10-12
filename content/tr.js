@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Turkish dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const tr = {
   meta: {
@@ -1179,4 +1180,4 @@ const tr = {
   notFound: { title: "Sayfa bulunamadı", p: "İstediğiniz sayfa bu dilde bulunmuyor.", cta: "Ana sayfaya gidin" },
 };
 
-export default tr;
+export default applyCatalogueUpdate("tr", tr);

@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Greek dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const el = {
   meta: {
@@ -1179,4 +1180,4 @@ const el = {
   notFound: { title: "Η σελίδα δεν βρέθηκε", p: "Η σελίδα που ζητήσατε δεν υπάρχει σε αυτή τη γλώσσα.", cta: "Μετάβαση στην αρχική σελίδα" },
 };
 
-export default el;
+export default applyCatalogueUpdate("el", el);

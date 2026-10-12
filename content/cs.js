@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Czech dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const cs = {
   meta: {
@@ -1179,4 +1180,4 @@ const cs = {
   notFound: { title: "Stránka nenalezena", p: "Stránka, kterou jste požadovali, v tomto jazyce neexistuje.", cta: "Přejít na domovskou stránku" },
 };
 
-export default cs;
+export default applyCatalogueUpdate("cs", cs);

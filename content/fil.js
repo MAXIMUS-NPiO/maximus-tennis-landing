@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Filipino dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const fil = {
   meta: {
@@ -1179,4 +1180,4 @@ const fil = {
   notFound: { title: "Hindi nahanap ang pahina", p: "Wala sa wikang ito ang pahinang hiniling ninyo.", cta: "Pumunta sa pangunahing pahina" },
 };
 
-export default fil;
+export default applyCatalogueUpdate("fil", fil);

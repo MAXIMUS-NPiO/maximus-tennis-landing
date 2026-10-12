@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Albanian dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const sq = {
   meta: {
@@ -1179,4 +1180,4 @@ const sq = {
   notFound: { title: "Faqja nuk u gjet", p: "Faqja që kërkuat nuk ekziston në këtë gjuhë.", cta: "Shkoni në faqen kryesore" },
 };
 
-export default sq;
+export default applyCatalogueUpdate("sq", sq);

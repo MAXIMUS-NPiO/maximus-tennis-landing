@@ -114,7 +114,7 @@ test("GPS: other sports never receive a tennis series", () => {
 
 test("attribution keeps only allowlisted, well-formed fields", () => {
   const a = sanitizeAttribution({ landing_path: "/en/racquets/great?x=1", locale: "de", utm_source: "google", utm_medium: "<script>", gclid: "Cj0KCQ-abc_123", email: "x@y.org" });
-  assert.deepEqual(a, { utm_source: "google", gclid: "Cj0KCQ-abc_123" });
+  assert.deepEqual(a, { locale: "de", utm_source: "google", gclid: "Cj0KCQ-abc_123" });
 });
 
 test("request ids and secret comparison", () => {

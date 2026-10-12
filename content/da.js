@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Danish dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const da = {
   meta: {
@@ -1179,4 +1180,4 @@ const da = {
   notFound: { title: "Siden blev ikke fundet", p: "Den side du bad om, findes ikke på dette sprog.", cta: "Gå til forsiden" },
 };
 
-export default da;
+export default applyCatalogueUpdate("da", da);

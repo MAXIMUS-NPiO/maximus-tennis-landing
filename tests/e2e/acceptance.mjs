@@ -95,6 +95,7 @@ async function runConfigurator(page, { series = "great", cls = "P1.5", weight = 
   await click('button[data-next="cls"]');
   await page.locator('input[name="mode"][value="listed"]').check();
   await page.locator("#c-weight").selectOption(weight);
+  await page.locator("#c-lengthIn").selectOption("27");
   await click('button[data-next="weight"]');
   await page.locator(`input[name="grip"][value="${grip}"]`).check();
   await click('button[data-next="grip"]');

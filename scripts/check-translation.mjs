@@ -24,6 +24,7 @@ const ALLOWED = new Set([
   "| MAXIMUS",          // the title suffix: the mark itself
   "Email",              // used as written in every locale on this site
   "your@email.com",     // the placeholder is an address pattern, not a sentence
+  "Plus", "Superlong", // Owner-specified length category names, not translated.
   "ZERO",               // the name of the exclusive option, Latin in every locale like the mark itself
   "min", "h", "≈",      // Family Plan units: minutes, hours, and the sign for an approximate figure
   "{scenario}: {field}", // Family Plan error label: two placeholders and a colon, nothing to translate

@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Hungarian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const hu = {
   meta: {
@@ -1179,4 +1180,4 @@ const hu = {
   notFound: { title: "Az oldal nem található", p: "A kért oldal ezen a nyelven nem létezik.", cta: "Ugrás a főoldalra" },
 };
 
-export default hu;
+export default applyCatalogueUpdate("hu", hu);

@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Uzbek dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const uz = {
   meta: {
@@ -1179,4 +1180,4 @@ const uz = {
   notFound: { title: "Sahifa topilmadi", p: "Siz soʻragan sahifa bu tilda mavjud emas.", cta: "Bosh sahifaga oʻtish" },
 };
 
-export default uz;
+export default applyCatalogueUpdate("uz", uz);

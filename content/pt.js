@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Portuguese (Brazil) dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const pt = {
   meta: {
@@ -1179,4 +1180,4 @@ const pt = {
   notFound: { title: "Página não encontrada", p: "A página que você pediu não existe neste idioma.", cta: "Ir para a página inicial" },
 };
 
-export default pt;
+export default applyCatalogueUpdate("pt", pt);

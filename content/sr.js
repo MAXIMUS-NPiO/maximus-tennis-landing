@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Serbian dictionary (Latin script) — MAXIMUS website. Numerical product data lives in data/products.js. */
 const sr = {
   meta: {
@@ -1179,4 +1180,4 @@ const sr = {
   notFound: { title: "Stranica nije nađena", p: "Stranica koju ste zatražili ne postoji na ovom jeziku.", cta: "Idite na početnu stranicu" },
 };
 
-export default sr;
+export default applyCatalogueUpdate("sr", sr);

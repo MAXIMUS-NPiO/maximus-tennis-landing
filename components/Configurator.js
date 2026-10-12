@@ -2,12 +2,13 @@
 "use client";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { seriesList, series as SERIES, precisionClasses, grips, balanceFor, productDataVersion } from "../data/products";
-import { validateConfig, TARGET_BOUNDS, SERIES_IDS, GRIP_IDS, CLASS_IDS, BASIS, SET_TYPES, USES, PTYPES, SET_SIZE } from "../lib/intake/schema";
+import { seriesList, configurationProducts as SERIES, isTrainer, standardLengths, precisionClasses, grips, balanceFor, productDataVersion } from "../data/products";
+import { validateConfig, TARGET_BOUNDS, CONFIG_PRODUCT_IDS, GRIP_IDS, CLASS_IDS, BASIS, SET_TYPES, USES, PTYPES, SET_SIZE } from "../lib/intake/schema";
 import { STORAGE_KEYS, readJson, writeJson, pick } from "../lib/client/storage";
 import { href } from "../lib/paths";
 import { track } from "../lib/analytics";
 import OrderFlow from "./OrderFlow";
+import { PERSIST, DEFAULTS, withSeries, toPayload } from "../lib/client/configuration";
 import LeadForm, { errorText } from "./LeadForm";
 import PurchaseChoice from "./PurchaseChoice";
 
@@ -22,66 +23,9 @@ import PurchaseChoice from "./PurchaseChoice";
  */
 
 const STEPS = ["series", "cls", "weight", "grip", "targets", "personal", "set", "use", "review"];
-const FIELD_STEP = { series: 0, cls: 1, mode: 2, weight: 2, customWeight: 2, grip: 3, basis: 4, balanceReq: 4, sw: 4, ra: 4, ptype: 5, engraving: 5, setType: 6, sets: 6, teamSize: 6, use: 7, notes: 7 };
+const FIELD_STEP = { series: 0, cls: 1, mode: 2, weight: 2, customWeight: 2, lengthMode: 2, lengthIn: 2, customLengthIn: 2, grip: 3, basis: 4, balanceReq: 4, sw: 4, ra: 4, ptype: 5, engraving: 5, setType: 6, sets: 6, teamSize: 6, use: 7, notes: 7 };
 const STEP_FIELDS = STEPS.map((_, i) => Object.keys(FIELD_STEP).filter((k) => FIELD_STEP[k] === i));
 const FROM = ["gps", "series", "home", "choose", "precision", "grip", "custom"];
-const DIGITS = /^\d{1,6}$/;
-const isStr = (re) => (x) => typeof x === "string" && re.test(x);
-
-const PERSIST = {
-  series: (x) => SERIES_IDS.includes(x),
-  cls: (x) => CLASS_IDS.includes(x),
-  mode: (x) => x === "listed" || x === "custom",
-  weight: (x) => Number.isInteger(x) && x > 0,
-  customWeight: isStr(DIGITS),
-  basis: (x) => BASIS.includes(x),
-  balanceReq: isStr(DIGITS),
-  sw: isStr(DIGITS),
-  ra: isStr(DIGITS),
-  grip: (x) => GRIP_IDS.includes(x),
-  ptype: (x) => PTYPES.includes(x),
-  setType: (x) => SET_TYPES.includes(x),
-  sets: isStr(DIGITS),
-  teamSize: isStr(DIGITS),
-  use: (x) => USES.includes(x),
-};
-
-const DEFAULTS = { mode: "listed", ptype: "none", setType: "individual", sets: "1" };
-
-const listed = (id) => (SERIES[id] ? SERIES[id].matrix.map((p) => p.weight) : []);
-
-function withSeries(c, id) {
-  if (c.series === id) return { c, cleared: null };
-  const out = { ...c, series: id };
-  let cleared = null;
-  if (c.weight && !listed(id).includes(Number(c.weight))) {
-    cleared = c.weight;
-    delete out.weight;
-  }
-  return { c: out, cleared };
-}
-
-function toPayload(c) {
-  const blank = (x) => (x === undefined || x === null || String(x).trim() === "" ? undefined : x);
-  return {
-    series: c.series,
-    cls: c.cls,
-    mode: c.mode,
-    ...(c.mode === "listed" ? { weight: c.weight } : { customWeight: blank(c.customWeight) }),
-    basis: c.mode === "custom" ? "unstrung" : blank(c.basis),
-    balanceReq: blank(c.balanceReq),
-    sw: blank(c.sw),
-    ra: blank(c.ra),
-    grip: c.grip,
-    ptype: c.ptype || "none",
-    ...(c.ptype && c.ptype !== "none" ? { engraving: blank(c.engraving) } : {}),
-    setType: c.setType,
-    sets: blank(c.sets),
-    ...(c.setType === "team" ? { teamSize: blank(c.teamSize) } : {}),
-    use: c.use,
-    notes: blank(c.notes),
-  };
-}
 
 function Radio({ name, options, value, onChange, three = false, labelledBy }) {
   return (
@@ -99,6 +43,7 @@ function Radio({ name, options, value, onChange, three = false, labelledBy }) {
 export default function Configurator({ dict, locale, orderFlowEnabled = false }) {
   const B = dict.build;
   const L = dict.common.labels;
+  const C = dict.catalogue;
   const ST = dict.common.statuses;
   const P = dict.precision;
   const [c, setC] = useState(DEFAULTS);
@@ -131,13 +76,13 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
       next = { ...next, ...pick(saved.c, PERSIST) };
       if (Number.isInteger(saved.step) && saved.step >= 0 && saved.step < STEPS.length - 1) start = saved.step;
     }
-    if (next.weight && (!next.series || !listed(next.series).includes(next.weight))) delete next.weight;
+    if (next.weight && (!next.series || !SERIES[next.series]?.matrix.some((p) => p.weight === next.weight))) delete next.weight;
     const sp = new URLSearchParams(window.location.search);
     const us = sp.get("series");
     const ug = sp.get("grip");
     const uf = sp.get("from");
     let msg = "";
-    if (SERIES_IDS.includes(us)) {
+    if (CONFIG_PRODUCT_IDS.includes(us)) {
       const r = withSeries(next, us);
       next = r.c;
       if (r.cleared) msg = B.notices.weightCleared.replace("{w}", r.cleared).replace("{series}", SERIES[us].short);
@@ -175,6 +120,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
   }, [step]);
 
   const s = c.series ? SERIES[c.series] : null;
+  const trainer = isTrainer(c.series);
   const cur = STEPS[step];
   const payload = useMemo(() => toPayload(c), [c]);
   const full = useMemo(() => validateConfig(payload), [payload]);
@@ -267,7 +213,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
     </div>
   );
 
-  const balance = s && c.mode === "listed" && c.weight ? balanceFor(s.id, c.weight) : null;
+  const balance = s && c.mode === "listed" && c.weight ? balanceFor(s.id, c.weight, trainer ? undefined : (c.lengthMode === "custom" ? "custom" : c.lengthIn)) : null;
   // A series whose balance table the Founder confirmed (SPIN) is labelled confirmed, not calculated.
   const balanceConfirmed = !!s && s.balanceStatus === "FOUNDER_CONFIRMED";
   const balanceWord = balanceConfirmed ? ST.confirmed : ST.modelled;
@@ -275,8 +221,9 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
   const cls = precisionClasses.find((p) => p.id === c.cls);
 
   const summary = [
-    [L.series, s ? `${s.name} · ${s.headSizeSqIn} ${L.sqin} · ${dict.racquets.direction[s.direction]}` : "—", 0],
-    [L.precisionClass, cls ? `${B.classes[cls.id]} — ${clsText(cls)}` : "—", 1],
+    [L.series, s ? `${s.name}${s.headSizeSqIn ? ` · ${s.headSizeSqIn} ${L.sqin}` : ""}${s.direction ? ` · ${dict.racquets.direction[s.direction]}` : ""}` : "—", 0],
+    !trainer && [L.precisionClass, cls ? `${B.classes[cls.id]} — ${clsText(cls)}` : "—", 1],
+    !trainer ? [c.lengthMode === "custom" ? C.custom : C.length, `${c.lengthMode === "custom" ? (c.customLengthIn || "—") : (c.lengthIn || "—")} ${L.inches} — ${B.status.technicalReview}`, 2] : [C.length, s.lengthIn ? `${s.lengthIn} ${L.inches}` : B.status.notPublished, null],
     c.mode === "listed"
       ? [L.weight, c.weight ? `${c.weight} ${L.grams} — ${s && s.matrixStatus === "REQUESTED_ARCHITECTURE" ? B.status.requestedArchitecture : B.status.listed}` : "—", 2]
       : [B.q.customWeight, c.customWeight ? `${c.customWeight} ${L.grams} — ${B.status.technicalReview}` : "—", 2],
@@ -326,13 +273,13 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
 
       {cur === "series" && (
         <div className="stack">
-          <Radio name="series" three labelledBy="cfg-step-title" value={c.series} onChange={chooseSeries} options={seriesList.map((x) => [x.id, x.name, `${x.headSizeSqIn} ${L.sqin} · ${dict.racquets.direction[x.direction]}`])} />
+          <Radio name="series" three labelledBy="cfg-step-title" value={c.series} onChange={chooseSeries} options={Object.values(SERIES).map((x) => [x.id, x.name, x.direction ? `${x.headSizeSqIn} ${L.sqin} · ${dict.racquets.direction[x.direction]}` : `${x.matrix.length} ${L.points}`])} />
           {fieldErr("series")}
           <p className="muted small"><Link href={href(locale, "choose")}>{B.chooseLink} →</Link></p>
         </div>
       )}
 
-      {cur === "cls" && (
+      {cur === "cls" && !trainer && (
         <div className="stack">
           <Radio name="cls" labelledBy="cfg-step-title" value={c.cls} onChange={(v) => set("cls", v)} options={precisionClasses.map((p) => [p.id, B.classes[p.id], clsText(p)])} />
           {fieldErr("cls")}
@@ -340,16 +287,18 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
         </div>
       )}
 
+      {cur === "cls" && trainer && <p className="note">{dict.sst.precisionNote}</p>}
+
       {cur === "weight" && s && (
         <div className="stack">
-          <Radio name="mode" labelledBy="cfg-step-title" value={c.mode} onChange={(v) => set("mode", v)} options={[["listed", L.listed, B.listedNote], ["custom", L.custom, B.customNote]]} />
+          {!trainer && <Radio name="mode" labelledBy="cfg-step-title" value={c.mode} onChange={(v) => set("mode", v)} options={[["listed", L.listed, B.listedNote], ["custom", L.custom, B.customNote]]} />}
           {c.mode === "listed" ? (
             <div className="field">
               <label htmlFor="c-weight">{B.q.listed} — {s.short}</label>
-              {!balanceConfirmed && <span className="hint" id="c-weight-hint">{s.matrixStatus === "REQUESTED_ARCHITECTURE" ? B.spinNote : B.balanceCaption}</span>}
+              {!trainer && <span className="hint" id="c-weight-hint">{C.balanceNote}</span>}
               <select id="c-weight" value={c.weight || ""} onChange={(e) => set("weight", e.target.value ? Number(e.target.value) : undefined)} {...inv("weight")} aria-describedby={[balanceConfirmed ? null : "c-weight-hint", errors.weight ? "c-weight-err" : null].filter(Boolean).join(" ") || undefined}>
                 <option value="">{L.select}</option>
-                {s.matrix.map((p) => <option key={p.weight} value={p.weight}>{p.weight} {L.grams}{p.balance !== null ? ` · ${p.balance} ${L.mm}` : ""}</option>)}
+                {s.matrix.map((p) => <option key={p.weight} value={p.weight}>{p.weight} {L.grams}{trainer && p.balance !== null ? ` · ${p.balance} ${L.mm}` : ""}</option>)}
               </select>
               {fieldErr("weight")}
               {c.weight && balance !== null && <span className="hint">{balanceConfirmed ? L.balance : B.q.balanceShown}: <strong className="mono">{balance} {L.mm}</strong> — {balanceWord}</span>}
@@ -362,6 +311,24 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
               {fieldErr("customWeight")}
             </div>
           )}
+          {!trainer && <fieldset className="stack">
+            <legend>{C.length} · {L.inches}</legend>
+            <Radio name="lengthMode" value={c.lengthMode} onChange={(v) => set("lengthMode", v)} options={[["standard", C.standard], ["custom", C.custom]]} />
+            {fieldErr("lengthMode")}
+            {c.lengthMode === "custom" ? <div className="field">
+              <label htmlFor="c-customLengthIn">{C.custom} ({L.inches})</label>
+              <input id="c-customLengthIn" type="text" inputMode="decimal" autoComplete="off" value={c.customLengthIn || ""} onChange={(e) => set("customLengthIn", e.target.value)} {...inv("customLengthIn")} />
+              {fieldErr("customLengthIn")}
+            </div> : <div className="field">
+              <label htmlFor="c-lengthIn">{C.standard} ({L.inches})</label>
+              <select id="c-lengthIn" value={c.lengthIn || ""} onChange={(e) => set("lengthIn", e.target.value ? Number(e.target.value) : undefined)} {...inv("lengthIn")}>
+                <option value="">{L.select}</option>
+                {standardLengths.map((x) => <option key={x.inches} value={x.inches}>{x.inches} {L.inches}{x.category === "standard" ? "" : ` · ${C[x.category]}`}</option>)}
+              </select>
+              {fieldErr("lengthIn")}
+            </div>}
+            <p className="note">{C.note}</p>
+          </fieldset>}
         </div>
       )}
 
@@ -473,7 +440,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
           </dl>
           <p className="muted small">{dict.common.truth.noPrices}</p>
           <PurchaseChoice dict={dict} locale={locale} intent={purchaseIntent} onIntentChange={value => { setPurchaseIntent(value); setPurchaseErrors({}); }} programRequest={programRequest} onProgramChange={value => { setProgramRequest(value); setPurchaseErrors({}); }} errors={purchaseErrors} locked={leadState === 'submitting' || leadState === 'accepted'} />
-          {orderFlowEnabled ? <OrderFlow dict={dict} locale={locale} config={payload} purchaseIntent={purchaseIntent} programRequest={submittedProgramRequest} beforeSubmit={beforeSubmit} onServerErrors={onServerErrors} onAccepted={() => setAccepted(true)} onStateChange={handleLeadState} locked={leadState === 'submitting' || leadState === 'accepted'} /> : <LeadForm
+          {orderFlowEnabled && !payload.catalogueVersion ? <OrderFlow dict={dict} locale={locale} config={payload} purchaseIntent={purchaseIntent} programRequest={submittedProgramRequest} beforeSubmit={beforeSubmit} onServerErrors={onServerErrors} onAccepted={() => setAccepted(true)} onStateChange={handleLeadState} locked={leadState === 'submitting' || leadState === 'accepted'} /> : <LeadForm
             dict={dict}
             locale={locale}
             purpose="config"

@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Bulgarian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const bg = {
   meta: {
@@ -1179,4 +1180,4 @@ const bg = {
   notFound: { title: "Страницата не е намерена", p: "Страницата, която поискахте, не съществува на този език.", cta: "Към началната страница" },
 };
 
-export default bg;
+export default applyCatalogueUpdate("bg", bg);

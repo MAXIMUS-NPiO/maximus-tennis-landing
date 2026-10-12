@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Galician dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const gl = {
   meta: {
@@ -1179,4 +1180,4 @@ const gl = {
   notFound: { title: "Páxina non atopada", p: "A páxina que solicitou non existe nesta lingua.", cta: "Ir á páxina de inicio" },
 };
 
-export default gl;
+export default applyCatalogueUpdate("gl", gl);

@@ -2,7 +2,8 @@
 /**
  * MAXIMUS product data — single numerical source for all locales.
  *
- * PRODUCT DATA VERSION: 2026-09-21 / master brief v4.0 Annex A
+ * HISTORICAL BASE: 2026-09-21 / master brief v4.0 Annex A
+ * REQUEST CATALOGUE: 2026-10-12.C / owner expansion instruction
  *
  * Evidence-status vocabulary (internal; never rendered raw to visitors):
  *   FOUNDER_CONFIRMED   current Founder-confirmed specification
@@ -37,7 +38,7 @@ export const series = {
     matrixStatus: "FOUNDER_CONFIRMED",
     paramStatus: { weights: "confirmed", balance: "calculated", swingweight: "not_provided", stiffness: "not_provided" },
     measurementBasis: MEASUREMENT_BASIS,
-    /** 32 listed weight points. Balances are calculated/modelled values (mm from the butt). */
+    /** 33 listed weight points. Balances are calculated/modelled values (mm from the butt). */
     matrix: pts([
       [236, 343], [239, 342], [242, 342], [245, 341], [248, 341], [251, 340], [254, 340], [257, 339],
       [260, 339], [263, 338], [266, 338], [269, 337], [272, 337], [277, 336], [280, 336], [284, 335],
@@ -181,6 +182,16 @@ export const grips = [
   { id: "L7", inches: "4", fraction: "⅞" },
 ];
 
+/** Owner request, 12 October 2026. Request options, not stock or engineering approval. */
+export const standardLengths = Object.freeze([
+  { inches: 26.3, category: "short" }, { inches: 26.6, category: "short" },
+  { inches: 26.8, category: "short" }, { inches: 27, category: "standard" },
+  { inches: 27.3, category: "plus" }, { inches: 27.6, category: "plus" },
+  { inches: 27.9, category: "superlong" },
+].map(Object.freeze));
+export const trainerWeights = Object.freeze(Array.from({ length: 61 }, (_, i) => 200 + i * 5));
+const historicalSstBalances = { 270: 330, 285: 325, 300: 325, 400: 320 };
+
 /** Sweet Spot Trainer — separate training category with its own production standard. */
 export const sweetSpotTrainer = {
   id: "sst",
@@ -188,13 +199,8 @@ export const sweetSpotTrainer = {
   lengthIn: 27,
   stringPattern: "12 × 14",
   grips: "L0–L7",
-  /** Four-racquet system: weight (g) — balance (mm). Supplied values; measurement basis NOT PROVIDED. */
-  system: [
-    { weight: 270, balance: 330 },
-    { weight: 285, balance: 325 },
-    { weight: 300, balance: 325 },
-    { weight: 400, balance: 320 },
-  ],
+  /** Preserve the four supplied balances; never interpolate the 57 new unknowns. */
+  system: trainerWeights.map((weight) => ({ weight, balance: historicalSstBalances[weight] ?? null })),
   precisionClassesApply: false,
   productionTolerances: "NOT_PROVIDED",
   measurementBasis: MEASUREMENT_BASIS,
@@ -205,7 +211,8 @@ export const sweetSpotTrainer = {
 export const spotTrainer = {
   id: "spot",
   targetDimensions: "NOT_PROVIDED",
-  weights: [270, 285, 300, 400],
+  weights: trainerWeights,
+  lengthIn: null,
   balances: "NOT_PROVIDED",
   stringPattern: "NOT_PROVIDED",
   grips: "L0–L7",
@@ -241,7 +248,26 @@ export const seriesParameters = Object.fromEntries(
   ["great", "power", "spin"].map((id) => [id, Object.fromEntries(PARAMETER_KEYS.map((k) => [k, { value: null, status: "NOT_PROVIDED" }]))])
 );
 
-export const productDataVersion = "2026-09-21.B";
+export const productDataVersion = "2026-10-12.C";
+
+/** Existing names are authoritative: G maps to GREAT, not an unverified GRADE rename. */
+export const seriesCodes = Object.freeze({ S: "spin", P: "power", G: "great" });
+export const catalogueCounts = Object.freeze({
+  baseModels: seriesList.reduce((n, s) => n + s.matrix.length, 0),
+  lengthsPerModel: standardLengths.length,
+  playingVariants: seriesList.reduce((n, s) => n + s.matrix.length * standardLengths.length, 0),
+  addedPlayingVariants: seriesList.reduce((n, s) => n + s.matrix.length * (standardLengths.length - 1), 0),
+  trainerVariants: trainerWeights.length * 2,
+});
+
+/** Configurator choices; trainers retain their independent identity and no P-class. */
+export const configurationProducts = {
+  ...series,
+  sst: { ...sweetSpotTrainer, name: "Sweet Spot Trainer", short: "Sweet Spot Trainer", matrix: sweetSpotTrainer.system, balanceStatus: "FOUNDER_CONFIRMED" },
+  spot: { ...spotTrainer, name: "Spot Trainer", short: "Spot Trainer", matrix: spotTrainer.weights.map((weight) => ({ weight, balance: null })) },
+};
+export const isTrainer = (id) => id === "sst" || id === "spot";
+export const isStandardLength = (value) => standardLengths.some((x) => x.inches === value);
 
 export function getSeries(id) {
   return series[id] || null;
@@ -252,9 +278,20 @@ export function listedWeights(id) {
   return s ? s.matrix.map((p) => p.weight) : [];
 }
 
-export function balanceFor(id, weight) {
-  const s = getSeries(id);
+export function balanceFor(id, weight, lengthIn) {
+  // Historical balances are weight-only evidence. No per-length measurement was supplied.
+  if (lengthIn !== undefined && lengthIn !== null) return null;
+  const s = configurationProducts[id];
   if (!s) return null;
   const p = s.matrix.find((x) => x.weight === Number(weight));
   return p ? p.balance : null;
+}
+
+/** Stable request identity only; never a factory SKU or stock assertion. */
+export function configurationKey({ series: id, weight, lengthIn, lengthMode }) {
+  const product = configurationProducts[id];
+  if (!product?.matrix.some((p) => p.weight === weight)) return null;
+  if (isTrainer(id)) return `${id}-${weight}`;
+  if (lengthMode === "custom" || !isStandardLength(lengthIn)) return null;
+  return `${id}-${weight}-L${lengthIn}`;
 }

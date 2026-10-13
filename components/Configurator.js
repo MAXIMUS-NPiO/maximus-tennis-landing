@@ -213,7 +213,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
     </div>
   );
 
-  const balance = s && c.mode === "listed" && c.weight ? balanceFor(s.id, c.weight, trainer ? undefined : (c.lengthMode === "custom" ? "custom" : c.lengthIn)) : null;
+  const balance = s && c.mode === "listed" && c.weight ? balanceFor(s.id, c.weight, c.lengthMode === "custom" ? "custom" : (c.lengthIn ?? "unselected")) : null;
   // A series whose balance table the Founder confirmed (SPIN) is labelled confirmed, not calculated.
   const balanceConfirmed = !!s && s.balanceStatus === "FOUNDER_CONFIRMED";
   const balanceWord = balanceConfirmed ? ST.confirmed : ST.modelled;
@@ -223,7 +223,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
   const summary = [
     [L.series, s ? `${s.name}${s.headSizeSqIn ? ` · ${s.headSizeSqIn} ${L.sqin}` : ""}${s.direction ? ` · ${dict.racquets.direction[s.direction]}` : ""}` : "—", 0],
     !trainer && [L.precisionClass, cls ? `${B.classes[cls.id]} — ${clsText(cls)}` : "—", 1],
-    !trainer ? [c.lengthMode === "custom" ? C.custom : C.length, `${c.lengthMode === "custom" ? (c.customLengthIn || "—") : (c.lengthIn || "—")} ${L.inches} — ${B.status.technicalReview}`, 2] : [C.length, s.lengthIn ? `${s.lengthIn} ${L.inches}` : B.status.notPublished, null],
+    [c.lengthMode === "custom" ? C.custom : C.length, `${c.lengthMode === "custom" ? (c.customLengthIn || "—") : (c.lengthIn || "—")} ${L.inches} — ${B.status.technicalReview}`, 2],
     c.mode === "listed"
       ? [L.weight, c.weight ? `${c.weight} ${L.grams} — ${s && s.matrixStatus === "REQUESTED_ARCHITECTURE" ? B.status.requestedArchitecture : B.status.listed}` : "—", 2]
       : [B.q.customWeight, c.customWeight ? `${c.customWeight} ${L.grams} — ${B.status.technicalReview}` : "—", 2],
@@ -295,10 +295,10 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
           {c.mode === "listed" ? (
             <div className="field">
               <label htmlFor="c-weight">{B.q.listed} — {s.short}</label>
-              {!trainer && <span className="hint" id="c-weight-hint">{C.balanceNote}</span>}
+              <span className="hint" id="c-weight-hint">{C.balanceNote}</span>
               <select id="c-weight" value={c.weight || ""} onChange={(e) => set("weight", e.target.value ? Number(e.target.value) : undefined)} {...inv("weight")} aria-describedby={[balanceConfirmed ? null : "c-weight-hint", errors.weight ? "c-weight-err" : null].filter(Boolean).join(" ") || undefined}>
                 <option value="">{L.select}</option>
-                {s.matrix.map((p) => <option key={p.weight} value={p.weight}>{p.weight} {L.grams}{trainer && p.balance !== null ? ` · ${p.balance} ${L.mm}` : ""}</option>)}
+                {s.matrix.map((p) => <option key={p.weight} value={p.weight}>{p.weight} {L.grams}</option>)}
               </select>
               {fieldErr("weight")}
               {c.weight && balance !== null && <span className="hint">{balanceConfirmed ? L.balance : B.q.balanceShown}: <strong className="mono">{balance} {L.mm}</strong> — {balanceWord}</span>}
@@ -311,7 +311,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
               {fieldErr("customWeight")}
             </div>
           )}
-          {!trainer && <fieldset className="stack">
+          <fieldset className="stack">
             <legend>{C.length} · {L.inches}</legend>
             <Radio name="lengthMode" value={c.lengthMode} onChange={(v) => set("lengthMode", v)} options={[["standard", C.standard], ["custom", C.custom]]} />
             {fieldErr("lengthMode")}
@@ -328,7 +328,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
               {fieldErr("lengthIn")}
             </div>}
             <p className="note">{C.note}</p>
-          </fieldset>}
+          </fieldset>
         </div>
       )}
 

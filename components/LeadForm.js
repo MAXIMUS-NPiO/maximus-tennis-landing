@@ -2,11 +2,13 @@
 "use client";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { fieldsFor, validateRequest, GRIP_IDS } from "../lib/intake/schema";
-import { seriesList } from "../data/products";
+import { seriesList, configurationKey } from "../data/products";
 import { site } from "../data/site";
 import { href } from "../lib/paths";
 import { track } from "../lib/analytics";
 import { useLeadSubmit } from "./useLeadSubmit";
+import { budgetRequestCopy } from "../content/budget-request-copy";
+import { BUDGET_CURRENCIES } from "../lib/intake/budget-request";
 import { tennisCheckoutLabels } from "../content/tennis-checkout";
 
 /**
@@ -67,9 +69,12 @@ export default function LeadForm({
   const F = dict.form;
   const L = dict.common.labels;
   const LD = dict.lead;
+  const BC = budgetRequestCopy(locale);
+  const [budget, setBudget] = useState({ amount: "", currency: "", deliveryWishes: "", personalizationWishes: "" });
   const uid = useId().replace(/[^a-zA-Z0-9_-]/g, "");
   const choices = fixedPurpose ? [fixedPurpose] : purposes || [];
   const [purpose, setPurpose] = useState(fixedPurpose || (choices.includes(initialPurpose) ? initialPurpose : choices[0] || "general"));
+  const budgetRequest = purpose === "config" && Object.values(budget).some(x => x.trim()) ? budget : undefined;
   const [v, setV] = useState(() => ({ ...(prefill || {}) }));
   const [consent, setConsent] = useState(false);
   const [hp, setHp] = useState("");
@@ -92,7 +97,7 @@ export default function LeadForm({
 
   const { common, extra } = fieldsFor(purpose);
   const extraEntries = Object.entries(extra).filter(([, spec]) => optionalExtras || spec.required);
-  const order = [...extraEntries.map(([k]) => k), "name", "email", "role", "country", "organisation", ...(hideMessage ? [] : ["message"]), "consent"];
+  const order = [...extraEntries.map(([k]) => k), "name", "email", "role", "country", "organisation", ...(purpose === "config" ? ["budgetRequest", ...Object.keys(budget).map(k => `budgetRequest.${k}`)] : []), ...(hideMessage ? [] : ["message"]), "consent"];
   const id = (k) => `${uid}-${k}`;
 
   const markStarted = () => {
@@ -159,7 +164,7 @@ export default function LeadForm({
     if (state === "submitting") return;
     markStarted();
     const parent = beforeSubmit ? beforeSubmit() : { ok: true };
-    const payload = { purpose, locale, fields: fieldsPayload(), config, profile, consent, ...(purchaseIntent ? { purchaseIntent, ...(programRequest ? { programRequest } : {}) } : {}) };
+    const payload = { purpose, locale, fields: fieldsPayload(), config, profile, consent, ...(budgetRequest ? { budgetRequest } : {}), ...(purchaseIntent ? { purchaseIntent, ...(programRequest ? { programRequest } : {}) } : {}) };
     const r = validateRequest(payload);
     const own = {};
     for (const [k, code] of Object.entries(r.errors)) if (order.includes(k)) own[k] = code;
@@ -172,7 +177,7 @@ export default function LeadForm({
       if (onServerErrors) onServerErrors(r.errors);
       return;
     }
-    await submit({ fields: payload.fields, config, profile, consent, hp });
+    await submit({ fields: payload.fields, config, profile, consent, hp, budgetRequest });
   };
 
   if (state === "accepted" && result) {
@@ -185,14 +190,14 @@ export default function LeadForm({
         <p>{LD.acceptedNext}</p>
         <p className="muted small">{dict.common.truth.requestNotOrder}</p>
         <div className="btn-row">
-          <button type="button" className="btn-outline" onClick={() => { reset(); setV({ ...(prefill || {}) }); setConsent(false); setErrors({}); started.current = false; }}>{LD.another}</button>
+          <button type="button" className="btn-outline" onClick={() => { reset(); setV({ ...(prefill || {}) }); setBudget({ amount: "", currency: "", deliveryWishes: "", personalizationWishes: "" }); setConsent(false); setErrors({}); started.current = false; }}>{LD.another}</button>
         </div>
       </div>
     );
   }
 
   const describedBy = (k, hint) => [hint ? `${id(k)}-hint` : null, errors[k] ? `${id(k)}-err` : null].filter(Boolean).join(" ") || undefined;
-  const labelFor = (k) => (k === "consent" ? LD.consentShort : F.fields[k] || k);
+  const labelFor = (k) => k === "budgetRequest" ? BC.title : k.startsWith("budgetRequest.") ? BC[k.split(".")[1]] : (k === "consent" ? LD.consentShort : F.fields[k] || k);
   const err = (k) => (errors[k] ? <span className="err" id={`${id(k)}-err`}>{errorText(dict, errors[k])}</span> : null);
 
   const renderField = (k, spec) => {
@@ -295,7 +300,9 @@ export default function LeadForm({
       if (programRequest?.principal && programRequest?.currency) purchaseLines.push(`${choice.programPrincipal}: ${programRequest.principal.trim()} ${programRequest.currency}`);
     }
     // Keep the complete requested amount outside the legacy contact/config truncation.
-    const body = [...purchaseLines, lines.join("\n").slice(0, 1800)].join("\n");
+    const quoteConfiguration = config ? Object.fromEntries(["series", "mode", "weight", "customWeight", "lengthMode", "lengthIn", "customLengthIn", "grip"].filter(k => config[k] != null).map(k => [k, config[k]])) : {};
+    const budgetLines = budgetRequest ? [BC.title, `${LD.mailConfig}: ${flatList({ ...quoteConfiguration, configurationKey: config ? configurationKey(config) : null }).join("; ")}`, ...Object.entries(budgetRequest).filter(([, x]) => x.trim()).map(([k, x]) => `${BC[k]}: ${x}`), BC.note] : [];
+    const body = [...purchaseLines, ...budgetLines, lines.join("\n").slice(0, 1800)].join("\n");
     return `mailto:${site.email}?subject=${encodeURIComponent(`[MAXIMUS] ${purposeText}`)}&body=${encodeURIComponent(body)}`;
   };
 
@@ -344,6 +351,26 @@ export default function LeadForm({
         {renderField("country", common.country)}
         {renderField("organisation", common.organisation)}
       </div>
+      {purpose === "config" && (
+        <fieldset className="field" data-budget-request="" disabled={state === "submitting"}>
+          <legend id={id("budgetRequest")}>{BC.title} <span className="opt">({L.optional})</span></legend>
+          <p className="small muted" id={id("budget-note")}>{BC.note}</p>
+          <div className="grid-2 form-grid">
+            {Object.keys(budget).map(key => {
+              const field = `budgetRequest.${key}`;
+              const props = { id: id(field), name: field, value: budget[key], "aria-invalid": errors[field] ? "true" : undefined, "aria-describedby": `${id("budget-note")}${errors[field] ? ` ${id(field)}-err` : ""}`, onChange: e => { markStarted(); setBudget(current => ({ ...current, [key]: e.target.value })); setErrors(current => { const next = { ...current }; delete next[field]; delete next.budgetRequest; return next; }); } };
+              return <div className="field" key={key}>
+                <label htmlFor={id(field)}>{BC[key]} <span className="opt">({L.optional})</span></label>
+                {key === "currency" ? <select {...props}><option value="">{L.select}</option>{BUDGET_CURRENCIES.map(currency => <option key={currency} value={currency}>{currency}</option>)}</select>
+                  : key === "amount" ? <input {...props} type="text" inputMode="decimal" maxLength={21} autoComplete="off" />
+                    : <textarea {...props} maxLength={2000} />}
+                {err(field)}
+              </div>;
+            })}
+          </div>
+          {err("budgetRequest")}
+        </fieldset>
+      )}
       {!hideMessage && renderField("message", common.message)}
       <div className="hp-field" aria-hidden="true">
         <label htmlFor={id("hp")}>{LD.hpLabel}</label>

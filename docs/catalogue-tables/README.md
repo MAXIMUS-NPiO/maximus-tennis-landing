@@ -1,22 +1,25 @@
-# MAXIMUS catalogue expansion — source handoff
+# MAXIMUS request catalogue and National Package — preview source handoff
 
 © 2026 Maximus Kiriyakulov. All rights reserved. No licence is granted.
 
-Prepared for the existing maximus.tennis repository. This is a request catalogue, not stock, a price list, manufacturing approval or competition certification. The initial 12 October delivery was an unpublished patch. The owner subsequently authorized production publication on 13 October; release verification and deployment status are recorded in PR #5 and the release handoff.
+This is a preview specification for the existing maximus.tennis site. Production remains at `0fd7bcf7d072a3aef0e9ac1b385313c0077565b1` (published 815-variant catalogue, PR #5). The owner’s subsequent 13 October 2026 instruction adds seven lengths to both trainer families, the per-country National Package and an optional budget request. It does not authorize production publication of this continuation.
 
-## Confirmed model
+## Confirmed request matrix
 
-| Family | Existing name | Original weight points | Standard lengths | Request variants |
-| --- | --- | ---: | ---: | ---: |
-| G | GREAT | 33 | 7 | 231 |
-| P | POWER | 33 | 7 | 231 |
-| S | SPIN | 33 | 7 | 231 |
-| SST | Sweet Spot Trainer | 61 (200–500 g, step 5 g) | Existing 27 in only | 61 |
-| Spot | Spot Trainer | 61 (200–500 g, step 5 g) | Unknown; no length multiplication | 61 |
+| Family | Weight points | Requested lengths | Variants before grips | L0–L7 combinations | Two per combination, per country |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| G — GREAT | 33 | 7 | 231 | 1,848 | 3,696 |
+| P — POWER | 33 | 7 | 231 | 1,848 | 3,696 |
+| S — SPIN | 33 | 7 | 231 | 1,848 | 3,696 |
+| Sweet Spot Trainer | 61 | 7 | 427 | 3,416 | 6,832 |
+| Spot Trainer | 61 | 7 | 427 | 3,416 | 6,832 |
+| Total | 221 | 7 | **1,547** | **12,376** | **24,752** |
 
-Playing range: 99 × 7 = **693**, an increase of **594** over the 99 base weight points. Trainer range: **122**. Combined request matrix: **815**. Grip sizes and P classes do not enter these counts. Custom lengths are individual requests outside the finite matrix.
+Both trainer ranges are **200–500 g inclusive, step 5 g**. Playing models remain the original 99 weights, expanded to 693 lengths/weights (+594). Trainers now total 854 weights/lengths. Eight factory grips are L0–L7: nominal 4, 4⅛, 4¼, 4⅜, 4½, 4⅝, 4¾ and 4⅞ inches. Nominal labels do not establish raw-handle dimensions or measured circumference.
 
-| Requested length, in | Length, mm | Group |
+National Package is a proposed reference/fitting collection for one country. No number of countries is assumed. It includes uncommon large factory grips without medical claims. Precision classes do not multiply the package. Individual custom lengths remain outside its finite matrix.
+
+| Length, in | Length, mm | Category |
 | ---: | ---: | --- |
 | 26.3 | 668.02 | Short |
 | 26.6 | 675.64 | Short |
@@ -26,42 +29,47 @@ Playing range: 99 × 7 = **693**, an increase of **594** over the 99 base weight
 | 27.6 | 701.04 | Plus |
 | 27.9 | 708.66 | Superlong |
 
-S/P/G resolve against the existing repository to SPIN/POWER/GREAT. “Grade Series Plus” has no verified separate series definition and does not rename or remove GREAT. Plus is a length category. All original 99 weight/balance pairs and head sizes (GREAT 97, POWER 98, SPIN 100 in²) remain unchanged.
+S/P/G resolve to SPIN/POWER/GREAT from the existing source. Spoken “Grade” does not authorize renaming or removing GREAT. All 99 original weight/balance pairs and heads (GREAT 97, POWER 98, SPIN 100 in²) are retained.
 
-## Source authority and unknowns
+## Evidence and unknown values
 
-- Owner expansion instruction/delegation, 12 October 2026: both trainer families have 200–500 g inclusive, step 5 g. The supplied RU TZ describes the Spot step as a working assumption; the explicit implementation delegation supplies the requested step.
-- Existing product source at `9ec225b22415e813d38eb047094e6bb0a48d6938`: original weight/balance tables, trainer geometry and approved brand/image assets.
-- MAXIMUS Catalogue Expansion TZ RU, revision 1.0, 12 October 2026: Library `libfile_daff29c482208191b66ac8a18bd31bfe` (PDF), `libfile_dc397ce41e848191a66a6e9620476a95` (DOCX).
-- Companion EN catalogue: Library `libfile_c7cef428f8a48191949e7c444eb26947`. It is a separate author's deliverable; this patch does not claim a new PDF review or modify it.
+Baseline: published commit `0fd7bcf7d072a3aef0e9ac1b385313c0077565b1`; owner’s trainer-length/National Package instructions dated 13 October 2026; `data/products.js` supplies all weights, lengths, grips and retained historical measurements. Original October 12 catalogue/TZ files remain historical sources and must not be mislabelled as this updated matrix.
 
-JSON `null` and empty CSV cells mean NOT_PROVIDED, never zero. Original balance pairs are retained in the historical base table. No balance is inferred for a newly selected length, including an explicit 27-inch request. The old source does not provide an individual length-specific measurement certificate. GREAT/POWER historical balances remain MODELLED, SPIN remains FOUNDER_CONFIRMED.
+`null` in JSON and empty CSV cells mean NOT_PROVIDED, never zero. Historical balances remain separate from request variants. A newly selected length, including explicit 27 inches, inherits no balance, swingweight, stiffness, price, stock, lead time or factory SKU.
 
-SST keeps its original 50 in² head, 27 in length, 12 × 14 string pattern, grip options and branding. Only four supplied historical balances remain: 270 g / 330 mm; 285 g / 325 mm; 300 g / 325 mm; 400 g / 320 mm. The other 57 balances are unknown. Spot retains the original small round contact target and images; unverified target dimensions, head area, length, balance and string pattern stay unknown. Neither trainer inherits racquet P classes.
+SST keeps the original 50 in² head, 12 × 14 string pattern and branding. Its historical baseline length is 27 inches, with only four supplied balances: 270 g / 330 mm, 285 g / 325 mm, 300 g / 325 mm and 400 g / 320 mm. Those are not measurements of the new length matrix. Spot retains its real small round target and approved photos; head area, target dimensions, string pattern and historical length remain unknown. Neither trainer receives a P class.
 
-Prices, stock, lead times, stiffness, swingweight and factory SKUs have not been invented for the expanded matrix. `configuration_id` is a deterministic request identifier, not a factory SKU. Existing unrelated commerce records are not a source of new prices or availability.
+Seven standard lengths are selectable requests. Custom-made length accepts decimal point/comma and requires technical feasibility review; neither input acceptance nor this collection establishes competition eligibility, manufacturing capacity, stock or delivery.
 
-## Files and reproduction
+## Permanent reference library and Pro Shop concept
 
-- `base-models-99.csv`: exact original weights and historical balances.
-- `playing-variants-693.csv`: seven request lengths per original weight, millimetre conversions and explicit unknown values.
-- `trainer-variants-122.csv`: both 61-weight trainer families.
-- `catalogue-snapshot.json`: same rows, counts, provenance and caveats in machine-readable form.
+The owner intends a permanent reference and fitting library, kept separate from sales stock, supporting repeat requests and custom designs or subbrands on stable matte-black base configurations. This describes the collection purpose; it does not establish present stock or approved repeat-order availability.
 
-Regenerate from the repository root:
+An illustrative personal package may contain six playing racquets, four or five Spot Trainers and four or five Sweet Spot Trainers, all at the selected length. These counts are not universal requirements. Custom batches of 100–200 are examples, not a universal minimum; `universalBatchMinimum` remains null.
 
-```sh
-node --no-warnings scripts/export-catalogue.mjs
-```
+MAXIMUS Pro Shop is an architectural concept inside a tennis concept club: automated tray storage, selection, retrieval and returns. No engineered mechanism, operating envelope, safety certification or certified capacity is supplied or claimed. These concept details do not multiply the finite National Package matrix.
 
-CSV uses UTF-8 with BOM. No user/contact data are included.
+## Files and stable identity
 
-## Implementation boundaries
+- `base-models-99.csv`: original weight/balance source table.
+- `trainer-weight-history-122.csv`: trainer weight points and historical evidence only.
+- `playing-variants-693.csv`, `trainer-variants-854.csv`, `all-request-variants-1547.csv`: requested weight/length variants before grip selection.
+- `national-package-lines-12376.csv`: full family × weight × length × grip identifiers, quantity two per country.
+- `catalogue-snapshot.json`: source metadata, counts and all variant tables.
+- `national-package-specification.json`: collection model and all 12,376 lines.
 
-All 48 existing locales expose the same seven lengths and 61-weight trainer choices. The seven lengths are selectable request options. Custom length is entered explicitly in inches (decimal point or comma, up to three decimal places), preserved through JSON, drafts and review. Its input format limit is not a claim of manufacturability. Technical feasibility and competition eligibility require separate checks.
+`catalogue_variant_id` identifies a weight/length variant, e.g. `spot-500-L27.9`. `configuration_id` includes factory grip, e.g. `spot-500-L27.9-L7`. The API derives `configurationKey` from validated dimensions; client-supplied keys are never authoritative. These keys are request identities, not factory SKUs. Class, quantity and wishes remain separate fields. Custom configurations have no finite-matrix key and retain their requested dimensions in the configuration record.
 
-Version 2 playing requests require a length choice; legacy records with no length are not silently assigned 27 inches. Product changes clear incompatible weight/class/length choices. Contact details and engraving are not added to local draft storage. New lengths use request intake, with the historical financial acceptance path blocked for this expanded payload.
+Regenerate with `node --no-warnings scripts/export-catalogue.mjs`. CSV uses UTF-8 BOM. No contact/customer records are exported.
 
-Manufacturing review retains the requested length. Approval must confirm the exact known requested length; any supplied Spot protocol length is parsed as a positive numeric value even when the original target is unknown. This does not substitute for physical engineering or measurement.
+## Preview behavior and boundaries
 
-Original photo and logo binaries are unchanged. The catalogue release is based on current main `6c35541f1e3729574b517c3c5994a485979e814a` and preserves work already released there, including the owner email-copy release, checkout/control functionality and CNY Family Plan change. It does not merge payments PR #2 or add the separate local contribution `16cdb4d`. New catalogue configurations remain request-only. No client messages or paid provider fallback are part of catalogue verification. PR #5 tracks the owner-authorized publication; a ready preview alone is not proof of production release.
+All 48 languages expose trainer weights and seven lengths, National Package and the optional budget prompt. Version 3 requests require an explicit length; drafts preserve version 3. Legacy trainer records remain readable (historical SST 27 inches; Spot length unknown) and cannot pass manufacturing review without an explicit requested length. Manufacturing approval must match the exact requested length.
+
+The optional budget collects decimal amount, USD/EUR/AED currency and separate delivery/personalisation wishes. It records only `quote_requested`, bound to the selected configuration. Blank budget stays absent. It never approves a price, creates a payment or promises acceptance of an amount. Personal wishes and contact details are not placed in browser draft storage. Expanded catalogue configurations and budget requests are blocked from historical financial acceptance.
+
+Original product/logo binaries and existing financial terms remain unchanged. No payments PR #2, mail PR #3 or separate local contribution `16cdb4d` is merged by this patch. Existing changes already present in baseline main are preserved. Claude independent review is not claimed under the owner cost lock; local tests and independent Codex review are recorded separately.
+
+## Rollback baseline
+
+Local tag `safety/catalogue-815-20261013` points to published `0fd7bcf`. The separate task deliverable `national-package-rollback/source-0fd7bcf.tar.gz` contains its complete source archive, with checksum and restore instructions in `rollback.json`. Restore into a separate checkout; do not reset shared work or production. This preview does not change the published deployment.

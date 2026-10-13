@@ -1,6 +1,7 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
-/** Catalogue extension, owner instruction 12 October 2026. All 48 existing languages. */
-import { trainerWeights, sweetSpotTrainer } from "../data/products.js";
+/** Catalogue extension, owner instructions 12–13 October 2026. All 48 existing languages. */
+import { trainerWeights, sweetSpotTrainer, standardLengths } from "../data/products.js";
+import { nationalPackageCopy } from "./national-package-copy.js";
 const copy = {
   "en": {
     "standard": "Standard lengths",
@@ -343,6 +344,8 @@ export function applyCatalogueUpdate(locale, d) {
   const c = copy[locale];
   if (!c) throw new Error(`Missing catalogue translation: ${locale}`);
   const L = d.common.labels;
+  const national = nationalPackageCopy(locale);
+  d.nationalPackage = national;
   d.catalogue = { ...c, length: d.sst.columns.length, plus: "Plus", superlong: "Superlong" };
   d.build.fieldNames.lengthMode = c.standard;
   d.build.fieldNames.lengthIn = `${d.sst.columns.length} (${L.inches})`;
@@ -351,14 +354,17 @@ export function applyCatalogueUpdate(locale, d) {
   d.build.fieldNames.catalogueVersion = d.gps.dataVersion;
   // Keep numerical truth in data/products.js; wording reuses this locale's approved terminology.
   const weights = `${trainerWeights[0]}–${trainerWeights.at(-1)} ${L.grams} · ${trainerWeights[1] - trainerWeights[0]} ${L.grams} · ${trainerWeights.length} ${L.points}`;
-  d.sst.lead = `${d.sst.purpose.join(" · ")}. ${weights}.`;
+  const lengths = `${d.sst.columns.length}: ${standardLengths.map((x) => x.inches).join(" · ")} ${L.inches}`;
+  d.sst.lead = `${d.sst.purpose.join(" · ")}. ${weights}. ${lengths}.`;
   d.sst.systemTitle = `${L.weight} · ${trainerWeights.length} ${L.points}`;
-  d.spot.lead = `${d.spot.purposeP} ${weights}.`;
+  d.sst.baseline = national.historical;
+  d.sst.systemLead = `${national.historical}: ${sweetSpotTrainer.lengthIn} ${L.inches}. ${d.sst.systemLead} ${c.balanceNote}`;
+  d.spot.lead = `${d.spot.purposeP} ${weights}. ${lengths}.`;
   d.spot.weightsP = `${weights}. ${d.spot.dims}`;
-  d.training.sst.p = `${d.sst.purpose[0]}. ${sweetSpotTrainer.headSizeSqIn} ${L.sqin} · ${weights}.`;
-  d.training.spot.p = `${d.spot.purposeP} ${weights}.`;
+  d.training.sst.p = `${d.sst.purpose[0]}. ${sweetSpotTrainer.headSizeSqIn} ${L.sqin} · ${weights}. ${lengths}.`;
+  d.training.spot.p = `${d.spot.purposeP} ${weights}. ${lengths}.`;
   d.home.training.sstP = d.training.sst.p;
-  d.home.training.sstCaption = `300 ${L.grams} · ${trainerWeights.length} ${L.points}`;
+  d.home.training.sstCaption = `${national.historical} · 300 ${L.grams} · ${sweetSpotTrainer.lengthIn} ${L.inches}`;
   // Replace obsolete claims that length is unpublished, retaining the other unknown parameters.
   const missing = [d.precision.extended.stringPattern, d.precision.extended.beamProfile, L.swingweight, L.stiffness].join(" · ");
   d.seriesPage.notPublished = `${d.build.status.notPublished}: ${missing}. ${d.custom.lead}`;

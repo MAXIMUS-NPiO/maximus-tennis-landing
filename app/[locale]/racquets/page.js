@@ -1,6 +1,7 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Link from "next/link";
 import LengthOptions from "../../../components/LengthOptions";
+import NationalPackage from "../../../components/NationalPackage";
 import { ctx, meta } from "../../../lib/page";
 import { href } from "../../../lib/paths";
 import { seriesList, otherRacquetSports } from "../../../data/products";
@@ -42,6 +43,7 @@ export default async function Page({ params }) {
         </div>
         <div className="btn-row"><Cta locale={locale} to="choose" label={dict.nav.choose} track="racquets_choose" /><Cta locale={locale} to="build" label={R.ctaConfigure} kind="btn-outline" /><Cta locale={locale} to="precision" label={dict.nav.precision} kind="btn-outline" /><Cta locale={locale} to="grip" label={dict.nav.grip} kind="btn-outline" /></div>
       </Section>
+      <NationalPackage locale={locale} dict={dict} />
       <Section title={R.otherTitle} lead={R.otherLead}>
         <div className="facts">
           <Kickers items={otherRacquetSports.map((k) => R.other[k])} />

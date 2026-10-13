@@ -1,0 +1,1548 @@
+﻿family_id,catalogue_variant_id,base_variant_id,series_id,head_size_sq_in,weight_g,length_in,length_mm,length_class,balance_mm,swingweight,stiffness_ra,price,availability,lead_time,factory_sku,status,string_pattern,balance_status
+"great","great-236-L26.3","great-236","great","97","236","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-236-L26.6","great-236","great","97","236","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-236-L26.8","great-236","great","97","236","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-236-L27","great-236","great","97","236","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-236-L27.3","great-236","great","97","236","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-236-L27.6","great-236","great","97","236","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-236-L27.9","great-236","great","97","236","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-239-L26.3","great-239","great","97","239","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-239-L26.6","great-239","great","97","239","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-239-L26.8","great-239","great","97","239","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-239-L27","great-239","great","97","239","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-239-L27.3","great-239","great","97","239","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-239-L27.6","great-239","great","97","239","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-239-L27.9","great-239","great","97","239","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-242-L26.3","great-242","great","97","242","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-242-L26.6","great-242","great","97","242","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-242-L26.8","great-242","great","97","242","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-242-L27","great-242","great","97","242","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-242-L27.3","great-242","great","97","242","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-242-L27.6","great-242","great","97","242","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-242-L27.9","great-242","great","97","242","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-245-L26.3","great-245","great","97","245","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-245-L26.6","great-245","great","97","245","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-245-L26.8","great-245","great","97","245","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-245-L27","great-245","great","97","245","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-245-L27.3","great-245","great","97","245","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-245-L27.6","great-245","great","97","245","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-245-L27.9","great-245","great","97","245","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-248-L26.3","great-248","great","97","248","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-248-L26.6","great-248","great","97","248","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-248-L26.8","great-248","great","97","248","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-248-L27","great-248","great","97","248","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-248-L27.3","great-248","great","97","248","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-248-L27.6","great-248","great","97","248","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-248-L27.9","great-248","great","97","248","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-251-L26.3","great-251","great","97","251","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-251-L26.6","great-251","great","97","251","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-251-L26.8","great-251","great","97","251","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-251-L27","great-251","great","97","251","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-251-L27.3","great-251","great","97","251","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-251-L27.6","great-251","great","97","251","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-251-L27.9","great-251","great","97","251","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-254-L26.3","great-254","great","97","254","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-254-L26.6","great-254","great","97","254","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-254-L26.8","great-254","great","97","254","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-254-L27","great-254","great","97","254","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-254-L27.3","great-254","great","97","254","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-254-L27.6","great-254","great","97","254","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-254-L27.9","great-254","great","97","254","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-257-L26.3","great-257","great","97","257","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-257-L26.6","great-257","great","97","257","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-257-L26.8","great-257","great","97","257","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-257-L27","great-257","great","97","257","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-257-L27.3","great-257","great","97","257","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-257-L27.6","great-257","great","97","257","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-257-L27.9","great-257","great","97","257","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-260-L26.3","great-260","great","97","260","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-260-L26.6","great-260","great","97","260","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-260-L26.8","great-260","great","97","260","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-260-L27","great-260","great","97","260","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-260-L27.3","great-260","great","97","260","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-260-L27.6","great-260","great","97","260","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-260-L27.9","great-260","great","97","260","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-263-L26.3","great-263","great","97","263","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-263-L26.6","great-263","great","97","263","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-263-L26.8","great-263","great","97","263","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-263-L27","great-263","great","97","263","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-263-L27.3","great-263","great","97","263","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-263-L27.6","great-263","great","97","263","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-263-L27.9","great-263","great","97","263","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-266-L26.3","great-266","great","97","266","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-266-L26.6","great-266","great","97","266","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-266-L26.8","great-266","great","97","266","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-266-L27","great-266","great","97","266","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-266-L27.3","great-266","great","97","266","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-266-L27.6","great-266","great","97","266","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-266-L27.9","great-266","great","97","266","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-269-L26.3","great-269","great","97","269","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-269-L26.6","great-269","great","97","269","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-269-L26.8","great-269","great","97","269","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-269-L27","great-269","great","97","269","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-269-L27.3","great-269","great","97","269","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-269-L27.6","great-269","great","97","269","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-269-L27.9","great-269","great","97","269","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-272-L26.3","great-272","great","97","272","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-272-L26.6","great-272","great","97","272","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-272-L26.8","great-272","great","97","272","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-272-L27","great-272","great","97","272","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-272-L27.3","great-272","great","97","272","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-272-L27.6","great-272","great","97","272","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-272-L27.9","great-272","great","97","272","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-277-L26.3","great-277","great","97","277","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-277-L26.6","great-277","great","97","277","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-277-L26.8","great-277","great","97","277","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-277-L27","great-277","great","97","277","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-277-L27.3","great-277","great","97","277","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-277-L27.6","great-277","great","97","277","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-277-L27.9","great-277","great","97","277","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-280-L26.3","great-280","great","97","280","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-280-L26.6","great-280","great","97","280","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-280-L26.8","great-280","great","97","280","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-280-L27","great-280","great","97","280","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-280-L27.3","great-280","great","97","280","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-280-L27.6","great-280","great","97","280","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-280-L27.9","great-280","great","97","280","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-284-L26.3","great-284","great","97","284","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-284-L26.6","great-284","great","97","284","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-284-L26.8","great-284","great","97","284","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-284-L27","great-284","great","97","284","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-284-L27.3","great-284","great","97","284","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-284-L27.6","great-284","great","97","284","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-284-L27.9","great-284","great","97","284","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-288-L26.3","great-288","great","97","288","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-288-L26.6","great-288","great","97","288","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-288-L26.8","great-288","great","97","288","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-288-L27","great-288","great","97","288","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-288-L27.3","great-288","great","97","288","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-288-L27.6","great-288","great","97","288","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-288-L27.9","great-288","great","97","288","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-292-L26.3","great-292","great","97","292","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-292-L26.6","great-292","great","97","292","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-292-L26.8","great-292","great","97","292","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-292-L27","great-292","great","97","292","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-292-L27.3","great-292","great","97","292","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-292-L27.6","great-292","great","97","292","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-292-L27.9","great-292","great","97","292","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-295-L26.3","great-295","great","97","295","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-295-L26.6","great-295","great","97","295","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-295-L26.8","great-295","great","97","295","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-295-L27","great-295","great","97","295","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-295-L27.3","great-295","great","97","295","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-295-L27.6","great-295","great","97","295","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-295-L27.9","great-295","great","97","295","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-299-L26.3","great-299","great","97","299","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-299-L26.6","great-299","great","97","299","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-299-L26.8","great-299","great","97","299","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-299-L27","great-299","great","97","299","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-299-L27.3","great-299","great","97","299","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-299-L27.6","great-299","great","97","299","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-299-L27.9","great-299","great","97","299","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-303-L26.3","great-303","great","97","303","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-303-L26.6","great-303","great","97","303","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-303-L26.8","great-303","great","97","303","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-303-L27","great-303","great","97","303","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-303-L27.3","great-303","great","97","303","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-303-L27.6","great-303","great","97","303","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-303-L27.9","great-303","great","97","303","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-306-L26.3","great-306","great","97","306","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-306-L26.6","great-306","great","97","306","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-306-L26.8","great-306","great","97","306","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-306-L27","great-306","great","97","306","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-306-L27.3","great-306","great","97","306","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-306-L27.6","great-306","great","97","306","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-306-L27.9","great-306","great","97","306","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-309-L26.3","great-309","great","97","309","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-309-L26.6","great-309","great","97","309","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-309-L26.8","great-309","great","97","309","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-309-L27","great-309","great","97","309","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-309-L27.3","great-309","great","97","309","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-309-L27.6","great-309","great","97","309","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-309-L27.9","great-309","great","97","309","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-313-L26.3","great-313","great","97","313","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-313-L26.6","great-313","great","97","313","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-313-L26.8","great-313","great","97","313","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-313-L27","great-313","great","97","313","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-313-L27.3","great-313","great","97","313","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-313-L27.6","great-313","great","97","313","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-313-L27.9","great-313","great","97","313","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-319-L26.3","great-319","great","97","319","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-319-L26.6","great-319","great","97","319","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-319-L26.8","great-319","great","97","319","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-319-L27","great-319","great","97","319","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-319-L27.3","great-319","great","97","319","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-319-L27.6","great-319","great","97","319","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-319-L27.9","great-319","great","97","319","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-323-L26.3","great-323","great","97","323","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-323-L26.6","great-323","great","97","323","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-323-L26.8","great-323","great","97","323","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-323-L27","great-323","great","97","323","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-323-L27.3","great-323","great","97","323","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-323-L27.6","great-323","great","97","323","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-323-L27.9","great-323","great","97","323","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-329-L26.3","great-329","great","97","329","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-329-L26.6","great-329","great","97","329","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-329-L26.8","great-329","great","97","329","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-329-L27","great-329","great","97","329","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-329-L27.3","great-329","great","97","329","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-329-L27.6","great-329","great","97","329","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-329-L27.9","great-329","great","97","329","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-333-L26.3","great-333","great","97","333","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-333-L26.6","great-333","great","97","333","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-333-L26.8","great-333","great","97","333","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-333-L27","great-333","great","97","333","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-333-L27.3","great-333","great","97","333","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-333-L27.6","great-333","great","97","333","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-333-L27.9","great-333","great","97","333","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-339-L26.3","great-339","great","97","339","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-339-L26.6","great-339","great","97","339","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-339-L26.8","great-339","great","97","339","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-339-L27","great-339","great","97","339","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-339-L27.3","great-339","great","97","339","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-339-L27.6","great-339","great","97","339","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-339-L27.9","great-339","great","97","339","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-344-L26.3","great-344","great","97","344","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-344-L26.6","great-344","great","97","344","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-344-L26.8","great-344","great","97","344","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-344-L27","great-344","great","97","344","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-344-L27.3","great-344","great","97","344","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-344-L27.6","great-344","great","97","344","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-344-L27.9","great-344","great","97","344","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-355-L26.3","great-355","great","97","355","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-355-L26.6","great-355","great","97","355","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-355-L26.8","great-355","great","97","355","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-355-L27","great-355","great","97","355","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-355-L27.3","great-355","great","97","355","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-355-L27.6","great-355","great","97","355","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-355-L27.9","great-355","great","97","355","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-363-L26.3","great-363","great","97","363","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-363-L26.6","great-363","great","97","363","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-363-L26.8","great-363","great","97","363","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-363-L27","great-363","great","97","363","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-363-L27.3","great-363","great","97","363","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-363-L27.6","great-363","great","97","363","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-363-L27.9","great-363","great","97","363","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-369-L26.3","great-369","great","97","369","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-369-L26.6","great-369","great","97","369","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-369-L26.8","great-369","great","97","369","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-369-L27","great-369","great","97","369","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-369-L27.3","great-369","great","97","369","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-369-L27.6","great-369","great","97","369","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"great","great-369-L27.9","great-369","great","97","369","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-210-L26.3","power-210","power","98","210","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-210-L26.6","power-210","power","98","210","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-210-L26.8","power-210","power","98","210","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-210-L27","power-210","power","98","210","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-210-L27.3","power-210","power","98","210","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-210-L27.6","power-210","power","98","210","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-210-L27.9","power-210","power","98","210","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-215-L26.3","power-215","power","98","215","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-215-L26.6","power-215","power","98","215","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-215-L26.8","power-215","power","98","215","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-215-L27","power-215","power","98","215","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-215-L27.3","power-215","power","98","215","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-215-L27.6","power-215","power","98","215","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-215-L27.9","power-215","power","98","215","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-220-L26.3","power-220","power","98","220","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-220-L26.6","power-220","power","98","220","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-220-L26.8","power-220","power","98","220","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-220-L27","power-220","power","98","220","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-220-L27.3","power-220","power","98","220","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-220-L27.6","power-220","power","98","220","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-220-L27.9","power-220","power","98","220","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-225-L26.3","power-225","power","98","225","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-225-L26.6","power-225","power","98","225","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-225-L26.8","power-225","power","98","225","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-225-L27","power-225","power","98","225","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-225-L27.3","power-225","power","98","225","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-225-L27.6","power-225","power","98","225","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-225-L27.9","power-225","power","98","225","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-230-L26.3","power-230","power","98","230","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-230-L26.6","power-230","power","98","230","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-230-L26.8","power-230","power","98","230","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-230-L27","power-230","power","98","230","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-230-L27.3","power-230","power","98","230","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-230-L27.6","power-230","power","98","230","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-230-L27.9","power-230","power","98","230","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-235-L26.3","power-235","power","98","235","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-235-L26.6","power-235","power","98","235","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-235-L26.8","power-235","power","98","235","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-235-L27","power-235","power","98","235","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-235-L27.3","power-235","power","98","235","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-235-L27.6","power-235","power","98","235","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-235-L27.9","power-235","power","98","235","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-240-L26.3","power-240","power","98","240","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-240-L26.6","power-240","power","98","240","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-240-L26.8","power-240","power","98","240","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-240-L27","power-240","power","98","240","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-240-L27.3","power-240","power","98","240","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-240-L27.6","power-240","power","98","240","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-240-L27.9","power-240","power","98","240","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-245-L26.3","power-245","power","98","245","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-245-L26.6","power-245","power","98","245","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-245-L26.8","power-245","power","98","245","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-245-L27","power-245","power","98","245","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-245-L27.3","power-245","power","98","245","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-245-L27.6","power-245","power","98","245","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-245-L27.9","power-245","power","98","245","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-250-L26.3","power-250","power","98","250","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-250-L26.6","power-250","power","98","250","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-250-L26.8","power-250","power","98","250","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-250-L27","power-250","power","98","250","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-250-L27.3","power-250","power","98","250","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-250-L27.6","power-250","power","98","250","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-250-L27.9","power-250","power","98","250","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-260-L26.3","power-260","power","98","260","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-260-L26.6","power-260","power","98","260","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-260-L26.8","power-260","power","98","260","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-260-L27","power-260","power","98","260","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-260-L27.3","power-260","power","98","260","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-260-L27.6","power-260","power","98","260","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-260-L27.9","power-260","power","98","260","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-265-L26.3","power-265","power","98","265","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-265-L26.6","power-265","power","98","265","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-265-L26.8","power-265","power","98","265","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-265-L27","power-265","power","98","265","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-265-L27.3","power-265","power","98","265","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-265-L27.6","power-265","power","98","265","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-265-L27.9","power-265","power","98","265","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-270-L26.3","power-270","power","98","270","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-270-L26.6","power-270","power","98","270","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-270-L26.8","power-270","power","98","270","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-270-L27","power-270","power","98","270","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-270-L27.3","power-270","power","98","270","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-270-L27.6","power-270","power","98","270","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-270-L27.9","power-270","power","98","270","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-275-L26.3","power-275","power","98","275","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-275-L26.6","power-275","power","98","275","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-275-L26.8","power-275","power","98","275","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-275-L27","power-275","power","98","275","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-275-L27.3","power-275","power","98","275","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-275-L27.6","power-275","power","98","275","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-275-L27.9","power-275","power","98","275","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-280-L26.3","power-280","power","98","280","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-280-L26.6","power-280","power","98","280","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-280-L26.8","power-280","power","98","280","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-280-L27","power-280","power","98","280","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-280-L27.3","power-280","power","98","280","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-280-L27.6","power-280","power","98","280","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-280-L27.9","power-280","power","98","280","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-285-L26.3","power-285","power","98","285","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-285-L26.6","power-285","power","98","285","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-285-L26.8","power-285","power","98","285","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-285-L27","power-285","power","98","285","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-285-L27.3","power-285","power","98","285","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-285-L27.6","power-285","power","98","285","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-285-L27.9","power-285","power","98","285","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-290-L26.3","power-290","power","98","290","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-290-L26.6","power-290","power","98","290","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-290-L26.8","power-290","power","98","290","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-290-L27","power-290","power","98","290","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-290-L27.3","power-290","power","98","290","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-290-L27.6","power-290","power","98","290","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-290-L27.9","power-290","power","98","290","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-295-L26.3","power-295","power","98","295","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-295-L26.6","power-295","power","98","295","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-295-L26.8","power-295","power","98","295","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-295-L27","power-295","power","98","295","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-295-L27.3","power-295","power","98","295","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-295-L27.6","power-295","power","98","295","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-295-L27.9","power-295","power","98","295","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-300-L26.3","power-300","power","98","300","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-300-L26.6","power-300","power","98","300","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-300-L26.8","power-300","power","98","300","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-300-L27","power-300","power","98","300","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-300-L27.3","power-300","power","98","300","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-300-L27.6","power-300","power","98","300","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-300-L27.9","power-300","power","98","300","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-305-L26.3","power-305","power","98","305","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-305-L26.6","power-305","power","98","305","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-305-L26.8","power-305","power","98","305","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-305-L27","power-305","power","98","305","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-305-L27.3","power-305","power","98","305","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-305-L27.6","power-305","power","98","305","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-305-L27.9","power-305","power","98","305","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-310-L26.3","power-310","power","98","310","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-310-L26.6","power-310","power","98","310","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-310-L26.8","power-310","power","98","310","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-310-L27","power-310","power","98","310","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-310-L27.3","power-310","power","98","310","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-310-L27.6","power-310","power","98","310","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-310-L27.9","power-310","power","98","310","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-315-L26.3","power-315","power","98","315","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-315-L26.6","power-315","power","98","315","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-315-L26.8","power-315","power","98","315","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-315-L27","power-315","power","98","315","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-315-L27.3","power-315","power","98","315","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-315-L27.6","power-315","power","98","315","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-315-L27.9","power-315","power","98","315","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-320-L26.3","power-320","power","98","320","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-320-L26.6","power-320","power","98","320","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-320-L26.8","power-320","power","98","320","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-320-L27","power-320","power","98","320","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-320-L27.3","power-320","power","98","320","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-320-L27.6","power-320","power","98","320","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-320-L27.9","power-320","power","98","320","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-325-L26.3","power-325","power","98","325","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-325-L26.6","power-325","power","98","325","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-325-L26.8","power-325","power","98","325","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-325-L27","power-325","power","98","325","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-325-L27.3","power-325","power","98","325","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-325-L27.6","power-325","power","98","325","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-325-L27.9","power-325","power","98","325","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-330-L26.3","power-330","power","98","330","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-330-L26.6","power-330","power","98","330","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-330-L26.8","power-330","power","98","330","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-330-L27","power-330","power","98","330","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-330-L27.3","power-330","power","98","330","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-330-L27.6","power-330","power","98","330","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-330-L27.9","power-330","power","98","330","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-335-L26.3","power-335","power","98","335","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-335-L26.6","power-335","power","98","335","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-335-L26.8","power-335","power","98","335","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-335-L27","power-335","power","98","335","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-335-L27.3","power-335","power","98","335","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-335-L27.6","power-335","power","98","335","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-335-L27.9","power-335","power","98","335","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-340-L26.3","power-340","power","98","340","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-340-L26.6","power-340","power","98","340","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-340-L26.8","power-340","power","98","340","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-340-L27","power-340","power","98","340","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-340-L27.3","power-340","power","98","340","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-340-L27.6","power-340","power","98","340","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-340-L27.9","power-340","power","98","340","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-345-L26.3","power-345","power","98","345","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-345-L26.6","power-345","power","98","345","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-345-L26.8","power-345","power","98","345","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-345-L27","power-345","power","98","345","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-345-L27.3","power-345","power","98","345","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-345-L27.6","power-345","power","98","345","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-345-L27.9","power-345","power","98","345","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-350-L26.3","power-350","power","98","350","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-350-L26.6","power-350","power","98","350","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-350-L26.8","power-350","power","98","350","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-350-L27","power-350","power","98","350","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-350-L27.3","power-350","power","98","350","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-350-L27.6","power-350","power","98","350","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-350-L27.9","power-350","power","98","350","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-355-L26.3","power-355","power","98","355","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-355-L26.6","power-355","power","98","355","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-355-L26.8","power-355","power","98","355","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-355-L27","power-355","power","98","355","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-355-L27.3","power-355","power","98","355","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-355-L27.6","power-355","power","98","355","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-355-L27.9","power-355","power","98","355","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-360-L26.3","power-360","power","98","360","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-360-L26.6","power-360","power","98","360","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-360-L26.8","power-360","power","98","360","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-360-L27","power-360","power","98","360","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-360-L27.3","power-360","power","98","360","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-360-L27.6","power-360","power","98","360","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-360-L27.9","power-360","power","98","360","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-365-L26.3","power-365","power","98","365","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-365-L26.6","power-365","power","98","365","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-365-L26.8","power-365","power","98","365","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-365-L27","power-365","power","98","365","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-365-L27.3","power-365","power","98","365","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-365-L27.6","power-365","power","98","365","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-365-L27.9","power-365","power","98","365","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-370-L26.3","power-370","power","98","370","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-370-L26.6","power-370","power","98","370","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-370-L26.8","power-370","power","98","370","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-370-L27","power-370","power","98","370","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-370-L27.3","power-370","power","98","370","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-370-L27.6","power-370","power","98","370","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-370-L27.9","power-370","power","98","370","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-377-L26.3","power-377","power","98","377","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-377-L26.6","power-377","power","98","377","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-377-L26.8","power-377","power","98","377","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-377-L27","power-377","power","98","377","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-377-L27.3","power-377","power","98","377","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-377-L27.6","power-377","power","98","377","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"power","power-377-L27.9","power-377","power","98","377","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-222-L26.3","spin-222","spin","100","222","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-222-L26.6","spin-222","spin","100","222","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-222-L26.8","spin-222","spin","100","222","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-222-L27","spin-222","spin","100","222","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-222-L27.3","spin-222","spin","100","222","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-222-L27.6","spin-222","spin","100","222","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-222-L27.9","spin-222","spin","100","222","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-229-L26.3","spin-229","spin","100","229","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-229-L26.6","spin-229","spin","100","229","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-229-L26.8","spin-229","spin","100","229","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-229-L27","spin-229","spin","100","229","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-229-L27.3","spin-229","spin","100","229","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-229-L27.6","spin-229","spin","100","229","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-229-L27.9","spin-229","spin","100","229","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-233-L26.3","spin-233","spin","100","233","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-233-L26.6","spin-233","spin","100","233","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-233-L26.8","spin-233","spin","100","233","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-233-L27","spin-233","spin","100","233","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-233-L27.3","spin-233","spin","100","233","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-233-L27.6","spin-233","spin","100","233","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-233-L27.9","spin-233","spin","100","233","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-236-L26.3","spin-236","spin","100","236","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-236-L26.6","spin-236","spin","100","236","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-236-L26.8","spin-236","spin","100","236","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-236-L27","spin-236","spin","100","236","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-236-L27.3","spin-236","spin","100","236","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-236-L27.6","spin-236","spin","100","236","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-236-L27.9","spin-236","spin","100","236","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-239-L26.3","spin-239","spin","100","239","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-239-L26.6","spin-239","spin","100","239","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-239-L26.8","spin-239","spin","100","239","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-239-L27","spin-239","spin","100","239","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-239-L27.3","spin-239","spin","100","239","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-239-L27.6","spin-239","spin","100","239","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-239-L27.9","spin-239","spin","100","239","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-243-L26.3","spin-243","spin","100","243","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-243-L26.6","spin-243","spin","100","243","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-243-L26.8","spin-243","spin","100","243","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-243-L27","spin-243","spin","100","243","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-243-L27.3","spin-243","spin","100","243","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-243-L27.6","spin-243","spin","100","243","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-243-L27.9","spin-243","spin","100","243","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-247-L26.3","spin-247","spin","100","247","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-247-L26.6","spin-247","spin","100","247","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-247-L26.8","spin-247","spin","100","247","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-247-L27","spin-247","spin","100","247","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-247-L27.3","spin-247","spin","100","247","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-247-L27.6","spin-247","spin","100","247","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-247-L27.9","spin-247","spin","100","247","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-250-L26.3","spin-250","spin","100","250","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-250-L26.6","spin-250","spin","100","250","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-250-L26.8","spin-250","spin","100","250","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-250-L27","spin-250","spin","100","250","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-250-L27.3","spin-250","spin","100","250","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-250-L27.6","spin-250","spin","100","250","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-250-L27.9","spin-250","spin","100","250","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-253-L26.3","spin-253","spin","100","253","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-253-L26.6","spin-253","spin","100","253","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-253-L26.8","spin-253","spin","100","253","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-253-L27","spin-253","spin","100","253","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-253-L27.3","spin-253","spin","100","253","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-253-L27.6","spin-253","spin","100","253","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-253-L27.9","spin-253","spin","100","253","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-257-L26.3","spin-257","spin","100","257","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-257-L26.6","spin-257","spin","100","257","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-257-L26.8","spin-257","spin","100","257","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-257-L27","spin-257","spin","100","257","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-257-L27.3","spin-257","spin","100","257","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-257-L27.6","spin-257","spin","100","257","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-257-L27.9","spin-257","spin","100","257","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-260-L26.3","spin-260","spin","100","260","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-260-L26.6","spin-260","spin","100","260","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-260-L26.8","spin-260","spin","100","260","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-260-L27","spin-260","spin","100","260","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-260-L27.3","spin-260","spin","100","260","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-260-L27.6","spin-260","spin","100","260","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-260-L27.9","spin-260","spin","100","260","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-263-L26.3","spin-263","spin","100","263","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-263-L26.6","spin-263","spin","100","263","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-263-L26.8","spin-263","spin","100","263","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-263-L27","spin-263","spin","100","263","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-263-L27.3","spin-263","spin","100","263","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-263-L27.6","spin-263","spin","100","263","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-263-L27.9","spin-263","spin","100","263","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-267-L26.3","spin-267","spin","100","267","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-267-L26.6","spin-267","spin","100","267","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-267-L26.8","spin-267","spin","100","267","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-267-L27","spin-267","spin","100","267","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-267-L27.3","spin-267","spin","100","267","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-267-L27.6","spin-267","spin","100","267","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-267-L27.9","spin-267","spin","100","267","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-270-L26.3","spin-270","spin","100","270","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-270-L26.6","spin-270","spin","100","270","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-270-L26.8","spin-270","spin","100","270","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-270-L27","spin-270","spin","100","270","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-270-L27.3","spin-270","spin","100","270","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-270-L27.6","spin-270","spin","100","270","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-270-L27.9","spin-270","spin","100","270","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-273-L26.3","spin-273","spin","100","273","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-273-L26.6","spin-273","spin","100","273","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-273-L26.8","spin-273","spin","100","273","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-273-L27","spin-273","spin","100","273","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-273-L27.3","spin-273","spin","100","273","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-273-L27.6","spin-273","spin","100","273","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-273-L27.9","spin-273","spin","100","273","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-277-L26.3","spin-277","spin","100","277","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-277-L26.6","spin-277","spin","100","277","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-277-L26.8","spin-277","spin","100","277","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-277-L27","spin-277","spin","100","277","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-277-L27.3","spin-277","spin","100","277","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-277-L27.6","spin-277","spin","100","277","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-277-L27.9","spin-277","spin","100","277","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-280-L26.3","spin-280","spin","100","280","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-280-L26.6","spin-280","spin","100","280","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-280-L26.8","spin-280","spin","100","280","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-280-L27","spin-280","spin","100","280","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-280-L27.3","spin-280","spin","100","280","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-280-L27.6","spin-280","spin","100","280","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-280-L27.9","spin-280","spin","100","280","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-283-L26.3","spin-283","spin","100","283","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-283-L26.6","spin-283","spin","100","283","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-283-L26.8","spin-283","spin","100","283","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-283-L27","spin-283","spin","100","283","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-283-L27.3","spin-283","spin","100","283","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-283-L27.6","spin-283","spin","100","283","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-283-L27.9","spin-283","spin","100","283","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-287-L26.3","spin-287","spin","100","287","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-287-L26.6","spin-287","spin","100","287","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-287-L26.8","spin-287","spin","100","287","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-287-L27","spin-287","spin","100","287","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-287-L27.3","spin-287","spin","100","287","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-287-L27.6","spin-287","spin","100","287","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-287-L27.9","spin-287","spin","100","287","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-290-L26.3","spin-290","spin","100","290","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-290-L26.6","spin-290","spin","100","290","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-290-L26.8","spin-290","spin","100","290","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-290-L27","spin-290","spin","100","290","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-290-L27.3","spin-290","spin","100","290","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-290-L27.6","spin-290","spin","100","290","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-290-L27.9","spin-290","spin","100","290","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-294-L26.3","spin-294","spin","100","294","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-294-L26.6","spin-294","spin","100","294","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-294-L26.8","spin-294","spin","100","294","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-294-L27","spin-294","spin","100","294","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-294-L27.3","spin-294","spin","100","294","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-294-L27.6","spin-294","spin","100","294","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-294-L27.9","spin-294","spin","100","294","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-297-L26.3","spin-297","spin","100","297","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-297-L26.6","spin-297","spin","100","297","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-297-L26.8","spin-297","spin","100","297","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-297-L27","spin-297","spin","100","297","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-297-L27.3","spin-297","spin","100","297","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-297-L27.6","spin-297","spin","100","297","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-297-L27.9","spin-297","spin","100","297","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-315-L26.3","spin-315","spin","100","315","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-315-L26.6","spin-315","spin","100","315","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-315-L26.8","spin-315","spin","100","315","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-315-L27","spin-315","spin","100","315","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-315-L27.3","spin-315","spin","100","315","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-315-L27.6","spin-315","spin","100","315","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-315-L27.9","spin-315","spin","100","315","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-320-L26.3","spin-320","spin","100","320","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-320-L26.6","spin-320","spin","100","320","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-320-L26.8","spin-320","spin","100","320","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-320-L27","spin-320","spin","100","320","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-320-L27.3","spin-320","spin","100","320","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-320-L27.6","spin-320","spin","100","320","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-320-L27.9","spin-320","spin","100","320","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-325-L26.3","spin-325","spin","100","325","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-325-L26.6","spin-325","spin","100","325","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-325-L26.8","spin-325","spin","100","325","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-325-L27","spin-325","spin","100","325","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-325-L27.3","spin-325","spin","100","325","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-325-L27.6","spin-325","spin","100","325","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-325-L27.9","spin-325","spin","100","325","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-330-L26.3","spin-330","spin","100","330","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-330-L26.6","spin-330","spin","100","330","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-330-L26.8","spin-330","spin","100","330","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-330-L27","spin-330","spin","100","330","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-330-L27.3","spin-330","spin","100","330","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-330-L27.6","spin-330","spin","100","330","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-330-L27.9","spin-330","spin","100","330","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-333-L26.3","spin-333","spin","100","333","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-333-L26.6","spin-333","spin","100","333","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-333-L26.8","spin-333","spin","100","333","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-333-L27","spin-333","spin","100","333","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-333-L27.3","spin-333","spin","100","333","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-333-L27.6","spin-333","spin","100","333","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-333-L27.9","spin-333","spin","100","333","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-339-L26.3","spin-339","spin","100","339","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-339-L26.6","spin-339","spin","100","339","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-339-L26.8","spin-339","spin","100","339","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-339-L27","spin-339","spin","100","339","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-339-L27.3","spin-339","spin","100","339","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-339-L27.6","spin-339","spin","100","339","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-339-L27.9","spin-339","spin","100","339","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-347-L26.3","spin-347","spin","100","347","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-347-L26.6","spin-347","spin","100","347","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-347-L26.8","spin-347","spin","100","347","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-347-L27","spin-347","spin","100","347","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-347-L27.3","spin-347","spin","100","347","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-347-L27.6","spin-347","spin","100","347","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-347-L27.9","spin-347","spin","100","347","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-355-L26.3","spin-355","spin","100","355","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-355-L26.6","spin-355","spin","100","355","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-355-L26.8","spin-355","spin","100","355","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-355-L27","spin-355","spin","100","355","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-355-L27.3","spin-355","spin","100","355","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-355-L27.6","spin-355","spin","100","355","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-355-L27.9","spin-355","spin","100","355","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-360-L26.3","spin-360","spin","100","360","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-360-L26.6","spin-360","spin","100","360","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-360-L26.8","spin-360","spin","100","360","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-360-L27","spin-360","spin","100","360","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-360-L27.3","spin-360","spin","100","360","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-360-L27.6","spin-360","spin","100","360","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-360-L27.9","spin-360","spin","100","360","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-366-L26.3","spin-366","spin","100","366","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-366-L26.6","spin-366","spin","100","366","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-366-L26.8","spin-366","spin","100","366","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-366-L27","spin-366","spin","100","366","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-366-L27.3","spin-366","spin","100","366","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-366-L27.6","spin-366","spin","100","366","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-366-L27.9","spin-366","spin","100","366","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-377-L26.3","spin-377","spin","100","377","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-377-L26.6","spin-377","spin","100","377","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-377-L26.8","spin-377","spin","100","377","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-377-L27","spin-377","spin","100","377","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-377-L27.3","spin-377","spin","100","377","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-377-L27.6","spin-377","spin","100","377","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"spin","spin-377-L27.9","spin-377","spin","100","377","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,
+"sst","sst-200-L26.3",,,"50","200","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-200-L26.6",,,"50","200","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-200-L26.8",,,"50","200","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-200-L27",,,"50","200","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-200-L27.3",,,"50","200","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-200-L27.6",,,"50","200","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-200-L27.9",,,"50","200","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-205-L26.3",,,"50","205","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-205-L26.6",,,"50","205","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-205-L26.8",,,"50","205","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-205-L27",,,"50","205","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-205-L27.3",,,"50","205","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-205-L27.6",,,"50","205","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-205-L27.9",,,"50","205","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-210-L26.3",,,"50","210","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-210-L26.6",,,"50","210","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-210-L26.8",,,"50","210","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-210-L27",,,"50","210","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-210-L27.3",,,"50","210","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-210-L27.6",,,"50","210","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-210-L27.9",,,"50","210","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-215-L26.3",,,"50","215","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-215-L26.6",,,"50","215","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-215-L26.8",,,"50","215","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-215-L27",,,"50","215","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-215-L27.3",,,"50","215","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-215-L27.6",,,"50","215","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-215-L27.9",,,"50","215","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-220-L26.3",,,"50","220","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-220-L26.6",,,"50","220","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-220-L26.8",,,"50","220","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-220-L27",,,"50","220","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-220-L27.3",,,"50","220","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-220-L27.6",,,"50","220","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-220-L27.9",,,"50","220","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-225-L26.3",,,"50","225","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-225-L26.6",,,"50","225","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-225-L26.8",,,"50","225","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-225-L27",,,"50","225","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-225-L27.3",,,"50","225","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-225-L27.6",,,"50","225","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-225-L27.9",,,"50","225","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-230-L26.3",,,"50","230","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-230-L26.6",,,"50","230","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-230-L26.8",,,"50","230","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-230-L27",,,"50","230","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-230-L27.3",,,"50","230","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-230-L27.6",,,"50","230","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-230-L27.9",,,"50","230","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-235-L26.3",,,"50","235","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-235-L26.6",,,"50","235","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-235-L26.8",,,"50","235","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-235-L27",,,"50","235","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-235-L27.3",,,"50","235","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-235-L27.6",,,"50","235","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-235-L27.9",,,"50","235","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-240-L26.3",,,"50","240","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-240-L26.6",,,"50","240","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-240-L26.8",,,"50","240","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-240-L27",,,"50","240","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-240-L27.3",,,"50","240","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-240-L27.6",,,"50","240","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-240-L27.9",,,"50","240","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-245-L26.3",,,"50","245","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-245-L26.6",,,"50","245","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-245-L26.8",,,"50","245","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-245-L27",,,"50","245","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-245-L27.3",,,"50","245","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-245-L27.6",,,"50","245","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-245-L27.9",,,"50","245","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-250-L26.3",,,"50","250","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-250-L26.6",,,"50","250","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-250-L26.8",,,"50","250","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-250-L27",,,"50","250","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-250-L27.3",,,"50","250","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-250-L27.6",,,"50","250","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-250-L27.9",,,"50","250","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-255-L26.3",,,"50","255","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-255-L26.6",,,"50","255","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-255-L26.8",,,"50","255","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-255-L27",,,"50","255","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-255-L27.3",,,"50","255","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-255-L27.6",,,"50","255","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-255-L27.9",,,"50","255","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-260-L26.3",,,"50","260","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-260-L26.6",,,"50","260","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-260-L26.8",,,"50","260","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-260-L27",,,"50","260","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-260-L27.3",,,"50","260","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-260-L27.6",,,"50","260","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-260-L27.9",,,"50","260","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-265-L26.3",,,"50","265","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-265-L26.6",,,"50","265","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-265-L26.8",,,"50","265","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-265-L27",,,"50","265","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-265-L27.3",,,"50","265","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-265-L27.6",,,"50","265","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-265-L27.9",,,"50","265","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-270-L26.3",,,"50","270","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-270-L26.6",,,"50","270","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-270-L26.8",,,"50","270","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-270-L27",,,"50","270","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-270-L27.3",,,"50","270","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-270-L27.6",,,"50","270","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-270-L27.9",,,"50","270","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-275-L26.3",,,"50","275","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-275-L26.6",,,"50","275","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-275-L26.8",,,"50","275","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-275-L27",,,"50","275","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-275-L27.3",,,"50","275","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-275-L27.6",,,"50","275","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-275-L27.9",,,"50","275","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-280-L26.3",,,"50","280","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-280-L26.6",,,"50","280","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-280-L26.8",,,"50","280","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-280-L27",,,"50","280","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-280-L27.3",,,"50","280","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-280-L27.6",,,"50","280","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-280-L27.9",,,"50","280","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-285-L26.3",,,"50","285","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-285-L26.6",,,"50","285","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-285-L26.8",,,"50","285","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-285-L27",,,"50","285","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-285-L27.3",,,"50","285","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-285-L27.6",,,"50","285","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-285-L27.9",,,"50","285","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-290-L26.3",,,"50","290","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-290-L26.6",,,"50","290","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-290-L26.8",,,"50","290","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-290-L27",,,"50","290","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-290-L27.3",,,"50","290","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-290-L27.6",,,"50","290","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-290-L27.9",,,"50","290","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-295-L26.3",,,"50","295","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-295-L26.6",,,"50","295","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-295-L26.8",,,"50","295","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-295-L27",,,"50","295","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-295-L27.3",,,"50","295","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-295-L27.6",,,"50","295","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-295-L27.9",,,"50","295","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-300-L26.3",,,"50","300","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-300-L26.6",,,"50","300","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-300-L26.8",,,"50","300","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-300-L27",,,"50","300","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-300-L27.3",,,"50","300","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-300-L27.6",,,"50","300","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-300-L27.9",,,"50","300","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-305-L26.3",,,"50","305","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-305-L26.6",,,"50","305","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-305-L26.8",,,"50","305","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-305-L27",,,"50","305","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-305-L27.3",,,"50","305","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-305-L27.6",,,"50","305","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-305-L27.9",,,"50","305","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-310-L26.3",,,"50","310","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-310-L26.6",,,"50","310","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-310-L26.8",,,"50","310","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-310-L27",,,"50","310","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-310-L27.3",,,"50","310","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-310-L27.6",,,"50","310","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-310-L27.9",,,"50","310","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-315-L26.3",,,"50","315","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-315-L26.6",,,"50","315","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-315-L26.8",,,"50","315","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-315-L27",,,"50","315","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-315-L27.3",,,"50","315","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-315-L27.6",,,"50","315","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-315-L27.9",,,"50","315","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-320-L26.3",,,"50","320","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-320-L26.6",,,"50","320","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-320-L26.8",,,"50","320","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-320-L27",,,"50","320","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-320-L27.3",,,"50","320","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-320-L27.6",,,"50","320","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-320-L27.9",,,"50","320","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-325-L26.3",,,"50","325","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-325-L26.6",,,"50","325","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-325-L26.8",,,"50","325","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-325-L27",,,"50","325","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-325-L27.3",,,"50","325","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-325-L27.6",,,"50","325","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-325-L27.9",,,"50","325","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-330-L26.3",,,"50","330","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-330-L26.6",,,"50","330","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-330-L26.8",,,"50","330","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-330-L27",,,"50","330","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-330-L27.3",,,"50","330","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-330-L27.6",,,"50","330","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-330-L27.9",,,"50","330","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-335-L26.3",,,"50","335","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-335-L26.6",,,"50","335","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-335-L26.8",,,"50","335","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-335-L27",,,"50","335","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-335-L27.3",,,"50","335","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-335-L27.6",,,"50","335","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-335-L27.9",,,"50","335","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-340-L26.3",,,"50","340","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-340-L26.6",,,"50","340","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-340-L26.8",,,"50","340","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-340-L27",,,"50","340","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-340-L27.3",,,"50","340","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-340-L27.6",,,"50","340","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-340-L27.9",,,"50","340","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-345-L26.3",,,"50","345","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-345-L26.6",,,"50","345","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-345-L26.8",,,"50","345","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-345-L27",,,"50","345","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-345-L27.3",,,"50","345","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-345-L27.6",,,"50","345","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-345-L27.9",,,"50","345","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-350-L26.3",,,"50","350","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-350-L26.6",,,"50","350","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-350-L26.8",,,"50","350","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-350-L27",,,"50","350","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-350-L27.3",,,"50","350","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-350-L27.6",,,"50","350","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-350-L27.9",,,"50","350","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-355-L26.3",,,"50","355","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-355-L26.6",,,"50","355","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-355-L26.8",,,"50","355","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-355-L27",,,"50","355","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-355-L27.3",,,"50","355","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-355-L27.6",,,"50","355","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-355-L27.9",,,"50","355","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-360-L26.3",,,"50","360","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-360-L26.6",,,"50","360","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-360-L26.8",,,"50","360","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-360-L27",,,"50","360","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-360-L27.3",,,"50","360","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-360-L27.6",,,"50","360","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-360-L27.9",,,"50","360","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-365-L26.3",,,"50","365","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-365-L26.6",,,"50","365","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-365-L26.8",,,"50","365","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-365-L27",,,"50","365","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-365-L27.3",,,"50","365","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-365-L27.6",,,"50","365","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-365-L27.9",,,"50","365","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-370-L26.3",,,"50","370","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-370-L26.6",,,"50","370","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-370-L26.8",,,"50","370","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-370-L27",,,"50","370","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-370-L27.3",,,"50","370","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-370-L27.6",,,"50","370","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-370-L27.9",,,"50","370","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-375-L26.3",,,"50","375","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-375-L26.6",,,"50","375","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-375-L26.8",,,"50","375","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-375-L27",,,"50","375","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-375-L27.3",,,"50","375","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-375-L27.6",,,"50","375","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-375-L27.9",,,"50","375","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-380-L26.3",,,"50","380","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-380-L26.6",,,"50","380","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-380-L26.8",,,"50","380","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-380-L27",,,"50","380","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-380-L27.3",,,"50","380","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-380-L27.6",,,"50","380","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-380-L27.9",,,"50","380","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-385-L26.3",,,"50","385","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-385-L26.6",,,"50","385","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-385-L26.8",,,"50","385","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-385-L27",,,"50","385","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-385-L27.3",,,"50","385","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-385-L27.6",,,"50","385","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-385-L27.9",,,"50","385","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-390-L26.3",,,"50","390","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-390-L26.6",,,"50","390","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-390-L26.8",,,"50","390","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-390-L27",,,"50","390","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-390-L27.3",,,"50","390","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-390-L27.6",,,"50","390","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-390-L27.9",,,"50","390","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-395-L26.3",,,"50","395","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-395-L26.6",,,"50","395","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-395-L26.8",,,"50","395","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-395-L27",,,"50","395","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-395-L27.3",,,"50","395","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-395-L27.6",,,"50","395","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-395-L27.9",,,"50","395","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-400-L26.3",,,"50","400","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-400-L26.6",,,"50","400","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-400-L26.8",,,"50","400","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-400-L27",,,"50","400","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-400-L27.3",,,"50","400","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-400-L27.6",,,"50","400","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-400-L27.9",,,"50","400","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-405-L26.3",,,"50","405","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-405-L26.6",,,"50","405","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-405-L26.8",,,"50","405","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-405-L27",,,"50","405","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-405-L27.3",,,"50","405","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-405-L27.6",,,"50","405","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-405-L27.9",,,"50","405","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-410-L26.3",,,"50","410","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-410-L26.6",,,"50","410","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-410-L26.8",,,"50","410","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-410-L27",,,"50","410","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-410-L27.3",,,"50","410","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-410-L27.6",,,"50","410","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-410-L27.9",,,"50","410","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-415-L26.3",,,"50","415","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-415-L26.6",,,"50","415","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-415-L26.8",,,"50","415","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-415-L27",,,"50","415","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-415-L27.3",,,"50","415","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-415-L27.6",,,"50","415","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-415-L27.9",,,"50","415","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-420-L26.3",,,"50","420","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-420-L26.6",,,"50","420","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-420-L26.8",,,"50","420","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-420-L27",,,"50","420","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-420-L27.3",,,"50","420","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-420-L27.6",,,"50","420","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-420-L27.9",,,"50","420","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-425-L26.3",,,"50","425","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-425-L26.6",,,"50","425","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-425-L26.8",,,"50","425","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-425-L27",,,"50","425","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-425-L27.3",,,"50","425","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-425-L27.6",,,"50","425","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-425-L27.9",,,"50","425","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-430-L26.3",,,"50","430","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-430-L26.6",,,"50","430","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-430-L26.8",,,"50","430","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-430-L27",,,"50","430","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-430-L27.3",,,"50","430","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-430-L27.6",,,"50","430","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-430-L27.9",,,"50","430","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-435-L26.3",,,"50","435","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-435-L26.6",,,"50","435","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-435-L26.8",,,"50","435","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-435-L27",,,"50","435","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-435-L27.3",,,"50","435","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-435-L27.6",,,"50","435","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-435-L27.9",,,"50","435","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-440-L26.3",,,"50","440","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-440-L26.6",,,"50","440","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-440-L26.8",,,"50","440","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-440-L27",,,"50","440","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-440-L27.3",,,"50","440","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-440-L27.6",,,"50","440","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-440-L27.9",,,"50","440","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-445-L26.3",,,"50","445","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-445-L26.6",,,"50","445","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-445-L26.8",,,"50","445","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-445-L27",,,"50","445","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-445-L27.3",,,"50","445","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-445-L27.6",,,"50","445","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-445-L27.9",,,"50","445","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-450-L26.3",,,"50","450","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-450-L26.6",,,"50","450","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-450-L26.8",,,"50","450","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-450-L27",,,"50","450","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-450-L27.3",,,"50","450","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-450-L27.6",,,"50","450","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-450-L27.9",,,"50","450","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-455-L26.3",,,"50","455","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-455-L26.6",,,"50","455","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-455-L26.8",,,"50","455","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-455-L27",,,"50","455","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-455-L27.3",,,"50","455","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-455-L27.6",,,"50","455","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-455-L27.9",,,"50","455","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-460-L26.3",,,"50","460","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-460-L26.6",,,"50","460","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-460-L26.8",,,"50","460","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-460-L27",,,"50","460","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-460-L27.3",,,"50","460","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-460-L27.6",,,"50","460","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-460-L27.9",,,"50","460","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-465-L26.3",,,"50","465","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-465-L26.6",,,"50","465","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-465-L26.8",,,"50","465","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-465-L27",,,"50","465","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-465-L27.3",,,"50","465","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-465-L27.6",,,"50","465","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-465-L27.9",,,"50","465","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-470-L26.3",,,"50","470","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-470-L26.6",,,"50","470","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-470-L26.8",,,"50","470","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-470-L27",,,"50","470","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-470-L27.3",,,"50","470","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-470-L27.6",,,"50","470","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-470-L27.9",,,"50","470","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-475-L26.3",,,"50","475","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-475-L26.6",,,"50","475","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-475-L26.8",,,"50","475","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-475-L27",,,"50","475","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-475-L27.3",,,"50","475","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-475-L27.6",,,"50","475","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-475-L27.9",,,"50","475","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-480-L26.3",,,"50","480","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-480-L26.6",,,"50","480","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-480-L26.8",,,"50","480","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-480-L27",,,"50","480","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-480-L27.3",,,"50","480","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-480-L27.6",,,"50","480","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-480-L27.9",,,"50","480","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-485-L26.3",,,"50","485","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-485-L26.6",,,"50","485","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-485-L26.8",,,"50","485","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-485-L27",,,"50","485","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-485-L27.3",,,"50","485","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-485-L27.6",,,"50","485","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-485-L27.9",,,"50","485","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-490-L26.3",,,"50","490","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-490-L26.6",,,"50","490","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-490-L26.8",,,"50","490","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-490-L27",,,"50","490","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-490-L27.3",,,"50","490","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-490-L27.6",,,"50","490","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-490-L27.9",,,"50","490","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-495-L26.3",,,"50","495","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-495-L26.6",,,"50","495","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-495-L26.8",,,"50","495","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-495-L27",,,"50","495","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-495-L27.3",,,"50","495","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-495-L27.6",,,"50","495","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-495-L27.9",,,"50","495","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-500-L26.3",,,"50","500","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-500-L26.6",,,"50","500","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-500-L26.8",,,"50","500","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-500-L27",,,"50","500","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-500-L27.3",,,"50","500","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-500-L27.6",,,"50","500","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"sst","sst-500-L27.9",,,"50","500","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION","12 × 14","NOT_PROVIDED"
+"spot","spot-200-L26.3",,,,"200","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-200-L26.6",,,,"200","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-200-L26.8",,,,"200","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-200-L27",,,,"200","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-200-L27.3",,,,"200","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-200-L27.6",,,,"200","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-200-L27.9",,,,"200","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-205-L26.3",,,,"205","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-205-L26.6",,,,"205","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-205-L26.8",,,,"205","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-205-L27",,,,"205","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-205-L27.3",,,,"205","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-205-L27.6",,,,"205","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-205-L27.9",,,,"205","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-210-L26.3",,,,"210","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-210-L26.6",,,,"210","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-210-L26.8",,,,"210","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-210-L27",,,,"210","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-210-L27.3",,,,"210","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-210-L27.6",,,,"210","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-210-L27.9",,,,"210","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-215-L26.3",,,,"215","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-215-L26.6",,,,"215","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-215-L26.8",,,,"215","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-215-L27",,,,"215","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-215-L27.3",,,,"215","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-215-L27.6",,,,"215","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-215-L27.9",,,,"215","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-220-L26.3",,,,"220","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-220-L26.6",,,,"220","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-220-L26.8",,,,"220","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-220-L27",,,,"220","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-220-L27.3",,,,"220","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-220-L27.6",,,,"220","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-220-L27.9",,,,"220","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-225-L26.3",,,,"225","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-225-L26.6",,,,"225","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-225-L26.8",,,,"225","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-225-L27",,,,"225","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-225-L27.3",,,,"225","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-225-L27.6",,,,"225","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-225-L27.9",,,,"225","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-230-L26.3",,,,"230","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-230-L26.6",,,,"230","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-230-L26.8",,,,"230","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-230-L27",,,,"230","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-230-L27.3",,,,"230","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-230-L27.6",,,,"230","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-230-L27.9",,,,"230","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-235-L26.3",,,,"235","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-235-L26.6",,,,"235","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-235-L26.8",,,,"235","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-235-L27",,,,"235","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-235-L27.3",,,,"235","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-235-L27.6",,,,"235","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-235-L27.9",,,,"235","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-240-L26.3",,,,"240","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-240-L26.6",,,,"240","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-240-L26.8",,,,"240","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-240-L27",,,,"240","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-240-L27.3",,,,"240","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-240-L27.6",,,,"240","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-240-L27.9",,,,"240","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-245-L26.3",,,,"245","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-245-L26.6",,,,"245","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-245-L26.8",,,,"245","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-245-L27",,,,"245","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-245-L27.3",,,,"245","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-245-L27.6",,,,"245","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-245-L27.9",,,,"245","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-250-L26.3",,,,"250","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-250-L26.6",,,,"250","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-250-L26.8",,,,"250","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-250-L27",,,,"250","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-250-L27.3",,,,"250","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-250-L27.6",,,,"250","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-250-L27.9",,,,"250","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-255-L26.3",,,,"255","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-255-L26.6",,,,"255","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-255-L26.8",,,,"255","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-255-L27",,,,"255","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-255-L27.3",,,,"255","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-255-L27.6",,,,"255","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-255-L27.9",,,,"255","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-260-L26.3",,,,"260","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-260-L26.6",,,,"260","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-260-L26.8",,,,"260","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-260-L27",,,,"260","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-260-L27.3",,,,"260","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-260-L27.6",,,,"260","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-260-L27.9",,,,"260","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-265-L26.3",,,,"265","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-265-L26.6",,,,"265","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-265-L26.8",,,,"265","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-265-L27",,,,"265","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-265-L27.3",,,,"265","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-265-L27.6",,,,"265","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-265-L27.9",,,,"265","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-270-L26.3",,,,"270","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-270-L26.6",,,,"270","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-270-L26.8",,,,"270","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-270-L27",,,,"270","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-270-L27.3",,,,"270","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-270-L27.6",,,,"270","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-270-L27.9",,,,"270","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-275-L26.3",,,,"275","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-275-L26.6",,,,"275","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-275-L26.8",,,,"275","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-275-L27",,,,"275","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-275-L27.3",,,,"275","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-275-L27.6",,,,"275","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-275-L27.9",,,,"275","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-280-L26.3",,,,"280","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-280-L26.6",,,,"280","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-280-L26.8",,,,"280","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-280-L27",,,,"280","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-280-L27.3",,,,"280","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-280-L27.6",,,,"280","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-280-L27.9",,,,"280","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-285-L26.3",,,,"285","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-285-L26.6",,,,"285","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-285-L26.8",,,,"285","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-285-L27",,,,"285","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-285-L27.3",,,,"285","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-285-L27.6",,,,"285","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-285-L27.9",,,,"285","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-290-L26.3",,,,"290","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-290-L26.6",,,,"290","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-290-L26.8",,,,"290","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-290-L27",,,,"290","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-290-L27.3",,,,"290","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-290-L27.6",,,,"290","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-290-L27.9",,,,"290","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-295-L26.3",,,,"295","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-295-L26.6",,,,"295","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-295-L26.8",,,,"295","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-295-L27",,,,"295","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-295-L27.3",,,,"295","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-295-L27.6",,,,"295","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-295-L27.9",,,,"295","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-300-L26.3",,,,"300","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-300-L26.6",,,,"300","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-300-L26.8",,,,"300","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-300-L27",,,,"300","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-300-L27.3",,,,"300","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-300-L27.6",,,,"300","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-300-L27.9",,,,"300","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-305-L26.3",,,,"305","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-305-L26.6",,,,"305","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-305-L26.8",,,,"305","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-305-L27",,,,"305","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-305-L27.3",,,,"305","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-305-L27.6",,,,"305","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-305-L27.9",,,,"305","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-310-L26.3",,,,"310","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-310-L26.6",,,,"310","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-310-L26.8",,,,"310","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-310-L27",,,,"310","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-310-L27.3",,,,"310","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-310-L27.6",,,,"310","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-310-L27.9",,,,"310","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-315-L26.3",,,,"315","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-315-L26.6",,,,"315","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-315-L26.8",,,,"315","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-315-L27",,,,"315","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-315-L27.3",,,,"315","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-315-L27.6",,,,"315","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-315-L27.9",,,,"315","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-320-L26.3",,,,"320","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-320-L26.6",,,,"320","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-320-L26.8",,,,"320","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-320-L27",,,,"320","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-320-L27.3",,,,"320","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-320-L27.6",,,,"320","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-320-L27.9",,,,"320","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-325-L26.3",,,,"325","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-325-L26.6",,,,"325","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-325-L26.8",,,,"325","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-325-L27",,,,"325","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-325-L27.3",,,,"325","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-325-L27.6",,,,"325","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-325-L27.9",,,,"325","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-330-L26.3",,,,"330","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-330-L26.6",,,,"330","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-330-L26.8",,,,"330","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-330-L27",,,,"330","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-330-L27.3",,,,"330","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-330-L27.6",,,,"330","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-330-L27.9",,,,"330","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-335-L26.3",,,,"335","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-335-L26.6",,,,"335","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-335-L26.8",,,,"335","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-335-L27",,,,"335","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-335-L27.3",,,,"335","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-335-L27.6",,,,"335","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-335-L27.9",,,,"335","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-340-L26.3",,,,"340","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-340-L26.6",,,,"340","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-340-L26.8",,,,"340","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-340-L27",,,,"340","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-340-L27.3",,,,"340","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-340-L27.6",,,,"340","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-340-L27.9",,,,"340","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-345-L26.3",,,,"345","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-345-L26.6",,,,"345","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-345-L26.8",,,,"345","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-345-L27",,,,"345","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-345-L27.3",,,,"345","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-345-L27.6",,,,"345","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-345-L27.9",,,,"345","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-350-L26.3",,,,"350","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-350-L26.6",,,,"350","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-350-L26.8",,,,"350","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-350-L27",,,,"350","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-350-L27.3",,,,"350","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-350-L27.6",,,,"350","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-350-L27.9",,,,"350","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-355-L26.3",,,,"355","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-355-L26.6",,,,"355","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-355-L26.8",,,,"355","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-355-L27",,,,"355","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-355-L27.3",,,,"355","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-355-L27.6",,,,"355","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-355-L27.9",,,,"355","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-360-L26.3",,,,"360","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-360-L26.6",,,,"360","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-360-L26.8",,,,"360","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-360-L27",,,,"360","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-360-L27.3",,,,"360","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-360-L27.6",,,,"360","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-360-L27.9",,,,"360","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-365-L26.3",,,,"365","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-365-L26.6",,,,"365","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-365-L26.8",,,,"365","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-365-L27",,,,"365","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-365-L27.3",,,,"365","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-365-L27.6",,,,"365","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-365-L27.9",,,,"365","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-370-L26.3",,,,"370","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-370-L26.6",,,,"370","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-370-L26.8",,,,"370","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-370-L27",,,,"370","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-370-L27.3",,,,"370","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-370-L27.6",,,,"370","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-370-L27.9",,,,"370","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-375-L26.3",,,,"375","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-375-L26.6",,,,"375","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-375-L26.8",,,,"375","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-375-L27",,,,"375","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-375-L27.3",,,,"375","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-375-L27.6",,,,"375","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-375-L27.9",,,,"375","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-380-L26.3",,,,"380","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-380-L26.6",,,,"380","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-380-L26.8",,,,"380","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-380-L27",,,,"380","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-380-L27.3",,,,"380","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-380-L27.6",,,,"380","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-380-L27.9",,,,"380","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-385-L26.3",,,,"385","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-385-L26.6",,,,"385","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-385-L26.8",,,,"385","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-385-L27",,,,"385","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-385-L27.3",,,,"385","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-385-L27.6",,,,"385","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-385-L27.9",,,,"385","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-390-L26.3",,,,"390","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-390-L26.6",,,,"390","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-390-L26.8",,,,"390","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-390-L27",,,,"390","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-390-L27.3",,,,"390","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-390-L27.6",,,,"390","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-390-L27.9",,,,"390","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-395-L26.3",,,,"395","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-395-L26.6",,,,"395","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-395-L26.8",,,,"395","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-395-L27",,,,"395","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-395-L27.3",,,,"395","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-395-L27.6",,,,"395","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-395-L27.9",,,,"395","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-400-L26.3",,,,"400","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-400-L26.6",,,,"400","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-400-L26.8",,,,"400","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-400-L27",,,,"400","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-400-L27.3",,,,"400","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-400-L27.6",,,,"400","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-400-L27.9",,,,"400","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-405-L26.3",,,,"405","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-405-L26.6",,,,"405","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-405-L26.8",,,,"405","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-405-L27",,,,"405","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-405-L27.3",,,,"405","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-405-L27.6",,,,"405","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-405-L27.9",,,,"405","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-410-L26.3",,,,"410","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-410-L26.6",,,,"410","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-410-L26.8",,,,"410","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-410-L27",,,,"410","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-410-L27.3",,,,"410","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-410-L27.6",,,,"410","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-410-L27.9",,,,"410","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-415-L26.3",,,,"415","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-415-L26.6",,,,"415","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-415-L26.8",,,,"415","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-415-L27",,,,"415","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-415-L27.3",,,,"415","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-415-L27.6",,,,"415","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-415-L27.9",,,,"415","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-420-L26.3",,,,"420","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-420-L26.6",,,,"420","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-420-L26.8",,,,"420","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-420-L27",,,,"420","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-420-L27.3",,,,"420","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-420-L27.6",,,,"420","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-420-L27.9",,,,"420","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-425-L26.3",,,,"425","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-425-L26.6",,,,"425","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-425-L26.8",,,,"425","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-425-L27",,,,"425","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-425-L27.3",,,,"425","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-425-L27.6",,,,"425","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-425-L27.9",,,,"425","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-430-L26.3",,,,"430","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-430-L26.6",,,,"430","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-430-L26.8",,,,"430","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-430-L27",,,,"430","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-430-L27.3",,,,"430","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-430-L27.6",,,,"430","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-430-L27.9",,,,"430","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-435-L26.3",,,,"435","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-435-L26.6",,,,"435","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-435-L26.8",,,,"435","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-435-L27",,,,"435","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-435-L27.3",,,,"435","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-435-L27.6",,,,"435","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-435-L27.9",,,,"435","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-440-L26.3",,,,"440","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-440-L26.6",,,,"440","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-440-L26.8",,,,"440","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-440-L27",,,,"440","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-440-L27.3",,,,"440","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-440-L27.6",,,,"440","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-440-L27.9",,,,"440","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-445-L26.3",,,,"445","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-445-L26.6",,,,"445","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-445-L26.8",,,,"445","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-445-L27",,,,"445","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-445-L27.3",,,,"445","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-445-L27.6",,,,"445","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-445-L27.9",,,,"445","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-450-L26.3",,,,"450","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-450-L26.6",,,,"450","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-450-L26.8",,,,"450","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-450-L27",,,,"450","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-450-L27.3",,,,"450","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-450-L27.6",,,,"450","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-450-L27.9",,,,"450","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-455-L26.3",,,,"455","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-455-L26.6",,,,"455","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-455-L26.8",,,,"455","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-455-L27",,,,"455","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-455-L27.3",,,,"455","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-455-L27.6",,,,"455","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-455-L27.9",,,,"455","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-460-L26.3",,,,"460","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-460-L26.6",,,,"460","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-460-L26.8",,,,"460","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-460-L27",,,,"460","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-460-L27.3",,,,"460","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-460-L27.6",,,,"460","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-460-L27.9",,,,"460","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-465-L26.3",,,,"465","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-465-L26.6",,,,"465","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-465-L26.8",,,,"465","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-465-L27",,,,"465","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-465-L27.3",,,,"465","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-465-L27.6",,,,"465","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-465-L27.9",,,,"465","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-470-L26.3",,,,"470","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-470-L26.6",,,,"470","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-470-L26.8",,,,"470","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-470-L27",,,,"470","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-470-L27.3",,,,"470","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-470-L27.6",,,,"470","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-470-L27.9",,,,"470","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-475-L26.3",,,,"475","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-475-L26.6",,,,"475","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-475-L26.8",,,,"475","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-475-L27",,,,"475","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-475-L27.3",,,,"475","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-475-L27.6",,,,"475","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-475-L27.9",,,,"475","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-480-L26.3",,,,"480","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-480-L26.6",,,,"480","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-480-L26.8",,,,"480","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-480-L27",,,,"480","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-480-L27.3",,,,"480","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-480-L27.6",,,,"480","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-480-L27.9",,,,"480","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-485-L26.3",,,,"485","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-485-L26.6",,,,"485","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-485-L26.8",,,,"485","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-485-L27",,,,"485","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-485-L27.3",,,,"485","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-485-L27.6",,,,"485","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-485-L27.9",,,,"485","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-490-L26.3",,,,"490","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-490-L26.6",,,,"490","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-490-L26.8",,,,"490","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-490-L27",,,,"490","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-490-L27.3",,,,"490","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-490-L27.6",,,,"490","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-490-L27.9",,,,"490","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-495-L26.3",,,,"495","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-495-L26.6",,,,"495","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-495-L26.8",,,,"495","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-495-L27",,,,"495","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-495-L27.3",,,,"495","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-495-L27.6",,,,"495","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-495-L27.9",,,,"495","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-500-L26.3",,,,"500","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-500-L26.6",,,,"500","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-500-L26.8",,,,"500","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-500-L27",,,,"500","27","685.8","standard",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-500-L27.3",,,,"500","27.3","693.42","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-500-L27.6",,,,"500","27.6","701.04","plus",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"
+"spot","spot-500-L27.9",,,,"500","27.9","708.66","superlong",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION",,"NOT_PROVIDED"

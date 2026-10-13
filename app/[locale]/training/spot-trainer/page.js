@@ -4,6 +4,7 @@ import { spotTrainer as spot } from "../../../../data/products";
 import { media, spotGallery } from "../../../../data/media";
 import { PageHero, Section, Cta, Kickers } from "../../../../components/Ui";
 import SpotShowcase from "../../../../components/SpotShowcase";
+import LengthOptions from "../../../../components/LengthOptions";
 
 export const generateMetadata = meta("spot", (d) => [d.spot.title, d.spot.lead]);
 
@@ -32,7 +33,7 @@ export default async function Page({ params }) {
         note={`${S.grips} ${S.weightsP}`}
         strings={{ zoom: C.zoom, close: C.close, grams: L.grams }}
       />
-      <Section band="band-1"><Kickers items={S.notes} /><div className="btn-row"><Cta locale={locale} to="build" query="series=spot" label={dict.build.cta} /></div></Section>
+      <Section band="band-1"><LengthOptions dict={dict} productId="spot" /><Kickers items={S.notes} /><div className="btn-row"><Cta locale={locale} to="build" query="series=spot" label={dict.build.cta} /></div></Section>
     </>
   );
 }

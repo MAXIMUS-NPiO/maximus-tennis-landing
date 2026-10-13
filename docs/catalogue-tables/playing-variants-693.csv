@@ -1,4 +1,4 @@
-﻿configuration_id,base_variant_id,series_id,head_size_sq_in,weight_g,length_in,length_mm,length_class,balance_mm,swingweight,stiffness_ra,price,availability,lead_time,factory_sku,status
+﻿catalogue_variant_id,base_variant_id,series_id,head_size_sq_in,weight_g,length_in,length_mm,length_class,balance_mm,swingweight,stiffness_ra,price,availability,lead_time,factory_sku,status
 "great-236-L26.3","great-236","great","97","236","26.3","668.02","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION"
 "great-236-L26.6","great-236","great","97","236","26.6","675.64","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION"
 "great-236-L26.8","great-236","great","97","236","26.8","680.72","short",,,,,,,,"REQUEST_OPTION_REQUIRES_CONFIRMATION"

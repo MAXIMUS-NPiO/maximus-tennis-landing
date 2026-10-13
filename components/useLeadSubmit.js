@@ -38,10 +38,10 @@ export function useLeadSubmit({ purpose, locale, context = {}, series, endpoint 
   }, []);
 
   const submit = useCallback(
-    async ({ fields, config, profile, consent, hp }) => {
+    async ({ fields, config, profile, consent, hp, budgetRequest }) => {
       if (busyRef.current) return { ok: false, code: "busy" };
       busyRef.current = true;
-      const body = { purpose, locale, fields, ...(orderPlan ? { plan: orderPlan, technical: orderTechnical, paymentPreference } : {}), ...(purchaseIntent ? { purchaseIntent, ...(programRequest ? { programRequest } : {}) } : {}), ...(config ? { config } : {}), ...(profile ? { profile } : {}), consent: consent === true };
+      const body = { purpose, locale, fields, ...(budgetRequest ? { budgetRequest } : {}), ...(orderPlan ? { plan: orderPlan, technical: orderTechnical, paymentPreference } : {}), ...(purchaseIntent ? { purchaseIntent, ...(programRequest ? { programRequest } : {}) } : {}), ...(config ? { config } : {}), ...(profile ? { profile } : {}), consent: consent === true };
       const sig = JSON.stringify(body);
       if (keyRef.current.sig !== sig) keyRef.current = { sig, key: uuidv4() };
       const payload = {

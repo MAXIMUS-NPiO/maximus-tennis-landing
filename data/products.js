@@ -197,6 +197,9 @@ export const sweetSpotTrainer = {
   id: "sst",
   headSizeSqIn: 50,
   lengthIn: 27,
+  // The supplied 27-inch geometry is historical evidence, not a default for new requests.
+  historicalLengthIn: 27,
+  requestedLengths: standardLengths,
   stringPattern: "12 × 14",
   grips: "L0–L7",
   /** Preserve the four supplied balances; never interpolate the 57 new unknowns. */
@@ -213,6 +216,7 @@ export const spotTrainer = {
   targetDimensions: "NOT_PROVIDED",
   weights: trainerWeights,
   lengthIn: null,
+  requestedLengths: standardLengths,
   balances: "NOT_PROVIDED",
   stringPattern: "NOT_PROVIDED",
   grips: "L0–L7",
@@ -248,7 +252,7 @@ export const seriesParameters = Object.fromEntries(
   ["great", "power", "spin"].map((id) => [id, Object.fromEntries(PARAMETER_KEYS.map((k) => [k, { value: null, status: "NOT_PROVIDED" }]))])
 );
 
-export const productDataVersion = "2026-10-12.C";
+export const productDataVersion = "2026-10-13.D";
 
 /** Existing names are authoritative: G maps to GREAT, not an unverified GRADE rename. */
 export const seriesCodes = Object.freeze({ S: "spin", P: "power", G: "great" });
@@ -257,7 +261,39 @@ export const catalogueCounts = Object.freeze({
   lengthsPerModel: standardLengths.length,
   playingVariants: seriesList.reduce((n, s) => n + s.matrix.length * standardLengths.length, 0),
   addedPlayingVariants: seriesList.reduce((n, s) => n + s.matrix.length * (standardLengths.length - 1), 0),
-  trainerVariants: trainerWeights.length * 2,
+  trainerWeightPoints: trainerWeights.length * 2,
+  trainerVariants: trainerWeights.length * standardLengths.length * 2,
+  totalRequestedVariants: (seriesList.reduce((n, s) => n + s.matrix.length, 0) + trainerWeights.length * 2) * standardLengths.length,
+});
+
+/** Per-country fitting/reference collection requested by the owner. No stock or sale promise.
+ * Precision classes and custom-made requests are not extra dimensions of this finite package.
+ */
+const packageFamilies = [
+  ...seriesList.map((s) => ({ id: s.id, name: s.name, weightPoints: s.matrix.length })),
+  { id: "sst", name: "Sweet Spot Trainer", weightPoints: trainerWeights.length },
+  { id: "spot", name: "Spot Trainer", weightPoints: trainerWeights.length },
+].map((f) => Object.freeze({ ...f, lengths: standardLengths.length,
+  variants: f.weightPoints * standardLengths.length,
+  gripCombinations: f.weightPoints * standardLengths.length * grips.length,
+  units: f.weightPoints * standardLengths.length * grips.length * 2,
+}));
+export const nationalPackage = Object.freeze({
+  id: "national-package-v1", revision: productDataVersion,
+  copiesPerCombination: 2, gripCount: grips.length, perCountry: true,
+  combinations: catalogueCounts.totalRequestedVariants * grips.length,
+  unitsPerCountry: catalogueCounts.totalRequestedVariants * grips.length * 2,
+  playingUnits: catalogueCounts.playingVariants * grips.length * 2,
+  trainerUnits: catalogueCounts.trainerVariants * grips.length * 2,
+  families: Object.freeze(packageFamilies),
+  dimensions: Object.freeze(["family", "weight", "length", "factory grip"]),
+  status: "PROPOSED_REQUEST_SPECIFICATION", availability: null, price: null,
+  productionApproved: false, countryCount: null,
+  collectionRole: "permanent_reference_and_fitting_library", separateFromSalesStock: true,
+  baseFinishIntent: "matte-black", repeatOrdersAndCustomDesigns: "subject_to_separate_review",
+  personalPackageExample: Object.freeze({ playing: 6, spot: [4, 5], sst: [4, 5], sameSelectedLength: true, universalRequirement: false }),
+  customBatchExamples: Object.freeze([100, 200]), universalBatchMinimum: null,
+  proShopConcept: Object.freeze({ setting: "tennis_concept_club", functions: ["automated_tray_storage", "selection", "retrieval", "returns"], status: "ARCHITECTURAL_CONCEPT", engineeredSystem: false, certifiedCapacity: null }),
 });
 
 /** Configurator choices; trainers retain their independent identity and no P-class. */
@@ -288,10 +324,15 @@ export function balanceFor(id, weight, lengthIn) {
 }
 
 /** Stable request identity only; never a factory SKU or stock assertion. */
-export function configurationKey({ series: id, weight, lengthIn, lengthMode }) {
+export function catalogueVariantKey({ series: id, weight, lengthIn, lengthMode }) {
   const product = configurationProducts[id];
   if (!product?.matrix.some((p) => p.weight === weight)) return null;
-  if (isTrainer(id)) return `${id}-${weight}`;
   if (lengthMode === "custom" || !isStandardLength(lengthIn)) return null;
   return `${id}-${weight}-L${lengthIn}`;
+}
+
+/** Full factory-grip request identity. Precision classes and quantity are separate fields. */
+export function configurationKey(config) {
+  const variant = catalogueVariantKey(config);
+  return variant && grips.some(g => g.id === config.grip) ? `${variant}-${config.grip}` : null;
 }

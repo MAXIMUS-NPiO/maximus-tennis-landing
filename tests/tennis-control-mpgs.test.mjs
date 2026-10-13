@@ -1,7 +1,7 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createTennisControlMpgsAdapter, TENNIS_CONTROL_MPGS_CONTRACT } from '../lib/platform/tennis-control-mpgs.js';
+import { createTennisControlMpgsAdapter, tennisControlReturnUrl, TENNIS_CONTROL_MPGS_CONTRACT } from '../lib/platform/tennis-control-mpgs.js';
 import { createNativeMpgsReader, createTennisControlMpgsReader, NATIVE_MPGS_SCHEMA } from '../lib/platform/native-mpgs.js';
 
 const AT = Date.parse('2026-10-11T00:00:00.000Z');
@@ -11,24 +11,26 @@ const REQUEST_URL = 'https://ap-gateway.mastercard.com/api/rest/version/100/merc
 const attempt = () => ({ orderId: `MX-CTL-${'b'.repeat(32)}`, providerOrderId: PROVIDER, correlation: `tcc_${'c'.repeat(43)}`, currency: 'USD', totalMinor: '100', kind: 'payment_control', scopeHash: 'd'.repeat(64), attemptedAt: AT, localSessionDeadline: new Date(AT + 900000).toISOString() });
 const payload = () => ({ result: 'SUCCESS', session: { id: 'SESSIONsyntheticPrivateControl123', version: 'opaque-version-with-no-source-format' }, successIndicator: 'synthetic-private-indicator', sourceOfFunds: { private: 'synthetic-private-source' } });
 const json = (value, options = {}) => new Response(typeof value === 'string' ? value : JSON.stringify(value), { status: 201, headers: { 'content-type': 'application/json' }, ...options });
-const options = extra => ({ password: PASSWORD, merchantName: 'SYNTHETIC CONTROL MERCHANT', returnUrl: 'https://maximus.tennis/en/payment-control', cancelUrl: 'https://maximus.tennis/en/payment-control', now: () => AT, fetchImpl: async () => json(payload()), ...extra });
+const options = extra => ({ password: PASSWORD, merchantName: 'SYNTHETIC CONTROL MERCHANT', now: () => AT, fetchImpl: async () => json(payload()), ...extra });
+const RETURN = 'https://maximus.tennis/en/checkout/control';
 
 test('control initiation sends one pinned source-derived POST and returns only a private local receipt', async () => {
   const calls = [], a = attempt();
   const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async (url, init) => { calls.push({ url, init }); return json(payload()); } }));
-  const result = await adapter.initiate({ attempt: a });
+  const result = await adapter.initiate({ attempt: a, locale: 'en' });
   assert.equal(calls.length, 1); assert.equal(calls[0].url, REQUEST_URL);
   const { init } = calls[0];
   assert.equal(init.method, 'POST'); assert.equal(init.redirect, 'manual'); assert.equal(init.credentials, 'omit'); assert.equal(init.cache, 'no-store');
   assert.deepEqual(init.headers, { Authorization: `Basic ${Buffer.from(`merchant.300281:${PASSWORD}`).toString('base64')}`, Accept: 'application/json', 'Content-Type': 'application/json' });
-  assert.deepEqual(JSON.parse(init.body), { apiOperation: 'INITIATE_CHECKOUT', interaction: { operation: 'PURCHASE', returnUrl: 'https://maximus.tennis/en/payment-control', cancelUrl: 'https://maximus.tennis/en/payment-control', merchant: { name: 'SYNTHETIC CONTROL MERCHANT' } }, order: { id: PROVIDER, reference: PROVIDER, amount: '1.00', currency: 'USD', description: 'MAXIMUS payment verification control' }, transaction: { reference: PROVIDER } });
+  // Field set and semantics follow the gateway's API 100 Initiate Checkout reference.
+  assert.deepEqual(JSON.parse(init.body), { apiOperation: 'INITIATE_CHECKOUT', interaction: { operation: 'PURCHASE', returnUrl: RETURN, cancelUrl: RETURN, timeoutUrl: RETURN, timeout: 900, merchant: { name: 'SYNTHETIC CONTROL MERCHANT', url: 'https://maximus.tennis' } }, order: { id: PROVIDER, reference: PROVIDER, amount: '1.00', currency: 'USD', description: 'MAXIMUS payment verification control' }, transaction: { reference: PROVIDER } });
   assert.deepEqual(result, { contract: TENNIS_CONTROL_MPGS_CONTRACT, sessionId: payload().session.id, providerOrderId: PROVIDER, currency: 'USD', totalMinor: '100', correlation: a.correlation, verifiedAt: new Date(AT).toISOString(), localSessionDeadline: a.localSessionDeadline });
   for (const forbidden of ['sourceOfFunds', 'successIndicator', 'sessionVersion', 'expiresAt', 'providerExpiresAt', 'verified_live', 'currencyPermission', PASSWORD]) assert.equal(JSON.stringify(result).includes(forbidden), false);
 });
 
 test('HTTP200 is accepted without assuming optional version, indicator, bank expiry or renderer', async () => {
   const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async () => json({ result: 'SUCCESS', session: { id: payload().session.id } }, { status: 200 }) }));
-  const result = await adapter.initiate({ attempt: attempt() });
+  const result = await adapter.initiate({ attempt: attempt(), locale: 'en' });
   assert.equal(result.sessionId, payload().session.id); assert.equal(result.expiry, undefined); assert.equal(result.embedded, undefined);
 });
 
@@ -36,38 +38,67 @@ test('missing explicit transport/credentials/name, browser and extra route confi
   let calls = 0; const savedFetch = globalThis.fetch;
   globalThis.fetch = () => { calls++; assert.fail('must not use global fetch'); };
   try {
-    for (const field of ['fetchImpl', 'password', 'merchantName', 'returnUrl', 'cancelUrl']) assert.throws(() => createTennisControlMpgsAdapter(options({ [field]: undefined })));
-    for (const extra of [{ apiVersion: '99' }, { origin: 'https://evil.invalid' }, { currency: 'AED' }, { merchantId: 'other' }, { password: 'unsafe\nheader' }, { merchantName: 'x'.repeat(41) }, { timeoutMs: 6001 }, { maxBodyBytes: 65537 }]) assert.throws(() => createTennisControlMpgsAdapter(options(extra)));
+    for (const field of ['fetchImpl', 'password', 'merchantName']) assert.throws(() => createTennisControlMpgsAdapter(options({ [field]: undefined })));
+    for (const extra of [{ apiVersion: '99' }, { origin: 'https://evil.invalid' }, { currency: 'AED' }, { merchantId: 'bad merchant!' }, { merchantId: '../other' }, { returnUrl: RETURN }, { password: 'unsafe\nheader' }, { merchantName: 'x'.repeat(41) }, { timeoutMs: 6001 }, { maxBodyBytes: 65537 }, { notificationUrl: 'https://evil.invalid/api/control/webhook' }, { notificationUrl: 'https://maximus.tennis/api/control/webhook?x=1' }, { notificationUrl: 'http://maximus.tennis/api/control/webhook' }]) assert.throws(() => createTennisControlMpgsAdapter(options(extra)));
     globalThis.window = {};
     try { assert.throws(() => createTennisControlMpgsAdapter(options()), { code: 'tennis_control_mpgs_server_only' }); } finally { delete globalThis.window; }
     assert.equal(calls, 0);
   } finally { globalThis.fetch = savedFetch; }
 });
 
-test('return/cancel URLs reject preview wildcard, credentials, cross-origin and descriptor query data', () => {
-  for (const url of ['https://preview.vercel.app/en/payment-control', 'https://maximus.tennis.evil.invalid/control', 'http://maximus.tennis/control', 'https://user:pass@maximus.tennis/control', 'https://maximus.tennis/control?session=private', 'https://maximus.tennis/control#private', 'https://maximus.tennis//control', 'https://maximus.tennis/a/../control']) {
-    assert.throws(() => createTennisControlMpgsAdapter(options({ returnUrl: url })), { code: 'tennis_control_mpgs_return_unconfigured' });
-    assert.throws(() => createTennisControlMpgsAdapter(options({ cancelUrl: url })), { code: 'tennis_control_mpgs_return_unconfigured' });
-  }
+test('return URL is the fixed public control page of a registered locale; nothing else is accepted', async () => {
+  assert.equal(tennisControlReturnUrl('ru'), 'https://maximus.tennis/ru/checkout/control');
+  for (const locale of ['xx', '', 'en/../admin', 'https://evil.invalid', undefined, null, 'EN']) assert.throws(() => tennisControlReturnUrl(locale), { code: 'tennis_control_mpgs_locale_invalid' });
+  let calls = 0; const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async () => { calls++; return json(payload()); } }));
+  for (const locale of ['xx', undefined, 'https://preview.vercel.app/en']) await assert.rejects(adapter.initiate({ attempt: attempt(), locale }));
+  assert.equal(calls, 0);
+});
+
+test('a configured same-origin webhook URL is sent as order.notificationUrl, with a merchant override', async () => {
+  const calls = [];
+  const adapter = createTennisControlMpgsAdapter(options({ merchantId: 'MERCHANT_2', notificationUrl: 'https://maximus.tennis/api/control/webhook', fetchImpl: async (url, init) => { calls.push({ url, init }); return json(payload()); } }));
+  await adapter.initiate({ attempt: attempt(), locale: 'de' });
+  assert.equal(calls[0].url, 'https://ap-gateway.mastercard.com/api/rest/version/100/merchant/MERCHANT_2/session');
+  assert.equal(calls[0].init.headers.Authorization, `Basic ${Buffer.from(`merchant.MERCHANT_2:${PASSWORD}`).toString('base64')}`);
+  const sent = JSON.parse(calls[0].init.body);
+  assert.equal(sent.order.notificationUrl, 'https://maximus.tennis/api/control/webhook'); assert.equal(sent.interaction.returnUrl, 'https://maximus.tennis/de/checkout/control');
+  assert.equal(adapter.merchantId, 'MERCHANT_2');
+});
+
+test('payment options inquiry is one authenticated unfiltered POST projected to currencies and 3DS schemes', async () => {
+  const calls = [];
+  const inquiry = { result: 'SUCCESS', merchant: '300281', paymentTypes: { card: { currencies: [{ currency: 'AED' }, { currency: 'USD' }, { currency: 'AED' }, { currency: 'bad' }], '3DSecureSchemes': [{ '3DSecureScheme': 'SECURE_CODE', supportedScheme: 'SECURE_CODE' }, { supportedScheme: 'VERIFIED_BY_VISA' }], cardTypes: [{ cardType: 'VISA', private: PASSWORD }] } } };
+  const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async (url, init) => { calls.push({ url, init }); return json(inquiry, { status: 200 }); } }));
+  const result = await adapter.inquire();
+  assert.equal(calls.length, 1); assert.equal(calls[0].url, 'https://ap-gateway.mastercard.com/api/rest/version/100/merchant/300281/paymentOptionsInquiry');
+  assert.equal(calls[0].init.method, 'POST'); assert.equal(calls[0].init.body, '{}');
+  assert.deepEqual(result, { contract: 'mpgs_payment_options_inquiry_100_v1', merchantId: '300281', cardPayments: true, currencies: ['AED', 'USD'], threeDSecureSchemes: ['SECURE_CODE', 'VERIFIED_BY_VISA'], usdPermitted: true, observedAt: new Date(AT).toISOString() });
+  assert.equal(JSON.stringify(result).includes(PASSWORD), false);
+  const aedOnly = createTennisControlMpgsAdapter(options({ fetchImpl: async () => json({ result: 'SUCCESS', merchant: '300281', paymentTypes: { card: { currencies: [{ currency: 'AED' }] } } }, { status: 200 }) }));
+  assert.equal((await aedOnly.inquire()).usdPermitted, false);
+  const noCard = createTennisControlMpgsAdapter(options({ fetchImpl: async () => json({ result: 'SUCCESS', merchant: '300281', paymentTypes: {} }, { status: 200 }) }));
+  assert.deepEqual(await noCard.inquire().then(r => [r.cardPayments, r.usdPermitted, r.currencies]), [false, false, []]);
+  for (const raw of [{ result: 'ERROR', error: { explanation: PASSWORD } }, { result: 'SUCCESS', merchant: 'other' }]) await assert.rejects(createTennisControlMpgsAdapter(options({ fetchImpl: async () => json(raw, { status: 200 }) })).inquire(), e => e.code === 'tennis_control_mpgs_inquiry_invalid' && !JSON.stringify(e).includes(PASSWORD));
+  await assert.rejects(createTennisControlMpgsAdapter(options({ fetchImpl: async () => { throw Error(PASSWORD); } })).inquire(), e => e.code === 'tennis_control_mpgs_inquiry_uncertain' && !String(e).includes(PASSWORD));
 });
 
 test('exact control scope, amount, currency, references and fresh local deadline precede any POST', async () => {
   let calls = 0; const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async () => { calls++; return json(payload()); } }));
-  for (const fields of [{ totalMinor: '101' }, { totalMinor: 100 }, { currency: 'AED' }, { currency: 'EUR' }, { kind: 'goods' }, { kind: 'deposit' }, { orderId: `MX-ORD-${'b'.repeat(32)}` }, { providerOrderId: '../other' }, { correlation: 'unbound' }, { scopeHash: 'bad' }, { attemptedAt: AT + 1 }, { localSessionDeadline: new Date(AT).toISOString() }, { localSessionDeadline: new Date(AT + 900001).toISOString() }, { sessionId: payload().session.id }]) await assert.rejects(adapter.initiate({ attempt: { ...attempt(), ...fields } }));
-  await assert.rejects(adapter.initiate({ attempt: attempt(), amountMinor: '100' }));
-  await assert.rejects(adapter.initiate({ attempt: attempt(), signal: {} }));
+  for (const fields of [{ totalMinor: '101' }, { totalMinor: 100 }, { currency: 'AED' }, { currency: 'EUR' }, { kind: 'goods' }, { kind: 'deposit' }, { orderId: `MX-ORD-${'b'.repeat(32)}` }, { providerOrderId: '../other' }, { correlation: 'unbound' }, { scopeHash: 'bad' }, { attemptedAt: AT + 1 }, { localSessionDeadline: new Date(AT).toISOString() }, { localSessionDeadline: new Date(AT + 900001).toISOString() }, { sessionId: payload().session.id }]) await assert.rejects(adapter.initiate({ attempt: { ...attempt(), ...fields }, locale: 'en' }));
+  await assert.rejects(adapter.initiate({ attempt: attempt(), locale: 'en', amountMinor: '100' }));
+  await assert.rejects(adapter.initiate({ attempt: attempt(), locale: 'en', signal: {} }));
   assert.equal(calls, 0);
 });
 
 test('attempt fields are snapshotted before the transport await', async () => {
   const a = attempt();
   const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async () => { a.providerOrderId = 'caller-change'; a.correlation = 'caller-change'; return json(payload()); } }));
-  const result = await adapter.initiate({ attempt: a }); assert.equal(result.providerOrderId, PROVIDER); assert.equal(result.correlation, attempt().correlation);
+  const result = await adapter.initiate({ attempt: a, locale: 'en' }); assert.equal(result.providerOrderId, PROVIDER); assert.equal(result.correlation, attempt().correlation);
 });
 
 test('success requires bounded valid private session and no explicit test/mock state', async () => {
   for (const raw of [null, [], {}, { result: 'PENDING', session: payload().session }, { result: 'ERROR', error: { explanation: PASSWORD } }, { result: 'SUCCESS', session: { id: '' } }, { result: 'SUCCESS', session: { id: 'https://evil.invalid/session' } }, { ...payload(), test: true }, { ...payload(), mock: true }, { ...payload(), liveMode: false }, { ...payload(), mode: 'test' }]) {
-    await assert.rejects(createTennisControlMpgsAdapter(options({ fetchImpl: async () => json(raw) })).initiate({ attempt: attempt() }), error => error.code === 'tennis_control_mpgs_session_invalid' && !JSON.stringify(error).includes(PASSWORD));
+    await assert.rejects(createTennisControlMpgsAdapter(options({ fetchImpl: async () => json(raw) })).initiate({ attempt: attempt(), locale: 'en' }), error => error.code === 'tennis_control_mpgs_session_invalid' && !JSON.stringify(error).includes(PASSWORD));
   }
 });
 
@@ -81,7 +112,7 @@ test('HTTP errors, redirects, HTML and wrong response origin are redacted and ne
   ];
   for (const [response, code] of responses) {
     let calls = 0; const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async () => { calls++; return response(); } }));
-    await assert.rejects(adapter.initiate({ attempt: attempt() }), e => e.code === code && e.cause === undefined && !JSON.stringify(e).includes(PASSWORD)); assert.equal(calls, 1);
+    await assert.rejects(adapter.initiate({ attempt: attempt(), locale: 'en' }), e => e.code === code && e.cause === undefined && !JSON.stringify(e).includes(PASSWORD)); assert.equal(calls, 1);
   }
 });
 
@@ -91,13 +122,13 @@ test('declared and streamed body bounds, invalid UTF8/JSON and nonobject respons
     [() => json({ ...payload(), extra: 'x'.repeat(1000) }), 'tennis_control_mpgs_body_too_large'],
     [() => new Response(new Uint8Array([0xff]), { status: 200, headers: { 'content-type': 'application/json' } }), 'tennis_control_mpgs_json_invalid'],
     [() => json('{badjson' + PASSWORD), 'tennis_control_mpgs_json_invalid'],
-  ]) await assert.rejects(createTennisControlMpgsAdapter(options({ maxBodyBytes: 512, fetchImpl: async () => response() })).initiate({ attempt: attempt() }), { code: expected });
+  ]) await assert.rejects(createTennisControlMpgsAdapter(options({ maxBodyBytes: 512, fetchImpl: async () => response() })).initiate({ attempt: attempt(), locale: 'en' }), { code: expected });
 });
 
 test('unknown initiation acknowledgement/fetch error is uncertain once with no spoofed error preservation', async () => {
   for (const error of [Error(PASSWORD), Object.assign(Error(PASSWORD), { code: 'tennis_control_mpgs_session_invalid', status: 503 })]) {
     let calls = 0; const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async () => { calls++; throw error; } }));
-    await assert.rejects(adapter.initiate({ attempt: attempt() }), e => e.code === 'tennis_control_mpgs_transport_uncertain' && e.cause === undefined && !String(e).includes(PASSWORD)); assert.equal(calls, 1);
+    await assert.rejects(adapter.initiate({ attempt: attempt(), locale: 'en' }), e => e.code === 'tennis_control_mpgs_transport_uncertain' && e.cause === undefined && !String(e).includes(PASSWORD)); assert.equal(calls, 1);
   }
 });
 
@@ -105,19 +136,19 @@ test('transport and body deadlines cancel bounded work without an automatic repl
   for (const fetchImpl of [async () => new Promise(() => {}), async () => new Response(new ReadableStream({ pull() { return new Promise(() => {}); }, cancel() { return new Promise(() => {}); } }), { status: 200, headers: { 'content-type': 'application/json' } })]) {
     let calls = 0; const start = Date.now();
     const adapter = createTennisControlMpgsAdapter(options({ timeoutMs: 20, fetchImpl: async (...args) => { calls++; return fetchImpl(...args); } }));
-    await assert.rejects(adapter.initiate({ attempt: attempt() }), { code: 'tennis_control_mpgs_timeout' }); assert.equal(calls, 1); assert.ok(Date.now() - start < 1000);
+    await assert.rejects(adapter.initiate({ attempt: attempt(), locale: 'en' }), { code: 'tennis_control_mpgs_timeout' }); assert.equal(calls, 1); assert.ok(Date.now() - start < 1000);
   }
 });
 
 test('preaborted and inflight signals never retry; expiry while response arrives does not invent bank TTL', async () => {
   const controller = new AbortController(); let calls = 0;
   const adapter = createTennisControlMpgsAdapter(options({ fetchImpl: async () => { calls++; return new Promise(() => {}); } }));
-  const pending = adapter.initiate({ attempt: attempt(), signal: controller.signal }); controller.abort();
+  const pending = adapter.initiate({ attempt: attempt(), locale: 'en', signal: controller.signal }); controller.abort();
   await assert.rejects(pending, { code: 'tennis_control_mpgs_aborted' }); assert.equal(calls, 1);
-  await assert.rejects(adapter.initiate({ attempt: attempt(), signal: controller.signal }), { code: 'tennis_control_mpgs_aborted' }); assert.equal(calls, 1);
+  await assert.rejects(adapter.initiate({ attempt: attempt(), locale: 'en', signal: controller.signal }), { code: 'tennis_control_mpgs_aborted' }); assert.equal(calls, 1);
   let now = AT;
   const late = createTennisControlMpgsAdapter(options({ now: () => now, fetchImpl: async () => { now = AT + 900000; return json(payload()); } }));
-  await assert.rejects(late.initiate({ attempt: attempt() }), { code: 'tennis_control_mpgs_local_attempt_expired' });
+  await assert.rejects(late.initiate({ attempt: attempt(), locale: 'en' }), { code: 'tennis_control_mpgs_local_attempt_expired' });
 });
 
 const readRequest = { providerOrderId: PROVIDER, transactionId: 'synthetic-control-payment', kind: 'capture' };
@@ -149,8 +180,13 @@ test('control reader requires explicit fetch/API100 and rejects non-control prov
 test('control reader rejects wrong total/partial capture/AUTHORIZED-only and mismatched currency', async () => {
   const changes = [r => { r.amount = '1.01'; r.totalCapturedAmount = '1.01'; r.transaction[0].order.amount = '1.01'; r.transaction[0].transaction.amount = '1.01'; }, r => { r.totalCapturedAmount = '0.99'; }, r => { r.status = 'AUTHORIZED'; r.transaction[0].transaction.type = 'AUTHORIZATION'; }, r => { r.transaction[0].response.gatewayCode = 'DECLINED'; }, r => { r.transaction[0].transaction.currency = 'AED'; }, r => { r.transaction[0].order.currency = 'AED'; }, r => { r.merchant = 'other'; }];
   for (const change of changes) { const raw = order(); change(raw); await assert.rejects(createTennisControlMpgsReader(readOptions(raw)).readMovement(readRequest)); }
-  const emptyWrongTotal = order(); emptyWrongTotal.amount = '2.00'; emptyWrongTotal.transaction = [];
-  await assert.rejects(createTennisControlMpgsReader(readOptions(emptyWrongTotal)).discoverMovements({ providerOrderId: PROVIDER }));
+  const wrongTotalCapture = order(); wrongTotalCapture.amount = '2.00';
+  await assert.rejects(createTennisControlMpgsReader(readOptions(wrongTotalCapture)).discoverMovements({ providerOrderId: PROVIDER }), { code: 'native_mpgs_order_mismatch' });
+  // Without an approved movement the gateway reports order.amount as zero: no evidence, not a mismatch.
+  const declined = order(); declined.amount = '0'; declined.totalCapturedAmount = '0'; declined.status = 'FAILED'; declined.transaction[0].result = 'FAILURE'; declined.transaction[0].response.gatewayCode = 'DECLINED';
+  assert.deepEqual(await createTennisControlMpgsReader(readOptions(declined)).discoverMovements({ providerOrderId: PROVIDER }), []);
+  const nativeDeclined = structuredClone(declined); nativeDeclined.currency = 'AED'; nativeDeclined.transaction[0].order.currency = 'AED'; nativeDeclined.transaction[0].transaction.currency = 'AED';
+  assert.deepEqual(await createNativeMpgsReader(readOptions(nativeDeclined)).discoverMovements({ providerOrderId: PROVIDER }), []);
 });
 
 test('USD control refunds require full original capture and exact complete refund history', async () => {
@@ -169,4 +205,37 @@ test('USD control histories containing successful monetary voids/chargeback cann
     const reader = createTennisControlMpgsReader(readOptions(raw));
     await assert.rejects(reader.readMovement(readRequest), { code: 'native_mpgs_history_requires_review' }); await assert.rejects(reader.discoverMovements({ providerOrderId: PROVIDER }), { code: 'native_mpgs_history_requires_review' });
   }
+});
+
+const absent = () => json({ result: 'ERROR', error: { cause: 'INVALID_REQUEST', explanation: `Order not found ${PASSWORD}`, field: 'order.id', validationType: 'INVALID' } }, { status: 400 });
+
+test('control reader reports a not-yet-created gateway order as no movements and present:false', async () => {
+  let calls = 0; const reader = createTennisControlMpgsReader({ ...readOptions(order()), fetchImpl: async () => { calls++; return absent(); } });
+  assert.deepEqual(await reader.discoverMovements({ providerOrderId: PROVIDER }), []);
+  const summary = await reader.readSummary({ providerOrderId: PROVIDER });
+  assert.deepEqual(summary, { present: false, providerOrderId: PROVIDER, observedAt: new Date(AT).toISOString(), validationType: 'INVALID' });
+  assert.equal(JSON.stringify(summary).includes(PASSWORD), false); assert.equal(calls, 2);
+  // Other 4xx bodies and other error causes stay transport/scope failures, never "pending".
+  for (const response of [() => json({ result: 'ERROR', error: { cause: 'REQUEST_REJECTED' } }, { status: 400 }), () => new Response(PASSWORD, { status: 401 }), () => json({ result: 'ERROR' }, { status: 400 })]) {
+    const strict = createTennisControlMpgsReader({ ...readOptions(order()), fetchImpl: async () => response() });
+    await assert.rejects(strict.discoverMovements({ providerOrderId: PROVIDER })); await assert.rejects(strict.readSummary({ providerOrderId: PROVIDER }));
+  }
+  // The goods reader keeps its strict contract: an absent order is an HTTP error there.
+  await assert.rejects(createNativeMpgsReader({ ...readOptions(order('AED')), fetchImpl: async () => absent() }).discoverMovements({ providerOrderId: PROVIDER }), { code: 'native_read_http_error' });
+});
+
+test('control summary projects order status, last transaction outcome and scope agreement without raw fields', async () => {
+  const raw = order(); raw.sourceOfFunds = { provided: { card: { number: '512345xxxxxx0008' } } }; raw.transaction[0].sourceOfFunds = raw.sourceOfFunds;
+  raw.transaction.push({ result: 'SUCCESS', merchant: '300281', order: { id: PROVIDER, currency: 'USD', amount: '1.00' }, response: { gatewayCode: 'AUTHENTICATION_SUCCESSFUL' }, timeOfRecord: new Date(AT - 5000).toISOString(), transaction: { id: 'auth-1', type: 'AUTHENTICATION', currency: 'USD', amount: '1.00' } });
+  const summary = await createTennisControlMpgsReader(readOptions(raw)).readSummary({ providerOrderId: PROVIDER });
+  assert.deepEqual(summary, { present: true, providerOrderId: PROVIDER, observedAt: new Date(AT).toISOString(), orderStatus: 'CAPTURED', currencyMatches: true, amountMatches: true, capturedMinor: '100', transactionCount: 2, lastTransaction: { type: 'PAYMENT', result: 'SUCCESS', gatewayCode: 'APPROVED' } });
+  assert.equal(JSON.stringify(summary).includes('0008'), false);
+  const declined = order(); declined.amount = 0; declined.totalCapturedAmount = 0; declined.status = 'FAILED'; declined.transaction[0].result = 'FAILURE'; declined.transaction[0].response.gatewayCode = 'DECLINED';
+  const d = await createTennisControlMpgsReader(readOptions(declined)).readSummary({ providerOrderId: PROVIDER });
+  assert.equal(d.orderStatus, 'FAILED'); assert.equal(d.amountMatches, true); assert.equal(d.currencyMatches, true); assert.deepEqual(d.lastTransaction, { type: 'PAYMENT', result: 'FAILURE', gatewayCode: 'DECLINED' });
+  const foreign = order('AED'); foreign.status = 'injected<script>'; foreign.transaction[0].response.gatewayCode = 42;
+  const f = await createTennisControlMpgsReader(readOptions(foreign)).readSummary({ providerOrderId: PROVIDER });
+  assert.equal(f.currencyMatches, false); assert.equal(f.orderStatus, 'UNKNOWN'); assert.equal(f.lastTransaction.gatewayCode, 'UNKNOWN');
+  const other = order(); other.id = 'MCother';
+  await assert.rejects(createTennisControlMpgsReader(readOptions(other)).readSummary({ providerOrderId: PROVIDER }), { code: 'native_mpgs_order_mismatch' });
 });

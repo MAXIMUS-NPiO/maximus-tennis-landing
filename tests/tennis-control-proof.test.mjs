@@ -173,16 +173,16 @@ test('synthetic integration: immutable owner control → one source-derived sess
   await store.commit({ writes: [{ type: 'user', id: ownerUserId, expectedVersion: -1, doc: { id: ownerUserId, status: 'active' } }, { type: 'portalMembership', id: `maximus-tennis_${ownerUserId}`, expectedVersion: -1, doc: { userId: ownerUserId, organizationId: 'maximus-tennis' } }] });
   const grant = { status: 'verified', kind: 'payment_control_authorization', purpose: 'payment_control', mode: 'live', test: false, authenticationBasis: 'independently_verified_owner_authorization', authorizationId: 'synthetic-control-grant', evidenceId: 'synthetic-owner-proof', scopeHash: TENNIS_CONTROL_SCOPE.hash, projectId: 'tennis', organizationId: 'maximus-tennis', ownerUserId, currency: 'USD', totalMinor: '100', fulfillment: 'none', termsVersion: 'control-usd1-v1', termsText: 'USD 1.00 payment control, no goods, delivery or investment.', verifiedAt: new Date(at - 1000).toISOString(), expiresAt: new Date(at + 3600000).toISOString() };
   let bankOrder;
-  const adapter = createTennisControlMpgsAdapter({ password: 'synthetic-not-a-bank-key', merchantName: 'MAXIMUS', returnUrl: 'https://maximus.tennis/en/control-payment/return', cancelUrl: 'https://maximus.tennis/en/control-payment', now: () => clock, fetchImpl: async (_url, request) => {
-    posts++; const body = JSON.parse(request.body); assert.equal(body.apiOperation, 'INITIATE_CHECKOUT'); assert.equal(body.interaction.operation, 'PURCHASE'); assert.equal(body.order.amount, '1.00'); assert.equal(body.order.currency, 'USD'); bankOrder = body.order.id;
+  const adapter = createTennisControlMpgsAdapter({ password: 'synthetic-not-a-bank-key', merchantName: 'MAXIMUS', now: () => clock, fetchImpl: async (_url, request) => {
+    posts++; const body = JSON.parse(request.body); assert.equal(body.apiOperation, 'INITIATE_CHECKOUT'); assert.equal(body.interaction.operation, 'PURCHASE'); assert.equal(body.order.amount, '1.00'); assert.equal(body.order.currency, 'USD'); assert.equal(body.interaction.returnUrl, 'https://maximus.tennis/en/checkout/control'); bankOrder = body.order.id;
     return new Response(JSON.stringify({ result: 'SUCCESS', session: { id: 'SESSIONsyntheticControl12345' } }), { status: 201, headers: { 'Content-Type': 'application/json' } });
   } });
   const options = { store, now: () => clock, production: false, resolveAuthorization: async () => structuredClone(grant), initiateSession: adapter.initiate };
   const orders = createTennisControlOrderService(options);
   const issued = await orders.issue({ ctx, authorizationReference: 'synthetic-owner-ref', idempotencyKey: 'control-idem-123', termsVersion: grant.termsVersion });
   const ref = { ctx, orderId: issued.order.id };
-  const session = await orders.initiate(ref); assert.equal(session.status, 'session_created'); assert.equal(session.paymentVerified, false); assert.equal(session.rendererReady, false);
-  await createTennisControlOrderService(options).initiate(ref); assert.equal(posts, 1);
+  const session = await orders.initiate({ ...ref, locale: 'en' }); assert.equal(session.status, 'session_created'); assert.equal(session.paymentVerified, false); assert.equal(session.rendererReady, false);
+  await createTennisControlOrderService(options).initiate({ ...ref, locale: 'en' }); assert.equal(posts, 1);
   clock += 2000;
   const reader = createTennisControlMpgsReader({ origin: NATIVE_MPGS_ORIGIN, merchantId: NATIVE_MPGS_MERCHANT, apiVersion: '100', schema: NATIVE_MPGS_SCHEMA, password: 'synthetic-not-a-bank-key', now: () => clock, fetchImpl: async (url, request) => {
     gets++; assert.equal(request.method, 'GET'); assert.ok(url.endsWith('/order/' + bankOrder));

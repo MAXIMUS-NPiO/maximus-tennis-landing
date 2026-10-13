@@ -28,6 +28,8 @@ function optionsFor(key, dict) {
     case "basis": return Object.entries(dict.lead.basis);
     case "seriesInterest": return seriesList.map((s) => [s.id, `${s.name} · ${s.headSizeSqIn} ${L.sqin}`]);
     case "interests": return Object.entries(F.interestOptions);
+    case "forumInterests": return Object.entries(F.forumInterests || {});
+    case "hosting": return Object.entries(F.hostingOptions || {});
     case "ageBand": return Object.entries(G.ageBands);
     case "interestArea": return Object.entries(F.strategicAreas);
     case "requestType": return Object.entries(F.ownerTypes);
@@ -63,6 +65,7 @@ export default function LeadForm({
   purchaseIntent,
   programRequest,
   onStateChange,
+  lockedFields = [],
 }) {
   const F = dict.form;
   const L = dict.common.labels;
@@ -205,6 +208,7 @@ export default function LeadForm({
       "aria-required": req ? "true" : undefined,
       "aria-invalid": errors[k] ? "true" : undefined,
       "aria-describedby": describedBy(k, hint),
+      ...(lockedFields.includes(k) ? { readOnly: true } : {}),
     };
     const label = (
       <label htmlFor={id(k)}>
@@ -302,7 +306,7 @@ export default function LeadForm({
   const errorKeys = order.filter((k) => errors[k]);
   const failed = state === "failed" && result;
   const failMsg = failed ? LD.fail[result.code] || (String(result.code).startsWith("store_") ? LD.fail.unavailable : LD.fail.default) : "";
-  const showMail = failed && !NO_MAIL_FALLBACK.includes(String(result.code));
+  const showMail = purpose !== "forum" && failed && !NO_MAIL_FALLBACK.includes(String(result.code));
 
   return (
     <form ref={formRef} className="form lead-form" onSubmit={onSubmit} noValidate data-state={state} data-purpose={purpose} aria-busy={state === "submitting" ? "true" : undefined}>
@@ -315,7 +319,7 @@ export default function LeadForm({
             </div>
           )}
           {showMail && <p className="small">{LD.sendByEmailNote}</p>}
-          <p className="small">{LD.keepNote} {LD.fallback.split("{email}")[0]}<a href={`mailto:${site.email}`}>{site.email}</a>{LD.fallback.split("{email}")[1]}</p>
+          {purpose !== "forum" && <p className="small">{LD.keepNote} {LD.fallback.split("{email}")[0]}<a href={`mailto:${site.email}`}>{site.email}</a>{LD.fallback.split("{email}")[1]}</p>}
         </div>
       )}
       {errorKeys.length > 0 && (

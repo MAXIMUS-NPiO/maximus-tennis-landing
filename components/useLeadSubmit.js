@@ -63,7 +63,7 @@ export function useLeadSubmit({ purpose, locale, context = {}, series, endpoint 
       let data = null;
       try {
         const headers = { "Content-Type": "application/json" };
-        if (endpoint === "/api/orders") {
+        if (endpoint === "/api/orders" || endpoint === "/api/accounts/forum") {
           const session = await fetch("/api/accounts/session", { credentials: "same-origin", cache: "no-store", signal: ctrl.signal });
           if (session.ok) {
             const account = await session.json();
@@ -97,11 +97,11 @@ export function useLeadSubmit({ purpose, locale, context = {}, series, endpoint 
         track("lead_submit_success", { ...a, request_id: data.request_id });
         return { ok: true, requestId: data.request_id };
       }
-      if (res.status === 400 && data && data.status === "invalid" && data.errors) {
+      if (res.status === 400 && data && ((data.status === "invalid" && data.errors) || data.fieldErrors)) {
         setState("editing");
-        setResult({ code: "invalid", errors: data.errors });
+        setResult({ code: "invalid", errors: data.errors || data.fieldErrors });
         track("lead_submit_error", { ...a, error_code: "invalid" });
-        return { ok: false, code: "invalid", errors: data.errors };
+        return { ok: false, code: "invalid", errors: data.errors || data.fieldErrors };
       }
       let code = (data && (data.code || data.status)) || `http_${res.status}`;
       if (res.status === 503) code = "unavailable";

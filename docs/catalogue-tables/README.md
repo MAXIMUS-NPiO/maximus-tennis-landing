@@ -2,7 +2,7 @@
 
 © 2026 Maximus Kiriyakulov. All rights reserved. No licence is granted.
 
-Prepared for the existing maximus.tennis repository. This is a request catalogue, not stock, a price list, manufacturing approval or competition certification. Production publication is outside this patch.
+Prepared for the existing maximus.tennis repository. This is a request catalogue, not stock, a price list, manufacturing approval or competition certification. The initial 12 October delivery was an unpublished patch. The owner subsequently authorized production publication on 13 October; release verification and deployment status are recorded in PR #5 and the release handoff.
 
 ## Confirmed model
 
@@ -64,4 +64,4 @@ Version 2 playing requests require a length choice; legacy records with no lengt
 
 Manufacturing review retains the requested length. Approval must confirm the exact known requested length; any supplied Spot protocol length is parsed as a positive numeric value even when the original target is unknown. This does not substitute for physical engineering or measurement.
 
-Original photo and logo binaries are unchanged. Original payments PR #2, mail PR #3 and local contribution `16cdb4d` are excluded. No client messages, paid provider fallback, remote branch push, merge or production deployment are part of this delivery.
+Original photo and logo binaries are unchanged. The catalogue release is based on current main `6c35541f1e3729574b517c3c5994a485979e814a` and preserves work already released there, including the owner email-copy release, checkout/control functionality and CNY Family Plan change. It does not merge payments PR #2 or add the separate local contribution `16cdb4d`. New catalogue configurations remain request-only. No client messages or paid provider fallback are part of catalogue verification. PR #5 tracks the owner-authorized publication; a ready preview alone is not proof of production release.

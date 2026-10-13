@@ -7,7 +7,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   defaultPlan, parsePlan, computePlan, restore, serialise, sessionHours, unitPrice, money,
-  STORAGE_VERSION,
+  STORAGE_VERSION, CURRENCIES,
 } from "../lib/familyPlan";
 
 const close = (a, b, msg) => assert.ok(Math.abs(a - b) < 1e-9, `${msg}: ${a} vs ${b}`);
@@ -296,6 +296,18 @@ test("save and restore keep the whole plan; a damaged record is refused, never h
   assert.equal(restore(JSON.stringify(bad)).status, "invalid");
   const step = JSON.parse(serialise(p)); step.plan.step = 9;
   assert.equal(restore(JSON.stringify(step)).status, "invalid");
+});
+
+test("currencies: USD, EUR, GBP and the Chinese yuan; the rouble is withdrawn and a saved rouble plan is refused, never relabelled", () => {
+  assert.deepEqual(CURRENCIES, ["USD", "EUR", "GBP", "CNY"]);
+  const p = reference({ currency: "CNY" });
+  assert.equal(parsePlan(p).ok, true);
+  assert.equal(restore(serialise(p)).plan.currency, "CNY");
+  for (const locale of ["en", "ru", "zh"]) assert.match(money(locale, "CNY", 5575), /5[\s,.\u00a0\u202f]?575/);
+  const rouble = reference({ currency: "RUB" });
+  assert.equal(parsePlan(rouble).ok, false);
+  assert.equal(parsePlan(rouble).errors[0].path, "currency");
+  assert.equal(restore(serialise(rouble)).status, "invalid");
 });
 
 test("the quote source is optional and capped at 200 characters; the date is optional", () => {

@@ -218,6 +218,8 @@ export default function FamilyPlan({ t, numLocale }) {
         <div className="fp-currency">
           <label htmlFor={fid("currency")}>{t.currency.label}</label>
           <select id={fid("currency")} value={cur} onChange={(e) => onChange("currency", e.target.value)}>
+            {/* A tab draft from before a currency was withdrawn: shown blank, never relabelled. */}
+            {!CURRENCIES.includes(cur) && <option value={cur} disabled>—</option>}
             {CURRENCIES.map((c) => <option key={c} value={c}>{c}</option>)}
           </select>
           <p className="fp-hint">{t.currency.note}</p>

@@ -14,10 +14,12 @@ import { join } from "node:path";
 
 // Each native-store suite owns its Redis process and a fresh, disposable data directory.
 // Never attach to an already listening server or load another checkout's dump.rdb.
-export async function startTestRedis(port, { timeoutMs = 3000 } = {}) {
-  const directory = mkdtempSync(join(tmpdir(), "maximus-native-redis-"));
+export async function startTestRedis(port, { timeoutMs = 3000, persist = false, directory: reuseDirectory = null } = {}) {
+  // `persist` turns on the append-only file so that a restart on the same directory (a
+  // restart/persistence test) sees every committed record; the default stays memory-only.
+  const directory = reuseDirectory || mkdtempSync(join(tmpdir(), "maximus-native-redis-"));
   let child;
-  const close = async () => {
+  const close = async ({ keepDirectory = false } = {}) => {
     try {
       if (child?.pid && child.exitCode === null && child.signalCode === null) {
         await new Promise((resolve, reject) => {
@@ -35,11 +37,11 @@ export async function startTestRedis(port, { timeoutMs = 3000 } = {}) {
         });
       }
     } finally {
-      rmSync(directory, { recursive: true, force: true });
+      if (!keepDirectory) rmSync(directory, { recursive: true, force: true });
     }
   };
   try {
-    child = spawn("redis-server", ["--bind", "127.0.0.1", "--protected-mode", "yes", "--port", String(port), "--dir", directory, "--save", "", "--appendonly", "no"], {
+    child = spawn("redis-server", ["--bind", "127.0.0.1", "--protected-mode", "yes", "--port", String(port), "--dir", directory, "--save", "", "--appendonly", persist ? "yes" : "no", ...(persist ? ["--appendfsync", "always"] : [])], {
       stdio: ["ignore", "pipe", "pipe"],
       env: { PATH: process.env.PATH || "/usr/bin:/bin", TMPDIR: tmpdir(), MAXIMUS_TEST_REDIS_DIR: directory },
     });
@@ -63,7 +65,7 @@ export async function startTestRedis(port, { timeoutMs = 3000 } = {}) {
       child.on("error", finish);
       child.once("exit", () => finish(bridgeError("redis_startup_exit")));
     });
-    return { close };
+    return { close, directory };
   } catch (error) {
     await close();
     throw error;

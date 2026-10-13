@@ -53,6 +53,8 @@ Nothing from a request is written to logs. IP addresses are never stored with a 
 | `RATE_LIMIT_SALT` | recommended | Salt for IP hashing (default: derived from the store token). |
 | `LEADS_RATE_LIMIT`, `LEADS_RATE_WINDOW_SECONDS` | optional | Default 10 requests per 600 s per network. |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | optional | GA4 (`G-…`). Only then a consent bar appears; the tag loads only after “Allow”. In GA4 → Data streams → Enhanced measurement, **disable “Page changes based on browser history events”** (the site sends controlled page_view events itself). Mark `generate_lead` as a key event. |
+| `PORTAL_ENABLED`, `PORTAL_RUNTIME_VERIFIED` | for accounts | Both exactly `true` enable the customer account portal (`/{locale}/account`); it also needs the store and SMTP settings above. See `docs/PORTAL_READINESS.md`. |
+| `TENNIS_CONTROL_ENABLED`, `TENNIS_CONTROL_OWNER_EMAIL`, `NATIVE_MPGS_API_PASSWORD`, `MPGS_NOTIFICATION_SECRET` | owner control payment | The owner's USD 1.00 control payment on `/{locale}/checkout/control` through the bank's embedded form: the switch, the owner's own verified account e-mail, the merchant's existing API 100 password (server only) and the 32-character webhook secret from Merchant Administration. Optional `TENNIS_CONTROL_MERCHANT_ID`, `TENNIS_CONTROL_MERCHANT_NAME`. See `docs/TENNIS_CONTROL_PAYMENT_READINESS.md`. |
 
 Private register: `https://<host>/api/leads/admin` — list, full request, notification status, “Retry notification now”, “Process due notifications”; `?format=json` for export.
 

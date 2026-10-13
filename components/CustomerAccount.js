@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { accountLabels, accountOperationLabels } from '../content/account';
 import { commerceLabels } from '../content/commerce';
 import OrderAccount from './OrderAccount';
+import { TennisControlAccountStatus } from './TennisControl';
 
 /** Only public session/ledger projections enter this component. Passwords and verification
  * tokens are submitted explicitly; they never enter browser storage or link query parameters.
@@ -349,6 +350,7 @@ function CustomerPortal({ locale, dict }) {
         <section className="stack"><h2 className="h-3">MyDeposit</h2><p>{T.noData}</p></section>
         <section className="stack"><h2 className="h-3">MyBonus</h2><p>{T.noData}</p></section></div>}
       {Number.isSafeInteger(nextOffset) && nextOffset > 0 && <div><button type="button" className="btn-outline" disabled={busy || ledgerLoading} onClick={() => refreshLedger(nextOffset)}>{T.more}</button></div>}
+      {session.user.emailVerified && <TennisControlAccountStatus key={session.csrfToken} locale={locale} csrfToken={session.csrfToken} />}
       <section className="stack" aria-labelledby="customer-orders-title">
         <h2 className="h-3" id="customer-orders-title">{commerceLabels[locale].account}</h2>
         {ordersLoading && <p role="status">{T.refresh}…</p>}

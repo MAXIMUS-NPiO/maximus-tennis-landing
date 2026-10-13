@@ -11,6 +11,7 @@ import { forbidden } from '../lib/platform/errors.js';
 import { TENNIS_CONTROL_SCOPE, createTennisControlOrderService } from '../lib/commerce/tennis-control-order.js';
 import { createTennisControlProofService, TENNIS_CONTROL_PROOF_TYPE } from '../lib/commerce/tennis-control-proof.js';
 import { createTennisControlMpgsAdapter } from '../lib/platform/tennis-control-mpgs.js';
+import { CONTROL_CLOCK_SKEW_MS } from '../lib/platform/native-mpgs.js';
 import { createTennisControlMpgsReader, NATIVE_MPGS_ORIGIN, NATIVE_MPGS_MERCHANT, NATIVE_MPGS_SCHEMA } from '../lib/platform/native-mpgs.js';
 
 const at = Date.parse('2026-10-11T05:00:00.000Z');
@@ -137,9 +138,14 @@ test('foreign owner and ownership revocation during provider query cannot read o
   await assert.rejects(f.make().inspect(input), { code: 'owner_required' }); assert.equal(await f.store.get(TENNIS_CONTROL_PROOF_TYPE, orderId), null);
 });
 test('wrong provider, merchant, amount, currency, authorization movement or absent fields never confirm capture', async () => {
-  for (const change of [{ providerOrderId: 'foreign' }, { merchantId: 'foreign' }, { amountMinor: '99' }, { totalMinor: '101' }, { currency: 'AED' }, { currency: undefined }, { amountMinor: undefined }, { kind: 'authorization' }, { capturedMinor: '0' }, { occurredAt: new Date(at - 3000).toISOString() }, { verifiedAt: new Date(at + 1).toISOString() }]) {
+  for (const change of [{ providerOrderId: 'foreign' }, { merchantId: 'foreign' }, { amountMinor: '99' }, { totalMinor: '101' }, { currency: 'AED' }, { currency: undefined }, { amountMinor: undefined }, { kind: 'authorization' }, { capturedMinor: '0' }, { occurredAt: new Date(at - 3000 - CONTROL_CLOCK_SKEW_MS).toISOString() }, { verifiedAt: new Date(at + 1).toISOString() }, { occurredAt: new Date(at + CONTROL_CLOCK_SKEW_MS + 1).toISOString() }]) {
     const f = fixture(); f.setRead(async () => [movement(change)]);
     const result = await f.make().inspect(input); assert.equal(result.status, 'review_required'); assert.equal(result.capturedMinor, '0');
+  }
+  // A capture stamped within the bounded gateway clock difference is still a verified capture.
+  for (const change of [{ occurredAt: new Date(at - 3000).toISOString() }, { occurredAt: new Date(at + CONTROL_CLOCK_SKEW_MS - 1000).toISOString() }]) {
+    const f = fixture(); f.setRead(async () => [movement(change)]);
+    assert.equal((await f.make().inspect(input)).status, 'captured');
   }
 });
 test('complete refund history updates capture proof without creating a refund; duplicates remain idempotent', async () => {

@@ -32,7 +32,7 @@ export default async function Page({ params }) {
         note={`${S.grips} ${S.weightsP}`}
         strings={{ zoom: C.zoom, close: C.close, grams: L.grams }}
       />
-      <Section band="band-1"><Kickers items={S.notes} /><div className="btn-row"><Cta locale={locale} to="contact" label={S.cta} purpose="product" /></div></Section>
+      <Section band="band-1"><Kickers items={S.notes} /><div className="btn-row"><Cta locale={locale} to="build" query="series=spot" label={dict.build.cta} /></div></Section>
     </>
   );
 }

@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Swedish dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const sv = {
   meta: {
@@ -1179,4 +1180,4 @@ const sv = {
   notFound: { title: "Sidan hittades inte", p: "Sidan du efterfrågade finns inte på det här språket.", cta: "Till startsidan" },
 };
 
-export default sv;
+export default applyCatalogueUpdate("sv", sv);

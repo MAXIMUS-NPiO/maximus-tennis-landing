@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Polish dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const pl = {
   meta: {
@@ -1179,4 +1180,4 @@ const pl = {
   notFound: { title: "Strona nie znaleziona", p: "Żądana strona nie istnieje w tym języku.", cta: "Przejdź na stronę główną" },
 };
 
-export default pl;
+export default applyCatalogueUpdate("pl", pl);

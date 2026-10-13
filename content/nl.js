@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Dutch dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const nl = {
   meta: {
@@ -1179,4 +1180,4 @@ const nl = {
   notFound: { title: "Pagina niet gevonden", p: "De pagina die u hebt opgevraagd bestaat niet in deze taal.", cta: "Naar de startpagina" },
 };
 
-export default nl;
+export default applyCatalogueUpdate("nl", nl);

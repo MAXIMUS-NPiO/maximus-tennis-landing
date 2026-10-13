@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Italian dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const it = {
   meta: {
@@ -1179,4 +1180,4 @@ const it = {
   notFound: { title: "Pagina non trovata", p: "La pagina richiesta non esiste in questa lingua.", cta: "Torna alla pagina iniziale" },
 };
 
-export default it;
+export default applyCatalogueUpdate("it", it);

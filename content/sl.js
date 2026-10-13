@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Slovenian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const sl = {
   meta: {
@@ -1179,4 +1180,4 @@ const sl = {
   notFound: { title: "Strani ni mogoče najti", p: "Stran, ki ste jo zahtevali, v tem jeziku ne obstaja.", cta: "Pojdite na domačo stran" },
 };
 
-export default sl;
+export default applyCatalogueUpdate("sl", sl);

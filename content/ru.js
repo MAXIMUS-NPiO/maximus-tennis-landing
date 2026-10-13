@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Russian dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const ru = {
   meta: {
@@ -1179,4 +1180,4 @@ const ru = {
   notFound: { title: "Страница не найдена", p: "Запрошенная страница не существует на этом языке.", cta: "Перейти на главную" },
 };
 
-export default ru;
+export default applyCatalogueUpdate("ru", ru);

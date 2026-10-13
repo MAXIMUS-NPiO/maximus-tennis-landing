@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Macedonian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const mk = {
   meta: {
@@ -1179,4 +1180,4 @@ const mk = {
   notFound: { title: "Страницата не е најдена", p: "Страницата што ја побаравте не постои на овој јазик.", cta: "Одете на почетната страница" },
 };
 
-export default mk;
+export default applyCatalogueUpdate("mk", mk);

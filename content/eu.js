@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Basque dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const eu = {
   meta: {
@@ -1179,4 +1180,4 @@ const eu = {
   notFound: { title: "Orria ez da aurkitu", p: "Eskatu duzun orria ez dago hizkuntza honetan.", cta: "Joan hasiera-orrira" },
 };
 
-export default eu;
+export default applyCatalogueUpdate("eu", eu);

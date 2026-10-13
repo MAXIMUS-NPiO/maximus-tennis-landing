@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Catalan dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const ca = {
   meta: {
@@ -1179,4 +1180,4 @@ const ca = {
   notFound: { title: "Pàgina no trobada", p: "La pàgina que heu demanat no existeix en aquesta llengua.", cta: "Anar a la pàgina d'inici" },
 };
 
-export default ca;
+export default applyCatalogueUpdate("ca", ca);

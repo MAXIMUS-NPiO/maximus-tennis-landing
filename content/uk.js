@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Ukrainian dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const uk = {
   meta: {
@@ -1179,4 +1180,4 @@ const uk = {
   notFound: { title: "Сторінку не знайдено", p: "Сторінки, яку ви запросили, не існує в цій мові.", cta: "Перейти на головну" },
 };
 
-export default uk;
+export default applyCatalogueUpdate("uk", uk);

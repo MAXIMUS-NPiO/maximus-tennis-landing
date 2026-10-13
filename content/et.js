@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Estonian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const et = {
   meta: {
@@ -1179,4 +1180,4 @@ const et = {
   notFound: { title: "Lehte ei leitud", p: "Teie soovitud lehte selles keeles ei ole.", cta: "Mine avalehele" },
 };
 
-export default et;
+export default applyCatalogueUpdate("et", et);

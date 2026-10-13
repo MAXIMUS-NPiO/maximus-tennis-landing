@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Romanian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const ro = {
   meta: {
@@ -1179,4 +1180,4 @@ const ro = {
   notFound: { title: "Pagină inexistentă", p: "Pagina pe care ați solicitat-o nu există în această limbă.", cta: "Mergeți la pagina principală" },
 };
 
-export default ro;
+export default applyCatalogueUpdate("ro", ro);

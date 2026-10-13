@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Korean dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const ko = {
   meta: {
@@ -1179,4 +1180,4 @@ const ko = {
   notFound: { title: "페이지를 찾을 수 없습니다", p: "요청한 페이지는 이 언어로 제공되지 않습니다.", cta: "홈으로 이동" },
 };
 
-export default ko;
+export default applyCatalogueUpdate("ko", ko);

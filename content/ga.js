@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Irish (Gaeilge, An Caighdeán Oifigiúil) dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const ga = {
   meta: {
@@ -1179,4 +1180,4 @@ const ga = {
   notFound: { title: "Leathanach gan aimsiú", p: "Níl an leathanach a d'iarr tú ann sa teanga seo.", cta: "Téigh chuig an leathanach baile" },
 };
 
-export default ga;
+export default applyCatalogueUpdate("ga", ga);

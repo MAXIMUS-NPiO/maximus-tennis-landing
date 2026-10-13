@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Belarusian dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const be = {
   meta: {
@@ -1179,4 +1180,4 @@ const be = {
   notFound: { title: "Старонка не знойдзена", p: "Старонкі, якую вы запыталі, не існуе на гэтай мове.", cta: "Перайсці на галоўную" },
 };
 
-export default be;
+export default applyCatalogueUpdate("be", be);

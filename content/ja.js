@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Japanese dictionary — MAXIMUS website v4.0. Translated from content/en.js; numerical product data lives in data/products.js. */
 const ja = {
   meta: {
@@ -1179,4 +1180,4 @@ const ja = {
   notFound: { title: "ページが見つかりません", p: "ご指定のページは、この言語では存在しません。", cta: "ホームへ移動" },
 };
 
-export default ja;
+export default applyCatalogueUpdate("ja", ja);

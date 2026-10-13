@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Azerbaijani dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const az = {
   meta: {
@@ -1179,4 +1180,4 @@ const az = {
   notFound: { title: "Səhifə tapılmadı", p: "İstədiyiniz səhifə bu dildə mövcud deyil.", cta: "Ana səhifəyə keçin" },
 };
 
-export default az;
+export default applyCatalogueUpdate("az", az);

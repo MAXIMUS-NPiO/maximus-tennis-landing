@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Icelandic dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const isl = {
   meta: {
@@ -1179,4 +1180,4 @@ const isl = {
   notFound: { title: "Síðan fannst ekki", p: "Síðan sem þú baðst um er ekki til á þessu tungumáli.", cta: "Fara á forsíðuna" },
 };
 
-export default isl;
+export default applyCatalogueUpdate("is", isl);

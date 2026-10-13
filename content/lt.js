@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Lithuanian dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const lt = {
   meta: {
@@ -1179,4 +1180,4 @@ const lt = {
   notFound: { title: "Puslapis nerastas", p: "Jūsų prašomo puslapio šia kalba nėra.", cta: "Eiti į pradinį puslapį" },
 };
 
-export default lt;
+export default applyCatalogueUpdate("lt", lt);

@@ -28,7 +28,8 @@ expect(byId["P2.5"].weightG === 2.5 && byId["P2.5"].stiffness.valueRA === 1, "P2
 expect(byId["P1.5"].weightG === 1.5 && byId["P1.5"].stiffness.valueRA === 0.5, "P1.5 values");
 expect(byId["P0.5"].weightG === 0.5 && byId["P0.5"].stiffness.kind === "exact-declared-reading", "P0.5 values");
 expect(sweetSpotTrainer.headSizeSqIn === 50 && sweetSpotTrainer.lengthIn === 27 && sweetSpotTrainer.stringPattern === "12 × 14", "SST baseline");
-expect(JSON.stringify(sweetSpotTrainer.system.map((x) => [x.weight, x.balance])) === JSON.stringify([[270, 330], [285, 325], [300, 325], [400, 320]]), "SST system");
+expect(sweetSpotTrainer.system.length === 61 && spotTrainer.weights.length === 61, "61 weights per trainer");
+expect(JSON.stringify(sweetSpotTrainer.system.filter((x) => x.balance !== null).map((x) => [x.weight, x.balance])) === JSON.stringify([[270, 330], [285, 325], [300, 325], [400, 320]]), "SST supplied balances only");
 expect(spotTrainer.targetDimensions === "NOT_PROVIDED" && spotTrainer.balances === "NOT_PROVIDED", "Spot Trainer: no invented dimensions or balances");
 // Evidence statuses (founder instruction 21.09.2026)
 expect(series.spin.matrixStatus === "FOUNDER_CONFIRMED" && series.spin.balanceStatus === "FOUNDER_CONFIRMED", "spin: matrix and balances are Founder-confirmed since 23.09.2026");

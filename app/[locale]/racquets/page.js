@@ -1,5 +1,6 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import Link from "next/link";
+import LengthOptions from "../../../components/LengthOptions";
 import { ctx, meta } from "../../../lib/page";
 import { href } from "../../../lib/paths";
 import { seriesList, otherRacquetSports } from "../../../data/products";
@@ -21,6 +22,7 @@ export default async function Page({ params }) {
         <p className="note" style={{ marginTop: 22 }}>{R.construction}</p>
       </Section>
       <Section title={R.compareTitle}>
+        <LengthOptions dict={dict} />
         <div className="spec-wrap" tabIndex={0}>
           <table className="spec">
             <thead><tr><th>{R.columns.series}</th><th className="num">{R.columns.head}</th><th>{R.columns.direction}</th><th className="num">{R.columns.weights}</th><th className="num">{R.columns.range}</th><th>{R.columns.balance}</th></tr></thead>

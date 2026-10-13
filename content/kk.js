@@ -1,4 +1,5 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
+import { applyCatalogueUpdate } from "./catalogue-update.js";
 /* Kazakh dictionary — MAXIMUS website. Numerical product data lives in data/products.js. */
 const kk = {
   meta: {
@@ -1179,4 +1180,4 @@ const kk = {
   notFound: { title: "Бет табылмады", p: "Сұраған бет бұл тілде жоқ.", cta: "Басты бетке өту" },
 };
 
-export default kk;
+export default applyCatalogueUpdate("kk", kk);

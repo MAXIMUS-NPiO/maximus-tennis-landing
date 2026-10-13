@@ -11,7 +11,7 @@ export default function OrderFlow({ dict, locale, config, purchaseIntent = 'good
   const [result,setResult]=useState(null),[balanceChoice,setBalanceChoice]=useState(''),[requestedBalance,setRequestedBalance]=useState(config.balanceReq || ''),[requestedRA,setRequestedRA]=useState(config.ra || ''),[balanceConfirmed,setBalanceConfirmed]=useState(false),[raConfirmed,setRaConfirmed]=useState(false),[basis,setBasis]=useState(['strung','unstrung'].includes(config.basis)?config.basis:''),[paymentPreference,setPaymentPreference]=useState(''),[errors,setErrors]=useState({});
   const T=commerceLabels[locale],L=dict.common.labels,C=tennisCheckoutLabels[locale];
   const handleLeadState = useCallback(state => { if (state === 'editing') setResult(null); onStateChange?.(state); }, [onStateChange]);
-  const proposedBalance=config.mode==='listed'?balanceFor(config.series,config.weight):null;
+  const proposedBalance=config.mode==='listed'?balanceFor(config.series,config.weight,config.lengthMode === "custom" ? "custom" : config.lengthIn):null;
   const technical=useMemo(()=>({measurement_basis:config.mode==='custom'?'unstrung':basis,
     balance:{choice:balanceChoice,...(balanceChoice==='request'?{requested:requestedBalance}:{accepted_proposed:proposedBalance}),customer_confirmed:balanceConfirmed},
     frame_stiffness:{choice:'request',requested:requestedRA,customer_confirmed:raConfirmed},

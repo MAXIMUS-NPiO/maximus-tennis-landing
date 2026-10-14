@@ -9,9 +9,10 @@ export default function PurchaseChoice({ dict, locale, intent, onIntentChange, p
   const id = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const interested = intent === 'goods_with_program_interest';
   const amountError = errors['programRequest.principal'] || errors.programRequest;
-  return <fieldset className="stack" disabled={locked} aria-describedby={`purchase-${id}-steps`}>
+  // Online payment is not connected for racquet requests: the request is reviewed and answered in
+  // writing, so the "Configuration → Order → Payment → Account" path is not shown here.
+  return <fieldset className="stack" disabled={locked}>
     <legend>{T.customPurchase}</legend>
-    <p className="mono muted" id={`purchase-${id}-steps`}>{T.steps}</p>
     <div className="choice">
       <label><input type="radio" name={`purchase-intent-${id}`} checked={intent === 'goods_only'} onChange={() => onIntentChange('goods_only')} /> <span>{T.goodsOnly}</span></label>
       <label><input type="radio" name={`purchase-intent-${id}`} checked={interested} onChange={() => onIntentChange('goods_with_program_interest')} /> <span>{T.goodsAndProgram}</span></label>

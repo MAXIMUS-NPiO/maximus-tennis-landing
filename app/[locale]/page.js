@@ -87,7 +87,8 @@ export default async function Home({ params }) {
           <div>
             <h3 className="h-3">{dict.training.sst.h}</h3>
             <p className="lead">{H.training.sstP}</p>
-            <p className="muted small">{sst.system.map((x) => `${x.weight}/${x.balance}`).join(" · ")} ({L.grams}/{L.mm}) · L0–L7</p>
+            {/* Only the supplied weight/balance pairs are shown; an unknown balance is never printed. */}
+            <p className="muted small">{dict.sst.baseline} · {sst.lengthIn} {L.inches}: {sst.system.filter((x) => x.balance !== null).map((x) => `${x.weight}/${x.balance}`).join(" · ")} ({L.grams}/{L.mm}) · L0–L7</p>
             <div className="btn-row"><Cta locale={locale} to="sst" label={H.training.sstCta} track="home_sst" /></div>
           </div>
         </div>
@@ -210,7 +211,7 @@ export default async function Home({ params }) {
       {/* 10 — GPS, personalisation, development, extended ecosystem */}
       <Section id="world" band="band-2" eyebrow={H.world.eyebrow} title={H.world.title}>
         <div className="grid-4">
-          {[["gps", "gps", "current"], ["personal", "build", "agreement"], ["development", "methodology", "agreement"], ["ecosystem", "ecosystem", "current"]].map(([k, to, st]) => (
+          {[["gps", "gps", "current"], ["personal", "build", "agreement"], ["development", "methodology", "agreement"], ["ecosystem", "ecosystem", "agreement"]].map(([k, to, st]) => (
             <Link key={k} href={href(locale, to)} className="card card-link">
               <span className={`status ${st}`}>{S[st]}</span>
               <h3 style={{ marginTop: 12 }}>{H.world.items[k].h}</h3>

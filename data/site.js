@@ -225,10 +225,12 @@ export const STATUS = {
 };
 
 /**
- * Ecosystem nodes — every node has a page and a next action. The extended ecosystem is live
- * (Founder, 8 October 2026: "it is not a concept — it is all live, it all works"), so no node is
- * labelled a concept. The racquet-sport and apparel extensions carry no label: they are named on
- * their page as development directions, and no product in them is offered.
+ * Ecosystem nodes — every node has a page and a next action. No node is labelled a concept
+ * (Founder, 8 October 2026). Founder's update of 14 October 2026: every status states the actual
+ * state, the same on the node and on its page. The owner vault and the digital infrastructure are
+ * described on their page as proposed / a stated direction, so they are "In development", not
+ * "Current". The racquet-sport and apparel extensions carry no label: they are named on their page
+ * as development directions, and no product in them is offered.
  */
 export const ecosystemNodes = [
   { id: "engineering", status: STATUS.CURRENT, href: "engineering" },
@@ -236,9 +238,9 @@ export const ecosystemNodes = [
   { id: "training", status: STATUS.CURRENT, href: "training" },
   { id: "development", status: STATUS.AGREEMENT, href: "methodology" },
   { id: "identity", status: STATUS.AGREEMENT, href: "brands" },
-  { id: "owners", status: STATUS.CURRENT, href: "owners" },
+  { id: "owners", status: STATUS.DEVELOPMENT, href: "owners" },
   { id: "mipa", status: STATUS.CURRENT, href: "legal" },
-  { id: "digital", status: STATUS.CURRENT, href: "owners" },
+  { id: "digital", status: STATUS.DEVELOPMENT, href: "owners" },
   { id: "licensing", status: STATUS.AGREEMENT, href: "brands" },
   { id: "families", status: STATUS.AGREEMENT, href: "families" },
   { id: "network", status: STATUS.AGREEMENT, href: "network" },

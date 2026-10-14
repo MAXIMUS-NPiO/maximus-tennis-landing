@@ -9,6 +9,7 @@ import { PageHero, Section, Cta, Kickers } from "../../../components/Ui";
 import { SeriesCards } from "../../../components/Product";
 import SeriesIndex from "../../../components/SeriesIndex";
 import CatalogueDownload from "../../../components/CatalogueDownload";
+import { Philosophy, Valuation } from "../../../components/Editorial";
 
 export const generateMetadata = meta("racquets", (d) => [d.racquets.title, d.racquets.lead]);
 
@@ -24,6 +25,7 @@ export default async function Page({ params }) {
         <p className="note" style={{ marginTop: 22 }}>{R.construction}</p>
         <CatalogueDownload locale={locale} dict={dict} page />
       </Section>
+      <Philosophy dict={dict} band="band-1" />
       <Section title={R.compareTitle}>
         <LengthOptions dict={dict} />
         <div className="spec-wrap" tabIndex={0}>
@@ -46,6 +48,7 @@ export default async function Page({ params }) {
         <div className="btn-row"><Cta locale={locale} to="choose" label={dict.nav.choose} track="racquets_choose" /><Cta locale={locale} to="build" label={R.ctaConfigure} kind="btn-outline" /><Cta locale={locale} to="precision" label={dict.nav.precision} kind="btn-outline" /><Cta locale={locale} to="grip" label={dict.nav.grip} kind="btn-outline" /></div>
       </Section>
       <NationalPackage locale={locale} dict={dict} />
+      <Valuation locale={locale} dict={dict} band="band-1" />
       <Section title={R.otherTitle} lead={R.otherLead}>
         <div className="facts">
           <Kickers items={otherRacquetSports.map((k) => R.other[k])} />

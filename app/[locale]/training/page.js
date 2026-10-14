@@ -5,6 +5,7 @@ import { href } from "../../../lib/paths";
 import { sweetSpotTrainer } from "../../../data/products";
 import { PageHero, Section, Cta, Note } from "../../../components/Ui";
 import CatalogueDownload from "../../../components/CatalogueDownload";
+import { Kits } from "../../../components/Editorial";
 
 export const generateMetadata = meta("training", (d) => [d.training.title, d.training.lead]);
 
@@ -24,6 +25,7 @@ export default async function Page({ params }) {
         </div>
         <Note>{T.distinct}</Note>
       </Section>
+      <Kits locale={locale} dict={dict} band="band-1" />
       <Section band="band-2" title={T.experience} lead={T.experienceP}>
         <div className="btn-row" style={{ marginTop: 0 }}><Cta locale={locale} to="experience" label={T.cta} /></div>
       </Section>

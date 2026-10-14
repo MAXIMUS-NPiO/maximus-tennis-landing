@@ -15,7 +15,7 @@ const site = (await import(pathToFileURL(path.join(root, "data", "site.js")).hre
 
 /** Values that are the same in every language: marks, product names, units, machine codes. */
 const ALLOWED = new Set([
-  "MAXIMUS", " | MAXIMUS", "MAXIMUS GPS", "MAXIMUS TENNIS · GREAT POWER & SPIN", "GREAT POWER & SPIN",
+  "MAXIMUS", " | MAXIMUS", "MAXIMUS GPS", "MAXIMUS Pro Shop", "MAXIMUS TENNIS · GREAT POWER & SPIN", "GREAT POWER & SPIN",
   "Sweet Spot Trainer", "Spot Trainer", "Sports Network", "MAXIMUS Sports Network", "Instagram",
   "Great", "Power", "Spin", "GREAT · POWER · SPIN", "GREAT · 97 in²", "POWER · 98 in²", "SPIN · 100 in²",
   "GREAT · POWER · SPIN · Sweet Spot Trainer · Spot Trainer", "Player-to-Brand · Coach-to-Brand",
@@ -60,6 +60,7 @@ const ALLOWED_BY_LOCALE = {
     "Swingweight", "Twistweight",
   ]),
   ro: new Set([
+    "Club",                                                  // Romanian: club
     "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Beach tennis",
     "Contact", "Control", "Transfer",                              // Romanian words spelled as in English
     "GREAT — 97 in² · Control", "MAXIMUS GREAT · 97 in² · Control", // series mark, unit, and that same word
@@ -73,6 +74,7 @@ const ALLOWED_BY_LOCALE = {
     "Swingweight", "Twistweight",
   ]),
   no: new Set([
+    "Glass",                                                  // Norwegian: glass
     "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Tennis",
     "Status",
     "Swingweight", "Twistweight",
@@ -193,7 +195,10 @@ const ALLOWED_BY_LOCALE = {
     "Swingweight", "Twistweight",
   ]),
   is: new Set(["Tennis", "Padel", "Pickleball", "Badminton", "Racquetball"]),
-  ga: new Set(["Pickleball", "Racquetball"]),
+  ga: new Set([
+    "Club",                                                        // Irish: club
+    "Pickleball", "Racquetball",
+  ]),
   et: new Set([
     "Tennis", "Padel", "Squash", "Pickleball", "Racquetball",
   ]),
@@ -222,6 +227,7 @@ const ALLOWED_BY_LOCALE = {
   ]),
   // mk and be need no entries: nothing in them collides with English.
   fil: new Set([
+    "Club",                                                  // Filipino: club, as written on this site
     "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Beach tennis",  // the names Philippine sport uses
     "Coach", "Retailer", "Distributor", "Fitting",                 // what the Philippine trade says
     "Menu", "Analytics",                                            // interface words Filipino screens use as written

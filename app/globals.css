@@ -1365,3 +1365,37 @@ h1.eyebrow, h2.eyebrow, h3.eyebrow, h4.eyebrow, .footer-sub-h { font-family: var
 /* The hero's product line and its ecosystem line are display lines, not prose: flush to the start,
    as the rule above keeps headings and display lines (no stretched spaces at phone width). */
 .hero-line, .hero-eco, .catalogue-facts { text-align: start; hyphens: manual; -webkit-hyphens: manual; }
+
+/* =============================================================================================
+   Founder's update of 14 October 2026, part I: the selection route and kits, identity collections,
+   the MAXIMUS Pro Shop concept and meeting interest. Display lines: flush to the start, no hyphens.
+   ============================================================================================= */
+.route { list-style: none; margin: 10px 0 20px; padding: 0; display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .route { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1180px) { .route { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+.route li { text-align: start; hyphens: manual; min-width: 0; }
+.route a { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: baseline; height: 100%; padding: 12px 14px; border: 1px solid var(--line-strong); border-radius: 12px; text-decoration: none; color: var(--ink); background: var(--paper); transition: border-color 0.2s ease; }
+.route a:hover, .route a:focus-visible { border-color: var(--accent); }
+.route b { font-family: var(--mono); font-size: 13px; color: var(--accent); font-weight: 500; }
+.route span { font-size: 15.5px; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+.kit-example { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line); }
+.kit-formula { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 8px 0 14px; }
+.kit-formula > div { display: grid; gap: 2px; min-width: 0; }
+.kit-formula b { font-family: var(--serif); font-size: clamp(40px, 7vw, 56px); line-height: 1; font-weight: 600; color: var(--ink); }
+.kit-formula span { font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); font-weight: 650; }
+.kit-formula i { font-style: normal; font-size: 28px; color: var(--accent); }
+.kit-formula .total b { color: var(--accent); }
+.tags { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { padding: 6px 12px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: 14.5px; text-align: start; hyphens: manual; }
+.proshop-figure { margin: 0; }
+.proshop-svg { display: block; width: 100%; height: auto; border-radius: 12px; background: #000; }
+.proshop-legend { margin: 14px 0 8px; padding-inline-start: 24px; display: grid; gap: 4px; }
+.proshop-legend li { text-align: start; hyphens: manual; color: var(--ink); font-size: 15px; }
+.proshop-legend li::marker { color: var(--accent); font-weight: 650; }
+.proshop-figure figcaption { text-align: start; hyphens: manual; }
+.steps.seq li { padding: 10px 0; text-align: start; hyphens: manual; }
+.stages { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .stages { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.stages li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 12px 14px; border: 1px solid var(--line-strong); border-radius: 12px; text-align: start; hyphens: manual; }
+.stages b { font-family: var(--mono); font-weight: 500; color: var(--accent); }
+.stages span { overflow-wrap: anywhere; }

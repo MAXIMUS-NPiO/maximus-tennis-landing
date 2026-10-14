@@ -1,8 +1,11 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /** Catalogue extension, owner instructions 12–13 October 2026. All 48 existing languages. */
-import { trainerWeights, sweetSpotTrainer, standardLengths } from "../data/products.js";
+import { trainerWeights, sweetSpotTrainer, standardLengths, getSeries } from "../data/products.js";
 import { nationalPackageCopy } from "./national-package-copy.js";
 import { catalogueCopy } from "./catalogue-download-copy.js";
+import { editorialCopy } from "./editorial-copy.js";
+import { forumCopy } from "./forum-copy.js";
+import { budgetRequestCopy } from "./budget-request-copy.js";
 const copy = {
   "en": {
     "standard": "Standard lengths",
@@ -353,6 +356,42 @@ export function applyCatalogueUpdate(locale, d) {
   d.nav.catalogue = K.nav;
   d.home.heroTitle = K.heroTitle;
   d.home.heroProduct = K.heroLead;
+  // Founder's update of 14 October 2026, part I: philosophy, kits, identity, valuation, exchange,
+  // Pro Shop concept and meeting interest. Meeting labels reuse the reviewed forum copy unchanged.
+  const E = editorialCopy(locale);
+  const FC = forumCopy(locale);
+  d.editorial = E;
+  d.nav.proShop = E.proShop.nav;
+  d.nav.meetings = E.meetings.nav;
+  d.form.purposes.valuation = E.valuation.purposeLabel;
+  d.form.purposes.meeting = E.meetings.purposeLabel;
+  Object.assign(d.form.fields, {
+    configuration: E.valuation.configuration,
+    proposedPrice: E.valuation.proposedPrice,
+    priceCurrency: budgetRequestCopy(locale).currency,
+    residenceCity: FC.residenceCity,
+    preferredMeetingCity: FC.preferredMeetingCity,
+    willingToTravel: E.meetings.willingToTravel,
+    travelCities: FC.travelCities,
+    attendees: FC.attendees,
+    meetingInterests: FC.forumInterests,
+    hosting: FC.hosting,
+  });
+  d.form.fieldsByPurpose = { valuation: { message: E.valuation.comment } };
+  d.form.meetingInterests = {
+    products: FC.interests.products,
+    club: E.meetings.interestClub,
+    national: E.meetings.interestNational,
+    infrastructure: FC.interests.infrastructure,
+    partnerships: FC.interests.partnerships,
+  };
+  d.form.hostingOptions = FC.hostingOptions;
+  // The example names a real listed configuration: GREAT, its listed weight nearest 300 g, 27 in, L3.
+  const g = getSeries("great");
+  const w = g.matrix.reduce((a, p) => (Math.abs(p.weight - 300) < Math.abs(a.weight - 300) ? p : a)).weight;
+  const lead = E.valuation.example, gapAfter = /[：]$/.test(lead) ? "" : " "; // no space after a full-width colon
+  d.lead.hints = { ...d.lead.hints, configuration: `${lead}${gapAfter}GREAT · ${g.headSizeSqIn} ${d.common.labels.sqin} · ${w} ${d.common.labels.grams} · 27 ${d.common.labels.inches} · L3` };
+  d.meetings = { title: FC.title, lead: FC.lead, proposal: FC.proposal, apply: FC.apply, futureTitle: FC.pendingModules, future: FC.unavailableModules };
   d.catalogue = { ...c, length: d.sst.columns.length, plus: "Plus", superlong: "Superlong" };
   d.build.fieldNames.lengthMode = c.standard;
   d.build.fieldNames.lengthIn = `${d.sst.columns.length} (${L.inches})`;

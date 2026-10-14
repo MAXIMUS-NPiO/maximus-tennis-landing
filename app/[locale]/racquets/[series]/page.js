@@ -13,6 +13,7 @@ import { Photo, PhotoPending } from "../../../../components/Media";
 import TrackView from "../../../../components/TrackView";
 import VariantCatalogue from "../../../../components/VariantCatalogue";
 import CatalogueDownload from "../../../../components/CatalogueDownload";
+import { Valuation } from "../../../../components/Editorial";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -139,6 +140,7 @@ export default async function Page({ params }) {
         <p className="muted small" style={{ marginTop: 20 }}>{dict.common.truth.noPrices}</p>
         <div className="btn-row">{configure}{ask}</div>
       </Section>
+      <Valuation locale={locale} dict={dict} series={id} band="band-1" />
     </>
   );
 }

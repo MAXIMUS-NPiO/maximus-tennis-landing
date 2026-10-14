@@ -1,7 +1,7 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 "use client";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { fieldsFor, validateRequest, GRIP_IDS } from "../lib/intake/schema";
+import { fieldsFor, validateRequest, GRIP_IDS, VALUATION_CURRENCIES } from "../lib/intake/schema";
 import { seriesList, configurationKey } from "../data/products";
 import { site } from "../data/site";
 import { href } from "../lib/paths";
@@ -33,6 +33,10 @@ function optionsFor(key, dict) {
     case "ageBand": return Object.entries(G.ageBands);
     case "interestArea": return Object.entries(F.strategicAreas);
     case "requestType": return Object.entries(F.ownerTypes);
+    case "priceCurrency": return VALUATION_CURRENCIES.map((c) => [c, c]);
+    case "willingToTravel": return [["yes", L.yes], ["no", L.no], ["unknown", L.unknown]];
+    case "meetingInterests": return Object.entries(F.meetingInterests || {});
+    case "hosting": return Object.entries(F.hostingOptions || {});
     default: return [];
   }
 }
@@ -197,7 +201,7 @@ export default function LeadForm({
   }
 
   const describedBy = (k, hint) => [hint ? `${id(k)}-hint` : null, errors[k] ? `${id(k)}-err` : null].filter(Boolean).join(" ") || undefined;
-  const labelFor = (k) => k === "budgetRequest" ? BC.title : k.startsWith("budgetRequest.") ? BC[k.split(".")[1]] : (k === "consent" ? LD.consentShort : F.fields[k] || k);
+  const labelFor = (k) => k === "budgetRequest" ? BC.title : k.startsWith("budgetRequest.") ? BC[k.split(".")[1]] : (k === "consent" ? LD.consentShort : (F.fieldsByPurpose && F.fieldsByPurpose[purpose] && F.fieldsByPurpose[purpose][k]) || F.fields[k] || k);
   const err = (k) => (errors[k] ? <span className="err" id={`${id(k)}-err`}>{errorText(dict, errors[k])}</span> : null);
 
   const renderField = (k, spec) => {

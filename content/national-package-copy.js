@@ -441,289 +441,289 @@ const lifecycleRows = {
     "Intended as a permanent reference and fitting library, separate from sales stock: stable matte-black base configurations provide references for repeat orders, custom designs and sub-brands.",
     "Personal package example: 6 playing racquets, 4 or 5 Spot Trainers and 4 or 5 Sweet Spot Trainers, all at the same chosen length. This illustrates an individual selection, not a standard quantity for every player.",
     "Custom batches of 100–200 units are examples for discussion, not a universal minimum order. Design, specifications and batch conditions require separate agreement.",
-    "MAXIMUS ProShop is an architectural concept for a tennis concept club: automated tray storage, selection, retrieval and returns. Engineering feasibility, capacity and certification are not yet established."
+    "MAXIMUS Pro Shop is an architectural concept for a tennis concept club: automated tray storage, selection, retrieval and returns. Engineering feasibility, capacity and certification are not yet established."
   ],
   ru: [
     "Замысел — постоянная эталонная библиотека для индивидуального подбора, отдельная от товарного склада. Стабильные базовые конфигурации в матовом чёрном исполнении служат образцами для повторных заказов, индивидуальных дизайнов и суббрендов.",
     "Пример личного комплекта: 6 игровых ракеток, 4 или 5 Spot Trainer и 4 или 5 Sweet Spot Trainer — все одной выбранной длины. Это иллюстрация индивидуального подбора, а не стандартное количество для каждого игрока.",
     "Заказные партии по 100–200 единиц — примеры для обсуждения, а не универсальный минимальный заказ. Дизайн, характеристики и условия партии согласуются отдельно.",
-    "MAXIMUS ProShop — архитектурная концепция для теннисного концепт-клуба: автоматизированное хранение на лотках, выбор, выдача и возврат. Инженерная выполнимость, вместимость и сертификация пока не подтверждены."
+    "MAXIMUS Pro Shop — архитектурная концепция для теннисного концепт-клуба: автоматизированное хранение на лотках, выбор, выдача и возврат. Инженерная выполнимость, вместимость и сертификация пока не подтверждены."
   ],
   uk: [
     "Задум — постійна еталонна бібліотека для індивідуального підбору, окрема від товарного складу. Стабільні базові конфігурації в матовому чорному виконанні слугують зразками для повторних замовлень, індивідуальних дизайнів і суббрендів.",
     "Приклад особистого комплекту: 6 ігрових ракеток, 4 або 5 Spot Trainer і 4 або 5 Sweet Spot Trainer — усі однієї вибраної довжини. Це ілюстрація індивідуального підбору, а не стандартна кількість для кожного гравця.",
     "Замовні партії по 100–200 одиниць — приклади для обговорення, а не універсальне мінімальне замовлення. Дизайн, характеристики та умови партії погоджуються окремо.",
-    "MAXIMUS ProShop — архітектурна концепція для тенісного концепт-клубу: автоматизоване зберігання на лотках, вибір, видача й повернення. Інженерна здійсненність, місткість і сертифікація поки не підтверджені."
+    "MAXIMUS Pro Shop — архітектурна концепція для тенісного концепт-клубу: автоматизоване зберігання на лотках, вибір, видача й повернення. Інженерна здійсненність, місткість і сертифікація поки не підтверджені."
   ],
   be: [
     "Задума — пастаянная эталонная бібліятэка для індывідуальнага падбору, асобная ад таварнага склада. Стабільныя базавыя канфігурацыі ў матавым чорным выкананні служаць узорамі для паўторных заказаў, індывідуальных дызайнаў і суббрэндаў.",
     "Прыклад асабістага камплекта: 6 гульнявых ракетак, 4 або 5 Spot Trainer і 4 або 5 Sweet Spot Trainer — усе адной выбранай даўжыні. Гэта ілюстрацыя індывідуальнага падбору, а не стандартная колькасць для кожнага гульца.",
     "Заказныя партыі па 100–200 адзінак — прыклады для абмеркавання, а не ўніверсальны мінімальны заказ. Дызайн, характарыстыкі і ўмовы партыі ўзгадняюцца асобна.",
-    "MAXIMUS ProShop — архітэктурная канцэпцыя для тэніснага канцэпт-клуба: аўтаматызаванае захоўванне на латках, выбар, выдача і вяртанне. Інжынерная выканальнасць, змяшчальнасць і сертыфікацыя пакуль не пацверджаныя."
+    "MAXIMUS Pro Shop — архітэктурная канцэпцыя для тэніснага канцэпт-клуба: аўтаматызаванае захоўванне на латках, выбар, выдача і вяртанне. Інжынерная выканальнасць, змяшчальнасць і сертыфікацыя пакуль не пацверджаныя."
   ],
   de: [
     "Geplant ist eine dauerhafte Referenz- und Fittingbibliothek, getrennt vom Verkaufsbestand. Beständige mattschwarze Basiskonfigurationen dienen als Referenz für Nachbestellungen, individuelle Designs und Untermarken.",
     "Beispiel eines persönlichen Pakets: 6 Spielschläger, 4 oder 5 Spot Trainer und 4 oder 5 Sweet Spot Trainer, alle in derselben gewählten Länge. Das veranschaulicht eine individuelle Auswahl, keine Standardmenge für alle Spieler.",
     "Individuelle Chargen von 100–200 Stück sind Diskussionsbeispiele, keine allgemeine Mindestbestellmenge. Design, Spezifikationen und Chargenbedingungen werden gesondert vereinbart.",
-    "MAXIMUS ProShop ist ein Architekturkonzept für einen Tennis-Konzeptclub: automatisierte Lagerung in Trays, Auswahl, Ausgabe und Rückgabe. Technische Machbarkeit, Kapazität und Zertifizierung sind noch nicht nachgewiesen."
+    "MAXIMUS Pro Shop ist ein Architekturkonzept für einen Tennis-Konzeptclub: automatisierte Lagerung in Trays, Auswahl, Ausgabe und Rückgabe. Technische Machbarkeit, Kapazität und Zertifizierung sind noch nicht nachgewiesen."
   ],
   nl: [
     "Bedoeld als een permanente referentie- en pasbibliotheek, los van de verkoopvoorraad. Vaste matzwarte basisconfiguraties vormen de referentie voor herhaalbestellingen, eigen ontwerpen en submerken.",
     "Voorbeeld van een persoonlijk pakket: 6 speelrackets, 4 of 5 Spot Trainers en 4 of 5 Sweet Spot Trainers, allemaal met dezelfde gekozen lengte. Dit toont een individuele keuze, geen standaardhoeveelheid voor iedere speler.",
     "Maatwerkpartijen van 100–200 stuks zijn voorbeelden ter bespreking, geen algemene minimale bestelling. Ontwerp, specificaties en partijvoorwaarden worden apart afgesproken.",
-    "MAXIMUS ProShop is een architectuurconcept voor een tennisconceptclub: geautomatiseerde opslag in trays, selectie, uitgifte en retourname. Technische haalbaarheid, capaciteit en certificering zijn nog niet vastgesteld."
+    "MAXIMUS Pro Shop is een architectuurconcept voor een tennisconceptclub: geautomatiseerde opslag in trays, selectie, uitgifte en retourname. Technische haalbaarheid, capaciteit en certificering zijn nog niet vastgesteld."
   ],
   fr: [
     "Le projet prévoit une bibliothèque permanente de référence et d’essai, distincte du stock de vente. Des configurations de base stables en noir mat servent de références pour les commandes répétées, les designs personnalisés et les sous-marques.",
     "Exemple de lot personnel : 6 raquettes de jeu, 4 ou 5 Spot Trainer et 4 ou 5 Sweet Spot Trainer, tous de la même longueur choisie. Il s’agit d’une sélection individuelle illustrative, pas d’une quantité standard pour chaque joueur.",
     "Les lots personnalisés de 100–200 unités sont des exemples à discuter, pas un minimum universel de commande. Le design, les spécifications et les conditions du lot font l’objet d’un accord séparé.",
-    "MAXIMUS ProShop est un concept architectural pour un club de tennis conceptuel : stockage automatisé sur plateaux, sélection, remise et retour. La faisabilité technique, la capacité et la certification restent à établir."
+    "MAXIMUS Pro Shop est un concept architectural pour un club de tennis conceptuel : stockage automatisé sur plateaux, sélection, remise et retour. La faisabilité technique, la capacité et la certification restent à établir."
   ],
   es: [
     "Se propone una biblioteca permanente de referencia y ajuste, separada del inventario de venta. Las configuraciones base estables en negro mate sirven de referencia para pedidos repetidos, diseños personalizados y submarcas.",
     "Ejemplo de paquete personal: 6 raquetas de juego, 4 o 5 Spot Trainer y 4 o 5 Sweet Spot Trainer, todos de la misma longitud elegida. Ilustra una selección individual, no una cantidad estándar para cada jugador.",
     "Los lotes personalizados de 100–200 unidades son ejemplos para comentar, no un pedido mínimo universal. El diseño, las especificaciones y las condiciones del lote se acuerdan por separado.",
-    "MAXIMUS ProShop es un concepto arquitectónico para un club conceptual de tenis: almacenamiento automatizado en bandejas, selección, entrega y devolución. La viabilidad técnica, la capacidad y la certificación aún no están establecidas."
+    "MAXIMUS Pro Shop es un concepto arquitectónico para un club conceptual de tenis: almacenamiento automatizado en bandejas, selección, entrega y devolución. La viabilidad técnica, la capacidad y la certificación aún no están establecidas."
   ],
   it: [
     "È prevista una biblioteca permanente di riferimento e prova, distinta dalle scorte destinate alla vendita. Configurazioni di base stabili in nero opaco fungono da riferimento per ordini ripetuti, design personalizzati e sottomarchi.",
     "Esempio di pacchetto personale: 6 racchette da gioco, 4 o 5 Spot Trainer e 4 o 5 Sweet Spot Trainer, tutti della stessa lunghezza scelta. Illustra una selezione individuale, non una quantità standard per ogni giocatore.",
     "I lotti personalizzati da 100–200 unità sono esempi da discutere, non un ordine minimo universale. Design, specifiche e condizioni del lotto richiedono un accordo separato.",
-    "MAXIMUS ProShop è un concetto architettonico per un circolo di tennis concettuale: stoccaggio automatizzato su vassoi, selezione, consegna e restituzione. Fattibilità tecnica, capacità e certificazione non sono ancora stabilite."
+    "MAXIMUS Pro Shop è un concetto architettonico per un circolo di tennis concettuale: stoccaggio automatizzato su vassoi, selezione, consegna e restituzione. Fattibilità tecnica, capacità e certificazione non sono ancora stabilite."
   ],
   pt: [
     "Pretende-se uma biblioteca permanente de referência e ajuste, separada do stock para venda. Configurações base estáveis em preto mate servem de referência para encomendas repetidas, designs personalizados e submarcas.",
     "Exemplo de conjunto pessoal: 6 raquetes de jogo, 4 ou 5 Spot Trainer e 4 ou 5 Sweet Spot Trainer, todos com o mesmo comprimento escolhido. Ilustra uma seleção individual, não uma quantidade padrão para cada jogador.",
     "Lotes personalizados de 100–200 unidades são exemplos para discussão, não uma encomenda mínima universal. O design, as especificações e as condições do lote são acordados separadamente.",
-    "MAXIMUS ProShop é um conceito arquitetónico para um clube conceptual de ténis: armazenamento automatizado em tabuleiros, seleção, entrega e devolução. A viabilidade técnica, a capacidade e a certificação ainda não estão estabelecidas."
+    "MAXIMUS Pro Shop é um conceito arquitetónico para um clube conceptual de ténis: armazenamento automatizado em tabuleiros, seleção, entrega e devolução. A viabilidade técnica, a capacidade e a certificação ainda não estão estabelecidas."
   ],
   pl: [
     "Planowana jest stała biblioteka wzorcowa do indywidualnego dopasowania, oddzielona od zapasów na sprzedaż. Stabilne konfiguracje bazowe w matowej czerni służą jako wzorce dla ponownych zamówień, indywidualnych projektów i submarek.",
     "Przykład osobistego zestawu: 6 rakiet do gry, 4 lub 5 Spot Trainer i 4 lub 5 Sweet Spot Trainer, wszystkie o tej samej wybranej długości. To ilustracja indywidualnego doboru, a nie standardowa liczba dla każdego gracza.",
     "Indywidualne partie po 100–200 sztuk są przykładami do omówienia, a nie uniwersalnym minimalnym zamówieniem. Projekt, specyfikacje i warunki partii uzgadnia się oddzielnie.",
-    "MAXIMUS ProShop to koncepcja architektoniczna koncepcyjnego klubu tenisowego: automatyczne przechowywanie na tacach, wybór, wydawanie i zwroty. Wykonalność techniczna, pojemność i certyfikacja nie zostały jeszcze potwierdzone."
+    "MAXIMUS Pro Shop to koncepcja architektoniczna koncepcyjnego klubu tenisowego: automatyczne przechowywanie na tacach, wybór, wydawanie i zwroty. Wykonalność techniczna, pojemność i certyfikacja nie zostały jeszcze potwierdzone."
   ],
   hu: [
     "A terv egy állandó referencia- és illesztési tár, elkülönítve az értékesítési készlettől. A stabil, matt fekete alapkonfigurációk ismételt rendelések, egyedi dizájnok és almárkák referenciái.",
     "Példa személyes csomagra: 6 játékütő, 4 vagy 5 Spot Trainer és 4 vagy 5 Sweet Spot Trainer, mind azonos választott hosszúságban. Ez egyéni választást szemléltet, nem minden játékosra érvényes darabszámot.",
     "A 100–200 darabos egyedi sorozatok egyeztetési példák, nem általános minimális rendelési mennyiségek. A dizájnt, a specifikációkat és a sorozat feltételeit külön kell egyeztetni.",
-    "A MAXIMUS ProShop egy koncepcióalapú teniszklub építészeti elképzelése: automatizált tálcás tárolás, kiválasztás, kiadás és visszavétel. A műszaki megvalósíthatóság, kapacitás és tanúsítás még nem igazolt."
+    "A MAXIMUS Pro Shop egy koncepcióalapú teniszklub építészeti elképzelése: automatizált tálcás tárolás, kiválasztás, kiadás és visszavétel. A műszaki megvalósíthatóság, kapacitás és tanúsítás még nem igazolt."
   ],
   sk: [
     "Zámerom je trvalá referenčná knižnica na individuálny výber, oddelená od predajných zásob. Stabilné základné konfigurácie v matnej čiernej slúžia ako vzory pre opakované objednávky, vlastné dizajny a podznačky.",
     "Príklad osobného balíka: 6 herných rakiet, 4 alebo 5 Spot Trainer a 4 alebo 5 Sweet Spot Trainer, všetky s rovnakou vybranou dĺžkou. Ide o ukážku individuálneho výberu, nie štandardný počet pre každého hráča.",
     "Zákazkové série po 100–200 kusoch sú príklady na diskusiu, nie všeobecná minimálna objednávka. Dizajn, špecifikácie a podmienky série sa dohodnú osobitne.",
-    "MAXIMUS ProShop je architektonický koncept koncepčného tenisového klubu: automatizované ukladanie do zásobníkov, výber, výdaj a vrátenie. Technická uskutočniteľnosť, kapacita a certifikácia zatiaľ nie sú potvrdené."
+    "MAXIMUS Pro Shop je architektonický koncept koncepčného tenisového klubu: automatizované ukladanie do zásobníkov, výber, výdaj a vrátenie. Technická uskutočniteľnosť, kapacita a certifikácia zatiaľ nie sú potvrdené."
   ],
   hr: [
     "Zamišljena je trajna referentna zbirka za individualni odabir, odvojena od prodajnih zaliha. Stabilne osnovne konfiguracije u mat crnoj služe kao uzorci za ponovljene narudžbe, individualne dizajne i podbrendove.",
     "Primjer osobnog paketa: 6 reketa za igru, 4 ili 5 Spot Trainer i 4 ili 5 Sweet Spot Trainer, svi iste odabrane duljine. To prikazuje individualni odabir, a ne standardnu količinu za svakog igrača.",
     "Prilagođene serije od 100–200 komada primjeri su za raspravu, a ne opća minimalna narudžba. Dizajn, specifikacije i uvjeti serije dogovaraju se zasebno.",
-    "MAXIMUS ProShop arhitektonski je koncept za konceptualni teniski klub: automatizirano skladištenje na pliticama, odabir, izdavanje i povrat. Tehnička izvedivost, kapacitet i certifikacija još nisu potvrđeni."
+    "MAXIMUS Pro Shop arhitektonski je koncept za konceptualni teniski klub: automatizirano skladištenje na pliticama, odabir, izdavanje i povrat. Tehnička izvedivost, kapacitet i certifikacija još nisu potvrđeni."
   ],
   sr: [
     "Zamišljena je trajna referentna zbirka za individualni izbor, odvojena od prodajnih zaliha. Stabilne osnovne konfiguracije u mat crnoj služe kao uzorci za ponovljene porudžbine, individualne dizajne i podbrendove.",
     "Primer ličnog paketa: 6 reketa za igru, 4 ili 5 Spot Trainer i 4 ili 5 Sweet Spot Trainer, svi iste izabrane dužine. To prikazuje individualni izbor, a ne standardnu količinu za svakog igrača.",
     "Prilagođene serije od 100–200 komada primeri su za razgovor, a ne opšta minimalna porudžbina. Dizajn, specifikacije i uslovi serije dogovaraju se zasebno.",
-    "MAXIMUS ProShop je arhitektonski koncept za konceptualni teniski klub: automatizovano skladištenje na tacnama, izbor, izdavanje i povrat. Tehnička izvodljivost, kapacitet i sertifikacija još nisu potvrđeni."
+    "MAXIMUS Pro Shop je arhitektonski koncept za konceptualni teniski klub: automatizovano skladištenje na tacnama, izbor, izdavanje i povrat. Tehnička izvodljivost, kapacitet i sertifikacija još nisu potvrđeni."
   ],
   ro: [
     "Se propune o bibliotecă permanentă de referință și probă, separată de stocul pentru vânzare. Configurațiile de bază stabile, în negru mat, servesc drept referință pentru comenzi repetate, designuri personalizate și submărci.",
     "Exemplu de pachet personal: 6 rachete de joc, 4 sau 5 Spot Trainer și 4 sau 5 Sweet Spot Trainer, toate cu aceeași lungime aleasă. Este o ilustrare a selecției individuale, nu o cantitate standard pentru fiecare jucător.",
     "Loturile personalizate de 100–200 de unități sunt exemple pentru discuție, nu o comandă minimă universală. Designul, specificațiile și condițiile lotului se stabilesc separat.",
-    "MAXIMUS ProShop este un concept arhitectural pentru un club conceptual de tenis: depozitare automatizată pe tăvi, selecție, eliberare și returnare. Fezabilitatea tehnică, capacitatea și certificarea nu sunt încă stabilite."
+    "MAXIMUS Pro Shop este un concept arhitectural pentru un club conceptual de tenis: depozitare automatizată pe tăvi, selecție, eliberare și returnare. Fezabilitatea tehnică, capacitatea și certificarea nu sunt încă stabilite."
   ],
   bg: [
     "Замисълът е постоянна еталонна библиотека за индивидуален подбор, отделена от стоките за продажба. Стабилните базови конфигурации в матово черно служат за образци при повторни поръчки, индивидуални дизайни и подмарки.",
     "Пример за личен комплект: 6 игрови ракети, 4 или 5 Spot Trainer и 4 или 5 Sweet Spot Trainer — всички с еднаква избрана дължина. Това илюстрира индивидуален подбор, а не стандартно количество за всеки играч.",
     "Индивидуалните партиди от 100–200 броя са примери за обсъждане, а не универсална минимална поръчка. Дизайнът, спецификациите и условията на партидата се договарят отделно.",
-    "MAXIMUS ProShop е архитектурна концепция за концептуален тенис клуб: автоматизирано съхранение върху тави, избор, издаване и връщане. Техническата осъществимост, вместимостта и сертификацията още не са потвърдени."
+    "MAXIMUS Pro Shop е архитектурна концепция за концептуален тенис клуб: автоматизирано съхранение върху тави, избор, издаване и връщане. Техническата осъществимост, вместимостта и сертификацията още не са потвърдени."
   ],
   el: [
     "Προβλέπεται μια μόνιμη βιβλιοθήκη αναφοράς και δοκιμής, χωριστή από το απόθεμα πωλήσεων. Σταθερές βασικές διαμορφώσεις σε μαύρο ματ χρησιμεύουν ως αναφορά για επαναληπτικές παραγγελίες, εξατομικευμένα σχέδια και υπομάρκες.",
     "Παράδειγμα προσωπικού πακέτου: 6 ρακέτες παιχνιδιού, 4 ή 5 Spot Trainer και 4 ή 5 Sweet Spot Trainer, όλα στο ίδιο επιλεγμένο μήκος. Αποτελεί παράδειγμα ατομικής επιλογής, όχι τυπική ποσότητα για κάθε παίκτη.",
     "Εξατομικευμένες παρτίδες 100–200 τεμαχίων είναι παραδείγματα για συζήτηση, όχι καθολική ελάχιστη παραγγελία. Το σχέδιο, οι προδιαγραφές και οι όροι της παρτίδας συμφωνούνται χωριστά.",
-    "Το MAXIMUS ProShop είναι αρχιτεκτονική ιδέα για έναν εννοιολογικό όμιλο τένις: αυτοματοποιημένη αποθήκευση σε δίσκους, επιλογή, παραλαβή και επιστροφή. Η τεχνική εφικτότητα, η χωρητικότητα και η πιστοποίηση δεν έχουν ακόμη επιβεβαιωθεί."
+    "Το MAXIMUS Pro Shop είναι αρχιτεκτονική ιδέα για έναν εννοιολογικό όμιλο τένις: αυτοματοποιημένη αποθήκευση σε δίσκους, επιλογή, παραλαβή και επιστροφή. Η τεχνική εφικτότητα, η χωρητικότητα και η πιστοποίηση δεν έχουν ακόμη επιβεβαιωθεί."
   ],
   sv: [
     "Avsikten är ett permanent referens- och utprovningsbibliotek, skilt från försäljningslagret. Stabila mattsvarta grundkonfigurationer fungerar som referenser för återbeställningar, egna designer och undermärken.",
     "Exempel på personligt paket: 6 spelracketar, 4 eller 5 Spot Trainer och 4 eller 5 Sweet Spot Trainer, alla i samma valda längd. Det illustrerar ett individuellt urval, inte en standardmängd för varje spelare.",
     "Specialanpassade partier om 100–200 enheter är diskussionsexempel, inte en allmän minsta beställning. Design, specifikationer och partivillkor avtalas separat.",
-    "MAXIMUS ProShop är ett arkitekturkoncept för en konceptklubb för tennis: automatiserad förvaring i brickor, urval, utlämning och återlämning. Teknisk genomförbarhet, kapacitet och certifiering är ännu inte fastställda."
+    "MAXIMUS Pro Shop är ett arkitekturkoncept för en konceptklubb för tennis: automatiserad förvaring i brickor, urval, utlämning och återlämning. Teknisk genomförbarhet, kapacitet och certifiering är ännu inte fastställda."
   ],
   no: [
     "Planen er et permanent referanse- og tilpasningsbibliotek, atskilt fra salgslageret. Stabile, matt svarte grunnkonfigurasjoner fungerer som referanser for gjentatte bestillinger, egne design og undermerker.",
     "Eksempel på personlig pakke: 6 spillracketer, 4 eller 5 Spot Trainer og 4 eller 5 Sweet Spot Trainer, alle med samme valgte lengde. Dette viser et individuelt utvalg, ikke en standardmengde for hver spiller.",
     "Tilpassede partier på 100–200 enheter er eksempler til diskusjon, ikke en generell minsteordre. Design, spesifikasjoner og partivilkår avtales separat.",
-    "MAXIMUS ProShop er et arkitekturkonsept for en konseptklubb for tennis: automatisert oppbevaring i brett, valg, utlevering og retur. Teknisk gjennomførbarhet, kapasitet og sertifisering er ennå ikke etablert."
+    "MAXIMUS Pro Shop er et arkitekturkonsept for en konseptklubb for tennis: automatisert oppbevaring i brett, valg, utlevering og retur. Teknisk gjennomførbarhet, kapasitet og sertifisering er ennå ikke etablert."
   ],
   tr: [
     "Amaç, satış stokundan ayrı kalıcı bir referans ve kişiye uygun seçim arşividir. Sabit mat siyah temel yapılandırmalar; tekrar siparişler, özel tasarımlar ve alt markalar için referans oluşturur.",
     "Kişisel paket örneği: aynı seçilen uzunlukta 6 oyun raketi, 4 veya 5 Spot Trainer ve 4 veya 5 Sweet Spot Trainer. Bu, bireysel seçime bir örnektir; her oyuncu için standart adet değildir.",
     "100–200 adetlik özel partiler, görüşme örnekleridir; evrensel bir asgari sipariş miktarı değildir. Tasarım, özellikler ve parti koşulları ayrıca kararlaştırılır.",
-    "MAXIMUS ProShop, bir tenis konsept kulübü için mimari bir kavramdır: otomatik tepsili depolama, seçim, teslim alma ve iade. Mühendislik uygulanabilirliği, kapasite ve sertifikasyon henüz doğrulanmamıştır."
+    "MAXIMUS Pro Shop, bir tenis konsept kulübü için mimari bir kavramdır: otomatik tepsili depolama, seçim, teslim alma ve iade. Mühendislik uygulanabilirliği, kapasite ve sertifikasyon henüz doğrulanmamıştır."
   ],
   az: [
     "Məqsəd satış ehtiyatından ayrı daimi nümunə və fərdi seçim kitabxanasıdır. Sabit tutqun qara baza konfiqurasiyaları təkrar sifarişlər, fərdi dizaynlar və alt brendlər üçün nümunə rolunu oynayır.",
     "Şəxsi paket nümunəsi: eyni seçilmiş uzunluqda 6 oyun raketi, 4 və ya 5 Spot Trainer və 4 və ya 5 Sweet Spot Trainer. Bu, fərdi seçimin nümunəsidir, hər oyunçu üçün standart say deyil.",
     "100–200 ədədlik fərdi partiyalar müzakirə nümunələridir, ümumi minimum sifariş deyil. Dizayn, xüsusiyyətlər və partiya şərtləri ayrıca razılaşdırılır.",
-    "MAXIMUS ProShop tennis konsept klubu üçün memarlıq konsepsiyasıdır: avtomatlaşdırılmış nimçə saxlancı, seçim, götürmə və geri qaytarma. Mühəndislik mümkünlüyü, tutum və sertifikatlaşdırma hələ təsdiqlənməyib."
+    "MAXIMUS Pro Shop tennis konsept klubu üçün memarlıq konsepsiyasıdır: avtomatlaşdırılmış nimçə saxlancı, seçim, götürmə və geri qaytarma. Mühəndislik mümkünlüyü, tutum və sertifikatlaşdırma hələ təsdiqlənməyib."
   ],
   uz: [
     "Maqsad — sotuv zaxirasidan alohida doimiy namuna va individual tanlash kutubxonasi. O‘zgarmas asosiy xira qora konfiguratsiyalar takroriy buyurtmalar, individual dizaynlar va subbrendlar uchun namuna bo‘ladi.",
     "Shaxsiy paket namunasi: bir xil tanlangan uzunlikda 6 ta o‘yin raketkasi, 4 yoki 5 ta Spot Trainer va 4 yoki 5 ta Sweet Spot Trainer. Bu individual tanlov namunasi, har bir o‘yinchi uchun standart miqdor emas.",
     "100–200 donalik individual partiyalar muhokama uchun misollardir, umumiy minimal buyurtma emas. Dizayn, xususiyatlar va partiya shartlari alohida kelishiladi.",
-    "MAXIMUS ProShop — tennis konsept klubi uchun arxitektura konsepsiyasi: avtomatlashtirilgan patnisli saqlash, tanlash, berish va qaytarish. Muhandislik imkoniyati, sig‘im va sertifikatlash hali tasdiqlanmagan."
+    "MAXIMUS Pro Shop — tennis konsept klubi uchun arxitektura konsepsiyasi: avtomatlashtirilgan patnisli saqlash, tanlash, berish va qaytarish. Muhandislik imkoniyati, sig‘im va sertifikatlash hali tasdiqlanmagan."
   ],
   kk: [
     "Мақсат — сатуға арналған қордан бөлек тұрақты эталондық және жеке таңдау кітапханасы. Күңгірт қара түсті тұрақты базалық конфигурациялар қайталама тапсырыстарға, жеке дизайндарға және суббрендтерге үлгі болады.",
     "Жеке жинақ мысалы: бірдей таңдалған ұзындықтағы 6 ойын ракеткасы, 4 немесе 5 Spot Trainer және 4 немесе 5 Sweet Spot Trainer. Бұл — жеке таңдаудың мысалы, әр ойыншыға арналған стандартты сан емес.",
     "100–200 даналық жеке партиялар — талқылауға арналған мысалдар, жалпыға ортақ ең аз тапсырыс емес. Дизайн, сипаттамалар және партия шарттары бөлек келісіледі.",
-    "MAXIMUS ProShop — теннис концепт-клубына арналған сәулеттік тұжырымдама: науаларда автоматтандырылған сақтау, таңдау, беру және қайтару. Инженерлік орындалуы, сыйымдылығы және сертификаттауы әлі расталмаған."
+    "MAXIMUS Pro Shop — теннис концепт-клубына арналған сәулеттік тұжырымдама: науаларда автоматтандырылған сақтау, таңдау, беру және қайтару. Инженерлік орындалуы, сыйымдылығы және сертификаттауы әлі расталмаған."
   ],
   ar: [
     "المقترح مكتبة مرجعية دائمة للتجربة والاختيار الفردي، منفصلة عن مخزون البيع. تكون التهيئات الأساسية الثابتة باللون الأسود المطفأ مراجع لإعادة الطلب والتصاميم المخصصة والعلامات الفرعية.",
     "مثال لحزمة شخصية: 6 مضارب للعب، و4 أو 5 من Spot Trainer، و4 أو 5 من Sweet Spot Trainer، كلها بالطول المختار نفسه. هذا مثال للاختيار الفردي وليس عددًا قياسيًا لكل لاعب.",
     "الدفعات المخصصة من 100–200 وحدة أمثلة للمناقشة، وليست حدًا أدنى عامًا للطلب. يُتفق على التصميم والمواصفات وشروط الدفعة بصورة منفصلة.",
-    "MAXIMUS ProShop تصور معماري لنادٍ مفاهيمي للتنس: تخزين آلي على صوانٍ واختيار واستلام وإرجاع. لم تُثبت بعد الجدوى الهندسية أو السعة أو الاعتمادات."
+    "MAXIMUS Pro Shop تصور معماري لنادٍ مفاهيمي للتنس: تخزين آلي على صوانٍ واختيار واستلام وإرجاع. لم تُثبت بعد الجدوى الهندسية أو السعة أو الاعتمادات."
   ],
   hi: [
     "उद्देश्य बिक्री स्टॉक से अलग एक स्थायी संदर्भ और व्यक्तिगत चयन पुस्तकालय है। स्थिर मैट-काले आधार कॉन्फ़िगरेशन दोबारा ऑर्डर, विशेष डिज़ाइन और उप-ब्रांडों के लिए संदर्भ बनते हैं।",
     "व्यक्तिगत पैकेज का उदाहरण: 6 खेल रैकेट, 4 या 5 Spot Trainer और 4 या 5 Sweet Spot Trainer, सभी एक ही चुनी हुई लंबाई के। यह व्यक्तिगत चयन का उदाहरण है, हर खिलाड़ी के लिए मानक संख्या नहीं।",
     "100–200 इकाइयों के विशेष बैच चर्चा के उदाहरण हैं, सार्वभौमिक न्यूनतम ऑर्डर नहीं। डिज़ाइन, विनिर्देश और बैच की शर्तों पर अलग सहमति आवश्यक है।",
-    "MAXIMUS ProShop एक टेनिस कॉन्सेप्ट क्लब की वास्तु अवधारणा है: स्वचालित ट्रे भंडारण, चयन, प्राप्ति और वापसी। इंजीनियरिंग व्यवहार्यता, क्षमता और प्रमाणन अभी स्थापित नहीं हैं।"
+    "MAXIMUS Pro Shop एक टेनिस कॉन्सेप्ट क्लब की वास्तु अवधारणा है: स्वचालित ट्रे भंडारण, चयन, प्राप्ति और वापसी। इंजीनियरिंग व्यवहार्यता, क्षमता और प्रमाणन अभी स्थापित नहीं हैं।"
   ],
   id: [
     "Direncanakan sebagai pustaka referensi dan pencocokan permanen, terpisah dari stok penjualan. Konfigurasi dasar hitam dof yang tetap menjadi referensi untuk pemesanan ulang, desain khusus, dan submerek.",
     "Contoh paket pribadi: 6 raket bermain, 4 atau 5 Spot Trainer, dan 4 atau 5 Sweet Spot Trainer, semuanya dengan panjang pilihan yang sama. Ini menggambarkan pilihan individual, bukan jumlah standar untuk setiap pemain.",
     "Batch khusus 100–200 unit merupakan contoh untuk pembahasan, bukan minimum pesanan universal. Desain, spesifikasi, dan ketentuan batch disepakati secara terpisah.",
-    "MAXIMUS ProShop adalah konsep arsitektur untuk klub konsep tenis: penyimpanan baki otomatis, pemilihan, pengambilan, dan pengembalian. Kelayakan teknis, kapasitas, dan sertifikasi belum ditetapkan."
+    "MAXIMUS Pro Shop adalah konsep arsitektur untuk klub konsep tenis: penyimpanan baki otomatis, pemilihan, pengambilan, dan pengembalian. Kelayakan teknis, kapasitas, dan sertifikasi belum ditetapkan."
   ],
   fil: [
     "Layunin ang permanenteng aklatan ng sanggunian at pansariling pagpili, hiwalay sa imbentaryong ibinebenta. Ang matatag na batayang pagsasaayos sa matte na itim ay sanggunian para sa muling pag-order, pasadyang disenyo at mga sub-brand.",
     "Halimbawa ng personal na pakete: 6 na raket para sa laro, 4 o 5 Spot Trainer at 4 o 5 Sweet Spot Trainer, lahat sa iisang napiling haba. Halimbawa ito ng pansariling pagpili, hindi karaniwang bilang para sa bawat manlalaro.",
     "Ang pasadyang batch na 100–200 piraso ay halimbawa para sa talakayan, hindi pangkalahatang minimum na order. Hiwalay na pinagkakasunduan ang disenyo, espesipikasyon at mga kondisyon ng batch.",
-    "Ang MAXIMUS ProShop ay konseptong arkitektural para sa isang tennis concept club: awtomatikong imbakan sa mga tray, pagpili, pagkuha at pagbabalik. Hindi pa natitiyak ang teknikal na pagiging posible, kapasidad at sertipikasyon."
+    "Ang MAXIMUS Pro Shop ay konseptong arkitektural para sa isang tennis concept club: awtomatikong imbakan sa mga tray, pagpili, pagkuha at pagbabalik. Hindi pa natitiyak ang teknikal na pagiging posible, kapasidad at sertipikasyon."
   ],
   th: [
     "แนวคิดคือคลังตัวอย่างถาวรสำหรับอ้างอิงและเลือกให้เหมาะกับแต่ละคน แยกจากสต็อกเพื่อขาย สเปกพื้นฐานสีดำด้านที่คงที่ใช้เป็นตัวอ้างอิงสำหรับการสั่งซ้ำ งานออกแบบเฉพาะ และแบรนด์ย่อย",
     "ตัวอย่างชุดส่วนตัว: ไม้เล่น 6 อัน, Spot Trainer 4 หรือ 5 อัน และ Sweet Spot Trainer 4 หรือ 5 อัน ทั้งหมดใช้ความยาวที่เลือกเท่ากัน เป็นตัวอย่างการเลือกเฉพาะบุคคล ไม่ใช่จำนวนมาตรฐานสำหรับผู้เล่นทุกคน",
     "ชุดสั่งทำ 100–200 ชิ้นเป็นตัวอย่างเพื่อหารือ ไม่ใช่จำนวนสั่งซื้อขั้นต่ำที่ใช้กับทุกกรณี ต้องตกลงงานออกแบบ สเปก และเงื่อนไขของแต่ละชุดแยกต่างหาก",
-    "MAXIMUS ProShop เป็นแนวคิดทางสถาปัตยกรรมสำหรับเทนนิสคอนเซปต์คลับ: จัดเก็บด้วยถาดอัตโนมัติ เลือก เบิก และคืน ยังไม่ได้ยืนยันความเป็นไปได้ทางวิศวกรรม ความจุ หรือการรับรอง"
+    "MAXIMUS Pro Shop เป็นแนวคิดทางสถาปัตยกรรมสำหรับเทนนิสคอนเซปต์คลับ: จัดเก็บด้วยถาดอัตโนมัติ เลือก เบิก และคืน ยังไม่ได้ยืนยันความเป็นไปได้ทางวิศวกรรม ความจุ หรือการรับรอง"
   ],
   ja: [
     "販売在庫とは別に、比較・試打と個別フィッティングのための常設ライブラリーを構想しています。仕様を維持したマットブラックの基本構成を、再注文、独自デザイン、サブブランドの基準とします。",
     "個人用パッケージの例：競技用ラケット6本、Spot Trainer 4本または5本、Sweet Spot Trainer 4本または5本を、すべて同じ選択した長さで揃えます。個別選択の一例であり、全プレーヤー共通の標準本数ではありません。",
     "100–200本の特注ロットは協議用の例であり、一律の最低発注数量ではありません。デザイン、仕様、ロット条件は別途合意します。",
-    "MAXIMUS ProShopはテニス・コンセプトクラブ向けの建築構想です。トレーによる自動保管、選択、取り出し、返却を想定しています。技術的実現性、容量、認証はまだ確立されていません。"
+    "MAXIMUS Pro Shopはテニス・コンセプトクラブ向けの建築構想です。トレーによる自動保管、選択、取り出し、返却を想定しています。技術的実現性、容量、認証はまだ確立されていません。"
   ],
   ko: [
     "판매 재고와 별도로 상설 비교 및 개인별 피팅 라이브러리를 구상합니다. 안정적으로 유지하는 무광 검정 기본 구성을 재주문, 맞춤 디자인 및 하위 브랜드의 기준으로 삼습니다.",
     "개인 패키지 예시: 경기용 라켓 6개, Spot Trainer 4개 또는 5개, Sweet Spot Trainer 4개 또는 5개를 모두 같은 선택 길이로 구성합니다. 개인별 선택의 예시이며 모든 선수에게 적용되는 표준 수량은 아닙니다.",
     "100–200개 맞춤 제작 물량은 협의를 위한 예시이며 보편적인 최소 주문량이 아닙니다. 디자인, 사양 및 제작 물량 조건은 별도로 합의합니다.",
-    "MAXIMUS ProShop은 테니스 콘셉트 클럽을 위한 건축 구상으로, 트레이 자동 보관, 선택, 출고 및 반납을 포함합니다. 공학적 실현 가능성, 수용량 및 인증은 아직 확정되지 않았습니다."
+    "MAXIMUS Pro Shop은 테니스 콘셉트 클럽을 위한 건축 구상으로, 트레이 자동 보관, 선택, 출고 및 반납을 포함합니다. 공학적 실현 가능성, 수용량 및 인증은 아직 확정되지 않았습니다."
   ],
   zh: [
     "计划建立独立于销售库存的永久参考与试配样品库。稳定的哑光黑色基础配置将作为重复订购、定制设计及子品牌的参考。",
     "个人套装示例：6支比赛球拍、4或5支Spot Trainer、4或5支Sweet Spot Trainer，全部采用同一选定长度。这只是个性化选择示例，并非适用于每位球员的标准数量。",
     "100–200支的定制批次只是供讨论的示例，不是统一的最低起订量。设计、规格和批次条件须另行商定。",
-    "MAXIMUS ProShop是面向网球概念俱乐部的建筑构想：采用自动托盘储存、选择、取出和归还。工程可行性、容量及认证尚未确定。"
+    "MAXIMUS Pro Shop是面向网球概念俱乐部的建筑构想：采用自动托盘储存、选择、取出和归还。工程可行性、容量及认证尚未确定。"
   ],
   cs: [
     "Záměrem je stálá referenční knihovna pro individuální výběr, oddělená od prodejních zásob. Stabilní základní konfigurace v matné černé slouží jako vzory pro opakované objednávky, vlastní designy a podznačky.",
     "Příklad osobního balíčku: 6 herních raket, 4 nebo 5 Spot Trainer a 4 nebo 5 Sweet Spot Trainer, všechny se stejnou zvolenou délkou. Jde o ukázku individuálního výběru, nikoli standardní počet pro každého hráče.",
     "Zakázkové série po 100–200 kusech jsou příklady k diskusi, nikoli obecná minimální objednávka. Design, specifikace a podmínky série se sjednávají samostatně.",
-    "MAXIMUS ProShop je architektonický koncept koncepčního tenisového klubu: automatizované ukládání do zásobníků, výběr, výdej a vrácení. Technická proveditelnost, kapacita a certifikace zatím nejsou potvrzeny."
+    "MAXIMUS Pro Shop je architektonický koncept koncepčního tenisového klubu: automatizované ukládání do zásobníků, výběr, výdej a vrácení. Technická proveditelnost, kapacita a certifikace zatím nejsou potvrzeny."
   ],
   sl: [
     "Zamišljena je stalna referenčna zbirka za individualno izbiro, ločena od prodajnih zalog. Stabilne osnovne konfiguracije v mat črni barvi so vzorci za ponovna naročila, lastne zasnove in podznamke.",
     "Primer osebnega paketa: 6 igralnih loparjev, 4 ali 5 Spot Trainer in 4 ali 5 Sweet Spot Trainer, vsi enake izbrane dolžine. To prikazuje individualno izbiro, ne standardne količine za vsakega igralca.",
     "Prilagojene serije s 100–200 kosi so primeri za razpravo, ne splošno najmanjše naročilo. Zasnova, specifikacije in pogoji serije se dogovorijo ločeno.",
-    "MAXIMUS ProShop je arhitekturni koncept za konceptualni teniški klub: avtomatizirano shranjevanje na pladnjih, izbira, izdaja in vračilo. Tehnična izvedljivost, zmogljivost in certificiranje še niso potrjeni."
+    "MAXIMUS Pro Shop je arhitekturni koncept za konceptualni teniški klub: avtomatizirano shranjevanje na pladnjih, izbira, izdaja in vračilo. Tehnična izvedljivost, zmogljivost in certificiranje še niso potrjeni."
   ],
   bs: [
     "Zamišljena je trajna referentna zbirka za individualni izbor, odvojena od prodajnih zaliha. Stabilne osnovne konfiguracije u mat crnoj služe kao uzorci za ponovljene narudžbe, individualne dizajne i podbrendove.",
     "Primjer ličnog paketa: 6 reketa za igru, 4 ili 5 Spot Trainer i 4 ili 5 Sweet Spot Trainer, svi iste izabrane dužine. To prikazuje individualni izbor, a ne standardnu količinu za svakog igrača.",
     "Prilagođene serije od 100–200 komada primjeri su za razgovor, a ne opća minimalna narudžba. Dizajn, specifikacije i uslovi serije dogovaraju se zasebno.",
-    "MAXIMUS ProShop je arhitektonski koncept za konceptualni teniski klub: automatizirano skladištenje na tacnama, izbor, izdavanje i povrat. Tehnička izvodljivost, kapacitet i certifikacija još nisu potvrđeni."
+    "MAXIMUS Pro Shop je arhitektonski koncept za konceptualni teniski klub: automatizirano skladištenje na tacnama, izbor, izdavanje i povrat. Tehnička izvodljivost, kapacitet i certifikacija još nisu potvrđeni."
   ],
   mk: [
     "Замислата е постојана референтна библиотека за индивидуален избор, одвоена од продажните залихи. Стабилните основни конфигурации во мат црна боја служат како примери за повторни нарачки, индивидуални дизајни и подбрендови.",
     "Пример за личен пакет: 6 рекети за игра, 4 или 5 Spot Trainer и 4 или 5 Sweet Spot Trainer, сите со иста избрана должина. Ова илустрира индивидуален избор, а не стандардна количина за секој играч.",
     "Прилагодените серии од 100–200 парчиња се примери за разговор, а не општа минимална нарачка. Дизајнот, спецификациите и условите на серијата се договараат одделно.",
-    "MAXIMUS ProShop е архитектонски концепт за концептуален тениски клуб: автоматизирано складирање на послужавници, избор, издавање и враќање. Техничката изводливост, капацитетот и сертификацијата сè уште не се потврдени."
+    "MAXIMUS Pro Shop е архитектонски концепт за концептуален тениски клуб: автоматизирано складирање на послужавници, избор, издавање и враќање. Техничката изводливост, капацитетот и сертификацијата сè уште не се потврдени."
   ],
   sq: [
     "Synohet një bibliotekë e përhershme referimi dhe përshtatjeje, e ndarë nga stoku i shitjes. Konfigurimet bazë të qëndrueshme në të zezë mat shërbejnë si referenca për porosi të përsëritura, dizajne të personalizuara dhe nënmarka.",
     "Shembull pakete personale: 6 raketa loje, 4 ose 5 Spot Trainer dhe 4 ose 5 Sweet Spot Trainer, të gjitha me të njëjtën gjatësi të zgjedhur. Ky është shembull i përzgjedhjes individuale, jo sasi standarde për çdo lojtar.",
     "Seritë e personalizuara me 100–200 njësi janë shembuj për diskutim, jo një porosi minimale universale. Dizajni, specifikimet dhe kushtet e serisë bien dakord veçmas.",
-    "MAXIMUS ProShop është një koncept arkitekturor për një klub konceptual tenisi: ruajtje e automatizuar në tabaka, përzgjedhje, marrje dhe kthim. Fizibiliteti teknik, kapaciteti dhe certifikimi ende nuk janë përcaktuar."
+    "MAXIMUS Pro Shop është një koncept arkitekturor për një klub konceptual tenisi: ruajtje e automatizuar në tabaka, përzgjedhje, marrje dhe kthim. Fizibiliteti teknik, kapaciteti dhe certifikimi ende nuk janë përcaktuar."
   ],
   da: [
     "Tanken er et permanent reference- og tilpasningsbibliotek, adskilt fra salgslageret. Stabile matsorte grundkonfigurationer fungerer som reference for genbestillinger, egne design og undermærker.",
     "Eksempel på en personlig pakke: 6 spilleketsjere, 4 eller 5 Spot Trainer og 4 eller 5 Sweet Spot Trainer, alle i samme valgte længde. Det illustrerer et individuelt udvalg, ikke en standardmængde for hver spiller.",
     "Specialtilpassede partier på 100–200 enheder er eksempler til drøftelse, ikke en generel minimumsordre. Design, specifikationer og partivilkår aftales særskilt.",
-    "MAXIMUS ProShop er et arkitekturkoncept til en konceptklub for tennis: automatiseret opbevaring i bakker, valg, udlevering og returnering. Teknisk gennemførlighed, kapacitet og certificering er endnu ikke fastlagt."
+    "MAXIMUS Pro Shop er et arkitekturkoncept til en konceptklub for tennis: automatiseret opbevaring i bakker, valg, udlevering og returnering. Teknisk gennemførlighed, kapacitet og certificering er endnu ikke fastlagt."
   ],
   fi: [
     "Tavoitteena on pysyvä vertailu- ja sovituskirjasto erillään myyntivarastosta. Vakaat mattamustat peruskokoonpanot toimivat vertailukohtina uusintatilauksille, yksilöllisille malleille ja alabrändeille.",
     "Esimerkki henkilökohtaisesta paketista: 6 pelimailaa, 4 tai 5 Spot Traineria ja 4 tai 5 Sweet Spot Traineria, kaikki saman valitun pituisina. Tämä havainnollistaa yksilöllistä valintaa, ei jokaisen pelaajan vakiomäärää.",
     "100–200 kappaleen yksilölliset erät ovat keskusteluesimerkkejä, eivät yleinen vähimmäistilaus. Muotoilu, määrittelyt ja erän ehdot sovitaan erikseen.",
-    "MAXIMUS ProShop on tenniksen konseptiklubin arkkitehtoninen suunnitelma: automaattinen tarjotinsäilytys, valinta, nouto ja palautus. Teknistä toteutettavuutta, kapasiteettia ja sertifiointia ei ole vielä vahvistettu."
+    "MAXIMUS Pro Shop on tenniksen konseptiklubin arkkitehtoninen suunnitelma: automaattinen tarjotinsäilytys, valinta, nouto ja palautus. Teknistä toteutettavuutta, kapasiteettia ja sertifiointia ei ole vielä vahvistettu."
   ],
   is: [
     "Hugmyndin er varanlegt viðmiðunar- og mátunarsafn, aðskilið frá sölubirgðum. Stöðugar grunnútfærslur í möttum svörtum lit eru viðmið fyrir endurteknar pantanir, sérhönnun og undirvörumerki.",
     "Dæmi um persónulegan pakka: 6 leikspaðar, 4 eða 5 Spot Trainer og 4 eða 5 Sweet Spot Trainer, allir í sömu völdu lengd. Þetta sýnir einstaklingsval, ekki staðlaðan fjölda fyrir alla leikmenn.",
     "Sérsmíðaðar lotur með 100–200 einingum eru dæmi til umræðu, ekki almennt lágmarkspöntunarmagn. Samið er sérstaklega um hönnun, forskriftir og lotuskilmála.",
-    "MAXIMUS ProShop er byggingarlistarhugmynd fyrir hugmyndaklúbb í tennis: sjálfvirk geymsla á bökkum, val, afhending og skil. Tæknileg framkvæmanleiki, rýmd og vottun hafa ekki enn verið staðfest."
+    "MAXIMUS Pro Shop er byggingarlistarhugmynd fyrir hugmyndaklúbb í tennis: sjálfvirk geymsla á bökkum, val, afhending og skil. Tæknileg framkvæmanleiki, rýmd og vottun hafa ekki enn verið staðfest."
   ],
   ga: [
     "Tá leabharlann bhuan tagartha agus feistithe beartaithe, ar leith ón stoc díolacháin. Is tagairtí iad cumraíochtaí bunúsacha seasmhacha dubha neamhlonracha le haghaidh athorduithe, dearaí saincheaptha agus fobhrandaí.",
     "Sampla de phacáiste pearsanta: 6 raicéad imeartha, 4 nó 5 Spot Trainer agus 4 nó 5 Sweet Spot Trainer, iad uile ar an bhfad roghnaithe céanna. Léiríonn sé rogha aonair, ní cainníocht chaighdeánach do gach imreoir.",
     "Is samplaí le plé iad baisceanna saincheaptha de 100–200 aonad, ní íosordú uilíoch. Comhaontaítear an dearadh, na sonraíochtaí agus coinníollacha na baisce ar leithligh.",
-    "Is coincheap ailtireachta do chlub coincheapa leadóige é MAXIMUS ProShop: stóráil uathoibrithe ar thráidirí, roghnú, eisiúint agus filleadh. Níl indéantacht innealtóireachta, toilleadh ná deimhniú bunaithe fós."
+    "Is coincheap ailtireachta do chlub coincheapa leadóige é MAXIMUS Pro Shop: stóráil uathoibrithe ar thráidirí, roghnú, eisiúint agus filleadh. Níl indéantacht innealtóireachta, toilleadh ná deimhniú bunaithe fós."
   ],
   et: [
     "Kavandatud on püsiv võrdlus- ja sobitusraamatukogu, mis on müügivarust eraldi. Püsivad mattmustad baaskonfiguratsioonid on kordustellimuste, erikujunduste ja alambrändide võrdlusaluseks.",
     "Isikliku paketi näide: 6 mängureketit, 4 või 5 Spot Trainerit ja 4 või 5 Sweet Spot Trainerit, kõik sama valitud pikkusega. See on individuaalse valiku näide, mitte iga mängija standardkogus.",
     "100–200 ühikuga eritellimuspartiid on arutelunäited, mitte üldine minimaalne tellimus. Kujundus, tehnilised andmed ja partii tingimused lepitakse kokku eraldi.",
-    "MAXIMUS ProShop on tennisekontseptsiooniklubi arhitektuurne idee: automaatne kandikutel hoidmine, valimine, väljastamine ja tagastus. Tehniline teostatavus, mahutavus ja sertifitseerimine pole veel kindlaks tehtud."
+    "MAXIMUS Pro Shop on tennisekontseptsiooniklubi arhitektuurne idee: automaatne kandikutel hoidmine, valimine, väljastamine ja tagastus. Tehniline teostatavus, mahutavus ja sertifitseerimine pole veel kindlaks tehtud."
   ],
   lv: [
     "Iecere ir pastāvīga atsauces un piemeklēšanas bibliotēka, atsevišķi no pārdošanas krājumiem. Stabilas matēti melnas pamata konfigurācijas kalpo par atsauci atkārtotiem pasūtījumiem, individuāliem dizainiem un apakšzīmoliem.",
     "Personīga komplekta piemērs: 6 spēles raketes, 4 vai 5 Spot Trainer un 4 vai 5 Sweet Spot Trainer, visi vienādā izvēlētā garumā. Tas ilustrē individuālu izvēli, nevis standarta daudzumu katram spēlētājam.",
     "Individuālas 100–200 vienību partijas ir piemēri apspriešanai, nevis vispārējs minimālais pasūtījums. Dizainu, specifikācijas un partijas nosacījumus saskaņo atsevišķi.",
-    "MAXIMUS ProShop ir arhitektūras koncepcija tenisa konceptklubam: automatizēta glabāšana uz paplātēm, izvēle, izsniegšana un atgriešana. Inženiertehniskā īstenojamība, ietilpība un sertifikācija vēl nav apstiprināta."
+    "MAXIMUS Pro Shop ir arhitektūras koncepcija tenisa konceptklubam: automatizēta glabāšana uz paplātēm, izvēle, izsniegšana un atgriešana. Inženiertehniskā īstenojamība, ietilpība un sertifikācija vēl nav apstiprināta."
   ],
   lt: [
     "Numatoma nuolatinė pavyzdžių ir individualaus parinkimo biblioteka, atskirta nuo pardavimo atsargų. Pastovios matinės juodos bazinės konfigūracijos yra pakartotinių užsakymų, individualių dizainų ir antrinių prekių ženklų atskaitos taškas.",
     "Asmeninio rinkinio pavyzdys: 6 žaidimo raketės, 4 arba 5 Spot Trainer ir 4 arba 5 Sweet Spot Trainer, visi vienodo pasirinkto ilgio. Tai individualaus pasirinkimo pavyzdys, o ne standartinis kiekis kiekvienam žaidėjui.",
     "Individualios 100–200 vienetų partijos yra aptarimo pavyzdžiai, o ne visuotinis mažiausias užsakymas. Dizainas, specifikacijos ir partijos sąlygos derinami atskirai.",
-    "MAXIMUS ProShop yra architektūrinė koncepcinio teniso klubo idėja: automatizuotas laikymas padėkluose, pasirinkimas, išdavimas ir grąžinimas. Inžinerinis įgyvendinamumas, talpa ir sertifikavimas dar nepatvirtinti."
+    "MAXIMUS Pro Shop yra architektūrinė koncepcinio teniso klubo idėja: automatizuotas laikymas padėkluose, pasirinkimas, išdavimas ir grąžinimas. Inžinerinis įgyvendinamumas, talpa ir sertifikavimas dar nepatvirtinti."
   ],
   mt: [
     "L-għan huwa librerija permanenti ta’ referenza u għażla individwali, separata mill-istokk għall-bejgħ. Konfigurazzjonijiet bażi stabbli bl-iswed matt iservu ta’ referenza għal ordnijiet ripetuti, disinji apposta u sottoditti.",
     "Eżempju ta’ pakkett personali: 6 rakketti tal-logħob, 4 jew 5 Spot Trainer u 4 jew 5 Sweet Spot Trainer, kollha bl-istess tul magħżul. Dan juri għażla individwali, mhux kwantità standard għal kull plejer.",
     "Lottijiet apposta ta’ 100–200 unità huma eżempji għad-diskussjoni, mhux ordni minima universali. Id-disinn, l-ispeċifikazzjonijiet u l-kundizzjonijiet tal-lott jiġu miftiehma separatament.",
-    "MAXIMUS ProShop huwa kunċett arkitettoniku għal klabb kunċettwali tat-tennis: ħażna awtomatizzata fuq trejs, għażla, ħruġ u ritorn. Il-fattibbiltà tal-inġinerija, il-kapaċità u ċ-ċertifikazzjoni għadhom mhumiex stabbiliti."
+    "MAXIMUS Pro Shop huwa kunċett arkitettoniku għal klabb kunċettwali tat-tennis: ħażna awtomatizzata fuq trejs, għażla, ħruġ u ritorn. Il-fattibbiltà tal-inġinerija, il-kapaċità u ċ-ċertifikazzjoni għadhom mhumiex stabbiliti."
   ],
   ca: [
     "Es proposa una biblioteca permanent de referència i ajust, separada de l’estoc de venda. Les configuracions base estables en negre mat serveixen de referència per a comandes repetides, dissenys personalitzats i submarques.",
     "Exemple de paquet personal: 6 raquetes de joc, 4 o 5 Spot Trainer i 4 o 5 Sweet Spot Trainer, tots amb la mateixa llargada escollida. Il·lustra una selecció individual, no una quantitat estàndard per a cada jugador.",
     "Els lots personalitzats de 100–200 unitats són exemples per debatre, no una comanda mínima universal. El disseny, les especificacions i les condicions del lot s’acorden per separat.",
-    "MAXIMUS ProShop és un concepte arquitectònic per a un club conceptual de tennis: emmagatzematge automatitzat en safates, selecció, lliurament i retorn. La viabilitat tècnica, la capacitat i la certificació encara no estan establertes."
+    "MAXIMUS Pro Shop és un concepte arquitectònic per a un club conceptual de tennis: emmagatzematge automatitzat en safates, selecció, lliurament i retorn. La viabilitat tècnica, la capacitat i la certificació encara no estan establertes."
   ],
   eu: [
     "Salmentako stocketik bereizitako erreferentzia- eta egokitzapen-liburutegi iraunkorra da asmoa. Oinarrizko konfigurazio beltz mate egonkorrak errepikatutako eskaeren, diseinu pertsonalizatuen eta azpimarken erreferentzia dira.",
     "Pakete pertsonalaren adibidea: jokorako 6 erraketa, 4 edo 5 Spot Trainer eta 4 edo 5 Sweet Spot Trainer, guztiak hautatutako luzera berekoak. Banakako aukeraketaren adibidea da, ez jokalari guztientzako kopuru estandarra.",
     "100–200 aleko lote pertsonalizatuak eztabaidarako adibideak dira, ez gutxieneko eskaera unibertsala. Diseinua, zehaztapenak eta lotearen baldintzak bereiz adosten dira.",
-    "MAXIMUS ProShop teniseko kontzeptu-klub baterako arkitektura-ideia da: erretiluen bidezko biltegiratze automatizatua, aukeraketa, jasotzea eta itzultzea. Ingeniaritza-bideragarritasuna, edukiera eta ziurtapena ez daude oraindik egiaztatuta."
+    "MAXIMUS Pro Shop teniseko kontzeptu-klub baterako arkitektura-ideia da: erretiluen bidezko biltegiratze automatizatua, aukeraketa, jasotzea eta itzultzea. Ingeniaritza-bideragarritasuna, edukiera eta ziurtapena ez daude oraindik egiaztatuta."
   ],
   gl: [
     "Proponse unha biblioteca permanente de referencia e axuste, separada das existencias para venda. As configuracións base estables en negro mate serven de referencia para pedidos repetidos, deseños personalizados e submarcas.",
     "Exemplo de paquete persoal: 6 raquetas de xogo, 4 ou 5 Spot Trainer e 4 ou 5 Sweet Spot Trainer, todos coa mesma lonxitude escollida. Ilustra unha selección individual, non unha cantidade estándar para cada xogador.",
     "Os lotes personalizados de 100–200 unidades son exemplos para debater, non un pedido mínimo universal. O deseño, as especificacións e as condicións do lote acórdanse por separado.",
-    "MAXIMUS ProShop é un concepto arquitectónico para un club conceptual de tenis: almacenamento automatizado en bandexas, selección, entrega e devolución. A viabilidade técnica, a capacidade e a certificación aínda non están establecidas."
+    "MAXIMUS Pro Shop é un concepto arquitectónico para un club conceptual de tenis: almacenamento automatizado en bandexas, selección, entrega e devolución. A viabilidade técnica, a capacidade e a certificación aínda non están establecidas."
   ]
 };
 

@@ -188,6 +188,8 @@ export const routes = {
   distribution: "/partnerships/distribution",
   strategic: "/partnerships/strategic",
   institutional: "/partnerships/institutional",
+  proShop: "/pro-shop",
+  meetings: "/meetings",
   contact: "/contact",
   legal: "/legal",
   privacy: "/privacy",
@@ -207,7 +209,7 @@ export const navGroups = [
   { key: "training", items: ["training", "sst", "spot", "methodology"] },
   { key: "gps", href: "gps" },
   { key: "ecosystem", items: ["ecosystem", "engineering", "experience", "brands", "families", "owners", "network"] },
-  { key: "partnerships", items: ["partnerships", "coaches", "clubs", "distribution", "strategic", "institutional"] },
+  { key: "partnerships", items: ["partnerships", "coaches", "clubs", "proShop", "meetings", "distribution", "strategic", "institutional"] },
   { key: "contact", href: "contact" },
 ];
 
@@ -265,5 +267,7 @@ export const requestPurposes = [
   "strategic",
   "owner",
   "network",
+  "valuation",
+  "meeting",
   "general",
 ];

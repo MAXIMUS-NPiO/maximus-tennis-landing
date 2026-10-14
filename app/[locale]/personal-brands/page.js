@@ -1,6 +1,7 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 import { ctx, meta } from "../../../lib/page";
 import { PageHero, Section, Cta, Steps, Kickers } from "../../../components/Ui";
+import { Identity } from "../../../components/Editorial";
 
 export const generateMetadata = meta("brands", (d) => [d.brands.title, d.brands.lead]);
 
@@ -10,7 +11,8 @@ export default async function Page({ params }) {
   return (
     <>
       <PageHero eyebrow={dict.home.brands.eyebrow} title={B.title} statement={B.statement} lead={B.lead} />
-      <Section first title={B.progressionTitle}><Steps items={B.progression} /></Section>
+      <Identity locale={locale} dict={dict} first />
+      <Section band="band-1" title={B.progressionTitle}><Steps items={B.progression} /></Section>
       <Section band="band-2" title={B.royaltiesTitle}><Kickers items={B.royalties} /><div className="btn-row"><Cta locale={locale} to="contact" label={B.cta} purpose="brand" /><Cta locale={locale} to="contact" label={B.cta2} kind="btn-outline" purpose="coach" /></div></Section>
     </>
   );

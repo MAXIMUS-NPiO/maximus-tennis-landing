@@ -172,6 +172,7 @@ export const routes = {
   methodology: "/training/methodology",
   gps: "/gps",
   build: "/build",
+  catalogue: "/catalogue",
   familyPlan: "/family-plan",
   choose: "/choose",
   experience: "/experience",
@@ -201,7 +202,7 @@ export const routes = {
  * Measured, not guessed — see scripts/check-header.mjs.
  */
 export const navGroups = [
-  { key: "racquets", items: ["choose", "build", "racquets", "great", "power", "spin", "precision", "grip", "custom"] },
+  { key: "racquets", items: ["choose", "build", "catalogue", "racquets", "great", "power", "spin", "precision", "grip", "custom"] },
   { key: "familyPlan", href: "familyPlan" },
   { key: "training", items: ["training", "sst", "spot", "methodology"] },
   { key: "gps", href: "gps" },

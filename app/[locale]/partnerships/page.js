@@ -4,6 +4,7 @@ import { ctx, meta } from "../../../lib/page";
 import { href } from "../../../lib/paths";
 import { PageHero, Section, Note } from "../../../components/Ui";
 import NationalPackage from "../../../components/NationalPackage";
+import CatalogueDownload from "../../../components/CatalogueDownload";
 
 export const generateMetadata = meta("partnerships", (d) => [d.partnerships.title, d.partnerships.lead]);
 const KEYS = ["coaches", "clubs", "distribution", "strategic", "institutional"];
@@ -13,7 +14,9 @@ export default async function Page({ params }) {
   const P = dict.partnerships;
   return (
     <>
-      <PageHero eyebrow={dict.nav.groups.partnerships} title={P.title} lead={P.lead} />
+      <PageHero eyebrow={dict.nav.groups.partnerships} title={P.title} lead={P.lead}>
+        <CatalogueDownload locale={locale} dict={dict} page />
+      </PageHero>
       <Section first>
         <div className="grid-3">{KEYS.map((k) => <Link key={k} href={href(locale, k)} className="card card-link"><h3>{P.routes[k].title}</h3><p>{P.routes[k].lead}</p><span className="arrow">{P.routes[k].cta} →</span></Link>)}</div>
       </Section>

@@ -81,6 +81,7 @@ const ALLOWED_BY_LOCALE = {
     "Padel", "Pickleball", "Squash", "Badminton", "Racquetball", "Tennis",   // the Dutch names of these sports
     "Contact", "Training", "Product", "Menu", "Status", "Sport", "Comfort", "Beginner",  // Dutch words spelled as in English
     "3 series", "4 parameters",                                  // "series" and "parameters" are the Dutch plurals too
+    "Partners",                                                  // the Dutch plural of partner (catalogue chapter)
     "SPIN — 100 in² · Spin",                                     // series mark, unit, and the Dutch word for the stroke
     "Swingweight", "Twistweight",                                // what Dutch stringers say
   ]),
@@ -120,6 +121,7 @@ const ALLOWED_BY_LOCALE = {
     "Tennis", "Padel", "Pickleball", "Squash", "Badminton", "Racquetball",
     "Menu", "Organisation", "Construction", "Production", "Promotion", "Participation",
     "Distribution", "Institution", "Licence", "Version 2026-09-21",
+    "Catalogue",                                                 // the French word for catalogue
     "Contact",                                                  // French for the navigation label, kept short so it fits the bar
     "Swingweight", "Twistweight", "Fitting",                    // what French stringers say
     "Sweet Spot Trainer, 270 g / 330 mm", "Sweet Spot Trainer, 285 g / 325 mm",
@@ -183,6 +185,7 @@ const ALLOWED_BY_LOCALE = {
     "Tennis", "Padel", "Pickleball", "Squash", "Badminton",
     "Swingweight", "Twistweight", "Balance",
     "Start", "Status", "Menu", "Organisation", "Institution", "Distribution", "Service",
+    "Reference",                                                 // Danish "reference" (catalogue chapter)
     "SPIN — 100 in² · Spin",                                       // mark + unit + the Danish word for the stroke
   ]),
   fi: new Set([

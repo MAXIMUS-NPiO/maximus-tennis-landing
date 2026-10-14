@@ -8,6 +8,7 @@ import { seriesList, otherRacquetSports } from "../../../data/products";
 import { PageHero, Section, Cta, Kickers } from "../../../components/Ui";
 import { SeriesCards } from "../../../components/Product";
 import SeriesIndex from "../../../components/SeriesIndex";
+import CatalogueDownload from "../../../components/CatalogueDownload";
 
 export const generateMetadata = meta("racquets", (d) => [d.racquets.title, d.racquets.lead]);
 
@@ -21,6 +22,7 @@ export default async function Page({ params }) {
         <div style={{ marginBottom: 36 }}><SeriesIndex locale={locale} dict={dict} /></div>
         <SeriesCards locale={locale} dict={dict} />
         <p className="note" style={{ marginTop: 22 }}>{R.construction}</p>
+        <CatalogueDownload locale={locale} dict={dict} page />
       </Section>
       <Section title={R.compareTitle}>
         <LengthOptions dict={dict} />

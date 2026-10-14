@@ -12,6 +12,7 @@ import { WeightMatrix, PrecisionTable, GripRow } from "../../../../components/Pr
 import { Photo, PhotoPending } from "../../../../components/Media";
 import TrackView from "../../../../components/TrackView";
 import VariantCatalogue from "../../../../components/VariantCatalogue";
+import CatalogueDownload from "../../../../components/CatalogueDownload";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -111,6 +112,7 @@ export default async function Page({ params }) {
           <div className="stack"><GripRow dict={dict} emphasise={false} /><p className="muted small">{dict.home.carbon.gripP}</p></div>
         </div>
         <div className="btn-row">{configure}</div>
+        <CatalogueDownload locale={locale} dict={dict} page />
       </Section>
 
       <Section band="band-1" title={P.matrixTitle} lead={P.matrixLead}>

@@ -12,6 +12,7 @@ import { Photo, PhotoPending } from "../../components/Media";
 import { StiffnessSchematic, GripScale } from "../../components/Schematics";
 import PrecisionSwitch from "../../components/PrecisionSwitch";
 import LeadForm from "../../components/LeadForm";
+import CatalogueDownload from "../../components/CatalogueDownload";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -25,6 +26,7 @@ export default async function Home({ params }) {
   const { locale } = await params;
   const dict = getDict(locale);
   const H = dict.home;
+  const K = dict.catalogueDownload;
   const L = dict.common.labels;
   const S = dict.common.statuses;
   const M = dict.media;
@@ -37,12 +39,17 @@ export default async function Home({ params }) {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow accent">{H.heroEyebrow}</p>
-            <h1 className="h-display">{H.heroTitle}</h1>
+            {/* Three short sentences, one per line, in every language that ends them with a full stop. */}
+            <h1 className="h-display hero-slogan">{H.heroTitle.split(/(?<=[.。])\s*/).filter(Boolean).map((t, i) => <span key={i}>{t}</span>)}</h1>
             <p className="hero-line">{H.heroProduct}</p>
+            {/* Founder's update of 14 October 2026: three actions on the first screen. */}
             <div className="btn-row">
-              <Cta locale={locale} to="training" label={H.heroCta1} track="hero_training" />
-              <Cta locale={locale} to="great" label={H.heroCta2} kind="btn-outline" track="hero_great" />
+              <Cta locale={locale} to="choose" label={K.heroChoose} track="hero_choose" />
+              <Cta locale={locale} to="catalogue" label={K.heroCatalogue} kind="btn-outline" track="hero_catalogue" />
+              <Cta locale={locale} to="partnerships" label={K.heroPartner} kind="btn-outline" track="hero_partner" />
             </div>
+            <p className="hero-eco"><Link href={href(locale, "ecosystem")}>{K.heroEcosystem}</Link></p>
+            <CatalogueDownload locale={locale} dict={dict} />
           </div>
           <Photo id="greatHero" alt={M.greatHero} caption={H.heroCaption} priority sizes="(min-width: 900px) 560px, 100vw" className="hero-photo" />
           <div className="hero-meta">

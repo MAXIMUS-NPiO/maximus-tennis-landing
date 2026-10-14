@@ -4,6 +4,7 @@ import { ctx, meta } from "../../../lib/page";
 import { href } from "../../../lib/paths";
 import { sweetSpotTrainer } from "../../../data/products";
 import { PageHero, Section, Cta, Note } from "../../../components/Ui";
+import CatalogueDownload from "../../../components/CatalogueDownload";
 
 export const generateMetadata = meta("training", (d) => [d.training.title, d.training.lead]);
 
@@ -12,10 +13,12 @@ export default async function Page({ params }) {
   const T = dict.training, L = dict.common.labels;
   return (
     <>
-      <PageHero eyebrow={dict.nav.groups.training} title={T.title} lead={T.lead} />
+      <PageHero eyebrow={dict.nav.groups.training} title={T.title} lead={T.lead}>
+        <CatalogueDownload locale={locale} dict={dict} page />
+      </PageHero>
       <Section first>
         <div className="grid-3">
-          <Link href={href(locale, "sst")} className="card card-link"><h3>{T.sst.h}</h3><p>{T.sst.p}</p><p className="mono" style={{ fontSize: 13 }}>{sweetSpotTrainer.headSizeSqIn} {L.sqin} · {sweetSpotTrainer.system.map((x) => x.weight).join(" / ")} {L.grams}</p><span className="arrow">{L.learn} →</span></Link>
+          <Link href={href(locale, "sst")} className="card card-link"><h3>{T.sst.h}</h3><p>{T.sst.p}</p><p className="mono" style={{ fontSize: 13 }}>{sweetSpotTrainer.headSizeSqIn} {L.sqin} · {sweetSpotTrainer.system[0].weight}–{sweetSpotTrainer.system.at(-1).weight} {L.grams}</p><span className="arrow">{L.learn} →</span></Link>
           <Link href={href(locale, "spot")} className="card card-link"><h3>{T.spot.h}</h3><p>{T.spot.p}</p><span className="arrow">{L.learn} →</span></Link>
           <Link href={href(locale, "methodology")} className="card card-link"><h3>{T.method.h}</h3><p>{T.method.p}</p><span className="arrow">{L.learn} →</span></Link>
         </div>

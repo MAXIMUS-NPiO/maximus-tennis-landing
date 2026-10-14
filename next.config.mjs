@@ -8,6 +8,8 @@ const YEARS = BUILD_YEAR === "2026" ? "2026" : `2026–${BUILD_YEAR}`;
 // 10 October 2026). Added after minification, so no minifier can strip it.
 const BANNER = `/*! © ${YEARS} Maximus Kiriyakulov. All rights reserved. maximus.tennis code, calculations and algorithms are proprietary; no licence is granted. */`;
 
+import { catalogue } from "./data/catalogue.js";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -27,8 +29,15 @@ const nextConfig = {
   poweredByHeader: false,
   serverExternalPackages: ["nodemailer"],
   images: { formats: ["image/avif", "image/webp"] },
+  // The stable catalogue address answers with the current edition's file itself (no redirect), so a
+  // link printed in a letter keeps working when a new edition is published under its own folder.
+  async rewrites() {
+    return [{ source: catalogue.stablePath, destination: catalogue.editionPath }];
+  },
   async headers() {
     return [
+      { source: "/catalogue/:edition/:file+", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
+      { source: catalogue.stablePath, headers: [{ key: "Cache-Control", value: "public, max-age=0, must-revalidate" }] },
       {
         source: "/(.*)",
         headers: [

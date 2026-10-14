@@ -2,6 +2,7 @@
 /** Catalogue extension, owner instructions 12–13 October 2026. All 48 existing languages. */
 import { trainerWeights, sweetSpotTrainer, standardLengths } from "../data/products.js";
 import { nationalPackageCopy } from "./national-package-copy.js";
+import { catalogueCopy } from "./catalogue-download-copy.js";
 const copy = {
   "en": {
     "standard": "Standard lengths",
@@ -346,6 +347,12 @@ export function applyCatalogueUpdate(locale, d) {
   const L = d.common.labels;
   const national = nationalPackageCopy(locale);
   d.nationalPackage = national;
+  // Founder's update of 14 October 2026: the catalogue route and the first screen's three actions.
+  const K = catalogueCopy(locale);
+  d.catalogueDownload = K;
+  d.nav.catalogue = K.nav;
+  d.home.heroTitle = K.heroTitle;
+  d.home.heroProduct = K.heroLead;
   d.catalogue = { ...c, length: d.sst.columns.length, plus: "Plus", superlong: "Superlong" };
   d.build.fieldNames.lengthMode = c.standard;
   d.build.fieldNames.lengthIn = `${d.sst.columns.length} (${L.inches})`;

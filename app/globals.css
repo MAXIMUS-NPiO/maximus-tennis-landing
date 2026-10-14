@@ -1332,3 +1332,36 @@ h1.eyebrow, h2.eyebrow, h3.eyebrow, h4.eyebrow, .footer-sub-h { font-family: var
 .spot-weights.expanded-weights { gap: 6px 12px; }
 .spot-weights.expanded-weights span { font-size: 22px; line-height: 1.35; }
 .spot-weights.expanded-weights span::before { content: none; }
+
+/* ===== Catalogue and first screen (Founder's update, 14 October 2026) ===== */
+/* The slogan is three short sentences; it keeps the display face but a size that fits beside the
+   photograph in every language, the longest words included. */
+.hero-copy .h-display.hero-slogan { max-width: none; font-size: clamp(36px, 9.6vw, 58px); line-height: 1.06; }
+.hero-slogan span { display: block; }
+@media (min-width: 900px) {
+  .hero-copy .h-display.hero-slogan { font-size: clamp(46px, calc(4.6vw - 2px), 68px); }
+  :lang(bg) .hero-copy .h-display.hero-slogan, :lang(mk) .hero-copy .h-display.hero-slogan, :lang(kk) .hero-copy .h-display.hero-slogan,
+  :lang(uz) .hero-copy .h-display.hero-slogan, :lang(fil) .hero-copy .h-display.hero-slogan, :lang(ro) .hero-copy .h-display.hero-slogan { font-size: clamp(40px, calc(3.9vw - 2px), 58px); }
+}
+.hero-eco { margin: 16px 0 0; max-width: 46ch; font-size: 15.5px; line-height: 1.5; color: var(--ink-2); }
+.hero-eco a { color: inherit; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+.hero-eco a:hover { color: var(--ink); text-decoration-color: var(--accent); }
+.catalogue-download { margin-top: 18px; }
+.catalogue-download .btn-row { margin-top: 0; }
+.catalogue-facts { margin-top: 12px; font-size: 14px; border-inline-start-color: var(--accent); }
+.catalogue-overview { display: grid; gap: 28px; grid-template-columns: 1fr; align-items: start; }
+.catalogue-overview > * { min-width: 0; }
+.catalogue-cover { display: block; max-width: 420px; justify-self: center; }
+.catalogue-cover img, .catalogue-pages img { display: block; width: 100%; height: auto; border-radius: var(--radius); background: #000; }
+.catalogue-chapters { list-style: none; margin: 14px 0 18px; padding: 0; border-top: 1px solid var(--line); }
+.catalogue-chapters li { display: grid; grid-template-columns: 2.6em 1fr auto; gap: 10px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.catalogue-chapters li b { font-family: var(--serif); font-weight: 600; font-size: 22px; line-height: 1.2; }
+.catalogue-chapters .mono { color: var(--accent); font-size: 14px; }
+.catalogue-pages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+@media (min-width: 900px) {
+  .catalogue-overview { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 48px; }
+  .catalogue-cover { justify-self: stretch; max-width: none; }
+}
+/* The hero's product line and its ecosystem line are display lines, not prose: flush to the start,
+   as the rule above keeps headings and display lines (no stretched spaces at phone width). */
+.hero-line, .hero-eco, .catalogue-facts { text-align: start; hyphens: manual; -webkit-hyphens: manual; }

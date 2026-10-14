@@ -227,7 +227,8 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
     c.mode === "listed"
       ? [L.weight, c.weight ? `${c.weight} ${L.grams} — ${s && s.matrixStatus === "REQUESTED_ARCHITECTURE" ? B.status.requestedArchitecture : B.status.listed}` : "—", 2]
       : [B.q.customWeight, c.customWeight ? `${c.customWeight} ${L.grams} — ${B.status.technicalReview}` : "—", 2],
-    c.mode === "listed" && s ? [L.balance, balance !== null ? `${balance} ${L.mm} — ${balanceWord}` : B.status.notPublished, 2] : null,
+    // Only a balance on record is shown; an unknown balance is left out, never printed as missing.
+    c.mode === "listed" && s && balance !== null ? [L.balance, `${balance} ${L.mm} — ${balanceWord}`, 2] : null,
     [dict.form.fields.basis, c.mode === "custom" ? dict.lead.basis.unstrung : c.basis ? `${dict.lead.basis[c.basis]} — ${B.status.requestedCondition}` : B.listedBasis, 4],
     [L.grip, c.grip ? `${c.grip} · ${grips.find((g) => g.id === c.grip).inches}${grips.find((g) => g.id === c.grip).fraction}″ — ${B.gripNote}` : "—", 3],
     c.balanceReq ? [B.q.balanceRequest, `${c.balanceReq} ${L.mm} — ${L.requestTarget}`, 4] : null,

@@ -57,7 +57,7 @@ export default async function LocaleLayout({ children, params }) {
     "@type": "WebSite",
     url: `${site.website}/${locale}`,
     name: dict.meta.siteName,
-    inLanguage: localeMeta[locale].hrefLang,
+    inLanguage: localeMeta[locale].htmlLang,
     author: authorNode(),
     creator: authorNode(),
     copyrightHolder: authorNode(),

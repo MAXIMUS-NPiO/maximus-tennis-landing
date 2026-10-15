@@ -20,3 +20,11 @@ test("device language selects the locale, honouring q values", () => {
   assert.equal(pick("sw-KE,sw"), "en");
   assert.equal(pick("*"), "en");
 });
+
+// A zero weight explicitly excludes that language, even when higher-weight languages are unsupported.
+test("zero-quality language preferences are excluded before matching", () => {
+  assert.equal(pick("sw;q=1,ru;q=0"), "en");
+  assert.equal(pick("ru;q=0,fr;q=0.5"), "fr");
+  assert.equal(pick("ru;q=0.000"), "en");
+  assert.equal(pick("ru;q=0.001"), "ru");
+});

@@ -25,9 +25,24 @@ async function surface(width = 360) {
   await page.route('**/*', (route) => (new URL(route.request().url()).origin === new URL(BASE).origin ? route.continue() : route.abort()));
   return { page, context };
 }
+// A page whose script chunk did not arrive (connection reset on the way) is loaded again; the
+// retry is recorded, never hidden. Any other page error still fails the run.
+const networkRetries = [];
 async function open(page, path) {
-  const res = await page.goto(`${BASE}${path}`, { waitUntil: 'networkidle' });
-  assert.equal(res.status(), 200, path);
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const before = pageErrors.length;
+    let res;
+    try { res = await page.goto(`${BASE}${path}`, { waitUntil: 'networkidle' }); }
+    catch (e) { if (/net::ERR_|Timeout/.test(String(e)) && attempt < 3) { networkRetries.push(`${path}: ${String(e).split('\n')[0]}`); continue; } throw e; }
+    assert.equal(res.status(), 200, path);
+    const fresh = pageErrors.slice(before);
+    if (fresh.length && fresh.every((x) => /ChunkLoadError|Loading chunk/.test(x)) && attempt < 3) {
+      pageErrors.splice(before);
+      networkRetries.push(`${path}: script chunk did not load`);
+      continue;
+    }
+    return;
+  }
 }
 async function noOverflow(page, label) {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false, `${label}: horizontal scroll`);
@@ -206,9 +221,9 @@ try {
     await context.close();
   }
   assert.deepEqual(pageErrors, []);
-  writeFileSync(`${OUT}/browser.json`, JSON.stringify({ status: 'PASS', scenarios: results.length, results, pageErrors, submissionTransport: 'intercepted; shared authoritative validation executed, no message sent' }, null, 2));
-  console.log(`PASS ${results.length} browser scenarios; 48 locales × 7 pages at 360 px; meeting and valuation submissions; store failure shows an error`);
+  writeFileSync(`${OUT}/browser.json`, JSON.stringify({ status: 'PASS', scenarios: results.length, results, pageErrors, networkRetries, submissionTransport: 'intercepted; shared authoritative validation executed, no message sent' }, null, 2));
+  console.log(`PASS ${results.length} browser scenarios; 48 locales × 7 pages at 360 px; meeting and valuation submissions; store failure shows an error; network retries: ${networkRetries.length}`);
 } catch (e) {
-  writeFileSync(`${OUT}/browser.json`, JSON.stringify({ status: 'FAIL', completed: results, pageErrors, error: String(e), stack: e.stack }, null, 2));
+  writeFileSync(`${OUT}/browser.json`, JSON.stringify({ status: 'FAIL', completed: results, pageErrors, networkRetries, error: String(e), stack: e.stack }, null, 2));
   throw e;
 } finally { await browser.close(); }

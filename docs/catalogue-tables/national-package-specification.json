@@ -1,6 +1,6 @@
 {
   "id": "national-package-v1",
-  "revision": "2026-10-13.D",
+  "revision": "2026-10-15.E",
   "copiesPerCombination": 2,
   "gripCount": 8,
   "perCountry": true,
@@ -100,7 +100,7 @@
     "engineeredSystem": false,
     "certifiedCapacity": null
   },
-  "catalogueRevision": "2026-10-13.D",
+  "catalogueRevision": "2026-10-15.E",
   "unknownPolicy": "Null means NOT_PROVIDED, not zero.",
   "gripDimensions": "Nominal factory size labels; no raw-handle dimensions or measurements inferred.",
   "lines": [

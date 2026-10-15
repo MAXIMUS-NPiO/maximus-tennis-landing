@@ -10,7 +10,7 @@ export function catalogueFacts(locale, K) {
   const date = new Intl.DateTimeFormat(lang, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${catalogue.date}T00:00:00Z`));
   const size = new Intl.NumberFormat(lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(catalogue.bytes / 1e6);
   return {
-    // The data version is isolated (U+2066 … U+2069) so a right-to-left page keeps "2026-10-13.D" intact.
+    // The data version is isolated (U+2066 … U+2069) so a right-to-left page keeps "2026-10-15.E" intact.
     edition: fill(K.edition, { edition: catalogue.edition, date, version: `\u2066${catalogue.productDataVersion}\u2069` }),
     file: fill(K.file, { pages: catalogue.pages, size }),
   };

@@ -110,7 +110,7 @@ export default async function Page({ params }) {
         ) : null}
         <div className="split" style={{ marginTop: 20 }}>
           <PrecisionTable dict={dict} compact />
-          <div className="stack"><GripRow dict={dict} emphasise={false} /><p className="muted small">{dict.home.carbon.gripP}</p></div>
+          <div className="stack"><GripRow dict={dict} emphasise={false} /><p className="muted small">{dict.home.carbon.gripP} {dict.gripShape.short}</p></div>
         </div>
         <div className="btn-row">{configure}</div>
         <CatalogueDownload locale={locale} dict={dict} page />

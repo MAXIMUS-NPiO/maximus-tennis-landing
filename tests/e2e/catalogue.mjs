@@ -38,9 +38,10 @@ async function fresh(locale, series = 'great', mobile = false) {
   }
   return result;
 }
-async function remaining(page, grip = 'L3') {
+async function remaining(page, grip = 'L3', shape = 'classic') {
   await page.locator('[data-next="weight"]').click();
   await page.locator(`[name="grip"][value="${grip}"]`).check();
+  await page.locator(`[name="gripShape"][value="${shape}"]`).check();
   await page.locator('[data-next="grip"]').click();
   await page.locator('[data-next="targets"]').click();
   await page.locator('[data-next="personal"]').click();
@@ -142,6 +143,7 @@ try {
     assert.equal(captured.config.weight, weight);
     assert.equal(captured.config.lengthIn, Number(length));
     assert.equal(captured.config.grip, grip);
+    assert.equal(captured.config.gripShape, 'classic');
     assert.equal(captured.config.cls, undefined);
     results.push({ series, submittedWeight: weight, submittedLength: length, submittedGrip: grip, result: 'PASS' });
     await context.close();

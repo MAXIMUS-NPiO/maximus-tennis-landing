@@ -6,6 +6,7 @@ import { catalogueCopy } from "./catalogue-download-copy.js";
 import { editorialCopy } from "./editorial-copy.js";
 import { forumCopy } from "./forum-copy.js";
 import { budgetRequestCopy } from "./budget-request-copy.js";
+import { gripShapeCopy } from "./grip-shape-copy.js";
 const copy = {
   "en": {
     "standard": "Standard lengths",
@@ -415,5 +416,15 @@ export function applyCatalogueUpdate(locale, d) {
   const missing = [d.precision.extended.stringPattern, d.precision.extended.beamProfile, L.swingweight, L.stiffness].join(" · ");
   d.seriesPage.notPublished = `${d.build.status.notPublished}: ${missing}. ${d.custom.lead}`;
   d.racquets.compareLead = `${c.note} ${d.seriesPage.notPublished}`;
+  // Founder, 15 October 2026: the grip shape, a second choice next to the size.
+  const GS = gripShapeCopy(locale);
+  d.gripShape = GS;
+  d.build.lead = GS.buildLead;
+  d.build.fieldNames.gripShape = GS.title;
+  d.build.fieldNames.gripReference = GS.referenceShort;
+  d.nationalPackage.scope = `${d.nationalPackage.scope} ${GS.npScope}`;
+  // The question about the shape follows the one about overgrips in every series FAQ.
+  const overgrip = d.seriesPage.faq.findIndex((q) => q[1] && /L0/.test(q[1]));
+  d.seriesPage.faq = [...d.seriesPage.faq.slice(0, overgrip + 1), GS.faq, ...d.seriesPage.faq.slice(overgrip + 1)];
   return d;
 }

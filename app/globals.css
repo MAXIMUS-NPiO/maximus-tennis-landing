@@ -1399,3 +1399,32 @@ h1.eyebrow, h2.eyebrow, h3.eyebrow, h4.eyebrow, .footer-sub-h { font-family: var
 .stages li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 12px 14px; border: 1px solid var(--line-strong); border-radius: 12px; text-align: start; hyphens: manual; }
 .stages b { font-family: var(--mono); font-weight: 500; color: var(--accent); }
 .stages span { overflow-wrap: anywhere; }
+
+/* =============================================================================================
+   Grip shape (Founder, 15 October 2026): cross-sections of one grip size, in the configurator
+   and on the grip page. Schematic proportions only.
+   ============================================================================================= */
+.gs-ico { display: block; width: 52px; height: auto; flex: 0 0 52px; aspect-ratio: 1 / 1; overflow: visible; }
+.gs-ico .gs-face { fill: var(--surface-2); stroke: var(--ink); stroke-width: 2.6; stroke-linejoin: round; }
+.gs-ico .gs-ghost { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-dasharray: 5 4; stroke-linejoin: round; }
+.gs-ico .gs-q { fill: var(--accent); font-size: 36px; font-weight: 650; }
+.choice.shapes { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .choice.shapes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .choice.shapes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.choice.shapes label > span { display: grid; gap: 3px; text-align: start; hyphens: manual; }
+.choice.shapes small { font-size: 13.5px; line-height: 1.4; }
+.choice.shapes label:has(input:checked) .gs-face { fill: var(--accent-light); stroke: var(--accent); }
+.grip-shapes-figure { margin: 0 0 8px; }
+.grip-shapes { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .grip-shapes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.grip-shapes li { min-width: 0; }
+.grip-shapes a { display: grid; grid-template-columns: 84px minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: 14px; row-gap: 4px; align-items: start; height: 100%; padding: 14px; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--paper); color: var(--ink); text-decoration: none; text-align: start; hyphens: manual; transition: border-color 0.2s ease; }
+.grip-shapes a:hover, .grip-shapes a:focus-visible { border-color: var(--accent); }
+.schematic .grip-shapes .gs-ico { grid-row: 1 / span 2; width: 84px; margin: 0; }
+@media (min-width: 1024px) {
+  .grip-shapes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .grip-shapes a { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; row-gap: 8px; padding: 16px 14px; }
+  .schematic .grip-shapes .gs-ico { grid-row: auto; width: min(100%, 132px); margin: 0 auto 6px; }
+}
+.grip-shapes b { font-size: 17px; font-weight: 650; overflow-wrap: break-word; }
+.grip-shapes span { font-size: 14.5px; line-height: 1.45; color: var(--ink-2); overflow-wrap: break-word; }

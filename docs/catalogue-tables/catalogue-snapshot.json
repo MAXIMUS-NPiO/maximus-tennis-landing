@@ -1,6 +1,6 @@
 {
   "author": "© 2026 Maximus Kiriyakulov. All rights reserved.",
-  "revision": "2026-10-13.D",
+  "revision": "2026-10-15.E",
   "sourceCommit": "0fd7bcf7d072a3aef0e9ac1b385313c0077565b1",
   "sources": [
     "Published catalogue 0fd7bcf: original weights, historical measurements, heads and branding",
@@ -30896,7 +30896,7 @@
   ],
   "nationalPackage": {
     "id": "national-package-v1",
-    "revision": "2026-10-13.D",
+    "revision": "2026-10-15.E",
     "copiesPerCombination": 2,
     "gripCount": 8,
     "perCountry": true,

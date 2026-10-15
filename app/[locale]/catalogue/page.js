@@ -20,8 +20,8 @@ export default async function Page({ params }) {
   const nf = new Intl.NumberFormat(localeMeta[locale]?.htmlLang || "en");
   const matrix = fill(K.matrix, { variants: nf.format(catalogueCounts.totalRequestedVariants), combinations: nf.format(nationalPackage.combinations) });
   const [cover, ...inside] = catalogue.previews;
-  // Chapters as laid out in the PDF: Idea 3, Racquets 6, Matrix 13, Training 14, Partners 17, Reference 21.
-  const chapterPages = [3, 6, 13, 14, 17, 21];
+  // Chapters as laid out in the PDF of the current edition (data/catalogue.js).
+  const { chapterPages } = catalogue;
 
   return (
     <>

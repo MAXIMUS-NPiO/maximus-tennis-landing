@@ -7,20 +7,22 @@
  * tests/catalogue-file.test.mjs checks the file, its size and SHA-256 and the product data version.
  */
 export const catalogue = {
-  edition: "5.0",
-  date: "2026-10-14",
-  productDataVersion: "2026-10-13.D",
-  pages: 23,
-  bytes: 3622492,
-  sha256: "a7000867a03a98beb68d9aff3e442f940bb261f679f7b5d01b4b70732cf7cb90",
+  edition: "5.1",
+  date: "2026-10-15",
+  productDataVersion: "2026-10-15.E",
+  pages: 24,
+  bytes: 3655045,
+  sha256: "820c3394224f39f0829a512cbd0f78f5e97119e2278a42929b57aa5dd1a8cf57",
   fileName: "MAXIMUS_TENNIS_Catalogue.pdf",
   stablePath: "/catalogue/MAXIMUS_TENNIS_Catalogue.pdf",
-  editionPath: "/catalogue/5.0/MAXIMUS_TENNIS_Catalogue.pdf",
+  editionPath: "/catalogue/5.1/MAXIMUS_TENNIS_Catalogue.pdf",
+  /** First page of each chapter in the PDF: Idea, Racquets, Matrix, Training, Partners, Reference. */
+  chapterPages: [3, 6, 14, 15, 18, 22],
   /** Page previews rendered from the PDF itself (page number, file, pixel size). */
   previews: [
-    { page: 1, src: "/catalogue/5.0/page-01.webp", width: 720, height: 1296 },
-    { page: 6, src: "/catalogue/5.0/page-06.webp", width: 480, height: 864 },
-    { page: 13, src: "/catalogue/5.0/page-13.webp", width: 480, height: 864 },
-    { page: 16, src: "/catalogue/5.0/page-16.webp", width: 480, height: 864 },
+    { page: 1, src: "/catalogue/5.1/page-01.webp", width: 720, height: 1296 },
+    { page: 6, src: "/catalogue/5.1/page-06.webp", width: 480, height: 864 },
+    { page: 12, src: "/catalogue/5.1/page-12.webp", width: 480, height: 864 },
+    { page: 14, src: "/catalogue/5.1/page-14.webp", width: 480, height: 864 },
   ],
 };

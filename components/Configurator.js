@@ -2,8 +2,8 @@
 "use client";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { seriesList, configurationProducts as SERIES, isTrainer, standardLengths, precisionClasses, grips, balanceFor, productDataVersion } from "../data/products";
-import { validateConfig, TARGET_BOUNDS, CONFIG_PRODUCT_IDS, GRIP_IDS, CLASS_IDS, BASIS, SET_TYPES, USES, PTYPES, SET_SIZE } from "../lib/intake/schema";
+import { seriesList, configurationProducts as SERIES, isTrainer, standardLengths, precisionClasses, grips, gripShapes, balanceFor, productDataVersion } from "../data/products";
+import { validateConfig, TARGET_BOUNDS, CONFIG_PRODUCT_IDS, GRIP_IDS, GRIP_SHAPE_IDS, CLASS_IDS, BASIS, SET_TYPES, USES, PTYPES, SET_SIZE } from "../lib/intake/schema";
 import { STORAGE_KEYS, readJson, writeJson, pick } from "../lib/client/storage";
 import { href } from "../lib/paths";
 import { track } from "../lib/analytics";
@@ -11,21 +11,25 @@ import OrderFlow from "./OrderFlow";
 import { PERSIST, DEFAULTS, withSeries, toPayload } from "../lib/client/configuration";
 import LeadForm, { errorText } from "./LeadForm";
 import PurchaseChoice from "./PurchaseChoice";
+import { GripSectionIcon } from "./GripShape";
 
 /**
  * Configurator — builds a configuration REQUEST. It never invents an SKU, price, delivery date,
  * stock position or measured certificate. Listed weights come from the exact series matrix; any
  * other weight is a requested target for technical review (whole grams, no rounding).
  *
- * Browser storage keeps structural choices only (series, class, weight, grip, targets, set type…).
- * Engraving text, notes and contact details stay in memory and are never written to storage.
- * URL context (?series=&grip=&from=) is validated, applied once and removed from the address bar.
+ * Browser storage keeps structural choices only (series, class, weight, grip size and shape, targets,
+ * set type…). Engraving text, the racquet named for a replica handle, notes and contact details stay
+ * in memory and are never written to storage.
+ * URL context (?series=&grip=&shape=&from=) is validated, applied once and removed from the address bar.
  */
 
 const STEPS = ["series", "cls", "weight", "grip", "targets", "personal", "set", "use", "review"];
-const FIELD_STEP = { series: 0, cls: 1, mode: 2, weight: 2, customWeight: 2, lengthMode: 2, lengthIn: 2, customLengthIn: 2, grip: 3, basis: 4, balanceReq: 4, sw: 4, ra: 4, ptype: 5, engraving: 5, setType: 6, sets: 6, teamSize: 6, use: 7, notes: 7 };
+const FIELD_STEP = { series: 0, cls: 1, mode: 2, weight: 2, customWeight: 2, lengthMode: 2, lengthIn: 2, customLengthIn: 2, grip: 3, gripShape: 3, gripReference: 3, basis: 4, balanceReq: 4, sw: 4, ra: 4, ptype: 5, engraving: 5, setType: 6, sets: 6, teamSize: 6, use: 7, notes: 7 };
 const STEP_FIELDS = STEPS.map((_, i) => Object.keys(FIELD_STEP).filter((k) => FIELD_STEP[k] === i));
 const FROM = ["gps", "series", "home", "choose", "precision", "grip", "custom"];
+/** The configurator asks for a grip shape; the server accepts a request without one (see schema). */
+const check = (payload) => validateConfig(payload, { requireGripShape: true });
 
 function Radio({ name, options, value, onChange, three = false, labelledBy }) {
   return (
@@ -46,6 +50,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
   const C = dict.catalogue;
   const ST = dict.common.statuses;
   const P = dict.precision;
+  const GS = dict.gripShape;
   const [c, setC] = useState(DEFAULTS);
   const [step, setStep] = useState(0);
   const [ready, setReady] = useState(false);
@@ -80,6 +85,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
     const sp = new URLSearchParams(window.location.search);
     const us = sp.get("series");
     const ug = sp.get("grip");
+    const ush = sp.get("shape");
     const uf = sp.get("from");
     let msg = "";
     if (CONFIG_PRODUCT_IDS.includes(us)) {
@@ -89,17 +95,18 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
       start = Math.max(start, 1);
     }
     if (GRIP_IDS.includes(ug)) next.grip = ug;
+    if (GRIP_SHAPE_IDS.includes(ush)) next.gripShape = ush;
     if (FROM.includes(uf)) fromRef.current = uf;
     // Never resume past a step whose answers are missing or invalid (stale or damaged state).
-    const check = validateConfig(toPayload(next)).errors;
+    const stale = check(toPayload(next)).errors;
     for (let i = 0; i < start; i++) {
-      if (Object.keys(check).some((key) => STEP_FIELDS[i].includes(key.replace(/^config\./, "")))) {
+      if (Object.keys(stale).some((key) => STEP_FIELDS[i].includes(key.replace(/^config\./, "")))) {
         start = i;
         break;
       }
     }
-    if (sp.has("series") || sp.has("grip") || sp.has("from")) {
-      ["series", "grip", "from"].forEach((k) => sp.delete(k));
+    if (sp.has("series") || sp.has("grip") || sp.has("shape") || sp.has("from")) {
+      ["series", "grip", "shape", "from"].forEach((k) => sp.delete(k));
       const q = sp.toString();
       window.history.replaceState(window.history.state, "", `${window.location.pathname}${q ? `?${q}` : ""}${window.location.hash}`);
     }
@@ -123,7 +130,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
   const trainer = isTrainer(c.series);
   const cur = STEPS[step];
   const payload = useMemo(() => toPayload(c), [c]);
-  const full = useMemo(() => validateConfig(payload), [payload]);
+  const full = useMemo(() => check(payload), [payload]);
 
   const begin = () => {
     if (!startedRef.current) {
@@ -185,7 +192,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
   };
 
   const beforeSubmit = () => {
-    const r = validateConfig(payload);
+    const r = check(payload);
     if (!r.ok) {
       const e = {};
       for (const [key, code] of Object.entries(r.errors)) e[key.replace(/^config\./, "")] = code;
@@ -230,7 +237,8 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
     // Only a balance on record is shown; an unknown balance is left out, never printed as missing.
     c.mode === "listed" && s && balance !== null ? [L.balance, `${balance} ${L.mm} — ${balanceWord}`, 2] : null,
     [dict.form.fields.basis, c.mode === "custom" ? dict.lead.basis.unstrung : c.basis ? `${dict.lead.basis[c.basis]} — ${B.status.requestedCondition}` : B.listedBasis, 4],
-    [L.grip, c.grip ? `${c.grip} · ${grips.find((g) => g.id === c.grip).inches}${grips.find((g) => g.id === c.grip).fraction}″ — ${B.gripNote}` : "—", 3],
+    [L.grip, c.grip ? `\u2066${c.grip} · ${grips.find((g) => g.id === c.grip).inches}${grips.find((g) => g.id === c.grip).fraction}″\u2069 — ${B.gripNote}` : "—", 3],
+    [GS.title, c.gripShape ? `${GS.shapes[c.gripShape][0]}${c.gripShape === "replica" ? ` — ${c.gripReference || "—"}` : ""}` : "—", 3],
     c.balanceReq ? [B.q.balanceRequest, `${c.balanceReq} ${L.mm} — ${L.requestTarget}`, 4] : null,
     c.sw ? [B.q.swingweight, `${c.sw} ${L.kgcm2} — ${L.requestTarget}`, 4] : null,
     c.ra ? [B.q.stiffness, `${c.ra} ${L.ra} — ${L.requestTarget}`, 4] : null,
@@ -264,7 +272,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
         {cur === "series" && B.q.series}
         {cur === "cls" && B.q.cls}
         {cur === "weight" && B.q.weightMode}
-        {cur === "grip" && B.q.grip}
+        {cur === "grip" && GS.step}
         {cur === "targets" && B.q.targetsTitle}
         {cur === "personal" && B.q.engravingType}
         {cur === "set" && B.q.set}
@@ -334,14 +342,40 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
       )}
 
       {cur === "grip" && (
-        <div className="stack">
-          <div className="choice four" role="radiogroup" aria-labelledby="cfg-step-title">
-            {grips.map((g) => (
-              <label key={g.id}><input type="radio" name="grip" value={g.id} checked={c.grip === g.id} onChange={() => set("grip", g.id)} /><span><strong>{g.id}</strong> · {g.inches}{g.fraction}″</span></label>
-            ))}
+        <div className="stack-lg">
+          <div className="stack">
+            <h3 className="eyebrow" id="c-grip-legend">{B.q.grip}</h3>
+            <div className="choice four" role="radiogroup" aria-labelledby="c-grip-legend">
+              {grips.map((g) => (
+                <label key={g.id}><input type="radio" name="grip" value={g.id} checked={c.grip === g.id} onChange={() => set("grip", g.id)} /><span><bdi><strong>{g.id}</strong> · {g.inches}{g.fraction}″</bdi></span></label>
+              ))}
+            </div>
+            {fieldErr("grip")}
+            <p className="note">{B.gripNote}</p>
           </div>
-          {fieldErr("grip")}
-          <p className="note">{B.gripNote}</p>
+          <div className="stack">
+            <h3 className="eyebrow" id="c-gripShape-legend">{GS.title}</h3>
+            <p className="muted small" id="c-gripShape-lead">{GS.lead}</p>
+            <div className="choice shapes" role="radiogroup" aria-labelledby="c-gripShape-legend" aria-describedby="c-gripShape-lead">
+              {gripShapes.map(({ id }) => (
+                <label key={id}>
+                  <input type="radio" name="gripShape" value={id} checked={c.gripShape === id} onChange={() => set("gripShape", id)} {...inv("gripShape")} />
+                  <GripSectionIcon shape={id} />
+                  <span><strong>{GS.shapes[id][0]}</strong><small className="muted">{GS.shapes[id][1]}</small></span>
+                </label>
+              ))}
+            </div>
+            {fieldErr("gripShape")}
+            {c.gripShape === "replica" && (
+              <div className="field">
+                <label htmlFor="c-gripReference">{GS.referenceLabel}</label>
+                <span className="hint" id="c-gripReference-hint">{GS.referenceHint} {B.notStored}</span>
+                <input id="c-gripReference" type="text" maxLength={160} autoComplete="off" value={c.gripReference || ""} onChange={(e) => set("gripReference", e.target.value)} {...inv("gripReference")} aria-describedby={["c-gripReference-hint", errors.gripReference ? "c-gripReference-err" : null].filter(Boolean).join(" ")} />
+                {fieldErr("gripReference")}
+              </div>
+            )}
+            <p className="note">{GS.note}</p>
+          </div>
         </div>
       )}
 

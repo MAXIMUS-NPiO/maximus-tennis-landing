@@ -84,7 +84,7 @@ async function submitAndWait(form, page) {
   ]);
   return res;
 }
-async function runConfigurator(page, { series = "great", cls = "P1.5", weight = "272", grip = "L3", setType = "triple", sets = "2" } = {}) {
+async function runConfigurator(page, { series = "great", cls = "P1.5", weight = "272", grip = "L3", shape = "classic", setType = "triple", sets = "2" } = {}) {
   await waitCfg(page);
   const click = (sel) => page.locator(sel).first().click();
   if (await page.locator('input[name="series"]').count()) {
@@ -98,6 +98,7 @@ async function runConfigurator(page, { series = "great", cls = "P1.5", weight = 
   await page.locator("#c-lengthIn").selectOption("27");
   await click('button[data-next="weight"]');
   await page.locator(`input[name="grip"][value="${grip}"]`).check();
+  await page.locator(`input[name="gripShape"][value="${shape}"]`).check();
   await click('button[data-next="grip"]');
   await click('button[data-next="targets"]');
   await page.locator('input[name="ptype"][value="none"]').check();
@@ -224,6 +225,7 @@ await scenario("S04", "Precision step shows four parameters for every class; mat
   await page.locator("#c-weight").selectOption("300");
   await page.locator('button[data-next="weight"]').click();
   await page.locator('input[name="grip"][value="L7"]').check();
+  await page.locator('input[name="gripShape"][value="rectangular"]').check();
   await page.locator('button[data-next="grip"]').click();
   await page.locator('button[data-next="targets"]').click();
   await page.locator('button[data-next="personal"]').click();
@@ -255,7 +257,7 @@ await scenario("S05", "Configuration request is accepted end-to-end with a serve
   const success = await shot(page, "configurator-success");
   assert(id && /^MX-CFG-/.test(id), `no request id (${id})`);
   const rec = await lead(id);
-  assert(rec.record.config.series === "great" && rec.record.config.weight === 272 && rec.record.config.racquetsTotal === 6, "stored configuration differs");
+  assert(rec.record.config.series === "great" && rec.record.config.weight === 272 && rec.record.config.racquetsTotal === 6 && rec.record.config.gripShape === "classic", "stored configuration differs");
   assert(rec.record.context.from === "series", "entry context missing");
   await context.close();
   return { requestId: id, stored: rec.record.config, context: rec.record.context, screenshots: [review, success] };

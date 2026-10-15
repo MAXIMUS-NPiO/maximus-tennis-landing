@@ -182,6 +182,23 @@ export const grips = [
   { id: "L7", inches: "4", fraction: "⅞" },
 ];
 
+/**
+ * Grip shape — the geometry of the handle section, chosen separately from its size (Founder,
+ * 15 October 2026). Every handle is an eight-bevel octagon; the shapes differ in the proportions of
+ * the bevels. Descriptions stay qualitative: no handle dimension is published before the written
+ * specification. "replica" reproduces the handle of a racquet the player names; "advise" leaves the
+ * shape to be agreed before production. An order option, like the precision class: it can be
+ * requested with every size L0–L7 and every family, and it adds no combination to the request
+ * matrix or to the National Package.
+ */
+export const gripShapes = Object.freeze([
+  Object.freeze({ id: "classic", kind: "geometry" }),
+  Object.freeze({ id: "rectangular", kind: "geometry" }),
+  Object.freeze({ id: "even", kind: "geometry" }),
+  Object.freeze({ id: "replica", kind: "reference" }),
+  Object.freeze({ id: "advise", kind: "open" }),
+]);
+
 /** Owner request, 12 October 2026. Request options, not stock or engineering approval. */
 export const standardLengths = Object.freeze([
   { inches: 26.3, category: "short" }, { inches: 26.6, category: "short" },
@@ -252,7 +269,7 @@ export const seriesParameters = Object.fromEntries(
   ["great", "power", "spin"].map((id) => [id, Object.fromEntries(PARAMETER_KEYS.map((k) => [k, { value: null, status: "NOT_PROVIDED" }]))])
 );
 
-export const productDataVersion = "2026-10-13.D";
+export const productDataVersion = "2026-10-15.E";
 
 /** Existing names are authoritative: G maps to GREAT, not an unverified GRADE rename. */
 export const seriesCodes = Object.freeze({ S: "spin", P: "power", G: "great" });

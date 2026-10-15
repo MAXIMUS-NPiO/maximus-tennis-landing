@@ -186,6 +186,7 @@ export default async function Home({ params }) {
       <Section id="grip" band="band-2" eyebrow={H.carbon.eyebrow} title={H.carbon.gripTitle}>
         <p className="lead" style={{ marginBottom: 20 }}>{H.carbon.title} {H.carbon.gripP}</p>
         <GripScale caption={H.carbon.scaleCaption} schematicLabel={L.schematic} />
+        <p className="muted" style={{ marginTop: 18, textAlign: "start" }}>{dict.gripShape.short}</p>
         <div className="btn-row"><Cta locale={locale} to="grip" label={H.carbon.cta} kind="btn-outline" /></div>
       </Section>
 

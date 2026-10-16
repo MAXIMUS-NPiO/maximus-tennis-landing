@@ -7,6 +7,7 @@ import { editorialCopy } from "./editorial-copy.js";
 import { forumCopy } from "./forum-copy.js";
 import { budgetRequestCopy } from "./budget-request-copy.js";
 import { gripShapeCopy } from "./grip-shape-copy.js";
+import { applyUpdate20261016 } from "./update-20261016-copy.js";
 const copy = {
   "en": {
     "standard": "Standard lengths",
@@ -353,7 +354,7 @@ export function applyCatalogueUpdate(locale, d) {
   d.nationalPackage = national;
   // Founder's update of 14 October 2026: the catalogue route and the first screen's three actions.
   const K = catalogueCopy(locale);
-  d.catalogueDownload = K;
+  d.catalogueDownload = { ...K };
   d.nav.catalogue = K.nav;
   d.home.heroTitle = K.heroTitle;
   d.home.heroProduct = K.heroLead;
@@ -426,5 +427,8 @@ export function applyCatalogueUpdate(locale, d) {
   // The question about the shape follows the one about overgrips in every series FAQ.
   const overgrip = d.seriesPage.faq.findIndex((q) => q[1] && /L0/.test(q[1]));
   d.seriesPage.faq = [...d.seriesPage.faq.slice(0, overgrip + 1), GS.faq, ...d.seriesPage.faq.slice(overgrip + 1)];
+  // Update of 16 October 2026: fifteen grip sizes, narrowed replica wording, target RA request.
+  d.gripShape = { ...GS, shapes: { ...GS.shapes } };
+  d.update20261016 = applyUpdate20261016(locale, d);
   return d;
 }

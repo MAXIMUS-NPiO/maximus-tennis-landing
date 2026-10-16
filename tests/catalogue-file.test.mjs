@@ -26,11 +26,11 @@ test('the published catalogue file is the recorded edition, byte for byte', () =
   assert.ok(catalogue.chapterPages.every((n, i, a) => n > 2 && n <= catalogue.pages && (i === 0 || n > a[i - 1])));
 });
 
-test('Edition 5.1 adds the grip shape page; Edition 5.0 stays published unchanged', () => {
-  assert.equal(catalogue.edition, '5.1');
-  assert.equal(catalogue.pages, 24);
-  assert.deepEqual(catalogue.chapterPages, [3, 6, 14, 15, 18, 22]);
-  assert.ok(catalogue.previews.some((p) => p.page === 12), 'the grip shape page is previewed');
+test('Edition 6.0: the full catalogue on the current matrix; Edition 5.0 stays published unchanged', () => {
+  assert.equal(catalogue.edition, '6.0');
+  assert.equal(catalogue.pages, 60);
+  assert.deepEqual(catalogue.chapterPages, [3, 8, 22, 23, 33, 57]);
+  assert.ok(catalogue.previews.some((p) => p.page === 17), 'the grip size page is previewed');
   const old = fs.readFileSync(pub('/catalogue/5.0/MAXIMUS_TENNIS_Catalogue.pdf'));
   assert.equal(old.length, 3622492);
   assert.equal(crypto.createHash('sha256').update(old).digest('hex'), 'a7000867a03a98beb68d9aff3e442f940bb261f679f7b5d01b4b70732cf7cb90');

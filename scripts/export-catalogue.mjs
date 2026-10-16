@@ -1,7 +1,7 @@
 /*! © 2026 Maximus Kiriyakulov. All rights reserved. Proprietary: no licence is granted. */
 /** Deterministic request catalogue and per-country reference collection. Never a stock/price list. */
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { seriesList, seriesCodes, standardLengths, grips, sweetSpotTrainer, spotTrainer, catalogueCounts, nationalPackage, productDataVersion, configurationKey, catalogueVariantKey } from '../data/products.js';
+import { seriesList, seriesCodes, standardLengths, grips, referenceGrips, sweetSpotTrainer, spotTrainer, catalogueCounts, nationalPackage, productDataVersion, configurationKey, catalogueVariantKey } from '../data/products.js';
 const dir = process.argv[2] || 'docs/catalogue-tables';
 mkdirSync(dir, { recursive: true });
 const historical = seriesList.flatMap(s => s.matrix.map(p => ({ base_variant_id: `${s.id}-${p.weight}`, series_id: s.id, series_name: s.short, head_size_sq_in: s.headSizeSqIn, weight_g: p.weight, historical_balance_mm: p.balance, balance_status: s.balanceStatus, measurement_basis: 'NOT_PROVIDED' })));
@@ -14,7 +14,7 @@ const trainerHistory = [
 ];
 const trainers = trainerHistory.flatMap(p => standardLengths.map(l => ({ family_id: p.family_id, catalogue_variant_id: catalogueVariantKey({ series: p.family_id, weight: p.weight_g, lengthIn: l.inches }), weight_g: p.weight_g, ...lengthFields(l), head_size_sq_in: p.head_size_sq_in, string_pattern: p.string_pattern, ...unknowns, balance_status: 'NOT_PROVIDED', status: 'REQUEST_OPTION_REQUIRES_CONFIRMATION' })));
 const all = [...playing.map(p => ({ family_id: p.series_id, ...p })), ...trainers];
-const nationalLines = all.flatMap(p => grips.map(g => ({ configuration_id: configurationKey({ series: p.family_id, weight: p.weight_g, lengthIn: p.length_in, grip: g.id }), catalogue_variant_id: p.catalogue_variant_id, family_id: p.family_id, weight_g: p.weight_g, length_in: p.length_in, length_mm: p.length_mm, length_class: p.length_class, grip_id: g.id, grip_nominal_in: `${g.inches}${g.fraction}`, quantity_per_country: nationalPackage.copiesPerCombination, head_size_sq_in: p.head_size_sq_in, balance_mm: null, swingweight: null, stiffness_ra: null, price: null, availability: null, lead_time: null, factory_sku: null, status: nationalPackage.status })));
+const nationalLines = all.flatMap(p => referenceGrips.map(g => ({ configuration_id: configurationKey({ series: p.family_id, weight: p.weight_g, lengthIn: p.length_in, grip: g.id }), catalogue_variant_id: p.catalogue_variant_id, family_id: p.family_id, weight_g: p.weight_g, length_in: p.length_in, length_mm: p.length_mm, length_class: p.length_class, grip_id: g.id, grip_nominal_in: `${g.inches}${g.fraction}`, quantity_per_country: nationalPackage.copiesPerCombination, head_size_sq_in: p.head_size_sq_in, balance_mm: null, swingweight: null, stiffness_ra: null, price: null, availability: null, lead_time: null, factory_sku: null, status: nationalPackage.status })));
 const csv = rows => {
   const keys = [...new Set(rows.flatMap(r => Object.keys(r)))];
   const cell = v => v == null ? '' : `"${String(v).replaceAll('"', '""')}"`;
@@ -24,7 +24,7 @@ for (const [name, rows] of [['base-models-99', historical], ['playing-variants-6
 writeFileSync(`${dir}/catalogue-snapshot.json`, JSON.stringify({
   author: '© 2026 Maximus Kiriyakulov. All rights reserved.', revision: productDataVersion,
   sourceCommit: '0fd7bcf7d072a3aef0e9ac1b385313c0077565b1',
-  sources: ['Published catalogue 0fd7bcf: original weights, historical measurements, heads and branding', 'Owner trainer-length and National Package instruction, 13 October 2026', 'data/products.js: seven lengths and eight nominal factory grips L0–L7', 'Owner clarification, 13 October 2026: permanent reference library, matte-black bases, illustrative personal sets/batches and Pro Shop architectural concept'],
+  sources: ['Published catalogue 0fd7bcf: original weights, historical measurements, heads and branding', 'Owner trainer-length and National Package instruction, 13 October 2026', 'data/products.js: seven lengths; fifteen nominal grip sizes L0–L7 in half steps; the National Package keeps the eight whole sizes', 'Owner clarification, 13 October 2026: permanent reference library, matte-black bases, illustrative personal sets/batches and Pro Shop architectural concept'],
   counts: catalogueCounts, seriesCodes,
   status: 'Preview request matrix, not production approval, stock, a price list or competition certification',
   naming: 'GREAT retained. Spoken Grade does not authorize a series rename.',

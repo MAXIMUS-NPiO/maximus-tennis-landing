@@ -1,11 +1,11 @@
 {
   "author": "© 2026 Maximus Kiriyakulov. All rights reserved.",
-  "revision": "2026-10-15.E",
+  "revision": "2026-10-16.F",
   "sourceCommit": "0fd7bcf7d072a3aef0e9ac1b385313c0077565b1",
   "sources": [
     "Published catalogue 0fd7bcf: original weights, historical measurements, heads and branding",
     "Owner trainer-length and National Package instruction, 13 October 2026",
-    "data/products.js: seven lengths and eight nominal factory grips L0–L7",
+    "data/products.js: seven lengths; fifteen nominal grip sizes L0–L7 in half steps; the National Package keeps the eight whole sizes",
     "Owner clarification, 13 October 2026: permanent reference library, matte-black bases, illustrative personal sets/batches and Pro Shop architectural concept"
   ],
   "counts": {
@@ -29,43 +29,138 @@
   "grips": [
     {
       "id": "L0",
+      "level": 0,
+      "half": false,
       "inches": "4",
-      "fraction": ""
+      "fraction": "",
+      "nominalIn": 4,
+      "nominalMm": 101.6
+    },
+    {
+      "id": "L0.5",
+      "level": 0.5,
+      "half": true,
+      "inches": "4",
+      "fraction": "¹⁄₁₆",
+      "nominalIn": 4.0625,
+      "nominalMm": 103.19
     },
     {
       "id": "L1",
+      "level": 1,
+      "half": false,
       "inches": "4",
-      "fraction": "⅛"
+      "fraction": "⅛",
+      "nominalIn": 4.125,
+      "nominalMm": 104.78
+    },
+    {
+      "id": "L1.5",
+      "level": 1.5,
+      "half": true,
+      "inches": "4",
+      "fraction": "³⁄₁₆",
+      "nominalIn": 4.1875,
+      "nominalMm": 106.36
     },
     {
       "id": "L2",
+      "level": 2,
+      "half": false,
       "inches": "4",
-      "fraction": "¼"
+      "fraction": "¼",
+      "nominalIn": 4.25,
+      "nominalMm": 107.95
+    },
+    {
+      "id": "L2.5",
+      "level": 2.5,
+      "half": true,
+      "inches": "4",
+      "fraction": "⁵⁄₁₆",
+      "nominalIn": 4.3125,
+      "nominalMm": 109.54
     },
     {
       "id": "L3",
+      "level": 3,
+      "half": false,
       "inches": "4",
-      "fraction": "⅜"
+      "fraction": "⅜",
+      "nominalIn": 4.375,
+      "nominalMm": 111.13
+    },
+    {
+      "id": "L3.5",
+      "level": 3.5,
+      "half": true,
+      "inches": "4",
+      "fraction": "⁷⁄₁₆",
+      "nominalIn": 4.4375,
+      "nominalMm": 112.71
     },
     {
       "id": "L4",
+      "level": 4,
+      "half": false,
       "inches": "4",
-      "fraction": "½"
+      "fraction": "½",
+      "nominalIn": 4.5,
+      "nominalMm": 114.3
+    },
+    {
+      "id": "L4.5",
+      "level": 4.5,
+      "half": true,
+      "inches": "4",
+      "fraction": "⁹⁄₁₆",
+      "nominalIn": 4.5625,
+      "nominalMm": 115.89
     },
     {
       "id": "L5",
+      "level": 5,
+      "half": false,
       "inches": "4",
-      "fraction": "⅝"
+      "fraction": "⅝",
+      "nominalIn": 4.625,
+      "nominalMm": 117.48
+    },
+    {
+      "id": "L5.5",
+      "level": 5.5,
+      "half": true,
+      "inches": "4",
+      "fraction": "¹¹⁄₁₆",
+      "nominalIn": 4.6875,
+      "nominalMm": 119.06
     },
     {
       "id": "L6",
+      "level": 6,
+      "half": false,
       "inches": "4",
-      "fraction": "¾"
+      "fraction": "¾",
+      "nominalIn": 4.75,
+      "nominalMm": 120.65
+    },
+    {
+      "id": "L6.5",
+      "level": 6.5,
+      "half": true,
+      "inches": "4",
+      "fraction": "¹³⁄₁₆",
+      "nominalIn": 4.8125,
+      "nominalMm": 122.24
     },
     {
       "id": "L7",
+      "level": 7,
+      "half": false,
       "inches": "4",
-      "fraction": "⅞"
+      "fraction": "⅞",
+      "nominalIn": 4.875,
+      "nominalMm": 123.82
     }
   ],
   "lengths": [
@@ -30896,9 +30991,19 @@
   ],
   "nationalPackage": {
     "id": "national-package-v1",
-    "revision": "2026-10-15.E",
+    "revision": "2026-10-16.F",
     "copiesPerCombination": 2,
     "gripCount": 8,
+    "referenceGrips": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7"
+    ],
     "perCountry": true,
     "combinations": 12376,
     "unitsPerCountry": 24752,

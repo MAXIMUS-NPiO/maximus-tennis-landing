@@ -21,7 +21,9 @@ expect(series.power.matrix.every((p) => p.balance !== null) && series.great.matr
 expect(series.power.matrix[0].weight === 210 && series.power.matrix[0].balance === 347 && series.power.matrix.at(-1).weight === 377 && series.power.matrix.at(-1).balance === 320, "power: endpoints mismatch");
 expect(series.great.matrix[0].weight === 236 && series.great.matrix[0].balance === 343 && series.great.matrix.at(-1).weight === 369 && series.great.matrix.at(-1).balance === 321, "great: endpoints mismatch");
 expect(series.great.headSizeSqIn === 97 && series.power.headSizeSqIn === 98 && series.spin.headSizeSqIn === 100, "head sizes mismatch");
-expect(grips.length === 8 && grips[0].id === "L0" && grips[7].id === "L7", "grips: expected L0–L7");
+expect(grips.length === 15 && grips[0].id === "L0" && grips[14].id === "L7" && grips.every((g, i) => g.id === `L${i / 2}`), "grips: expected L0–L7 in half steps (15 sizes)");
+const { referenceGrips, nationalPackage } = await import("../data/products.js");
+expect(referenceGrips.length === 8 && nationalPackage.gripCount === 8 && nationalPackage.combinations === 12376 && nationalPackage.unitsPerCountry === 24752, "National Package: fixed eight whole reference grips, 12,376 / 24,752");
 expect(precisionClasses.length === 3, "precision: expected three classes");
 const byId = Object.fromEntries(precisionClasses.map((c) => [c.id, c]));
 expect(byId["P2.5"].weightG === 2.5 && byId["P2.5"].stiffness.valueRA === 1, "P2.5 values");
@@ -71,4 +73,4 @@ for (const f of publicFiles) {
 }
 
 if (fail.length) { console.error(fail.join("\n")); process.exit(1); }
-console.log(`product data OK: GREAT ${series.great.matrix.length} · POWER ${series.power.matrix.length} · SPIN ${series.spin.matrix.length} (222–377 g, balances confirmed) · L0–L7 · P2.5/P1.5/P0.5 + ZERO · SST · Spot Trainer · no banned content`);
+console.log(`product data OK: GREAT ${series.great.matrix.length} · POWER ${series.power.matrix.length} · SPIN ${series.spin.matrix.length} (222–377 g, balances confirmed) · L0–L7 in 15 half steps (National Package: 8 whole) · P2.5/P1.5/P0.5 + ZERO · SST · Spot Trainer · no banned content`);

@@ -13,7 +13,7 @@ export default async function Page({ params }) {
     <>
       <PageHero eyebrow={dict.home.personal.eyebrow} title={B.title} statement={dict.home.personal.title} lead={B.lead} />
       <Section first>
-        <Configurator orderFlowEnabled={process.env.ORDER_FLOW_ENABLED === "true"} locale={locale} dict={formDict(dict, ["build", "racquets", "precision", "catalogue", "sst", "gripShape"])} />
+        <Configurator orderFlowEnabled={process.env.ORDER_FLOW_ENABLED === "true"} locale={locale} dict={formDict(dict, ["build", "racquets", "precision", "catalogue", "sst", "gripShape", "update20261016"])} />
         <ModelRights dict={dict} />
       </Section>
     </>

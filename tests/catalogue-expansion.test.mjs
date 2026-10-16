@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
-import { seriesList, seriesCodes, standardLengths, trainerWeights, sweetSpotTrainer, spotTrainer, catalogueCounts, nationalPackage, grips, balanceFor, catalogueVariantKey, configurationKey } from '../data/products.js';
+import { seriesList, seriesCodes, standardLengths, trainerWeights, sweetSpotTrainer, spotTrainer, catalogueCounts, nationalPackage, grips, referenceGrips, balanceFor, catalogueVariantKey, configurationKey } from '../data/products.js';
 import { validateConfig, validateRequest, parseLength } from '../lib/intake/schema.js';
 import { createConfigurations, validateRevisionFields } from '../lib/platform/configurations.js';
 import { createMemoryStore } from '../lib/platform/store.js';
@@ -77,8 +77,9 @@ test('historical trainer geometry and four measured balances are not reused for 
 });
 
 test('National Package has 12376 collision-free full configurations and two copies each per country', () => {
-  assert.deepEqual(grips.map(g => g.id), ['L0', 'L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7']);
-  assert.deepEqual(grips.map(g => g.inches + g.fraction), ['4', '4⅛', '4¼', '4⅜', '4½', '4⅝', '4¾', '4⅞']);
+  assert.deepEqual(grips.map(g => g.id), ['L0', 'L0.5', 'L1', 'L1.5', 'L2', 'L2.5', 'L3', 'L3.5', 'L4', 'L4.5', 'L5', 'L5.5', 'L6', 'L6.5', 'L7']);
+  assert.deepEqual(grips.filter(g => !g.half).map(g => g.inches + g.fraction), ['4', '4⅛', '4¼', '4⅜', '4½', '4⅝', '4¾', '4⅞']);
+  assert.equal(grips.find(g => g.id === 'L2.5').nominalMm, 109.54); // (4 + 2.5/8) × 25.4 = 109.5375 mm, nominal
   const variants = new Set(), fullKeys = new Set(), counted = {};
   for (const family of families) {
     counted[family.id] = 0;
@@ -88,7 +89,7 @@ test('National Package has 12376 collision-free full configurations and two copi
       assert.ok(variant);
       assert.equal(variants.has(variant), false, `duplicate variant ${variant}`);
       variants.add(variant);
-      for (const { id: grip } of grips) {
+      for (const { id: grip } of referenceGrips) {
         const full = { ...c, grip };
         const key = configurationKey(full);
         assert.ok(key);
@@ -103,6 +104,10 @@ test('National Package has 12376 collision-free full configurations and two copi
   }
   assert.equal(variants.size, 1547);
   assert.equal(fullKeys.size, 12376);
+  // Half sizes are requestable and produce their own keys, but never enter the fixed library.
+  assert.equal(configurationKey({ ...base, series: 'great', weight: 299, lengthIn: 27, grip: 'L2.5' }), 'great-299-L27-L2.5');
+  assert.deepEqual([...nationalPackage.referenceGrips], ['L0', 'L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7']);
+  assert.equal(grips.length, 15);
   assert.deepEqual(counted, { great: 3696, power: 3696, spin: 3696, sst: 6832, spot: 6832 });
   assert.equal(Object.values(counted).reduce((sum, units) => sum + units, 0), 24752);
   assert.equal(nationalPackage.combinations, fullKeys.size);

@@ -351,7 +351,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
               ))}
             </div>
             {fieldErr("grip")}
-            <p className="note">{B.gripNote}</p>
+            <p className="note">{B.gripNote}. {dict.update20261016?.halfNote}</p>
           </div>
           <div className="stack">
             <h3 className="eyebrow" id="c-gripShape-legend">{GS.title}</h3>
@@ -385,7 +385,7 @@ export default function Configurator({ dict, locale, orderFlowEnabled = false })
           <div className="grid-3">
             {numInput("balanceReq", B.q.balanceRequest, null, TARGET_BOUNDS.balanceReq)}
             {numInput("sw", B.q.swingweight, null, TARGET_BOUNDS.sw)}
-            {numInput("ra", B.q.stiffness, null, TARGET_BOUNDS.ra)}
+            {numInput("ra", B.q.stiffness, dict.update20261016?.raHint, TARGET_BOUNDS.ra)}
           </div>
           {c.mode === "custom" ? <p>{dict.lead.basis.unstrung}</p> : <div className="field">
             <label htmlFor="c-basis">{B.q.basis} {c.balanceReq || c.sw || c.ra ? "" : <span className="opt">({L.optional})</span>}</label>

@@ -47,7 +47,10 @@ test('the dictionaries carry the grip shape: build lead, review labels, series F
   for (const l of locales) {
     const d = getDict(l);
     const G = gripShapeCopy(l);
-    assert.deepEqual(d.gripShape, G, l);
+    const { shapes, referenceHint, ...rest } = d.gripShape;
+    const { shapes: gs, referenceHint: gr, ...grest } = G;
+    assert.deepEqual(rest, grest, l);
+    assert.deepEqual(Object.keys(shapes), Object.keys(gs), l); // replica wording narrowed on 16 Oct (update-20261016-copy.js)
     assert.equal(d.build.lead, G.buildLead, l);
     assert.equal(d.build.fieldNames.gripShape, G.title, l);
     assert.equal(d.build.fieldNames.gripReference, G.referenceShort, l);
@@ -103,7 +106,7 @@ test('the shape is an order option: request keys and every count stay as they we
   assert.equal(a, b);
   assert.equal(configurationKey({ ...base, gripShape: 'even' }), 'great-272-L27-L3');
   assert.equal(catalogueCounts.totalRequestedVariants, 1547);
-  assert.equal(nationalPackage.combinations, 1547 * grips.length);
+  assert.equal(nationalPackage.combinations, 1547 * 8);
   assert.equal(nationalPackage.combinations, 12376);
   assert.deepEqual([...nationalPackage.dimensions], ['family', 'weight', 'length', 'factory grip']);
 });

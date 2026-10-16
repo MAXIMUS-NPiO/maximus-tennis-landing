@@ -1428,3 +1428,9 @@ h1.eyebrow, h2.eyebrow, h3.eyebrow, h4.eyebrow, .footer-sub-h { font-family: var
 }
 .grip-shapes b { font-size: 17px; font-weight: 650; overflow-wrap: break-word; }
 .grip-shapes span { font-size: 14.5px; line-height: 1.45; color: var(--ink-2); overflow-wrap: break-word; }
+
+/* Grip sizes in half steps (16 October 2026): fifteen designations, whole sizes emphasised. */
+@media (min-width: 1024px) { .grip-dots { grid-template-columns: repeat(15, minmax(0, 1fr)); } }
+.grip-dots li.half b { color: var(--ink-2); font-weight: 500; }
+@media (min-width: 640px) { .grip-row { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1024px) { .grip-row { grid-template-columns: repeat(8, 1fr); } }

@@ -18,9 +18,9 @@ export default async function Page({ params }) {
       <Section first><GripScale caption={dict.home.carbon.scaleCaption} schematicLabel={dict.common.labels.schematic} /><div style={{ height: 24 }} /><GripRow dict={dict} /></Section>
       <Section band="band-2">
         <div className="split">
-          <div className="stack"><p className="lead">{G.p1}</p><p>{G.p2}</p><p className="muted">{G.p3}</p></div>
+          <div className="stack"><p className="lead">{G.p1}</p><p>{dict.update20261016.halfNote}</p><p>{G.p2}</p><p className="muted">{G.p3}</p></div>
           <div className="spec-wrap" tabIndex={0}><table className="spec"><thead><tr><th>{G.columns.size}</th><th className="num">{G.columns.nominal}</th><th>{G.columns.family}</th></tr></thead><tbody>
-            {grips.map((g) => <tr key={g.id}><td className="row-head"><strong>{g.id}</strong></td><td className="num" data-label={G.columns.nominal}>{g.inches}{g.fraction}″</td><td data-label={G.columns.family}><small>{G.families}</small></td></tr>)}
+            {grips.map((g) => <tr key={g.id}><td className="row-head"><strong>{g.id}</strong></td><td className="num" data-label={G.columns.nominal}>{g.inches}{g.fraction}″ · {g.nominalMm.toFixed(1)} {dict.common.labels.mm}</td><td data-label={G.columns.family}><small>{G.families}</small></td></tr>)}
           </tbody></table></div>
         </div>
       </Section>

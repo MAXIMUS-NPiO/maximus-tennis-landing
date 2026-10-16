@@ -170,17 +170,25 @@ export const exclusiveTier = {
 
 export const precisionParameters = ["weight", "balance", "swingweight", "stiffness"];
 
-/** Eight factory grip sizes. Nominal designations; raw handle dimensions and measurement protocol are separate. */
-export const grips = [
-  { id: "L0", inches: "4", fraction: "" },
-  { id: "L1", inches: "4", fraction: "⅛" },
-  { id: "L2", inches: "4", fraction: "¼" },
-  { id: "L3", inches: "4", fraction: "⅜" },
-  { id: "L4", inches: "4", fraction: "½" },
-  { id: "L5", inches: "4", fraction: "⅝" },
-  { id: "L6", inches: "4", fraction: "¾" },
-  { id: "L7", inches: "4", fraction: "⅞" },
-];
+/**
+ * Factory grip sizes L0–L7 in half steps (Founder, 16 October 2026): 15 nominal designations.
+ * Nominal circumference in inches = 4 + L/8, so one half step is 1/16 in (1.5875 mm). These are
+ * nominal designations, not measured perimeters of a finished handle; raw handle dimensions and the
+ * measurement protocol are separate. The eight whole sizes are the fixed reference set of the
+ * National Package (see referenceGrips); half sizes are requested through the same configurator.
+ */
+const GRIP_FRACTIONS = ["", "¹⁄₁₆", "⅛", "³⁄₁₆", "¼", "⁵⁄₁₆", "⅜", "⁷⁄₁₆", "½", "⁹⁄₁₆", "⅝", "¹¹⁄₁₆", "¾", "¹³⁄₁₆", "⅞"];
+export const grips = Object.freeze(GRIP_FRACTIONS.map((fraction, i) => Object.freeze({
+  id: `L${i / 2}`,
+  level: i / 2,
+  half: i % 2 === 1,
+  inches: "4",
+  fraction,
+  nominalIn: 4 + i / 16,
+  nominalMm: Math.round((4 + i / 16) * 25.4 * 100) / 100,
+})));
+/** The eight whole sizes L0–L7: the fixed grip set of the National Package reference library. */
+export const referenceGrips = Object.freeze(grips.filter((g) => !g.half));
 
 /**
  * Grip shape — the geometry of the handle section, chosen separately from its size (Founder,
@@ -269,7 +277,7 @@ export const seriesParameters = Object.fromEntries(
   ["great", "power", "spin"].map((id) => [id, Object.fromEntries(PARAMETER_KEYS.map((k) => [k, { value: null, status: "NOT_PROVIDED" }]))])
 );
 
-export const productDataVersion = "2026-10-15.E";
+export const productDataVersion = "2026-10-16.F";
 
 /** Existing names are authoritative: G maps to GREAT, not an unverified GRADE rename. */
 export const seriesCodes = Object.freeze({ S: "spin", P: "power", G: "great" });
@@ -292,16 +300,18 @@ const packageFamilies = [
   { id: "spot", name: "Spot Trainer", weightPoints: trainerWeights.length },
 ].map((f) => Object.freeze({ ...f, lengths: standardLengths.length,
   variants: f.weightPoints * standardLengths.length,
-  gripCombinations: f.weightPoints * standardLengths.length * grips.length,
-  units: f.weightPoints * standardLengths.length * grips.length * 2,
+  gripCombinations: f.weightPoints * standardLengths.length * referenceGrips.length,
+  units: f.weightPoints * standardLengths.length * referenceGrips.length * 2,
 }));
 export const nationalPackage = Object.freeze({
   id: "national-package-v1", revision: productDataVersion,
-  copiesPerCombination: 2, gripCount: grips.length, perCountry: true,
-  combinations: catalogueCounts.totalRequestedVariants * grips.length,
-  unitsPerCountry: catalogueCounts.totalRequestedVariants * grips.length * 2,
-  playingUnits: catalogueCounts.playingVariants * grips.length * 2,
-  trainerUnits: catalogueCounts.trainerVariants * grips.length * 2,
+  // Fixed reference set: the eight whole grip sizes. Half sizes (16 Oct 2026) are individual
+  // requests and never change this library's composition or totals.
+  copiesPerCombination: 2, gripCount: referenceGrips.length, referenceGrips: Object.freeze(referenceGrips.map((g) => g.id)), perCountry: true,
+  combinations: catalogueCounts.totalRequestedVariants * referenceGrips.length,
+  unitsPerCountry: catalogueCounts.totalRequestedVariants * referenceGrips.length * 2,
+  playingUnits: catalogueCounts.playingVariants * referenceGrips.length * 2,
+  trainerUnits: catalogueCounts.trainerVariants * referenceGrips.length * 2,
   families: Object.freeze(packageFamilies),
   dimensions: Object.freeze(["family", "weight", "length", "factory grip"]),
   status: "PROPOSED_REQUEST_SPECIFICATION", availability: null, price: null,
